@@ -16,32 +16,42 @@ export default withMermaid(defineConfig({
   sitemap: {
     hostname: 'https://opencodedocs.com'
   },
-  
+
   // SEO: 为每个页面生成 hreflang 标签
   transformHead({ pageData }) {
     const head: Array<[string, Record<string, string>]> = []
     const hostname = 'https://opencodedocs.com'
     const locales = ['zh', 'zh-tw', 'ja', 'ko', 'es', 'fr', 'de', 'pt', 'ru']
-    
+
     // 获取当前页面路径 (去掉 .md 后缀，index.md 转为目录形式)
     let pagePath = pageData.relativePath
       .replace(/\.md$/, '')
       .replace(/index$/, '')
-    
-    // 确保路径以 / 结尾（如果不是空）
-    if (pagePath && !pagePath.endsWith('/')) {
-      pagePath += '/'
+
+    // 从路径中去掉当前语言前缀，得到纯路径
+    // 例如: "zh/about/" → "about/", "zh-tw/vbgate/foo/" → "vbgate/foo/"
+    let purePath = pagePath
+    for (const locale of locales) {
+      if (pagePath.startsWith(locale + '/')) {
+        purePath = pagePath.substring(locale.length + 1)
+        break
+      }
     }
-    
-    // 添加英文版 (作为 x-default)
-    head.push(['link', { rel: 'alternate', hreflang: 'en', href: `${hostname}/${pagePath}` }])
-    head.push(['link', { rel: 'alternate', hreflang: 'x-default', href: `${hostname}/${pagePath}` }])
-    
+
+    // 确保路径以 / 结尾（如果不是空）
+    if (purePath && !purePath.endsWith('/')) {
+      purePath += '/'
+    }
+
+    // 添加英文版 (作为 x-default) - 英文版在根目录
+    head.push(['link', { rel: 'alternate', hreflang: 'en', href: `${hostname}/${purePath}` }])
+    head.push(['link', { rel: 'alternate', hreflang: 'x-default', href: `${hostname}/${purePath}` }])
+
     // 添加其他语言版本
     for (const locale of locales) {
-      head.push(['link', { rel: 'alternate', hreflang: locale, href: `${hostname}/${locale}/${pagePath}` }])
+      head.push(['link', { rel: 'alternate', hreflang: locale, href: `${hostname}/${locale}/${purePath}` }])
     }
-    
+
     return head
   },
   head: [
