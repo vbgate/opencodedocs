@@ -33,12 +33,23 @@ const props = defineProps<{
           {{ data.project.description }}
         </p>
 
-        <!-- Primary Action -->
-        <div v-if="data.hero.primary_action">
-          <a :href="data.hero.primary_action.link"
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <!-- Primary Action -->
+          <a v-if="data.hero.primary_action"
+             :href="data.hero.primary_action.link"
              class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-neutral-900 hover:bg-neutral-800 dark:bg-white dark:hover:bg-neutral-200 !text-white dark:!text-neutral-900 font-semibold rounded-xl shadow-lg shadow-neutral-500/10 dark:shadow-none transition-all hover:-translate-y-0.5">
             <i class="ph-bold ph-rocket-launch"></i>
             {{ data.hero.primary_action.text }}
+          </a>
+          <!-- GitHub Action -->
+          <a v-if="data.project.github_url"
+             :href="data.project.github_url"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-600 bg-transparent !text-neutral-700 dark:!text-neutral-300 font-semibold rounded-xl transition-all hover:-translate-y-0.5">
+            <i class="ph-bold ph-github-logo"></i>
+            GitHub
           </a>
         </div>
       </div>
