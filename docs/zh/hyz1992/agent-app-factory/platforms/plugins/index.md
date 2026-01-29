@@ -2,7 +2,7 @@
 title: "必需插件安装：superpowers 与 ui-ux-pro-max | AI App Factory 教程"
 sidebarTitle: "5 分钟安装插件"
 subtitle: "必需插件安装：superpowers 与 ui-ux-pro-max | AI App Factory 教程"
-description: "学习如何安装和验证 AI App Factory 的两个必需插件：superpowers（用于 Bootstrap 头脑风暴）和 ui-ux-pro-max（用于 UI 设计系统）。本教程涵盖自动安装、手动安装、验证方法以及常见问题排查，确保流水线能够顺利运行并生成高质量、可运行的应用。"
+description: "学习如何安装和验证 AI App Factory 的两个必需插件：superpowers（用于 Bootstrap 头脑风暴）和 ui-ux-pro-max（用于 UI 设计系统）。本教程涵盖自动安装、手动安装、验证方法以及常见问题排查，确保流水线能够顺利运行并生成高质量、可运行的应用，避免插件缺失导致的失败。"
 tags:
   - "插件安装"
   - "Claude Code"
