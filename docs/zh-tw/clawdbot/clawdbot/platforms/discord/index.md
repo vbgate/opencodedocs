@@ -1,0 +1,581 @@
+---
+title: "Discord 渠道配置與使用 | Clawdbot 教程"
+sidebarTitle: "連接你的 Discord Bot"
+subtitle: "Discord 渠道配置與使用"
+description: "學習如何建立 Discord Bot 並配置到 Clawdbot。本教程涵蓋 Discord Developer Portal 建立 Bot、Gateway Intents 權限設定、Bot Token 配置方法、OAuth2 邀請 URL 產生、DM 配對保護機制、伺服器頻道白名單配置、AI Discord 工具呼叫權限管理以及常見問題故障排除步驟。"
+tags:
+  - "渠道配置"
+  - "Discord"
+  - "Bot"
+prerequisite:
+  - "start-getting-started"
+order: 100
+---
+
+# Discord 渠道配置與使用
+
+## 學完你能做什麼
+
+- 建立 Discord Bot 並取得 Bot Token
+- 配置 Clawdbot 與 Discord Bot 整合
+- 在 Discord 私訊（DM）和伺服器頻道中使用 AI 助手
+- 配置存取控制（DM 配對、頻道白名單）
+- 讓 AI 呼叫 Discord 工具（傳送訊息、建立頻道、管理角色等）
+
+## 你現在的困境
+
+你已經在使用 Discord 與朋友或團隊交流，希望在不切換應用的情況下，直接在 Discord 中與 AI 助手對話。你可能遇到以下問題：
+
+- 不知道如何建立 Discord Bot
+- 不清楚需要哪些權限才能讓 Bot 正常運作
+- 想控制誰能與 Bot 互動（避免陌生人濫用）
+- 希望在不同伺服器頻道中配置不同的行為
+
+本教程將一步步教你解決這些問題。
+
+## 什麼時候用這一招
+
+Discord 渠道適合這些場景：
+
+- ✅ 你是 Discord 重度使用者，大部分交流都在 Discord 上
+- ✅ 你想在 Discord 伺服器中新增 AI 功能（比如 `#help` 頻道的智慧助手）
+- ✅ 你希望透過 Discord 私訊與 AI 互動（比開啟 WebChat 更方便）
+- ✅ 你需要 AI 在 Discord 中執行管理操作（建立頻道、傳送訊息等）
+
+::: info Discord 渠道基於 discord.js，支援完整的 Bot API 功能。
+:::
+
+## 🎒 開始前的準備
+
+**必備條件**：
+- 已完成[快速入門](../../start/getting-started/)，Gateway 可以執行
+- Node.js ≥ 22
+- Discord 帳號（可以建立應用程式）
+
+**需要的資訊**：
+- Discord Bot Token（稍後教你如何取得）
+- 伺服器 ID（可選，用於配置特定頻道）
+- 頻道 ID（可選，用於精細化控制）
+
+## 核心思路
+
+### Discord 渠道如何運作
+
+Discord 渠道透過**官方 Bot API**與 Discord 通訊：
+
+```
+Discord 使用者
+     ↓
+  Discord 伺服器
+     ↓
+  Discord Bot Gateway
+     ↓ (WebSocket)
+  Clawdbot Gateway
+     ↓
+  AI Agent (Claude/GPT 等)
+     ↓
+  Discord Bot API (傳送回覆)
+     ↓
+Discord 伺服器
+     ↓
+Discord 使用者（看到回覆）
+```
+
+**關鍵點**：
+- Bot 透過 WebSocket 接收訊息（Gateway → Bot）
+- Clawdbot 將訊息轉發給 AI Agent 處理
+- AI 可以呼叫 `discord` 工具執行 Discord 特定操作
+- 所有回應透過 Bot API 傳回 Discord
+
+### DM 與伺服器頻道的區別
+
+| 類型 | 會話隔離 | 預設行為 | 適用場景 |
+| --- | --- | --- | --- |
+| **私訊（DM）** | 所有 DM 共用 `agent:main:main` 會話 | 需配對（pairing）保護 | 個人對話，延續上下文 |
+| **伺服器頻道** | 每個頻道獨立會話 `agent:<agentId>:discord:channel:<channelId>` | 需 @提及才回覆 | 伺服器智慧助手，多頻道並行 |
+
+::: tip
+伺服器頻道的會話是完全隔離的，不會互相干擾。`#help` 頻道的對話不會出現在 `#general` 中。
+:::
+
+### 預設安全機制
+
+Discord 渠道預設啟用**DM 配對保護**：
+
+```
+未知使用者 → 傳送 DM → Clawdbot
+                              ↓
+                      拒絕處理，返回配對碼
+                              ↓
+                使用者需要執行 `clawdbot pairing approve discord <code>`
+                              ↓
+                            配對成功，可以對話
+```
+
+這避免了陌生使用者直接與你的 AI 助手互動。
+
+---
+
+## 跟我做
+
+### 第 1 步：建立 Discord 應用程式和 Bot
+
+**為什麼**
+Discord Bot 需要一個「身分」才能連接到 Discord 伺服器。這個身分就是 Bot Token。
+
+#### 1.1 建立 Discord 應用程式
+
+1. 開啟 [Discord Developer Portal](https://discord.com/developers/applications)
+2. 點擊 **New Application**（新增應用程式）
+3. 輸入應用程式名稱（比如 `Clawdbot AI`）
+4. 點擊 **Create**（建立）
+
+#### 1.2 新增 Bot 使用者
+
+1. 在左側導航欄點擊 **Bot**（機器人）
+2. 點擊 **Add Bot** → **Reset Token** → **Reset Token**（重設權杖）
+3. **重要**：立即複製 Bot Token（只顯示一次！）
+
+```
+Bot Token 格式：MTAwOTk1MDk5NjQ5NTExNjUy.Gm9...
+（每次重設都會改變，妥善保存！）
+```
+
+#### 1.3 啟用必要的 Gateway Intents
+
+Discord 預設不會讓 Bot 讀取訊息內容，需要手動啟用。
+
+在 **Bot → Privileged Gateway Intents**（特權網關意圖）中啟用：
+
+| Intent | 是否必需 | 說明 |
+| --- | --- | --- |
+| **Message Content Intent** | ✅ **必需** | 讀取訊息文字內容（沒有它，Bot 無法看到訊息） |
+| **Server Members Intent** | ⚠️ **推薦** | 用於成員查詢和使用者名稱解析 |
+
+::: danger 禁忌
+不要啟用 **Presence Intent**（狀態意圖），除非你確實需要使用者上線狀態。
+:::
+
+**你應該看到**：兩個開關都變為綠色（ON）狀態。
+
+---
+
+### 第 2 步：產生邀請 URL 並新增到伺服器
+
+**為什麼**
+Bot 需要權限才能在伺服器中讀取和傳送訊息。
+
+1. 在左側導航欄點擊 **OAuth2 → URL Generator**
+2. 在 **Scopes**（範圍）中選擇：
+   - ✅ **bot**
+   - ✅ **applications.commands**（用於原生指令）
+
+3. 在 **Bot Permissions**（Bot 權限）中至少選擇：
+
+| 權限 | 說明 |
+| --- | --- |
+| **View Channels** | 檢視頻道 |
+| **Send Messages** | 傳送訊息 |
+| **Read Message History** | 讀取歷史訊息 |
+| **Embed Links** | 嵌入連結 |
+| **Attach Files** | 上傳檔案 |
+
+可選權限（根據需要新增）：
+- **Add Reactions**（新增表情反應）
+- **Use External Emojis**（使用自訂表情）
+
+::: warning 安全提示
+避免授予 **Administrator**（管理員）權限，除非你在除錯且完全信任 Bot。
+:::
+
+4. 複製產生的 URL
+5. 在瀏覽器中開啟 URL
+6. 選擇你的伺服器，點擊 **授權**（Authorize）
+
+**你應該看到**：Bot 成功加入伺服器，顯示為綠色上線狀態。
+
+---
+
+### 第 3 步：取得必要 ID（伺服器、頻道、使用者）
+
+**為什麼**
+Clawdbot 的配置優先使用 ID（數字），因為 ID 不會改變。
+
+#### 3.1 啟用 Discord 開發者模式
+
+1. Discord 桌面/網頁版 → **User Settings**（使用者設定）
+2. **Advanced**（進階）→ 啟用 **Developer Mode**（開發者模式）
+
+#### 3.2 複製 ID
+
+| 類型 | 操作 |
+| --- | --- |
+| **伺服器 ID** | 右鍵伺服器名稱 → **Copy Server ID** |
+| **頻道 ID** | 右鍵頻道（如 `#general`）→ **Copy Channel ID** |
+| **使用者 ID** | 右鍵使用者大頭照 → **Copy User ID** |
+
+::: tip ID vs 名稱
+配置時優先使用 ID。名稱可能改變，但 ID 永遠不會變。
+:::
+
+**你應該看到**：ID 已複製到剪貼簿（格式：`123456789012345678`）。
+
+---
+
+### 第 4 步：配置 Clawdbot 連接 Discord
+
+**為什麼**
+告訴 Clawdbot 如何連接到你的 Discord Bot。
+
+#### 方法 1：透過環境變數（推薦，適用於伺服器）
+
+```bash
+export DISCORD_BOT_TOKEN="YOUR_BOT_TOKEN"
+
+clawdbot gateway --port 18789
+```
+
+#### 方法 2：透過配置檔案
+
+編輯 `~/.clawdbot/clawdbot.json`：
+
+```json5
+{
+  channels: {
+    discord: {
+      enabled: true,
+      token: "YOUR_BOT_TOKEN"  // 第 1 步複製的 Token
+    }
+  }
+}
+```
+
+::: tip 環境變數優先順序
+如果同時設定了環境變數和配置檔案，**配置檔案優先**。
+:::
+
+**你應該看到**：啟動 Gateway 後，Discord Bot 顯示為上線狀態。
+
+---
+
+### 第 5 步：驗證連接並測試
+
+**為什麼**
+確保配置正確，Bot 能正常接收和傳送訊息。
+
+1. 啟動 Gateway（如果還沒啟動）：
+
+```bash
+clawdbot gateway --port 18789 --verbose
+```
+
+2. 檢查 Discord Bot 狀態：
+   - Bot 應該在伺服器成員列表中顯示為**綠色上線**
+   - 如果是灰色離線，檢查 Token 是否正確
+
+3. 傳送測試訊息：
+
+在 Discord 中：
+- **私訊**：直接向 Bot 傳送訊息（會收到配對碼，見下一節）
+- **伺服器頻道**：@提及 Bot，如 `@ClawdbotAI hello`
+
+**你應該看到**：Bot 回覆一條訊息（內容取決於你的 AI 模型）。
+
+::: tip 測試失敗？
+如果 Bot 沒有回覆，檢查[故障排除](#故障排除)部分。
+:::
+
+---
+
+## 檢查點 ✅
+
+在繼續之前，確認以下內容：
+
+- [ ] Bot Token 已正確配置
+- [ ] Bot 已成功加入伺服器
+- [ ] Message Content Intent 已啟用
+- [ ] Gateway 正在執行
+- [ ] Bot 在 Discord 中顯示為上線
+- [ ] @提及 Bot 能收到回覆
+
+---
+
+## 進階配置
+
+### DM 存取控制
+
+預設策略是 `pairing`（配對模式），適合個人使用。你可以根據需要調整：
+
+| 策略 | 說明 | 配置範例 |
+| --- | --- | --- |
+| **pairing**（預設） | 陌生人收到配對碼，需手動批准 | `"dm": { "policy": "pairing" }` |
+| **allowlist** | 僅允許列表中的使用者 | `"dm": { "policy": "allowlist", "allowFrom": ["123456", "alice"] }` |
+| **open** | 允許所有人（需 `allowFrom` 包含 `"*"`） | `"dm": { "policy": "open", "allowFrom": ["*"] }` |
+| **disabled** | 停用所有 DM | `"dm": { "enabled": false }` |
+
+#### 配置範例：允許特定使用者
+
+```json5
+{
+  channels: {
+    discord: {
+      dm: {
+        enabled: true,
+        policy: "allowlist",
+        allowFrom: [
+          "123456789012345678",  // 使用者 ID
+          "@alice",                   // 使用者名稱（會被解析為 ID）
+          "alice#1234"              // 完整使用者名稱
+        ]
+      }
+    }
+  }
+}
+```
+
+#### 批准配對請求
+
+當陌生使用者首次傳送 DM 時，會收到配對碼。批准方式：
+
+```bash
+clawdbot pairing approve discord <配對碼>
+```
+
+### 伺服器頻道配置
+
+#### 基礎配置：只允許特定頻道
+
+```json5
+{
+  channels: {
+    discord: {
+      groupPolicy: "allowlist",  // 白名單模式（預設）
+      guilds: {
+        "123456789012345678": {
+          requireMention: true,  // 需要 @提及才回覆
+          channels: {
+            help: { allow: true },    // 允許 #help
+            general: { allow: true } // 允許 #general
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+::: tip
+`requireMention: true` 是推薦配置，避免 Bot 在公開頻道中「自作聰明」。
+:::
+
+#### 進階配置：頻道專屬行為
+
+```json5
+{
+  channels: {
+    discord: {
+      guilds: {
+        "123456789012345678": {
+          slug: "my-server",              // 顯示名稱（可選）
+          reactionNotifications: "own",      // 僅 Bot 自己訊息的反應觸發事件
+          channels: {
+            help: {
+              allow: true,
+              requireMention: true,
+              users: ["987654321098765432"], // 僅特定使用者可以觸發
+              skills: ["search", "docs"],    // 限制可用技能
+              systemPrompt: "Keep answers under 50 words."  // 額外系統提示
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+### Discord 工具操作
+
+AI Agent 可以呼叫 `discord` 工具執行 Discord 特定操作。透過 `channels.discord.actions` 控制權限：
+
+| 操作類別 | 預設狀態 | 說明 |
+| --- | --- | --- |
+| **reactions** | ✅ 啟用 | 新增/讀取表情反應 |
+| **messages** | ✅ 啟用 | 讀取/傳送/編輯/刪除訊息 |
+| **threads** | ✅ 啟用 | 建立/回覆執行緒 |
+| **channels** | ✅ 啟用 | 建立/編輯/刪除頻道 |
+| **pins** | ✅ 啟用 | 釘選/取消釘選訊息 |
+| **search** | ✅ 啟用 | 搜尋訊息 |
+| **memberInfo** | ✅ 啟用 | 查詢成員資訊 |
+| **roleInfo** | ✅ 啟用 | 查詢角色列表 |
+| **roles** | ❌ **停用** | 新增/移除角色 |
+| **moderation** | ❌ **停用** | 封鎖/踢出/超時 |
+
+#### 停用特定操作
+
+```json5
+{
+  channels: {
+    discord: {
+      actions: {
+        channels: false,      // 停用頻道管理
+        moderation: false,   // 停用審核操作
+        roles: false         // 停用角色管理
+      }
+    }
+  }
+}
+```
+
+::: danger 安全警告
+啟用 `moderation` 和 `roles` 操作時，確保 AI 有嚴格的提示詞和存取控制，避免誤封鎖使用者。
+:::
+
+### 其他配置選項
+
+| 配置項 | 說明 | 預設值 |
+| --- | --- | --- |
+| `historyLimit` | 伺服器頻道上下文包含的歷史訊息數 | 20 |
+| `dmHistoryLimit` | DM 會話歷史訊息數 | 無限制 |
+| `textChunkLimit` | 單條訊息最大字元數 | 2000 |
+| `maxLinesPerMessage` | 單條訊息最大行數 | 17 |
+| `mediaMaxMb` | 上傳媒體檔案最大大小（MB） | 8 |
+| `chunkMode` | 訊息分塊模式（`length`/`newline`） | `length` |
+
+---
+
+## 踩坑提醒
+
+### ❌ "Used disallowed intents" 錯誤
+
+**原因**：未啟用 **Message Content Intent**。
+
+**解決**：
+1. 回到 Discord Developer Portal
+2. Bot → Privileged Gateway Intents
+3. 啟用 **Message Content Intent**
+4. 重新啟動 Gateway
+
+### ❌ Bot 連接但不回覆
+
+**可能原因**：
+1. 缺少 **Message Content Intent**
+2. Bot 沒有頻道權限
+3. 配置要求 @提及但你沒有提及
+4. 頻道不在白名單中
+
+**解決步驟**：
+```bash
+# 執行診斷工具
+clawdbot doctor
+
+# 檢查渠道狀態和權限
+clawdbot channels status --probe
+```
+
+### ❌ DM 配對碼過期
+
+**原因**：配對碼有效期為 **1 小時**。
+
+**解決**：讓使用者重新傳送 DM，取得新的配對碼，然後批准。
+
+### ❌ 群組 DM 被忽略
+
+**原因**：預設 `dm.groupEnabled: false`。
+
+**解決**：
+
+```json5
+{
+  channels: {
+    discord: {
+      dm: {
+        groupEnabled: true,
+        groupChannels: ["clawd-dm"]  // 可選：僅允許特定群組 DM
+      }
+    }
+  }
+}
+```
+
+---
+
+## 故障排除
+
+### 常見問題診斷
+
+```bash
+# 1. 檢查 Gateway 是否執行
+clawdbot gateway status
+
+# 2. 檢查渠道連接狀態
+clawdbot channels status
+
+# 3. 執行完整診斷（推薦！）
+clawdbot doctor
+```
+
+### 日誌除錯
+
+啟動 Gateway 時使用 `--verbose` 查看詳細日誌：
+
+```bash
+clawdbot gateway --port 18789 --verbose
+```
+
+**關注這些日誌**：
+- `Discord channel connected: ...` → 連接成功
+- `Message received from ...` → 收到訊息
+- `ERROR: ...` → 錯誤資訊
+
+---
+
+## 本課小結
+
+- Discord 渠道透過 **discord.js** 連接，支援 DM 和伺服器頻道
+- 建立 Bot 需要**應用程式、Bot 使用者、Gateway Intents、邀請 URL** 四步
+- **Message Content Intent** 是必需的，否則 Bot 無法讀取訊息
+- 預設啟用 **DM 配對保護**，陌生人需配對才能對話
+- 伺服器頻道可透過 `guilds.<id>.channels` 配置白名單和行為
+- AI 可呼叫 Discord 工具執行管理操作（可透過 `actions` 控制）
+
+---
+
+## 下一課預告
+
+> 下一課我們學習 **[Google Chat 渠道](../googlechat/)**。
+>
+> 你會學到：
+> - 如何配置 Google Chat OAuth 認證
+> - Google Chat Space 中的訊息路由
+> - 如何使用 Google Chat API 的限制
+
+---
+
+## 附錄：原始碼參考
+
+<details>
+<summary><strong>點擊展開查看原始碼位置</strong></summary>
+
+> 更新時間：2026-01-27
+
+| 功能 | 檔案路徑 | 行號 |
+| --- | --- | --- |
+| Discord Bot 配置 Schema | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts#L320-L427) | 320-427 |
+| Discord Onboarding 精靈 | [`src/channels/plugins/onboarding/discord.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/discord.ts) | 1-485 |
+| Discord 工具操作 | [`src/agents/tools/discord-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/discord-actions.ts) | 1-72 |
+| Discord 訊息操作 | [`src/agents/tools/discord-actions-messaging.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/discord-actions-messaging.ts) | - |
+| Discord 伺服器操作 | [`src/agents/tools/discord-actions-guild.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/discord-actions-guild.ts) | - |
+| Discord 官方文件 | [`docs/channels/discord.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/discord.md) | 1-400 |
+
+**關鍵 Schema 欄位**：
+- `DiscordAccountSchema`：Discord 帳號配置（token、guilds、dm、actions 等）
+- `DiscordDmSchema`：DM 配置（enabled、policy、allowFrom、groupEnabled）
+- `DiscordGuildSchema`：伺服器配置（slug、requireMention、reactionNotifications、channels）
+- `DiscordGuildChannelSchema`：頻道配置（allow、requireMention、skills、systemPrompt）
+
+**關鍵函式**：
+- `handleDiscordAction()`：處理 Discord 工具操作入口
+- `discordOnboardingAdapter.configure()`：精靈式配置流程
+
+</details>

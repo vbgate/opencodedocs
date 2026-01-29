@@ -1,0 +1,210 @@
+{
+    "project": {
+        "name": "Everything Claude Code",
+        "tagline": "经过实战验证的 Claude Code 插件配置集合",
+        "description": "来自 Anthropic hackathon 获胜者的完整 Claude Code 插件配置集合。提供 9 个 agents、14 个 commands、8 套 rules、11 个 skills 和 15+ 个 hooks，提升 AI 辅助开发效率。支持 Windows、macOS 和 Linux 跨平台 Node.js 脚本。",
+        "github_url": "https://github.com/affaan-m/everything-claude-code"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "快速开始",
+            "link": "/zh/affaan-m/everything-claude-code/start/quickstart/"
+        }
+    },
+    "features": {
+        "title": "为什么选择 Everything Claude Code？",
+        "subtitle": "无需从零配置。获取经过 10+ 个月日常使用打磨的实战配置。",
+        "list": [
+            {
+                "title": "实战验证",
+                "desc": "来自 Anthropic hackathon 获胜者，10+ 个月日常使用打磨，构建真实产品。"
+            },
+            {
+                "title": "完整配置",
+                "desc": "9 个 agents、14 个 commands、8 套 rules、11 个 skills、15+ 个 hooks，覆盖所有开发场景。"
+            },
+            {
+                "title": "跨平台支持",
+                "desc": "所有 hooks 和脚本使用 Node.js 重写，在 Windows、macOS 和 Linux 上无缝运行。"
+            },
+            {
+                "title": "智能包管理器",
+                "desc": "自动检测 npm、pnpm、yarn 或 bun，支持 6 种优先级配置，无需手动设置。"
+            },
+            {
+                "title": "持续学习",
+                "desc": "自动从会话中提取可复用模式，保存为 learned skills。"
+            },
+            {
+                "title": "代码质量保障",
+                "desc": "TDD 流程、代码审查、安全审计，确保 80%+ 测试覆盖率。"
+            }
+        ]
+    },
+    "docs": {
+        "title": "课程大纲",
+        "subtitle": "6 个章节，27 节课程",
+        "sections": [
+            {
+                "title": "快速入门",
+                "items": [
+                    {
+                        "title": "快速开始",
+                        "desc": "5 分钟安装并使用 Everything Claude Code",
+                        "link": "/zh/affaan-m/everything-claude-code/start/quickstart/"
+                    },
+                    {
+                        "title": "安装指南",
+                        "desc": "市场安装 vs 手动安装的详细步骤",
+                        "link": "/zh/affaan-m/everything-claude-code/start/installation/"
+                    },
+                    {
+                        "title": "包管理器配置",
+                        "desc": "配置 npm、pnpm、yarn 或 bun 检测",
+                        "link": "/zh/affaan-m/everything-claude-code/start/package-manager-setup/"
+                    },
+                    {
+                        "title": "MCP 服务器配置",
+                        "desc": "配置 GitHub、Supabase、Vercel 等 15+ 个 MCP 服务器",
+                        "link": "/zh/affaan-m/everything-claude-code/start/mcp-setup/"
+                    }
+                ]
+            },
+            {
+                "title": "核心功能",
+                "items": [
+                    {
+                        "title": "命令概览",
+                        "desc": "掌握 14 个开发工作流斜杠命令",
+                        "link": "/zh/affaan-m/everything-claude-code/platforms/commands-overview/"
+                    },
+                    {
+                        "title": "Agents 概览",
+                        "desc": "了解 9 个专业子代理及其使用场景",
+                        "link": "/zh/affaan-m/everything-claude-code/platforms/agents-overview/"
+                    },
+                    {
+                        "title": "TDD 工作流",
+                        "desc": "使用 /tdd 命令进行测试驱动开发",
+                        "link": "/zh/affaan-m/everything-claude-code/platforms/tdd-workflow/"
+                    },
+                    {
+                        "title": "代码审查工作流",
+                        "desc": "自动化代码审查和安全审计",
+                        "link": "/zh/affaan-m/everything-claude-code/platforms/code-review-workflow/"
+                    }
+                ]
+            },
+            {
+                "title": "高级功能",
+                "items": [
+                    {
+                        "title": "自定义规则",
+                        "desc": "创建和管理项目特定规则",
+                        "link": "/zh/affaan-m/everything-claude-code/advanced/custom-rules/"
+                    },
+                    {
+                        "title": "动态上下文",
+                        "desc": "在开发、审查和研究模式之间切换",
+                        "link": "/zh/affaan-m/everything-claude-code/advanced/dynamic-contexts/"
+                    },
+                    {
+                        "title": "Hooks 自动化",
+                        "desc": "深入了解 15+ 个自动化钩子",
+                        "link": "/zh/affaan-m/everything-claude-code/advanced/hooks-automation/"
+                    },
+                    {
+                        "title": "Token 优化",
+                        "desc": "管理上下文窗口并减少 token 使用",
+                        "link": "/zh/affaan-m/everything-claude-code/advanced/token-optimization/"
+                    },
+                    {
+                        "title": "验证循环",
+                        "desc": "检查点 vs 持续评估和 pass@k 指标",
+                        "link": "/zh/affaan-m/everything-claude-code/advanced/verification-loop/"
+                    },
+                    {
+                        "title": "持续学习",
+                        "desc": "自动从会话中提取模式并保存为 skills",
+                        "link": "/zh/affaan-m/everything-claude-code/advanced/continuous-learning/"
+                    }
+                ]
+            },
+            {
+                "title": "常见问题",
+                "items": [
+                    {
+                        "title": "MCP 故障排除",
+                        "desc": "解决 MCP 服务器连接和配置问题",
+                        "link": "/zh/affaan-m/everything-claude-code/faq/troubleshooting-mcp/"
+                    },
+                    {
+                        "title": "Agents 故障排除",
+                        "desc": "修复代理委派和响应质量问题",
+                        "link": "/zh/affaan-m/everything-claude-code/faq/troubleshooting-agents/"
+                    },
+                    {
+                        "title": "Hooks 故障排除",
+                        "desc": "调试钩子执行和脚本错误",
+                        "link": "/zh/affaan-m/everything-claude-code/faq/troubleshooting-hooks/"
+                    },
+                    {
+                        "title": "性能优化技巧",
+                        "desc": "优化上下文窗口并提高响应速度",
+                        "link": "/zh/affaan-m/everything-claude-code/faq/performance-tips/"
+                    }
+                ]
+            },
+            {
+                "title": "附录",
+                "items": [
+                    {
+                        "title": "配置参考",
+                        "desc": "完整配置文件参考",
+                        "link": "/zh/affaan-m/everything-claude-code/appendix/config-reference/"
+                    },
+                    {
+                        "title": "规则参考",
+                        "desc": "8 套内置规则详解",
+                        "link": "/zh/affaan-m/everything-claude-code/appendix/rules-reference/"
+                    },
+                    {
+                        "title": "Skills 参考",
+                        "desc": "11 个 skills 及其使用场景",
+                        "link": "/zh/affaan-m/everything-claude-code/appendix/skills-reference/"
+                    },
+                    {
+                        "title": "脚本 API",
+                        "desc": "Node.js 工具函数和钩子脚本",
+                        "link": "/zh/affaan-m/everything-claude-code/appendix/scripts-api/"
+                    },
+                    {
+                        "title": "示例",
+                        "desc": "真实世界配置示例",
+                        "link": "/zh/affaan-m/everything-claude-code/appendix/examples/"
+                    },
+                    {
+                        "title": "测试套件",
+                        "desc": "运行和扩展测试套件",
+                        "link": "/zh/affaan-m/everything-claude-code/appendix/test-suite/"
+                    },
+                    {
+                        "title": "贡献指南",
+                        "desc": "如何贡献 agents、skills 和 hooks",
+                        "link": "/zh/affaan-m/everything-claude-code/appendix/contributing/"
+                    }
+                ]
+            },
+            {
+                "title": "更新日志",
+                "items": [
+                    {
+                        "title": "版本发布说明",
+                        "desc": "版本历史和破坏性变更",
+                        "link": "/zh/affaan-m/everything-claude-code/changelog/release-notes/"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,110 @@
+{
+    "project": {
+        "name": "opencode-supermemory",
+        "tagline": "OpenCode Agent に永続的な記憶能力を提供",
+        "description": "OpenCode プラグインは、Supermemory をベースにコーディング Agent に永続的な記憶能力を提供し、セッション間・プロジェクト間でのコンテキスト保持を実現します。記憶の保存、検索、削除をサポートし、セッション開始時に自動的にコンテキストを注入し、Token 使用率に基づく先取り圧縮を行います。",
+        "github_url": "https://github.com/supermemoryai/opencode-supermemory"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "クイックスタート",
+            "link": "/ja/supermemoryai/opencode-supermemory/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "なぜ opencode-supermemory を選ぶのか？",
+        "subtitle": "Agent に永続的な記憶を持たせ、毎回のセッションをゼロから始める手間をなくします。",
+        "list": [
+            {
+                "title": "記憶の永続化",
+                "desc": "Agent のセッション終了後のコンテキスト消失を解決し、重要な情報を永続的に保存し、次回のセッションで自動的に復元します。"
+            },
+            {
+                "title": "プロジェクト間の再利用",
+                "desc": "ユーザーのコーディング好み（例:関数型プログラミングを好む）を異なるプロジェクトで自動的に有効にし、繰り返し説明する必要がありません。"
+            },
+            {
+                "title": "スマート圧縮",
+                "desc": "コンテキストが使い果たされそうな時に、自動的に要約して重要な情報を保存し、「忘れ」を防ぎ、セッションの一貫性を維持します。"
+            },
+            {
+                "title": "プライバシー保護",
+                "desc": "<private> タグによる自動的な匿名化をサポートし、センシティブデータをクラウドにアップロードせず、プライバシーを保護します。"
+            },
+            {
+                "title": "完全なツールセット",
+                "desc": "add、search、profile、list、forget の 5 つのツールを提供し、自然言語で記憶を制御できます。"
+            },
+            {
+                "title": "自動コンテキスト注入",
+                "desc": "セッション開始時にユーザープロフィールとプロジェクト知識を自動的に注入し、Agent はすぐに状態に入り、ウォームアップ不要です。"
+            }
+        ]
+    },
+    "docs": {
+        "title": "コース概要",
+        "subtitle": "全 4 章、8 レッスン",
+        "sections": [
+            {
+                "title": "スタートガイド (Start)",
+                "items": [
+                    {
+                        "title": "クイックスタート",
+                        "desc": "プラグインのインストール、API キー設定、基本機能の検証を完了します",
+                        "link": "/ja/supermemoryai/opencode-supermemory/start/getting-started/"
+                    },
+                    {
+                        "title": "プロジェクト初期化",
+                        "desc": "/supermemory-init コマンドを使用して Agent にプロジェクトアーキテクチャを深くスキャンさせ、記憶させます",
+                        "link": "/ja/supermemoryai/opencode-supermemory/start/initialization/"
+                    }
+                ]
+            },
+            {
+                "title": "コア機能 (Platforms)",
+                "items": [
+                    {
+                        "title": "自動コンテキスト注入",
+                        "desc": "Agent がセッション開始時にユーザープロフィールとプロジェクト知識を自動的に取得する方法を理解します",
+                        "link": "/ja/supermemoryai/opencode-supermemory/platforms/context-injection/"
+                    },
+                    {
+                        "title": "ツールセット詳細",
+                        "desc": "add、search、profile などのツールの使用シナリオを習得します",
+                        "link": "/ja/supermemoryai/opencode-supermemory/platforms/tools/"
+                    },
+                    {
+                        "title": "記憶のスコープ",
+                        "desc": "User Scope と Project Scope の違いを理解し、記憶の追加・削除・変更・検索を管理します",
+                        "link": "/ja/supermemoryai/opencode-supermemory/platforms/memory-management/"
+                    }
+                ]
+            },
+            {
+                "title": "高度な機能 (Advanced)",
+                "items": [
+                    {
+                        "title": "先取り圧縮",
+                        "desc": "Token しきい値によってトリガーされる自動圧縮メカニズムを深く理解し、コンテキストオーバーフローを防ぎます",
+                        "link": "/ja/supermemoryai/opencode-supermemory/advanced/compaction/"
+                    },
+                    {
+                        "title": "詳細設定",
+                        "desc": "圧縮しきい値、キーワードトリガー、検索パラメータをカスタマイズします",
+                        "link": "/ja/supermemoryai/opencode-supermemory/advanced/configuration/"
+                    }
+                ]
+            },
+            {
+                "title": "よくある質問 (FAQ)",
+                "items": [
+                    {
+                        "title": "プライバシーとセキュリティ",
+                        "desc": "<private> タグによる匿名化メカニズムを理解し、センシティブデータがアップロードされないことを確認します",
+                        "link": "/ja/supermemoryai/opencode-supermemory/faq/privacy/"
+                    }
+                ]
+            }
+        ]
+    }
+}

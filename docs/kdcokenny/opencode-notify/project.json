@@ -1,0 +1,138 @@
+{
+  "project": {
+    "name": "opencode-notify",
+    "tagline": "Gentle Reminders from OpenCode AI While You Stay Focused",
+    "description": "Say goodbye to the anxiety of frequent window switching. opencode-notify provides native desktop notifications for your OpenCode AI, featuring smart focus detection, quiet hours, and click-to-focus (macOS). Stay focused on your work and be precisely alerted only when the AI needs your attention.",
+    "github_url": "https://github.com/kdcokenny/opencode-notify"
+  },
+  "hero": {
+    "primary_action": {
+      "text": "Quick Start",
+      "link": "/kdcokenny/opencode-notify/start/quick-start/"
+    }
+  },
+  "features": {
+    "title": "Why Choose opencode-notify?",
+    "subtitle": "Stay Focused, Get Smart Notifications",
+    "list": [
+      {
+        "title": "🔔 Native Desktop Notifications",
+        "desc": "Use your operating system's native notification system (macOS Notification Center, Windows Toast, Linux notify-send), seamlessly integrating into your workflow."
+      },
+      {
+        "title": "🧠 Smart Focus Detection",
+        "desc": "Automatically detects terminal window focus to avoid duplicate notifications. By default, only notifies parent sessions, filtering out subtask noise so you focus on what truly matters."
+      },
+      {
+        "title": "⏰ Quiet Hours Configuration",
+        "desc": "Set quiet time periods (e.g., 22:00-08:00) to automatically suppress notifications at night. Supports cross-midnight time periods to protect your rest time."
+      },
+      {
+        "title": "🖱️ Click to Focus Terminal (macOS)",
+        "desc": "macOS users can click notifications to automatically focus the terminal window, saving time switching between applications and doubling productivity."
+      },
+      {
+        "title": "🎨 Custom Sound Effects (macOS)",
+        "desc": "Set exclusive sound effects for different event types (Glass, Basso, Submarine, etc.) to quickly identify notification types by sound."
+      },
+      {
+        "title": "💻 37+ Terminal Support",
+        "desc": "Supports 37+ terminal emulators including Ghostty, iTerm2, WezTerm, VS Code integrated terminal, automatically recognizing your terminal type."
+      },
+      {
+        "title": "🔒 Local Execution, Zero Privacy Risk",
+        "desc": "All notifications are generated locally with no data uploaded to the cloud. Your work content remains completely private and secure."
+      },
+      {
+        "title": "⚡ Lightweight Plugin",
+        "desc": "Built with TypeScript + Bun. Install and use immediately with clean configuration files. No need to learn complex configurations."
+      }
+    ]
+  },
+  "docs": {
+    "title": "Course Outline",
+    "subtitle": "4 Chapters, 12 Lessons",
+    "sections": [
+      {
+        "title": "Getting Started",
+        "items": [
+          {
+            "title": "Quick Start",
+            "desc": "Help users complete installation and experience their first notification within 5 minutes",
+            "link": "/kdcokenny/opencode-notify/start/quick-start/"
+          },
+          {
+            "title": "How It Works",
+            "desc": "Explains the plugin's core functionality, intelligent filtering mechanism, and notification trigger conditions",
+            "link": "/kdcokenny/opencode-notify/start/how-it-works/"
+          }
+        ]
+      },
+      {
+        "title": "Platform Features",
+        "items": [
+          {
+            "title": "macOS Platform Features",
+            "desc": "Introduces complete macOS platform features (focus detection, click-to-focus, custom sound effects)",
+            "link": "/kdcokenny/opencode-notify/platforms/macos/"
+          },
+          {
+            "title": "Windows Platform Features",
+            "desc": "Introduces Windows platform features (native notifications, terminal detection)",
+            "link": "/kdcokenny/opencode-notify/platforms/windows/"
+          },
+          {
+            "title": "Linux Platform Features",
+            "desc": "Introduces Linux platform features (native notifications, terminal detection)",
+            "link": "/kdcokenny/opencode-notify/platforms/linux/"
+          },
+          {
+            "title": "Supported Terminals",
+            "desc": "Lists all supported terminal emulators (37+ terminals)",
+            "link": "/kdcokenny/opencode-notify/platforms/terminals/"
+          }
+        ]
+      },
+      {
+        "title": "Advanced Features",
+        "items": [
+          {
+            "title": "Configuration Reference",
+            "desc": "Provides complete configuration option descriptions and examples",
+            "link": "/kdcokenny/opencode-notify/advanced/config-reference/"
+          },
+          {
+            "title": "Quiet Hours Guide",
+            "desc": "Explains how to set up quiet hours to avoid disturbances during specific time periods",
+            "link": "/kdcokenny/opencode-notify/advanced/quiet-hours/"
+          },
+          {
+            "title": "Terminal Detection Principles",
+            "desc": "Explains the terminal auto-detection mechanism and how to manually specify terminal type",
+            "link": "/kdcokenny/opencode-notify/advanced/terminal-detection/"
+          },
+          {
+            "title": "Advanced Usage",
+            "desc": "Provides configuration tips and best practices",
+            "link": "/kdcokenny/opencode-notify/advanced/advanced-usage/"
+          }
+        ]
+      },
+      {
+        "title": "FAQ",
+        "items": [
+          {
+            "title": "Troubleshooting",
+            "desc": "Solves common issues (notifications not displaying, focus detection failure, configuration errors, etc.)",
+            "link": "/kdcokenny/opencode-notify/faq/troubleshooting/"
+          },
+          {
+            "title": "Common Questions",
+            "desc": "Answers common user questions (performance impact, privacy security, plugin conflicts, etc.)",
+            "link": "/kdcokenny/opencode-notify/faq/common-questions/"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+{
+    "project": {
+        "name": "opencode-md-table-formatter",
+        "tagline": "Concealment Mode Alignment",
+        "description": "Automatic Markdown table formatting for OpenCode AI coding assistant, optimized for concealment mode. Ensures tables align perfectly when Markdown symbols are hidden.",
+        "github_url": "https://github.com/franlol/opencode-md-table-formatter"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "View Tutorials",
+            "link": "/franlol/opencode-md-table-formatter/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "Core Features",
+        "subtitle": "Optimized for OpenCode concealment mode, automatically formats AI-generated Markdown tables",
+        "list": [
+            {
+                "title": "Concealment Mode Alignment",
+                "desc": "Optimized for OpenCode concealment mode, correctly calculates display width to ensure tables align perfectly when Markdown symbols are hidden"
+            },
+            {
+                "title": "Auto-Format After AI Generation",
+                "desc": "Automatically triggered via experimental.text.complete hook, no manual operation required after AI generates text"
+            },
+            {
+                "title": "Code Block Protection",
+                "desc": "Protects Markdown symbols inside inline code blocks from incorrect stripping, ensuring syntax remains intact"
+            },
+            {
+                "title": "Three Alignment Options",
+                "desc": "Supports left alignment (:---), center alignment (:---:), and right alignment (---:) formats"
+            },
+            {
+                "title": "Nested Markdown Handling",
+                "desc": "Uses multi-pass regex algorithm to handle nested Markdown syntax like bold, italic, and strikethrough"
+            },
+            {
+                "title": "Edge Case Compatibility",
+                "desc": "Correctly handles Emojis, Unicode characters, empty cells, and long content"
+            },
+            {
+                "title": "Silent Operation",
+                "desc": "No console log output, errors don't interrupt workflow, formatting completes silently"
+            },
+            {
+                "title": "Validation Feedback",
+                "desc": "Provides friendly error comment hints for invalid tables to help users quickly identify issues"
+            }
+        ]
+    },
+    "docs": {
+        "title": "Course Outline",
+        "subtitle": "3 chapters, 6 lessons",
+        "sections": [
+            {
+                "title": "Quick Start",
+                "items": [
+                    {
+                        "title": "Get Started in One Minute: Installation & Configuration",
+                        "desc": "Quickly install plugin and configure OpenCode, see formatting effects immediately",
+                        "link": "/franlol/opencode-md-table-formatter/start/getting-started/"
+                    },
+                    {
+                        "title": "Feature Overview: The Magic of Automatic Formatting",
+                        "desc": "Comprehensive understanding of plugin's 8 core features, know what it can and cannot do",
+                        "link": "/franlol/opencode-md-table-formatter/start/features/"
+                    }
+                ]
+            },
+            {
+                "title": "Advanced Features",
+                "items": [
+                    {
+                        "title": "Concealment Mode Mechanism: Why Width Calculation Matters",
+                        "desc": "Understand how OpenCode concealment mode works and learn plugin's width calculation algorithm",
+                        "link": "/franlol/opencode-md-table-formatter/advanced/concealment-mode/"
+                    },
+                    {
+                        "title": "Table Specification: What Tables Can Be Formatted",
+                        "desc": "Master structure requirements for valid Markdown tables, avoid invalid table errors",
+                        "link": "/franlol/opencode-md-table-formatter/advanced/table-spec/"
+                    },
+                    {
+                        "title": "Alignment Details: Left, Center, Right",
+                        "desc": "Master syntax and effects of three alignment options, make tables more beautiful",
+                        "link": "/franlol/opencode-md-table-formatter/advanced/alignment/"
+                    }
+                ]
+            },
+            {
+                "title": "FAQ",
+                "items": [
+                    {
+                        "title": "FAQ: Tables Not Formatting? Troubleshooting Guide",
+                        "desc": "Quickly identify and solve common issues, including configuration errors and invalid table structures",
+                        "link": "/franlol/opencode-md-table-formatter/faq/troubleshooting/"
+                    }
+                ]
+            }
+        ]
+    }
+}

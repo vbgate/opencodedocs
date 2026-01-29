@@ -1,0 +1,1695 @@
+import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
+
+// https://vitepress.dev/reference/site-config
+export default withMermaid(defineConfig({
+  title: "OpenCodeDocs",
+  description: "Verified Tutorials for Every Library",
+  sitemap: {
+    hostname: 'https://opencodedocs.com'
+  },
+  head: [
+    ['meta', { name: 'author', content: 'OpenCodeDocs Team' }],
+    ['meta', { name: 'keywords', content: '开源教程, 源码教程, OpenCode, 编程教程, 开发者文档' }],
+    ['meta', { property: 'og:site_name', content: 'OpenCodeDocs' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+  ],
+  ignoreDeadLinks: true,
+  themeConfig: {
+  // https://vitepress.dev/reference/default-theme-config
+    nav: [],
+ 
+    search: {
+      provider: 'local',
+      options: {
+        scopeLabels: {
+          root: {
+            all: 'All Site',
+            project: 'Current Project'
+          },
+          zh: {
+            all: '全站',
+            project: '本项目'
+          },
+          'zh-tw': {
+            all: '全站',
+            project: '本專案'
+          },
+          ja: {
+            all: '全サイト',
+            project: '現在のプロジェクト'
+          },
+          ko: {
+            all: '전체 사이트',
+            project: '현재 프로젝트'
+          },
+          es: {
+            all: 'Todo el sitio',
+            project: 'Proyecto actual'
+          },
+          fr: {
+            all: 'Tout le site',
+            project: 'Projet actuel'
+          },
+          de: {
+            all: 'Gesamte Website',
+            project: 'Aktuelles Projekt'
+          },
+          pt: {
+            all: 'Todo o site',
+            project: 'Projeto atual'
+          },
+          ru: {
+            all: 'Весь сайт',
+            project: 'Текущий проект'
+          }
+        },
+        locales: {
+          root: {
+            translations: {
+              button: {
+                buttonText: 'Search',
+                buttonAriaLabel: 'Search'
+              },
+              modal: {
+                displayDetails: 'Display detailed list',
+                resetButtonTitle: 'Reset search',
+                backButtonTitle: 'Close search',
+                noResultsText: 'No results for',
+                footer: {
+                  selectText: 'to select',
+                  selectKeyAriaLabel: 'enter',
+                  navigateText: 'to navigate',
+                  navigateUpKeyAriaLabel: 'up arrow',
+                  navigateDownKeyAriaLabel: 'down arrow',
+                  closeText: 'to close',
+                  closeKeyAriaLabel: 'escape'
+                }
+              }
+            }
+          },
+          zh: {
+            translations: {
+              button: {
+                buttonText: '搜索',
+                buttonAriaLabel: '搜索'
+              },
+              modal: {
+                displayDetails: '显示详细列表',
+                resetButtonTitle: '重置搜索',
+                backButtonTitle: '关闭搜索',
+                noResultsText: '没有结果',
+                footer: {
+                  selectText: '选择',
+                  selectKeyAriaLabel: '输入',
+                  navigateText: '导航',
+                  navigateUpKeyAriaLabel: '上箭头',
+                  navigateDownKeyAriaLabel: '下箭头',
+                  closeText: '关闭',
+                  closeKeyAriaLabel: 'esc'
+                }
+              }
+            }
+          },
+          'zh-tw': {
+            translations: {
+              button: {
+                buttonText: '搜尋',
+                buttonAriaLabel: '搜尋'
+              },
+              modal: {
+                displayDetails: '顯示詳細列表',
+                resetButtonTitle: '重置搜尋',
+                backButtonTitle: '關閉搜尋',
+                noResultsText: '沒有結果',
+                footer: {
+                  selectText: '選擇',
+                  selectKeyAriaLabel: '輸入',
+                  navigateText: '導航',
+                  navigateUpKeyAriaLabel: '上箭頭',
+                  navigateDownKeyAriaLabel: '下箭頭',
+                  closeText: '關閉',
+                  closeKeyAriaLabel: 'esc'
+                }
+              }
+            }
+          },
+          ja: {
+            translations: {
+              button: {
+                buttonText: '検索',
+                buttonAriaLabel: '検索'
+              },
+              modal: {
+                displayDetails: '詳細リストを表示',
+                resetButtonTitle: '検索をリセット',
+                backButtonTitle: '検索を閉じる',
+                noResultsText: '結果が見つかりません',
+                footer: {
+                  selectText: '選択',
+                  selectKeyAriaLabel: '入力',
+                  navigateText: 'ナビゲート',
+                  navigateUpKeyAriaLabel: '上矢印',
+                  navigateDownKeyAriaLabel: '下矢印',
+                  closeText: '閉じる',
+                  closeKeyAriaLabel: 'esc'
+                }
+              }
+            }
+          },
+          ko: {
+            translations: {
+              button: {
+                buttonText: '검색',
+                buttonAriaLabel: '검색'
+              },
+              modal: {
+                displayDetails: '자세한 목록 표시',
+                resetButtonTitle: '검색 초기화',
+                backButtonTitle: '검색 닫기',
+                noResultsText: '결과 없음',
+                footer: {
+                  selectText: '선택',
+                  selectKeyAriaLabel: '입력',
+                  navigateText: '탐색',
+                  navigateUpKeyAriaLabel: '위 화살표',
+                  navigateDownKeyAriaLabel: '아래 화살표',
+                  closeText: '닫기',
+                  closeKeyAriaLabel: 'esc'
+                }
+              }
+            }
+          },
+          es: {
+            translations: {
+              button: {
+                buttonText: 'Buscar',
+                buttonAriaLabel: 'Buscar'
+              },
+              modal: {
+                displayDetails: 'Mostrar lista detallada',
+                resetButtonTitle: 'Restablecer búsqueda',
+                backButtonTitle: 'Cerrar búsqueda',
+                noResultsText: 'Sin resultados para',
+                footer: {
+                  selectText: 'para seleccionar',
+                  selectKeyAriaLabel: 'entrar',
+                  navigateText: 'para navegar',
+                  navigateUpKeyAriaLabel: 'flecha arriba',
+                  navigateDownKeyAriaLabel: 'flecha abajo',
+                  closeText: 'para cerrar',
+                  closeKeyAriaLabel: 'escape'
+                }
+              }
+            }
+          },
+          fr: {
+            translations: {
+              button: {
+                buttonText: 'Rechercher',
+                buttonAriaLabel: 'Rechercher'
+              },
+              modal: {
+                displayDetails: 'Afficher la liste détaillée',
+                resetButtonTitle: 'Réinitialiser la recherche',
+                backButtonTitle: 'Fermer la recherche',
+                noResultsText: 'Aucun résultat pour',
+                footer: {
+                  selectText: 'pour sélectionner',
+                  selectKeyAriaLabel: 'entrée',
+                  navigateText: 'pour naviguer',
+                  navigateUpKeyAriaLabel: 'flèche haut',
+                  navigateDownKeyAriaLabel: 'flèche bas',
+                  closeText: 'pour fermer',
+                  closeKeyAriaLabel: 'échap'
+                }
+              }
+            }
+          },
+          de: {
+            translations: {
+              button: {
+                buttonText: 'Suche',
+                buttonAriaLabel: 'Suche'
+              },
+              modal: {
+                displayDetails: 'Detaillierte Liste anzeigen',
+                resetButtonTitle: 'Suche zurücksetzen',
+                backButtonTitle: 'Suche schließen',
+                noResultsText: 'Keine Ergebnisse für',
+                footer: {
+                  selectText: 'zum Auswählen',
+                  selectKeyAriaLabel: 'Eingabe',
+                  navigateText: 'zum Navigieren',
+                  navigateUpKeyAriaLabel: 'Pfeiltaste nach oben',
+                  navigateDownKeyAriaLabel: 'Pfeiltaste nach unten',
+                  closeText: 'zum Schließen',
+                  closeKeyAriaLabel: 'Escape'
+                }
+              }
+            }
+          },
+          pt: {
+            translations: {
+              button: {
+                buttonText: 'Pesquisar',
+                buttonAriaLabel: 'Pesquisar'
+              },
+              modal: {
+                displayDetails: 'Exibir lista detalhada',
+                resetButtonTitle: 'Redefinir pesquisa',
+                backButtonTitle: 'Fechar pesquisa',
+                noResultsText: 'Nenhum resultado para',
+                footer: {
+                  selectText: 'para selecionar',
+                  selectKeyAriaLabel: 'Enter',
+                  navigateText: 'para navegar',
+                  navigateUpKeyAriaLabel: 'seta para cima',
+                  navigateDownKeyAriaLabel: 'seta para baixo',
+                  closeText: 'para fechar',
+                  closeKeyAriaLabel: 'esc'
+                }
+              }
+            }
+          },
+          ru: {
+            translations: {
+              button: {
+                buttonText: 'Поиск',
+                buttonAriaLabel: 'Поиск'
+              },
+              modal: {
+                displayDetails: 'Показать подробный список',
+                resetButtonTitle: 'Сбросить поиск',
+                backButtonTitle: 'Закрыть поиск',
+                noResultsText: 'Нет результатов для',
+                footer: {
+                  selectText: 'для выбора',
+                  selectKeyAriaLabel: 'Enter',
+                  navigateText: 'для навигации',
+                  navigateUpKeyAriaLabel: 'стрелка вверх',
+                  navigateDownKeyAriaLabel: 'стрелка вниз',
+                  closeText: 'для закрытия',
+                  closeKeyAriaLabel: 'esc'
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    // 英文 sidebar（默认语言，无前缀）
+    sidebar: {
+      '/supermemoryai/opencode-supermemory/': [
+        { text: '🏠 Project Home', link: '/supermemoryai/opencode-supermemory/' },
+      ],
+      '/backnotprop/plannotator/': [
+        { text: '🏠 Project Home', link: '/backnotprop/plannotator/' },
+        {
+          text: 'Start',
+          items: [
+            { text: 'Getting Started', link: '/backnotprop/plannotator/start/getting-started/' },
+            { text: 'Install Claude Code Plugin', link: '/backnotprop/plannotator/start/installation-claude-code/' },
+            { text: 'Install OpenCode Plugin', link: '/backnotprop/plannotator/start/installation-opencode/' },
+          ],
+        },
+        {
+          text: 'Platforms',
+          items: [
+            { text: 'Plan Review Basics', link: '/backnotprop/plannotator/platforms/plan-review-basics/' },
+            { text: 'Adding Plan Annotations', link: '/backnotprop/plannotator/platforms/plan-review-annotations/' },
+            { text: 'Adding Image Annotations', link: '/backnotprop/plannotator/platforms/plan-review-images/' },
+            { text: 'Code Review Basics', link: '/backnotprop/plannotator/platforms/code-review-basics/' },
+            { text: 'Adding Code Annotations', link: '/backnotprop/plannotator/platforms/code-review-annotations/' },
+            { text: 'Switching Diff Views', link: '/backnotprop/plannotator/platforms/code-review-diff-types/' },
+          ],
+        },
+        {
+          text: 'Advanced',
+          items: [
+            { text: 'URL Sharing', link: '/backnotprop/plannotator/advanced/url-sharing/' },
+            { text: 'Obsidian Integration', link: '/backnotprop/plannotator/advanced/obsidian-integration/' },
+            { text: 'Bear Integration', link: '/backnotprop/plannotator/advanced/bear-integration/' },
+            { text: 'Remote/Devcontainer Mode', link: '/backnotprop/plannotator/advanced/remote-mode/' },
+            { text: 'Environment Variables', link: '/backnotprop/plannotator/advanced/environment-variables/' },
+          ],
+        },
+        {
+          text: 'FAQ',
+          items: [
+            { text: 'Common Problems', link: '/backnotprop/plannotator/faq/common-problems/' },
+            { text: 'Troubleshooting', link: '/backnotprop/plannotator/faq/troubleshooting/' },
+          ],
+        },
+        {
+          text: 'Appendix',
+          items: [
+            { text: 'API Reference', link: '/backnotprop/plannotator/appendix/api-reference/' },
+            { text: 'Data Models', link: '/backnotprop/plannotator/appendix/data-models/' },
+            { text: 'License', link: '/backnotprop/plannotator/appendix/license/' },
+          ],
+        },
+        {
+          text: 'Changelog',
+          items: [
+            { text: 'Release Notes', link: '/backnotprop/plannotator/changelog/release-notes/' },
+          ],
+        },
+        {
+          text: 'Start',
+          items: [
+            { text: 'Getting Started', link: '/supermemoryai/opencode-supermemory/start/getting-started/' },
+            { text: 'Initialization', link: '/supermemoryai/opencode-supermemory/start/initialization/' }
+          ]
+        },
+      ],
+      '/joshuadavidthomas/opencode-agent-skills/': [
+        { text: '🏠 Project Home', link: '/joshuadavidthomas/opencode-agent-skills/' },
+        {
+          text: 'Start',
+          items: [
+            { text: 'What is OpenCode Agent Skills?', link: '/joshuadavidthomas/opencode-agent-skills/start/what-is-opencode-agent-skills/' },
+            { text: 'Installation', link: '/joshuadavidthomas/opencode-agent-skills/start/installation/' },
+            { text: 'Creating Your First Skill', link: '/joshuadavidthomas/opencode-agent-skills/start/creating-your-first-skill/' }
+          ]
+        },
+        {
+          text: 'Core Features',
+          items: [
+            { text: 'Skill Discovery Mechanism', link: '/joshuadavidthomas/opencode-agent-skills/platforms/skill-discovery-mechanism/' },
+            { text: 'Listing Available Skills', link: '/joshuadavidthomas/opencode-agent-skills/platforms/listing-available-skills/' },
+            { text: 'Loading Skills into Context', link: '/joshuadavidthomas/opencode-agent-skills/platforms/loading-skills-into-context/' },
+            { text: 'Automatic Skill Matching', link: '/joshuadavidthomas/opencode-agent-skills/platforms/automatic-skill-matching/' },
+            { text: 'Executing Skill Scripts', link: '/joshuadavidthomas/opencode-agent-skills/platforms/executing-skill-scripts/' },
+            { text: 'Reading Skill Files', link: '/joshuadavidthomas/opencode-agent-skills/platforms/reading-skill-files/' }
+          ]
+        },
+        {
+          text: 'Advanced',
+          items: [
+            { text: 'Claude Code Compatibility', link: '/joshuadavidthomas/opencode-agent-skills/advanced/claude-code-compatibility/' },
+            { text: 'Superpowers Integration', link: '/joshuadavidthomas/opencode-agent-skills/advanced/superpowers-integration/' },
+            { text: 'Namespaces and Priority', link: '/joshuadavidthomas/opencode-agent-skills/advanced/namespaces-and-priority/' },
+            { text: 'Context Compaction Resilience', link: '/joshuadavidthomas/opencode-agent-skills/advanced/context-compaction-resilience/' }
+          ]
+        },
+        {
+          text: 'FAQ',
+          items: [
+            { text: 'Troubleshooting', link: '/joshuadavidthomas/opencode-agent-skills/faq/troubleshooting/' },
+            { text: 'Security Considerations', link: '/joshuadavidthomas/opencode-agent-skills/faq/security-considerations/' }
+          ]
+        },
+        {
+          text: 'Appendix',
+          items: [
+            { text: 'Best Practices', link: '/joshuadavidthomas/opencode-agent-skills/appendix/best-practices/' },
+            { text: 'API Reference', link: '/joshuadavidthomas/opencode-agent-skills/appendix/api-reference/' }
+          ]
+        },
+        {
+          text: 'Changelog',
+          items: [
+            { text: 'Version History', link: '/joshuadavidthomas/opencode-agent-skills/changelog/' }
+          ]
+        }
+      ],
+      '/NoeFabris/opencode-antigravity-auth/': [
+        { text: '🏠 Project Home', link: '/NoeFabris/opencode-antigravity-auth/' },
+        {
+          text: 'Quick Start',
+          items: [
+            { text: 'What is Antigravity Auth?', link: '/NoeFabris/opencode-antigravity-auth/start/what-is-antigravity-auth/' },
+            { text: 'Quick Install', link: '/NoeFabris/opencode-antigravity-auth/start/quick-install/' },
+            { text: 'First Auth Login', link: '/NoeFabris/opencode-antigravity-auth/start/first-auth-login/' },
+            { text: 'First Request', link: '/NoeFabris/opencode-antigravity-auth/start/first-request/' }
+          ]
+        },
+        {
+          text: 'Platforms',
+          items: [
+            { text: 'Available Models', link: '/NoeFabris/opencode-antigravity-auth/platforms/available-models/' },
+            { text: 'Dual Quota System', link: '/NoeFabris/opencode-antigravity-auth/platforms/dual-quota-system/' },
+            { text: 'Google Search Grounding', link: '/NoeFabris/opencode-antigravity-auth/platforms/google-search-grounding/' },
+            { text: 'Thinking Models', link: '/NoeFabris/opencode-antigravity-auth/platforms/thinking-models/' }
+          ]
+        },
+        {
+          text: 'Advanced',
+          items: [
+            { text: 'Account Selection Strategies', link: '/NoeFabris/opencode-antigravity-auth/advanced/account-selection-strategies/' },
+            { text: 'Configuration Guide', link: '/NoeFabris/opencode-antigravity-auth/advanced/configuration-guide/' },
+            { text: 'Debug Logging', link: '/NoeFabris/opencode-antigravity-auth/advanced/debug-logging/' },
+            { text: 'Multi Account Setup', link: '/NoeFabris/opencode-antigravity-auth/advanced/multi-account-setup/' },
+            { text: 'Parallel Agents', link: '/NoeFabris/opencode-antigravity-auth/advanced/parallel-agents/' },
+            { text: 'Rate Limit Handling', link: '/NoeFabris/opencode-antigravity-auth/advanced/rate-limit-handling/' },
+            { text: 'Request Transformation', link: '/NoeFabris/opencode-antigravity-auth/advanced/request-transformation/' },
+            { text: 'Session Recovery', link: '/NoeFabris/opencode-antigravity-auth/advanced/session-recovery/' }
+          ]
+        },
+        {
+          text: 'FAQ',
+          items: [
+            { text: 'Common Auth Issues', link: '/NoeFabris/opencode-antigravity-auth/faq/common-auth-issues/' },
+            { text: 'Migration Guide', link: '/NoeFabris/opencode-antigravity-auth/faq/migration-guide/' },
+            { text: 'Model Not Found', link: '/NoeFabris/opencode-antigravity-auth/faq/model-not-found/' },
+            { text: 'Plugin Compatibility', link: '/NoeFabris/opencode-antigravity-auth/faq/plugin-compatibility/' },
+            { text: 'TOS Warning', link: '/NoeFabris/opencode-antigravity-auth/faq/tos-warning/' }
+          ]
+        },
+        {
+          text: 'Changelog',
+          items: [
+            { text: 'Version History', link: '/NoeFabris/opencode-antigravity-auth/changelog/version-history/' }
+          ]
+        },
+        {
+          text: 'Appendix',
+          items: [
+            { text: 'All Config Options', link: '/NoeFabris/opencode-antigravity-auth/appendix/all-config-options/' },
+            { text: 'API Spec', link: '/NoeFabris/opencode-antigravity-auth/appendix/api-spec/' },
+            { text: 'Architecture Overview', link: '/NoeFabris/opencode-antigravity-auth/appendix/architecture-overview/' },
+            { text: 'Storage Schema', link: '/NoeFabris/opencode-antigravity-auth/appendix/storage-schema/' }
+          ]
+        }
+      ],
+      '/Opencode-DCP/opencode-dynamic-context-pruning/': [
+        { text: '🏠 Project Home', link: '/Opencode-DCP/opencode-dynamic-context-pruning/' },
+        {
+          text: 'Quick Start',
+          items: [
+            { text: 'Installation & Quick Start', link: '/Opencode-DCP/opencode-dynamic-context-pruning/start/getting-started/' },
+            { text: 'Configuration Guide', link: '/Opencode-DCP/opencode-dynamic-context-pruning/start/configuration/' }
+          ]
+        },
+        {
+          text: 'Core Features',
+          items: [
+            { text: 'Auto-Pruning Strategies', link: '/Opencode-DCP/opencode-dynamic-context-pruning/platforms/auto-pruning/' },
+            { text: 'LLM-Driven Pruning Tools', link: '/Opencode-DCP/opencode-dynamic-context-pruning/platforms/llm-tools/' },
+            { text: 'Slash Commands', link: '/Opencode-DCP/opencode-dynamic-context-pruning/platforms/commands/' }
+          ]
+        },
+        {
+          text: 'Advanced',
+          items: [
+            { text: 'Protection Mechanisms', link: '/Opencode-DCP/opencode-dynamic-context-pruning/advanced/protection/' },
+            { text: 'State Persistence', link: '/Opencode-DCP/opencode-dynamic-context-pruning/advanced/state-persistence/' },
+            { text: 'Prompt Caching Impact', link: '/Opencode-DCP/opencode-dynamic-context-pruning/advanced/prompt-caching/' },
+            { text: 'Sub-Agent Handling', link: '/Opencode-DCP/opencode-dynamic-context-pruning/advanced/subagent-handling/' }
+          ]
+        },
+        {
+          text: 'FAQ',
+          items: [
+            { text: 'Troubleshooting', link: '/Opencode-DCP/opencode-dynamic-context-pruning/faq/troubleshooting/' },
+            { text: 'Best Practices', link: '/Opencode-DCP/opencode-dynamic-context-pruning/faq/best-practices/' }
+          ]
+        },
+        {
+          text: 'Appendix',
+          items: [
+            { text: 'Architecture Overview', link: '/Opencode-DCP/opencode-dynamic-context-pruning/appendix/architecture/' },
+            { text: 'Token Calculation', link: '/Opencode-DCP/opencode-dynamic-context-pruning/appendix/token-calculation/' },
+            { text: 'API Reference', link: '/Opencode-DCP/opencode-dynamic-context-pruning/appendix/api-reference/' }
+          ]
+        },
+        {
+          text: 'Changelog',
+          items: [
+            { text: 'Version History', link: '/Opencode-DCP/opencode-dynamic-context-pruning/changelog/version-history/' }
+          ]
+        }
+      ],
+      '/code-yeongyu/oh-my-opencode/': [
+        { text: '🏠 Project Home', link: '/code-yeongyu/oh-my-opencode/' },
+        {
+          text: 'Quick Start',
+          items: [
+            { text: 'Getting Started: 5 Minutes to Oh My OpenCode', link: '/code-yeongyu/oh-my-opencode/start/getting-started/' },
+            { text: 'Magic Word ultrawork: Zero-Config Auto-Coding', link: '/code-yeongyu/oh-my-opencode/start/ultrawork-magic/' },
+            { text: 'Meet Sisyphus: Your AI Dev Team', link: '/code-yeongyu/oh-my-opencode/start/meet-sisyphus/' },
+            { text: 'Core Features: 10+ Agents, 20+ Tools', link: '/code-yeongyu/oh-my-opencode/start/core-features/' },
+            { text: 'Config Basics: JSONC Support & Priority', link: '/code-yeongyu/oh-my-opencode/start/config-basics/' }
+          ]
+        },
+        {
+          text: 'Platform Configuration',
+          items: [
+            { text: 'Anthropic Claude: Opus 4.5 & Max20', link: '/code-yeongyu/oh-my-opencode/platforms/anthropic-claude/' },
+            { text: 'OpenAI ChatGPT: Oracle Agent GPT-5.2', link: '/code-yeongyu/oh-my-opencode/platforms/openai-chatgpt/' },
+            { text: 'Google Gemini: Multimodal & Frontend UI/UX', link: '/code-yeongyu/oh-my-opencode/platforms/google-gemini/' },
+            { text: 'GitHub Copilot: Backup Plan & Free Models', link: '/code-yeongyu/oh-my-opencode/platforms/github-copilot/' },
+            { text: 'Model Resolution: 3-Step Fallback', link: '/code-yeongyu/oh-my-opencode/platforms/model-resolution/' }
+          ]
+        },
+        {
+          text: 'Advanced Guide',
+          items: [
+            { text: 'Agents Deep Dive: 10 Specialized AI Assistants', link: '/code-yeongyu/oh-my-opencode/advanced/agents-deep-dive/' },
+            { text: 'Ralph Loop: Self-Referencing Dev Loop', link: '/code-yeongyu/oh-my-opencode/advanced/ralph-loop/' },
+            { text: 'Background Agents: Parallel Task Management', link: '/code-yeongyu/oh-my-opencode/advanced/background-agents/' },
+            { text: 'Task Delegation: Categories & Agent Selection', link: '/code-yeongyu/oh-my-opencode/advanced/delegate-task/' },
+            { text: 'LSP Tools: IDE-Level Code Operations', link: '/code-yeongyu/oh-my-opencode/advanced/lsp-tools/' },
+            { text: 'AST-Grep: 25+ Languages Pattern Search & Replace', link: '/code-yeongyu/oh-my-opencode/advanced/ast-grep/' },
+            { text: 'Skills System: playwright, git-master, frontend-ui-ux', link: '/code-yeongyu/oh-my-opencode/advanced/skills-guide/' },
+            { text: 'Slash Commands: One-Click Workflows', link: '/code-yeongyu/oh-my-opencode/advanced/slash-commands/' },
+            { text: 'Context Injection: AGENTS.md & Rules System', link: '/code-yeongyu/oh-my-opencode/advanced/context-injection/' },
+            { text: 'Lifecycle Hooks: 31 Automation Triggers', link: '/code-yeongyu/oh-my-opencode/advanced/hooks-system/' },
+            { text: 'Claude Code Compatibility Layer', link: '/code-yeongyu/oh-my-opencode/advanced/claude-code-compat/' }
+          ]
+        },
+        {
+          text: 'FAQ',
+          items: [
+            { text: 'Troubleshooting: Install, Auth, Model Selection', link: '/code-yeongyu/oh-my-opencode/faq/troubleshooting/' },
+            { text: 'Permission Control: edit, bash, webfetch', link: '/code-yeongyu/oh-my-opencode/faq/permissions/' },
+            { text: 'Performance: Concurrency, Truncation, Compression', link: '/code-yeongyu/oh-my-opencode/faq/performance/' },
+            { text: 'Experimental Features Guide', link: '/code-yeongyu/oh-my-opencode/faq/experimental-features/' }
+          ]
+        },
+        {
+          text: 'Appendix',
+          items: [
+            { text: 'CLI Reference: install, doctor', link: '/code-yeongyu/oh-my-opencode/appendix/cli-reference/' },
+            { text: 'Config File Reference', link: '/code-yeongyu/oh-my-opencode/appendix/config-reference/' },
+            { text: 'Built-in MCPs: websearch, context7, grep_app', link: '/code-yeongyu/oh-my-opencode/appendix/built-in-mcps/' },
+            { text: 'Atlas Orchestrator Deep Dive', link: '/code-yeongyu/oh-my-opencode/appendix/atlas-orchestrator/' },
+            { text: 'Uncovered Modules Reference', link: '/code-yeongyu/oh-my-opencode/appendix/uncovered-modules/' }
+          ]
+        },
+        {
+          text: 'Changelog',
+          items: [
+            { text: 'v3.0.0-beta: Atlas Orchestrator, Model Fallback Chain', link: '/code-yeongyu/oh-my-opencode/changelog/v3-0-0-beta/' }
+          ]
+        }
+      ],
+      '/numman-ali/openskills/': [
+        { text: '🏠 Project Home', link: '/numman-ali/openskills/' },
+        {
+          text: 'Start',
+          items: [
+            { text: 'Quick Start', link: '/numman-ali/openskills/start/quick-start/' },
+            { text: 'What is OpenSkills?', link: '/numman-ali/openskills/start/what-is-openskills/' },
+            { text: 'Installation', link: '/numman-ali/openskills/start/installation/' },
+            { text: 'First Skill', link: '/numman-ali/openskills/start/first-skill/' },
+            { text: 'Sync to AGENTS.md', link: '/numman-ali/openskills/start/sync-to-agents/' },
+            { text: 'Reading Skills', link: '/numman-ali/openskills/start/read-skills/' }
+          ]
+        },
+        {
+          text: 'Platforms',
+          items: [
+            { text: 'CLI Commands', link: '/numman-ali/openskills/platforms/cli-commands/' },
+            { text: 'Installation Sources', link: '/numman-ali/openskills/platforms/install-sources/' },
+            { text: 'Global vs Project', link: '/numman-ali/openskills/platforms/global-vs-project/' },
+            { text: 'List Skills', link: '/numman-ali/openskills/platforms/list-skills/' },
+            { text: 'Update Skills', link: '/numman-ali/openskills/platforms/update-skills/' },
+            { text: 'Remove Skills', link: '/numman-ali/openskills/platforms/remove-skills/' }
+          ]
+        },
+        {
+          text: 'Advanced',
+          items: [
+            { text: 'Universal Mode', link: '/numman-ali/openskills/advanced/universal-mode/' },
+            { text: 'Custom Output Path', link: '/numman-ali/openskills/advanced/custom-output-path/' },
+            { text: 'Symlink Support', link: '/numman-ali/openskills/advanced/symlink-support/' },
+            { text: 'Creating Custom Skills', link: '/numman-ali/openskills/advanced/create-skills/' },
+            { text: 'Skill Structure', link: '/numman-ali/openskills/advanced/skill-structure/' },
+            { text: 'CI/CD Integration', link: '/numman-ali/openskills/advanced/ci-integration/' },
+            { text: 'Security', link: '/numman-ali/openskills/advanced/security/' },
+            { text: 'Best Practices', link: '/numman-ali/openskills/advanced/best-practices/' }
+          ]
+        },
+        {
+          text: 'FAQ',
+          items: [
+            { text: 'FAQ', link: '/numman-ali/openskills/faq/faq/' },
+            { text: 'Troubleshooting', link: '/numman-ali/openskills/faq/troubleshooting/' },
+            { text: 'Why CLI not MCP?', link: '/numman-ali/openskills/faq/why-cli-not-mcp/' }
+          ]
+        },
+        {
+          text: 'Appendix',
+          items: [
+            { text: 'CLI API Reference', link: '/numman-ali/openskills/appendix/cli-api/' },
+            { text: 'AGENTS.md Format', link: '/numman-ali/openskills/appendix/agents-md-format/' },
+            { text: 'File Structure', link: '/numman-ali/openskills/appendix/file-structure/' },
+            { text: 'Glossary', link: '/numman-ali/openskills/appendix/glossary/' }
+          ]
+        },
+        {
+          text: 'Changelog',
+          items: [
+            { text: 'Changelog', link: '/numman-ali/openskills/changelog/changelog/' }
+          ]
+        }
+      ],
+     },
+ 
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/Opencode-DCP/opencodedocs' }
+    ],
+
+    docFooter: {
+      prev: 'Previous',
+      next: 'Next'
+    },
+
+    outline: {
+      label: 'On this page'
+    },
+
+    lastUpdated: {
+      text: 'Last updated'
+    },
+
+    returnToTopLabel: 'Back to top',
+    sidebarMenuLabel: 'Menu',
+    darkModeSwitchLabel: 'Theme',
+    lightModeSwitchTitle: 'Switch to light mode',
+    darkModeSwitchTitle: 'Switch to dark mode'
+  },
+  locales: {
+    root: {
+      label: 'English',
+      lang: 'en'
+    },
+    zh: {
+      label: '简体中文',
+      lang: 'zh',
+      link: '/zh/',
+      title: 'OpenCodeDocs - 基于源码推导的教程',
+      description: '从项目源码出发，每一步都可追溯、可验证的开源库中文教程。拒绝幻觉，拒绝瞎猜。',
+      themeConfig: {
+        nav: [],
+
+        // 中文 sidebar
+        sidebar: {
+          '/zh/supermemoryai/opencode-supermemory/': [
+            { text: '🏠 项目主页', link: '/zh/supermemoryai/opencode-supermemory/' },
+          ],
+          '/zh/backnotprop/plannotator/': [
+            { text: '🏠 项目主页', link: '/zh/backnotprop/plannotator/' },
+            {
+              text: '快速开始',
+              items: [
+                { text: '5分钟上手 Plannotator', link: '/zh/backnotprop/plannotator/start/getting-started/' },
+                { text: '安装 Claude Code 插件', link: '/zh/backnotprop/plannotator/start/installation-claude-code/' },
+                { text: '安装 OpenCode 插件', link: '/zh/backnotprop/plannotator/start/installation-opencode/' },
+              ],
+            },
+            {
+              text: '平台功能',
+              items: [
+                { text: '计划评审基础', link: '/zh/backnotprop/plannotator/platforms/plan-review-basics/' },
+                { text: '添加计划注释', link: '/zh/backnotprop/plannotator/platforms/plan-review-annotations/' },
+                { text: '添加图像标注', link: '/zh/backnotprop/plannotator/platforms/plan-review-images/' },
+                { text: '代码评审基础', link: '/zh/backnotprop/plannotator/platforms/code-review-basics/' },
+                { text: '添加代码注释', link: '/zh/backnotprop/plannotator/platforms/code-review-annotations/' },
+                { text: '切换 Diff 视图', link: '/zh/backnotprop/plannotator/platforms/code-review-diff-types/' },
+              ],
+            },
+            {
+              text: '高级功能',
+              items: [
+                { text: 'URL 分享', link: '/zh/backnotprop/plannotator/advanced/url-sharing/' },
+                { text: 'Obsidian 集成', link: '/zh/backnotprop/plannotator/advanced/obsidian-integration/' },
+                { text: 'Bear 集成', link: '/zh/backnotprop/plannotator/advanced/bear-integration/' },
+                { text: '远程/Devcontainer 模式', link: '/zh/backnotprop/plannotator/advanced/remote-mode/' },
+                { text: '环境变量配置', link: '/zh/backnotprop/plannotator/advanced/environment-variables/' },
+              ],
+            },
+            {
+              text: '常见问题',
+              items: [
+                { text: '常见问题', link: '/zh/backnotprop/plannotator/faq/common-problems/' },
+                { text: '故障排查', link: '/zh/backnotprop/plannotator/faq/troubleshooting/' },
+              ],
+            },
+            {
+              text: '附录',
+              items: [
+                { text: 'API 参考', link: '/zh/backnotprop/plannotator/appendix/api-reference/' },
+                { text: '数据模型', link: '/zh/backnotprop/plannotator/appendix/data-models/' },
+                { text: '许可证', link: '/zh/backnotprop/plannotator/appendix/license/' },
+              ],
+            },
+            {
+              text: '更新日志',
+              items: [
+                { text: '更新日志', link: '/zh/backnotprop/plannotator/changelog/release-notes/' },
+              ],
+            },
+            {
+              text: '快速开始',
+              items: [
+                { text: '快速开始：安装与配置', link: '/zh/supermemoryai/opencode-supermemory/start/getting-started/' },
+                { text: '项目初始化：建立第一印象', link: '/zh/supermemoryai/opencode-supermemory/start/initialization/' }
+              ]
+            },
+            {
+              text: '核心功能',
+              items: [
+                { text: '自动上下文注入机制', link: '/zh/supermemoryai/opencode-supermemory/core/context-injection/' },
+                { text: '工具集详解', link: '/zh/supermemoryai/opencode-supermemory/core/tools/' },
+                { text: '记忆作用域与生命周期', link: '/zh/supermemoryai/opencode-supermemory/core/memory-management/' }
+              ]
+            },
+            {
+              text: '进阶指南',
+              items: [
+                { text: '抢占式压缩原理', link: '/zh/supermemoryai/opencode-supermemory/advanced/compaction/' },
+                { text: '深度配置详解', link: '/zh/supermemoryai/opencode-supermemory/advanced/configuration/' }
+              ]
+            },
+            {
+              text: '安全隐私',
+              items: [
+                { text: '隐私与数据安全', link: '/zh/supermemoryai/opencode-supermemory/security/privacy/' }
+              ]
+            }
+          ],
+          '/zh/vbgate/opencode-mystatus/': [
+            { text: '🏠 项目主页', link: '/zh/vbgate/opencode-mystatus/' },
+            {
+              text: '快速开始',
+              items: [
+                { text: '快速开始：一键查询所有 AI 平台额度', link: '/zh/vbgate/opencode-mystatus/start/quick-start/' },
+                { text: '使用 mystatus：斜杠命令和自然语言', link: '/zh/vbgate/opencode-mystatus/start/using-mystatus/' },
+                { text: '解读输出：进度条、重置时间和多账号', link: '/zh/vbgate/opencode-mystatus/start/understanding-output/' }
+              ]
+            },
+            {
+              text: '平台查询',
+              items: [
+                { text: 'OpenAI 额度查询', link: '/zh/vbgate/opencode-mystatus/platforms/openai-usage/' },
+                { text: '智谱 AI 和 Z.ai 额度查询', link: '/zh/vbgate/opencode-mystatus/platforms/zhipu-usage/' },
+                { text: 'GitHub Copilot 额度查询', link: '/zh/vbgate/opencode-mystatus/platforms/copilot-usage/' },
+                { text: 'Google Cloud 额度查询', link: '/zh/vbgate/opencode-mystatus/platforms/google-usage/' }
+              ]
+            },
+            {
+              text: '高级配置',
+              items: [
+                { text: 'Google Cloud 高级配置', link: '/zh/vbgate/opencode-mystatus/advanced/google-setup/' },
+                { text: 'Copilot 认证配置', link: '/zh/vbgate/opencode-mystatus/advanced/copilot-auth/' },
+                { text: '多语言支持', link: '/zh/vbgate/opencode-mystatus/advanced/i18n-setup/' }
+              ]
+            },
+            {
+              text: '常见问题',
+              items: [
+                { text: '常见问题', link: '/zh/vbgate/opencode-mystatus/faq/troubleshooting/' },
+                { text: '安全与隐私', link: '/zh/vbgate/opencode-mystatus/faq/security/' }
+              ]
+            },
+            {
+              text: '附录',
+              items: [
+                { text: '数据模型', link: '/zh/vbgate/opencode-mystatus/appendix/data-models/' },
+                { text: 'API 接口', link: '/zh/vbgate/opencode-mystatus/appendix/api-endpoints/' }
+              ]
+            },
+            {
+              text: '版本历史',
+              items: [
+                { text: 'v1.2.0 - v1.2.4', link: '/zh/vbgate/opencode-mystatus/changelog/v120-v124/' },
+                { text: 'v1.0.0 - v1.0.1', link: '/zh/vbgate/opencode-mystatus/changelog/v100-v101/' }
+              ]
+            }
+          ],
+          '/zh/lbjlaq/Antigravity-Manager/': [
+            { text: '🏠 项目主页', link: '/zh/lbjlaq/Antigravity-Manager/' },
+            {
+              text: '快速开始',
+              items: [
+                { text: 'Antigravity Tools 是什么', link: '/zh/lbjlaq/Antigravity-Manager/start/getting-started/' },
+                { text: '安装与升级', link: '/zh/lbjlaq/Antigravity-Manager/start/installation/' },
+                { text: '首次启动必懂', link: '/zh/lbjlaq/Antigravity-Manager/start/first-run-data/' },
+                { text: '添加账号', link: '/zh/lbjlaq/Antigravity-Manager/start/add-account/' },
+                { text: '账号备份与迁移', link: '/zh/lbjlaq/Antigravity-Manager/start/backup-migrate/' },
+                { text: '启动本地反代并接入第一个客户端', link: '/zh/lbjlaq/Antigravity-Manager/start/proxy-and-first-client/' }
+              ]
+            },
+            {
+              text: '平台集成',
+              items: [
+                { text: 'OpenAI 兼容 API', link: '/zh/lbjlaq/Antigravity-Manager/platforms/openai/' },
+                { text: 'Anthropic 兼容 API', link: '/zh/lbjlaq/Antigravity-Manager/platforms/anthropic/' },
+                { text: 'Gemini 原生 API', link: '/zh/lbjlaq/Antigravity-Manager/platforms/gemini/' },
+                { text: 'Imagen 3 图片生成', link: '/zh/lbjlaq/Antigravity-Manager/platforms/imagen/' },
+                { text: '音频转录', link: '/zh/lbjlaq/Antigravity-Manager/platforms/audio/' },
+                { text: 'MCP 端点', link: '/zh/lbjlaq/Antigravity-Manager/platforms/mcp/' },
+                { text: 'Cloudflared 隧道', link: '/zh/lbjlaq/Antigravity-Manager/platforms/cloudflared/' }
+              ]
+            },
+            {
+              text: '高级功能',
+              items: [
+                { text: '配置全解', link: '/zh/lbjlaq/Antigravity-Manager/advanced/config/' },
+                { text: '安全与隐私', link: '/zh/lbjlaq/Antigravity-Manager/advanced/security/' },
+                { text: '高可用调度', link: '/zh/lbjlaq/Antigravity-Manager/advanced/scheduling/' },
+                { text: '模型路由', link: '/zh/lbjlaq/Antigravity-Manager/advanced/model-router/' },
+                { text: '配额治理', link: '/zh/lbjlaq/Antigravity-Manager/advanced/quota/' },
+                { text: 'Proxy Monitor', link: '/zh/lbjlaq/Antigravity-Manager/advanced/monitoring/' },
+                { text: 'Token Stats', link: '/zh/lbjlaq/Antigravity-Manager/advanced/token-stats/' },
+                { text: '长会话稳定性', link: '/zh/lbjlaq/Antigravity-Manager/advanced/context-compression/' },
+                { text: '系统能力', link: '/zh/lbjlaq/Antigravity-Manager/advanced/system/' },
+                { text: '服务器部署', link: '/zh/lbjlaq/Antigravity-Manager/advanced/deployment/' }
+              ]
+            },
+            {
+              text: '常见问题',
+              items: [
+                { text: 'invalid_grant 与账号自动禁用', link: '/zh/lbjlaq/Antigravity-Manager/faq/invalid-grant/' },
+                { text: '401 鉴权失败', link: '/zh/lbjlaq/Antigravity-Manager/faq/auth-401/' },
+                { text: '429/容量错误', link: '/zh/lbjlaq/Antigravity-Manager/faq/429-rotation/' },
+                { text: '404 路径不兼容', link: '/zh/lbjlaq/Antigravity-Manager/faq/404-base-url/' },
+                { text: '流式中断与 0 Token', link: '/zh/lbjlaq/Antigravity-Manager/faq/streaming-0token/' }
+              ]
+            },
+            {
+              text: '附录',
+              items: [
+                { text: '端点速查表', link: '/zh/lbjlaq/Antigravity-Manager/appendix/endpoints/' },
+                { text: '数据与模型', link: '/zh/lbjlaq/Antigravity-Manager/appendix/storage-models/' },
+                { text: 'z.ai 集成能力边界', link: '/zh/lbjlaq/Antigravity-Manager/appendix/zai-boundaries/' }
+              ]
+            },
+            {
+              text: '版本历史',
+              items: [
+                { text: '版本历史', link: '/zh/lbjlaq/Antigravity-Manager/changelog/release-notes/' }
+              ]
+            }
+          ],
+          '/zh/code-yeongyu/oh-my-opencode/': [
+            { text: '🏠 项目主页', link: '/zh/code-yeongyu/oh-my-opencode/' },
+            {
+              text: '快速开始',
+              items: [
+                { text: '快速开始：5 分钟上手 Oh My OpenCode', link: '/zh/code-yeongyu/oh-my-opencode/start/getting-started/' },
+                { text: '魔法词 ultrawork：零配置全自动编码', link: '/zh/code-yeongyu/oh-my-opencode/start/ultrawork-magic/' },
+                { text: '认识 Sisyphus：你的 AI 开发团队', link: '/zh/code-yeongyu/oh-my-opencode/start/meet-sisyphus/' },
+                { text: '核心功能概览：10+ 智能体、20+ 工具', link: '/zh/code-yeongyu/oh-my-opencode/start/core-features/' },
+                { text: '配置文件入门：JSONC 支持与优先级', link: '/zh/code-yeongyu/oh-my-opencode/start/config-basics/' }
+              ]
+            },
+            {
+              text: '平台配置',
+              items: [
+                { text: 'Anthropic Claude 配置：Opus 4.5 与 Max20', link: '/zh/code-yeongyu/oh-my-opencode/platforms/anthropic-claude/' },
+                { text: 'OpenAI ChatGPT 配置：Oracle 智能体的 GPT-5.2', link: '/zh/code-yeongyu/oh-my-opencode/platforms/openai-chatgpt/' },
+                { text: 'Google Gemini 配置：多模态与前端 UI/UX', link: '/zh/code-yeongyu/oh-my-opencode/platforms/google-gemini/' },
+                { text: 'GitHub Copilot：备用方案与免费模型', link: '/zh/code-yeongyu/oh-my-opencode/platforms/github-copilot/' },
+                { text: '模型解析系统：3 步回退机制', link: '/zh/code-yeongyu/oh-my-opencode/platforms/model-resolution/' }
+              ]
+            },
+            {
+              text: '进阶指南',
+              items: [
+                { text: '智能体深度解析：10 个专用 AI 助手', link: '/zh/code-yeongyu/oh-my-opencode/advanced/agents-deep-dive/' },
+                { text: 'Ralph Loop：自引用开发循环', link: '/zh/code-yeongyu/oh-my-opencode/advanced/ralph-loop/' },
+                { text: '后台智能体：并行任务管理', link: '/zh/code-yeongyu/oh-my-opencode/advanced/background-agents/' },
+                { text: '任务委托：类别与智能体选择', link: '/zh/code-yeongyu/oh-my-opencode/advanced/delegate-task/' },
+                { text: 'LSP 工具集：IDE 级别的代码操作', link: '/zh/code-yeongyu/oh-my-opencode/advanced/lsp-tools/' },
+                { text: 'AST-Grep：25+ 语言的代码模式搜索与替换', link: '/zh/code-yeongyu/oh-my-opencode/advanced/ast-grep/' },
+                { text: '技能系统：playwright、git-master、frontend-ui-ux', link: '/zh/code-yeongyu/oh-my-opencode/advanced/skills-guide/' },
+                { text: '斜杠命令：一键工作流', link: '/zh/code-yeongyu/oh-my-opencode/advanced/slash-commands/' },
+                { text: '上下文注入：AGENTS.md 与规则系统', link: '/zh/code-yeongyu/oh-my-opencode/advanced/context-injection/' },
+                { text: '生命周期钩子：31 个自动化触发点', link: '/zh/code-yeongyu/oh-my-opencode/advanced/hooks-system/' },
+                { text: 'Claude Code 兼容层', link: '/zh/code-yeongyu/oh-my-opencode/advanced/claude-code-compat/' }
+              ]
+            },
+            {
+              text: '常见问题',
+              items: [
+                { text: '常见问题排查：安装、认证、模型选择', link: '/zh/code-yeongyu/oh-my-opencode/faq/troubleshooting/' },
+                { text: '权限控制详解：edit、bash、webfetch', link: '/zh/code-yeongyu/oh-my-opencode/faq/permissions/' },
+                { text: '性能优化：并发控制、截断、压缩', link: '/zh/code-yeongyu/oh-my-opencode/faq/performance/' },
+                { text: '实验性功能使用指南', link: '/zh/code-yeongyu/oh-my-opencode/faq/experimental-features/' }
+              ]
+            },
+            {
+              text: '附录',
+              items: [
+                { text: 'CLI 命令参考：install、doctor', link: '/zh/code-yeongyu/oh-my-opencode/appendix/cli-reference/' },
+                { text: '配置文件完整参考', link: '/zh/code-yeongyu/oh-my-opencode/appendix/config-reference/' },
+                { text: '内置 MCP 服务器：websearch、context7、grep_app', link: '/zh/code-yeongyu/oh-my-opencode/appendix/built-in-mcps/' },
+                { text: 'Atlas 编排器详解', link: '/zh/code-yeongyu/oh-my-opencode/appendix/atlas-orchestrator/' },
+                { text: '未覆盖模块清单', link: '/zh/code-yeongyu/oh-my-opencode/appendix/uncovered-modules/' }
+              ]
+            },
+            {
+              text: '更新日志',
+              items: [
+                { text: 'v3.0.0-beta 系列：Atlas 编排器、模型回退链', link: '/zh/code-yeongyu/oh-my-opencode/changelog/v3-0-0-beta/' }
+              ]
+            }
+        ],
+          '/zh/numman-ali/openskills/': [
+            { text: '🏠 项目主页', link: '/zh/numman-ali/openskills/' },
+            {
+              text: '快速开始',
+              items: [
+                { text: '快速开始', link: '/zh/numman-ali/openskills/start/quick-start/' },
+                { text: '什么是 OpenSkills？', link: '/zh/numman-ali/openskills/start/what-is-openskills/' },
+                { text: '安装', link: '/zh/numman-ali/openskills/start/installation/' },
+                { text: '第一个技能', link: '/zh/numman-ali/openskills/start/first-skill/' },
+                { text: '同步到 AGENTS.md', link: '/zh/numman-ali/openskills/start/sync-to-agents/' },
+                { text: '读取技能', link: '/zh/numman-ali/openskills/start/read-skills/' }
+              ]
+            },
+            {
+              text: '平台功能',
+              items: [
+                { text: '命令详解', link: '/zh/numman-ali/openskills/platforms/cli-commands/' },
+                { text: '安装来源详解', link: '/zh/numman-ali/openskills/platforms/install-sources/' },
+                { text: '全局安装 vs 项目本地安装', link: '/zh/numman-ali/openskills/platforms/global-vs-project/' },
+                { text: '列出技能', link: '/zh/numman-ali/openskills/platforms/list-skills/' },
+                { text: '更新技能', link: '/zh/numman-ali/openskills/platforms/update-skills/' },
+                { text: '删除技能', link: '/zh/numman-ali/openskills/platforms/remove-skills/' }
+              ]
+            },
+            {
+              text: '高级功能',
+              items: [
+                { text: 'Universal 模式', link: '/zh/numman-ali/openskills/advanced/universal-mode/' },
+                { text: '自定义输出路径', link: '/zh/numman-ali/openskills/advanced/custom-output-path/' },
+                { text: '符号链接支持', link: '/zh/numman-ali/openskills/advanced/symlink-support/' },
+                { text: '创建自定义技能', link: '/zh/numman-ali/openskills/advanced/create-skills/' },
+                { text: '技能结构详解', link: '/zh/numman-ali/openskills/advanced/skill-structure/' },
+                { text: 'CI/CD 集成', link: '/zh/numman-ali/openskills/advanced/ci-integration/' },
+                { text: '安全性说明', link: '/zh/numman-ali/openskills/advanced/security/' },
+                { text: '最佳实践', link: '/zh/numman-ali/openskills/advanced/best-practices/' }
+              ]
+            },
+            {
+              text: '常见问题',
+              items: [
+                { text: '常见问题', link: '/zh/numman-ali/openskills/faq/faq/' },
+                { text: '故障排除', link: '/zh/numman-ali/openskills/faq/troubleshooting/' },
+                { text: '为什么是 CLI 而不是 MCP？', link: '/zh/numman-ali/openskills/faq/why-cli-not-mcp/' }
+              ]
+            },
+            {
+              text: '附录',
+              items: [
+                { text: 'CLI API 参考', link: '/zh/numman-ali/openskills/appendix/cli-api/' },
+                { text: 'AGENTS.md 格式规范', link: '/zh/numman-ali/openskills/appendix/agents-md-format/' },
+                { text: '文件结构', link: '/zh/numman-ali/openskills/appendix/file-structure/' },
+                { text: '术语表', link: '/zh/numman-ali/openskills/appendix/glossary/' }
+              ]
+            },
+            {
+              text: '更新日志',
+              items: [
+                { text: '更新日志', link: '/zh/numman-ali/openskills/changelog/changelog/' }
+              ]
+            }
+          ],
+        '/zh/Opencode-DCP/opencode-dynamic-context-pruning/': [
+          { text: '🏠 项目主页', link: '/zh/Opencode-DCP/opencode-dynamic-context-pruning/' },
+          {
+            text: '快速开始',
+            items: [
+              { text: '安装与快速开始', link: '/zh/Opencode-DCP/opencode-dynamic-context-pruning/start/getting-started/' },
+              { text: '配置全解', link: '/zh/Opencode-DCP/opencode-dynamic-context-pruning/start/configuration/' }
+            ]
+          },
+          {
+            text: '平台功能',
+            items: [
+              { text: '自动修剪策略', link: '/zh/Opencode-DCP/opencode-dynamic-context-pruning/platforms/auto-pruning/' },
+              { text: 'LLM 驱动修剪工具', link: '/zh/Opencode-DCP/opencode-dynamic-context-pruning/platforms/llm-tools/' },
+              { text: 'Slash 命令', link: '/zh/Opencode-DCP/opencode-dynamic-context-pruning/platforms/commands/' }
+            ]
+          },
+          {
+            text: '进阶功能',
+            items: [
+              { text: '保护机制', link: '/zh/Opencode-DCP/opencode-dynamic-context-pruning/advanced/protection/' },
+              { text: '状态持久化', link: '/zh/Opencode-DCP/opencode-dynamic-context-pruning/advanced/state-persistence/' },
+              { text: 'Prompt 缓存影响', link: '/zh/Opencode-DCP/opencode-dynamic-context-pruning/advanced/prompt-caching/' },
+              { text: '子代理处理', link: '/zh/Opencode-DCP/opencode-dynamic-context-pruning/advanced/subagent-handling/' }
+            ]
+          },
+          {
+            text: '常见问题',
+            items: [
+              { text: '常见问题与排错', link: '/zh/Opencode-DCP/opencode-dynamic-context-pruning/faq/troubleshooting/' },
+              { text: '最佳实践', link: '/zh/Opencode-DCP/opencode-dynamic-context-pruning/faq/best-practices/' }
+            ]
+          },
+          {
+            text: '附录',
+            items: [
+              { text: '架构概览', link: '/zh/Opencode-DCP/opencode-dynamic-context-pruning/appendix/architecture/' },
+              { text: 'Token 计算原理', link: '/zh/Opencode-DCP/opencode-dynamic-context-pruning/appendix/token-calculation/' },
+              { text: 'API 参考', link: '/zh/Opencode-DCP/opencode-dynamic-context-pruning/appendix/api-reference/' }
+            ]
+          },
+          {
+            text: '版本历史',
+            items: [
+              { text: '版本历史', link: '/zh/Opencode-DCP/opencode-dynamic-context-pruning/changelog/version-history/' }
+            ]
+          }
+        ],
+        '/zh/NoeFabris/opencode-antigravity-auth/': [
+          { text: '🏠 项目主页', link: '/zh/NoeFabris/opencode-antigravity-auth/' },
+          {
+            text: '快速入门',
+            items: [
+              { text: 'Antigravity Auth 简介', link: '/zh/NoeFabris/opencode-antigravity-auth/start/what-is-antigravity-auth/' },
+              { text: '快速安装', link: '/zh/NoeFabris/opencode-antigravity-auth/start/quick-install/' },
+              { text: '首次登录认证', link: '/zh/NoeFabris/opencode-antigravity-auth/start/first-auth-login/' },
+              { text: '首次请求', link: '/zh/NoeFabris/opencode-antigravity-auth/start/first-request/' }
+            ]
+          },
+          {
+            text: '平台支持',
+            items: [
+              { text: '可用模型', link: '/zh/NoeFabris/opencode-antigravity-auth/platforms/available-models/' },
+              { text: '双配额系统', link: '/zh/NoeFabris/opencode-antigravity-auth/platforms/dual-quota-system/' },
+              { text: 'Google Search Grounding', link: '/zh/NoeFabris/opencode-antigravity-auth/platforms/google-search-grounding/' },
+              { text: 'Thinking 模型', link: '/zh/NoeFabris/opencode-antigravity-auth/platforms/thinking-models/' }
+            ]
+          },
+          {
+            text: '高级功能',
+            items: [
+              { text: '账号选择策略', link: '/zh/NoeFabris/opencode-antigravity-auth/advanced/account-selection-strategies/' },
+              { text: '配置指南', link: '/zh/NoeFabris/opencode-antigravity-auth/advanced/configuration-guide/' },
+              { text: '调试日志', link: '/zh/NoeFabris/opencode-antigravity-auth/advanced/debug-logging/' },
+              { text: '多账号设置', link: '/zh/NoeFabris/opencode-antigravity-auth/advanced/multi-account-setup/' },
+              { text: '并行代理', link: '/zh/NoeFabris/opencode-antigravity-auth/advanced/parallel-agents/' },
+              { text: '限频处理', link: '/zh/NoeFabris/opencode-antigravity-auth/advanced/rate-limit-handling/' },
+              { text: '请求转换', link: '/zh/NoeFabris/opencode-antigravity-auth/advanced/request-transformation/' },
+              { text: '会话恢复', link: '/zh/NoeFabris/opencode-antigravity-auth/advanced/session-recovery/' }
+            ]
+          },
+          {
+            text: '常见问题',
+            items: [
+              { text: '常见认证问题', link: '/zh/NoeFabris/opencode-antigravity-auth/faq/common-auth-issues/' },
+              { text: '迁移指南', link: '/zh/NoeFabris/opencode-antigravity-auth/faq/migration-guide/' },
+              { text: '模型未找到', link: '/zh/NoeFabris/opencode-antigravity-auth/faq/model-not-found/' },
+              { text: '插件兼容性', link: '/zh/NoeFabris/opencode-antigravity-auth/faq/plugin-compatibility/' },
+              { text: '服务条款警告', link: '/zh/NoeFabris/opencode-antigravity-auth/faq/tos-warning/' }
+            ]
+          },
+          {
+            text: '更新日志',
+            items: [
+              { text: '版本历史', link: '/zh/NoeFabris/opencode-antigravity-auth/changelog/version-history/' }
+            ]
+          },
+          {
+            text: '附录',
+            items: [
+              { text: '所有配置选项', link: '/zh/NoeFabris/opencode-antigravity-auth/appendix/all-config-options/' },
+              { text: 'API 规范', link: '/zh/NoeFabris/opencode-antigravity-auth/appendix/api-spec/' },
+              { text: '架构概述', link: '/zh/NoeFabris/opencode-antigravity-auth/appendix/architecture-overview/' },
+              { text: '存储架构', link: '/zh/NoeFabris/opencode-antigravity-auth/appendix/storage-schema/' }
+            ]
+          }
+        ],
+        '/zh/joshuadavidthomas/opencode-agent-skills/': [
+          { text: '🏠 项目主页', link: '/zh/joshuadavidthomas/opencode-agent-skills/' },
+          {
+            text: '快速开始',
+            items: [
+              { text: '什么是 OpenCode Agent Skills？', link: '/zh/joshuadavidthomas/opencode-agent-skills/start/what-is-opencode-agent-skills/' },
+              { text: '安装', link: '/zh/joshuadavidthomas/opencode-agent-skills/start/installation/' },
+              { text: '创建你的第一个技能', link: '/zh/joshuadavidthomas/opencode-agent-skills/start/creating-your-first-skill/' }
+            ]
+          },
+          {
+            text: '核心功能',
+            items: [
+              { text: '技能发现机制详解', link: '/zh/joshuadavidthomas/opencode-agent-skills/platforms/skill-discovery-mechanism/' },
+              { text: '查询和列出可用技能', link: '/zh/joshuadavidthomas/opencode-agent-skills/platforms/listing-available-skills/' },
+              { text: '加载技能到会话上下文', link: '/zh/joshuadavidthomas/opencode-agent-skills/platforms/loading-skills-into-context/' },
+              { text: '自动技能推荐：语义匹配原理', link: '/zh/joshuadavidthomas/opencode-agent-skills/platforms/automatic-skill-matching/' },
+              { text: '执行技能脚本', link: '/zh/joshuadavidthomas/opencode-agent-skills/platforms/executing-skill-scripts/' },
+              { text: '读取技能文件', link: '/zh/joshuadavidthomas/opencode-agent-skills/platforms/reading-skill-files/' }
+            ]
+          },
+          {
+            text: '进阶功能',
+            items: [
+              { text: 'Claude Code 技能兼容性', link: '/zh/joshuadavidthomas/opencode-agent-skills/advanced/claude-code-compatibility/' },
+              { text: 'Superpowers 工作流集成', link: '/zh/joshuadavidthomas/opencode-agent-skills/advanced/superpowers-integration/' },
+              { text: '命名空间与技能优先级', link: '/zh/joshuadavidthomas/opencode-agent-skills/advanced/namespaces-and-priority/' },
+              { text: '上下文压缩恢复机制', link: '/zh/joshuadavidthomas/opencode-agent-skills/advanced/context-compaction-resilience/' }
+            ]
+          },
+          {
+            text: '常见问题',
+            items: [
+              { text: '常见问题排查', link: '/zh/joshuadavidthomas/opencode-agent-skills/faq/troubleshooting/' },
+              { text: '安全性说明', link: '/zh/joshuadavidthomas/opencode-agent-skills/faq/security-considerations/' }
+            ]
+          },
+          {
+            text: '附录',
+            items: [
+              { text: '技能开发最佳实践', link: '/zh/joshuadavidthomas/opencode-agent-skills/appendix/best-practices/' },
+              { text: 'API 工具参考', link: '/zh/joshuadavidthomas/opencode-agent-skills/appendix/api-reference/' },
+              { text: '版本历史', link: '/zh/joshuadavidthomas/opencode-agent-skills/changelog/' }
+            ]
+          }
+        ]
+        },
+        docFooter: {
+          prev: '上一页',
+          next: '下一页'
+        },
+        outline: {
+          label: '页面导航'
+        },
+        lastUpdated: {
+          text: '最后更新于'
+        },
+        returnToTopLabel: '回到顶部',
+        sidebarMenuLabel: '菜单',
+        darkModeSwitchLabel: '主题',
+        lightModeSwitchTitle: '切换到浅色模式',
+        darkModeSwitchTitle: '切换到深色模式'
+      }
+    },
+    'zh-tw': {
+      label: '繁體中文',
+      lang: 'zh-TW',
+      link: '/zh-tw/',
+      themeConfig: {
+        nav: [
+          { text: 'opencode-mystatus', link: '/zh-tw/vbgate/opencode-mystatus/', activeMatch: '/zh-tw/vbgate/opencode-mystatus/' },
+          { text: 'antigravity-auth', link: '/zh-tw/NoeFabris/opencode-antigravity-auth/', activeMatch: '/zh-tw/NoeFabris/opencode-antigravity-auth/' }
+        ],
+
+        sidebar: {
+          '/zh-tw/NoeFabris/opencode-antigravity-auth/': [
+            { text: '🏠 專案主頁', link: '/zh-tw/NoeFabris/opencode-antigravity-auth/' },
+            {
+              text: '第 1 階段：快速入門',
+              items: [
+                { text: '01 外掛介紹', link: '/zh-tw/NoeFabris/opencode-antigravity-auth/1-start/01-intro' },
+                { text: '02 安裝與配置', link: '/zh-tw/NoeFabris/opencode-antigravity-auth/1-start/02-install' }
+              ]
+            },
+            {
+              text: '第 2 階段：OAuth 認證與多帳號管理',
+              items: [
+                { text: '2.3 Google OAuth 登入', link: '/zh-tw/NoeFabris/opencode-antigravity-auth/2-daily/03-oauth-login' },
+                { text: '2.4 多帳號管理', link: '/zh-tw/NoeFabris/opencode-antigravity-auth/2-daily/04-multi-account' },
+                { text: '2.5 帳號輪換策略', link: '/zh-tw/NoeFabris/opencode-antigravity-auth/2-daily/05-rotation-strategies' },
+                { text: '2.6 雙配額系統', link: '/zh-tw/NoeFabris/opencode-antigravity-auth/2-daily/06-quota-management' }
+              ]
+            },
+            {
+              text: '第 3 階段：進階調優 (Advanced Tuning)',
+              items: [
+                { text: '3.7 Thinking 模型支援', link: '/zh-tw/NoeFabris/opencode-antigravity-auth/3-advanced/07-thinking-models' },
+                { text: '3.8 Google Search Grounding', link: '/zh-tw/NoeFabris/opencode-antigravity-auth/3-advanced/08-web-search' },
+                { text: '3.9 會話自動恢復', link: '/zh-tw/NoeFabris/opencode-antigravity-auth/3-advanced/09-session-recovery' },
+                { text: '3.10 故障排除與除錯手冊', link: '/zh-tw/NoeFabris/opencode-antigravity-auth/3-advanced/10-error-handling' }
+              ]
+            },
+            {
+              text: '第 4 階段：開發者指南 (Developer Guide)',
+              items: [
+                { text: '11 模型配置詳解', link: '/zh-tw/NoeFabris/opencode-antigravity-auth/5-advanced/11-model-configuration' },
+                { text: '12 工具和函式呼叫', link: '/zh-tw/NoeFabris/opencode-antigravity-auth/5-advanced/12-tools-and-functions' },
+                { text: '13 進階配置', link: '/zh-tw/NoeFabris/opencode-antigravity-auth/5-advanced/13-advanced-config' },
+                { text: '14 最佳實踐與效能最佳化', link: '/zh-tw/NoeFabris/opencode-antigravity-auth/5-advanced/14-best-practices' }
+              ]
+            },
+            {
+              text: '附錄：開發者內幕 (Internals)',
+              items: [
+                { text: 'A.1 請求攔截與協定適配', link: '/zh-tw/NoeFabris/opencode-antigravity-auth/appendix/07-architecture' }
+              ]
+            }
+          ]
+        },
+        docFooter: {
+          prev: '上一頁',
+          next: '下一頁'
+        },
+        outline: {
+          label: '頁面導航'
+        },
+        lastUpdated: {
+          text: '最後更新於'
+        },
+        returnToTopLabel: '回到頂部',
+        sidebarMenuLabel: '選單',
+        darkModeSwitchLabel: '主題',
+        lightModeSwitchTitle: '切換到淺色模式',
+        darkModeSwitchTitle: '切換到深色模式'
+      }
+    },
+    ja: {
+      label: '日本語',
+      lang: 'ja',
+      link: '/ja/',
+      themeConfig: {
+        nav: [
+          { text: 'opencode-mystatus', link: '/ja/vbgate/opencode-mystatus/', activeMatch: '/ja/vbgate/opencode-mystatus/' },
+          { text: 'antigravity-auth', link: '/ja/NoeFabris/opencode-antigravity-auth/', activeMatch: '/ja/NoeFabris/opencode-antigravity-auth/' }
+        ],
+
+        // 日本語 sidebar
+        sidebar: {
+          '/ja/NoeFabris/opencode-antigravity-auth/': [
+            { text: '🏠 プロジェクトホーム', link: '/ja/NoeFabris/opencode-antigravity-auth/' },
+            {
+              text: '第1段階：クイックスタート',
+              items: [
+                { text: '01 プラグイン紹介', link: '/ja/NoeFabris/opencode-antigravity-auth/1-start/01-intro' },
+                { text: '02 インストールと設定', link: '/ja/NoeFabris/opencode-antigravity-auth/1-start/02-install' }
+              ]
+            },
+            {
+              text: '第2段階：OAuth 認証とマルチアカウント管理',
+              items: [
+                { text: '2.3 Google OAuth ログイン', link: '/ja/NoeFabris/opencode-antigravity-auth/2-daily/03-oauth-login' },
+                { text: '2.4 マルチアカウント管理', link: '/ja/NoeFabris/opencode-antigravity-auth/2-daily/04-multi-account' },
+                { text: '2.5 アカウントローテーション戦略', link: '/ja/NoeFabris/opencode-antigravity-auth/2-daily/05-rotation-strategies' },
+                { text: '2.6 デュアルクォータシステム', link: '/ja/NoeFabris/opencode-antigravity-auth/2-daily/06-quota-management' }
+              ]
+            },
+            {
+              text: '第3段階：高度なチューニング',
+              items: [
+                { text: '3.7 Thinking モデルサポート', link: '/ja/NoeFabris/opencode-antigravity-auth/3-advanced/07-thinking-models' },
+                { text: '3.8 Google Search Grounding', link: '/ja/NoeFabris/opencode-antigravity-auth/3-advanced/08-web-search' },
+                { text: '3.9 セッション自動復旧', link: '/ja/NoeFabris/opencode-antigravity-auth/3-advanced/09-session-recovery' },
+                { text: '3.10 エラーハンドリングとデバッグ', link: '/ja/NoeFabris/opencode-antigravity-auth/3-advanced/10-error-handling' }
+              ]
+            },
+            {
+              text: '第4段階：開発者ガイド',
+              items: [
+                { text: '11 モデル設定詳細', link: '/ja/NoeFabris/opencode-antigravity-auth/5-advanced/11-model-configuration' },
+                { text: '12 ツールと関数呼び出し', link: '/ja/NoeFabris/opencode-antigravity-auth/5-advanced/12-tools-and-functions' },
+                { text: '13 高度な設定', link: '/ja/NoeFabris/opencode-antigravity-auth/5-advanced/13-advanced-config' },
+                { text: '14 ベストプラクティス', link: '/ja/NoeFabris/opencode-antigravity-auth/5-advanced/14-best-practices' }
+              ]
+            },
+            {
+              text: '付録：内部構造',
+              items: [
+                { text: 'A.1 リクエストインターセプションとプロトコルアダプテーション', link: '/ja/NoeFabris/opencode-antigravity-auth/appendix/07-architecture' }
+              ]
+            }
+          ]
+        },
+        docFooter: {
+          prev: '前のページ',
+          next: '次のページ'
+        },
+        outline: {
+          label: 'ページナビゲーション'
+        },
+        lastUpdated: {
+          text: '最終更新日'
+        },
+        returnToTopLabel: 'トップに戻る',
+        sidebarMenuLabel: 'メニュー',
+        darkModeSwitchLabel: 'テーマ',
+        lightModeSwitchTitle: 'ライトモードに切り替え',
+        darkModeSwitchTitle: 'ダークモードに切り替え'
+      }
+    },
+    ko: {
+      label: '한국어',
+      lang: 'ko',
+      link: '/ko/',
+      themeConfig: {
+        // 한국어 sidebar
+        sidebar: {
+          '/ko/NoeFabris/opencode-antigravity-auth/': [
+            {
+              text: '1단계: 빠른 시작',
+              items: [
+                { text: '01 플러그인 소개', link: '/ko/NoeFabris/opencode-antigravity-auth/1-start/01-intro' },
+                { text: '02 설치 및 구성', link: '/ko/NoeFabris/opencode-antigravity-auth/1-start/02-install' }
+              ]
+            },
+            {
+              text: '2단계: OAuth 인증 및 다중 계정 관리',
+              items: [
+                { text: '2.3 Google OAuth 로그인', link: '/ko/NoeFabris/opencode-antigravity-auth/2-daily/03-oauth-login' },
+                { text: '2.4 다중 계정 관리', link: '/ko/NoeFabris/opencode-antigravity-auth/2-daily/04-multi-account' },
+                { text: '2.5 계정 순환 전략', link: '/ko/NoeFabris/opencode-antigravity-auth/2-daily/05-rotation-strategies' },
+                { text: '2.6 이중 할당량 시스템', link: '/ko/NoeFabris/opencode-antigravity-auth/2-daily/06-quota-management' }
+              ]
+            },
+            {
+              text: '3단계: 고급 튜닝 (Advanced Tuning)',
+              items: [
+                { text: '3.7 Thinking 모델 지원', link: '/ko/NoeFabris/opencode-antigravity-auth/3-advanced/07-thinking-models' },
+                { text: '3.8 Google Search Grounding', link: '/ko/NoeFabris/opencode-antigravity-auth/3-advanced/08-web-search' },
+                { text: '3.9 세션 자동 복구', link: '/ko/NoeFabris/opencode-antigravity-auth/3-advanced/09-session-recovery' },
+                { text: '3.10 오류 처리 및 디버깅', link: '/ko/NoeFabris/opencode-antigravity-auth/3-advanced/10-error-handling' }
+              ]
+            }
+          ]
+        },
+        docFooter: {
+          prev: '이전 페이지',
+          next: '다음 페이지'
+        },
+        outline: {
+          label: '페이지 탐색'
+        },
+        lastUpdated: {
+          text: '마지막 업데이트'
+        },
+        returnToTopLabel: '맨 위로',
+        sidebarMenuLabel: '메뉴',
+        darkModeSwitchLabel: '테마',
+        lightModeSwitchTitle: '라이트 모드로 전환',
+        darkModeSwitchTitle: '다크 모드로 전환'
+      }
+    },
+    es: {
+      label: 'Español',
+      lang: 'es',
+      link: '/es/',
+      themeConfig: {
+        // Sidebar en español
+        sidebar: {
+          '/es/NoeFabris/opencode-antigravity-auth/': [
+            {
+              text: 'Etapa 1: Inicio rápido',
+              items: [
+                { text: '01 Introducción al plugin', link: '/es/NoeFabris/opencode-antigravity-auth/1-start/01-intro' },
+                { text: '02 Instalación y configuración', link: '/es/NoeFabris/opencode-antigravity-auth/1-start/02-install' }
+              ]
+            },
+            {
+              text: 'Etapa 2: Autenticación OAuth y gestión multi-cuenta',
+              items: [
+                { text: '2.3 Inicio de sesión Google OAuth', link: '/es/NoeFabris/opencode-antigravity-auth/2-daily/03-oauth-login' },
+                { text: '2.4 Gestión multi-cuenta', link: '/es/NoeFabris/opencode-antigravity-auth/2-daily/04-multi-account' },
+                { text: '2.5 Estrategias de rotación de cuentas', link: '/es/NoeFabris/opencode-antigravity-auth/2-daily/05-rotation-strategies' },
+                { text: '2.6 Sistema de cuota dual', link: '/es/NoeFabris/opencode-antigravity-auth/2-daily/06-quota-management' }
+              ]
+            },
+            {
+              text: 'Etapa 3: Ajustes avanzados',
+              items: [
+                { text: '3.7 Soporte para modelos Thinking', link: '/es/NoeFabris/opencode-antigravity-auth/3-advanced/07-thinking-models' },
+                { text: '3.8 Google Search Grounding', link: '/es/NoeFabris/opencode-antigravity-auth/3-advanced/08-web-search' },
+                { text: '3.9 Recuperación automática de sesión', link: '/es/NoeFabris/opencode-antigravity-auth/3-advanced/09-session-recovery' },
+                { text: '3.10 Manejo de errores y depuración', link: '/es/NoeFabris/opencode-antigravity-auth/3-advanced/10-error-handling' }
+              ]
+            },
+            {
+              text: 'Etapa 5: Guía para desarrolladores',
+              items: [
+                { text: '11 Configuración de modelos en profundidad', link: '/es/NoeFabris/opencode-antigravity-auth/5-advanced/11-model-configuration' },
+                { text: '12 Herramientas y llamadas a funciones', link: '/es/NoeFabris/opencode-antigravity-auth/5-advanced/12-tools-and-functions' },
+                { text: '13 Configuración avanzada', link: '/es/NoeFabris/opencode-antigravity-auth/5-advanced/13-advanced-config' },
+                { text: '14 Mejores prácticas y optimización de rendimiento', link: '/es/NoeFabris/opencode-antigravity-auth/5-advanced/14-best-practices' }
+              ]
+            },
+            {
+              text: 'Apéndice: Internals',
+              items: [
+                { text: 'A.1 Intercepción de solicitudes y adaptación de protocolo', link: '/es/NoeFabris/opencode-antigravity-auth/appendix/07-architecture' }
+              ]
+            }
+          ]
+        },
+        docFooter: {
+          prev: 'Anterior',
+          next: 'Siguiente'
+        },
+        outline: {
+          label: 'En esta página'
+        },
+        lastUpdated: {
+          text: 'Última actualización'
+        },
+        returnToTopLabel: 'Volver arriba',
+        sidebarMenuLabel: 'Menú',
+        darkModeSwitchLabel: 'Tema',
+        lightModeSwitchTitle: 'Cambiar a modo claro',
+        darkModeSwitchTitle: 'Cambiar a modo oscuro'
+      }
+    },
+    fr: {
+      label: 'Français',
+      lang: 'fr',
+      link: '/fr/',
+      themeConfig: {
+        sidebar: {
+          '/fr/NoeFabris/opencode-antigravity-auth/': [
+            {
+              text: 'Étape 1 : Démarrage rapide',
+              items: [
+                { text: '01 Introduction au plugin', link: '/fr/NoeFabris/opencode-antigravity-auth/1-start/01-intro' },
+                { text: '02 Installation et configuration', link: '/fr/NoeFabris/opencode-antigravity-auth/1-start/02-install' }
+              ]
+            },
+            {
+              text: 'Étape 2 : Authentification OAuth et gestion multi-comptes',
+              items: [
+                { text: '2.3 Connexion Google OAuth', link: '/fr/NoeFabris/opencode-antigravity-auth/2-daily/03-oauth-login' },
+                { text: '2.4 Gestion multi-comptes', link: '/fr/NoeFabris/opencode-antigravity-auth/2-daily/04-multi-account' },
+                { text: '2.6 Système de double quota', link: '/fr/NoeFabris/opencode-antigravity-auth/2-daily/06-quota-management' }
+              ]
+            }
+          ]
+        },
+        docFooter: {
+          prev: 'Précédent',
+          next: 'Suivant'
+        },
+        outline: {
+          label: 'Sur cette page'
+        },
+        lastUpdated: {
+          text: 'Dernière mise à jour'
+        },
+        returnToTopLabel: 'Retour en haut',
+        sidebarMenuLabel: 'Menu',
+        darkModeSwitchLabel: 'Thème',
+        lightModeSwitchTitle: 'Basculer en mode clair',
+        darkModeSwitchTitle: 'Basculer en mode sombre'
+      }
+    },
+    de: {
+      label: 'Deutsch',
+      lang: 'de',
+      link: '/de/',
+      themeConfig: {
+        sidebar: {
+          '/de/NoeFabris/opencode-antigravity-auth/': [
+            {
+              text: 'Phase 1: Schnelleinstieg',
+              items: [
+                { text: '01 Plugin-Einführung', link: '/de/NoeFabris/opencode-antigravity-auth/1-start/01-intro' },
+                { text: '02 Installation und Konfiguration', link: '/de/NoeFabris/opencode-antigravity-auth/1-start/02-install' }
+              ]
+            },
+            {
+              text: 'Phase 2: OAuth-Authentifizierung und Multi-Account-Verwaltung',
+              items: [
+                { text: '2.3 Google OAuth-Login', link: '/de/NoeFabris/opencode-antigravity-auth/2-daily/03-oauth-login' },
+                { text: '2.4 Multi-Account-Verwaltung', link: '/de/NoeFabris/opencode-antigravity-auth/2-daily/04-multi-account' },
+                { text: '2.5 Kontorotationsstrategien', link: '/de/NoeFabris/opencode-antigravity-auth/2-daily/05-rotation-strategies' },
+                { text: '2.6 Doppeltes Quota-System', link: '/de/NoeFabris/opencode-antigravity-auth/2-daily/06-quota-management' }
+              ]
+            },
+            {
+              text: 'Phase 3: Erweiterte Funktionen',
+              items: [
+                { text: '3.7 Thinking-Modell-Unterstützung', link: '/de/NoeFabris/opencode-antigravity-auth/3-advanced/07-thinking-models' },
+                { text: '3.8 Google Search Grounding', link: '/de/NoeFabris/opencode-antigravity-auth/3-advanced/08-web-search' },
+                { text: '3.9 Automatische Sitzungswiederherstellung', link: '/de/NoeFabris/opencode-antigravity-auth/3-advanced/09-session-recovery' },
+                { text: '3.10 Fehlerbehandlung und Debugging', link: '/de/NoeFabris/opencode-antigravity-auth/3-advanced/10-error-handling' }
+              ]
+            },
+            {
+              text: 'Phase 5: Entwicklerleitfaden',
+              items: [
+                { text: '11 Modellkonfiguration im Detail', link: '/de/NoeFabris/opencode-antigravity-auth/5-advanced/11-model-configuration' },
+                { text: '12 Werkzeuge und Funktionsaufrufe', link: '/de/NoeFabris/opencode-antigravity-auth/5-advanced/12-tools-and-functions' },
+                { text: '13 Erweiterte Konfiguration', link: '/de/NoeFabris/opencode-antigravity-auth/5-advanced/13-advanced-config' },
+                { text: '14 Best Practices und Leistungsoptimierung', link: '/de/NoeFabris/opencode-antigravity-auth/5-advanced/14-best-practices' }
+              ]
+            },
+            {
+              text: 'Anhang: Interna',
+              items: [
+                { text: 'A.1 Request-Interception und Protokollanpassung', link: '/de/NoeFabris/opencode-antigravity-auth/appendix/07-architecture' }
+              ]
+            }
+          ]
+        },
+        docFooter: {
+          prev: 'Zurück',
+          next: 'Weiter'
+        },
+        outline: {
+          label: 'Auf dieser Seite'
+        },
+        lastUpdated: {
+          text: 'Zuletzt aktualisiert'
+        },
+        returnToTopLabel: 'Nach oben',
+        sidebarMenuLabel: 'Menü',
+        darkModeSwitchLabel: 'Design',
+        lightModeSwitchTitle: 'In den hellen Modus wechseln',
+        darkModeSwitchTitle: 'In den dunklen Modus wechseln'
+      }
+    },
+    pt: {
+      label: 'Português',
+      lang: 'pt',
+      link: '/pt/',
+      themeConfig: {
+        sidebar: {
+          '/pt/NoeFabris/opencode-antigravity-auth/': [
+            {
+              text: 'Etapa 1: Introdução Rápida',
+              items: [
+                { text: '01 Introdução ao Plugin', link: '/pt/NoeFabris/opencode-antigravity-auth/1-start/01-intro' },
+                { text: '02 Instalação e Configuração', link: '/pt/NoeFabris/opencode-antigravity-auth/1-start/02-install' }
+              ]
+            },
+            {
+              text: 'Etapa 2: Autenticação OAuth e Gerenciamento de Múltiplas Contas',
+              items: [
+                { text: '2.3 Login Google OAuth', link: '/pt/NoeFabris/opencode-antigravity-auth/2-daily/03-oauth-login' },
+                { text: '2.4 Gerenciamento de Múltiplas Contas', link: '/pt/NoeFabris/opencode-antigravity-auth/2-daily/04-multi-account' },
+                { text: '2.5 Estratégias de Rotação de Contas', link: '/pt/NoeFabris/opencode-antigravity-auth/2-daily/05-rotation-strategies' },
+                { text: '2.6 Sistema de Dupla Cota', link: '/pt/NoeFabris/opencode-antigravity-auth/2-daily/06-quota-management' }
+              ]
+            },
+            {
+              text: 'Etapa 3: Ajustes Avançados',
+              items: [
+                { text: '3.7 Suporte a Modelos Thinking', link: '/pt/NoeFabris/opencode-antigravity-auth/3-advanced/07-thinking-models' },
+                { text: '3.8 Google Search Grounding', link: '/pt/NoeFabris/opencode-antigravity-auth/3-advanced/08-web-search' },
+                { text: '3.9 Recuperação Automática de Sessão', link: '/pt/NoeFabris/opencode-antigravity-auth/3-advanced/09-session-recovery' },
+                { text: '3.10 Tratamento de Erros e Depuração', link: '/pt/NoeFabris/opencode-antigravity-auth/3-advanced/10-error-handling' }
+              ]
+            },
+            {
+              text: 'Etapa 4: Guia do Desenvolvedor',
+              items: [
+                { text: '11 Aprofundamento na Configuração de Modelos', link: '/pt/NoeFabris/opencode-antigravity-auth/5-advanced/11-model-configuration' },
+                { text: '12 Ferramentas e Chamadas de Função', link: '/pt/NoeFabris/opencode-antigravity-auth/5-advanced/12-tools-and-functions' },
+                { text: '13 Configuração Avançada', link: '/pt/NoeFabris/opencode-antigravity-auth/5-advanced/13-advanced-config' },
+                { text: '14 Melhores Práticas e Otimização de Desempenho', link: '/pt/NoeFabris/opencode-antigravity-auth/5-advanced/14-best-practices' }
+              ]
+            },
+            {
+              text: 'Apêndice: Internals',
+              items: [
+                { text: 'A.1 Interceptação de Requisições e Adaptação de Protocolo', link: '/pt/NoeFabris/opencode-antigravity-auth/appendix/07-architecture' }
+              ]
+            }
+          ]
+        },
+        docFooter: {
+          prev: 'Anterior',
+          next: 'Próximo'
+        },
+        outline: {
+          label: 'Nesta página'
+        },
+        lastUpdated: {
+          text: 'Última atualização'
+        },
+        returnToTopLabel: 'Voltar ao topo',
+        sidebarMenuLabel: 'Menu',
+        darkModeSwitchLabel: 'Tema',
+        lightModeSwitchTitle: 'Alternar para modo claro',
+        darkModeSwitchTitle: 'Alternar para modo escuro'
+      }
+      },
+
+     ru: {
+       label: 'Русский',
+       lang: 'ru',
+       link: '/ru/',
+       themeConfig: {
+         sidebar: {
+          '/ru/NoeFabris/opencode-antigravity-auth/': [
+            {
+              text: 'Этап 1: Быстрый старт',
+              items: [
+                { text: '01 Введение в плагин', link: '/ru/NoeFabris/opencode-antigravity-auth/1-start/01-intro' },
+                { text: '02 Установка и настройка', link: '/ru/NoeFabris/opencode-antigravity-auth/1-start/02-install' }
+              ]
+            },
+            {
+              text: 'Этап 2: Аутентификация OAuth и управление несколькими учётными записями',
+              items: [
+                { text: '2.3 Вход Google OAuth', link: '/ru/NoeFabris/opencode-antigravity-auth/2-daily/03-oauth-login' },
+                { text: '2.4 Управление несколькими учётными записями', link: '/ru/NoeFabris/opencode-antigravity-auth/2-daily/04-multi-account' },
+                { text: '2.5 Стратегии ротации учётных записей', link: '/ru/NoeFabris/opencode-antigravity-auth/2-daily/05-rotation-strategies' },
+                { text: '2.6 Система двойной квоты', link: '/ru/NoeFabris/opencode-antigravity-auth/2-daily/06-quota-management' }
+              ]
+            },
+            {
+              text: 'Этап 3: Расширенные функции',
+              items: [
+                { text: '3.7 Поддержка моделей Thinking', link: '/ru/NoeFabris/opencode-antigravity-auth/3-advanced/07-thinking-models' },
+                { text: '3.8 Google Search Grounding', link: '/ru/NoeFabris/opencode-antigravity-auth/3-advanced/08-web-search' },
+                { text: '3.9 Автоматическое восстановление сеанса', link: '/ru/NoeFabris/opencode-antigravity-auth/3-advanced/09-session-recovery' },
+                { text: '3.10 Обработка ошибок и отладка', link: '/ru/NoeFabris/opencode-antigravity-auth/3-advanced/10-error-handling' }
+              ]
+            },
+            {
+              text: 'Этап 5: Руководство для разработчиков',
+              items: [
+                { text: '11 Подробная конфигурация моделей', link: '/ru/NoeFabris/opencode-antigravity-auth/5-advanced/11-model-configuration' },
+                { text: '12 Инструменты и вызов функций', link: '/ru/NoeFabris/opencode-antigravity-auth/5-advanced/12-tools-and-functions' },
+                { text: '13 Расширенная настройка', link: '/ru/NoeFabris/opencode-antigravity-auth/5-advanced/13-advanced-config' },
+                { text: '14 Лучшие практики и оптимизация производительности', link: '/ru/NoeFabris/opencode-antigravity-auth/5-advanced/14-best-practices' }
+              ]
+            },
+            {
+              text: 'Приложение: Внутренности',
+              items: [
+                { text: 'A.1 Перехват запросов и адаптация протокола', link: '/ru/NoeFabris/opencode-antigravity-auth/appendix/07-architecture' }
+              ]
+            }
+          ]
+        },
+        docFooter: {
+          prev: 'Назад',
+          next: 'Далее'
+        },
+        outline: {
+          label: 'Содержание'
+        },
+        lastUpdated: {
+          text: 'Последнее обновление'
+        },
+        returnToTopLabel: 'Вернуться наверх',
+        sidebarMenuLabel: 'Меню',
+        darkModeSwitchLabel: 'Тема',
+        lightModeSwitchTitle: 'Переключить на светлую тему',
+        darkModeSwitchTitle: 'Переключить на тёмную тему'
+      }
+    }
+  },
+  mermaid: {
+    // mermaid config
+  }
+}))

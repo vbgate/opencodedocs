@@ -1,0 +1,103 @@
+{
+    "project": {
+        "name": "opencode-md-table-formatter",
+        "tagline": "AI 表格自動對齊",
+        "description": "OpenCode 外掛，自動格式化 AI 生成的 Markdown 表格。智慧識別內容寬度，支援粗體、斜體、程式碼區塊等格式，讓表格始終整齊美觀。",
+        "github_url": "https://github.com/franlol/opencode-md-table-formatter"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "查看教學",
+            "link": "/zh-tw/franlol/opencode-md-table-formatter/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "核心功能",
+        "subtitle": "自動識別 Markdown 語法，智慧計算顯示寬度",
+        "list": [
+            {
+                "title": "智慧識別 Markdown 格式",
+                "desc": "正確計算粗體、斜體、程式碼區塊等格式的顯示寬度，確保表格始終完美對齊"
+            },
+            {
+                "title": "AI 生成後自動格式化",
+                "desc": "透過 experimental.text.complete 鉤子自動觸發，AI 生成文字後無需手動操作即可格式化"
+            },
+            {
+                "title": "程式碼區塊智慧保護",
+                "desc": "保護行內程式碼區塊內的 Markdown 符號不被錯誤剝離，確保程式碼內語法保持原樣"
+            },
+            {
+                "title": "三種對齊方式支援",
+                "desc": "支援左對齊（:---）、置中對齊（:---:）、右對齊（---:）三種格式"
+            },
+            {
+                "title": "巢狀 Markdown 處理",
+                "desc": "使用多遍正則表達式演算法處理粗體、斜體、刪除線等巢狀 Markdown 語法"
+            },
+            {
+                "title": "邊界情況相容",
+                "desc": "正確處理 Emoji、Unicode 字元、空儲存格、長內容等邊界情況"
+            },
+            {
+                "title": "靜默執行",
+                "desc": "無控制台日誌日誌輸出，錯誤不中斷工作流程，靜默完成格式化"
+            },
+            {
+                "title": "驗證回饋",
+                "desc": "無效表格新增友善的錯誤註解提示，幫助使用者快速定位問題"
+            }
+        ]
+    },
+    "docs": {
+        "title": "課程大綱",
+        "subtitle": "共 3 個章節，6 節課程",
+        "sections": [
+            {
+                "title": "快速開始 (Start)",
+                "items": [
+                    {
+                        "title": "一分鐘上手：安裝與設定",
+                        "desc": "快速完成外掛安裝設定，看到第一個格式化效果",
+                        "link": "/zh-tw/franlol/opencode-md-table-formatter/start/getting-started/"
+                    },
+                    {
+                        "title": "功能全覽：自動格式化的魔法",
+                        "desc": "全面了解外掛的 8 大核心功能，掌握它能做什麼、不能做什麼",
+                        "link": "/zh-tw/franlol/opencode-md-table-formatter/start/features/"
+                    }
+                ]
+            },
+            {
+                "title": "進階功能 (Advanced)",
+                "items": [
+                    {
+                        "title": "隱藏模式原理：為什麼寬度計算如此重要",
+                        "desc": "理解 OpenCode 隱藏模式的工作原理，學習外掛的寬度計算演算法",
+                        "link": "/zh-tw/franlol/opencode-md-table-formatter/advanced/concealment-mode/"
+                    },
+                    {
+                        "title": "表格規範：什麼樣的表格能被格式化",
+                        "desc": "掌握有效 Markdown 表格的結構要求，避免無效表格錯誤",
+                        "link": "/zh-tw/franlol/opencode-md-table-formatter/advanced/table-spec/"
+                    },
+                    {
+                        "title": "對齊方式詳解：左對齊、置中、右對齊",
+                        "desc": "掌握三種對齊方式的語法和效果，讓表格更美觀",
+                        "link": "/zh-tw/franlol/opencode-md-table-formatter/advanced/alignment/"
+                    }
+                ]
+            },
+            {
+                "title": "常見問題 (FAQ)",
+                "items": [
+                    {
+                        "title": "常見問題：表格沒格式化怎麼辦",
+                        "desc": "快速定位和解決常見問題，包括設定錯誤、無效表格結構等",
+                        "link": "/zh-tw/franlol/opencode-md-table-formatter/faq/troubleshooting/"
+                    }
+                ]
+            }
+        ]
+    }
+}

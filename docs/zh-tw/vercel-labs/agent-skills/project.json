@@ -1,0 +1,120 @@
+{
+    "project": {
+        "name": "agent-skills",
+        "tagline": "Vercel AI 編碼代理技能包",
+        "description": "為 Claude 等 AI 代理提供可擴展的技能集合。內置 57 條 React 性能優化規則、100+ 條 Web 設計指南，支援一鍵部署至 Vercel。",
+        "github_url": "https://github.com/vercel-labs/agent-skills"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "快速開始",
+            "link": "/zh-tw/vercel-labs/agent-skills/start/installation/"
+        }
+    },
+    "features": {
+        "title": "為什麼選擇 agent-skills？",
+        "subtitle": "Vercel 官方出品，將工程團隊的最佳實踐打包成可復用的技能，讓 AI 代理自動應用。",
+        "list": [
+            {
+                "title": "React 性能優化",
+                "desc": "57 條 Vercel 工程團隊驗證的規則，按 CRITICAL/HIGH/MEDIUM 分級，覆蓋瀑布流消除、打包優化等 8 個類別。"
+            },
+            {
+                "title": "Web 設計指南",
+                "desc": "100+ 條 UI 審計規則，涵蓋可訪問性、動畫性能、深色模式、表單驗證等多個維度。"
+            },
+            {
+                "title": "Vercel 一鍵部署",
+                "desc": "自動檢測 40+ 種框架，零配置部署並返回預覽連結和所有權轉移連結。"
+            },
+            {
+                "title": "自動觸發機制",
+                "desc": "安裝後 Agent 自動識別任務並激活對應技能，無需手動選擇或記憶指令。"
+            },
+            {
+                "title": "標準化格式",
+                "desc": "遵循 Agent Skills 規範，每個技能包含 SKILL.md、scripts/ 和 references/，便於擴展。"
+            },
+            {
+                "title": "開源自由擴展",
+                "desc": "MIT 許可證，可自由擴展定製技能或基於現有規則構建自己的技能包。"
+            }
+        ]
+    },
+    "docs": {
+        "title": "課程大綱",
+        "subtitle": "共 4 個章節，10 節課程",
+        "sections": [
+            {
+                "title": "入門指南 (Start)",
+                "items": [
+                    {
+                        "title": "Agent Skills 入門",
+                        "desc": "了解 Agent Skills 是什麼，以及它如何擴展 AI 編碼代理的能力",
+                        "link": "/zh-tw/vercel-labs/agent-skills/start/getting-started/"
+                    },
+                    {
+                        "title": "安裝 Agent Skills",
+                        "desc": "用一條指令快速安裝，配置 Claude Code 和 claude.ai",
+                        "link": "/zh-tw/vercel-labs/agent-skills/start/installation/"
+                    }
+                ]
+            },
+            {
+                "title": "核心技能 (Platforms)",
+                "items": [
+                    {
+                        "title": "React 性能優化",
+                        "desc": "應用 Vercel 57 條規則，消除瀑布流、優化打包、減少 Re-render",
+                        "link": "/zh-tw/vercel-labs/agent-skills/platforms/react-best-practices/"
+                    },
+                    {
+                        "title": "Web 設計指南審計",
+                        "desc": "審計 UI 代碼的 100+ 條規則，覆蓋可訪問性、性能和 UX",
+                        "link": "/zh-tw/vercel-labs/agent-skills/platforms/web-design-guidelines/"
+                    },
+                    {
+                        "title": "Vercel 一鍵部署",
+                        "desc": "零認證快速發布應用，自動檢測框架並返回預覽連結",
+                        "link": "/zh-tw/vercel-labs/agent-skills/platforms/vercel-deploy/"
+                    }
+                ]
+            },
+            {
+                "title": "進階功能 (Advanced)",
+                "items": [
+                    {
+                        "title": "技能開發",
+                        "desc": "學習創建自定義技能，擴展 AI 代理的能力邊界",
+                        "link": "/zh-tw/vercel-labs/agent-skills/advanced/skill-development/"
+                    },
+                    {
+                        "title": "規則編寫",
+                        "desc": "掌握規則編寫技巧，定義檢查邏輯和修復建議",
+                        "link": "/zh-tw/vercel-labs/agent-skills/advanced/rule-authoring/"
+                    },
+                    {
+                        "title": "構建工具鏈",
+                        "desc": "了解技能包的構建和發布流程",
+                        "link": "/zh-tw/vercel-labs/agent-skills/advanced/build-toolchain/"
+                    }
+                ]
+            },
+            {
+                "title": "常見問題 (FAQ)",
+                "items": [
+                    {
+                        "title": "故障排查",
+                        "desc": "解決技能未激活、部署失敗等常見問題",
+                        "link": "/zh-tw/vercel-labs/agent-skills/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "最佳實踐",
+                        "desc": "技能使用和開發的最佳實踐建議",
+                        "link": "/zh-tw/vercel-labs/agent-skills/faq/best-practices/"
+                    }
+                ]
+            }
+        ]
+    }
+}

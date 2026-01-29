@@ -1,0 +1,150 @@
+{
+    "project": {
+        "name": "plannotator",
+        "tagline": "AI 計畫與程式碼審查工具",
+        "description": "為 Claude Code 和 OpenCode 提供互動式計畫審查和程式碼審查工具，支援視覺化註解、團隊協作、URL 分享和第三方筆記應用整合。本機執行，資料安全，無需伺服器即可分享審查內容。",
+        "github_url": "https://github.com/backnotprop/plannotator"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "快速開始",
+            "link": "/zh-tw/backnotprop/plannotator/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "為什麼選擇 Plannotator？",
+        "subtitle": "視覺化審查 AI 產生的計畫和程式碼，精確回饋，團隊協作。",
+        "list": [
+            {
+                "title": "視覺化計畫審查",
+                "desc": "在瀏覽器中檢視 AI 產生的計畫，用刪除、替換、插入、評論註解精確回饋。"
+            },
+            {
+                "title": "程式碼審查視覺化",
+                "desc": "Git diff side-by-side 或 unified 檢視，支援行級註解和程式碼建議。"
+            },
+            {
+                "title": "多平台支援",
+                "desc": "支援 Claude Code 和 OpenCode，無縫融入現有開發工作流程。"
+            },
+            {
+                "title": "URL 無後端分享",
+                "desc": "壓縮到 URL hash 中，無需伺服器即可分享審查內容給團隊成員。"
+            },
+            {
+                "title": "圖像標註工具",
+                "desc": "附加圖像並使用畫筆、箭頭、圓形工具進行標註，增強回饋表達。"
+            },
+            {
+                "title": "第三方筆記整合",
+                "desc": "核准的計畫自動儲存到 Obsidian 或 Bear，包含 frontmatter 和標籤。"
+            }
+        ]
+    },
+    "docs": {
+        "title": "課程大綱",
+        "subtitle": "4 個章節，17 節課程",
+        "sections": [
+            {
+                "title": "快速入門",
+                "items": [
+                    {
+                        "title": "快速開始",
+                        "desc": "了解 Plannotator 是什麼，5 分鐘內完成首次使用",
+                        "link": "/zh-tw/backnotprop/plannotator/start/getting-started/"
+                    },
+                    {
+                        "title": "安裝 Claude Code 外掛",
+                        "desc": "在 Claude Code 中安裝並設定 Plannotator 外掛",
+                        "link": "/zh-tw/backnotprop/plannotator/start/installation-claude-code/"
+                    },
+                    {
+                        "title": "安裝 OpenCode 外掛",
+                        "desc": "在 OpenCode 中安裝並設定 Plannotator 外掛",
+                        "link": "/zh-tw/backnotprop/plannotator/start/installation-opencode/"
+                    }
+                ]
+            },
+            {
+                "title": "核心功能",
+                "items": [
+                    {
+                        "title": "計畫審查基礎",
+                        "desc": "視覺化審查 AI 產生的計畫，核准或拒絕",
+                        "link": "/zh-tw/backnotprop/plannotator/platforms/plan-review-basics/"
+                    },
+                    {
+                        "title": "新增計畫註解",
+                        "desc": "新增刪除、替換、插入、評論等不同類型註解",
+                        "link": "/zh-tw/backnotprop/plannotator/platforms/plan-review-annotations/"
+                    },
+                    {
+                        "title": "新增圖像標註",
+                        "desc": "附加圖像並使用畫筆、箭頭、圓形工具標註",
+                        "link": "/zh-tw/backnotprop/plannotator/platforms/plan-review-images/"
+                    },
+                    {
+                        "title": "程式碼審查基礎",
+                        "desc": "使用 /plannotator-review 審查 git diff",
+                        "link": "/zh-tw/backnotprop/plannotator/platforms/code-review-basics/"
+                    },
+                    {
+                        "title": "新增程式碼註解",
+                        "desc": "新增行級註解（comment/suggestion/concern）",
+                        "link": "/zh-tw/backnotprop/plannotator/platforms/code-review-annotations/"
+                    },
+                    {
+                        "title": "切換 Diff 檢視",
+                        "desc": "切換 uncommitted/staged/last commit/branch 等 diff 類型",
+                        "link": "/zh-tw/backnotprop/plannotator/platforms/code-review-diff-types/"
+                    }
+                ]
+            },
+            {
+                "title": "進階功能",
+                "items": [
+                    {
+                        "title": "URL 分享",
+                        "desc": "透過 URL 分享計畫和註解，無後端團隊協作",
+                        "link": "/zh-tw/backnotprop/plannotator/advanced/url-sharing/"
+                    },
+                    {
+                        "title": "Obsidian 整合",
+                        "desc": "將核准的計畫自動儲存到 Obsidian vault",
+                        "link": "/zh-tw/backnotprop/plannotator/advanced/obsidian-integration/"
+                    },
+                    {
+                        "title": "Bear 整合",
+                        "desc": "透過 x-callback-url 將計畫儲存到 Bear",
+                        "link": "/zh-tw/backnotprop/plannotator/advanced/bear-integration/"
+                    },
+                    {
+                        "title": "遠端/Devcontainer 模式",
+                        "desc": "在 SSH、devcontainer、WSL 中使用 Plannotator",
+                        "link": "/zh-tw/backnotprop/plannotator/advanced/remote-mode/"
+                    },
+                    {
+                        "title": "環境變數設定",
+                        "desc": "了解所有可用的環境變數及其用途",
+                        "link": "/zh-tw/backnotprop/plannotator/advanced/environment-variables/"
+                    }
+                ]
+            },
+            {
+                "title": "常見問題",
+                "items": [
+                    {
+                        "title": "常見問題",
+                        "desc": "連接埠佔用、瀏覽器未開啟、計畫未顯示等問題",
+                        "link": "/zh-tw/backnotprop/plannotator/faq/common-problems/"
+                    },
+                    {
+                        "title": "疑難排解",
+                        "desc": "日誌檢視、錯誤處理和除錯技巧",
+                        "link": "/zh-tw/backnotprop/plannotator/faq/troubleshooting/"
+                    }
+                ]
+            }
+        ]
+    }
+}

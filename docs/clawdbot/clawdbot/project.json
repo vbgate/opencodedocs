@@ -1,0 +1,234 @@
+{
+  "project": {
+    "name": "clawdbot",
+    "tagline": "Your Private AI Assistant, Available Anywhere",
+    "description": "Run your personal AI assistant on your own devices, seamlessly connecting to WhatsApp, Telegram, Slack, and 12+ other channels. Features browser automation, multi-device collaboration, voice interaction, with all data staying local for complete privacy.",
+    "github_url": "https://github.com/clawdbot/clawdbot"
+  },
+  "hero": {
+    "primary_action": {
+      "text": "Quick Start",
+      "link": "/clawdbot/clawdbot/start/getting-started/"
+    }
+  },
+  "features": {
+    "title": "Why Choose Clawdbot?",
+    "subtitle": "Powerful, Private, and Easy-to-Deploy Personal AI Assistant",
+    "list": [
+      {
+        "title": "🌐 Unified Channels",
+        "desc": "Manage 12+ messaging platforms like WhatsApp, Telegram, Slack with a single configuration"
+      },
+      {
+        "title": "🔒 Local-First",
+        "desc": "All data and AI runtime stay on your devices, zero privacy leaks"
+      },
+      {
+        "title": "🛠️ Powerful Toolchain",
+        "desc": "Browser automation, cron jobs, webhooks, and more extensibility"
+      },
+      {
+        "title": "📱 Multi-Device",
+        "desc": "Connect macOS/iOS/Android nodes to execute local operations"
+      },
+      {
+        "title": "🎤 Voice Interaction",
+        "desc": "Supports Voice Wake, Talk Mode, and multiple TTS engines"
+      },
+      {
+        "title": "🧠 Memory System",
+        "desc": "Vectorized storage and semantic search for AI that remembers every conversation"
+      },
+      {
+        "title": "🔐 Secure Isolation",
+        "desc": "Sandbox isolation, DM pairing protection, and tool permission control"
+      }
+    ]
+  },
+  "docs": {
+    "title": "Course Outline",
+    "subtitle": "4 Chapters, 32 Lessons",
+    "sections": [
+      {
+        "title": "Getting Started (Start)",
+        "items": [
+          {
+            "title": "Quick Start",
+            "desc": "Guide users through first installation, configuration, and startup of Clawdbot",
+            "link": "/clawdbot/clawdbot/start/getting-started/"
+          },
+          {
+            "title": "Onboarding Wizard",
+            "desc": "Complete Gateway, channel, and model configuration through interactive wizard",
+            "link": "/clawdbot/clawdbot/start/onboarding-wizard/"
+          },
+          {
+            "title": "Starting Gateway",
+            "desc": "Learn how to start the Gateway daemon, different modes (dev/production)",
+            "link": "/clawdbot/clawdbot/start/gateway-startup/"
+          },
+          {
+            "title": "Send First Message",
+            "desc": "Send your first message to the AI assistant via WebChat or configured channels",
+            "link": "/clawdbot/clawdbot/start/first-message/"
+          },
+          {
+            "title": "DM Pairing & Access Control",
+            "desc": "Understand the default DM pairing protection mechanism, how to approve unknown senders",
+            "link": "/clawdbot/clawdbot/start/pairing-approval/"
+          }
+        ]
+      },
+      {
+        "title": "Platform Features (Platforms)",
+        "items": [
+          {
+            "title": "Multi-Channel Overview",
+            "desc": "Learn about all communication channels supported by Clawdbot and their features",
+            "link": "/clawdbot/clawdbot/platforms/channels-overview/"
+          },
+          {
+            "title": "WhatsApp Channel",
+            "desc": "Configure and use WhatsApp channel (based on Baileys)",
+            "link": "/clawdbot/clawdbot/platforms/whatsapp/"
+          },
+          {
+            "title": "Telegram Channel",
+            "desc": "Configure and use Telegram channel (based on grammY Bot API)",
+            "link": "/clawdbot/clawdbot/platforms/telegram/"
+          },
+          {
+            "title": "Slack Channel",
+            "desc": "Configure and use Slack channel (based on Bolt)",
+            "link": "/clawdbot/clawdbot/platforms/slack/"
+          },
+          {
+            "title": "Discord Channel",
+            "desc": "Configure and use Discord channel (based on discord.js)",
+            "link": "/clawdbot/clawdbot/platforms/discord/"
+          },
+          {
+            "title": "Google Chat Channel",
+            "desc": "Configure and use Google Chat channel",
+            "link": "/clawdbot/clawdbot/platforms/googlechat/"
+          },
+          {
+            "title": "Signal Channel",
+            "desc": "Configure and use Signal channel (based on signal-cli)",
+            "link": "/clawdbot/clawdbot/platforms/signal/"
+          },
+          {
+            "title": "iMessage Channel",
+            "desc": "Configure and use iMessage channel (macOS exclusive)",
+            "link": "/clawdbot/clawdbot/platforms/imessage/"
+          },
+          {
+            "title": "LINE Channel",
+            "desc": "Configure and use LINE channel (Messaging API)",
+            "link": "/clawdbot/clawdbot/platforms/line/"
+          },
+          {
+            "title": "WebChat Interface",
+            "desc": "Use the built-in WebChat interface to interact with the AI assistant",
+            "link": "/clawdbot/clawdbot/platforms/webchat/"
+          },
+          {
+            "title": "macOS App",
+            "desc": "Learn about the macOS menu bar app features and Voice Wake/Talk Mode",
+            "link": "/clawdbot/clawdbot/platforms/macos-app/"
+          },
+          {
+            "title": "iOS Node",
+            "desc": "Configure iOS node to execute device local operations (Camera, Canvas, Voice Wake)",
+            "link": "/clawdbot/clawdbot/platforms/ios-node/"
+          },
+          {
+            "title": "Android Node",
+            "desc": "Configure Android node to execute device local operations (Camera, Canvas)",
+            "link": "/clawdbot/clawdbot/platforms/android-node/"
+          }
+        ]
+      },
+      {
+        "title": "Advanced Features (Advanced)",
+        "items": [
+          {
+            "title": "AI Models & Authentication",
+            "desc": "Configure AI model providers (Anthropic, OpenAI, OpenRouter, Ollama, etc.) and authentication methods",
+            "link": "/clawdbot/clawdbot/advanced/models-auth/"
+          },
+          {
+            "title": "Session Management & Multi-Agent",
+            "desc": "Learn session model, session isolation, sub-agent collaboration, context compression",
+            "link": "/clawdbot/clawdbot/advanced/session-management/"
+          },
+          {
+            "title": "Browser Automation Tool",
+            "desc": "Use browser tools for web automation, screenshots, form manipulation, etc.",
+            "link": "/clawdbot/clawdbot/advanced/tools-browser/"
+          },
+          {
+            "title": "Command Execution Tool & Approvals",
+            "desc": "Configure and use exec tool, understand security approval mechanism",
+            "link": "/clawdbot/clawdbot/advanced/tools-exec/"
+          },
+          {
+            "title": "Web Search & Fetch Tools",
+            "desc": "Use web_search and web_fetch tools for web searching and content scraping",
+            "link": "/clawdbot/clawdbot/advanced/tools-web/"
+          },
+          {
+            "title": "Canvas Visual Interface & A2UI",
+            "desc": "Understand Canvas A2UI push mechanism, visual interface operations",
+            "link": "/clawdbot/clawdbot/advanced/canvas/"
+          },
+          {
+            "title": "Voice Wake & Text-to-Speech",
+            "desc": "Configure Voice Wake, Talk Mode, and TTS providers",
+            "link": "/clawdbot/clawdbot/advanced/voice-tts/"
+          },
+          {
+            "title": "Memory System & Vector Search",
+            "desc": "Configure and use memory system (SQLite-vec, FTS5, hybrid search)",
+            "link": "/clawdbot/clawdbot/advanced/memory-system/"
+          },
+          {
+            "title": "Cron Jobs & Webhook",
+            "desc": "Configure cron jobs, webhook triggers, Gmail Pub/Sub",
+            "link": "/clawdbot/clawdbot/advanced/cron-automation/"
+          },
+          {
+            "title": "Skills Platform & ClawdHub",
+            "desc": "Understand skill system, Bundled/Managed/Workspace skills, ClawdHub integration",
+            "link": "/clawdbot/clawdbot/advanced/skills-platform/"
+          },
+          {
+            "title": "Security & Sandbox Isolation",
+            "desc": "Understand security model, tool permission control, Sandbox isolation, Docker deployment",
+            "link": "/clawdbot/clawdbot/advanced/security-sandbox/"
+          }
+        ]
+      },
+      {
+        "title": "FAQ",
+        "items": [
+          {
+            "title": "Troubleshooting",
+            "desc": "Solve common issues: Gateway startup failures, channel connection problems, authentication errors, tool invocation failures",
+            "link": "/clawdbot/clawdbot/faq/troubleshooting/"
+          },
+          {
+            "title": "CLI Commands Reference",
+            "desc": "Complete CLI command list and usage documentation",
+            "link": "/clawdbot/clawdbot/faq/cli-commands/"
+          },
+          {
+            "title": "Performance Optimization",
+            "desc": "Optimize Gateway performance, reduce latency, memory management, concurrency control",
+            "link": "/clawdbot/clawdbot/faq/performance-optimization/"
+          }
+        ]
+      }
+    ]
+  }
+}

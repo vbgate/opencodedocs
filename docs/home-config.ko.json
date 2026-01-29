@@ -1,0 +1,283 @@
+{
+    "hero": {
+        "badge": "검증된 튜토리얼, 따라 하면 바로 실행",
+        "title_prefix": "소스 코드 기반",
+        "title_main": "AI 전체 시나리오 튜토리얼",
+        "typewriter_texts": [
+            "입문부터 전문가까지",
+            "모든 단계가 실행 가능",
+            "배우면 바로 사용 가능"
+        ],
+        "description": "AI 도구는 빠르게 발전하는데, 공식 문서는 뒤처지고, 온라인 튜토리얼은 구식입니다.<br class=\"hidden sm:inline\"><strong>우리는 이 모든 것을 바꿉니다.</strong>",
+        "primary_action": {
+            "text": "학습 시작",
+            "link": "#tutorials"
+        },
+        "secondary_action": {
+            "text": "GitHub",
+            "link": "https://github.com/vbgate/opencodedocs"
+        },
+        "chat_demo": {
+            "title": "OpenCodeDocs",
+            "ui": {
+                "online_text": "온라인",
+                "completed_text": "완료됨",
+                "input_placeholder": "AI에게 원하는 것을 알려주세요..."
+            },
+            "messages": [
+                {
+                    "role": "user",
+                    "text": "OpenCode에서 OpenAI와 지푸 잔액을 바로 조회할 수 있나요?"
+                },
+                {
+                    "role": "ai",
+                    "text": "네, 가능합니다. 'MyStatus' 플러그인을 설치한 후, 슬래시 명령어 /mystatus를 입력하면 한 번에 볼 수 있습니다."
+                },
+                {
+                    "role": "user",
+                    "text": "명령줄 출력만 제공하나요?"
+                },
+                {
+                    "role": "ai",
+                    "text": "아니요, 시각적 프로그레스 바와 리셋 카운트다운을 제공합니다. OpenAI, Copilot 등 5대 플랫폼을 지원하며, 완전히 로컬에서 실행되어 개인정보를 보호합니다.✅",
+                    "status": "검증됨",
+                    "meta": "opencode-mystatus"
+                }
+            ]
+        }
+    },
+    "audience": {
+        "title": "초보자든 전문가든,<br class=\"sm:hidden\">원하는 것을 찾을 수 있습니다",
+        "subtitle": "레벨별 튜토리얼 시스템으로 각 단계의 요구사항 충족",
+        "beginner": {
+            "badge": "AI 도구 초보자용",
+            "title": "설치가 안 되나요? 설정이 어렵나요?<br>여기에 상세 튜토리얼이 있습니다",
+            "description": "Claude Code를 설치했는데 사용법을 모르시나요? Cursor 설정이 복잡하게 보이나요? 걱정하지 마세요, 우리 튜토리얼은 \"첫 번째 단계\"부터 시작해서 <strong>각 단계를 상세히 설명</strong>하니 따라 하기만 하면 됩니다.",
+            "tags": [
+                {
+                    "icon": "ph-check-circle",
+                    "text": "상세 단계"
+                },
+                {
+                    "icon": "ph-terminal-window",
+                    "text": "핵심 명령어"
+                }
+            ],
+            "cta": "따라 하면 한 번에 성공, 시행착오 없이",
+            "terminal": {
+                "panic": [
+                    "> npm install",
+                    "⚠ ERESOLVE unable to resolve...",
+                    "✖ Error: gyrb failed with code 1",
+                    "panic: runtime error..."
+                ],
+                "success": [
+                    "> ./fix-env.sh",
+                    "✔ Dependencies installed",
+                    "✔ Build succeeded (0.2s)",
+                    "✨ App is running on :3000"
+                ]
+            }
+        },
+        "advanced": {
+            "badge": "상급 사용자용",
+            "title": "기초를 넘어서,<br>심도 있는 실전 경험",
+            "description": "다중 계정 교체, Token 절약 기법, Agent 자동화... 이런 \"고급 사용법\"은 공식 문서에서 다루지 않을 수 있습니다. <strong>우리는 소스 코드에서 분석</strong>하여 더 편하게 사용할 수 있게 해드립니다.",
+            "tags": [
+                {
+                    "icon": "ph-gear",
+                    "text": "상급 기법"
+                },
+                {
+                    "icon": "ph-code",
+                    "text": "소스 코드 분석"
+                }
+            ],
+            "cta": "시간과 비용 절약, 효율 2배"
+        }
+    },
+    "features": {
+        "title": "왜 OpenCodeDocs인가요?",
+        "subtitle": "다른 곳에는 없는 세 가지 특징",
+        "list": [
+            {
+                "icon": "ph-file-code",
+                "color": "brand",
+                "title": "소스 코드 검증",
+                "desc": "온라인에서 복사한 것이 아니라, 코드에서 분석한 것입니다"
+            },
+            {
+                "icon": "ph-arrows-clockwise",
+                "color": "emerald",
+                "title": "지속 업데이트",
+                "desc": "도구가 업데이트되면 튜토리얼도 함께 업데이트됩니다"
+            },
+            {
+                "icon": "ph-book-open",
+                "color": "amber",
+                "title": "초보자 친화적",
+                "desc": "기초 지식 없어도 따라 할 수 있습니다, 단계별로"
+            }
+        ]
+    },
+    "tutorials": {
+        "title": "원하는 것을 선택하세요",
+        "subtitle": "모든 튜토리얼이 검증되어 있으며, 따라 하면 실행 가능합니다",
+        "list": [
+            {
+                "title": "Antigravity Auth",
+                "desc": "Google OAuth 인증 플러그인으로 Claude 및 Gemini 모델을 무료로 사용",
+                "link": "/ko/NoeFabris/opencode-antigravity-auth/",
+                "repo": "https://github.com/NoeFabris/opencode-antigravity-auth",
+                "meta": {
+                    "lessons": "33 강의",
+                    "stars": "6.2k",
+                    "difficulty": "입문"
+                }
+            },
+            {
+                "title": "Dynamic Context Pruning",
+                "desc": "Token 사용량 자동 절약, 중복 컨텍스트 지능형 제거",
+                "link": "/ko/Opencode-DCP/opencode-dynamic-context-pruning/",
+                "repo": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning",
+                "meta": {
+                    "lessons": "22 강의",
+                    "stars": "556",
+                    "difficulty": "상급"
+                }
+            },
+            {
+                "title": "Plannotator",
+                "desc": "AI 계획 및 코드 리뷰 도구, 시각적 인터랙션",
+                "link": "/ko/backnotprop/plannotator/",
+                "repo": "https://github.com/backnotprop/plannotator",
+                "meta": {
+                    "lessons": "27 강의",
+                    "stars": "1.4k",
+                    "difficulty": "중급"
+                }
+            },
+            {
+                "title": "Agent Skills",
+                "desc": "스킬 동적 발견 및 관리로 Agent 효율 향상",
+                "link": "/ko/joshuadavidthomas/opencode-agent-skills/",
+                "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills",
+                "meta": {
+                    "lessons": "24 강의",
+                    "stars": "25",
+                    "difficulty": "중급"
+                }
+            },
+            {
+                "title": "Antigravity Manager",
+                "desc": "로컬 AI 계정 관리 및 프로토콜 역방향 프록시 시스템",
+                "link": "/ko/lbjlaq/Antigravity-Manager/",
+                "repo": "https://github.com/lbjlaq/Antigravity-Manager",
+                "meta": {
+                    "lessons": "39 강의",
+                    "stars": "17.8k",
+                    "difficulty": "전문가"
+                }
+            },
+            {
+                "title": "OpenSkills",
+                "desc": "Claude Code 형식 호환 범용 스킬 로더",
+                "link": "/ko/numman-ali/openskills/",
+                "repo": "https://github.com/numman-ali/openskills",
+                "meta": {
+                    "lessons": "35 강의",
+                    "stars": "7k",
+                    "difficulty": "중급"
+                }
+            },
+            {
+                "title": "Supermemory",
+                "desc": "메모리 지속성 플러그인으로 세션 및 프로젝트 간 메모리 공유",
+                "link": "/ko/supermemoryai/opencode-supermemory/",
+                "repo": "https://github.com/supermemoryai/opencode-supermemory",
+                "meta": {
+                    "lessons": "13 강의",
+                    "stars": "520",
+                    "difficulty": "전문가"
+                }
+            },
+            {
+                "title": "MyStatus",
+                "desc": "AI 계정 잔액 원클릭 조회, 다중 플랫폼 통합",
+                "link": "/ko/vbgate/opencode-mystatus/",
+                "repo": "https://github.com/vbgate/opencode-mystatus",
+                "meta": {
+                    "lessons": "23 강의",
+                    "stars": "161",
+                    "difficulty": "입문"
+                }
+            },
+            {
+                "title": "OpenCode Markdown Table Formatter",
+                "desc": "OpenCode 숨김 모드 최적화, Markdown 기호 숨김 시에도 완벽한 테이블 정렬",
+                "link": "/ko/franlol/opencode-md-table-formatter/",
+                "repo": "https://github.com/franlol/opencode-md-table-formatter",
+                "meta": {
+                    "lessons": "14 강의",
+                    "stars": "--",
+                    "difficulty": "입문"
+                }
+            },
+            {
+                "title": "oh-my-opencode",
+                "desc": "다중 모델 AI 에이전트 오케스트레이션, 개발팀을 전문가처럼 작동시키다",
+                "link": "/ko/code-yeongyu/oh-my-opencode/",
+                "repo": "https://github.com/code-yeongyu/oh-my-opencode",
+                "meta": {
+                    "lessons": "26 강의",
+                    "stars": "--",
+                    "difficulty": "전문가"
+                }
+            }
+        ],
+        "apply_card": {
+            "title": "프로젝트 등록 신청",
+            "steps": [
+                "Issue 제출",
+                "팀 검토",
+                "튜토리얼 출시"
+            ],
+            "repo_text": "Repo",
+            "cta_text": "지금 신청",
+            "link": "https://github.com/vbgate/opencodedocs/issues",
+            "repo_link": "https://github.com/vbgate/opencodedocs"
+        }
+    },
+    "cta_section": {
+        "title": "AI 여정을 시작하세요",
+        "subtitle": "첫 번째 코드부터 프로덕션 레벨 애플리케이션까지, 모든 튜토리얼이 준비되어 있습니다",
+        "button_text": "모든 튜토리얼 보기",
+        "button_link": "#tutorials"
+    },
+    "footer": {
+        "title": "OpenCodeDocs",
+        "copyright": "© 2026 OpenCodeDocs",
+        "links": [
+            {
+                "text": "소개",
+                "link": "/ko/about"
+            },
+            {
+                "text": "이용약관",
+                "link": "/ko/terms"
+            },
+            {
+                "text": "개인정보처리방침",
+                "link": "/ko/privacy"
+            },
+            {
+                "text": "커뮤니티 참여",
+                "link": "/ko/community"
+            },
+            {
+                "icon": "ph-github-logo",
+                "link": "https://github.com/vbgate/opencodedocs"
+            }
+        ]
+    }
+}

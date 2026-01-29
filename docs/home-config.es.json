@@ -1,0 +1,294 @@
+{
+    "hero": {
+        "badge": "Tutoriales verificados, sigue los pasos y funcionará",
+        "title_prefix": "Impulsado por código fuente",
+        "title_main": "Tutoriales de AI de escenarios completos",
+        "typewriter_texts": [
+            "De principiante a experto",
+            "Cada paso funciona",
+            "Aprende y úsalo de inmediato"
+        ],
+        "description": "Las herramientas de AI evolucionan rápido, la documentación oficial se queda atrás, los tutoriales en línea están desactualizados——<br class=\"hidden sm:inline\"><strong>vamos a cambiar todo esto.</strong>",
+        "primary_action": {
+            "text": "Empezar a aprender",
+            "link": "#tutorials"
+        },
+        "secondary_action": {
+            "text": "GitHub",
+            "link": "https://github.com/vbgate/opencodedocs"
+        },
+        "chat_demo": {
+            "title": "OpenCodeDocs",
+            "ui": {
+                "online_text": "En línea",
+                "completed_text": "Completado",
+                "input_placeholder": "Dile a la AI lo que quieres hacer..."
+            },
+            "messages": [
+                {
+                    "role": "user",
+                    "text": "¿Puedo verificar directamente cuánto crédito queda en OpenAI y Zhipu en OpenCode?"
+                },
+                {
+                    "role": "ai",
+                    "text": "Sí. Después de instalar el complemento 'MyStatus', ingresa el comando con barra inclinada /mystatus para verlo con un clic."
+                },
+                {
+                    "role": "user",
+                    "text": "¿Solo hay salida en línea de comandos?"
+                },
+                {
+                    "role": "ai",
+                    "text": "No, proporciona barras de progreso visuales y cuenta regresiva de restablecimiento. Soporta 5 plataformas principales como OpenAI, Copilot, etc., se ejecuta completamente localmente, protegiendo la privacidad. ✅",
+                    "status": "Verificado",
+                    "meta": "opencode-mystatus"
+                }
+            ]
+        }
+    },
+    "audience": {
+        "title": "Ya seas principiante o veterano,<br class=\"sm:hidden\">encontrarás lo que necesitas",
+        "subtitle": "Sistema de tutoriales por niveles, satisface las necesidades de diferentes etapas",
+        "beginner": {
+            "badge": "Para novatos en herramientas de AI",
+            "title": "¿No puedes instalar? ¿Configuración incorrecta? No te preocupes,<br>aquí hay tutoriales paso a paso detallados",
+            "description": "¿Claude Code instalado pero no sabes usarlo? ¿Configuración de Cursor que no entiendes? No entres en pánico, nuestros tutoriales comienzan desde el \"primer paso\",<strong>con desglose detallado de cada paso</strong>, solo sigue los pasos.",
+            "tags": [
+                {
+                    "icon": "ph-check-circle",
+                    "text": "Pasos paso a paso"
+                },
+                {
+                    "icon": "ph-terminal-window",
+                    "text": "Comandos principales"
+                }
+            ],
+            "cta": "Sigue los pasos, funciona a la primera, sin errores de prueba",
+            "terminal": {
+                "panic": [
+                    "> npm install",
+                    "⚠ ERESOLVE unable to resolve...",
+                    "✖ Error: gyrb failed with code 1",
+                    "panic: runtime error..."
+                ],
+                "success": [
+                    "> ./fix-env.sh",
+                    "✔ Dependencies installed",
+                    "✔ Build succeeded (0.2s)",
+                    "✨ App is running on :3000"
+                ]
+            }
+        },
+        "advanced": {
+            "badge": "Para usuarios avanzados",
+            "title": "No solo para principiantes,<br>también práctica profunda",
+            "description": "Rotación de múltiples cuentas, técnicas para ahorrar Tokens, automatización con Agentes... estos \"trucos avanzados\", la documentación oficial no necesariamente los explica. <strong>Los extraemos del código fuente</strong> para que disfrutes más.",
+            "tags": [
+                {
+                    "icon": "ph-gear",
+                    "text": "Técnicas avanzadas"
+                },
+                {
+                    "icon": "ph-code",
+                    "text": "Análisis de código fuente"
+                }
+            ],
+            "cta": "Ahorra tiempo y dinero, duplica la eficiencia"
+        }
+    },
+    "features": {
+        "title": "¿Por qué elegir OpenCodeDocs?",
+        "subtitle": "Tenemos tres cosas que otros no tienen",
+        "list": [
+            {
+                "icon": "ph-file-code",
+                "color": "brand",
+                "title": "Verificado por código fuente",
+                "desc": "No copiado de internet, derivado del código"
+            },
+            {
+                "icon": "ph-arrows-clockwise",
+                "color": "emerald",
+                "title": "Actualizaciones continuas",
+                "desc": "Las herramientas se actualizan, los tutoriales también se sincronizan"
+            },
+            {
+                "icon": "ph-book-open",
+                "color": "amber",
+                "title": "Amigable para principiantes",
+                "desc": "Incluso con cero base puedes seguir los pasos, paso a paso"
+            }
+        ]
+    },
+    "tutorials": {
+        "title": "Elige uno para empezar",
+        "subtitle": "Cada tutorial ha sido verificado, sigue los pasos y funcionará",
+        "list": [
+            {
+                "title": "Antigravity Auth",
+                "desc": "Complemento de autenticación Google OAuth, usa modelos Claude y Gemini de forma gratuita",
+                "link": "/es/NoeFabris/opencode-antigravity-auth/",
+                "repo": "https://github.com/NoeFabris/opencode-antigravity-auth",
+                "meta": {
+                    "lessons": "33 Lecciones",
+                    "stars": "6.2k",
+                    "difficulty": "Principiante"
+                }
+            },
+            {
+                "title": "Dynamic Context Pruning",
+                "desc": "Reduce automáticamente el uso de Tokens, elimina inteligentemente el contexto redundante",
+                "link": "/es/Opencode-DCP/opencode-dynamic-context-pruning/",
+                "repo": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning",
+                "meta": {
+                    "lessons": "22 Lecciones",
+                    "stars": "556",
+                    "difficulty": "Avanzado"
+                }
+            },
+            {
+                "title": "Plannotator",
+                "desc": "Herramienta de planificación y revisión de código AI, interacción visual",
+                "link": "/es/backnotprop/plannotator/",
+                "repo": "https://github.com/backnotprop/plannotator",
+                "meta": {
+                    "lessons": "27 Lecciones",
+                    "stars": "1.4k",
+                    "difficulty": "Intermedio"
+                }
+            },
+            {
+                "title": "Agent Skills",
+                "desc": "Descubrimiento dinámico y gestión de habilidades, mejora la eficiencia de Agentes",
+                "link": "/es/joshuadavidthomas/opencode-agent-skills/",
+                "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills",
+                "meta": {
+                    "lessons": "24 Lecciones",
+                    "stars": "25",
+                    "difficulty": "Intermedio"
+                }
+            },
+            {
+                "title": "Antigravity Manager",
+                "desc": "Sistema de gestión de cuentas AI locales y proxy inverso de protocolos",
+                "link": "/es/lbjlaq/Antigravity-Manager/",
+                "repo": "https://github.com/lbjlaq/Antigravity-Manager",
+                "meta": {
+                    "lessons": "39 Lecciones",
+                    "stars": "17.8k",
+                    "difficulty": "Experto"
+                }
+            },
+            {
+                "title": "OpenSkills",
+                "desc": "Cargador de habilidades universal, compatible con formato Claude Code",
+                "link": "/es/numman-ali/openskills/",
+                "repo": "https://github.com/numman-ali/openskills",
+                "meta": {
+                    "lessons": "35 Lecciones",
+                    "stars": "7k",
+                    "difficulty": "Intermedio"
+                }
+            },
+            {
+                "title": "Supermemory",
+                "desc": "Complemento de persistencia de memoria, comparte memoria entre sesiones y proyectos",
+                "link": "/es/supermemoryai/opencode-supermemory/",
+                "repo": "https://github.com/supermemoryai/opencode-supermemory",
+                "meta": {
+                    "lessons": "13 Lecciones",
+                    "stars": "520",
+                    "difficulty": "Experto"
+                }
+            },
+            {
+                "title": "MyStatus",
+                "desc": "Consulta de saldo de cuentas AI con un clic, integración de múltiples plataformas",
+                "link": "/es/vbgate/opencode-mystatus/",
+                "repo": "https://github.com/vbgate/opencode-mystatus",
+                "meta": {
+                    "lessons": "23 Lecciones",
+                    "stars": "161",
+                    "difficulty": "Principiante"
+                }
+            },
+            {
+                "title": "OpenCode Markdown Table Formatter",
+                "desc": "Optimizado específicamente para el modo oculto de OpenCode, asegura que las tablas se alineen perfectamente cuando se ocultan los símbolos Markdown",
+                "link": "/es/franlol/opencode-md-table-formatter/",
+                "repo": "https://github.com/franlol/opencode-md-table-formatter",
+                "meta": {
+                    "lessons": "14 Lecciones",
+                    "stars": "--",
+                    "difficulty": "Principiante"
+                }
+            },
+            {
+                "title": "oh-my-opencode",
+                "desc": "Orquestación de agentes AI multimodelo, permite que los equipos de desarrollo trabajen como expertos reales",
+                "link": "/es/code-yeongyu/oh-my-opencode/",
+                "repo": "https://github.com/code-yeongyu/oh-my-opencode",
+                "meta": {
+                    "lessons": "26 Lecciones",
+                    "stars": "--",
+                    "difficulty": "Experto"
+                }
+            },
+            {
+                "title": "agent-skills",
+                "desc": "Paquete de habilidades del agente de codificación Vercel AI, incluye optimización de rendimiento React y guía de diseño Web",
+                "link": "/es/vercel-labs/agent-skills/",
+                "repo": "https://github.com/vercel-labs/agent-skills",
+                "meta": {
+                    "lessons": "14 Lecciones",
+                    "stars": "--",
+                    "difficulty": "Intermedio"
+                }
+            }
+        ],
+        "apply_card": {
+            "title": "Solicita incluir tu proyecto",
+            "steps": [
+                "Enviar Issue",
+                "Revisión del equipo",
+                "Tutorial en línea"
+            ],
+            "repo_text": "Repo",
+            "cta_text": "Solicitar ahora",
+            "link": "https://github.com/vbgate/opencodedocs/issues",
+            "repo_link": "https://github.com/vbgate/opencodedocs"
+        }
+    },
+    "cta_section": {
+        "title": "Comienza tu viaje en AI",
+        "subtitle": "Desde la primera línea de código hasta aplicaciones de producción, tenemos tutoriales correspondientes",
+        "button_text": "Explorar todos los tutoriales",
+        "button_link": "#tutorials"
+    },
+    "footer": {
+        "title": "OpenCodeDocs",
+        "copyright": "© 2026 OpenCodeDocs",
+        "links": [
+            {
+                "text": "Sobre nosotros",
+                "link": "/es/about"
+            },
+            {
+                "text": "Acuerdo de usuario",
+                "link": "/es/terms"
+            },
+            {
+                "text": "Política de privacidad",
+                "link": "/es/privacy"
+            },
+            {
+                "text": "Únete a la comunidad",
+                "link": "/es/community"
+            },
+            {
+                "icon": "ph-github-logo",
+                "link": "https://github.com/vbgate/opencodedocs"
+            }
+        ]
+    }
+}

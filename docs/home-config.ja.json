@@ -1,0 +1,283 @@
+{
+    "hero": {
+        "badge": "チュートリアルは検証済み、そのまま実行するだけで動きます",
+        "title_prefix": "ソースコード駆動の",
+        "title_main": "AI 全シーンチュートリアル",
+        "typewriter_texts": [
+            "入門からエキスパートまで",
+            "すべてのステップが実行可能",
+            "学んだらすぐ使える"
+        ],
+        "description": "AI ツールの進化は速すぎます。公式ドキュメントは遅れ、ネットのチュートリアルは古くなっています——<br class=\"hidden sm:inline\"><strong>私たちはこれを変えます。</strong>",
+        "primary_action": {
+            "text": "学習を始める",
+            "link": "#tutorials"
+        },
+        "secondary_action": {
+            "text": "GitHub",
+            "link": "https://github.com/vbgate/opencodedocs"
+        },
+        "chat_demo": {
+            "title": "OpenCodeDocs",
+            "ui": {
+                "online_text": "オンライン",
+                "completed_text": "完了",
+                "input_placeholder": "AI にやりたいことを伝えてください..."
+            },
+            "messages": [
+                {
+                    "role": "user",
+                    "text": "OpenCode で OpenAI と Zhipu の残高を直接確認できますか？"
+                },
+                {
+                    "role": "ai",
+                    "text": "はい。「MyStatus」プラグインをインストール後、スラッシュコマンド /mystatus を入力するだけで、ワンクリックで確認できます。"
+                },
+                {
+                    "role": "user",
+                    "text": "コマンドライン出力だけですか？"
+                },
+                {
+                    "role": "ai",
+                    "text": "いいえ、ビジュアルプログレスバーとリセットカウントダウンも提供します。OpenAI、Copilot など 5 つの主要プラットフォームをサポートし、完全にローカルで実行され、プライバシーを保護します。✅",
+                    "status": "検証済み",
+                    "meta": "opencode-mystatus"
+                }
+            ]
+        }
+    },
+    "audience": {
+        "title": "初心者でも経験者でも、<br class=\"sm:hidden\">必要なものが見つかります",
+        "subtitle": "レベル別チュートリアルシステムで、異なる段階のニーズに対応",
+        "beginner": {
+            "badge": "AI ツール初心者向け",
+            "title": "インストールできない？設定が合わない？焦らないで、<br>ここでは初心者向けのチュートリアルがあります",
+            "description": "Claude Code をインストールしたけど使い方がわからない？Cursor の設定が理解できない？慌てないで、私たちのチュートリアルは「最初の一歩」から説明し、<strong>すべてのステップを詳細に分解</strong>しています。従って進むだけでOKです。",
+            "tags": [
+                {
+                    "icon": "ph-check-circle",
+                    "text": "初心者向けステップ"
+                },
+                {
+                    "icon": "ph-terminal-window",
+                    "text": "コアコマンド"
+                }
+            ],
+            "cta": "従って進むだけで、一度で成功、試行錯誤の必要なし",
+            "terminal": {
+                "panic": [
+                    "> npm install",
+                    "⚠ ERESOLVE unable to resolve...",
+                    "✖ Error: gyrb failed with code 1",
+                    "panic: runtime error..."
+                ],
+                "success": [
+                    "> ./fix-env.sh",
+                    "✔ Dependencies installed",
+                    "✔ Build succeeded (0.2s)",
+                    "✨ App is running on :3000"
+                ]
+            }
+        },
+        "advanced": {
+            "badge": "上級ユーザー向け",
+            "title": "入門だけでなく、<br>ディープな実践もあります",
+            "description": "複数アカウントのローテーション、Token 節約テクニック、Agent 自動化... これらの「高度な活用法」は、公式ドキュメントでは必ずしも説明されていません。<strong>私たちはソースコードから解析し</strong>、より快適に使えるようにします。",
+            "tags": [
+                {
+                    "icon": "ph-gear",
+                    "text": "上級テクニック"
+                },
+                {
+                    "icon": "ph-code",
+                    "text": "ソースコード解析"
+                }
+            ],
+            "cta": "時間とコストを節約、効率が倍増"
+        }
+    },
+    "features": {
+        "title": "OpenCodeDocs を選ぶ理由は？",
+        "subtitle": "私たちには他にはない 3 つのものがあります",
+        "list": [
+            {
+                "icon": "ph-file-code",
+                "color": "brand",
+                "title": "ソースコード検証",
+                "desc": "ネットからコピーしたものではなく、コードから導き出しました"
+            },
+            {
+                "icon": "ph-arrows-clockwise",
+                "color": "emerald",
+                "title": "継続的更新",
+                "desc": "ツールが更新されれば、チュートリアルも同期されます"
+            },
+            {
+                "icon": "ph-book-open",
+                "color": "amber",
+                "title": "初心者にやさしい",
+                "desc": "ゼロからでも従って進められます。一歩ずつ確実に"
+            }
+        ]
+    },
+    "tutorials": {
+        "title": "選んで始めましょう",
+        "subtitle": "すべてのチュートリアルは検証済み、従って進むだけで実行可能",
+        "list": [
+            {
+                "title": "Antigravity Auth",
+                "desc": "Google OAuth 認証プラグイン、Claude と Gemini モデルを無料で使用",
+                "link": "/ja/NoeFabris/opencode-antigravity-auth/",
+                "repo": "https://github.com/NoeFabris/opencode-antigravity-auth",
+                "meta": {
+                    "lessons": "33 レッスン",
+                    "stars": "6.2k",
+                    "difficulty": "入門"
+                }
+            },
+            {
+                "title": "Dynamic Context Pruning",
+                "desc": "Token 使用量を自動的に削減、冗長なコンテキストをインテリジェントに削除",
+                "link": "/ja/Opencode-DCP/opencode-dynamic-context-pruning/",
+                "repo": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning",
+                "meta": {
+                    "lessons": "22 レッスン",
+                    "stars": "556",
+                    "difficulty": "上級"
+                }
+            },
+            {
+                "title": "Plannotator",
+                "desc": "AI 計画とコードレビューツール、ビジュアルインタラクション",
+                "link": "/ja/backnotprop/plannotator/",
+                "repo": "https://github.com/backnotprop/plannotator",
+                "meta": {
+                    "lessons": "27 レッスン",
+                    "stars": "1.4k",
+                    "difficulty": "中級"
+                }
+            },
+            {
+                "title": "Agent Skills",
+                "desc": "スキルの動的検出と管理、Agent 効率を向上",
+                "link": "/ja/joshuadavidthomas/opencode-agent-skills/",
+                "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills",
+                "meta": {
+                    "lessons": "24 レッスン",
+                    "stars": "25",
+                    "difficulty": "中級"
+                }
+            },
+            {
+                "title": "Antigravity Manager",
+                "desc": "ローカル AI アカウント管理とプロトコルリバースプロキシシステム",
+                "link": "/ja/lbjlaq/Antigravity-Manager/",
+                "repo": "https://github.com/lbjlaq/Antigravity-Manager",
+                "meta": {
+                    "lessons": "39 レッスン",
+                    "stars": "17.8k",
+                    "difficulty": "エキスパート"
+                }
+            },
+            {
+                "title": "OpenSkills",
+                "desc": "汎用スキールローダー、Claude Code 形式と互換",
+                "link": "/ja/numman-ali/openskills/",
+                "repo": "https://github.com/numman-ali/openskills",
+                "meta": {
+                    "lessons": "35 レッスン",
+                    "stars": "7k",
+                    "difficulty": "中級"
+                }
+            },
+            {
+                "title": "Supermemory",
+                "desc": "メモリ永続化プラグイン、セッション間・プロジェクト間でメモリを共有",
+                "link": "/ja/supermemoryai/opencode-supermemory/",
+                "repo": "https://github.com/supermemoryai/opencode-supermemory",
+                "meta": {
+                    "lessons": "13 レッスン",
+                    "stars": "520",
+                    "difficulty": "エキスパート"
+                }
+            },
+            {
+                "title": "MyStatus",
+                "desc": "AI アカウント残高をワンクリックで確認、複数プラットフォーム統合",
+                "link": "/ja/vbgate/opencode-mystatus/",
+                "repo": "https://github.com/vbgate/opencode-mystatus",
+                "meta": {
+                    "lessons": "23 レッスン",
+                    "stars": "161",
+                    "difficulty": "入門"
+                }
+            },
+            {
+                "title": "OpenCode Markdown Table Formatter",
+                "desc": "OpenCode の隠しモードを最適化、Markdown 記号を隠してもテーブルを完璧に整列",
+                "link": "/ja/franlol/opencode-md-table-formatter/",
+                "repo": "https://github.com/franlol/opencode-md-table-formatter",
+                "meta": {
+                    "lessons": "14 レッスン",
+                    "stars": "--",
+                    "difficulty": "入門"
+                }
+            },
+            {
+                "title": "oh-my-opencode",
+                "desc": "マルチモデル AI エージェントオーケストレーション、開発チームを本物の専門家のように動かす",
+                "link": "/ja/code-yeongyu/oh-my-opencode/",
+                "repo": "https://github.com/code-yeongyu/oh-my-opencode",
+                "meta": {
+                    "lessons": "26 レッスン",
+                    "stars": "--",
+                    "difficulty": "エキスパート"
+                }
+            }
+        ],
+        "apply_card": {
+            "title": "あなたのプロジェクトを収録に申請",
+            "steps": [
+                "Issue を提出",
+                "チームによる審査",
+                "チュートリアル公開"
+            ],
+            "repo_text": "Repo",
+            "cta_text": "今すぐ申請",
+            "link": "https://github.com/vbgate/opencodedocs/issues",
+            "repo_link": "https://github.com/vbgate/opencodedocs"
+        }
+    },
+    "cta_section": {
+        "title": "あなたの AI の旅を始めましょう",
+        "subtitle": "最初のコードから本番レベルのアプリケーションまで、対応するチュートリアルがすべて揃っています",
+        "button_text": "すべてのチュートリアルを閲覧",
+        "button_link": "#tutorials"
+    },
+    "footer": {
+        "title": "OpenCodeDocs",
+        "copyright": "© 2026 OpenCodeDocs",
+        "links": [
+            {
+                "text": "私たちについて",
+                "link": "/ja/about"
+            },
+            {
+                "text": "利用規約",
+                "link": "/ja/terms"
+            },
+            {
+                "text": "プライバシーポリシー",
+                "link": "/ja/privacy"
+            },
+            {
+                "text": "コミュニティに参加",
+                "link": "/ja/community"
+            },
+            {
+                "icon": "ph-github-logo",
+                "link": "https://github.com/vbgate/opencodedocs"
+            }
+        ]
+    }
+}

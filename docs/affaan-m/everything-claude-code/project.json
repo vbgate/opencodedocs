@@ -1,0 +1,210 @@
+{
+    "project": {
+        "name": "Everything Claude Code",
+        "tagline": "Battle-Tested Claude Code Plugin Configuration Collection",
+        "description": "A comprehensive Claude Code plugin configuration collection from an Anthropic hackathon winner. Provides 9 agents, 14 commands, 8 rules, 11 skills, and 15+ hooks to enhance AI-assisted development efficiency. Supports Windows, macOS, and Linux with cross-platform Node.js scripts.",
+        "github_url": "https://github.com/affaan-m/everything-claude-code"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Quick Start",
+            "link": "/affaan-m/everything-claude-code/start/quickstart/"
+        }
+    },
+    "features": {
+        "title": "Why Everything Claude Code?",
+        "subtitle": "Stop configuring from scratch. Get battle-tested configurations refined over 10+ months of daily use.",
+        "list": [
+            {
+                "title": "Battle-Tested",
+                "desc": "From an Anthropic hackathon winner, refined over 10+ months of daily use building real products."
+            },
+            {
+                "title": "Complete Configuration",
+                "desc": "9 agents, 14 commands, 8 rules, 11 skills, and 15+ hooks covering all development scenarios."
+            },
+            {
+                "title": "Cross-Platform Support",
+                "desc": "All hooks and scripts rewritten in Node.js. Works seamlessly on Windows, macOS, and Linux."
+            },
+            {
+                "title": "Smart Package Manager",
+                "desc": "Auto-detects npm, pnpm, yarn, or bun with 6 priority configurations. Zero manual setup required."
+            },
+            {
+                "title": "Continuous Learning",
+                "desc": "Automatically extracts reusable patterns from sessions and saves them as learned skills."
+            },
+            {
+                "title": "Code Quality Assurance",
+                "desc": "TDD workflow, code review, and security auditing ensuring 80%+ test coverage."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Course Outline",
+        "subtitle": "6 sections, 27 lessons",
+        "sections": [
+            {
+                "title": "Getting Started",
+                "items": [
+                    {
+                        "title": "Quick Start",
+                        "desc": "Install and use Everything Claude Code in 5 minutes",
+                        "link": "/affaan-m/everything-claude-code/start/quickstart/"
+                    },
+                    {
+                        "title": "Installation Guide",
+                        "desc": "Marketplace vs manual setup with detailed steps",
+                        "link": "/affaan-m/everything-claude-code/start/installation/"
+                    },
+                    {
+                        "title": "Package Manager Setup",
+                        "desc": "Configure npm, pnpm, yarn, or bun detection",
+                        "link": "/affaan-m/everything-claude-code/start/package-manager-setup/"
+                    },
+                    {
+                        "title": "MCP Server Setup",
+                        "desc": "Configure 15+ MCP servers for GitHub, Supabase, Vercel",
+                        "link": "/affaan-m/everything-claude-code/start/mcp-setup/"
+                    }
+                ]
+            },
+            {
+                "title": "Core Features",
+                "items": [
+                    {
+                        "title": "Commands Overview",
+                        "desc": "Master 14 slash commands for development workflows",
+                        "link": "/affaan-m/everything-claude-code/platforms/commands-overview/"
+                    },
+                    {
+                        "title": "Agents Overview",
+                        "desc": "Understand 9 specialized sub-agents and when to use them",
+                        "link": "/affaan-m/everything-claude-code/platforms/agents-overview/"
+                    },
+                    {
+                        "title": "TDD Workflow",
+                        "desc": "Test-driven development with /tdd command",
+                        "link": "/affaan-m/everything-claude-code/platforms/tdd-workflow/"
+                    },
+                    {
+                        "title": "Code Review Workflow",
+                        "desc": "Automated code review and security auditing",
+                        "link": "/affaan-m/everything-claude-code/platforms/code-review-workflow/"
+                    }
+                ]
+            },
+            {
+                "title": "Advanced Features",
+                "items": [
+                    {
+                        "title": "Custom Rules",
+                        "desc": "Create and manage project-specific rules",
+                        "link": "/affaan-m/everything-claude-code/advanced/custom-rules/"
+                    },
+                    {
+                        "title": "Dynamic Contexts",
+                        "desc": "Switch between dev, review, and research modes",
+                        "link": "/affaan-m/everything-claude-code/advanced/dynamic-contexts/"
+                    },
+                    {
+                        "title": "Hooks Automation",
+                        "desc": "Deep dive into 15+ automation hooks",
+                        "link": "/affaan-m/everything-claude-code/advanced/hooks-automation/"
+                    },
+                    {
+                        "title": "Token Optimization",
+                        "desc": "Manage context window and reduce token usage",
+                        "link": "/affaan-m/everything-claude-code/advanced/token-optimization/"
+                    },
+                    {
+                        "title": "Verification Loop",
+                        "desc": "Checkpoint vs continuous evals and pass@k metrics",
+                        "link": "/affaan-m/everything-claude-code/advanced/verification-loop/"
+                    },
+                    {
+                        "title": "Continuous Learning",
+                        "desc": "Auto-extract patterns from sessions into skills",
+                        "link": "/affaan-m/everything-claude-code/advanced/continuous-learning/"
+                    }
+                ]
+            },
+            {
+                "title": "FAQ",
+                "items": [
+                    {
+                        "title": "Troubleshooting MCP",
+                        "desc": "Resolve MCP server connection and configuration issues",
+                        "link": "/affaan-m/everything-claude-code/faq/troubleshooting-mcp/"
+                    },
+                    {
+                        "title": "Troubleshooting Agents",
+                        "desc": "Fix agent delegation and response quality issues",
+                        "link": "/affaan-m/everything-claude-code/faq/troubleshooting-agents/"
+                    },
+                    {
+                        "title": "Troubleshooting Hooks",
+                        "desc": "Debug hook execution and script errors",
+                        "link": "/affaan-m/everything-claude-code/faq/troubleshooting-hooks/"
+                    },
+                    {
+                        "title": "Performance Tips",
+                        "desc": "Optimize context window and improve response speed",
+                        "link": "/affaan-m/everything-claude-code/faq/performance-tips/"
+                    }
+                ]
+            },
+            {
+                "title": "Appendix",
+                "items": [
+                    {
+                        "title": "Config Reference",
+                        "desc": "Complete configuration file reference",
+                        "link": "/affaan-m/everything-claude-code/appendix/config-reference/"
+                    },
+                    {
+                        "title": "Rules Reference",
+                        "desc": "All 8 built-in rules explained",
+                        "link": "/affaan-m/everything-claude-code/appendix/rules-reference/"
+                    },
+                    {
+                        "title": "Skills Reference",
+                        "desc": "All 11 skills and their use cases",
+                        "link": "/affaan-m/everything-claude-code/appendix/skills-reference/"
+                    },
+                    {
+                        "title": "Scripts API",
+                        "desc": "Node.js utility functions and hook scripts",
+                        "link": "/affaan-m/everything-claude-code/appendix/scripts-api/"
+                    },
+                    {
+                        "title": "Examples",
+                        "desc": "Real-world configuration examples",
+                        "link": "/affaan-m/everything-claude-code/appendix/examples/"
+                    },
+                    {
+                        "title": "Test Suite",
+                        "desc": "Running and extending the test suite",
+                        "link": "/affaan-m/everything-claude-code/appendix/test-suite/"
+                    },
+                    {
+                        "title": "Contributing",
+                        "desc": "How to contribute agents, skills, and hooks",
+                        "link": "/affaan-m/everything-claude-code/appendix/contributing/"
+                    }
+                ]
+            },
+            {
+                "title": "Changelog",
+                "items": [
+                    {
+                        "title": "Release Notes",
+                        "desc": "Version history and breaking changes",
+                        "link": "/affaan-m/everything-claude-code/changelog/release-notes/"
+                    }
+                ]
+            }
+        ]
+    }
+}

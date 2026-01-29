@@ -1,0 +1,110 @@
+{
+    "project": {
+        "name": "opencode-supermemory",
+        "tagline": "Cross-Session Persistent Memory",
+        "description": "OpenCode plugin that gives coding agents persistent memory using Supermemory. Your agent remembers what you tell it - across sessions, across projects. Features automatic context injection, intelligent compaction, and privacy protection.",
+        "github_url": "https://github.com/supermemoryai/opencode-supermemory"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Get Started",
+            "link": "/supermemoryai/opencode-supermemory/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "Why opencode-supermemory?",
+        "subtitle": "Teach your Agent once, remember forever. No more repeating the same rules every session.",
+        "list": [
+            {
+                "title": "Cross-Project Memory",
+                "desc": "User coding preferences automatically apply across different projects. Teach once, remember forever."
+            },
+            {
+                "title": "Automatic Context Injection",
+                "desc": "Seamlessly loads user profiles and project memories at session start. Agent knows your habits from the first message."
+            },
+            {
+                "title": "Intelligent Compaction",
+                "desc": "Automatically summarizes and saves context when token usage exceeds 80%, preventing loss of critical information."
+            },
+            {
+                "title": "Natural Language Triggers",
+                "desc": "Say 'remember this' or 'save this' and the agent auto-saves to memory. No complex operations required."
+            },
+            {
+                "title": "Privacy Protection",
+                "desc": "Content in <private> tags is automatically redacted before upload. Sensitive data never leaves your machine."
+            },
+            {
+                "title": "Codebase Indexing",
+                "desc": "Run /supermemory-init to explore and memorize your codebase structure, patterns, and conventions."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Course Outline",
+        "subtitle": "4 sections, 8 lessons",
+        "sections": [
+            {
+                "title": "Getting Started",
+                "items": [
+                    {
+                        "title": "Installation & Configuration",
+                        "desc": "Install the plugin, configure API Key, and verify setup",
+                        "link": "/supermemoryai/opencode-supermemory/start/getting-started/"
+                    },
+                    {
+                        "title": "Project Initialization",
+                        "desc": "Use /supermemory-init to let Agent explore and memorize your codebase",
+                        "link": "/supermemoryai/opencode-supermemory/start/initialization/"
+                    }
+                ]
+            },
+            {
+                "title": "Core Features",
+                "items": [
+                    {
+                        "title": "Automatic Context Injection",
+                        "desc": "Understand how agents acquire user profiles and project knowledge",
+                        "link": "/supermemoryai/opencode-supermemory/core/context-injection/"
+                    },
+                    {
+                        "title": "Tools Explained",
+                        "desc": "Master the 5 core modes: add, search, profile, list, forget",
+                        "link": "/supermemoryai/opencode-supermemory/core/tools/"
+                    },
+                    {
+                        "title": "Memory Scope & Lifecycle",
+                        "desc": "Understand User vs Project scopes and manage your digital brain",
+                        "link": "/supermemoryai/opencode-supermemory/core/memory-management/"
+                    }
+                ]
+            },
+            {
+                "title": "Security",
+                "items": [
+                    {
+                        "title": "Privacy & Data Security",
+                        "desc": "Use <private> tags to redact data and secure your API keys",
+                        "link": "/supermemoryai/opencode-supermemory/security/privacy/"
+                    }
+                ]
+            },
+            {
+                "title": "Advanced",
+                "items": [
+                    {
+                        "title": "Preemptive Compaction",
+                        "desc": "Prevent context amnesia in long sessions with automatic summarization",
+                        "link": "/supermemoryai/opencode-supermemory/advanced/compaction/"
+                    },
+                    {
+                        "title": "Advanced Configuration",
+                        "desc": "Customize trigger words, adjust thresholds, and manage environments",
+                        "link": "/supermemoryai/opencode-supermemory/advanced/configuration/"
+                    }
+                ]
+            }
+        ]
+    }
+}

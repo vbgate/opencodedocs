@@ -1,0 +1,190 @@
+{
+    "project": {
+        "name": "Antigravity Manager",
+        "tagline": "Professional AI Account Manager & API Gateway",
+        "description": "A full-featured desktop application for AI developers. Manage multiple Google/Anthropic accounts, convert Web Sessions to standard APIs, and enjoy intelligent request routing with automatic failover. Built with Tauri v2 + React (Rust).",
+        "github_url": "https://github.com/lbjlaq/Antigravity-Manager"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Get Started",
+            "link": "/lbjlaq/Antigravity-Manager/start/quick-install/"
+        }
+    },
+    "features": {
+        "title": "Why Antigravity Manager?",
+        "subtitle": "Your personal high-performance AI dispatch gateway. Not just account management, but the ultimate solution for breaking API call barriers.",
+        "list": [
+            {
+                "title": "Smart Dashboard",
+                "desc": "Real-time monitoring of all account health status, including quota for Gemini Pro, Flash, Claude, and Imagen. One-click switch to the best account."
+            },
+            {
+                "title": "Multi-Protocol Support",
+                "desc": "Full protocol adaptation: OpenAI /v1/chat/completions, Anthropic /v1/messages, and native Gemini SDK. Compatible with 99% of AI applications."
+            },
+            {
+                "title": "Intelligent Routing",
+                "desc": "Smart model routing with tiered priority based on account type (Ultra/Pro/Free). Automatic failover on 429/401 errors with millisecond-level retry."
+            },
+            {
+                "title": "OAuth 2.0 Authentication",
+                "desc": "Seamless OAuth flow with pre-generated authorization links. Support for batch import and automatic migration from legacy versions."
+            },
+            {
+                "title": "Imagen 3 Support",
+                "desc": "Advanced image generation with quality control. Support for custom size parameters and up to 100MB payload for 4K image recognition."
+            },
+            {
+                "title": "Cross-Platform",
+                "desc": "Native desktop app for macOS, Windows, and Linux. Docker deployment available for NAS/servers with noVNC web access."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Course Outline",
+        "subtitle": "6 chapters, comprehensive guide",
+        "sections": [
+            {
+                "title": "Getting Started",
+                "items": [
+                    {
+                        "title": "What is Antigravity Manager",
+                        "desc": "Learn about the core features, use cases, and architecture overview",
+                        "link": "/lbjlaq/Antigravity-Manager/start/what-is-antigravity/"
+                    },
+                    {
+                        "title": "Quick Install",
+                        "desc": "Install via Homebrew, manual download, or Docker in minutes",
+                        "link": "/lbjlaq/Antigravity-Manager/start/quick-install/"
+                    },
+                    {
+                        "title": "First Account Setup",
+                        "desc": "Add your first Google account using OAuth 2.0 authorization",
+                        "link": "/lbjlaq/Antigravity-Manager/start/first-account/"
+                    },
+                    {
+                        "title": "Connect to Claude Code",
+                        "desc": "Configure environment variables and start using with Claude CLI",
+                        "link": "/lbjlaq/Antigravity-Manager/start/connect-claude-code/"
+                    }
+                ]
+            },
+            {
+                "title": "Platform Features",
+                "items": [
+                    {
+                        "title": "Dashboard Overview",
+                        "desc": "Master the smart dashboard for quota monitoring and account switching",
+                        "link": "/lbjlaq/Antigravity-Manager/platforms/dashboard/"
+                    },
+                    {
+                        "title": "Account Management",
+                        "desc": "Manage multiple accounts with list/grid views and 403 detection",
+                        "link": "/lbjlaq/Antigravity-Manager/platforms/account-management/"
+                    },
+                    {
+                        "title": "API Proxy Settings",
+                        "desc": "Configure the local proxy server and protocol endpoints",
+                        "link": "/lbjlaq/Antigravity-Manager/platforms/api-proxy/"
+                    },
+                    {
+                        "title": "Model Router",
+                        "desc": "Set up model mapping, regex routing, and tiered priority",
+                        "link": "/lbjlaq/Antigravity-Manager/platforms/model-router/"
+                    }
+                ]
+            },
+            {
+                "title": "Advanced Features",
+                "items": [
+                    {
+                        "title": "Multi-Account Load Balancing",
+                        "desc": "Configure intelligent request distribution across multiple accounts",
+                        "link": "/lbjlaq/Antigravity-Manager/advanced/load-balancing/"
+                    },
+                    {
+                        "title": "Context Compression",
+                        "desc": "Understand the 3-layer progressive context compression system",
+                        "link": "/lbjlaq/Antigravity-Manager/advanced/context-compression/"
+                    },
+                    {
+                        "title": "Image Generation",
+                        "desc": "Use Imagen 3 with OpenAI Images API or Chat API",
+                        "link": "/lbjlaq/Antigravity-Manager/advanced/image-generation/"
+                    },
+                    {
+                        "title": "Cloudflared Tunnel",
+                        "desc": "Expose your local API via Cloudflare tunnel for remote access",
+                        "link": "/lbjlaq/Antigravity-Manager/advanced/cloudflared/"
+                    },
+                    {
+                        "title": "Docker Deployment",
+                        "desc": "Deploy on NAS/servers with Docker and noVNC web interface",
+                        "link": "/lbjlaq/Antigravity-Manager/advanced/docker-deployment/"
+                    }
+                ]
+            },
+            {
+                "title": "Integration Guide",
+                "items": [
+                    {
+                        "title": "Claude Code CLI",
+                        "desc": "Full integration guide for Claude Code command line tool",
+                        "link": "/lbjlaq/Antigravity-Manager/integration/claude-code/"
+                    },
+                    {
+                        "title": "Kilo Code",
+                        "desc": "Connect Kilo Code with Gemini protocol and model mapping",
+                        "link": "/lbjlaq/Antigravity-Manager/integration/kilo-code/"
+                    },
+                    {
+                        "title": "Cherry Studio",
+                        "desc": "Deep integration with search citations and source links",
+                        "link": "/lbjlaq/Antigravity-Manager/integration/cherry-studio/"
+                    },
+                    {
+                        "title": "Python SDK",
+                        "desc": "Use with OpenAI Python SDK for custom applications",
+                        "link": "/lbjlaq/Antigravity-Manager/integration/python-sdk/"
+                    }
+                ]
+            },
+            {
+                "title": "FAQ",
+                "items": [
+                    {
+                        "title": "macOS Security Issues",
+                        "desc": "Fix 'app is damaged' and quarantine attribute errors",
+                        "link": "/lbjlaq/Antigravity-Manager/faq/macos-security/"
+                    },
+                    {
+                        "title": "OAuth Troubleshooting",
+                        "desc": "Resolve authorization callback and token exchange issues",
+                        "link": "/lbjlaq/Antigravity-Manager/faq/oauth-issues/"
+                    },
+                    {
+                        "title": "Rate Limit Errors",
+                        "desc": "Handle 429 errors and model capacity exhaustion",
+                        "link": "/lbjlaq/Antigravity-Manager/faq/rate-limits/"
+                    },
+                    {
+                        "title": "Connection Issues",
+                        "desc": "Troubleshoot proxy settings and network configuration",
+                        "link": "/lbjlaq/Antigravity-Manager/faq/connection-issues/"
+                    }
+                ]
+            },
+            {
+                "title": "Changelog",
+                "items": [
+                    {
+                        "title": "Version History",
+                        "desc": "Release notes and important changes",
+                        "link": "/lbjlaq/Antigravity-Manager/changelog/version-history/"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,120 @@
+{
+    "project": {
+        "name": "agent-skills",
+        "tagline": "Vercel AI-Codierungs-Agenten-Skillset",
+        "description": "Bietet einen erweiterbaren Satz von Fähigkeiten für KI-Agenten wie Claude. Enthält 57 React-Leistungsoptimierungsregeln, über 100 Web-Designrichtlinien und unterstützt One-Click-Deployment auf Vercel.",
+        "github_url": "https://github.com/vercel-labs/agent-skills"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Schnellstart",
+            "link": "/de/vercel-labs/agent-skills/start/installation/"
+        }
+    },
+    "features": {
+        "title": "Warum agent-skills wählen?",
+        "subtitle": "Offizielles Produkt von Vercel, das die bewährten Praktiken des Engineering-Teams in wiederverwendbare Fähigkeiten verpackt, die von KI-Agenten automatisch angewendet werden.",
+        "list": [
+            {
+                "title": "React-Leistungsoptimierung",
+                "desc": "Enthält 57 vom Vercel-Engineering-Team verifizierte Regeln, klassifiziert nach CRITICAL/HIGH/MEDIUM, deckt 8 Kategorien ab, einschließlich Beseitigung von Wasserfällen und Bundle-Optimierung."
+            },
+            {
+                "title": "Web-Designrichtlinien",
+                "desc": "Über 100 UI-Auditregeln, deckt Barrierefreiheit, Animationsleistung, Dunkelmodus, Formularvalidierung und andere Dimensionen ab."
+            },
+            {
+                "title": "Vercel One-Click-Deployment",
+                "desc": "Erkennt automatisch über 40 Frameworks, deployt ohne Konfiguration und gibt Vorschau- und Eigentümerübertragungslinks zurück."
+            },
+            {
+                "title": "Automatischer Auslösemechanismus",
+                "desc": "Nach der Installation erkennt der Agent automatisch Aufgaben und aktiviert entsprechende Fähigkeiten, ohne manuelle Auswahl oder Befehle zu merken."
+            },
+            {
+                "title": "Standardisiertes Format",
+                "desc": "Befolgt die Agent Skills-Spezifikation, jede Fähigkeit enthält SKILL.md, scripts/ und references/, erleichtert die Erweiterung."
+            },
+            {
+                "title": "Open Source-freie Erweiterung",
+                "desc": "MIT-Lizenz, Fähigkeiten können frei erweitert und angepasst oder Ihr eigenes Skillset basierend auf vorhandenen Regeln erstellt werden."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Kursübersicht",
+        "subtitle": "Insgesamt 4 Kapitel, 10 Lektionen",
+        "sections": [
+            {
+                "title": "Erste Schritte (Start)",
+                "items": [
+                    {
+                        "title": "Agent Skills-Einführung",
+                        "desc": "Erfahren Sie, was Agent Skills sind und wie sie die Fähigkeiten von KI-Codierungsagenten erweitern",
+                        "link": "/de/vercel-labs/agent-skills/start/getting-started/"
+                    },
+                    {
+                        "title": "Agent Skills-Installation",
+                        "desc": "Schnelle Installation mit einem Befehl, konfigurieren Sie Claude Code und claude.ai",
+                        "link": "/de/vercel-labs/agent-skills/start/installation/"
+                    }
+                ]
+            },
+            {
+                "title": "Kernfähigkeiten (Platforms)",
+                "items": [
+                    {
+                        "title": "React-Leistungsoptimierung",
+                        "desc": "Anwendung der 57 Vercel-Regeln, Beseitigung von Wasserfällen, Bundle-Optimierung, Reduzierung von Re-renders",
+                        "link": "/de/vercel-labs/agent-skills/platforms/react-best-practices/"
+                    },
+                    {
+                        "title": "Web-Designrichtlinien-Audit",
+                        "desc": "Audit von UI-Code mit über 100 Regeln, deckt Barrierefreiheit, Leistung und UX ab",
+                        "link": "/de/vercel-labs/agent-skills/platforms/web-design-guidelines/"
+                    },
+                    {
+                        "title": "Vercel One-Click-Deployment",
+                        "desc": "Schnelle Veröffentlichung von Anwendungen ohne Authentifizierung, automatische Framework-Erkennung und Rückgabe von Vorschau-Links",
+                        "link": "/de/vercel-labs/agent-skills/platforms/vercel-deploy/"
+                    }
+                ]
+            },
+            {
+                "title": "Erweiterte Funktionen (Advanced)",
+                "items": [
+                    {
+                        "title": "Fähigkeitsentwicklung",
+                        "desc": "Lernen Sie, benutzerdefinierte Fähigkeiten zu erstellen, um die Fähigkeiten von KI-Agenten zu erweitern",
+                        "link": "/de/vercel-labs/agent-skills/advanced/skill-development/"
+                    },
+                    {
+                        "title": "Regelschreiben",
+                        "desc": "Meistern Sie Techniken zum Schreiben von Regeln, definieren Sie Prüflogik und Korrekturvorschläge",
+                        "link": "/de/vercel-labs/agent-skills/advanced/rule-authoring/"
+                    },
+                    {
+                        "title": "Build-Toolchain",
+                        "desc": "Verstehen Sie den Build- und Veröffentlichungsprozess von Skillsets",
+                        "link": "/de/vercel-labs/agent-skills/advanced/build-toolchain/"
+                    }
+                ]
+            },
+            {
+                "title": "Häufige Fragen (FAQ)",
+                "items": [
+                    {
+                        "title": "Fehlerbehebung",
+                        "desc": "Lösen Sie häufige Probleme wie inaktivierte Fähigkeiten, fehlgeschlagenes Deployment",
+                        "link": "/de/vercel-labs/agent-skills/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "Bewährte Praktiken",
+                        "desc": "Empfehlungen für bewährte Praktiken bei der Verwendung und Entwicklung von Fähigkeiten",
+                        "link": "/de/vercel-labs/agent-skills/faq/best-practices/"
+                    }
+                ]
+            }
+        ]
+    }
+}

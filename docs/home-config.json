@@ -1,0 +1,316 @@
+{
+    "hero": {
+        "badge": "教程已验证，照着做就能跑",
+        "title_prefix": "源码驱动的",
+        "title_main": "AI 全场景教程",
+        "typewriter_texts": [
+            "从入门到精通",
+            "每一步都能跑通",
+            "学完就能用起来"
+        ],
+        "description": "AI 工具迭代飞快，官方文档滞后，网上教程过时——<br class=\"hidden sm:inline\"><strong>我们要改变这一切。</strong>",
+        "primary_action": {
+            "text": "开始学习",
+            "link": "#tutorials"
+        },
+        "secondary_action": {
+            "text": "GitHub",
+            "link": "https://github.com/vbgate/opencodedocs"
+        },
+        "chat_demo": {
+            "title": "OpenCodeDocs",
+            "ui": {
+                "online_text": "在线",
+                "completed_text": "已完成",
+                "input_placeholder": "告诉 AI 你想做什么..."
+            },
+            "messages": [
+                {
+                    "role": "user",
+                    "text": "OpenCode 里能直接查 OpenAI 和 智谱 剩多少钱吗？"
+                },
+                {
+                    "role": "ai",
+                    "text": "可以。安装 'MyStatus' 插件后，输入斜杠命令 /mystatus 即可一键查看。"
+                },
+                {
+                    "role": "user",
+                    "text": "只有命令行输出吗？"
+                },
+                {
+                    "role": "ai",
+                    "text": "不，它会提供可视化进度条和重置倒计时。支持 OpenAI、Copilot 等 5 大平台，完全本地运行，保护隐私。✅",
+                    "status": "已验证",
+                    "meta": "opencode-mystatus"
+                }
+            ]
+        }
+    },
+    "audience": {
+        "title": "不管你是新手还是老鸟，<br class=\"sm:hidden\">都能找到你要的",
+        "subtitle": "分级教程体系，满足不同阶段的需求",
+        "beginner": {
+            "badge": "给 AI 工具新手",
+            "title": "装不上？配不对？别急，<br>这里有保姆级教程",
+            "description": "Claude Code 装完不会用？Cursor 配置一堆看不懂？别慌，我们的教程从\"第一步\"开始讲，<strong>每个步骤都有详细拆解</strong>，跟着做就行。",
+            "tags": [
+                {
+                    "icon": "ph-check-circle",
+                    "text": "保姆级步骤"
+                },
+                {
+                    "icon": "ph-terminal-window",
+                    "text": "核心指令"
+                }
+            ],
+            "cta": "跟着走，一次跑通，不用试错",
+            "terminal": {
+                "panic": [
+                    "> npm install",
+                    "⚠ ERESOLVE unable to resolve...",
+                    "✖ Error: gyrb failed with code 1",
+                    "panic: runtime error..."
+                ],
+                "success": [
+                    "> ./fix-env.sh",
+                    "✔ Dependencies installed",
+                    "✔ Build succeeded (0.2s)",
+                    "✨ App is running on :3000"
+                ]
+            }
+        },
+        "advanced": {
+            "badge": "给进阶用户",
+            "title": "不只是入门，<br>还有深度实践",
+            "description": "多账号轮换、Token 省钱技巧、Agent 自动化... 这些\"高级玩法\"，官方文档不一定讲。<strong>我们从源码里扒出来</strong>，让你用得更爽。",
+            "tags": [
+                {
+                    "icon": "ph-gear",
+                    "text": "进阶技巧"
+                },
+                {
+                    "icon": "ph-code",
+                    "text": "源码解析"
+                }
+            ],
+            "cta": "省时省钱，效率翻倍"
+        }
+    },
+    "features": {
+        "title": "为什么选择 OpenCodeDocs？",
+        "subtitle": "我们有三个别人没有的东西",
+        "list": [
+            {
+                "icon": "ph-file-code",
+                "color": "brand",
+                "title": "源码验证",
+                "desc": "不是网上抄的，是从代码里推导的"
+            },
+            {
+                "icon": "ph-arrows-clockwise",
+                "color": "emerald",
+                "title": "持续更新",
+                "desc": "工具更新了，教程也会同步"
+            },
+            {
+                "icon": "ph-book-open",
+                "color": "amber",
+                "title": "小白友好",
+                "desc": "零基础也能跟着做，一步步来"
+            }
+        ]
+    },
+    "tutorials": {
+        "title": "选一个开始吧",
+        "subtitle": "每个教程都经过验证，跟着做就能跑通",
+        "list": [
+            {
+                "title": "Antigravity Auth",
+                "desc": "Google OAuth 认证插件，免费使用 Claude 和 Gemini 模型",
+                "link": "/zh/NoeFabris/opencode-antigravity-auth/",
+                "repo": "https://github.com/NoeFabris/opencode-antigravity-auth",
+                "meta": {
+                    "lessons": "33 课时",
+                    "stars": "6.3k",
+                    "difficulty": "入门"
+                }
+            },
+            {
+                "title": "Dynamic Context Pruning",
+                "desc": "自动降低 Token 使用量，智能移除冗余上下文",
+                "link": "/zh/Opencode-DCP/opencode-dynamic-context-pruning/",
+                "repo": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning",
+                "meta": {
+                    "lessons": "22 课时",
+                    "stars": "560",
+                    "difficulty": "进阶"
+                }
+            },
+            {
+                "title": "Plannotator",
+                "desc": "AI 计划与代码评审工具，可视化交互",
+                "link": "/zh/backnotprop/plannotator/",
+                "repo": "https://github.com/backnotprop/plannotator",
+                "meta": {
+                    "lessons": "27 课时",
+                    "stars": "1.4k",
+                    "difficulty": "中级"
+                }
+            },
+            {
+                "title": "Agent Skills",
+                "desc": "技能动态发现与管理，提升 Agent 效率",
+                "link": "/zh/joshuadavidthomas/opencode-agent-skills/",
+                "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills",
+                "meta": {
+                    "lessons": "24 课时",
+                    "stars": "26",
+                    "difficulty": "中级"
+                }
+            },
+            {
+                "title": "Antigravity Manager",
+                "desc": "本地 AI 账号管理与协议反代系统",
+                "link": "/zh/lbjlaq/Antigravity-Manager/",
+                "repo": "https://github.com/lbjlaq/Antigravity-Manager",
+                "meta": {
+                    "lessons": "39 课时",
+                    "stars": "18k",
+                    "difficulty": "高级"
+                }
+            },
+            {
+                "title": "OpenSkills",
+                "desc": "通用技能加载器，兼容 Claude Code 格式",
+                "link": "/zh/numman-ali/openskills/",
+                "repo": "https://github.com/numman-ali/openskills",
+                "meta": {
+                    "lessons": "35 课时",
+                    "stars": "7.1k",
+                    "difficulty": "中级"
+                }
+            },
+            {
+                "title": "Supermemory",
+                "desc": "记忆持久化插件，跨会话跨项目共享记忆",
+                "link": "/zh/supermemoryai/opencode-supermemory/",
+                "repo": "https://github.com/supermemoryai/opencode-supermemory",
+                "meta": {
+                    "lessons": "13 课时",
+                    "stars": "522",
+                    "difficulty": "高级"
+                }
+            },
+            {
+                "title": "MyStatus",
+                "desc": "AI 账号额度一键查询，多平台整合",
+                "link": "/zh/vbgate/opencode-mystatus/",
+                "repo": "https://github.com/vbgate/opencode-mystatus",
+                "meta": {
+                    "lessons": "23 课时",
+                    "stars": "161",
+                    "difficulty": "入门"
+                }
+            },
+            {
+                "title": "OpenCode Markdown Table Formatter",
+                "desc": "专门优化 OpenCode 隐藏模式，确保表格在隐藏 Markdown 符号时依然完美对齐",
+                "link": "/zh/franlol/opencode-md-table-formatter/",
+                "repo": "https://github.com/franlol/opencode-md-table-formatter",
+                "meta": {
+                    "lessons": "14 课时",
+                    "stars": "146",
+                    "difficulty": "入门"
+                }
+            },
+            {
+                "title": "oh-my-opencode",
+                "desc": "多模型 AI 代理编排，让开发团队像真实专家一样工作",
+                "link": "/zh/code-yeongyu/oh-my-opencode/",
+                "repo": "https://github.com/code-yeongyu/oh-my-opencode",
+                "meta": {
+                    "lessons": "26 课时",
+                    "stars": "24.1k",
+                    "difficulty": "高级"
+                }
+            },
+            {
+                "title": "opencode-notify",
+                "desc": "为 OpenCode AI 提供原生桌面通知，支持智能焦点检测、静音时段和点击聚焦",
+                "link": "/zh/kdcokenny/opencode-notify/",
+                "repo": "https://github.com/kdcokenny/opencode-notify",
+                "meta": {
+                    "lessons": "21 课时",
+                    "stars": "--",
+                    "difficulty": "中级"
+                }
+            },
+            {
+                "title": "agent-skills",
+                "desc": "Vercel AI 编码代理技能包，内置 React 性能优化与 Web 设计指南",
+                "link": "/zh/vercel-labs/agent-skills/",
+                "repo": "https://github.com/vercel-labs/agent-skills",
+                "meta": {
+                    "lessons": "14 课时",
+                    "stars": "16.6k",
+                    "difficulty": "中级"
+                }
+            },
+            {
+                "title": "Clawdbot",
+                "desc": "你的私有 AI 助手，随处可用",
+                "link": "/zh/clawdbot/clawdbot/",
+                "repo": "https://github.com/clawdbot/clawdbot",
+                "meta": {
+                    "lessons": "43 课时",
+                    "stars": "--",
+                    "difficulty": "进阶"
+                }
+            }
+        ],
+        "apply_card": {
+            "title": "申请收录你的项目",
+            "steps": [
+                "提交 Issue",
+                "团队审核",
+                "教程上线"
+            ],
+            "repo_text": "Repo",
+            "cta_text": "立即申请",
+            "link": "https://github.com/vbgate/opencodedocs/issues",
+            "repo_link": "https://github.com/vbgate/opencodedocs"
+        }
+    },
+    "cta_section": {
+        "title": "开始你的 AI 之旅",
+        "subtitle": "从第一行代码到生产级应用，我们都有对应的教程",
+        "button_text": "浏览全部教程",
+        "button_link": "#tutorials"
+    },
+    "footer": {
+        "title": "OpenCodeDocs",
+        "copyright": "© 2026 OpenCodeDocs",
+        "links": [
+            {
+                "text": "关于我们",
+                "link": "/zh/about"
+            },
+            {
+                "text": "用户协议",
+                "link": "/zh/terms"
+            },
+            {
+                "text": "隐私条款",
+                "link": "/zh/privacy"
+            },
+            {
+                "text": "加入社群",
+                "link": "/zh/community"
+            },
+            {
+                "icon": "ph-github-logo",
+                "link": "https://github.com/vbgate/opencodedocs"
+            }
+        ]
+    }
+}

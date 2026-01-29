@@ -1,0 +1,294 @@
+{
+    "hero": {
+        "badge": "Учебники проверены, просто следуйте инструкциям",
+        "title_prefix": "Основано на исходном коде",
+        "title_main": "Полный спектр учебников по ИИ",
+        "typewriter_texts": [
+            "От новичка до эксперта",
+            "Каждый шаг работает",
+            "Выучил — сразу используй"
+        ],
+        "description": "Инструменты ИИ развиваются стремительно, официальная документация отстает, онлайн-учебники устаревают—<br class=\"hidden sm:inline\"><strong>Мы собираемся это изменить.</strong>",
+        "primary_action": {
+            "text": "Начать изучение",
+            "link": "#tutorials"
+        },
+        "secondary_action": {
+            "text": "GitHub",
+            "link": "https://github.com/vbgate/opencodedocs"
+        },
+        "chat_demo": {
+            "title": "OpenCodeDocs",
+            "ui": {
+                "online_text": "В сети",
+                "completed_text": "Завершено",
+                "input_placeholder": "Скажите ИИ, что вы хотите сделать..."
+            },
+            "messages": [
+                {
+                    "role": "user",
+                    "text": "Можно ли в OpenCode напрямую узнать остаток средств на OpenAI и Zhipu?"
+                },
+                {
+                    "role": "ai",
+                    "text": "Да. После установки плагина 'MyStatus' введите команду /mystatus для мгновенного просмотра."
+                },
+                {
+                    "role": "user",
+                    "text": "Только вывод в командной строке?"
+                },
+                {
+                    "role": "ai",
+                    "text": "Нет, он предоставляет визуальный индикатор прогресса и обратный отсчет сброса. Поддерживает 5 платформ, включая OpenAI и Copilot, полностью работает локально, защищая конфиденциальность. ✅",
+                    "status": "Проверено",
+                    "meta": "opencode-mystatus"
+                }
+            ]
+        }
+    },
+    "audience": {
+        "title": "Новичок или опытный пользователь,<br class=\"sm:hidden\">всё можно найти",
+        "subtitle": "Система уровней для удовлетворения потребностей на разных этапах",
+        "beginner": {
+            "badge": "Для новичков в ИИ-инструментах",
+            "title": "Не можете установить или настроить?<br>Здесь есть пошаговые учебники",
+            "description": "Установили Claude Code, но не знаете, как использовать? Настроили Cursor и не понимаете? Не волнуйтесь, наши учебники начинаются с \"первого шага\", <strong>каждый этап подробно разъяснен</strong>, просто следуйте инструкциям.",
+            "tags": [
+                {
+                    "icon": "ph-check-circle",
+                    "text": "Пошаговые инструкции"
+                },
+                {
+                    "icon": "ph-terminal-window",
+                    "text": "Основные команды"
+                }
+            ],
+            "cta": "Следуйте инструкциям, всё заработает с первого раза",
+            "terminal": {
+                "panic": [
+                    "> npm install",
+                    "⚠ ERESOLVE unable to resolve...",
+                    "✖ Error: gyrb failed with code 1",
+                    "panic: runtime error..."
+                ],
+                "success": [
+                    "> ./fix-env.sh",
+                    "✔ Dependencies installed",
+                    "✔ Build succeeded (0.2s)",
+                    "✨ App is running on :3000"
+                ]
+            }
+        },
+        "advanced": {
+            "badge": "Для опытных пользователей",
+            "title": "Не только для начинающих,<br>но и для глубокой практики",
+            "description": "Переключение между несколькими аккаунтами, экономия токенов, автоматизация агентов... Эти \"продвинутые методы\" могут быть не описаны в официальной документации. <strong>Мы извлекли их из исходного кода</strong>, чтобы вам было удобнее использовать.",
+            "tags": [
+                {
+                    "icon": "ph-gear",
+                    "text": "Продвинутые методы"
+                },
+                {
+                    "icon": "ph-code",
+                    "text": "Анализ исходного кода"
+                }
+            ],
+            "cta": "Экономия времени и денег, удвоение эффективности"
+        }
+    },
+    "features": {
+        "title": "Почему OpenCodeDocs?",
+        "subtitle": "У нас есть три вещи, которых нет у других",
+        "list": [
+            {
+                "icon": "ph-file-code",
+                "color": "brand",
+                "title": "Проверка исходного кода",
+                "desc": "Не скопировано из интернета, выведено из кода"
+            },
+            {
+                "icon": "ph-arrows-clockwise",
+                "color": "emerald",
+                "title": "Постоянные обновления",
+                "desc": "Обновления инструментов синхронизируются с учебниками"
+            },
+            {
+                "icon": "ph-book-open",
+                "color": "amber",
+                "title": "Дружелюбно для новичков",
+                "desc": "Даже с нулевым опытом можно следовать инструкциям"
+            }
+        ]
+    },
+    "tutorials": {
+        "title": "Выберите и начните",
+        "subtitle": "Каждый учебник проверен, просто следуйте инструкциям",
+        "list": [
+            {
+                "title": "Antigravity Auth",
+                "desc": "Плагин аутентификации Google OAuth, бесплатно используйте модели Claude и Gemini",
+                "link": "/ru/NoeFabris/opencode-antigravity-auth/",
+                "repo": "https://github.com/NoeFabris/opencode-antigravity-auth",
+                "meta": {
+                    "lessons": "33 Уроков",
+                    "stars": "6.2k",
+                    "difficulty": "Начинающий"
+                }
+            },
+            {
+                "title": "Dynamic Context Pruning",
+                "desc": "Автоматическое снижение использования токенов, интеллектуальное удаление избыточного контекста",
+                "link": "/ru/Opencode-DCP/opencode-dynamic-context-pruning/",
+                "repo": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning",
+                "meta": {
+                    "lessons": "22 Уроков",
+                    "stars": "556",
+                    "difficulty": "Продвинутый"
+                }
+            },
+            {
+                "title": "Plannotator",
+                "desc": "Инструмент планирования и код-ревью ИИ с визуальным взаимодействием",
+                "link": "/ru/backnotprop/plannotator/",
+                "repo": "https://github.com/backnotprop/plannotator",
+                "meta": {
+                    "lessons": "27 Уроков",
+                    "stars": "1.4k",
+                    "difficulty": "Средний уровень"
+                }
+            },
+            {
+                "title": "Agent Skills",
+                "desc": "Динамическое обнаружение и управление навыками, повышение эффективности агента",
+                "link": "/ru/joshuadavidthomas/opencode-agent-skills/",
+                "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills",
+                "meta": {
+                    "lessons": "24 Уроков",
+                    "stars": "25",
+                    "difficulty": "Средний уровень"
+                }
+            },
+            {
+                "title": "Antigravity Manager",
+                "desc": "Система управления локальными аккаунтами ИИ и обратного проксирования протоколов",
+                "link": "/ru/lbjlaq/Antigravity-Manager/",
+                "repo": "https://github.com/lbjlaq/Antigravity-Manager",
+                "meta": {
+                    "lessons": "39 Уроков",
+                    "stars": "17.8k",
+                    "difficulty": "Эксперт"
+                }
+            },
+            {
+                "title": "OpenSkills",
+                "desc": "Универсальный загрузчик навыков, совместим с форматом Claude Code",
+                "link": "/ru/numman-ali/openskills/",
+                "repo": "https://github.com/numman-ali/openskills",
+                "meta": {
+                    "lessons": "35 Уроков",
+                    "stars": "7k",
+                    "difficulty": "Средний уровень"
+                }
+            },
+            {
+                "title": "Supermemory",
+                "desc": "Плагин постоянной памяти, совместное использование памяти между сеансами и проектами",
+                "link": "/ru/supermemoryai/opencode-supermemory/",
+                "repo": "https://github.com/supermemoryai/opencode-supermemory",
+                "meta": {
+                    "lessons": "13 Уроков",
+                    "stars": "520",
+                    "difficulty": "Эксперт"
+                }
+            },
+            {
+                "title": "MyStatus",
+                "desc": "Проверка лимитов ИИ-аккаунтов одним кликом, интеграция нескольких платформ",
+                "link": "/ru/vbgate/opencode-mystatus/",
+                "repo": "https://github.com/vbgate/opencode-mystatus",
+                "meta": {
+                    "lessons": "23 Уроков",
+                    "stars": "161",
+                    "difficulty": "Начинающий"
+                }
+            },
+            {
+                "title": "OpenCode Markdown Table Formatter",
+                "desc": "Специально оптимизирован для скрытого режима OpenCode, обеспечивает идеальное выравнивание таблиц при скрытии символов Markdown",
+                "link": "/ru/franlol/opencode-md-table-formatter/",
+                "repo": "https://github.com/franlol/opencode-md-table-formatter",
+                "meta": {
+                    "lessons": "14 Уроков",
+                    "stars": "--",
+                    "difficulty": "Начинающий"
+                }
+            },
+            {
+                "title": "oh-my-opencode",
+                "desc": "Оркестрация мультиконтурных ИИ-агентов, позволяет команде разработки работать как настоящие эксперты",
+                "link": "/ru/code-yeongyu/oh-my-opencode/",
+                "repo": "https://github.com/code-yeongyu/oh-my-opencode",
+                "meta": {
+                    "lessons": "26 Уроков",
+                    "stars": "--",
+                    "difficulty": "Эксперт"
+                }
+            },
+            {
+                "title": "agent-skills",
+                "desc": "Набор навыков для ИИ-агента Vercel, встроенная оптимизация производительности React и руководство по веб-дизайну",
+                "link": "/ru/vercel-labs/agent-skills/",
+                "repo": "https://github.com/vercel-labs/agent-skills",
+                "meta": {
+                    "lessons": "14 Уроков",
+                    "stars": "--",
+                    "difficulty": "Средний уровень"
+                }
+            }
+        ],
+        "apply_card": {
+            "title": "Подать заявку на включение проекта",
+            "steps": [
+                "Отправить Issue",
+                "Проверка командой",
+                "Запуск учебника"
+            ],
+            "repo_text": "Репозиторий",
+            "cta_text": "Подать заявку сейчас",
+            "link": "https://github.com/vbgate/opencodedocs/issues",
+            "repo_link": "https://github.com/vbgate/opencodedocs"
+        }
+    },
+    "cta_section": {
+        "title": "Начните своё путешествие в ИИ",
+        "subtitle": "От первой строки кода до производственных приложений, у нас есть соответствующие учебники",
+        "button_text": "Просмотреть все учебники",
+        "button_link": "#tutorials"
+    },
+    "footer": {
+        "title": "OpenCodeDocs",
+        "copyright": "© 2026 OpenCodeDocs",
+        "links": [
+            {
+                "text": "О нас",
+                "link": "/ru/about"
+            },
+            {
+                "text": "Условия использования",
+                "link": "/ru/terms"
+            },
+            {
+                "text": "Политика конфиденциальности",
+                "link": "/ru/privacy"
+            },
+            {
+                "text": "Присоединиться к сообществу",
+                "link": "/ru/community"
+            },
+            {
+                "icon": "ph-github-logo",
+                "link": "https://github.com/vbgate/opencodedocs"
+            }
+        ]
+    }
+}

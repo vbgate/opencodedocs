@@ -1,0 +1,155 @@
+{
+    "project": {
+        "name": "opencode-dynamic-context-pruning",
+        "tagline": "Intelligent Context Pruning for OpenCode",
+        "description": "Automatically reduces token usage in OpenCode by intelligently removing redundant tool calls from conversation history. Features zero-cost automatic strategies, LLM-driven pruning tools, and real-time statistics.",
+        "github_url": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Quick Start",
+            "link": "/Opencode-DCP/opencode-dynamic-context-pruning/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "Why OpenCode DCP?",
+        "subtitle": "Reduce token costs and improve AI response quality through intelligent context management.",
+        "list": [
+            {
+                "title": "Zero-Cost Automatic Pruning",
+                "desc": "Deduplication, write superseding, and error purging strategies run automatically with zero LLM cost."
+            },
+            {
+                "title": "LLM-Driven Tools",
+                "desc": "AI autonomously invokes discard and extract tools to intelligently clean up completed task content."
+            },
+            {
+                "title": "Real-Time Statistics",
+                "desc": "View token usage distribution and pruning effects through /dcp context and /dcp stats commands."
+            },
+            {
+                "title": "Manual Control",
+                "desc": "Use /dcp sweep command to manually clean up specified number of tool calls when needed."
+            },
+            {
+                "title": "Multi-Level Configuration",
+                "desc": "Global, environment variable, and project-level configuration to flexibly adapt to different needs."
+            },
+            {
+                "title": "Protection Mechanisms",
+                "desc": "Turn protection, protected tools, and file patterns ensure critical content is never accidentally pruned."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Documentation",
+        "subtitle": "6 sections, 14 lessons",
+        "sections": [
+            {
+                "title": "Getting Started",
+                "items": [
+                    {
+                        "title": "Quick Start",
+                        "desc": "Install DCP plugin and see immediate token savings in 5 minutes",
+                        "link": "/Opencode-DCP/opencode-dynamic-context-pruning/start/getting-started/"
+                    },
+                    {
+                        "title": "Configuration",
+                        "desc": "Master multi-level configuration system and customize pruning behavior",
+                        "link": "/Opencode-DCP/opencode-dynamic-context-pruning/start/configuration/"
+                    }
+                ]
+            },
+            {
+                "title": "Core Features",
+                "items": [
+                    {
+                        "title": "Auto-Pruning Strategies",
+                        "desc": "Understand deduplication, write superseding, and error purging strategies",
+                        "link": "/Opencode-DCP/opencode-dynamic-context-pruning/platforms/auto-pruning/"
+                    },
+                    {
+                        "title": "LLM-Driven Tools",
+                        "desc": "Learn how AI uses discard and extract tools for intelligent optimization",
+                        "link": "/Opencode-DCP/opencode-dynamic-context-pruning/platforms/llm-tools/"
+                    },
+                    {
+                        "title": "DCP Commands",
+                        "desc": "Monitor token usage and trigger manual pruning with /dcp commands",
+                        "link": "/Opencode-DCP/opencode-dynamic-context-pruning/platforms/commands/"
+                    }
+                ]
+            },
+            {
+                "title": "Advanced Features",
+                "items": [
+                    {
+                        "title": "Protection Mechanisms",
+                        "desc": "Configure turn protection, protected tools, and file patterns",
+                        "link": "/Opencode-DCP/opencode-dynamic-context-pruning/advanced/protection/"
+                    },
+                    {
+                        "title": "State Persistence",
+                        "desc": "Retain pruning history and statistics across OpenCode sessions",
+                        "link": "/Opencode-DCP/opencode-dynamic-context-pruning/advanced/state-persistence/"
+                    },
+                    {
+                        "title": "Prompt Caching Impact",
+                        "desc": "Balance cache hit rate with token savings for different providers",
+                        "link": "/Opencode-DCP/opencode-dynamic-context-pruning/advanced/prompt-caching/"
+                    },
+                    {
+                        "title": "Subagent Handling",
+                        "desc": "Understand why DCP automatically disables in subagent sessions",
+                        "link": "/Opencode-DCP/opencode-dynamic-context-pruning/advanced/subagent-handling/"
+                    }
+                ]
+            },
+            {
+                "title": "Reference",
+                "items": [
+                    {
+                        "title": "Architecture Overview",
+                        "desc": "Learn DCP's internal design and module interaction patterns",
+                        "link": "/Opencode-DCP/opencode-dynamic-context-pruning/appendix/architecture/"
+                    },
+                    {
+                        "title": "Token Calculation",
+                        "desc": "Understand token calculation strategy and savings statistics",
+                        "link": "/Opencode-DCP/opencode-dynamic-context-pruning/appendix/token-calculation/"
+                    },
+                    {
+                        "title": "API Reference",
+                        "desc": "Complete API documentation for DCP plugin development",
+                        "link": "/Opencode-DCP/opencode-dynamic-context-pruning/appendix/api-reference/"
+                    }
+                ]
+            },
+            {
+                "title": "FAQ",
+                "items": [
+                    {
+                        "title": "Best Practices",
+                        "desc": "Optimize DCP configuration for maximum token savings",
+                        "link": "/Opencode-DCP/opencode-dynamic-context-pruning/faq/best-practices/"
+                    },
+                    {
+                        "title": "Troubleshooting",
+                        "desc": "Resolve common configuration and pruning issues",
+                        "link": "/Opencode-DCP/opencode-dynamic-context-pruning/faq/troubleshooting/"
+                    }
+                ]
+            },
+            {
+                "title": "Changelog",
+                "items": [
+                    {
+                        "title": "Version History",
+                        "desc": "View complete version update records from v1.0.1 to latest",
+                        "link": "/Opencode-DCP/opencode-dynamic-context-pruning/changelog/version-history/"
+                    }
+                ]
+            }
+        ]
+    }
+}

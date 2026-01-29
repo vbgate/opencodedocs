@@ -1,0 +1,110 @@
+{
+    "project": {
+        "name": "opencode-supermemory",
+        "tagline": "为 OpenCode Agent 提供持久化记忆能力",
+        "description": "OpenCode 插件，基于 Supermemory 为编码 Agent 提供持久化记忆能力，实现跨会话、跨项目的上下文保持。支持记忆的存储、检索、删除，会话启动时自动注入上下文，以及基于 Token 使用率的抢占式压缩。",
+        "github_url": "https://github.com/supermemoryai/opencode-supermemory"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "快速开始",
+            "link": "/zh/supermemoryai/opencode-supermemory/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "为什么选择 opencode-supermemory？",
+        "subtitle": "让 Agent 拥有持久记忆，告别每次会话从零开始的困扰。",
+        "list": [
+            {
+                "title": "记忆持久化",
+                "desc": "解决 Agent 会话结束后上下文丢失的问题，重要信息永久保存，下次会话自动恢复。"
+            },
+            {
+                "title": "跨项目复用",
+                "desc": "用户的编码偏好（如「喜欢函数式编程」）可在不同项目中自动生效，无需重复说明。"
+            },
+            {
+                "title": "智能压缩",
+                "desc": "在上下文即将耗尽时，自动总结并保存关键信息，防止「遗忘」，保持会话连贯性。"
+            },
+            {
+                "title": "隐私脱敏",
+                "desc": "支持 <private> 标签自动脱敏，敏感数据不上传云端，保护你的隐私安全。"
+            },
+            {
+                "title": "完整工具集",
+                "desc": "提供 add、search、profile、list、forget 五大工具，通过自然语言即可控制记忆。"
+            },
+            {
+                "title": "自动上下文注入",
+                "desc": "会话开始时自动注入用户画像和项目知识，Agent 立即进入状态，无需预热。"
+            }
+        ]
+    },
+    "docs": {
+        "title": "课程大纲",
+        "subtitle": "共 4 个章节，8 节课程",
+        "sections": [
+            {
+                "title": "入门指南 (Start)",
+                "items": [
+                    {
+                        "title": "快速开始",
+                        "desc": "完成插件安装，配置 API Key，验证基本功能",
+                        "link": "/zh/supermemoryai/opencode-supermemory/start/getting-started/"
+                    },
+                    {
+                        "title": "项目初始化",
+                        "desc": "使用 /supermemory-init 命令让 Agent 深度扫描并记住项目架构",
+                        "link": "/zh/supermemoryai/opencode-supermemory/start/initialization/"
+                    }
+                ]
+            },
+            {
+                "title": "核心功能 (Platforms)",
+                "items": [
+                    {
+                        "title": "自动上下文注入",
+                        "desc": "理解 Agent 如何在会话开始时自动获取用户画像和项目知识",
+                        "link": "/zh/supermemoryai/opencode-supermemory/platforms/context-injection/"
+                    },
+                    {
+                        "title": "工具集详解",
+                        "desc": "掌握 add、search、profile 等工具的使用场景",
+                        "link": "/zh/supermemoryai/opencode-supermemory/platforms/tools/"
+                    },
+                    {
+                        "title": "记忆作用域",
+                        "desc": "理解 User Scope 与 Project Scope 的区别，管理记忆的增删改查",
+                        "link": "/zh/supermemoryai/opencode-supermemory/platforms/memory-management/"
+                    }
+                ]
+            },
+            {
+                "title": "进阶功能 (Advanced)",
+                "items": [
+                    {
+                        "title": "抢占式压缩",
+                        "desc": "深入理解 Token 阈值触发的自动压缩机制，防止上下文溢出",
+                        "link": "/zh/supermemoryai/opencode-supermemory/advanced/compaction/"
+                    },
+                    {
+                        "title": "深度配置",
+                        "desc": "自定义压缩阈值、关键词触发规则和搜索参数",
+                        "link": "/zh/supermemoryai/opencode-supermemory/advanced/configuration/"
+                    }
+                ]
+            },
+            {
+                "title": "常见问题 (FAQ)",
+                "items": [
+                    {
+                        "title": "隐私与安全",
+                        "desc": "了解 <private> 标签脱敏机制，确保敏感数据不上传",
+                        "link": "/zh/supermemoryai/opencode-supermemory/faq/privacy/"
+                    }
+                ]
+            }
+        ]
+    }
+}

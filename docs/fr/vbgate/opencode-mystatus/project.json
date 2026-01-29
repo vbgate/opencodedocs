@@ -1,0 +1,130 @@
+{
+    "project": {
+        "name": "opencode-mystatus",
+        "tagline": "AI 平台额度一键查询",
+        "description": "OpenCode 插件，一键查询 OpenAI、智谱 AI、Z.ai、Google Cloud、GitHub Copilot 等多个 AI 平台的账号额度使用情况。可视化进度条展示剩余额度，实时显示重置时间倒计时。",
+        "github_url": "https://github.com/vbgate/opencode-mystatus"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "快速开始",
+            "link": "/zh/vbgate/opencode-mystatus/start/quick-start/"
+        }
+    },
+    "features": {
+        "title": "为什么选择 opencode-mystatus？",
+        "subtitle": "告别繁琐的多平台登录，一条命令掌握所有 AI 平台额度状态。",
+        "list": [
+            {
+                "title": "多平台整合",
+                "desc": "支持 OpenAI、智谱 AI、Z.ai、Google Cloud、GitHub Copilot 五大平台，无需分别登录查看。"
+            },
+            {
+                "title": "可视化进度条",
+                "desc": "直观的进度条展示剩余额度比例，一眼看清使用情况，合理规划 API 调用。"
+            },
+            {
+                "title": "重置时间倒计时",
+                "desc": "实时显示各平台额度重置时间，帮助你安排开发计划，避免超额使用。"
+            },
+            {
+                "title": "本地安全运行",
+                "desc": "只读本地认证文件，不上传任何数据，API Key 自动脱敏显示，保护你的隐私。"
+            },
+            {
+                "title": "双重使用方式",
+                "desc": "支持 /mystatus 斜杠命令和自然语言提问两种方式，随时随地查询额度。"
+            },
+            {
+                "title": "中英双语支持",
+                "desc": "自动检测系统语言，中英文界面无缝切换，适配全球开发者。"
+            }
+        ]
+    },
+    "docs": {
+        "title": "课程大纲",
+        "subtitle": "共 4 个章节，12 节课程",
+        "sections": [
+            {
+                "title": "入门指南 (Start)",
+                "items": [
+                    {
+                        "title": "快速开始",
+                        "desc": "5 分钟内安装并使用 mystatus 查询额度",
+                        "link": "/zh/vbgate/opencode-mystatus/start/quick-start/"
+                    },
+                    {
+                        "title": "使用 mystatus",
+                        "desc": "掌握斜杠命令和自然语言两种使用方式",
+                        "link": "/zh/vbgate/opencode-mystatus/start/using-mystatus/"
+                    },
+                    {
+                        "title": "解读输出",
+                        "desc": "理解进度条、重置时间、剩余百分比等信息",
+                        "link": "/zh/vbgate/opencode-mystatus/start/understanding-output/"
+                    }
+                ]
+            },
+            {
+                "title": "平台功能 (Platforms)",
+                "items": [
+                    {
+                        "title": "OpenAI 额度查询",
+                        "desc": "查看 3 小时和 24 小时限额使用情况",
+                        "link": "/zh/vbgate/opencode-mystatus/platforms/openai-usage/"
+                    },
+                    {
+                        "title": "智谱 AI / Z.ai 额度查询",
+                        "desc": "查看 5 小时 Token 限额和 MCP 月度配额",
+                        "link": "/zh/vbgate/opencode-mystatus/platforms/zhipu-usage/"
+                    },
+                    {
+                        "title": "GitHub Copilot 额度查询",
+                        "desc": "查看 Premium Requests 使用情况和模型明细",
+                        "link": "/zh/vbgate/opencode-mystatus/platforms/copilot-usage/"
+                    },
+                    {
+                        "title": "Google Cloud 额度查询",
+                        "desc": "查看 G3 Pro/Image/Flash 和 Claude 多个模型额度",
+                        "link": "/zh/vbgate/opencode-mystatus/platforms/google-usage/"
+                    }
+                ]
+            },
+            {
+                "title": "进阶功能 (Advanced)",
+                "items": [
+                    {
+                        "title": "Google Cloud 高级配置",
+                        "desc": "配置多个 Google Cloud 账号，管理模型显示",
+                        "link": "/zh/vbgate/opencode-mystatus/advanced/google-setup/"
+                    },
+                    {
+                        "title": "Copilot 认证配置",
+                        "desc": "OAuth Token 和 Fine-grained PAT 两种认证方式",
+                        "link": "/zh/vbgate/opencode-mystatus/advanced/copilot-auth/"
+                    },
+                    {
+                        "title": "多语言支持",
+                        "desc": "了解语言检测机制，切换中英文界面",
+                        "link": "/zh/vbgate/opencode-mystatus/advanced/i18n-setup/"
+                    }
+                ]
+            },
+            {
+                "title": "常见问题 (FAQ)",
+                "items": [
+                    {
+                        "title": "常见问题排查",
+                        "desc": "解决无法查询额度、Token 过期、权限问题",
+                        "link": "/zh/vbgate/opencode-mystatus/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "安全与隐私",
+                        "desc": "了解本地文件访问、API 脱敏、官方接口调用",
+                        "link": "/zh/vbgate/opencode-mystatus/faq/security/"
+                    }
+                ]
+            }
+        ]
+    }
+}

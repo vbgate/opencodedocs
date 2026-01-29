@@ -1,0 +1,210 @@
+{
+    "project": {
+        "name": "Antigravity-Manager",
+        "tagline": "Sistema de Gestión de Cuentas de IA Local y Proxy Inverso de Protocolos",
+        "description": "Convierte identidades Web/Session/OAuth de múltiples plataformas de IA en un gateway de API unificado, proporcionando capacidades de programación de múltiples cuentas, rotación inteligente, monitoreo de cuotas y compatibilidad multiprotocolo. Aplicación de escritorio basada en Tauri v2 + React + Rust.",
+        "github_url": "https://github.com/lbjlaq/Antigravity-Manager"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Inicio Rápido",
+            "link": "/es/lbjlaq/Antigravity-Manager/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "¿Por qué elegir Antigravity-Manager?",
+        "subtitle": "Tu gateway de programación de IA de alto rendimiento local. No es solo gestión de cuentas, es la solución definitiva para romper las barreras de invocación de API.",
+        "list": [
+            {
+                "title": "Endpoints Compatibles Multiprotocolo",
+                "desc": "Expone endpoints OpenAI /v1/chat/completions, Anthropic /v1/messages, SDK nativo Gemini para reutilizar clientes y SDK existentes."
+            },
+            {
+                "title": "Programación Inteligente de Cuentas",
+                "desc": "Compatible con rotación, cuenta fija, sesión pegajosa y reintento de fallos. Rotación automática en 429/401, desconexión automática en invalid_grant, auto-recuperación a nivel de milisegundos."
+            },
+            {
+                "title": "Adición Mediante Autorización OAuth",
+                "desc": "Compatible con autorización OAuth en navegador y Refresh Token para agregar cuentas en doble canal, importación y exportación por lotes, migración en caliente V1/DB."
+            },
+            {
+                "title": "Gobernanza y Protección de Cuotas",
+                "desc": "Monitoreo en tiempo real de cuotas restantes de cada modelo, compatible con protección de cuotas a nivel de modelo y Smart Warmup para evitar agotamiento inadvertido."
+            },
+            {
+                "title": "Monitoreo y Estadísticas de Tráfico",
+                "desc": "Proxy Monitor registra registros de solicitudes en tiempo real, Token Stats estadiza consumo por hora/día/semana, compatible con análisis por modelo y cuenta."
+            },
+            {
+                "title": "Despliegue Multiplataforma",
+                "desc": "Soporte nativo para escritorio macOS, Windows, Linux. Proporciona soluciones Docker noVNC y Headless Xvbf, adaptado para despliegue NAS/servidores."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Programa del Curso",
+        "subtitle": "4 capítulos, 29 lecciones",
+        "sections": [
+            {
+                "title": "Guía de Inicio (Start)",
+                "items": [
+                    {
+                        "title": "¿Qué son las Herramientas Antigravity?",
+                        "desc": "Construye el modelo mental correcto: gateway local, compatibilidad de protocolos, programación de pool de cuentas",
+                        "link": "/es/lbjlaq/Antigravity-Manager/start/getting-started/"
+                    },
+                    {
+                        "title": "Instalación y Actualización",
+                        "desc": "Mejor ruta de instalación brew/releases, manejo de intercepciones del sistema",
+                        "link": "/es/lbjlaq/Antigravity-Manager/start/installation/"
+                    },
+                    {
+                        "title": "Lo que Debes Saber en el Primer Inicio",
+                        "desc": "Directorio de datos, registros, bandeja y inicio automático",
+                        "link": "/es/lbjlaq/Antigravity-Manager/start/first-run-data/"
+                    },
+                    {
+                        "title": "Agregar Cuentas",
+                        "desc": "Canal doble OAuth/Refresh Token y mejores prácticas",
+                        "link": "/es/lbjlaq/Antigravity-Manager/start/add-account/"
+                    },
+                    {
+                        "title": "Respaldo y Migración de Cuentas",
+                        "desc": "Importación/exportación, migración en caliente V1/DB",
+                        "link": "/es/lbjlaq/Antigravity-Manager/start/backup-migrate/"
+                    },
+                    {
+                        "title": "Iniciar Proxy Inverso y Conectar Cliente",
+                        "desc": "/healthz + configuración SDK, establecer bucle de verificación",
+                        "link": "/es/lbjlaq/Antigravity-Manager/start/proxy-and-first-client/"
+                    }
+                ]
+            },
+            {
+                "title": "Funciones de Plataforma (Platforms)",
+                "items": [
+                    {
+                        "title": "API Compatible con OpenAI",
+                        "desc": "Estrategia de implementación de /v1/chat/completions y /v1/responses",
+                        "link": "/es/lbjlaq/Antigravity-Manager/platforms/openai/"
+                    },
+                    {
+                        "title": "API Compatible con Anthropic",
+                        "desc": "Contratos clave de /v1/messages y Claude Code",
+                        "link": "/es/lbjlaq/Antigravity-Manager/platforms/anthropic/"
+                    },
+                    {
+                        "title": "API Nativa de Gemini",
+                        "desc": "Conexión de endpoints /v1beta/models y SDK de Google",
+                        "link": "/es/lbjlaq/Antigravity-Manager/platforms/gemini/"
+                    },
+                    {
+                        "title": "Generación de Imágenes Imagen 3",
+                        "desc": "Mapeo automático de parámetros size/quality de OpenAI Images",
+                        "link": "/es/lbjlaq/Antigravity-Manager/platforms/imagen/"
+                    },
+                    {
+                        "title": "Transcripción de Audio",
+                        "desc": "Limitaciones de /v1/audio/transcriptions y manejo de payloads grandes",
+                        "link": "/es/lbjlaq/Antigravity-Manager/platforms/audio/"
+                    },
+                    {
+                        "title": "Endpoints MCP",
+                        "desc": "Web Search/Reader/Vision como herramientas invocables",
+                        "link": "/es/lbjlaq/Antigravity-Manager/platforms/mcp/"
+                    },
+                    {
+                        "title": "Túnel Cloudflared",
+                        "desc": "Exponga su API local de manera segura a la red pública",
+                        "link": "/es/lbjlaq/Antigravity-Manager/platforms/cloudflared/"
+                    }
+                ]
+            },
+            {
+                "title": "Funciones Avanzadas (Advanced)",
+                "items": [
+                    {
+                        "title": "Configuración Completa",
+                        "desc": "AppConfig/ProxyConfig, ubicación de persistencia y semántica de actualización en caliente",
+                        "link": "/es/lbjlaq/Antigravity-Manager/advanced/config/"
+                    },
+                    {
+                        "title": "Seguridad y Privacidad",
+                        "desc": "auth_mode, allow_lan_access y línea de base de seguridad",
+                        "link": "/es/lbjlaq/Antigravity-Manager/advanced/security/"
+                    },
+                    {
+                        "title": "Programación de Alta Disponibilidad",
+                        "desc": "Rotación, cuenta fija, sesión pegajosa y reintento de fallos",
+                        "link": "/es/lbjlaq/Antigravity-Manager/advanced/scheduling/"
+                    },
+                    {
+                        "title": "Enrutamiento de Modelos",
+                        "desc": "Mapeo personalizado, prioridad de comodines y estrategias predefinidas",
+                        "link": "/es/lbjlaq/Antigravity-Manager/advanced/model-router/"
+                    },
+                    {
+                        "title": "Gobernanza de Cuotas",
+                        "desc": "Combinación de Quota Protection + Smart Warmup",
+                        "link": "/es/lbjlaq/Antigravity-Manager/advanced/quota/"
+                    },
+                    {
+                        "title": "Proxy Monitor",
+                        "desc": "Registros de solicitudes, filtrado, restauración de detalles y exportación",
+                        "link": "/es/lbjlaq/Antigravity-Manager/advanced/monitoring/"
+                    },
+                    {
+                        "title": "Token Stats",
+                        "desc": "Dimensión de estadísticas basada en costos e interpretación de gráficos",
+                        "link": "/es/lbjlaq/Antigravity-Manager/advanced/token-stats/"
+                    },
+                    {
+                        "title": "Estabilidad de Sesiones Largas",
+                        "desc": "Compresión de contexto, caché de firmas y compresión de resultados de herramientas",
+                        "link": "/es/lbjlaq/Antigravity-Manager/advanced/context-compression/"
+                    },
+                    {
+                        "title": "Capacidades del Sistema",
+                        "desc": "Multi-idioma/temas/actualizaciones/inicio automático/HTTP API Server",
+                        "link": "/es/lbjlaq/Antigravity-Manager/advanced/system/"
+                    },
+                    {
+                        "title": "Despliegue en Servidor",
+                        "desc": "Selección Docker noVNC vs Headless Xvbf y operaciones",
+                        "link": "/es/lbjlaq/Antigravity-Manager/advanced/deployment/"
+                    }
+                ]
+            },
+            {
+                "title": "Preguntas Frecuentes (FAQ)",
+                "items": [
+                    {
+                        "title": "invalid_grant y Cuenta Deshabilitada",
+                        "desc": "Por qué ocurre y cómo recuperarse",
+                        "link": "/es/lbjlaq/Antigravity-Manager/faq/invalid-grant/"
+                    },
+                    {
+                        "title": "401/Fallo de Autenticación",
+                        "desc": "auth_mode, compatibilidad de Header y lista de verificación de configuración de cliente",
+                        "link": "/es/lbjlaq/Antigravity-Manager/faq/auth-401/"
+                    },
+                    {
+                        "title": "429/Error de Capacidad",
+                        "desc": "Expectativas correctas de rotación de cuentas y malentendidos sobre agotamiento de capacidad del modelo",
+                        "link": "/es/lbjlaq/Antigravity-Manager/faq/429-rotation/"
+                    },
+                    {
+                        "title": "404/Ruta Incompatible",
+                        "desc": "Base URL, prefijo /v1 y clientes con rutas superpuestas",
+                        "link": "/es/lbjlaq/Antigravity-Manager/faq/404-base-url/"
+                    },
+                    {
+                        "title": "Interrupción de Flujo/0 Token/Firma Inválida",
+                        "desc": "Mecanismo de auto-recuperación del proxy y ruta de diagnóstico",
+                        "link": "/es/lbjlaq/Antigravity-Manager/faq/streaming-0token/"
+                    }
+                ]
+            }
+        ]
+    }
+}

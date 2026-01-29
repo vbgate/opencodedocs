@@ -1,0 +1,180 @@
+{
+  "project": {
+    "name": "oh-my-opencode",
+    "tagline": "Orquestación de agentes IA multi-modelo, permite que tu equipo de desarrollo trabaje como expertos reales",
+    "description": "No trabajes solo. oh-my-opencode proporciona 10 agentes IA profesionales, 32 ganchos de ciclo de vida y más de 20 herramientas de desarrollo, transformando tu OpenCode en un equipo de desarrollo eficiente.",
+    "github_url": "https://github.com/code-yeongyu/oh-my-opencode"
+  },
+  "hero": {
+    "primary_action": {
+      "text": "Inicio Rápido",
+      "link": "/es/code-yeongyu/oh-my-opencode/start/installation/"
+    }
+  },
+  "features": {
+    "title": "¿Por qué elegir oh-my-opencode?",
+    "subtitle": "Permite que los agentes IA colaboren como un equipo de desarrollo real",
+    "list": [
+      {
+        "title": "🤖 Orquestación Inteligente Multi-Modelo",
+        "desc": "Gestiona de manera unificada más de 10 modelos IA como Claude, GPT, Gemini, Grok, seleccionando automáticamente el modelo óptimo según el tipo de tarea"
+      },
+      {
+        "title": "⚡ Agentes en Segundo Plano Paralelos",
+        "desc": "Permite que múltiples agentes expertos trabajen en paralelo como un equipo real, mejorando significativamente la eficiencia del desarrollo, puedes continuar con otras tareas en la sesión principal"
+      },
+      {
+        "title": "🛠️ Integración Profunda de Cadena de Herramientas",
+        "desc": "Refactorización de código LSP, búsqueda de patrones AST-Grep, extensiones de protocolo MCP, proporciona capacidades de análisis y operación de código a nivel IDE"
+      },
+      {
+        "title": "🚀 Listo para Usar Sin Configuración",
+        "desc": "10 agentes IA profesionales, 32 ganchos de ciclo de vida, sistema Skills integrado, listo para comenzar sin configuración compleja"
+      },
+      {
+        "title": "🎯 Categorías y Skills (v3.0)",
+        "desc": "Combina dinámicamente abstracciones de modelos y conocimientos especializados, crea sub-agentes profesionales de manera flexible, reemplaza implementaciones de agentes codificados"
+      },
+      {
+        "title": "🔄 Totalmente Compatible con Claude Code",
+        "desc": "Compatible sin problemas con las configuraciones de Commands, Skills, Agents, MCPs, Hooks de Claude Code, migración fluida"
+      }
+    ]
+  },
+  "docs": {
+    "title": "Programa del Curso",
+    "subtitle": "6 capítulos, 21 lecciones",
+    "sections": [
+      {
+        "title": "Guía de Inicio (Start)",
+        "items": [
+          {
+            "title": "Instalación y Configuración Rápida",
+            "desc": "Guía a los usuarios a través de la instalación y configuración inicial de oh-my-opencode, incluyendo configuración de Provider y verificación",
+            "link": "/es/code-yeongyu/oh-my-opencode/start/installation/"
+          },
+          {
+            "title": "Conoce a Sisyphus: El Orquestador Principal",
+            "desc": "Presenta las funciones principales y métodos de uso básico del agente Sisyphus, permite a los usuarios comprender el concepto de orquestación de agentes",
+            "link": "/es/code-yeongyu/oh-my-opencode/start/sisyphus-orchestrator/"
+          },
+          {
+            "title": "Modo Ultrawork: Activar Todas las Funciones con un Clic",
+            "desc": "Enseña a los usuarios a usar la palabra clave ultrawork para activar rápidamente todos los agentes profesionales y funciones de tareas paralelas",
+            "link": "/es/code-yeongyu/oh-my-opencode/start/ultrawork-mode/"
+          }
+        ]
+      },
+      {
+        "title": "Funciones de Plataforma (Platforms)",
+        "items": [
+          {
+            "title": "Configuración de Provider: Claude, OpenAI, Gemini",
+            "desc": "Guía detallada para configurar varios tipos de AI Provider, incluyendo Anthropic, OpenAI, Google y GitHub Copilot",
+            "link": "/es/code-yeongyu/oh-my-opencode/platforms/provider-setup/"
+          },
+          {
+            "title": "Estrategia Multi-Modelo: Degradación Automática y Prioridad",
+            "desc": "Explica el mecanismo de prioridad de tres pasos del sistema de resolución de modelos, ayuda a los usuarios a comprender cómo funciona la orquestación multi-modelo",
+            "link": "/es/code-yeongyu/oh-my-opencode/platforms/model-resolution/"
+          }
+        ]
+      },
+      {
+        "title": "Funciones Avanzadas (Advanced)",
+        "items": [
+          {
+            "title": "Equipo de Agentes IA: Introducción a 10 Expertos",
+            "desc": "Presentación completa de las funciones, escenarios de uso y métodos de invocación de los 10 agentes integrados, ayuda a los usuarios a seleccionar el agente adecuado según la tarea",
+            "link": "/es/code-yeongyu/oh-my-opencode/advanced/ai-agents-overview/"
+          },
+          {
+            "title": "Planificación Prometheus: Recolección de Requisitos tipo Entrevista",
+            "desc": "Enseña a los usuarios a usar el agente Prometheus para la planificación de proyectos, define requisitos a través del modo entrevista y genera planes de trabajo",
+            "link": "/es/code-yeongyu/oh-my-opencode/advanced/prometheus-planning/"
+          },
+          {
+            "title": "Tareas Paralelas en Segundo Plano: Trabajar como un Equipo",
+            "desc": "Explica en profundidad el uso del sistema de gestión de agentes en segundo plano, incluyendo control de concurrencia, sondeo de tareas y obtención de resultados",
+            "link": "/es/code-yeongyu/oh-my-opencode/advanced/background-tasks/"
+          },
+          {
+            "title": "LSP y AST-Grep: Herramientas de Refactorización de Código",
+            "desc": "Presenta el uso de herramientas LSP y AST-Grep, muestra capacidades de análisis y operación de código a nivel IDE",
+            "link": "/es/code-yeongyu/oh-my-opencode/advanced/lsp-ast-tools/"
+          },
+          {
+            "title": "Categorías y Skills: Combinación Dinámica de Agentes (v3.0)",
+            "desc": "Enseña a los usuarios a usar el sistema de Categorías y Skills para crear sub-agentes profesionales, implementando combinaciones flexibles de agentes",
+            "link": "/es/code-yeongyu/oh-my-opencode/advanced/categories-skills/"
+          },
+          {
+            "title": "Skills Integrados: Automatización del Navegador y Experto en Git",
+            "desc": "Presentación detallada de los escenarios de uso y mejores prácticas de tres Skills integrados (playwright, frontend-ui-ux, git-master)",
+            "link": "/es/code-yeongyu/oh-my-opencode/advanced/builtin-skills/"
+          },
+          {
+            "title": "Ganchos de Ciclo de Vida: Automatización de Contexto y Control de Calidad",
+            "desc": "Presenta el uso de 32 ganchos de ciclo de vida, ayuda a los usuarios a comprender cómo automatizar la inyección de contexto, recuperación de errores y control de calidad",
+            "link": "/es/code-yeongyu/oh-my-opencode/advanced/lifecycle-hooks/"
+          },
+          {
+            "title": "Comandos de Barra: Flujos de Trabajo Preestablecidos",
+            "desc": "Presenta el uso de 6 comandos de barra integrados, incluyendo /ralph-loop, /refactor, /start-work, etc.",
+            "link": "/es/code-yeongyu/oh-my-opencode/advanced/slash-commands/"
+          },
+          {
+            "title": "Personalización Profunda de Configuración: Gestión de Agentes y Permisos",
+            "desc": "Enseña a los usuarios a personalizar profundamente la configuración de agentes, configuración de permisos, anulación de modelos y modificación de prompts",
+            "link": "/es/code-yeongyu/oh-my-opencode/advanced/advanced-configuration/"
+          }
+        ]
+      },
+      {
+        "title": "Preguntas Frecuentes (FAQ)",
+        "items": [
+          {
+            "title": "Diagnóstico de Configuración y Solución de Problemas",
+            "desc": "Proporciona métodos de diagnóstico y soluciones para problemas comunes de configuración, ayuda a los usuarios a solucionar problemas rápidamente",
+            "link": "/es/code-yeongyu/oh-my-opencode/faq/troubleshooting/"
+          },
+          {
+            "title": "Respuestas a Preguntas Frecuentes",
+            "desc": "Recopila y responde las preguntas más comunes de los usuarios, incluyendo instalación, configuración, uso y otros aspectos",
+            "link": "/es/code-yeongyu/oh-my-opencode/faq/faq/"
+          }
+        ]
+      },
+      {
+        "title": "Apéndice (Appendix)",
+        "items": [
+          {
+            "title": "Compatibilidad con Claude Code",
+            "desc": "Explica en detalle el soporte de compatibilidad de oh-my-opencode con Claude Code, incluyendo la compatibilidad de Commands, Skills, Agents, MCPs, Hooks",
+            "link": "/es/code-yeongyu/oh-my-opencode/appendix/claude-code-compatibility/"
+          },
+          {
+            "title": "Referencia de Configuración",
+            "desc": "Proporciona una referencia completa del schema del archivo de configuración, incluyendo todos los campos, tipos y valores predeterminados",
+            "link": "/es/code-yeongyu/oh-my-opencode/appendix/configuration-reference/"
+          },
+          {
+            "title": "Servidores MCP Integrados",
+            "desc": "Presenta las funciones y métodos de uso de 3 servidores MCP integrados (Exa Websearch, Context7, Grep.app)",
+            "link": "/es/code-yeongyu/oh-my-opencode/appendix/builtin-mcps/"
+          }
+        ]
+      },
+      {
+        "title": "Registro de Cambios (Changelog)",
+        "items": [
+          {
+            "title": "Novedades v3.0: Sistema de Categorías y Skills",
+            "desc": "Presenta el sistema de Categorías y Skills agregado en la versión v3.0, así como mejoras importantes de funcionalidad",
+            "link": "/es/code-yeongyu/oh-my-opencode/changelog/v3.0-features/"
+          }
+        ]
+      }
+    ]
+  }
+}

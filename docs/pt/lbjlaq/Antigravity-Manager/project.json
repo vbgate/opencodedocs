@@ -1,0 +1,210 @@
+{
+    "project": {
+        "name": "Antigravity-Manager",
+        "tagline": "本地 AI 账号管理与协议反代系统",
+        "description": "将多家 AI 平台的 Web/Session/OAuth 身份转化为统一的 API 网关，提供多账号调度、智能轮换、配额监控与多协议兼容能力。基于 Tauri v2 + React + Rust 构建的桌面应用。",
+        "github_url": "https://github.com/lbjlaq/Antigravity-Manager"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "快速开始",
+            "link": "/zh/lbjlaq/Antigravity-Manager/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "为什么选择 Antigravity-Manager？",
+        "subtitle": "你的本地高性能 AI 调度网关。不只是账号管理，更是打破 API 调用壁垒的终极方案。",
+        "list": [
+            {
+                "title": "多协议兼容端点",
+                "desc": "对外暴露 OpenAI /v1/chat/completions、Anthropic /v1/messages、Gemini 原生 SDK 端点，复用现有客户端与 SDK。"
+            },
+            {
+                "title": "智能账号调度",
+                "desc": "支持轮换、固定账号、粘性会话与失败重试。遇到 429/401 自动轮换，invalid_grant 自动下线，毫秒级自愈。"
+            },
+            {
+                "title": "OAuth 授权添加",
+                "desc": "支持浏览器 OAuth 授权与 Refresh Token 双通道添加账号，批量导入导出，V1/DB 热迁移。"
+            },
+            {
+                "title": "配额治理与保护",
+                "desc": "实时监控各模型剩余配额，支持模型级配额保护与 Smart Warmup，避免无感耗尽。"
+            },
+            {
+                "title": "流量监控与统计",
+                "desc": "Proxy Monitor 实时记录请求日志，Token Stats 按小时/日/周维度统计消耗，支持按模型与账号分析。"
+            },
+            {
+                "title": "跨平台部署",
+                "desc": "原生支持 macOS、Windows、Linux 桌面端。提供 Docker noVNC 与 Headless Xvfb 方案，适配 NAS/服务器部署。"
+            }
+        ]
+    },
+    "docs": {
+        "title": "课程大纲",
+        "subtitle": "共 4 个章节，29 节课程",
+        "sections": [
+            {
+                "title": "入门指南 (Start)",
+                "items": [
+                    {
+                        "title": "Antigravity Tools 是什么",
+                        "desc": "建立正确心智模型：本地网关、协议兼容、账号池调度",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/start/getting-started/"
+                    },
+                    {
+                        "title": "安装与升级",
+                        "desc": "brew / releases 最佳安装路径，系统拦截处理",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/start/installation/"
+                    },
+                    {
+                        "title": "首次启动必懂",
+                        "desc": "数据目录、日志、托盘与自动启动",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/start/first-run-data/"
+                    },
+                    {
+                        "title": "添加账号",
+                        "desc": "OAuth/Refresh Token 双通道与最佳实践",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/start/add-account/"
+                    },
+                    {
+                        "title": "账号备份与迁移",
+                        "desc": "导入/导出、V1/DB 热迁移",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/start/backup-migrate/"
+                    },
+                    {
+                        "title": "启动反代并接入客户端",
+                        "desc": "/healthz + SDK 配置，建立验证闭环",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/start/proxy-and-first-client/"
+                    }
+                ]
+            },
+            {
+                "title": "平台功能 (Platforms)",
+                "items": [
+                    {
+                        "title": "OpenAI 兼容 API",
+                        "desc": "/v1/chat/completions 与 /v1/responses 的落地策略",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/platforms/openai/"
+                    },
+                    {
+                        "title": "Anthropic 兼容 API",
+                        "desc": "/v1/messages 与 Claude Code 的关键契约",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/platforms/anthropic/"
+                    },
+                    {
+                        "title": "Gemini 原生 API",
+                        "desc": "/v1beta/models 以及 Google SDK 端点接入",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/platforms/gemini/"
+                    },
+                    {
+                        "title": "Imagen 3 图片生成",
+                        "desc": "OpenAI Images 参数 size/quality 的自动映射",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/platforms/imagen/"
+                    },
+                    {
+                        "title": "音频转录",
+                        "desc": "/v1/audio/transcriptions 的限制与大包体处理",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/platforms/audio/"
+                    },
+                    {
+                        "title": "MCP 端点",
+                        "desc": "Web Search/Reader/Vision 作为可调用工具",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/platforms/mcp/"
+                    },
+                    {
+                        "title": "Cloudflared 隧道",
+                        "desc": "把本地 API 安全暴露到公网",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/platforms/cloudflared/"
+                    }
+                ]
+            },
+            {
+                "title": "进阶功能 (Advanced)",
+                "items": [
+                    {
+                        "title": "配置全解",
+                        "desc": "AppConfig/ProxyConfig、落盘位置与热更新语义",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/advanced/config/"
+                    },
+                    {
+                        "title": "安全与隐私",
+                        "desc": "auth_mode、allow_lan_access 与安全基线",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/advanced/security/"
+                    },
+                    {
+                        "title": "高可用调度",
+                        "desc": "轮换、固定账号、粘性会话与失败重试",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/advanced/scheduling/"
+                    },
+                    {
+                        "title": "模型路由",
+                        "desc": "自定义映射、通配符优先级与预设策略",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/advanced/model-router/"
+                    },
+                    {
+                        "title": "配额治理",
+                        "desc": "Quota Protection + Smart Warmup 组合打法",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/advanced/quota/"
+                    },
+                    {
+                        "title": "Proxy Monitor",
+                        "desc": "请求日志、筛选、详情还原与导出",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/advanced/monitoring/"
+                    },
+                    {
+                        "title": "Token Stats",
+                        "desc": "成本视角的统计口径与图表解读",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/advanced/token-stats/"
+                    },
+                    {
+                        "title": "长会话稳定性",
+                        "desc": "上下文压缩、签名缓存与工具结果压缩",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/advanced/context-compression/"
+                    },
+                    {
+                        "title": "系统能力",
+                        "desc": "多语言/主题/更新/开机自启/HTTP API Server",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/advanced/system/"
+                    },
+                    {
+                        "title": "服务器部署",
+                        "desc": "Docker noVNC vs Headless Xvfb 选型与运维",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/advanced/deployment/"
+                    }
+                ]
+            },
+            {
+                "title": "常见问题 (FAQ)",
+                "items": [
+                    {
+                        "title": "invalid_grant 与账号禁用",
+                        "desc": "为什么会发生、如何恢复",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/faq/invalid-grant/"
+                    },
+                    {
+                        "title": "401/鉴权失败",
+                        "desc": "auth_mode、Header 兼容与客户端配置清单",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/faq/auth-401/"
+                    },
+                    {
+                        "title": "429/容量错误",
+                        "desc": "账号轮换的正确预期与模型容量耗尽误区",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/faq/429-rotation/"
+                    },
+                    {
+                        "title": "404/路径不兼容",
+                        "desc": "Base URL、/v1 前缀与叠路径客户端",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/faq/404-base-url/"
+                    },
+                    {
+                        "title": "流式中断/0 Token/签名失效",
+                        "desc": "代理的自愈机制与排查路径",
+                        "link": "/zh/lbjlaq/Antigravity-Manager/faq/streaming-0token/"
+                    }
+                ]
+            }
+        ]
+    }
+}

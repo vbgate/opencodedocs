@@ -1,0 +1,150 @@
+{
+    "project": {
+        "name": "plannotator",
+        "tagline": "AI 计划与代码评审工具",
+        "description": "为 Claude Code 和 OpenCode 提供交互式计划评审和代码评审工具，支持可视化注释、团队协作、URL 分享和第三方笔记应用集成。本地运行，数据安全，无需服务器即可分享评审内容。",
+        "github_url": "https://github.com/backnotprop/plannotator"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "快速开始",
+            "link": "/zh/backnotprop/plannotator/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "为什么选择 Plannotator？",
+        "subtitle": "可视化评审 AI 生成的计划和代码，精确反馈，团队协作。",
+        "list": [
+            {
+                "title": "可视化计划评审",
+                "desc": "在浏览器中查看 AI 生成的计划，用删除、替换、插入、评论注释精确反馈。"
+            },
+            {
+                "title": "代码审查可视化",
+                "desc": "Git diff side-by-side 或 unified 视图，支持行级注释和代码建议。"
+            },
+            {
+                "title": "多平台支持",
+                "desc": "支持 Claude Code 和 OpenCode，无缝融入现有开发工作流。"
+            },
+            {
+                "title": "URL 无后端分享",
+                "desc": "压缩到 URL hash 中，无需服务器即可分享评审内容给团队成员。"
+            },
+            {
+                "title": "图像标注工具",
+                "desc": "附加图像并使用画笔、箭头、圆形工具进行标注，增强反馈表达。"
+            },
+            {
+                "title": "第三方笔记集成",
+                "desc": "批准的计划自动保存到 Obsidian 或 Bear，包含 frontmatter 和标签。"
+            }
+        ]
+    },
+    "docs": {
+        "title": "课程大纲",
+        "subtitle": "4 个章节，17 节课程",
+        "sections": [
+            {
+                "title": "快速入门",
+                "items": [
+                    {
+                        "title": "快速开始",
+                        "desc": "了解 Plannotator 是什么，5 分钟内完成首次使用",
+                        "link": "/zh/backnotprop/plannotator/start/getting-started/"
+                    },
+                    {
+                        "title": "安装 Claude Code 插件",
+                        "desc": "在 Claude Code 中安装并配置 Plannotator 插件",
+                        "link": "/zh/backnotprop/plannotator/start/installation-claude-code/"
+                    },
+                    {
+                        "title": "安装 OpenCode 插件",
+                        "desc": "在 OpenCode 中安装并配置 Plannotator 插件",
+                        "link": "/zh/backnotprop/plannotator/start/installation-opencode/"
+                    }
+                ]
+            },
+            {
+                "title": "核心功能",
+                "items": [
+                    {
+                        "title": "计划评审基础",
+                        "desc": "可视化评审 AI 生成的计划，批准或拒绝",
+                        "link": "/zh/backnotprop/plannotator/platforms/plan-review-basics/"
+                    },
+                    {
+                        "title": "添加计划注释",
+                        "desc": "添加删除、替换、插入、评论等不同类型注释",
+                        "link": "/zh/backnotprop/plannotator/platforms/plan-review-annotations/"
+                    },
+                    {
+                        "title": "添加图像标注",
+                        "desc": "附加图像并使用画笔、箭头、圆形工具标注",
+                        "link": "/zh/backnotprop/plannotator/platforms/plan-review-images/"
+                    },
+                    {
+                        "title": "代码评审基础",
+                        "desc": "使用 /plannotator-review 评审 git diff",
+                        "link": "/zh/backnotprop/plannotator/platforms/code-review-basics/"
+                    },
+                    {
+                        "title": "添加代码注释",
+                        "desc": "添加行级注释（comment/suggestion/concern）",
+                        "link": "/zh/backnotprop/plannotator/platforms/code-review-annotations/"
+                    },
+                    {
+                        "title": "切换 Diff 视图",
+                        "desc": "切换 uncommitted/staged/last commit/branch 等 diff 类型",
+                        "link": "/zh/backnotprop/plannotator/platforms/code-review-diff-types/"
+                    }
+                ]
+            },
+            {
+                "title": "高级功能",
+                "items": [
+                    {
+                        "title": "URL 分享",
+                        "desc": "通过 URL 分享计划和注释，无后端团队协作",
+                        "link": "/zh/backnotprop/plannotator/advanced/url-sharing/"
+                    },
+                    {
+                        "title": "Obsidian 集成",
+                        "desc": "将批准的计划自动保存到 Obsidian vault",
+                        "link": "/zh/backnotprop/plannotator/advanced/obsidian-integration/"
+                    },
+                    {
+                        "title": "Bear 集成",
+                        "desc": "通过 x-callback-url 将计划保存到 Bear",
+                        "link": "/zh/backnotprop/plannotator/advanced/bear-integration/"
+                    },
+                    {
+                        "title": "远程/Devcontainer 模式",
+                        "desc": "在 SSH、devcontainer、WSL 中使用 Plannotator",
+                        "link": "/zh/backnotprop/plannotator/advanced/remote-mode/"
+                    },
+                    {
+                        "title": "环境变量配置",
+                        "desc": "了解所有可用的环境变量及其用途",
+                        "link": "/zh/backnotprop/plannotator/advanced/environment-variables/"
+                    }
+                ]
+            },
+            {
+                "title": "常见问题",
+                "items": [
+                    {
+                        "title": "常见问题",
+                        "desc": "端口占用、浏览器未打开、计划未显示等问题",
+                        "link": "/zh/backnotprop/plannotator/faq/common-problems/"
+                    },
+                    {
+                        "title": "故障排查",
+                        "desc": "日志查看、错误处理和调试技巧",
+                        "link": "/zh/backnotprop/plannotator/faq/troubleshooting/"
+                    }
+                ]
+            }
+        ]
+    }
+}

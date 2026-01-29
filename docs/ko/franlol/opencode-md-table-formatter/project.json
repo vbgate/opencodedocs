@@ -1,0 +1,103 @@
+{
+    "project": {
+        "name": "opencode-md-table-formatter",
+        "tagline": "AI 표 자동 정렬",
+        "description": "OpenCode 플러그인, AI가 생성한 Markdown 표를 자동으로 포맷합니다. 콘텐츠 너비를 지능적으로 인식하고, 굵게, 기울임꼴, 코드 블록 등의 형식을 지원하여 표를 항상 깔끔하고 아름답게 만듭니다.",
+        "github_url": "https://github.com/franlol/opencode-md-table-formatter"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "튜토리얼 보기",
+            "link": "/ko/franlol/opencode-md-table-formatter/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "핵심 기능",
+        "subtitle": "Markdown 구문 자동 인식, 표시 너비 지능적 계산",
+        "list": [
+            {
+                "title": "Markdown 형식 지능적 인식",
+                "desc": "굵게, 기울임꼴, 코드 블록 등 형식의 표시 너비를 정확하게 계산하여 표가 항상 완벽하게 정렬되도록 합니다"
+            },
+            {
+                "title": "AI 생성 후 자동 포맷",
+                "desc": "experimental.text.complete 훅을 통해 자동으로 트리거되며, AI가 텍스트를 생성한 후 수동 작업 없이 즉시 포맷됩니다"
+            },
+            {
+                "title": "코드 블록 지능적 보호",
+                "desc": "인라인 코드 블록 내의 Markdown 기호가 잘못 제거되지 않도록 보호하여 코드 내 구문이 원래대로 유지되도록 합니다"
+            },
+            {
+                "title": "세 가지 정렬 방식 지원",
+                "desc": "왼쪽 정렬(:---), 가운데 정렬(:---:), 오른쪽 정렬(---:) 세 가지 형식을 지원합니다"
+            },
+            {
+                "title": "중첩 Markdown 처리",
+                "desc": "다중 정규 표현식 알고리즘을 사용하여 굵게, 기울임꼴, 취소선 등 중첩된 Markdown 구문을 처리합니다"
+            },
+            {
+                "title": "경계 상황 호환성",
+                "desc": "이모지, 유니코드 문자, 빈 셀, 긴 콘텐츠 등 경계 상황을 올바르게 처리합니다"
+            },
+            {
+                "title": "조용한 실행",
+                "desc": "콘솔 로그 출력이 없으며, 오류가 워크플로우를 중단하지 않고 조용하게 포맷을 완료합니다"
+            },
+            {
+                "title": "검증 피드백",
+                "desc": "유효하지 않은 표에 친절한 오류 주석을 추가하여 사용자가 문제를 빠르게 찾을 수 있도록 도와줍니다"
+            }
+        ]
+    },
+    "docs": {
+        "title": "강의 개요",
+        "subtitle": "총 3개 챕터, 6개 강의",
+        "sections": [
+            {
+                "title": "빠른 시작 (Start)",
+                "items": [
+                    {
+                        "title": "1분 만에 시작: 설치 및 설정",
+                        "desc": "플러그인 설치 및 설정을 빠르게 완료하고 첫 번째 포맷 효과를 확인하세요",
+                        "link": "/ko/franlol/opencode-md-table-formatter/start/getting-started/"
+                    },
+                    {
+                        "title": "기능 전체 보기: 자동 포맷의 마법",
+                        "desc": "플러그인의 8가지 핵심 기능을 완전히 이해하고, 무엇을 할 수 있는지 무엇을 할 수 없는지 파악하세요",
+                        "link": "/ko/franlol/opencode-md-table-formatter/start/features/"
+                    }
+                ]
+            },
+            {
+                "title": "고급 기능 (Advanced)",
+                "items": [
+                    {
+                        "title": "숨김 모드 원리: 너비 계산이 왜 중요한가",
+                        "desc": "OpenCode 숨김 모드의 작동 원리를 이해하고 플러그인의 너비 계산 알고리즘을 학습하세요",
+                        "link": "/ko/franlol/opencode-md-table-formatter/advanced/concealment-mode/"
+                    },
+                    {
+                        "title": "표 규격: 어떤 표가 포맷될 수 있는가",
+                        "desc": "유효한 Markdown 표의 구조 요구 사항을 마스터하여 유효하지 않은 표 오류를 방지하세요",
+                        "link": "/ko/franlol/opencode-md-table-formatter/advanced/table-spec/"
+                    },
+                    {
+                        "title": "정렬 방식 상세: 왼쪽, 가운데, 오른쪽 정렬",
+                        "desc": "세 가지 정렬 방식의 구문과 효과를 마스터하여 표를 더 아름답게 만드세요",
+                        "link": "/ko/franlol/opencode-md-table-formatter/advanced/alignment/"
+                    }
+                ]
+            },
+            {
+                "title": "자주 묻는 질문 (FAQ)",
+                "items": [
+                    {
+                        "title": "자주 묻는 질문: 표가 포맷되지 않으면 어떻게 하나요",
+                        "desc": "설정 오류, 유효하지 않은 표 구조 등 일반적인 문제를 빠르게 찾고 해결하세요",
+                        "link": "/ko/franlol/opencode-md-table-formatter/faq/troubleshooting/"
+                    }
+                ]
+            }
+        ]
+    }
+}

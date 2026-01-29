@@ -1,0 +1,268 @@
+{
+    "hero": {
+        "badge": "Verified Tutorials • Production Ready",
+        "title_prefix": "Code-Driven",
+        "title_main": "Master the AI Stack",
+        "typewriter_texts": [
+            "From Zero to Hero",
+            "100% Verifiable",
+            "Learn It, Use It"
+        ],
+        "description": "AI tools iterate rapidly, docs lag behind, and tutorials are outdated—<br class=\"hidden sm:inline\"><strong>We are here to change that.</strong>",
+        "primary_action": {
+            "text": "Start Learning",
+            "link": "#tutorials"
+        },
+        "secondary_action": {
+            "text": "GitHub",
+            "link": "https://github.com/vbgate/opencodedocs"
+        },
+        "chat_demo": {
+            "title": "OpenCodeDocs",
+            "ui": {
+                "online_text": "Online",
+                "completed_text": "Completed",
+                "input_placeholder": "Tell AI what to do..."
+            },
+            "messages": [
+                {
+                    "role": "user",
+                    "text": "Can I check my OpenAI & Z.ai quotas directly in OpenCode?"
+                },
+                {
+                    "role": "ai",
+                    "text": "Yes. Install the 'MyStatus' plugin and use the slash command /mystatus."
+                },
+                {
+                    "role": "user",
+                    "text": "Does it show details?"
+                },
+                {
+                    "role": "ai",
+                    "text": "It shows visual progress bars and reset countdowns for 5+ platforms. Runs 100% locally for privacy. ✅",
+                    "status": "Verified",
+                    "meta": "opencode-mystatus"
+                }
+            ]
+        }
+    },
+    "audience": {
+        "title": "For Every Stage of<br class=\"sm:hidden\">Your Journey",
+        "subtitle": "Curated paths for beginners and power users",
+        "beginner": {
+            "badge": "Beginners",
+            "title": "Stuck on Configs?<br>We Fix That.",
+            "description": "Skip the trial and error. Our guides simplify complex setups (Claude Code, Cursor) into <strong class=\"text-neutral-900 dark:text-white\">clear, executable steps</strong>.",
+            "tags": [
+                {
+                    "icon": "ph-check-circle",
+                    "text": "Step-by-Step"
+                },
+                {
+                    "icon": "ph-terminal-window",
+                    "text": "Copy-Paste Commands"
+                }
+            ],
+            "cta": "Get Started Fast",
+            "terminal": {
+                "panic": [
+                    "> npm install",
+                    "⚠ ERESOLVE unable to resolve...",
+                    "✖ Error: gyrb failed with code 1",
+                    "panic: runtime error..."
+                ],
+                "success": [
+                    "> ./fix-env.sh",
+                    "✔ Dependencies installed",
+                    "✔ Build succeeded (0.2s)",
+                    "✨ App is running on :3000"
+                ]
+            }
+        },
+        "advanced": {
+            "badge": "Power Users",
+            "title": "Unlock <br>Hidden Features",
+            "description": "Token optimization, Agent orchestration, and Context pruning. We <strong class=\"text-neutral-900 dark:text-white\">reverse-engineered the source code</strong> to find the tricks that official docs miss.",
+            "tags": [
+                {
+                    "icon": "ph-gear",
+                    "text": "Pro Workflows"
+                },
+                {
+                    "icon": "ph-code",
+                    "text": "Source Insights"
+                }
+            ],
+            "cta": "Maximize Efficiency"
+        }
+    },
+    "features": {
+        "title": "Why OpenCodeDocs?",
+        "subtitle": "The Developer's Edge",
+        "list": [
+            {
+                "icon": "ph-file-code",
+                "color": "brand",
+                "title": "Code-Verified",
+                "desc": "Insights derived from source analysis, not generic web content."
+            },
+            {
+                "icon": "ph-arrows-clockwise",
+                "color": "emerald",
+                "title": "Always Fresh",
+                "desc": "Synced with the latest tool updates and API changes."
+            },
+            {
+                "icon": "ph-book-open",
+                "color": "amber",
+                "title": "Zero to One",
+                "desc": "No prior experience needed. Just follow the code."
+            }
+        ]
+    },
+    "tutorials": {
+        "title": "Featured Tutorials",
+        "subtitle": "Battle-tested guides that actually work",
+        "list": [
+            {
+                "title": "Antigravity Auth",
+                "desc": "Google OAuth plugin. Use Claude and Gemini models for free.",
+                "link": "/NoeFabris/opencode-antigravity-auth/",
+                "repo": "https://github.com/NoeFabris/opencode-antigravity-auth",
+                "meta": {
+                    "lessons": "33 Lessons",
+                    "stars": "6.3k",
+                    "difficulty": "Beginner"
+                }
+            },
+            {
+                "title": "Dynamic Context Pruning",
+                "desc": "Slash token costs by intelligently removing redundant context.",
+                "link": "/Opencode-DCP/opencode-dynamic-context-pruning/",
+                "repo": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning",
+                "meta": {
+                    "lessons": "22 Lessons",
+                    "stars": "560",
+                    "difficulty": "Advanced"
+                }
+            },
+            {
+                "title": "Plannotator",
+                "desc": "Visual AI planning and code review tool.",
+                "link": "/backnotprop/plannotator/",
+                "repo": "https://github.com/backnotprop/plannotator",
+                "meta": {
+                    "lessons": "27 Lessons",
+                    "stars": "1.4k",
+                    "difficulty": "Intermediate"
+                }
+            },
+            {
+                "title": "Oh My OpenCode",
+                "desc": "Multi-model collaborative AI coding assistant.",
+                "link": "/code-yeongyu/oh-my-opencode/",
+                "repo": "https://github.com/code-yeongyu/oh-my-opencode",
+                "meta": {
+                    "lessons": "38 Lessons",
+                    "stars": "24.1k",
+                    "difficulty": "Advanced"
+                }
+            },
+            {
+                "title": "Agent Skills",
+                "desc": "Dynamic skill discovery and management for efficient Agents.",
+                "link": "/joshuadavidthomas/opencode-agent-skills/",
+                "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills",
+                "meta": {
+                    "lessons": "24 Lessons",
+                    "stars": "26",
+                    "difficulty": "Intermediate"
+                }
+            },
+            {
+                "title": "Antigravity Manager",
+                "desc": "Local AI account management and protocol reverse proxy.",
+                "link": "/lbjlaq/Antigravity-Manager/",
+                "repo": "https://github.com/lbjlaq/Antigravity-Manager",
+                "meta": {
+                    "lessons": "39 Lessons",
+                    "stars": "18k",
+                    "difficulty": "Expert"
+                }
+            },
+            {
+                "title": "OpenSkills",
+                "desc": "Universal skill loader, compatible with Claude Code format.",
+                "link": "/numman-ali/openskills/",
+                "repo": "https://github.com/numman-ali/openskills",
+                "meta": {
+                    "lessons": "35 Lessons",
+                    "stars": "7.1k",
+                    "difficulty": "Intermediate"
+                }
+            },
+            {
+                "title": "Supermemory",
+                "desc": "Cross-session, cross-project memory persistence plugin.",
+                "link": "/supermemoryai/opencode-supermemory/",
+                "repo": "https://github.com/supermemoryai/opencode-supermemory",
+                "meta": {
+                    "lessons": "13 Lessons",
+                    "stars": "522",
+                    "difficulty": "Expert"
+                }
+            },
+            {
+                "title": "MyStatus",
+                "desc": "One-click AI account quota query and aggregation.",
+                "link": "/vbgate/opencode-mystatus/",
+                "repo": "https://github.com/vbgate/opencode-mystatus",
+                "meta": {
+                    "lessons": "23 Lessons",
+                    "stars": "161",
+                    "difficulty": "Beginner"
+                }
+            }
+        ],
+        "apply_card": {
+            "title": "Submit Your Project",
+            "steps": [
+                "Open Issue",
+                "Review",
+                "Publish"
+            ],
+            "repo_text": "Repo",
+            "cta_text": "Apply Now",
+            "link": "https://github.com/vbgate/opencodedocs/issues",
+            "repo_link": "https://github.com/vbgate/opencodedocs"
+        }
+    },
+    "cta_section": {
+        "title": "Start Your AI Journey",
+        "subtitle": "From your first line of code to production-grade apps, we have you covered.",
+        "button_text": "Browse All Tutorials",
+        "button_link": "#tutorials"
+    },
+    "footer": {
+        "title": "OpenCodeDocs",
+        "copyright": "© 2026 OpenCodeDocs",
+        "links": [
+            {
+                "text": "About",
+                "link": "/about"
+            },
+            {
+                "text": "Terms",
+                "link": "/terms"
+            },
+            {
+                "text": "Privacy",
+                "link": "/privacy"
+            },
+            {
+                "icon": "ph-github-logo",
+                "link": "https://github.com/vbgate/opencodedocs"
+            }
+        ]
+    }
+}

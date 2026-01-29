@@ -1,0 +1,103 @@
+{
+    "project": {
+        "name": "opencode-md-table-formatter",
+        "tagline": "Alinhamento Automático de Tabelas com IA",
+        "description": "Plugin OpenCode que formata automaticamente tabelas Markdown geradas por IA. Identifica inteligentemente a largura do conteúdo, suporta formatos como negrito, itálico, blocos de código e muito mais, mantendo as tabelas sempre organizadas e bonitas.",
+        "github_url": "https://github.com/franlol/opencode-md-table-formatter"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Ver Tutorial",
+            "link": "/pt/franlol/opencode-md-table-formatter/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "Funcionalidades Principais",
+        "subtitle": "Identifica automaticamente a sintaxe Markdown e calcula inteligentemente a largura de exibição",
+        "list": [
+            {
+                "title": "Identificação Inteligente de Formatos Markdown",
+                "desc": "Calcula corretamente a largura de exibição de formatos como negrito, itálico, blocos de código e muito mais, garantindo que as tabelas estejam sempre perfeitamente alinhadas"
+            },
+            {
+                "title": "Formatação Automática Após Geração por IA",
+                "desc": "Acionado automaticamente pelo hook experimental.text.complete, formata as tabelas após a IA gerar o texto sem necessidade de operação manual"
+            },
+            {
+                "title": "Proteção Inteligente de Blocos de Código",
+                "desc": "Protege os símbolos Markdown dentro de blocos de código em linha de serem removidos incorretamente, garantindo que a sintaxe dentro do código permaneça inalterada"
+            },
+            {
+                "title": "Suporte a Três Tipos de Alinhamento",
+                "desc": "Suporta três formatos: alinhamento à esquerda (:---), alinhamento ao centro (:---:) e alinhamento à direita (---:)"
+            },
+            {
+                "title": "Processamento de Markdown Aninhado",
+                "desc": "Usa algoritmos de expressões regulares em múltiplas passagens para processar sintaxe Markdown aninhada como negrito, itálico, tachado e muito mais"
+            },
+            {
+                "title": "Compatibilidade com Casos de Borda",
+                "desc": "Trata corretamente casos de borda como Emoji, caracteres Unicode, células vazias, conteúdo longo e muito mais"
+            },
+            {
+                "title": "Execução Silenciosa",
+                "desc": "Sem saída de logs no console, erros não interrompem o fluxo de trabalho, formatação concluída silenciosamente"
+            },
+            {
+                "title": "Feedback de Validação",
+                "desc": "Adiciona comentários de erro amigáveis para tabelas inválidas, ajudando os usuários a localizar rapidamente os problemas"
+            }
+        ]
+    },
+    "docs": {
+        "title": "Estrutura do Curso",
+        "subtitle": "3 capítulos, 6 aulas",
+        "sections": [
+            {
+                "title": "Início Rápido (Start)",
+                "items": [
+                    {
+                        "title": "Começando em 1 Minuto: Instalação e Configuração",
+                        "desc": "Conclua rapidamente a instalação e configuração do plugin e veja o primeiro efeito de formatação",
+                        "link": "/pt/franlol/opencode-md-table-formatter/start/getting-started/"
+                    },
+                    {
+                        "title": "Visão Geral das Funcionalidades: A Mágica da Formatação Automática",
+                        "desc": "Entenda completamente as 8 funcionalidades principais do plugin, domine o que ele pode e não pode fazer",
+                        "link": "/pt/franlol/opencode-md-table-formatter/start/features/"
+                    }
+                ]
+            },
+            {
+                "title": "Funcionalidades Avançadas (Advanced)",
+                "items": [
+                    {
+                        "title": "Princípio do Modo de Ocultação: Por Que o Cálculo de Largura é Tão Importante",
+                        "desc": "Entenda como funciona o modo de ocultação do OpenCode e aprenda o algoritmo de cálculo de largura do plugin",
+                        "link": "/pt/franlol/opencode-md-table-formatter/advanced/concealment-mode/"
+                    },
+                    {
+                        "title": "Especificações de Tabelas: Que Tipos de Tabelas Podem Ser Formatadas",
+                        "desc": "Domine os requisitos de estrutura de tabelas Markdown válidas e evite erros de tabelas inválidas",
+                        "link": "/pt/franlol/opencode-md-table-formatter/advanced/table-spec/"
+                    },
+                    {
+                        "title": "Detalhes de Alinhamento: Esquerda, Centro, Direita",
+                        "desc": "Domine a sintaxe e os efeitos dos três tipos de alinhamento, tornando as tabelas mais bonitas",
+                        "link": "/pt/franlol/opencode-md-table-formatter/advanced/alignment/"
+                    }
+                ]
+            },
+            {
+                "title": "Perguntas Frequentes (FAQ)",
+                "items": [
+                    {
+                        "title": "Perguntas Frequentes: O Que Fazer Quando a Tabela Não é Formatada",
+                        "desc": "Localize e resolva rapidamente problemas comuns, incluindo erros de configuração, estrutura de tabela inválida e muito mais",
+                        "link": "/pt/franlol/opencode-md-table-formatter/faq/troubleshooting/"
+                    }
+                ]
+            }
+        ]
+    }
+}

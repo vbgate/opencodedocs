@@ -1,0 +1,103 @@
+{
+    "project": {
+        "name": "opencode-md-table-formatter",
+        "tagline": "AI 表の自動整列",
+        "description": "OpenCode プラグイン、AI が生成した Markdown 表を自動フォーマットします。コンテンツの幅をインテリジェントに認識し、太字、斜体、コードブロックなどのフォーマットをサポートし、常に整然とした美しい表にします。",
+        "github_url": "https://github.com/franlol/opencode-md-table-formatter"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "チュートリアルを見る",
+            "link": "/ja/franlol/opencode-md-table-formatter/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "コア機能",
+        "subtitle": "Markdown 構文を自動認識し、表示幅をインテリジェントに計算",
+        "list": [
+            {
+                "title": "Markdown フォーマットのインテリジェント認識",
+                "desc": "太字、斜体、コードブロックなどのフォーマットの表示幅を正確に計算し、表が常に完璧に整列するようにします"
+            },
+            {
+                "title": "AI 生成後の自動フォーマット",
+                "desc": "experimental.text.complete フックを通じて自動的にトリガーされ、AI がテキストを生成した後に手動操作なしでフォーマットできます"
+            },
+            {
+                "title": "コードブロックのインテリジェント保護",
+                "desc": "インラインコードブロック内の Markdown 記号が誤って削除されないように保護し、コード内の構文をそのまま維持します"
+            },
+            {
+                "title": "3 つの整列方式をサポート",
+                "desc": "左揃え（:---）、中央揃え（:---:）、右揃え（---:）の 3 つのフォーマットをサポートします"
+            },
+            {
+                "title": "ネストされた Markdown の処理",
+                "desc": "複数の正規表現アルゴリズムを使用して、太字、斜体、取り消し線などのネストされた Markdown 構文を処理します"
+            },
+            {
+                "title": "境界ケースの互換性",
+                "desc": "絵文字、Unicode 文字、空のセル、長いコンテンツなどの境界ケースを正しく処理します"
+            },
+            {
+                "title": "サイレント実行",
+                "desc": "コンソールログを出力せず、エラーがワークフローを中断せず、静かにフォーマットを完了します"
+            },
+            {
+                "title": "検証フィードバック",
+                "desc": "無効な表にわかりやすいエラーコメントを追加し、ユーザーが問題を迅速に特定できるようにします"
+            }
+        ]
+    },
+    "docs": {
+        "title": "コース概要",
+        "subtitle": "全 3 章、6 レッスン",
+        "sections": [
+            {
+                "title": "クイックスタート",
+                "items": [
+                    {
+                        "title": "1 分で始める：インストールと設定",
+                        "desc": "プラグインのインストールと設定を迅速に完了し、最初のフォーマット効果を確認します",
+                        "link": "/ja/franlol/opencode-md-table-formatter/start/getting-started/"
+                    },
+                    {
+                        "title": "機能の全貌：自動フォーマットの魔法",
+                        "desc": "プラグインの 8 つのコア機能を全面的に理解し、何ができて何ができないかを把握します",
+                        "link": "/ja/franlol/opencode-md-table-formatter/start/features/"
+                    }
+                ]
+            },
+            {
+                "title": "高度な機能",
+                "items": [
+                    {
+                        "title": "隠蔽モードの仕組み：なぜ幅の計算が重要なのか",
+                        "desc": "OpenCode の隠蔽モードの動作原理を理解し、プラグインの幅計算アルゴリズムを学びます",
+                        "link": "/ja/franlol/opencode-md-table-formatter/advanced/concealment-mode/"
+                    },
+                    {
+                        "title": "表の仕様：どのような表がフォーマットできるか",
+                        "desc": "有効な Markdown 表の構造要件をマスターし、無効な表エラーを回避します",
+                        "link": "/ja/franlol/opencode-md-table-formatter/advanced/table-spec/"
+                    },
+                    {
+                        "title": "整列方式の詳細：左揃え、中央揃え、右揃え",
+                        "desc": "3 つの整列方式の構文と効果をマスターし、表をより美しくします",
+                        "link": "/ja/franlol/opencode-md-table-formatter/advanced/alignment/"
+                    }
+                ]
+            },
+            {
+                "title": "よくある質問",
+                "items": [
+                    {
+                        "title": "トラブルシューティング：表がフォーマットされない場合",
+                        "desc": "設定エラー、無効な表構造など、一般的な問題を迅速に特定して解決します",
+                        "link": "/ja/franlol/opencode-md-table-formatter/faq/troubleshooting/"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,803 @@
+/* site/docs/.vitepress/theme/custom.css */
+
+/* Tailwind v4 - 使用 CSS-first 配置 */
+@import "tailwindcss";
+
+/* 告诉 Tailwind 扫描这些文件中的类名 */
+@source "./components/**/*.vue";
+@source "../../**/*.md";
+@source "../../**/*.vue";
+
+/* ========================================
+   Tailwind v4 主题变量 - CSS-first 配置
+   ======================================== */
+@theme {
+  /* 字体 */
+  --font-sans: 'Inter', 'Noto Sans SC', 'system-ui', 'sans-serif';
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'monospace';
+
+  /* Canvas 色 */
+  --color-canvas: #FAFAFA;
+
+  /* Brand 蓝色系 */
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+
+  /* Neutral 灰色系 */
+  --color-neutral-50: #FAFAFA;
+  --color-neutral-100: #F4F4F5;
+  --color-neutral-200: #E4E4E7;
+  --color-neutral-300: #D4D4D8;
+  --color-neutral-400: #A1A1AA;
+  --color-neutral-500: #71717A;
+  --color-neutral-600: #52525B;
+  --color-neutral-700: #3F3F46;
+  --color-neutral-800: #27272A;
+  --color-neutral-900: #18181B;
+
+  /* Emerald 绿色系 */
+  --color-emerald-50: #ecfdf5;
+  --color-emerald-100: #d1fae5;
+  --color-emerald-200: #a7f3d0;
+  --color-emerald-400: #34d399;
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
+
+  /* Amber 橙色系 */
+  --color-amber-50: #fffbeb;
+  --color-amber-100: #fef3c7;
+  --color-amber-500: #f59e0b;
+
+  /* 阴影 */
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+/* ========================================
+   全局样式
+   ======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --vp-font-family-base: 'Inter', 'Noto Sans SC', 'system-ui', 'sans-serif';
+  --vp-font-family-mono: 'JetBrains Mono', 'SF Mono', 'monospace';
+}
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   Landing Page 自定义字体样式
+   直接定义，避免 VitePress 默认样式覆盖
+   ======================================== */
+
+/* Hero 大标题 - 对应设计稿 text-4xl sm:text-5xl lg:text-6xl */
+.lp-hero-title {
+  font-size: 2.25rem !important;
+  /* 36px - mobile */
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  padding: 0 !important;
+  border: none !important;
+  letter-spacing: normal !important;
+}
+
+@media (min-width: 640px) {
+  .lp-hero-title {
+    font-size: 3rem !important;
+    /* 48px - sm */
+  }
+}
+
+@media (min-width: 1024px) {
+  .lp-hero-title {
+    font-size: 3.75rem !important;
+    /* 60px - lg */
+  }
+}
+
+/* 区域标题 - 对应 text-3xl sm:text-4xl */
+.lp-section-title {
+  font-size: 1.875rem !important;
+  /* 30px */
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+@media (min-width: 640px) {
+  .lp-section-title {
+    font-size: 2.25rem !important;
+    /* 36px */
+  }
+}
+
+/* 小区域标题 - 对应 text-2xl sm:text-3xl */
+.lp-subsection-title {
+  font-size: 1.5rem !important;
+  /* 24px */
+  font-weight: 700 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+@media (min-width: 640px) {
+  .lp-subsection-title {
+    font-size: 1.875rem !important;
+    /* 30px */
+  }
+}
+
+/* 卡片标题 - 对应 text-2xl */
+.lp-card-title {
+  font-size: 1.5rem !important;
+  /* 24px */
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+/* 描述文字 - 对应 text-lg */
+.lp-description {
+  font-size: 1.125rem !important;
+  /* 18px */
+  line-height: 1.625 !important;
+}
+
+/* ========================================
+   强制颜色工具类
+   修复 Tailwind 颜色可能未生效或被覆盖的问题
+   ======================================== */
+.lp-text-primary {
+  color: #18181B !important;
+  /* neutral-900 */
+}
+
+html.dark .lp-text-primary {
+  color: #FFFFFF !important;
+}
+
+.lp-text-secondary {
+  color: #71717A !important;
+  /* neutral-500 */
+}
+
+html.dark .lp-text-secondary {
+  color: #9CA3AF !important;
+  /* gray-400 */
+}
+
+.lp-text-contrast {
+  color: #FFFFFF !important;
+}
+
+/* Hero 渐变背景 */
+.hero-bg {
+  background: radial-gradient(circle at 50% 0%, #EFF6FF 0%, #FAFAFA 50%, #FAFAFA 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59, 130, 246, 0.05), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 60%, rgba(16, 185, 129, 0.03), transparent);
+  pointer-events: none;
+}
+
+/* 网格背景 */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* 代码窗口 */
+.code-window {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.02),
+    0 20px 40px -12px rgba(0, 0, 0, 0.1);
+}
+
+/* 点阵背景 */
+.bg-dots {
+  background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* 发光徽章 */
+.glow-badge {
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  color: #059669;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(16, 185, 129, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 12px rgba(16, 185, 129, 0.2);
+  }
+}
+
+/* 打字机光标 */
+.typing-cursor::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+  color: #2563EB;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* 渐入动画 */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.fade-up-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.fade-up-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.fade-up-delay-3 {
+  animation-delay: 0.3s;
+}
+
+.fade-up-delay-4 {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 项目卡片 */
+.project-card {
+  background: #FFFFFF;
+  border: 1px solid #E4E4E7;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: #BFDBFE;
+}
+
+/* CTA 卡片 */
+.cta-card {
+  border-style: dashed !important;
+  border-color: #E4E4E7 !important;
+  background: #FAFAFA !important;
+}
+
+.cta-card:hover {
+  border-color: #93C5FD !important;
+  background: #EFF6FF !important;
+}
+
+/* 滚动进度条 */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3B82F6, #10B981);
+  z-index: 100;
+  transition: width 0.1s ease-out;
+}
+
+/* ========================================
+   渐变文字兼容性修复
+   ======================================== */
+.bg-clip-text {
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+.text-transparent {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* ========================================
+   深色模式
+   ======================================== */
+.dark .hero-bg {
+  background: #0A0A0F;
+}
+
+/* 强制深色背景 - 修复 Tailwind dark:失效问题 */
+.section-bg-adaptive {
+  background-color: #FFFFFF;
+}
+
+.dark .section-bg-adaptive {
+  background-color: #0A0A0F;
+}
+
+.dark .hero-bg::before {
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(96, 165, 250, 0.25), transparent);
+}
+
+.dark .grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Code Window - Light Mode Default */
+/* Enable class-based dark mode for Tailwind v4 */
+@variant dark (&:where(.dark, .dark *));
+
+/* Code Window - Light Mode Default */
+.code-window {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.02),
+    0 20px 40px -12px rgba(0, 0, 0, 0.1);
+}
+
+html.dark .code-window {
+  background: #18181B !important;
+  /* Solid neutral-900 */
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark .bg-dots {
+  background-image: radial-gradient(#3f3f46 1px, transparent 1px);
+}
+
+.dark .glow-badge {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  color: #60A5FA;
+}
+
+.dark .typing-cursor::after {
+  color: #60A5FA;
+}
+
+.dark .project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ========================================
+   Landing Page Components (Global)
+   ======================================== */
+
+/* 强调文字双模适配 */
+.lp-strong-text strong {
+  font-weight: 600;
+  color: #171717;
+  /* neutral-900 */
+}
+
+.dark .lp-strong-text strong {
+  color: #FFFFFF !important;
+}
+
+/* Tailwind v4 Theme Variables */
+@theme {
+  --color-brand-400: #60A5FA;
+  --color-brand-500: #3B82F6;
+  --color-brand-600: #2563EB;
+  --color-brand-700: #1D4ED8;
+  --color-emerald-400: #34D399;
+  --color-emerald-500: #10B981;
+}
+
+/* 主按钮 */
+.lp-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  color: white !important;
+  /* Force White Text */
+  background-color: #3B82F6;
+  /* Use brighter Brand-500 to match screenshot */
+  /* brand-500 */
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lp-btn-primary:hover {
+  background-color: #1D4ED8;
+  /* brand-700 */
+  transform: translateY(-4px) scale(1.05);
+}
+
+.dark .lp-btn-primary {
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.25);
+}
+
+.dark .lp-btn-primary:hover {
+  background-color: #3B82F6;
+  /* brand-500 */
+}
+
+/* 次按钮 */
+.lp-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+
+  /* Light Mode */
+  background-color: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  /* neutral-200 */
+  color: #404040 !important;
+  /* neutral-700 */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.lp-btn-secondary:hover {
+  background-color: #FAFAFA;
+  /* neutral-50 */
+  color: #171717 !important;
+}
+
+.dark .lp-btn-secondary {
+  /* Dark Mode Override */
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  /* Force White Text in Dark Mode */
+  box-shadow: none !important;
+}
+
+.dark .lp-btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+}
+
+/* 全局背景色工具类 - 解决 Tailwind 优先级问题 */
+.section-bg-base {
+  background-color: #FAFAFA;
+}
+
+.dark .section-bg-base {
+  background-color: #0A0A0F !important;
+}
+
+.dark .project-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: #60A5FA;
+}
+
+.dark .cta-card {
+  border-style: dashed !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  background: transparent !important;
+}
+
+.dark .cta-card:hover {
+  border-color: rgba(96, 165, 250, 0.5) !important;
+  background: rgba(96, 165, 250, 0.05) !important;
+}
+
+/* ========================================
+   VitePress 覆盖
+   ======================================== */
+.VPContent.is-home {
+  padding: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  background: transparent !important;
+}
+
+.VPContent.is-home .VPHome {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+}
+
+.VPContent.is-home .vp-doc {
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+
+.VPContent.is-home~.VPFooter {
+  display: none !important;
+}
+
+/* ========================================
+   Landing Page 样式隔离
+   重置 VitePress 默认样式，让 Tailwind 生效
+   ======================================== */
+
+/* 重置所有标题样式，让 Tailwind 工具类生效 */
+.landing-page-wrapper h1,
+.landing-page-wrapper h2,
+.landing-page-wrapper h3,
+.landing-page-wrapper h4,
+.landing-page-wrapper h5,
+.landing-page-wrapper h6 {
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  margin: 0 !important;
+  border: none !important;
+  padding: 0 !important;
+  letter-spacing: normal !important;
+}
+
+/* 覆盖 .vp-doc 内的标题样式 */
+.vp-doc .landing-page-wrapper h1,
+.vp-doc .landing-page-wrapper h2,
+.vp-doc .landing-page-wrapper h3,
+.vp-doc .landing-page-wrapper h4 {
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  margin: 0 !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* ========================================
+   直接覆盖 VitePress .vp-doc 标题样式
+   VitePress 默认: .vp-doc h1 { font-size: 28px; line-height: 40px }
+   需要用更高优先级选择器强制覆盖
+   ======================================== */
+.vp-doc.landing-page-body h1,
+.vp-doc.landing-page-body h2,
+.vp-doc.landing-page-body h3,
+.vp-doc.landing-page-body h4,
+.vp-doc.landing-page-body h5,
+.vp-doc.landing-page-body h6,
+.landing-page-body .vp-doc h1,
+.landing-page-body .vp-doc h2,
+.landing-page-body .vp-doc h3,
+.landing-page-body .vp-doc h4,
+.landing-page-body .vp-doc h5,
+.landing-page-body .vp-doc h6,
+.VPContent.is-home h1,
+.VPContent.is-home h2,
+.VPContent.is-home h3,
+.VPContent.is-home h4 {
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  margin: 0 !important;
+  border: none !important;
+  padding: 0 !important;
+  letter-spacing: normal !important;
+}
+
+/* ========================================
+   最高优先级覆盖 - 确保 Tailwind 字体类生效
+   ======================================== */
+
+/* 字体大小 */
+.landing-page-wrapper .text-2xl {
+  font-size: 1.5rem !important;
+}
+
+.landing-page-wrapper .text-3xl {
+  font-size: 1.875rem !important;
+}
+
+.landing-page-wrapper .text-4xl {
+  font-size: 2.25rem !important;
+}
+
+.landing-page-wrapper .text-5xl {
+  font-size: 3rem !important;
+}
+
+.landing-page-wrapper .text-6xl {
+  font-size: 3.75rem !important;
+}
+
+@media (min-width: 640px) {
+  .landing-page-wrapper .sm\:text-3xl {
+    font-size: 1.875rem !important;
+  }
+
+  .landing-page-wrapper .sm\:text-4xl {
+    font-size: 2.25rem !important;
+  }
+
+  .landing-page-wrapper .sm\:text-5xl {
+    font-size: 3rem !important;
+  }
+
+  .landing-page-wrapper .sm\:text-6xl {
+    font-size: 3.75rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .landing-page-wrapper .lg\:text-4xl {
+    font-size: 2.25rem !important;
+  }
+
+  .landing-page-wrapper .lg\:text-5xl {
+    font-size: 3rem !important;
+  }
+
+  .landing-page-wrapper .lg\:text-6xl {
+    font-size: 3.75rem !important;
+  }
+}
+
+/* 字重 */
+.landing-page-wrapper .font-extrabold {
+  font-weight: 800 !important;
+}
+
+.landing-page-wrapper .font-bold {
+  font-weight: 700 !important;
+}
+
+.landing-page-wrapper .font-semibold {
+  font-weight: 600 !important;
+}
+
+.landing-page-wrapper .font-medium {
+  font-weight: 500 !important;
+}
+
+/* 行高 */
+.landing-page-wrapper .leading-\[1\.1\] {
+  line-height: 1.1 !important;
+}
+
+.landing-page-wrapper .leading-tight {
+  line-height: 1.25 !important;
+}
+
+.landing-page-wrapper .leading-relaxed {
+  line-height: 1.625 !important;
+}
+
+/* 重置段落和链接样式 */
+.landing-page-wrapper p {
+  margin: 0;
+  line-height: inherit;
+}
+
+.landing-page-wrapper a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+}
+
+.landing-page-wrapper a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 重置列表样式 */
+.landing-page-wrapper ul,
+.landing-page-wrapper ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.landing-page-wrapper li {
+  margin: 0;
+}
+
+/* 重置代码样式 */
+.landing-page-wrapper code {
+  font-size: inherit;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* 重置输入框样式 */
+.landing-page-wrapper input {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/* 重置按钮样式 */
+.landing-page-wrapper button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* ========================================
+   减少动画偏好
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+/* Project Home Page Layout Overrides */
+/* Remove default VitePress page container constraints to allow full-width design */
+.project-home-page .VPPage {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.project-home-page .VPContent {
+  padding: 0 !important;
+}
+
+.project-home-page .VPContent .container {
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.project-home-page .VPDoc {
+  padding: 0 !important;
+}
+
+/* Hide default SiteFooter when using ProjectHome */
+.project-home-page footer.VPFooter {
+  display: none !important;
+}

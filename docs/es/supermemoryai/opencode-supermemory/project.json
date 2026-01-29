@@ -1,0 +1,110 @@
+{
+    "project": {
+        "name": "opencode-supermemory",
+        "tagline": "Memoria persistente para OpenCode Agent",
+        "description": "Plugin OpenCode que proporciona capacidades de memoria persistente para agentes de codificación basados en Supermemory, permitiendo la retención de contexto entre sesiones y proyectos. Soporta almacenamiento, recuperación y eliminación de memoria, inyección automática de contexto al iniciar la sesión y compresión preventiva basada en la tasa de uso de tokens.",
+        "github_url": "https://github.com/supermemoryai/opencode-supermemory"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Inicio rápido",
+            "link": "/es/supermemoryai/opencode-supermemory/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "¿Por qué elegir opencode-supermemory?",
+        "subtitle": "Dale al agente memoria persistente y elimina la frustración de comenzar de cero en cada sesión.",
+        "list": [
+            {
+                "title": "Memoria persistente",
+                "desc": "Resuelve el problema de pérdida de contexto después de finalizar la sesión del agente, guarda información importante permanentemente y la restaura automáticamente en la siguiente sesión."
+            },
+            {
+                "title": "Reutilización entre proyectos",
+                "desc": "Las preferencias de codificación del usuario (como «prefiere programación funcional») se aplican automáticamente en diferentes proyectos sin explicaciones repetidas."
+            },
+            {
+                "title": "Compresión inteligente",
+                "desc": "Cuando el contexto está a punto de agotarse, resume automáticamente y guarda información clave, evitando «olvidar» y manteniendo la coherencia de la sesión."
+            },
+            {
+                "title": "Anonimización de privacidad",
+                "desc": "Soporta anonimización automática con la etiqueta <private>, los datos sensibles no se envían a la nube, protegiendo tu privacidad."
+            },
+            {
+                "title": "Conjunto de herramientas completo",
+                "desc": "Proporciona cinco herramientas principales: add, search, profile, list, forget, permitiendo controlar la memoria a través del lenguaje natural."
+            },
+            {
+                "title": "Inyección automática de contexto",
+                "desc": "Inyección automática del perfil de usuario y el conocimiento del proyecto al iniciar la sesión, el agente entra en estado inmediatamente, sin fase de calentamiento."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Resumen del curso",
+        "subtitle": "Total 4 capítulos, 8 lecciones",
+        "sections": [
+            {
+                "title": "Guía de inicio (Start)",
+                "items": [
+                    {
+                        "title": "Inicio rápido",
+                        "desc": "Complete la instalación del plugin, configure la API Key, verifique las funciones básicas",
+                        "link": "/es/supermemoryai/opencode-supermemory/start/getting-started/"
+                    },
+                    {
+                        "title": "Inicialización del proyecto",
+                        "desc": "Use el comando /supermemory-init para permitir que el agente escanee profundamente y memorice la arquitectura del proyecto",
+                        "link": "/es/supermemoryai/opencode-supermemory/start/initialization/"
+                    }
+                ]
+            },
+            {
+                "title": "Funciones principales (Platforms)",
+                "items": [
+                    {
+                        "title": "Inyección automática de contexto",
+                        "desc": "Entienda cómo el agente obtiene automáticamente el perfil de usuario y el conocimiento del proyecto al iniciar la sesión",
+                        "link": "/es/supermemoryai/opencode-supermemory/platforms/context-injection/"
+                    },
+                    {
+                        "title": "Detalles del conjunto de herramientas",
+                        "desc": "Domine los escenarios de uso de herramientas como add, search, profile",
+                        "link": "/es/supermemoryai/opencode-supermemory/platforms/tools/"
+                    },
+                    {
+                        "title": "Ámbito de memoria",
+                        "desc": "Entienda la diferencia entre User Scope y Project Scope, gestione agregar, eliminar, modificar y consultar memoria",
+                        "link": "/es/supermemoryai/opencode-supermemory/platforms/memory-management/"
+                    }
+                ]
+            },
+            {
+                "title": "Funciones avanzadas (Advanced)",
+                "items": [
+                    {
+                        "title": "Compresión preventiva",
+                        "desc": "Entienda profundamente el mecanismo de compresión automática activado por el umbral de token, evite el desbordamiento de contexto",
+                        "link": "/es/supermemoryai/opencode-supermemory/advanced/compaction/"
+                    },
+                    {
+                        "title": "Configuración profunda",
+                        "desc": "Personalice el umbral de compresión, reglas de activación por palabras clave y parámetros de búsqueda",
+                        "link": "/es/supermemoryai/opencode-supermemory/advanced/configuration/"
+                    }
+                ]
+            },
+            {
+                "title": "Preguntas frecuentes (FAQ)",
+                "items": [
+                    {
+                        "title": "Privacidad y seguridad",
+                        "desc": "Entienda el mecanismo de anonimización de la etiqueta <private>, asegure que los datos sensibles no se envíen",
+                        "link": "/es/supermemoryai/opencode-supermemory/faq/privacy/"
+                    }
+                ]
+            }
+        ]
+    }
+}

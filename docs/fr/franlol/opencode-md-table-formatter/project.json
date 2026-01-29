@@ -1,0 +1,103 @@
+{
+    "project": {
+        "name": "opencode-md-table-formatter",
+        "tagline": "Alignement Automatique de Tableaux IA",
+        "description": "Plugin OpenCode qui formate automatiquement les tableaux Markdown générés par l'IA. Reconnaissance intelligente de la largeur du contenu, support du gras, italique, blocs de code et autres formats, pour des tableaux toujours impeccables.",
+        "github_url": "https://github.com/franlol/opencode-md-table-formatter"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Voir le Tutoriel",
+            "link": "/fr/franlol/opencode-md-table-formatter/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "Fonctionnalités Principales",
+        "subtitle": "Reconnaissance automatique de la syntaxe Markdown, calcul intelligent de la largeur d'affichage",
+        "list": [
+            {
+                "title": "Reconnaissance Intelligente des Formats Markdown",
+                "desc": "Calcul correct de la largeur d'affichage du gras, italique, blocs de code et autres formats, garantissant un alignement parfait des tableaux"
+            },
+            {
+                "title": "Formatage Automatique Après Génération IA",
+                "desc": "Déclenchement automatique via le hook experimental.text.complete, formatage sans manipulation manuelle après génération de texte par l'IA"
+            },
+            {
+                "title": "Protection Intelligente des Blocs de Code",
+                "desc": "Protection des symboles Markdown dans les blocs de code en ligne contre l'extraction incorrecte, préservant la syntaxe du code"
+            },
+            {
+                "title": "Support de Trois Modes d'Alignement",
+                "desc": "Support de trois formats : alignement gauche (:---), centré (:---:), droite (---:)"
+            },
+            {
+                "title": "Traitement du Markdown Imbriqué",
+                "desc": "Algorithme multi-passes avec expressions régulières pour traiter la syntaxe Markdown imbriquée comme le gras, italique, barré"
+            },
+            {
+                "title": "Compatibilité des Cas Limites",
+                "desc": "Traitement correct des cas limites : Emoji, caractères Unicode, cellules vides, contenu long"
+            },
+            {
+                "title": "Exécution Silencieuse",
+                "desc": "Aucune sortie console, les erreurs n'interrompent pas le flux de travail, formatage silencieux"
+            },
+            {
+                "title": "Feedback de Validation",
+                "desc": "Ajout de commentaires d'erreur conviviaux pour les tableaux invalides, aidant les utilisateurs à localiser rapidement les problèmes"
+            }
+        ]
+    },
+    "docs": {
+        "title": "Programme du Cours",
+        "subtitle": "3 chapitres, 6 leçons",
+        "sections": [
+            {
+                "title": "Démarrage Rapide",
+                "items": [
+                    {
+                        "title": "Premiers Pas en Une Minute : Installation et Configuration",
+                        "desc": "Installation et configuration rapide du plugin, voir le premier effet de formatage",
+                        "link": "/fr/franlol/opencode-md-table-formatter/start/getting-started/"
+                    },
+                    {
+                        "title": "Aperçu des Fonctionnalités : La Magie du Formatage Automatique",
+                        "desc": "Découverte complète des 8 fonctionnalités principales du plugin, comprendre ce qu'il peut et ne peut pas faire",
+                        "link": "/fr/franlol/opencode-md-table-formatter/start/features/"
+                    }
+                ]
+            },
+            {
+                "title": "Fonctionnalités Avancées",
+                "items": [
+                    {
+                        "title": "Principe du Mode Masqué : Pourquoi le Calcul de Largeur est Important",
+                        "desc": "Comprendre le fonctionnement du mode masqué d'OpenCode, apprendre l'algorithme de calcul de largeur du plugin",
+                        "link": "/fr/franlol/opencode-md-table-formatter/advanced/concealment-mode/"
+                    },
+                    {
+                        "title": "Spécification des Tableaux : Quels Tableaux Peuvent Être Formatés",
+                        "desc": "Maîtriser les exigences structurelles des tableaux Markdown valides, éviter les erreurs de tableaux invalides",
+                        "link": "/fr/franlol/opencode-md-table-formatter/advanced/table-spec/"
+                    },
+                    {
+                        "title": "Détail des Modes d'Alignement : Gauche, Centré, Droite",
+                        "desc": "Maîtriser la syntaxe et les effets des trois modes d'alignement, rendre les tableaux plus esthétiques",
+                        "link": "/fr/franlol/opencode-md-table-formatter/advanced/alignment/"
+                    }
+                ]
+            },
+            {
+                "title": "Questions Fréquentes (FAQ)",
+                "items": [
+                    {
+                        "title": "Questions Fréquentes : Que Faire Si le Tableau N'est Pas Formaté",
+                        "desc": "Localiser et résoudre rapidement les problèmes courants, y compris erreurs de configuration, structure de tableau invalide",
+                        "link": "/fr/franlol/opencode-md-table-formatter/faq/troubleshooting/"
+                    }
+                ]
+            }
+        ]
+    }
+}

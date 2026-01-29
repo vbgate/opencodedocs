@@ -1,0 +1,110 @@
+{
+    "project": {
+        "name": "opencode-supermemory",
+        "tagline": "Mémoire persistante pour OpenCode Agent",
+        "description": "Plugin OpenCode qui fournit des capacités de mémoire persistante pour les agents de codage basés sur Supermemory, permettant la conservation du contexte entre les sessions et les projets. Prend en charge le stockage, la récupération et la suppression de la mémoire, l'injection automatique de contexte au démarrage de la session et la compression préemptive basée sur le taux d'utilisation des tokens.",
+        "github_url": "https://github.com/supermemoryai/opencode-supermemory"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Démarrage rapide",
+            "link": "/fr/supermemoryai/opencode-supermemory/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "Pourquoi choisir opencode-supermemory ?",
+        "subtitle": "Donnez à l'agent une mémoire persistante et éliminez la frustration de recommencer à zéro à chaque session.",
+        "list": [
+            {
+                "title": "Mémoire persistante",
+                "desc": "Résout le problème de perte de contexte après la fin de la session de l'agent, sauvegarde de manière permanente les informations importantes et les restaure automatiquement lors de la prochaine session."
+            },
+            {
+                "title": "Réutilisation entre projets",
+                "desc": "Les préférences de codage de l'utilisateur (comme « préfère la programmation fonctionnelle ») sont automatiquement appliquées dans différents projets sans explications répétées."
+            },
+            {
+                "title": "Compression intelligente",
+                "desc": "Lorsque le contexte est sur le point de s'épuiser, résume automatiquement et sauvegarde les informations clés, évitant « l'oubli » et maintenant la cohérence de la session."
+            },
+            {
+                "title": "Anonymisation de la confidentialité",
+                "desc": "Prend en charge l'anonymisation automatique avec la balise <private>, les données sensibles ne sont pas envoyées dans le cloud, protégeant votre confidentialité."
+            },
+            {
+                "title": "Ensemble d'outils complet",
+                "desc": "Fournit cinq outils principaux : add, search, profile, list, forget, permettant de contrôler la mémoire via le langage naturel."
+            },
+            {
+                "title": "Injection automatique de contexte",
+                "desc": "Injection automatique du profil utilisateur et des connaissances sur le projet au démarrage de la session, l'agent entre immédiatement en état, sans phase de préchauffage."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Aperçu du cours",
+        "subtitle": "Total 4 chapitres, 8 leçons",
+        "sections": [
+            {
+                "title": "Guide de démarrage (Start)",
+                "items": [
+                    {
+                        "title": "Démarrage rapide",
+                        "desc": "Complétez l'installation du plugin, configurez la clé API, vérifiez les fonctionnalités de base",
+                        "link": "/fr/supermemoryai/opencode-supermemory/start/getting-started/"
+                    },
+                    {
+                        "title": "Initialisation du projet",
+                        "desc": "Utilisez la commande /supermemory-init pour permettre à l'agent de scanner profondément et de mémoriser l'architecture du projet",
+                        "link": "/fr/supermemoryai/opencode-supermemory/start/initialization/"
+                    }
+                ]
+            },
+            {
+                "title": "Fonctionnalités principales (Platforms)",
+                "items": [
+                    {
+                        "title": "Injection automatique de contexte",
+                        "desc": "Comprenez comment l'agent obtient automatiquement le profil utilisateur et les connaissances sur le projet au démarrage de la session",
+                        "link": "/fr/supermemoryai/opencode-supermemory/platforms/context-injection/"
+                    },
+                    {
+                        "title": "Détails de l'ensemble d'outils",
+                        "desc": "Maîtrisez les scénarios d'utilisation des outils comme add, search, profile",
+                        "link": "/fr/supermemoryai/opencode-supermemory/platforms/tools/"
+                    },
+                    {
+                        "title": "Portée de la mémoire",
+                        "desc": "Comprenez la différence entre User Scope et Project Scope, gérez l'ajout, la suppression, la modification et la recherche de mémoire",
+                        "link": "/fr/supermemoryai/opencode-supermemory/platforms/memory-management/"
+                    }
+                ]
+            },
+            {
+                "title": "Fonctionnalités avancées (Advanced)",
+                "items": [
+                    {
+                        "title": "Compression préemptive",
+                        "desc": "Comprenez en profondeur le mécanisme de compression automatique déclenché par le seuil de token, évitez le dépassement de contexte",
+                        "link": "/fr/supermemoryai/opencode-supermemory/advanced/compaction/"
+                    },
+                    {
+                        "title": "Configuration approfondie",
+                        "desc": "Personnalisez le seuil de compression, les règles de déclenchement par mot-clé et les paramètres de recherche",
+                        "link": "/fr/supermemoryai/opencode-supermemory/advanced/configuration/"
+                    }
+                ]
+            },
+            {
+                "title": "Questions fréquentes (FAQ)",
+                "items": [
+                    {
+                        "title": "Confidentialité et sécurité",
+                        "desc": "Comprenez le mécanisme d'anonymisation de la balise <private>, assurez-vous que les données sensibles ne sont pas envoyées",
+                        "link": "/fr/supermemoryai/opencode-supermemory/faq/privacy/"
+                    }
+                ]
+            }
+        ]
+    }
+}

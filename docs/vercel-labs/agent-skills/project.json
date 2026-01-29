@@ -1,0 +1,120 @@
+{
+    "project": {
+        "name": "agent-skills",
+        "tagline": "Vercel AI Coding Agent Skills",
+        "description": "Extensible skill collection for AI agents like Claude. Built with 57 React performance optimization rules, 100+ Web design guidelines, and one-click Vercel deployment.",
+        "github_url": "https://github.com/vercel-labs/agent-skills"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Quick Start",
+            "link": "/vercel-labs/agent-skills/start/installation/"
+        }
+    },
+    "features": {
+        "title": "Why agent-skills?",
+        "subtitle": "Official Vercel skills that package engineering team best practices into reusable capabilities for AI agents.",
+        "list": [
+            {
+                "title": "React Performance Optimization",
+                "desc": "57 Vercel-verified rules organized by CRITICAL/HIGH/MEDIUM priority, covering waterfall elimination, bundle optimization, and 8 categories."
+            },
+            {
+                "title": "Web Design Guidelines",
+                "desc": "100+ UI audit rules covering accessibility, animation performance, dark mode, form validation, and more."
+            },
+            {
+                "title": "Vercel One-Click Deploy",
+                "desc": "Auto-detects 40+ frameworks, zero-config deployment with preview URLs and ownership transfer links."
+            },
+            {
+                "title": "Auto-Triggering",
+                "desc": "After installation, agents automatically identify tasks and activate corresponding skills without manual selection."
+            },
+            {
+                "title": "Standardized Format",
+                "desc": "Follows Agent Skills spec with SKILL.md, scripts/, and references/ for easy extension."
+            },
+            {
+                "title": "Open Source & Extensible",
+                "desc": "MIT licensed for free customization or building your own skill packs on existing rules."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Course Outline",
+        "subtitle": "4 sections, 10 lessons",
+        "sections": [
+            {
+                "title": "Getting Started",
+                "items": [
+                    {
+                        "title": "Introduction to Agent Skills",
+                        "desc": "Learn what Agent Skills is and how it extends AI coding agent capabilities",
+                        "link": "/vercel-labs/agent-skills/start/getting-started/"
+                    },
+                    {
+                        "title": "Installation",
+                        "desc": "Quick install with one command, configure for Claude Code and claude.ai",
+                        "link": "/vercel-labs/agent-skills/start/installation/"
+                    }
+                ]
+            },
+            {
+                "title": "Core Skills",
+                "items": [
+                    {
+                        "title": "React Best Practices",
+                        "desc": "Apply Vercel's 57 rules to eliminate waterfalls, optimize bundles, reduce re-renders",
+                        "link": "/vercel-labs/agent-skills/platforms/react-best-practices/"
+                    },
+                    {
+                        "title": "Web Design Guidelines Audit",
+                        "desc": "Audit UI code with 100+ rules covering accessibility, performance, and UX",
+                        "link": "/vercel-labs/agent-skills/platforms/web-design-guidelines/"
+                    },
+                    {
+                        "title": "Vercel One-Click Deploy",
+                        "desc": "Zero-auth quick deployment with auto framework detection and preview links",
+                        "link": "/vercel-labs/agent-skills/platforms/vercel-deploy/"
+                    }
+                ]
+            },
+            {
+                "title": "Advanced Features",
+                "items": [
+                    {
+                        "title": "Skill Development",
+                        "desc": "Learn to create custom skills and extend AI agent capabilities",
+                        "link": "/vercel-labs/agent-skills/advanced/skill-development/"
+                    },
+                    {
+                        "title": "Rule Authoring",
+                        "desc": "Master rule writing techniques, define check logic and fix suggestions",
+                        "link": "/vercel-labs/agent-skills/advanced/rule-authoring/"
+                    },
+                    {
+                        "title": "Build Toolchain",
+                        "desc": "Understand skill pack build and publish workflow",
+                        "link": "/vercel-labs/agent-skills/advanced/build-toolchain/"
+                    }
+                ]
+            },
+            {
+                "title": "FAQ",
+                "items": [
+                    {
+                        "title": "Troubleshooting",
+                        "desc": "Resolve skill not activating, deployment failures, and common issues",
+                        "link": "/vercel-labs/agent-skills/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "Best Practices",
+                        "desc": "Best practices for skill usage and development",
+                        "link": "/vercel-labs/agent-skills/faq/best-practices/"
+                    }
+                ]
+            }
+        ]
+    }
+}

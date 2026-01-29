@@ -1,0 +1,120 @@
+{
+    "project": {
+        "name": "agent-skills",
+        "tagline": "Vercel AI 코딩 에이전트 스킬 팩",
+        "description": "Claude 등 AI 에이전트를 위한 확장 가능한 스킬 컬렉션. React 성능 최적화 규칙 57개, 웹 디자인 가이드 100+개 포함, Vercel 원클릭 배포 지원.",
+        "github_url": "https://github.com/vercel-labs/agent-skills"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "빠른 시작",
+            "link": "/ko/vercel-labs/agent-skills/start/installation/"
+        }
+    },
+    "features": {
+        "title": "agent-skills를 선택해야 하는 이유?",
+        "subtitle": "Vercel 공식 제품, 엔지니어링 팀의 베스트 프랙티스를 재사용 가능한 스킬로 패키징하여 AI 에이전트가 자동으로 적용하도록 합니다.",
+        "list": [
+            {
+                "title": "React 성능 최적화",
+                "desc": "Vercel 엔지니어링 팀이 검증한 규칙 57개, CRITICAL/HIGH/MEDIUM 등급으로 분류, 워터폴 제거, 번들 최적화 등 8개 카테고리를 포함."
+            },
+            {
+                "title": "웹 디자인 가이드",
+                "desc": "UI 감사 규칙 100+개, 접근성, 애니메이션 성능, 다크 모드, 폼 검증 등 다차원을 포괄."
+            },
+            {
+                "title": "Vercel 원클릭 배포",
+                "desc": "40+개 프레임워크 자동 감지, 구성 없이 배포 및 미리보기 링크와 소유권 이전 링크 반환."
+            },
+            {
+                "title": "자동 트리거 메커니즘",
+                "desc": "설치 후 에이전트가 자동으로 작업을 인식하고 해당 스킬을 활성화, 수동 선택이나 명령어 기억 불필요."
+            },
+            {
+                "title": "표준화된 형식",
+                "desc": "Agent Skills 스펙 준수, 각 스킬은 SKILL.md, scripts/, references/ 포함, 확장 용이."
+            },
+            {
+                "title": "오픈 소스 자유 확장",
+                "desc": "MIT 라이선스, 스킬 자유롭게 확장 및 사용자 정의하거나 기존 규칙을 기반으로 자신만의 스킬 팩 구축 가능."
+            }
+        ]
+    },
+    "docs": {
+        "title": "과정 개요",
+        "subtitle": "총 4장 10강",
+        "sections": [
+            {
+                "title": "시작하기 (Start)",
+                "items": [
+                    {
+                        "title": "Agent Skills 소개",
+                        "desc": "Agent Skills가 무엇인지, AI 코딩 에이전트의 기능을 어떻게 확장하는지 이해",
+                        "link": "/ko/vercel-labs/agent-skills/start/getting-started/"
+                    },
+                    {
+                        "title": "Agent Skills 설치",
+                        "desc": "단일 명령어로 빠르게 설치, Claude Code와 claude.ai 구성",
+                        "link": "/ko/vercel-labs/agent-skills/start/installation/"
+                    }
+                ]
+            },
+            {
+                "title": "핵심 스킬 (Platforms)",
+                "items": [
+                    {
+                        "title": "React 성능 최적화",
+                        "desc": "Vercel 57개 규칙 적용, 워터폴 제거, 번들 최적화, Re-render 감소",
+                        "link": "/ko/vercel-labs/agent-skills/platforms/react-best-practices/"
+                    },
+                    {
+                        "title": "웹 디자인 가이드 감사",
+                        "desc": "UI 코드 감사 규칙 100+개, 접근성, 성능 및 UX 포괄",
+                        "link": "/ko/vercel-labs/agent-skills/platforms/web-design-guidelines/"
+                    },
+                    {
+                        "title": "Vercel 원클릭 배포",
+                        "desc": "인증 없이 빠르게 앱 게시, 프레임워크 자동 감지 및 미리보기 링크 반환",
+                        "link": "/ko/vercel-labs/agent-skills/platforms/vercel-deploy/"
+                    }
+                ]
+            },
+            {
+                "title": "고급 기능 (Advanced)",
+                "items": [
+                    {
+                        "title": "스킬 개발",
+                        "desc": "사용자 정의 스킬 생성 학습, AI 에이전트의 기능 경계 확장",
+                        "link": "/ko/vercel-labs/agent-skills/advanced/skill-development/"
+                    },
+                    {
+                        "title": "규칙 작성",
+                        "desc": "규칙 작성 기술 마스터, 검증 로직 및 수정 제안 정의",
+                        "link": "/ko/vercel-labs/agent-skills/advanced/rule-authoring/"
+                    },
+                    {
+                        "title": "빌드 툴체인",
+                        "desc": "스킬 팩의 빌드 및 게시 프로세스 이해",
+                        "link": "/ko/vercel-labs/agent-skills/advanced/build-toolchain/"
+                    }
+                ]
+            },
+            {
+                "title": "자주 묻는 질문 (FAQ)",
+                "items": [
+                    {
+                        "title": "트러블슈팅",
+                        "desc": "스킬 활성화 실패, 배포 실패 등 일반적인 문제 해결",
+                        "link": "/ko/vercel-labs/agent-skills/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "베스트 프랙티스",
+                        "desc": "스킬 사용 및 개발을 위한 베스트 프랙티스 권장사항",
+                        "link": "/ko/vercel-labs/agent-skills/faq/best-practices/"
+                    }
+                ]
+            }
+        ]
+    }
+}

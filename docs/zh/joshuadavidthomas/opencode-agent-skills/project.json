@@ -1,0 +1,145 @@
+{
+    "project": {
+        "name": "opencode-agent-skills",
+        "tagline": "OpenCode AI 技能动态管理插件",
+        "description": "为 OpenCode 提供动态技能发现和管理能力的插件系统，支持 AI Agent 加载和使用可复用的技能库。实现跨项目、跨会话的技能复用，基于语义相似度自动推荐相关技能。",
+        "github_url": "https://github.com/joshuadavidthomas/opencode-agent-skills"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "快速开始",
+            "link": "/zh/joshuadavidthomas/opencode-agent-skills/start/installation/"
+        }
+    },
+    "features": {
+        "title": "为什么选择 OpenCode Agent Skills？",
+        "subtitle": "为 OpenCode 提供动态技能发现和管理能力，实现跨项目、跨会话的技能复用。",
+        "list": [
+            {
+                "title": "动态技能发现",
+                "desc": "自动从项目、用户、插件目录发现技能，支持 6 个位置扫描，按优先级返回首个匹配技能。"
+            },
+            {
+                "title": "Claude Code 兼容",
+                "desc": "支持现有 Claude Code 技能和插件格式，降低迁移成本，复用现有资源。"
+            },
+            {
+                "title": "语义匹配推荐",
+                "desc": "使用 HuggingFace embedding 模型计算相似度，基于用户输入自动推荐相关技能。"
+            },
+            {
+                "title": "上下文注入",
+                "desc": "技能内容以 XML 格式注入到会话上下文，AI 遵循技能指导输出高质量结果。"
+            },
+            {
+                "title": "压缩后恢复",
+                "desc": "会话压缩后自动重新注入技能列表，长时间会话中保持技能持久可用。"
+            },
+            {
+                "title": "脚本执行支持",
+                "desc": "技能目录下可包含可执行脚本，在技能目录上下文中执行自动化任务。"
+            }
+        ]
+    },
+    "docs": {
+        "title": "课程大纲",
+        "subtitle": "共 4 个章节，15 节课程",
+        "sections": [
+            {
+                "title": "入门指南 (Start)",
+                "items": [
+                    {
+                        "title": "什么是 OpenCode Agent Skills？",
+                        "desc": "了解插件的核心价值和功能特性",
+                        "link": "/zh/joshuadavidthomas/opencode-agent-skills/start/what-is-opencode-agent-skills/"
+                    },
+                    {
+                        "title": "安装 OpenCode Agent Skills",
+                        "desc": "完成插件安装并验证运行",
+                        "link": "/zh/joshuadavidthomas/opencode-agent-skills/start/installation/"
+                    },
+                    {
+                        "title": "创建你的第一个技能",
+                        "desc": "掌握技能目录结构和 SKILL.md 格式规范",
+                        "link": "/zh/joshuadavidthomas/opencode-agent-skills/start/creating-your-first-skill/"
+                    }
+                ]
+            },
+            {
+                "title": "核心功能 (Platforms)",
+                "items": [
+                    {
+                        "title": "技能发现机制详解",
+                        "desc": "理解插件如何从多个位置自动发现技能",
+                        "link": "/zh/joshuadavidthomas/opencode-agent-skills/platforms/skill-discovery-mechanism/"
+                    },
+                    {
+                        "title": "查询和列出可用技能",
+                        "desc": "学会使用 get_available_skills 工具及命名空间",
+                        "link": "/zh/joshuadavidthomas/opencode-agent-skills/platforms/listing-available-skills/"
+                    },
+                    {
+                        "title": "加载技能到会话上下文",
+                        "desc": "掌握 use_skill 工具的使用和 XML 内容注入机制",
+                        "link": "/zh/joshuadavidthomas/opencode-agent-skills/platforms/loading-skills-into-context/"
+                    },
+                    {
+                        "title": "自动技能推荐：语义匹配原理",
+                        "desc": "理解插件如何基于语义相似度自动推荐相关技能",
+                        "link": "/zh/joshuadavidthomas/opencode-agent-skills/platforms/automatic-skill-matching/"
+                    },
+                    {
+                        "title": "执行技能脚本",
+                        "desc": "学会使用 run_skill_script 工具在技能目录下执行自动化脚本",
+                        "link": "/zh/joshuadavidthomas/opencode-agent-skills/platforms/executing-skill-scripts/"
+                    },
+                    {
+                        "title": "读取技能文件",
+                        "desc": "使用 read_skill_file 工具访问技能的文档、配置等支持文件",
+                        "link": "/zh/joshuadavidthomas/opencode-agent-skills/platforms/reading-skill-files/"
+                    }
+                ]
+            },
+            {
+                "title": "进阶功能 (Advanced)",
+                "items": [
+                    {
+                        "title": "Claude Code 技能兼容性",
+                        "desc": "了解插件如何兼容 Claude Code 的技能和插件系统",
+                        "link": "/zh/joshuadavidthomas/opencode-agent-skills/advanced/claude-code-compatibility/"
+                    },
+                    {
+                        "title": "Superpowers 工作流集成",
+                        "desc": "配置和使用 Superpowers 模式，获得严格的工作流指导",
+                        "link": "/zh/joshuadavidthomas/opencode-agent-skills/advanced/superpowers-integration/"
+                    },
+                    {
+                        "title": "命名空间与技能优先级",
+                        "desc": "理解技能的命名空间系统和发现优先级规则",
+                        "link": "/zh/joshuadavidthomas/opencode-agent-skills/advanced/namespaces-and-priority/"
+                    },
+                    {
+                        "title": "上下文压缩恢复机制",
+                        "desc": "了解技能如何在长会话中保持可用性",
+                        "link": "/zh/joshuadavidthomas/opencode-agent-skills/advanced/context-compaction-resilience/"
+                    }
+                ]
+            },
+            {
+                "title": "常见问题 (FAQ)",
+                "items": [
+                    {
+                        "title": "常见问题排查",
+                        "desc": "解决使用插件时遇到的常见问题",
+                        "link": "/zh/joshuadavidthomas/opencode-agent-skills/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "安全性说明",
+                        "desc": "了解插件的安全机制和最佳实践",
+                        "link": "/zh/joshuadavidthomas/opencode-agent-skills/faq/security-considerations/"
+                    }
+                ]
+            }
+        ]
+    }
+}

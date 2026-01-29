@@ -1,0 +1,138 @@
+{
+  "project": {
+    "name": "opencode-notify",
+    "tagline": "让 OpenCode AI 在你专注时温柔提醒你",
+    "description": "告别频繁切换窗口的焦虑。opencode-notify 为你的 OpenCode AI 提供原生桌面通知，支持智能焦点检测、静音时段和点击聚焦（macOS），让你专注工作，只在 AI 需要你时被精准唤醒。",
+    "github_url": "https://github.com/kdcokenny/opencode-notify"
+  },
+  "hero": {
+    "primary_action": {
+      "text": "快速开始",
+      "link": "/zh/kdcokenny/opencode-notify/start/quick-start/"
+    }
+  },
+  "features": {
+    "title": "为什么选择 opencode-notify？",
+    "subtitle": "专注工作，智能提醒",
+    "list": [
+      {
+        "title": "🔔 原生桌面通知",
+        "desc": "使用操作系统原生通知系统（macOS Notification Center、Windows Toast、Linux notify-send），无缝融入你的工作流。"
+      },
+      {
+        "title": "🧠 智能焦点检测",
+        "desc": "自动检测终端窗口焦点，避免重复通知。默认只通知父会话，过滤掉子任务的噪声，让你专注于真正重要的信息。"
+      },
+      {
+        "title": "⏰ 静音时段配置",
+        "desc": "设置静音时间段（如 22:00-08:00），夜间自动抑制通知，支持跨午夜时段，保障你的休息时间。"
+      },
+      {
+        "title": "🖱️ 点击聚焦终端（macOS）",
+        "desc": "macOS 用户点击通知即可自动聚焦终端窗口，省去切换应用的时间，工作效率翻倍。"
+      },
+      {
+        "title": "🎨 自定义音效（macOS）",
+        "desc": "为不同类型事件设置专属音效（Glass、Basso、Submarine 等），通过声音快速识别通知类型。"
+      },
+      {
+        "title": "💻 37+ 终端支持",
+        "desc": "支持 Ghostty、iTerm2、WezTerm、VS Code 集成终端等 37+ 终端模拟器，自动识别你的终端类型。"
+      },
+      {
+        "title": "🔒 本地运行，零隐私风险",
+        "desc": "所有通知在本地生成，无数据上传云端，你的工作内容完全私密安全。"
+      },
+      {
+        "title": "⚡ 轻量级插件",
+        "desc": "基于 TypeScript + Bun 构建，安装即用，配置文件简洁，无需学习复杂配置。"
+      }
+    ]
+  },
+  "docs": {
+    "title": "课程大纲",
+    "subtitle": "共 4 个章节，12 节课程",
+    "sections": [
+      {
+        "title": "入门指南 (Start)",
+        "items": [
+          {
+            "title": "快速开始",
+            "desc": "帮助用户在 5 分钟内完成安装并体验第一个通知",
+            "link": "/zh/kdcokenny/opencode-notify/start/quick-start/"
+          },
+          {
+            "title": "工作原理",
+            "desc": "解释插件的核心功能、智能过滤机制和通知触发条件",
+            "link": "/zh/kdcokenny/opencode-notify/start/how-it-works/"
+          }
+        ]
+      },
+      {
+        "title": "平台功能 (Platforms)",
+        "items": [
+          {
+            "title": "macOS 平台特性",
+            "desc": "介绍 macOS 平台的完整功能（焦点检测、点击聚焦、自定义音效）",
+            "link": "/zh/kdcokenny/opencode-notify/platforms/macos/"
+          },
+          {
+            "title": "Windows 平台特性",
+            "desc": "介绍 Windows 平台的功能（原生通知、终端检测）",
+            "link": "/zh/kdcokenny/opencode-notify/platforms/windows/"
+          },
+          {
+            "title": "Linux 平台特性",
+            "desc": "介绍 Linux 平台的功能（原生通知、终端检测）",
+            "link": "/zh/kdcokenny/opencode-notify/platforms/linux/"
+          },
+          {
+            "title": "支持的终端",
+            "desc": "列出所有支持的终端模拟器（37+ 终端）",
+            "link": "/zh/kdcokenny/opencode-notify/platforms/terminals/"
+          }
+        ]
+      },
+      {
+        "title": "进阶功能 (Advanced)",
+        "items": [
+          {
+            "title": "配置参考",
+            "desc": "提供完整的配置项说明和示例",
+            "link": "/zh/kdcokenny/opencode-notify/advanced/config-reference/"
+          },
+          {
+            "title": "静音时段详解",
+            "desc": "解释如何设置静音时段以避免特定时间段打扰",
+            "link": "/zh/kdcokenny/opencode-notify/advanced/quiet-hours/"
+          },
+          {
+            "title": "终端检测原理",
+            "desc": "解释终端自动检测的机制和如何手动指定终端类型",
+            "link": "/zh/kdcokenny/opencode-notify/advanced/terminal-detection/"
+          },
+          {
+            "title": "高级用法",
+            "desc": "提供配置技巧和最佳实践",
+            "link": "/zh/kdcokenny/opencode-notify/advanced/advanced-usage/"
+          }
+        ]
+      },
+      {
+        "title": "常见问题 (FAQ)",
+        "items": [
+          {
+            "title": "故障排除",
+            "desc": "解决常见问题（通知不显示、焦点检测失效、配置错误等）",
+            "link": "/zh/kdcokenny/opencode-notify/faq/troubleshooting/"
+          },
+          {
+            "title": "常见问题",
+            "desc": "回答用户常见疑问（性能影响、隐私安全、插件冲突等）",
+            "link": "/zh/kdcokenny/opencode-notify/faq/common-questions/"
+          }
+        ]
+      }
+    ]
+  }
+}

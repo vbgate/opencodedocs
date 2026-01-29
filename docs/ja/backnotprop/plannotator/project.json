@@ -1,0 +1,150 @@
+{
+    "project": {
+        "name": "plannotator",
+        "tagline": "AI プランレビュー・コードレビューツール",
+        "description": "Claude Code と OpenCode 向けのインタラクティブなプランレビュー・コードレビューツールを提供します。ビジュアルアノテーション、チームコラボレーション、URL 共有、サードパーティノートアプリ連携をサポート。ローカル実行でデータ安全、サーバー不要でレビュー内容を共有できます。",
+        "github_url": "https://github.com/backnotprop/plannotator"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "クイックスタート",
+            "link": "/ja/backnotprop/plannotator/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "なぜ Plannotator を選ぶのか？",
+        "subtitle": "AI 生成プランとコードをビジュアルレビュー、精確なフィードバック、チームコラボレーション。",
+        "list": [
+            {
+                "title": "ビジュアルプランレビュー",
+                "desc": "ブラウザで AI 生成プランを確認し、削除・置換・挿入・コメントアノテーションで精確にフィードバック。"
+            },
+            {
+                "title": "コードレビュービジュアライゼーション",
+                "desc": "Git diff の side-by-side または unified ビュー、行レベルのコメントとコード提案をサポート。"
+            },
+            {
+                "title": "マルチプラットフォーム対応",
+                "desc": "Claude Code と OpenCode をサポート、既存の開発ワークフローにシームレスに統合。"
+            },
+            {
+                "title": "バックエンド不要の URL 共有",
+                "desc": "URL ハッシュに圧縮、サーバー不要でチームメンバーとレビュー内容を共有。"
+            },
+            {
+                "title": "画像アノテーションツール",
+                "desc": "画像を添付し、ブラシ・矢印・円形ツールでアノテーション、フィードバック表現を強化。"
+            },
+            {
+                "title": "サードパーティノート連携",
+                "desc": "承認されたプランは Obsidian または Bear に自動保存、frontmatter とタグ付き。"
+            }
+        ]
+    },
+    "docs": {
+        "title": "コース概要",
+        "subtitle": "全 4 章、17 レッスン",
+        "sections": [
+            {
+                "title": "クイックスタート",
+                "items": [
+                    {
+                        "title": "クイックスタート",
+                        "desc": "Plannotator とは何かを理解し、5 分で初回利用を完了",
+                        "link": "/ja/backnotprop/plannotator/start/getting-started/"
+                    },
+                    {
+                        "title": "Claude Code プラグインのインストール",
+                        "desc": "Claude Code に Plannotator プラグインをインストール・設定",
+                        "link": "/ja/backnotprop/plannotator/start/installation-claude-code/"
+                    },
+                    {
+                        "title": "OpenCode プラグインのインストール",
+                        "desc": "OpenCode に Plannotator プラグインをインストール・設定",
+                        "link": "/ja/backnotprop/plannotator/start/installation-opencode/"
+                    }
+                ]
+            },
+            {
+                "title": "コア機能",
+                "items": [
+                    {
+                        "title": "プランレビューの基本",
+                        "desc": "AI 生成プランをビジュアルレビュー、承認または拒否",
+                        "link": "/ja/backnotprop/plannotator/platforms/plan-review-basics/"
+                    },
+                    {
+                        "title": "プランアノテーションの追加",
+                        "desc": "削除・置換・挿入・コメントなど異なるタイプのアノテーションを追加",
+                        "link": "/ja/backnotprop/plannotator/platforms/plan-review-annotations/"
+                    },
+                    {
+                        "title": "画像アノテーションの追加",
+                        "desc": "画像を添付し、ブラシ・矢印・円形ツールでアノテーション",
+                        "link": "/ja/backnotprop/plannotator/platforms/plan-review-images/"
+                    },
+                    {
+                        "title": "コードレビューの基本",
+                        "desc": "/plannotator-review で git diff をレビュー",
+                        "link": "/ja/backnotprop/plannotator/platforms/code-review-basics/"
+                    },
+                    {
+                        "title": "コードアノテーションの追加",
+                        "desc": "行レベルのアノテーション（comment/suggestion/concern）を追加",
+                        "link": "/ja/backnotprop/plannotator/platforms/code-review-annotations/"
+                    },
+                    {
+                        "title": "Diff ビューの切り替え",
+                        "desc": "uncommitted/staged/last commit/branch など diff タイプを切り替え",
+                        "link": "/ja/backnotprop/plannotator/platforms/code-review-diff-types/"
+                    }
+                ]
+            },
+            {
+                "title": "高度な機能",
+                "items": [
+                    {
+                        "title": "URL 共有",
+                        "desc": "URL でプランとアノテーションを共有、バックエンド不要のチームコラボレーション",
+                        "link": "/ja/backnotprop/plannotator/advanced/url-sharing/"
+                    },
+                    {
+                        "title": "Obsidian 連携",
+                        "desc": "承認されたプランを Obsidian vault に自動保存",
+                        "link": "/ja/backnotprop/plannotator/advanced/obsidian-integration/"
+                    },
+                    {
+                        "title": "Bear 連携",
+                        "desc": "x-callback-url でプランを Bear に保存",
+                        "link": "/ja/backnotprop/plannotator/advanced/bear-integration/"
+                    },
+                    {
+                        "title": "リモート/Devcontainer モード",
+                        "desc": "SSH、devcontainer、WSL で Plannotator を使用",
+                        "link": "/ja/backnotprop/plannotator/advanced/remote-mode/"
+                    },
+                    {
+                        "title": "環境変数設定",
+                        "desc": "利用可能なすべての環境変数とその用途を理解",
+                        "link": "/ja/backnotprop/plannotator/advanced/environment-variables/"
+                    }
+                ]
+            },
+            {
+                "title": "よくある質問",
+                "items": [
+                    {
+                        "title": "よくある質問",
+                        "desc": "ポート占有、ブラウザが開かない、プランが表示されないなどの問題",
+                        "link": "/ja/backnotprop/plannotator/faq/common-problems/"
+                    },
+                    {
+                        "title": "トラブルシューティング",
+                        "desc": "ログ確認、エラー処理、デバッグテクニック",
+                        "link": "/ja/backnotprop/plannotator/faq/troubleshooting/"
+                    }
+                ]
+            }
+        ]
+    }
+}

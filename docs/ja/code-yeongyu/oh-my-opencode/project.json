@@ -1,0 +1,180 @@
+{
+  "project": {
+    "name": "oh-my-opencode",
+    "tagline": "多模型 AI 代理编排，让开发团队像真实专家一样工作",
+    "description": "别再一个人单打独斗。oh-my-opencode 提供 10 位专业 AI 代理、32 个生命周期钩子和 20+ 种开发工具，让你的 OpenCode 变身为一支高效的开发团队。",
+    "github_url": "https://github.com/code-yeongyu/oh-my-opencode"
+  },
+  "hero": {
+    "primary_action": {
+      "text": "快速开始",
+      "link": "/zh/code-yeongyu/oh-my-opencode/start/installation/"
+    }
+  },
+  "features": {
+    "title": "为什么选择 oh-my-opencode？",
+    "subtitle": "让 AI 代理像真实开发团队一样协同工作",
+    "list": [
+      {
+        "title": "🤖 多模型智能编排",
+        "desc": "统一管理 Claude、GPT、Gemini、Grok 等 10+ 个 AI 模型，根据任务类型自动选择最优模型"
+      },
+      {
+        "title": "⚡ 并行后台代理",
+        "desc": "像真实团队一样让多个专家代理并行工作，大幅提升开发效率，你可以在主会话继续其他任务"
+      },
+      {
+        "title": "🛠️ 深度工具链集成",
+        "desc": "LSP 代码重构、AST-Grep 模式搜索、MCP 协议扩展，提供 IDE 级别的代码分析和操作能力"
+      },
+      {
+        "title": "🚀 零配置即用",
+        "desc": "开箱即用的 10 个专业 AI 代理、32 个生命周期钩子、内置 Skills 系统，无需复杂配置即可开始"
+      },
+      {
+        "title": "🎯 Categories 和 Skills（v3.0）",
+        "desc": "动态组合模型抽象和专业知识，灵活创建专业子代理，取代硬编码代理实现"
+      },
+      {
+        "title": "🔄 Claude Code 完全兼容",
+        "desc": "无缝兼容 Claude Code 的 Commands、Skills、Agents、MCPs、Hooks 配置，平滑迁移"
+      }
+    ]
+  },
+  "docs": {
+    "title": "课程大纲",
+    "subtitle": "共 6 个章节，21 节课程",
+    "sections": [
+      {
+        "title": "入门指南 (Start)",
+        "items": [
+          {
+            "title": "快速安装与配置",
+            "desc": "引导用户完成 oh-my-opencode 的安装和初始配置，包括 Provider 设置和验证",
+            "link": "/zh/code-yeongyu/oh-my-opencode/start/installation/"
+          },
+          {
+            "title": "初识 Sisyphus：主编排器",
+            "desc": "介绍 Sisyphus 代理的核心功能和基本使用方法，让用户理解代理编排的概念",
+            "link": "/zh/code-yeongyu/oh-my-opencode/start/sisyphus-orchestrator/"
+          },
+          {
+            "title": "Ultrawork 模式：一键激活全部功能",
+            "desc": "教会用户使用 ultrawork 关键词快速激活所有专业代理和并行任务功能",
+            "link": "/zh/code-yeongyu/oh-my-opencode/start/ultrawork-mode/"
+          }
+        ]
+      },
+      {
+        "title": "平台功能 (Platforms)",
+        "items": [
+          {
+            "title": "Provider 配置：Claude、OpenAI、Gemini",
+            "desc": "详细指导用户配置各类 AI Provider，包括 Anthropic、OpenAI、Google 和 GitHub Copilot",
+            "link": "/zh/code-yeongyu/oh-my-opencode/platforms/provider-setup/"
+          },
+          {
+            "title": "多模型策略：自动降级与优先级",
+            "desc": "解释模型解析系统的三步优先级机制，帮助用户理解多模型编排如何工作",
+            "link": "/zh/code-yeongyu/oh-my-opencode/platforms/model-resolution/"
+          }
+        ]
+      },
+      {
+        "title": "进阶功能 (Advanced)",
+        "items": [
+          {
+            "title": "AI 代理团队：10 位专家介绍",
+            "desc": "全面介绍 10 个内置代理的功能、使用场景和调用方式，帮助用户根据任务选择合适的代理",
+            "link": "/zh/code-yeongyu/oh-my-opencode/advanced/ai-agents-overview/"
+          },
+          {
+            "title": "Prometheus 规划：面试式需求收集",
+            "desc": "教会用户使用 Prometheus 代理进行项目规划，通过面试模式明确需求并生成工作计划",
+            "link": "/zh/code-yeongyu/oh-my-opencode/advanced/prometheus-planning/"
+          },
+          {
+            "title": "后台并行任务：像团队一样工作",
+            "desc": "深入讲解后台代理管理系统的使用方法，包括并发控制、任务轮询和结果获取",
+            "link": "/zh/code-yeongyu/oh-my-opencode/advanced/background-tasks/"
+          },
+          {
+            "title": "LSP 与 AST-Grep：代码重构利器",
+            "desc": "介绍 LSP 工具和 AST-Grep 工具的使用方法，展示 IDE 级别的代码分析和操作能力",
+            "link": "/zh/code-yeongyu/oh-my-opencode/advanced/lsp-ast-tools/"
+          },
+          {
+            "title": "Categories 和 Skills：动态代理组合（v3.0）",
+            "desc": "教会用户使用 Categories 和 Skills 系统创建专业化的子代理，实现灵活的代理组合",
+            "link": "/zh/code-yeongyu/oh-my-opencode/advanced/categories-skills/"
+          },
+          {
+            "title": "内置 Skills：浏览器自动化与 Git 专家",
+            "desc": "详细介绍三个内置 Skills（playwright、frontend-ui-ux、git-master）的使用场景和最佳实践",
+            "link": "/zh/code-yeongyu/oh-my-opencode/advanced/builtin-skills/"
+          },
+          {
+            "title": "生命周期钩子：自动化上下文与质量控制",
+            "desc": "介绍 32 个生命周期钩子的使用方法，帮助用户理解如何自动化上下文注入、错误恢复和质量控制",
+            "link": "/zh/code-yeongyu/oh-my-opencode/advanced/lifecycle-hooks/"
+          },
+          {
+            "title": "斜杠命令：预设工作流",
+            "desc": "介绍 6 个内置斜杠命令的使用方法，包括 /ralph-loop、/refactor、/start-work 等",
+            "link": "/zh/code-yeongyu/oh-my-opencode/advanced/slash-commands/"
+          },
+          {
+            "title": "配置深度定制：代理与权限管理",
+            "desc": "教会用户深度自定义代理配置、权限设置、模型覆盖和提示词修改",
+            "link": "/zh/code-yeongyu/oh-my-opencode/advanced/advanced-configuration/"
+          }
+        ]
+      },
+      {
+        "title": "常见问题 (FAQ)",
+        "items": [
+          {
+            "title": "配置诊断与故障排除",
+            "desc": "提供常见配置问题的诊断方法和解决方案，帮助用户快速排查问题",
+            "link": "/zh/code-yeongyu/oh-my-opencode/faq/troubleshooting/"
+          },
+          {
+            "title": "常见问题解答",
+            "desc": "收集并回答用户最常遇到的问题，包括安装、配置、使用等各方面",
+            "link": "/zh/code-yeongyu/oh-my-opencode/faq/faq/"
+          }
+        ]
+      },
+      {
+        "title": "附录 (Appendix)",
+        "items": [
+          {
+            "title": "Claude Code 兼容性",
+            "desc": "详细说明 oh-my-opencode 对 Claude Code 的兼容支持，包括 Commands、Skills、Agents、MCPs、Hooks 的兼容情况",
+            "link": "/zh/code-yeongyu/oh-my-opencode/appendix/claude-code-compatibility/"
+          },
+          {
+            "title": "配置参考",
+            "desc": "提供完整的配置文件 schema 参考，包括所有字段、类型和默认值",
+            "link": "/zh/code-yeongyu/oh-my-opencode/appendix/configuration-reference/"
+          },
+          {
+            "title": "内置 MCP 服务器",
+            "desc": "介绍 3 个内置 MCP 服务器（Exa Websearch、Context7、Grep.app）的功能和使用方法",
+            "link": "/zh/code-yeongyu/oh-my-opencode/appendix/builtin-mcps/"
+          }
+        ]
+      },
+      {
+        "title": "更新日志 (Changelog)",
+        "items": [
+          {
+            "title": "v3.0 新特性：Categories 和 Skills 系统",
+            "desc": "介绍 v3.0 版本新增的 Categories 和 Skills 系统，以及重要的功能改进",
+            "link": "/zh/code-yeongyu/oh-my-opencode/changelog/v3.0-features/"
+          }
+        ]
+      }
+    ]
+  }
+}

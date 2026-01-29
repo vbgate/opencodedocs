@@ -1,0 +1,210 @@
+{
+    "project": {
+        "name": "Antigravity-Manager",
+        "tagline": "로컬 AI 계정 관리 및 프로토콜 리버스 프록시 시스템",
+        "description": "여러 AI 플랫폼의 Web/Session/OAuth 인증을 통합 API 게이트웨이로 변환하여 다중 계정 스케줄링, 지능형 회전, 할당량 모니터링 및 다중 프로토콜 호환 기능을 제공합니다. Tauri v2 + React + Rust 기반 데스크톱 애플리케이션입니다.",
+        "github_url": "https://github.com/lbjlaq/Antigravity-Manager"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "빠른 시작",
+            "link": "/ko/lbjlaq/Antigravity-Manager/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "왜 Antigravity-Manager인가요?",
+        "subtitle": "로컬 고성능 AI 스케줄링 게이트웨이. 단순한 계정 관리를 넘어, API 호출 장벽을 깨는 최종 솔루션.",
+        "list": [
+            {
+                "title": "다중 프로토콜 호환 엔드포인트",
+                "desc": "OpenAI /v1/chat/completions, Anthropic /v1/messages, Gemini 네이티브 SDK 엔드포인트를 외부에 노출하여 기존 클라이언트와 SDK를 재사용할 수 있습니다."
+            },
+            {
+                "title": "지능형 계정 스케줄링",
+                "desc": "회전, 고정 계정, 스티키 세션 및 실패 재시도를 지원합니다. 429/401 발생 시 자동 회전, invalid_grant 시 자동 오프라인, 밀리초급 자동 복구."
+            },
+            {
+                "title": "OAuth 인증 추가",
+                "desc": "브라우저 OAuth 인증과 Refresh Token 듀얼 채널을 통한 계정 추가, 일괄 가져오기/내보내기, V1/DB 핫 마이그레이션을 지원합니다."
+            },
+            {
+                "title": "할당량 거버넌스 및 보호",
+                "desc": "각 모델의 남은 할당량을 실시간으로 모니터링하고 모델 수준 할당량 보호와 Smart Warmup을 지원하여 무감각 소모를 방지합니다."
+            },
+            {
+                "title": "트래픽 모니터링 및 통계",
+                "desc": "Proxy Monitor는 요청 로그를 실시간으로 기록하고 Token Stats는 시간/일/주 단위로 소모를 통계하며 모델 및 계정별 분석을 지원합니다."
+            },
+            {
+                "title": "크로스 플랫폼 배포",
+                "desc": "macOS, Windows, Linux 데스크톱을 네이티브로 지원합니다. Docker noVNC와 Headless Xvfb 솔루션을 제공하여 NAS/서버 배포에 적합합니다."
+            }
+        ]
+    },
+    "docs": {
+        "title": "강의 개요",
+        "subtitle": "총 4개 챕터, 29개 강의",
+        "sections": [
+            {
+                "title": "시작하기 (Start)",
+                "items": [
+                    {
+                        "title": "Antigravity Tools란 무엇인가",
+                        "desc": "올바른 멘탈 모델 구축: 로컬 게이트웨이, 프로토콜 호환, 계정 풀 스케줄링",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/start/getting-started/"
+                    },
+                    {
+                        "title": "설치 및 업그레이드",
+                        "desc": "brew / releases 최적 설치 경로, 시스템 인터셉트 처리",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/start/installation/"
+                    },
+                    {
+                        "title": "처음 시작 시 필독",
+                        "desc": "데이터 디렉터리, 로그, 트레이 및 자동 시작",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/start/first-run-data/"
+                    },
+                    {
+                        "title": "계정 추가",
+                        "desc": "OAuth/Refresh Token 듀얼 채널과 모범 사례",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/start/add-account/"
+                    },
+                    {
+                        "title": "계정 백업 및 마이그레이션",
+                        "desc": "가져오기/내보내기, V1/DB 핫 마이그레이션",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/start/backup-migrate/"
+                    },
+                    {
+                        "title": "리버스 프록시 시작 및 클라이언트 연결",
+                        "desc": "/healthz + SDK 구성, 검증 루프 구축",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/start/proxy-and-first-client/"
+                    }
+                ]
+            },
+            {
+                "title": "플랫폼 기능 (Platforms)",
+                "items": [
+                    {
+                        "title": "OpenAI 호환 API",
+                        "desc": "/v1/chat/completions와 /v1/responses의 구현 전략",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/platforms/openai/"
+                    },
+                    {
+                        "title": "Anthropic 호환 API",
+                        "desc": "/v1/messages와 Claude Code의 핵심 계약",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/platforms/anthropic/"
+                    },
+                    {
+                        "title": "Gemini 네이티브 API",
+                        "desc": "/v1beta/models 및 Google SDK 엔드포인트 연결",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/platforms/gemini/"
+                    },
+                    {
+                        "title": "Imagen 3 이미지 생성",
+                        "desc": "OpenAI Images 매개변수 size/quality의 자동 매핑",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/platforms/imagen/"
+                    },
+                    {
+                        "title": "오디오 전사",
+                        "desc": "/v1/audio/transcriptions의 제한 사항과 대용량 처리",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/platforms/audio/"
+                    },
+                    {
+                        "title": "MCP 엔드포인트",
+                        "desc": "Web Search/Reader/Vision을 호출 가능한 도구로 사용",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/platforms/mcp/"
+                    },
+                    {
+                        "title": "Cloudflared 터널",
+                        "desc": "로컬 API를 안전하게 공용 네트워크에 노출",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/platforms/cloudflared/"
+                    }
+                ]
+            },
+            {
+                "title": "고급 기능 (Advanced)",
+                "items": [
+                    {
+                        "title": "구성 완전 해설",
+                        "desc": "AppConfig/ProxyConfig, 저장 위치 및 핫 업데이트 의미",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/advanced/config/"
+                    },
+                    {
+                        "title": "보안 및 개인정보",
+                        "desc": "auth_mode, allow_lan_access 및 보안 기준",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/advanced/security/"
+                    },
+                    {
+                        "title": "고가용성 스케줄링",
+                        "desc": "회전, 고정 계정, 스티키 세션 및 실패 재시도",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/advanced/scheduling/"
+                    },
+                    {
+                        "title": "모델 라우팅",
+                        "desc": "사용자 정의 매핑, 와일드카드 우선순위 및 프리셋 전략",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/advanced/model-router/"
+                    },
+                    {
+                        "title": "할당량 거버넌스",
+                        "desc": "Quota Protection + Smart Warmup 조합 전략",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/advanced/quota/"
+                    },
+                    {
+                        "title": "Proxy Monitor",
+                        "desc": "요청 로그, 필터링, 상세 복원 및 내보내기",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/advanced/monitoring/"
+                    },
+                    {
+                        "title": "Token Stats",
+                        "desc": "비용 관점의 통계 지표와 차트 해석",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/advanced/token-stats/"
+                    },
+                    {
+                        "title": "긴 세션 안정성",
+                        "desc": "컨텍스트 압축, 서명 캐싱 및 도구 결과 압축",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/advanced/context-compression/"
+                    },
+                    {
+                        "title": "시스템 기능",
+                        "desc": "다국어/테마/업데이트/시작 시 자동 실행/HTTP API Server",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/advanced/system/"
+                    },
+                    {
+                        "title": "서버 배포",
+                        "desc": "Docker noVNC vs Headless Xvfb 선정 및 운영",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/advanced/deployment/"
+                    }
+                ]
+            },
+            {
+                "title": "자주 묻는 질문 (FAQ)",
+                "items": [
+                    {
+                        "title": "invalid_grant 및 계정 비활성화",
+                        "desc": "발생 원인과 복구 방법",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/faq/invalid-grant/"
+                    },
+                    {
+                        "title": "401/인증 실패",
+                        "desc": "auth_mode, Header 호환 및 클라이언트 구성 체크리스트",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/faq/auth-401/"
+                    },
+                    {
+                        "title": "429/용량 오류",
+                        "desc": "계정 회전의 올바른 기대와 모델 용량 고객 오해",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/faq/429-rotation/"
+                    },
+                    {
+                        "title": "404/경로 호환성",
+                        "desc": "Base URL, /v1 접두사 및 중첩 경로 클라이언트",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/faq/404-base-url/"
+                    },
+                    {
+                        "title": "스트리밍 중단/0 Token/서명 무효화",
+                        "desc": "프록시의 자가 치유 메커니즘과 문제 해결 경로",
+                        "link": "/ko/lbjlaq/Antigravity-Manager/faq/streaming-0token/"
+                    }
+                ]
+            }
+        ]
+    }
+}

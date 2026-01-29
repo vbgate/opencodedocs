@@ -1,0 +1,110 @@
+{
+    "project": {
+        "name": "opencode-supermemory",
+        "tagline": "Memória persistente para OpenCode Agent",
+        "description": "Plugin OpenCode que fornece capacidade de memória persistente para agentes de codificação baseados em Supermemory, permitindo retenção de contexto entre sessões e projetos. Suporta armazenamento, recuperação e exclusão de memória, injeção automática de contexto ao iniciar a sessão e compressão preemptiva com base no uso de tokens.",
+        "github_url": "https://github.com/supermemoryai/opencode-supermemory"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Início Rápido",
+            "link": "/pt/supermemoryai/opencode-supermemory/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "Por que escolher opencode-supermemory?",
+        "subtitle": "Dê ao agente memória persistente e elimine a frustração de começar do zero em cada sessão.",
+        "list": [
+            {
+                "title": "Memória Persistente",
+                "desc": "Resolve o problema de perda de contexto após o término da sessão do agente, salvando informações importantes permanentemente e restaurando automaticamente na próxima sessão."
+            },
+            {
+                "title": "Reutilização entre Projetos",
+                "desc": "As preferências de codificação do usuário (como «prefere programação funcional») são automaticamente aplicadas em diferentes projetos, sem necessidade de explicações repetidas."
+            },
+            {
+                "title": "Compressão Inteligente",
+                "desc": "Quando o contexto está prestes a se esgotar, resume e salva automaticamente informações-chave, evitando «esquecimento» e mantendo a continuidade da sessão."
+            },
+            {
+                "title": "Anonimização de Privacidade",
+                "desc": "Suporta anonimização automática com a tag <private>, dados sensíveis não são enviados para a nuvem, protegendo sua privacidade."
+            },
+            {
+                "title": "Conjunto Completo de Ferramentas",
+                "desc": "Fornece cinco ferramentas principais: add, search, profile, list, forget, permitindo controlar a memória através de linguagem natural."
+            },
+            {
+                "title": "Injeção Automática de Contexto",
+                "desc": "Ao iniciar a sessão, injeta automaticamente o perfil do usuário e o conhecimento do projeto, o agente entra no estado imediatamente, sem necessidade de aquecimento."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Sumário do Curso",
+        "subtitle": "Total de 4 capítulos, 8 lições",
+        "sections": [
+            {
+                "title": "Guia de Início (Start)",
+                "items": [
+                    {
+                        "title": "Início Rápido",
+                        "desc": "Complete a instalação do plugin, configure a API Key e verifique a funcionalidade básica",
+                        "link": "/pt/supermemoryai/opencode-supermemory/start/getting-started/"
+                    },
+                    {
+                        "title": "Inicialização do Projeto",
+                        "desc": "Use o comando /supermemory-init para permitir que o agente faça uma varredura profunda e lembre da arquitetura do projeto",
+                        "link": "/pt/supermemoryai/opencode-supermemory/start/initialization/"
+                    }
+                ]
+            },
+            {
+                "title": "Funcionalidades Principais (Platforms)",
+                "items": [
+                    {
+                        "title": "Injeção Automática de Contexto",
+                        "desc": "Entenda como o agente obtém automaticamente o perfil do usuário e o conhecimento do projeto ao iniciar a sessão",
+                        "link": "/pt/supermemoryai/opencode-supermemory/platforms/context-injection/"
+                    },
+                    {
+                        "title": "Detalhes do Conjunto de Ferramentas",
+                        "desc": "Domine os cenários de uso das ferramentas como add, search, profile",
+                        "link": "/pt/supermemoryai/opencode-supermemory/platforms/tools/"
+                    },
+                    {
+                        "title": "Escopo da Memória",
+                        "desc": "Entenda a diferença entre User Scope e Project Scope, gerencie adição, exclusão, modificação e consulta de memória",
+                        "link": "/pt/supermemoryai/opencode-supermemory/platforms/memory-management/"
+                    }
+                ]
+            },
+            {
+                "title": "Funcionalidades Avançadas (Advanced)",
+                "items": [
+                    {
+                        "title": "Compressão Preemptiva",
+                        "desc": "Entenda profundamente o mecanismo de compressão automática acionado pelo limite de tokens, evite estouro de contexto",
+                        "link": "/pt/supermemoryai/opencode-supermemory/advanced/compaction/"
+                    },
+                    {
+                        "title": "Configuração Avançada",
+                        "desc": "Personalize limite de compressão, regras de gatilho por palavras-chave e parâmetros de pesquisa",
+                        "link": "/pt/supermemoryai/opencode-supermemory/advanced/configuration/"
+                    }
+                ]
+            },
+            {
+                "title": "Perguntas Frequentes (FAQ)",
+                "items": [
+                    {
+                        "title": "Privacidade e Segurança",
+                        "desc": "Entenda o mecanismo de anonimização da tag <private>, garanta que dados sensíveis não sejam enviados",
+                        "link": "/pt/supermemoryai/opencode-supermemory/faq/privacy/"
+                    }
+                ]
+            }
+        ]
+    }
+}

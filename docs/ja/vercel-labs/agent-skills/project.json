@@ -1,0 +1,120 @@
+{
+    "project": {
+        "name": "agent-skills",
+        "tagline": "Vercel AI コーディングエージェントスキルセット",
+        "description": "Claude などの AI エージェント向けの拡張可能なスキルセットを提供します。React パフォーマンス最適化の 57 ルール、Web デザインガイドの 100+ ルールが内蔵されており、Vercel へのワンクリックデプロイをサポートします。",
+        "github_url": "https://github.com/vercel-labs/agent-skills"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "クイックスタート",
+            "link": "/ja/vercel-labs/agent-skills/start/installation/"
+        }
+    },
+    "features": {
+        "title": "なぜ agent-skills を選ぶのか？",
+        "subtitle": "Vercel 公式提供。エンジニアリングチームのベストプラクティスを再利用可能なスキルとしてパッケージ化し、AI エージェントに自動適用させます。",
+        "list": [
+            {
+                "title": "React パフォーマンス最適化",
+                "desc": "Vercel エンジニアリングチームが検証した 57 ルールが含まれ、CRITICAL/HIGH/MEDIUM に分類され、ウォーターフォール解消、バンドル最適化などの 8 カテゴリをカバーします。"
+            },
+            {
+                "title": "Web デザインガイド",
+                "desc": "100+ の UI 監査ルールが含まれ、アクセシビリティ、アニメーションパフォーマンス、ダークモード、フォーム検証などの複数の次元をカバーします。"
+            },
+            {
+                "title": "Vercel ワンクリックデプロイ",
+                "desc": "40 以上のフレームワークを自動検出し、設定なしでデプロイし、プレビューリンクと所有権転送リンクを返します。"
+            },
+            {
+                "title": "自動トリガー",
+                "desc": "インストール後、Agent がタスクを自動的に認識し、対応するスキルをアクティブにします。手動で選択したり、コマンドを覚えたりする必要はありません。"
+            },
+            {
+                "title": "標準化された形式",
+                "desc": "Agent Skills 規格に従い、各スキルには SKILL.md、scripts/、references/ が含まれ、拡張が容易です。"
+            },
+            {
+                "title": "オープンソースで自由に拡張",
+                "desc": "MIT ライセンス。スキルを自由に拡張・カスタマイズしたり、既存のルールに基づいて独自のスキルセットを構築したりできます。"
+            }
+        ]
+    },
+    "docs": {
+        "title": "コース概要",
+        "subtitle": "全 4 章、10 レッスン",
+        "sections": [
+            {
+                "title": "スタートガイド (Start)",
+                "items": [
+                    {
+                        "title": "Agent Skills 入門",
+                        "desc": "Agent Skills とは何か、および AI コーディングエージェントの能力をどのように拡張するかを学びます",
+                        "link": "/ja/vercel-labs/agent-skills/start/getting-started/"
+                    },
+                    {
+                        "title": "Agent Skills のインストール",
+                        "desc": "1 つのコマンドで素早くインストールし、Claude Code と claude.ai を設定します",
+                        "link": "/ja/vercel-labs/agent-skills/start/installation/"
+                    }
+                ]
+            },
+            {
+                "title": "コアスキル (Platforms)",
+                "items": [
+                    {
+                        "title": "React パフォーマンス最適化",
+                        "desc": "Vercel の 57 ルールを適用し、ウォーターフォールを解消し、バンドルを最適化し、Re-render を減らします",
+                        "link": "/ja/vercel-labs/agent-skills/platforms/react-best-practices/"
+                    },
+                    {
+                        "title": "Web デザインガイド監査",
+                        "desc": "UI コードを監査する 100+ ルール。アクセシビリティ、パフォーマンス、UX をカバーします",
+                        "link": "/ja/vercel-labs/agent-skills/platforms/web-design-guidelines/"
+                    },
+                    {
+                        "title": "Vercel ワンクリックデプロイ",
+                        "desc": "認証なしで素早くアプリを公開し、フレームワークを自動検出してプレビューリンクを返します",
+                        "link": "/ja/vercel-labs/agent-skills/platforms/vercel-deploy/"
+                    }
+                ]
+            },
+            {
+                "title": "高度な機能 (Advanced)",
+                "items": [
+                    {
+                        "title": "スキル開発",
+                        "desc": "カスタムスキルの作成方法を学び、AI エージェントの能力を拡張します",
+                        "link": "/ja/vercel-labs/agent-skills/advanced/skill-development/"
+                    },
+                    {
+                        "title": "ルール作成",
+                        "desc": "ルール作成のスキルを習得し、チェックロジックと修正提案を定義します",
+                        "link": "/ja/vercel-labs/agent-skills/advanced/rule-authoring/"
+                    },
+                    {
+                        "title": "ビルドツールチェーン",
+                        "desc": "スキルセットのビルドとリリースのプロセスを理解します",
+                        "link": "/ja/vercel-labs/agent-skills/advanced/build-toolchain/"
+                    }
+                ]
+            },
+            {
+                "title": "よくある質問 (FAQ)",
+                "items": [
+                    {
+                        "title": "トラブルシューティング",
+                        "desc": "スキルがアクティブにならない、デプロイが失敗するなどの一般的な問題を解決します",
+                        "link": "/ja/vercel-labs/agent-skills/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "ベストプラクティス",
+                        "desc": "スキルの使用と開発に関するベストプラクティスの提案",
+                        "link": "/ja/vercel-labs/agent-skills/faq/best-practices/"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,120 @@
+{
+    "project": {
+        "name": "agent-skills",
+        "tagline": "Conjunto de habilidades para agentes de codificación AI de Vercel",
+        "description": "Proporciona un conjunto extensible de habilidades para agentes de IA como Claude. Incluye 57 reglas de optimización de rendimiento React, más de 100 guías de diseño web y admite despliegue con un clic en Vercel.",
+        "github_url": "https://github.com/vercel-labs/agent-skills"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Inicio rápido",
+            "link": "/es/vercel-labs/agent-skills/start/installation/"
+        }
+    },
+    "features": {
+        "title": "¿Por qué elegir agent-skills?",
+        "subtitle": "Producto oficial de Vercel, empaquetando las mejores prácticas del equipo de ingeniería en habilidades reutilizables para aplicación automática por agentes de IA.",
+        "list": [
+            {
+                "title": "Optimización de rendimiento React",
+                "desc": "Incluye 57 reglas verificadas por el equipo de ingeniería de Vercel, clasificadas por niveles CRITICAL/HIGH/MEDIUM, cubre 8 categorías, incluyendo eliminación de cascadas y optimización de bundling."
+            },
+            {
+                "title": "Guías de diseño web",
+                "desc": "Más de 100 reglas de auditoría UI, cubre accesibilidad, rendimiento de animación, modo oscuro, validación de formularios y otras dimensiones."
+            },
+            {
+                "title": "Despliegue Vercel con un clic",
+                "desc": "Detecta automáticamente más de 40 frameworks, despliega sin configuración y devuelve enlaces de vista previa y transferencia de propiedad."
+            },
+            {
+                "title": "Mecanismo de activación automática",
+                "desc": "Después de la instalación, el agente reconoce automáticamente tareas y activa habilidades correspondientes, sin selección manual o memorización de comandos."
+            },
+            {
+                "title": "Formato estandarizado",
+                "desc": "Sigue la especificación Agent Skills, cada habilidad incluye SKILL.md, scripts/ y references/, facilitando la extensión."
+            },
+            {
+                "title": "Extensión libre de código abierto",
+                "desc": "Licencia MIT, habilidades pueden ser libremente extendidas y personalizadas o crear su propio conjunto de habilidades basado en reglas existentes."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Resumen del curso",
+        "subtitle": "Total 4 capítulos, 10 lecciones",
+        "sections": [
+            {
+                "title": "Guía de inicio (Start)",
+                "items": [
+                    {
+                        "title": "Introducción a Agent Skills",
+                        "desc": "Descubra qué es Agent Skills y cómo extiende las capacidades de los agentes de codificación IA",
+                        "link": "/es/vercel-labs/agent-skills/start/getting-started/"
+                    },
+                    {
+                        "title": "Instalación de Agent Skills",
+                        "desc": "Instalación rápida con un comando, configure Claude Code y claude.ai",
+                        "link": "/es/vercel-labs/agent-skills/start/installation/"
+                    }
+                ]
+            },
+            {
+                "title": "Habilidades principales (Platforms)",
+                "items": [
+                    {
+                        "title": "Optimización de rendimiento React",
+                        "desc": "Aplicación de las 57 reglas de Vercel, eliminación de cascadas, optimización de bundling, reducción de Re-renders",
+                        "link": "/es/vercel-labs/agent-skills/platforms/react-best-practices/"
+                    },
+                    {
+                        "title": "Auditoría de guías de diseño web",
+                        "desc": "Auditoría de código UI con más de 100 reglas, cubre accesibilidad, rendimiento y UX",
+                        "link": "/es/vercel-labs/agent-skills/platforms/web-design-guidelines/"
+                    },
+                    {
+                        "title": "Despliegue Vercel con un clic",
+                        "desc": "Publicación rápida de aplicaciones sin autenticación, detección automática de framework y retorno de enlaces de vista previa",
+                        "link": "/es/vercel-labs/agent-skills/platforms/vercel-deploy/"
+                    }
+                ]
+            },
+            {
+                "title": "Funciones avanzadas (Advanced)",
+                "items": [
+                    {
+                        "title": "Desarrollo de habilidades",
+                        "desc": "Aprenda a crear habilidades personalizadas, extendiendo las capacidades de los agentes de IA",
+                        "link": "/es/vercel-labs/agent-skills/advanced/skill-development/"
+                    },
+                    {
+                        "title": "Escritura de reglas",
+                        "desc": "Domine las técnicas de escritura de reglas, defina la lógica de verificación y sugerencias de corrección",
+                        "link": "/es/vercel-labs/agent-skills/advanced/rule-authoring/"
+                    },
+                    {
+                        "title": "Cadena de herramientas de build",
+                        "desc": "Entienda el proceso de build y publicación de conjuntos de habilidades",
+                        "link": "/es/vercel-labs/agent-skills/advanced/build-toolchain/"
+                    }
+                ]
+            },
+            {
+                "title": "Preguntas frecuentes (FAQ)",
+                "items": [
+                    {
+                        "title": "Solución de problemas",
+                        "desc": "Resuelva problemas comunes como habilidades inactivas, despliegue fallido",
+                        "link": "/es/vercel-labs/agent-skills/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "Mejores prácticas",
+                        "desc": "Recomendaciones de mejores prácticas para el uso y desarrollo de habilidades",
+                        "link": "/es/vercel-labs/agent-skills/faq/best-practices/"
+                    }
+                ]
+            }
+        ]
+    }
+}

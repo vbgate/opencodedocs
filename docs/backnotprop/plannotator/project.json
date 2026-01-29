@@ -1,0 +1,175 @@
+{
+    "project": {
+        "name": "Plannotator",
+        "tagline": "Interactive Plan & Code Review for AI Agents",
+        "description": "Visual review tool for Claude Code and OpenCode. Mark up AI-generated plans with precise annotations, review Git diffs with line-level comments, share via URL, and auto-save to Obsidian/Bear.",
+        "github_url": "https://github.com/backnotprop/plannotator"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Get Started",
+            "link": "/backnotprop/plannotator/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "Why Plannotator?",
+        "subtitle": "Stop reading plans in the terminal. Review visually, annotate precisely, collaborate seamlessly.",
+        "list": [
+            {
+                "title": "Visual Plan Review",
+                "desc": "View AI-generated plans in your browser. Add delete, replace, insert, and comment annotations with a single click."
+            },
+            {
+                "title": "Code Review with Git Diff",
+                "desc": "Review code changes with side-by-side or unified diff views. Add line-level comments, suggestions, and concerns."
+            },
+            {
+                "title": "Image Annotation Tools",
+                "desc": "Attach images and annotate with brush, arrow, and circle tools. Perfect for UI feedback and visual explanations."
+            },
+            {
+                "title": "URL Sharing Without Backend",
+                "desc": "Share review content via URL hash using Deflate compression. No server required—fully client-side."
+            },
+            {
+                "title": "Obsidian & Bear Integration",
+                "desc": "Auto-save approved plans to your note-taking app with frontmatter and tags. Build your knowledge base automatically."
+            },
+            {
+                "title": "Claude Code & OpenCode Support",
+                "desc": "Seamless integration with both platforms. Install via plugin system or manual hook configuration."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Course Outline",
+        "subtitle": "6 chapters, 20 lessons",
+        "sections": [
+            {
+                "title": "Getting Started",
+                "items": [
+                    {
+                        "title": "Quick Start",
+                        "desc": "Understand Plannotator's core features and complete your first review in 5 minutes",
+                        "link": "/backnotprop/plannotator/start/getting-started/"
+                    },
+                    {
+                        "title": "Install (Claude Code)",
+                        "desc": "Install Plannotator CLI and Claude Code plugin with plugin system or manual hook",
+                        "link": "/backnotprop/plannotator/start/installation-claude-code/"
+                    },
+                    {
+                        "title": "Install (OpenCode)",
+                        "desc": "Configure Plannotator plugin in OpenCode via opencode.json",
+                        "link": "/backnotprop/plannotator/start/installation-opencode/"
+                    }
+                ]
+            },
+            {
+                "title": "Plan Review",
+                "items": [
+                    {
+                        "title": "Plan Review Basics",
+                        "desc": "Learn to review AI plans visually with approve/reject workflow",
+                        "link": "/backnotprop/plannotator/platforms/plan-review-basics/"
+                    },
+                    {
+                        "title": "Plan Annotations",
+                        "desc": "Master delete, replace, insert, and comment annotation types",
+                        "link": "/backnotprop/plannotator/platforms/plan-review-annotations/"
+                    },
+                    {
+                        "title": "Image Annotations",
+                        "desc": "Attach and annotate images with brush, arrow, and circle tools",
+                        "link": "/backnotprop/plannotator/platforms/plan-review-images/"
+                    }
+                ]
+            },
+            {
+                "title": "Code Review",
+                "items": [
+                    {
+                        "title": "Code Review Basics",
+                        "desc": "Review Git diff with /plannotator-review command",
+                        "link": "/backnotprop/plannotator/platforms/code-review-basics/"
+                    },
+                    {
+                        "title": "Code Annotations",
+                        "desc": "Add line-level comments, suggestions, and concerns to code",
+                        "link": "/backnotprop/plannotator/platforms/code-review-annotations/"
+                    },
+                    {
+                        "title": "Diff View Types",
+                        "desc": "Switch between side-by-side, unified, and different diff sources",
+                        "link": "/backnotprop/plannotator/platforms/code-review-diff-types/"
+                    }
+                ]
+            },
+            {
+                "title": "Advanced Features",
+                "items": [
+                    {
+                        "title": "URL Sharing",
+                        "desc": "Share review content via URL without any backend server",
+                        "link": "/backnotprop/plannotator/advanced/url-sharing/"
+                    },
+                    {
+                        "title": "Remote Mode",
+                        "desc": "Configure Plannotator for SSH, Devcontainer, and remote environments",
+                        "link": "/backnotprop/plannotator/advanced/remote-mode/"
+                    },
+                    {
+                        "title": "Environment Variables",
+                        "desc": "Customize port, browser, and other settings via environment variables",
+                        "link": "/backnotprop/plannotator/advanced/environment-variables/"
+                    },
+                    {
+                        "title": "Obsidian Integration",
+                        "desc": "Auto-save approved plans to Obsidian vault with frontmatter and tags",
+                        "link": "/backnotprop/plannotator/advanced/obsidian-integration/"
+                    },
+                    {
+                        "title": "Bear Integration",
+                        "desc": "Auto-save approved plans to Bear Notes with tags",
+                        "link": "/backnotprop/plannotator/advanced/bear-integration/"
+                    }
+                ]
+            },
+            {
+                "title": "FAQ",
+                "items": [
+                    {
+                        "title": "Common Problems",
+                        "desc": "Solutions for port conflicts, browser issues, and plugin loading failures",
+                        "link": "/backnotprop/plannotator/faq/common-problems/"
+                    },
+                    {
+                        "title": "Troubleshooting",
+                        "desc": "Debug tips and error resolution guide",
+                        "link": "/backnotprop/plannotator/faq/troubleshooting/"
+                    }
+                ]
+            },
+            {
+                "title": "Appendix",
+                "items": [
+                    {
+                        "title": "API Reference",
+                        "desc": "HTTP API endpoints and request/response formats",
+                        "link": "/backnotprop/plannotator/appendix/api-reference/"
+                    },
+                    {
+                        "title": "Data Models",
+                        "desc": "TypeScript interfaces for plans, annotations, and reviews",
+                        "link": "/backnotprop/plannotator/appendix/data-models/"
+                    },
+                    {
+                        "title": "License",
+                        "desc": "Business Source License 1.1 (BSL) details",
+                        "link": "/backnotprop/plannotator/appendix/license/"
+                    }
+                ]
+            }
+        ]
+    }
+}

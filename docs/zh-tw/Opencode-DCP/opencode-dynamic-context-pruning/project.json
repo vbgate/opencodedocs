@@ -1,0 +1,125 @@
+{
+    "project": {
+        "name": "opencode-dynamic-context-pruning",
+        "tagline": "智能 Token 優化插件",
+        "description": "OpenCode 插件，透過智慧移除對話歷史中的冗餘工具呼叫，自動降低 Token 使用量。支援自動去重、覆蓋寫入偵測、錯誤清理三種策略，以及 AI 驅動的 discard/extract 工具，讓模型自主決策何時清理上下文。",
+        "github_url": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "快速開始",
+            "link": "/zh-tw/Opencode-DCP/opencode-dynamic-context-pruning/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "為什麼選擇 DCP？",
+        "subtitle": "在長對話中節省大量 Token，降低 LLM 使用成本，提高模型回應品質。",
+        "list": [
+            {
+                "title": "自動去重策略",
+                "desc": "偵測相同工具名和參數的呼叫，自動保留最新一次，無需手動干預。"
+            },
+            {
+                "title": "覆蓋寫入偵測",
+                "desc": "追蹤檔案的寫操作和讀操作時間順序，自動清理已被後續讀取覆蓋的寫操作。"
+            },
+            {
+                "title": "錯誤清理策略",
+                "desc": "自動修剪超過指定回合數的錯誤工具輸入，保留錯誤訊息便於除錯。"
+            },
+            {
+                "title": "AI 驅動修剪",
+                "desc": "提供 discard 和 extract 工具，讓 AI 自主決策何時清理上下文，實現語義級優化。"
+            },
+            {
+                "title": "透明可控",
+                "desc": "透過 /dcp 指令查看 Token 使用情況、累計統計，支援手動觸發修剪。"
+            },
+            {
+                "title": "狀態持久化",
+                "desc": "跨會話保留修剪狀態和統計資料，長期追蹤 Token 節省效果。"
+            }
+        ]
+    },
+    "docs": {
+        "title": "課程大綱",
+        "subtitle": "共 4 個章節，11 節課程",
+        "sections": [
+            {
+                "title": "入門指南 (Start)",
+                "items": [
+                    {
+                        "title": "安裝與快速開始",
+                        "desc": "5 分鐘內完成 DCP 插件安裝並看到效果",
+                        "link": "/zh-tw/Opencode-DCP/opencode-dynamic-context-pruning/start/getting-started/"
+                    },
+                    {
+                        "title": "配置全解",
+                        "desc": "理解多層級配置系統和所有配置項的作用",
+                        "link": "/zh-tw/Opencode-DCP/opencode-dynamic-context-pruning/start/configuration/"
+                    }
+                ]
+            },
+            {
+                "title": "核心功能 (Platforms)",
+                "items": [
+                    {
+                        "title": "自動修剪策略詳解",
+                        "desc": "深入理解去重、覆蓋寫入、清除錯誤三種自動策略",
+                        "link": "/zh-tw/Opencode-DCP/opencode-dynamic-context-pruning/platforms/auto-pruning/"
+                    },
+                    {
+                        "title": "LLM 驅動修剪工具",
+                        "desc": "理解 AI 如何自主呼叫 discard 和 extract 工具優化上下文",
+                        "link": "/zh-tw/Opencode-DCP/opencode-dynamic-context-pruning/platforms/llm-tools/"
+                    },
+                    {
+                        "title": "Slash 指令使用",
+                        "desc": "掌握 /dcp context、stats、sweep 指令，監控和手動修剪",
+                        "link": "/zh-tw/Opencode-DCP/opencode-dynamic-context-pruning/platforms/commands/"
+                    }
+                ]
+            },
+            {
+                "title": "進階功能 (Advanced)",
+                "items": [
+                    {
+                        "title": "保護機制",
+                        "desc": "理解回合保護、受保護工具和受保護檔案模式",
+                        "link": "/zh-tw/Opencode-DCP/opencode-dynamic-context-pruning/advanced/protection/"
+                    },
+                    {
+                        "title": "狀態持久化",
+                        "desc": "理解 DCP 如何跨會話保留修剪狀態和統計資料",
+                        "link": "/zh-tw/Opencode-DCP/opencode-dynamic-context-pruning/advanced/state-persistence/"
+                    },
+                    {
+                        "title": "Prompt 快取影響",
+                        "desc": "理解 DCP 如何影響 Prompt Caching，權衡快取命中率",
+                        "link": "/zh-tw/Opencode-DCP/opencode-dynamic-context-pruning/advanced/prompt-caching/"
+                    },
+                    {
+                        "title": "子代理處理",
+                        "desc": "理解 DCP 在子代理會話中的行為和限制",
+                        "link": "/zh-tw/Opencode-DCP/opencode-dynamic-context-pruning/advanced/subagent-handling/"
+                    }
+                ]
+            },
+            {
+                "title": "常見問題 (FAQ)",
+                "items": [
+                    {
+                        "title": "常見問題與排錯",
+                        "desc": "解決使用 DCP 過程中遇到的常見問題",
+                        "link": "/zh-tw/Opencode-DCP/opencode-dynamic-context-pruning/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "最佳實踐",
+                        "desc": "使用 DCP 的最佳實踐建議，最大化 Token 節省效果",
+                        "link": "/zh-tw/Opencode-DCP/opencode-dynamic-context-pruning/faq/best-practices/"
+                    }
+                ]
+            }
+        ]
+    }
+}
