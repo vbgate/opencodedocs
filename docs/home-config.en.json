@@ -214,12 +214,12 @@
             },
             {
                 "title": "OpenCode Markdown Table Formatter",
-                "desc": "Optimized for OpenCode hidden mode, ensures perfect table alignment when Markdown symbols are hidden",
+                "desc": "OpenCode plugin that auto-formats AI-generated Markdown tables. Intelligently detects content width, supports bold, italic, code blocks, and keeps tables perfectly aligned",
                 "link": "/franlol/opencode-md-table-formatter/",
                 "repo": "https://github.com/franlol/opencode-md-table-formatter",
                 "meta": {
                     "lessons": "14 lessons",
-                    "stars": "156",
+                    "stars": "157",
                     "difficulty": "Beginner"
                 }
             },
@@ -257,14 +257,25 @@
                 }
             },
             {
-                "title": "Clawdbot",
+                "title": "Moltbot (formerly Clawdbot)",
                 "desc": "Your private AI assistant, available everywhere",
                 "link": "/moltbot/moltbot/",
                 "repo": "https://github.com/moltbot/moltbot",
                 "meta": {
                     "lessons": "43 lessons",
-                    "stars": "101.4k",
+                    "stars": "101.7k",
                     "difficulty": "Advanced"
+                }
+            },
+            {
+                "title": "Everything Claude Code",
+                "desc": "Battle-tested Claude Code plugin configs with 9 agents, 14 commands, and 11 skills",
+                "link": "/affaan-m/everything-claude-code/",
+                "repo": "https://github.com/affaan-m/everything-claude-code",
+                "meta": {
+                    "lessons": "27 lessons",
+                    "stars": "34.4k",
+                    "difficulty": "Intermediate"
                 }
             }
         ],

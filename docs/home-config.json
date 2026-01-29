@@ -225,12 +225,12 @@
             },
             {
                 "title": "OpenCode Markdown Table Formatter",
-                "desc": "专门优化 OpenCode 隐藏模式，确保表格在隐藏 Markdown 符号时依然完美对齐",
+                "desc": "OpenCode 插件，自动格式化 AI 生成的 Markdown 表格。智能识别内容宽度，支持粗体、斜体、代码块等格式，让表格始终整齐美观",
                 "link": "/zh/franlol/opencode-md-table-formatter/",
                 "repo": "https://github.com/franlol/opencode-md-table-formatter",
                 "meta": {
                     "lessons": "14 课时",
-                    "stars": "156",
+                    "stars": "157",
                     "difficulty": "入门"
                 }
             },
@@ -268,14 +268,25 @@
                 }
             },
             {
-                "title": "Clawdbot",
+                "title": "Moltbot (原 Clawdbot)",
                 "desc": "你的私有 AI 助手，随处可用",
                 "link": "/zh/moltbot/moltbot/",
                 "repo": "https://github.com/moltbot/moltbot",
                 "meta": {
                     "lessons": "43 课时",
-                    "stars": "101.4k",
+                    "stars": "101.7k",
                     "difficulty": "进阶"
+                }
+            },
+            {
+                "title": "Everything Claude Code",
+                "desc": "经过实战验证的 Claude Code 插件配置集合，含 9 个 agents、14 个 commands、11 个 skills",
+                "link": "/zh/affaan-m/everything-claude-code/",
+                "repo": "https://github.com/affaan-m/everything-claude-code",
+                "meta": {
+                    "lessons": "27 课时",
+                    "stars": "34.4k",
+                    "difficulty": "中级"
                 }
             }
         ],

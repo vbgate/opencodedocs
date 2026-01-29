@@ -214,12 +214,12 @@
             },
             {
                 "title": "OpenCode Markdown Table Formatter",
-                "desc": "Optimiert für OpenCode Hidden Mode, Tabellen bleiben perfekt ausgerichtet auch wenn Markdown-Symbole ausgeblendet sind",
+                "desc": "OpenCode-Plugin zur automatischen Formatierung von KI-generierten Markdown-Tabellen. Erkennt Spaltenbreiten intelligent, unterstützt Fett, Kursiv und Codeblöcke für stets perfekt ausgerichtete Tabellen",
                 "link": "/de/franlol/opencode-md-table-formatter/",
                 "repo": "https://github.com/franlol/opencode-md-table-formatter",
                 "meta": {
                     "lessons": "14 Lektionen",
-                    "stars": "156",
+                    "stars": "157",
                     "difficulty": "Anfänger"
                 }
             },
@@ -257,14 +257,25 @@
                 }
             },
             {
-                "title": "Clawdbot",
+                "title": "Moltbot (ehemals Clawdbot)",
                 "desc": "Dein privater KI-Assistent, überall verfügbar",
                 "link": "/de/moltbot/moltbot/",
                 "repo": "https://github.com/moltbot/moltbot",
                 "meta": {
                     "lessons": "43 Lektionen",
-                    "stars": "101.4k",
+                    "stars": "101.7k",
                     "difficulty": "Fortgeschritten"
+                }
+            },
+            {
+                "title": "Everything Claude Code",
+                "desc": "Kampferprobte Claude Code Plugin-Konfigurationen mit 9 Agents, 14 Commands und 11 Skills",
+                "link": "/de/affaan-m/everything-claude-code/",
+                "repo": "https://github.com/affaan-m/everything-claude-code",
+                "meta": {
+                    "lessons": "27 Lektionen",
+                    "stars": "34.4k",
+                    "difficulty": "Mittelstufe"
                 }
             }
         ],
