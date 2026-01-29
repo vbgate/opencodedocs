@@ -117,7 +117,7 @@ tags: [plan, authentication, typescript, sql]
 保存される各プランには以下のfrontmatterフィールドが含まれます：
 
 | フィールド | 値の例                           | 説明                         |
-| ---------- | -------------------------------- | ---------------------------- |
+|--- | --- | ---|
 | `created` | `2026-01-24T14:30:00.000Z`    | ISO 8601形式の作成タイムスタンプ |
 | `source` | `plannotator`                   | 固定値、ソースを識別         |
 | `tags` | `[plan, authentication, typescript]` | 自動抽出されたタグ配列 |
@@ -142,7 +142,7 @@ Plannotatorは以下のルールでタグを自動抽出します：
 ファイル名は読みやすい形式を採用：`Title - Jan 2, 2026 2-30pm.md`
 
 | 部分       | 例           | 説明                  |
-| ---------- | ------------ | --------------------- |
+|--- | --- | ---|
 | タイトル   | `User Authentication` | H1から抽出、50文字制限 |
 | 日付       | `Jan 2, 2026` | 現在の日付             |
 | 時刻       | `2-30pm`     | 現在の時刻（12時間制） |
@@ -160,7 +160,7 @@ Plannotatorは以下のルールでタグを自動抽出します：
 Plannotatorは異なるOSのObsidian設定ファイルの場所を自動検出します：
 
 | OS | 設定ファイルパス                                    |
-| -------- | ----------------------------------------------- |
+|--- | ---|
 | macOS     | `~/Library/Application Support/obsidian/obsidian.json` |
 | Windows   | `%APPDATA%\obsidian/obsidian.json`                 |
 | Linux     | `~/.config/obsidian/obsidian.json`                 |
@@ -229,7 +229,7 @@ Obsidian連携機能により、プランレビューワークフローとナレ
 > 更新日：2026-01-24
 
 | 機能                | ファイルパス                                                                                     | 行番号    |
-| ------------------- | -------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Obsidian vaultsの検出 | [`packages/server/integrations.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/integrations.ts#L135-L175) | 135-175 |
 | Obsidianへプラン保存 | [`packages/server/integrations.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/integrations.ts#L180-L227) | 180-227 |
 | タグ抽出             | [`packages/server/integrations.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/integrations.ts#L34-L74) | 34-74   |

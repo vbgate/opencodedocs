@@ -44,7 +44,7 @@ mystatus output has a consistent format, but varies across platforms:
 
 **Platform Differences**:
 | Platform | Quota Cycle | Features |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | OpenAI | 3 hours / 24 hours | May show two windows |
 | Zhipu AI / Z.ai | 5-hour Token / MCP monthly quota | Two different quota types |
 | GitHub Copilot | Monthly | Shows exact values (229/300) |
@@ -209,7 +209,7 @@ Quota resets: 19d 0h (2026-02-01)
 
 **Subscription Type Differences**:
 | Subscription Type | Monthly Quota | Description |
-| -------- | -------- | ---- |
+|--- | --- | ---|
 | Free | N/A | No quota limit, but limited features |
 | Pro | 300 | Standard personal version |
 | Pro+ | Higher | Upgraded version |
@@ -235,7 +235,7 @@ G3 Pro     4h 59m     ████████░░░░░░░░░░░�
 
 **4 Models Explanation**:
 | Model Name | Corresponding API Key | Purpose |
-| ------ | ------------ | ---- |
+|--- | --- | ---|
 | G3 Pro | `gemini-3-pro-high` / `gemini-3-pro-low` | Advanced reasoning |
 | G3 Image | `gemini-3-pro-image` | Image generation |
 | G3 Flash | `gemini-3-flash` | Fast generation |
@@ -251,7 +251,7 @@ G3 Pro     4h 59m     ████████░░░░░░░░░░░�
 ### Common Misconceptions
 
 | Misconception | Fact |
-| ---- | ---- |
+|--- | ---|
 | All filled progress bars = never used | More filled blocks = **more remaining**, use freely |
 | Short reset time = quota almost gone | Short reset time = about to reset, can continue using |
 | 100% percentage = all used | 100% percentage = **all remaining** |
@@ -295,7 +295,7 @@ mystatus is a **read-only tool** that does not consume your quota or trigger any
 > Updated: 2026-01-23
 
 | Feature | File Path | Line Number |
-| --- | --- | --- |
+|--- | --- | ---|
 | Progress bar generation | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L40-L53) | 40-53 |
 | Time formatting | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L18-L29) | 18-29 |
 | Remaining percentage calculation | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L63-L65) | 63-65 |

@@ -24,7 +24,7 @@ Recomenda-se aprender na seguinte ordem:
 ## Conteúdo do capítulo
 
 | Curso | Descrição | Tempo de aprendizado |
-|------|------|----------|
+|--- | --- | ---|
 | [Comece em 1 minuto: Instalação e Configuração](./getting-started/) | Aprenda como instalar o plugin e configurar o OpenCode, veja imediatamente o efeito de formatação | 3 minutos |
 | [Visão Geral de Recursos: A Mágica da Formatação Automática](./features/) | Entenda os 8 recursos principais do plugin, domine o que ele pode e não pode fazer | 5 minutos |
 

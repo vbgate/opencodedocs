@@ -281,7 +281,7 @@ Usage notes:
 **关键元素说明**：
 
 | 元素 | 作用 |
-| ---- | ---- |
+|--- | ---|
 | `<skills_system>` | XML 标签，告诉 AI 这是一个技能系统定义 |
 | `<usage>` | 使用说明，告诉 AI 如何调用技能 |
 | `<available_skills>` | 可用技能列表 |
@@ -515,7 +515,7 @@ npx openskills sync -o skills.md
 **核心命令**：
 
 | 命令 | 作用 |
-| ---- | ---- |
+|--- | ---|
 | `npx openskills sync` | 交互式同步技能到 AGENTS.md |
 | `npx openskills sync -y` | 非交互式同步所有技能 |
 | `npx openskills sync -o custom.md` | 同步到自定义文件 |
@@ -552,7 +552,7 @@ npx openskills sync -o skills.md
 > 更新时间：2026-01-24
 
 | 功能 | 文件路径 | 行号 |
-| ---- | --------- | ---- |
+|--- | --- | ---|
 | sync 命令入口 | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts#L18-L109) | 18-109 |
 | 输出文件验证 | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts#L19-L26) | 19-26 |
 | 创建不存在的文件 | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts#L28-L36) | 28-36 |

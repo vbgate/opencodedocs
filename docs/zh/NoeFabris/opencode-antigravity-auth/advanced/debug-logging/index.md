@@ -38,7 +38,7 @@ order: 3
 调试日志适合以下场景：
 
 | 场景 | 是否需要 | 原因 |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | 排查 429 速率限制 | ✅ 需要 | 查看具体是哪个账户、哪个模型限速 |
 | 排查认证失败 | ✅ 需要 | 检查令牌刷新、OAuth 流程 |
 | 排查请求转换问题 | ✅ 需要 | 对比原始请求和转换后的请求 |
@@ -69,7 +69,7 @@ order: 3
 **日志内容概览**：
 
 | 日志类型 | 标签 | 内容示例 |
-| -------- | ---- | -------- |
+|--- | --- | ---|
 | 请求追踪 | `Antigravity Debug ANTIGRAVITY-1` | URL、headers、body 预览 |
 | 响应追踪 | `Antigravity Debug ANTIGRAVITY-1` | 状态码、耗时、响应 body |
 | 账户上下文 | `[Account]` | 选中账户、账户索引、模型族 |
@@ -445,7 +445,7 @@ Get-ChildItem "$env:APPDATA\opencode\antigravity-logs\antigravity-debug-*.log" |
 > 更新时间：2026-01-23
 
 | 功能        | 文件路径                                                                                    | 行号    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Debug 模块 | [`src/plugin/debug.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/debug.ts) | 全文   |
 | 调试初始化 | [`src/plugin/debug.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/debug.ts#L98-L118) | 98-118 |
 | 请求追踪 | [`src/plugin/debug.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/debug.ts#L189-L212) | 189-212 |
@@ -457,7 +457,7 @@ Get-ChildItem "$env:APPDATA\opencode\antigravity-logs\antigravity-debug-*.log" |
 **关键常量**：
 
 | 常量名 | 值 | 说明 |
-| -------- | --- | ---- |
+|--- | --- | ---|
 | `MAX_BODY_PREVIEW_CHARS` | 12000 | Basic 级别的 body 预览长度 |
 | `MAX_BODY_VERBOSE_CHARS` | 50000 | Verbose 级别的 body 预览长度 |
 | `DEBUG_MESSAGE_PREFIX` | `"[opencode-antigravity-auth debug]"` | 调试日志前缀 |
@@ -477,14 +477,14 @@ Get-ChildItem "$env:APPDATA\opencode\antigravity-logs\antigravity-debug-*.log" |
 **配置项**（来自 schema.ts）：
 
 | 配置项 | 类型 | 默认值 | 说明 |
-| -------- | ---- | ------ | ---- |
+|--- | --- | --- | ---|
 | `debug` | boolean | `false` | 启用调试日志 |
 | `log_dir` | string? | undefined | 自定义日志目录 |
 
 **环境变量**：
 
 | 环境变量 | 值 | 说明 |
-| -------- | --- | ---- |
+|--- | --- | ---|
 | `OPENCODE_ANTIGRAVITY_DEBUG` | "0"/"1"/"2"/"true"/"verbose" | 覆盖 debug 配置，控制日志级别 |
 | `OPENCODE_ANTIGRAVITY_LOG_DIR` | string | 覆盖 log_dir 配置，指定日志目录 |
 

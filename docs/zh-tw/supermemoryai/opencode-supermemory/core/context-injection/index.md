@@ -43,7 +43,7 @@ opencode-supermemory 極其克制，只在 **會話的第一條訊息** 時觸�
 外掛會並行獲取三類資料，組合成一個 `[SUPERMEMORY]` 提示區塊：
 
 | 資料維度 | 來源 | 作用 | 範例 |
-| :--- | :--- | :--- | :--- |
+|--- | --- | --- | ---|
 | **1. 使用者設定檔** (Profile) | `getProfile` | 你的長期偏好 | "使用者喜歡函數式程式設計"、"偏好箭頭函數" |
 | **2. 專案知識** (Project) | `listMemories` | 當前專案的全面知識 | "本專案使用 Clean Architecture"、"API 放在 src/api" |
 | **3. 相關記憶** (Relevant) | `searchMemories` | 與你第一句話相關的過往經驗 | 你問「怎麼修這個 Bug」，它搜出之前的類似修復記錄 |
@@ -180,7 +180,7 @@ Agent 看到這些資訊後，就會表現得像一個在這個專案工作了�
 > 更新時間：2026-01-23
 
 | 功能 | 檔案路徑 | 行號 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | 注入觸發邏輯 | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L125-L176) | 125-176 |
 | 關鍵詞偵測 | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L34-L37) | 34-37 |
 | Prompt 格式化 | [`src/services/context.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/context.ts#L14-L64) | 14-64 |

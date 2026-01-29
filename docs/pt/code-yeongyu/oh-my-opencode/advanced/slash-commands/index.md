@@ -36,7 +36,7 @@ Essas instruções longas desperdiçam tempo e são propensas a etapas perdidas.
 **Comandos de barra** são modelos de fluxo de trabalho predefinidos que acionam tarefas complexas com um clique. Esses comandos cobrem cenários comuns de desenvolvimento:
 
 | Cenário | Comando para Usar |
-|---------|-------------------|
+|--- | ---|
 | Inicializar base de conhecimento do projeto | `/init-deep` |
 | Fazer a IA trabalhar continuamente | `/ralph-loop` |
 | Refatorar código inteligentemente | `/refactor` |
@@ -64,7 +64,7 @@ graph LR
 oh-my-opencode inclui 6 comandos de barra integrados:
 
 | Comando | Função | Complexidade |
-|---------|---------|--------------|
+|--- | --- | ---|
 | `/init-deep` | Gerar arquivos AGENTS.md hierárquicos | Média |
 | `/ralph-loop` | Loop de desenvolvimento auto-referencial | Alta |
 | `/ulw-loop` | Versão Ultrawork do ralph-loop | Alta |
@@ -305,7 +305,7 @@ Qual plano você gostaria de trabalhar? (Digite número ou nome do plano)
 ## Resumo
 
 | Comando | Função Principal | Frequência de Uso |
-|---------|------------------|-------------------|
+|--- | --- | ---|
 | `/init-deep` | Gerar automaticamente base de conhecimento do projeto | Configuração inicial |
 | `/ralph-loop` | Loop de trabalho contínuo | Alta |
 | `/ulw-loop` | Versão Ultrawork do loop | Média |
@@ -339,7 +339,7 @@ Qual plano você gostaria de trabalhar? (Digite número ou nome do plano)
 > Atualizado: 2026-01-26
 
 | Funcionalidade | Caminho do Arquivo | Números de Linha |
-|----------------|-------------------|-------------------|
+|--- | --- | ---|
 | Definições de comandos | [`src/features/builtin-commands/commands.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/commands.ts) | 8-73 |
 | Carregador de comandos | [`src/features/builtin-commands/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/index.ts) | 75-89 |
 | Modelo init-deep | [`src/features/builtin-commands/templates/init-deep.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/templates/init-deep.ts) | Texto completo |

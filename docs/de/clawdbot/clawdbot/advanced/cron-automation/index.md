@@ -40,7 +40,7 @@ Möglicherweise stehen Sie vor diesen Situationen:
 **Cron-Geplante Aufgaben** sind geeignet für diese Szenarien:
 
 | Szenario | Beispiel | Planungsmethode |
-|----------|----------|-----------------|
+|--- | --- | ---|
 | Einmalige Erinnerung | "Erinnere mich morgen um 9 Uhr morgens an die Besprechung" | at |
 | Regelmäßige Überprüfung | "Überprüfen Sie den Systemstatus alle 30 Minuten" | every |
 | Zeitgesteuerte Ausführung | "Generieren Sie täglich um 17 Uhr einen Bericht" | cron |
@@ -80,7 +80,7 @@ graph LR
 ### Vergleich der drei Planungsmethoden
 
 | Methode | Anwendungsszenario | Beispiel | Genauigkeit |
-|---------|-------------------|----------|-------------|
+|--- | --- | --- | ---|
 | `at` | Einmalige Aufgabe | 2026-01-27 09:00:00 | Millisekunden-Genauigkeit |
 | `every` | Festes Intervall | Alle 30 Minuten | Millisekunden-Genauigkeit |
 | `cron` | Komplexer Zyklus | Jeden Morgen um 9 Uhr | Minuten-Genauigkeit |
@@ -88,7 +88,7 @@ graph LR
 ### Zwei Sitzungsziele
 
 | Sitzungsziel | Payload-Typ | Beschreibung |
-|--------------|-------------|--------------|
+|--- | --- | ---|
 | `main` | `systemEvent` | Systemereignisse in die Hauptsitzung einfügen |
 | `isolated` | `agentTurn` | Agent in isolierter Sitzung ausführen |
 
@@ -282,7 +282,7 @@ Erstellen Sie eine Aufgabe, die jeden Morgen um 9 Uhr ausgeführt wird:
 **Häufige Ausdrücke**:
 
 | Ausdruck | Beschreibung |
-|-----------|--------------|
+|--- | ---|
 | `0 9 * * *` | Jeden Morgen um 9 Uhr |
 | `0 9 * * 1-5` | Montag bis Freitag um 9 Uhr morgens |
 | `0 */6 * * *` | Alle 6 Stunden |
@@ -336,7 +336,7 @@ Erstellen Sie eine Aufgabe, die in einer isolierten Sitzung ausgeführt wird:
 **`agentTurn` Payload-Parameter**:
 
 | Parameter | Typ | Beschreibung |
-|-----------|------|--------------|
+|--- | --- | ---|
 | `message` | string | An Agent gesendeter Prompt |
 | `model` | string | Zu verwendendes Modell überschreiben (optional) |
 | `thinking` | string | Denkebene: "off" \| "minimal" \| "low" \| "medium" \| "high" |
@@ -359,7 +359,7 @@ Erstellen Sie eine Aufgabe, die in einer isolierten Sitzung ausgeführt wird:
 ```
 
 | Parameter | Beschreibung |
-|-----------|--------------|
+|--- | ---|
 | `postToMainPrefix` | Präfix beim Zurücksenden von Ergebnissen an Hauptsitzung |
 | `postToMainMode` | "summary" (Zusammenfassung) oder "full" (vollständiger Text) |
 | `postToMainMaxChars` | Maximalzeichenanzahl, wenn `postToMainMode="full"` |
@@ -564,7 +564,7 @@ Webhooks ermöglichen es externen Diensten, interne Ereignisse von Clawdbot übe
 **Mapping-Konfigurationsparameter**:
 
 | Parameter | Beschreibung |
-|-----------|--------------|
+|--- | ---|
 | `match.path` | Abzugleichender URL-Pfad |
 | `match.source` | Abzugleichender Anfrage-Quell-Header |
 | `action` | `"wake"` oder `"agent"` |
@@ -611,7 +611,7 @@ Gmail Pub/Sub ermöglicht es Ihnen, Clawdbot in Echtzeit auszulösen, wenn Sie n
 **Beschreibung der Konfigurationsparameter**:
 
 | Parameter | Beschreibung | Standardwert |
-|-----------|--------------|--------------|
+|--- | --- | ---|
 | `account` | Gmail-Kontoadresse | - |
 | `label` | Zu überwachendes Gmail-Label | `INBOX` |
 | `topic` | Google Cloud Pub/Sub-Themenpfad | - |
@@ -656,7 +656,7 @@ Gmail Pub/Sub ermöglicht es Ihnen, Clawdbot in Echtzeit auszulösen, wenn Sie n
 ```
 
 | Modus | Beschreibung |
-|-------|--------------|
+|--- | ---|
 | `off` | Tailscale nicht verwenden |
 | `serve` | Lokalen Dienst über Tailscale Serve verfügbar machen |
 | `funnel` | Zugriff aus Internet über Tailscale Funnel |
@@ -708,8 +708,8 @@ clawdbot hooks gmail-watch
 **Mögliche Ursachen**:
 
 | Ursache | Lösung |
-|---------|--------|
-| Cron-Dienst nicht aktiviert | `cron.enabled`-Konfiguration prüfen |
+|--- | ---|
+|--- | ---|
 | Zeit noch nicht erreicht | Nächste Ausführung mit `clawdbot cron list` prüfen |
 | Falsche Zeitzone | Prüfen, ob `tz`-Feld korrekt ist |
 | Aufgabe deaktiviert | Aufgabenstatus mit `--include-disabled` prüfen |
@@ -721,7 +721,7 @@ clawdbot hooks gmail-watch
 **Häufige Fehler**:
 
 | Fehler | Richtig | Beschreibung |
-|--------|---------|--------------|
+|--- | --- | ---|
 | `9 * * *` | `0 9 * * *` | Minutenfeld fehlt |
 | `0 9 * * * *` | `0 9 * * *` | Ein Feld zu viel |
 | `0 9 1-5 * *` | `0 9 * * 1-5` | Falsche Position des Wochentagsfelds |
@@ -803,17 +803,17 @@ Durch ordnungsgemäße Konfiguration dieser Funktionen können Sie einen vollst�
 > Aktualisierungsdatum: 2026-01-27
 
 | Funktion | Dateipfad | Zeilennummern |
-|----------|-----------|---------------|
-| Cron-Konfigurationstypdefinition | [`src/config/types.cron.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.cron.ts#L1-L6) | 1-6 |
-| Cron-Kerntypdefinition | [`src/cron/types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/types.ts#L1-L95) | 1-95 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Cron Service | [`src/cron/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/service.ts#L1-L49) | 1-49 |
-| Cron-Operationsimplementierung | [`src/cron/service/ops.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/service/ops.ts#L1-L141) | 1-141 |
-| Cron-Tool-Implementierung | [`src/agents/tools/cron-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/cron-tool.ts#L1-L291) | 1-291 |
-| Gateway-Cron-Methoden | [`src/gateway/server-methods/cron.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/cron.ts#L1-L205) | 1-205 |
-| Hooks-Konfigurationstypdefinition | [`src/config/types.hooks.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.hooks.ts#L1-L125) | 1-125 |
-| Hooks Gmail-Tool | [`src/hooks/gmail.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/hooks/gmail.ts#L1-L267) | 1-267 |
-| Hooks-interne Ereignisse | [`src/hooks/hooks.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/hooks/hooks.ts#L1-L15) | 1-15 |
-| Hooks CLI-Befehle | [`src/cli/hooks-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/hooks-cli.ts#L1-L839) | 1-839 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Konstanten**:
 - `DEFAULT_GMAIL_LABEL = "INBOX"`: Gmail-Standardlabel

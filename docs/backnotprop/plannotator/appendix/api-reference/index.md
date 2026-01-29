@@ -54,7 +54,7 @@ Get the current plan content and related metadata.
 ```
 
 | Field | Type | Description |
-| ----- | ---- | ----------- |
+|--- | --- | ---|
 | `plan` | string | Plan Markdown content |
 | `origin` | string | Source identifier (`"claude-code"` or `"opencode"`) |
 | `permissionMode` | string | Current permission mode (Claude Code specific) |
@@ -101,7 +101,7 @@ Approve the current plan, optionally saving to a note-taking app.
 **Field Description**:
 
 | Field | Type | Required | Description |
-| ----- | ---- | -------- | ----------- |
+|--- | --- | --- | ---|
 | `obsidian` | object | No | Obsidian save configuration |
 | `bear` | object | No | Bear save configuration |
 | `feedback` | string | No | Note when approving (OpenCode only) |
@@ -112,7 +112,7 @@ Approve the current plan, optionally saving to a note-taking app.
 **Obsidian Configuration Fields**:
 
 | Field | Type | Required | Description |
-| ----- | ---- | -------- | ----------- |
+|--- | --- | --- | ---|
 | `vaultPath` | string | Yes | Vault file path |
 | `folder` | string | No | Target folder (default: root) |
 | `tags` | string[] | No | Auto-generated tags |
@@ -148,7 +148,7 @@ Reject the current plan and provide feedback.
 **Field Description**:
 
 | Field | Type | Required | Description |
-| ----- | ---- | -------- | ----------- |
+|--- | --- | --- | ---|
 | `feedback` | string | No | Reason for rejection (default: "Plan rejected by user") |
 | `planSave` | object | No | Plan save configuration |
 
@@ -208,7 +208,7 @@ Get the current git diff content.
 ```
 
 | Field | Type | Description |
-| ----- | ---- | ----------- |
+|--- | --- | ---|
 | `rawPatch` | string | Git diff unified format patch |
 | `gitRef` | string | Git reference used |
 | `origin` | string | Source identifier |
@@ -219,7 +219,7 @@ Get the current git diff content.
 **gitContext Field Description**:
 
 | Field | Type | Description |
-| ----- | ---- | ----------- |
+|--- | --- | ---|
 | `currentBranch` | string | Current branch name |
 | `defaultBranch` | string | Default branch name (main or master) |
 | `diffOptions` | object[] | Available diff type options (contains id and label) |
@@ -241,7 +241,7 @@ Switch to a different type of git diff.
 **Supported Diff Types**:
 
 | Type | Git Command | Description |
-| ---- | ----------- | ----------- |
+|--- | --- | ---|
 | `uncommitted` | `git diff HEAD` | Uncommitted changes (default) |
 | `staged` | `git diff --staged` | Staged changes |
 | `last-commit` | `git diff HEAD~1..HEAD` | Last commit |
@@ -287,7 +287,7 @@ Submit code review feedback to the AI Agent.
 **Field Description**:
 
 | Field | Type | Required | Description |
-| ----- | ---- | -------- | ----------- |
+|--- | --- | --- | ---|
 | `feedback` | string | No | Text feedback (LGTM or other) |
 | `annotations` | array | No | Structured annotation array |
 | `agentSwitch` | string | No | Agent name to switch to (OpenCode only) |
@@ -295,7 +295,7 @@ Submit code review feedback to the AI Agent.
 **Annotation Object Fields**:
 
 | Field | Type | Required | Description |
-| ----- | ---- | -------- | ----------- |
+|--- | --- | --- | ---|
 | `id` | string | Yes | Unique identifier |
 | `type` | string | Yes | Type: `comment`, `suggestion`, `concern` |
 | `filePath` | string | Yes | File path |
@@ -324,7 +324,7 @@ Get an image (local file path or uploaded temporary file).
 **Request Parameters**:
 
 | Parameter | Type | Required | Description |
-| --------- | ---- | -------- | ----------- |
+|--- | --- | --- | ---|
 | `path` | string | Yes | Image file path |
 
 **Example Request**: `GET /api/image?path=/tmp/plannotator/abc-123.png`
@@ -345,7 +345,7 @@ Upload an image to a temporary directory and return an accessible path.
 **Request**: `multipart/form-data`
 
 | Field | Type | Required | Description |
-| ----- | ---- | -------- | ----------- |
+|--- | --- | --- | ---|
 | `file` | File | Yes | Image file |
 
 **Supported Formats**: PNG, JPEG, WebP
@@ -413,7 +413,7 @@ Get the list of available OpenCode Agents (OpenCode only).
 ### HTTP Status Codes
 
 | Status Code | Description |
-| ----------- | ----------- |
+|--- | ---|
 | `200` | Request successful |
 | `400` | Parameter validation failed |
 | `404` | Resource not found |
@@ -430,7 +430,7 @@ Get the list of available OpenCode Agents (OpenCode only).
 ### Common Errors
 
 | Error | Trigger Condition |
-| ----- | ----------------- |
+|--- | ---|
 | `Missing path parameter` | `/api/image` missing `path` parameter |
 | `File not found` | File specified by `/api/image` does not exist |
 | `No file provided` | `/api/upload` no file uploaded |
@@ -484,7 +484,7 @@ This ensures frontend routing works correctly.
 ## Environment Variables
 
 | Variable | Description | Default |
-| --------- | ----------- | ------- |
+|--- | --- | ---|
 | `PLANNOTATOR_REMOTE` | Enable remote mode | Not set |
 | `PLANNOTATOR_PORT` | Fixed port number | Random (local) / 19432 (remote) |
 | `PLANNOTATOR_ORIGIN` | Source identifier | `"claude-code"` or `"opencode"` |
@@ -517,7 +517,7 @@ All APIs run locally with no data uploads, ensuring security and reliability.
 > Updated: 2026-01-24
 
 | Feature | File Path | Line Number |
-| --- | --- | --- |
+|--- | --- | ---|
 | Plan review server entry | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts#L91-L355) | 91-355 |
 | GET /api/plan | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts#L132-L134) | 132-134 |
 | POST /api/approve | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts#L200-L277) | 200-277 |

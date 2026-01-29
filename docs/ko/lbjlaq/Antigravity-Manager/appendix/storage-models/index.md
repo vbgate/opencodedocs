@@ -190,7 +190,7 @@ explorer "$env:USERPROFILE\.antigravity_tools"
 ### 핵심 필드 설명
 
 | 필드 | 타입 | 비즈니스 의미 | 트리거 조건 |
-| ----- | ---- | -------- | -------- |
+|--- | --- | --- | ---|
 | `disabled` | bool | 계정이 완전히 비활성화됨 (예: refresh_token 만료) | `invalid_grant` 발생 시 자동으로 `true`로 설정 |
 | `proxy_disabled` | bool | 프록시 기능만 비활성화, GUI 사용에는 영향 없음 | 수동 비활성화 또는 할당량 보호 트리거 |
 | `protected_models` | string[] | 모델 수준 할당량 보호의 "제한 모델 목록" | 할당량 보호 로직에 의해 업데이트 |
@@ -220,7 +220,7 @@ Token 통계 라이브러리는 각 프록시 요청의 Token 소모를 기록�
 #### token_usage (원시 사용 기록)
 
 | 필드 | 타입 | 설명 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | id | INTEGER PRIMARY KEY AUTOINCREMENT | 자동 증가 기본 키 |
 | timestamp | INTEGER | 요청 타임스탬프 |
 | account_email | TEXT | 계정 이메일 |
@@ -320,7 +320,7 @@ Proxy 로그 라이브러리는 각 프록시 요청의 상세 정보를 기록�
 ### 테이블 구조: request_logs
 
 | 필드 | 타입 | 설명 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | id | TEXT PRIMARY KEY | 요청 고유 ID (UUID) |
 | timestamp | INTEGER | 요청 타임스탬프 |
 | method | TEXT | HTTP 메서드 (GET/POST) |
@@ -556,7 +556,7 @@ sqlite3 ~/.antigravity_tools/proxy_logs.db \
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 데이터 디렉터리(.antigravity_tools) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | 계정 디렉터리(accounts/) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L35-L46) | 35-46 |
 | accounts.json 구조 | [`src-tauri/src/models/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/models/account.rs#L76-L92) | 76-92 |
@@ -572,7 +572,7 @@ sqlite3 ~/.antigravity_tools/proxy_logs.db \
 | logs/ 디렉터리 및 app.log | [`src-tauri/src/modules/logger.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/logger.rs#L17-L45) | 17-45 |
 | bin/cloudflared 경로 | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L92-L101) | 92-101 |
 | device_original.json | [`src-tauri/src/modules/device.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/device.rs#L11-L13) | 11-13 |
-| invalid_grant -> disabled 디스크 쓰기 | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L869-L969) | 869-969 |
+|--- | --- | ---|
 
 **핵심 상수**:
 - `DATA_DIR = ".antigravity_tools"`: 데이터 디렉터리 이름 (`src-tauri/src/modules/account.rs:16-18`)

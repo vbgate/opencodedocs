@@ -178,7 +178,7 @@ Operation: Go to `Settings`, enable `auto_sync`, and set `sync_interval` (unit: 
 ## Pitfall Warnings
 
 | Scenario | What you might do (❌) | Recommended approach (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Backup file security | Treat exported JSON as normal config file and casually share it | Treat JSON as password, minimize spread scope, avoid public internet exposure |
 | JSON import failed | JSON is not an array, or refresh_token doesn't have `1//` prefix | Use JSON exported by this project as template, keep field names and structure consistent |
 | DB import can't find data | Antigravity hasn't logged in, or DB is missing `jetskiStateSync.agentManagerInitState` | First confirm Antigravity/IDE has logged in, then try import; if necessary use Custom DB to select correct file |
@@ -210,15 +210,15 @@ Operation: Go to `Settings`, enable `auto_sync`, and set `sync_interval` (unit: 
 > Updated: 2026-01-23
 
 | Feature | File Path | Lines |
-| --- | --- | --- |
+|--- | --- | ---|
 | Accounts export/import JSON (`save_text_file` / `read_text_file`) | [`src/pages/Accounts.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Accounts.tsx#L458-L578) | 458-578 |
 | Dashboard export account JSON | [`src/pages/Dashboard.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Dashboard.tsx#L113-L148) | 113-148 |
 | Import tab: DB import / Custom DB / V1 import buttons | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L491-L539) | 491-539 |
-| Add account: ignore frontend email, use refresh_token to fetch real email, auto-refresh quota, Proxy hot reload | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L19-L60) | 19-60 |
-| V1 import: scan `~/.antigravity-agent` with multi-format compatibility | [`src-tauri/src/modules/migration.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/migration.rs#L9-L190) | 9-190 |
+|--- | --- | ---|
+|--- | --- | ---|
 | DB import: extract refresh_token from `state.vscdb` (ItemTable + base64 + protobuf) | [`src-tauri/src/modules/migration.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/migration.rs#L192-L267) | 192-267 |
-| Default DB path derivation (`--user-data-dir` / portable / standard path) | [`src-tauri/src/modules/db.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/db.rs#L18-L63) | 18-63 |
-| After DB import, auto-set as "current account" and refresh quota | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L495-L511) | 495-511 |
+|--- | --- | ---|
+|--- | --- | ---|
 | auto_sync: compare refresh_token, skip if same; trigger DB import if changed | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L532-L564) | 532-564 |
 | Frontend background task: periodically call `syncAccountFromDb()` by `sync_interval` | [`src/components/common/BackgroundTaskRunner.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/common/BackgroundTaskRunner.tsx#L43-L72) | 43-72 |
 

@@ -131,7 +131,7 @@ Skill read: pdf
 **输出结构解析**：
 
 | 部分 | 内容 | 作用 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | `Reading: pdf` | 技能名称 | 标识正在读取的技能 |
 | `Base directory: ...` | 技能基础目录 | AI 用此路径解析 references/、scripts/ 等资源 |
 | SKILL.md 内容 | 完整的技能定义 | 包含指令、资源引用等 |
@@ -422,7 +422,7 @@ npx openskills read skill-a,skill-b
 **核心概念**：
 
 | 概念 | 说明 |
-| ---- | ---- |
+|--- | ---|
 | **查找优先级** | 4 个目录按顺序查找，返回第一个匹配 |
 | **基础目录** | AI 代理用于解析技能中相对路径的参考目录 |
 | **多技能读取** | 逗号分隔，按指定顺序读取 |
@@ -430,7 +430,7 @@ npx openskills read skill-a,skill-b
 **核心命令**：
 
 | 命令 | 作用 |
-| ---- | ---- |
+|--- | ---|
 | `npx openskills read <name>` | 读取单个技能 |
 | `npx openskills read name1,name2` | 读取多个技能 |
 | `npx openskills list` | 查看已安装技能及位置 |
@@ -458,7 +458,7 @@ npx openskills read skill-a,skill-b
 > 更新时间：2026-01-24
 
 | 功能 | 文件路径 | 行号 |
-| ---- | --------- | ---- |
+|--- | --- | ---|
 | read 命令入口 | [`src/commands/read.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/read.ts#L8-L48) | 8-48 |
 | 技能查找（findSkill） | [`src/utils/skills.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skills.ts#L69-L84) | 69-84 |
 | 技能名称规范化 | [`src/utils/skill-names.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skill-names.ts) | 1-8 |

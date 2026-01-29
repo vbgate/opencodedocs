@@ -97,7 +97,7 @@ Agent вызывает инструмент `supermemory` для сохране�
 > Время обновления: 2026-01-23
 
 | Функция | Путь к файлу | Номер строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Логика удаления чувствительных данных | [`src/services/privacy.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/privacy.ts#L1-L13) | 1-13 |
 | Загрузка API Key | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L90) | 90 |
 | Удаление чувствительных данных при вызове плагина | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L282) | 282 |

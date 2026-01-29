@@ -40,7 +40,7 @@ order: 240
 **Canvas + A2UI 适合这些场景**：
 
 | 场景 | 示例 |
-| ------ | ------ |
+|--- | ---|
 | **数据可视化** | 显示统计图表、进度条、时间线 |
 | **交互式表单** | 让用户确认操作、选择选项 |
 | **状态面板** | 实时显示任务进度、系统状态 |
@@ -334,7 +334,7 @@ clawdbot nodes canvas hide --node abc123-def456-ghi789
 **验证 Canvas 功能是否正常工作**：
 
 | 检查项 | 验证方法 |
-| ------- | -------- |
+|--- | ---|
 | Canvas Host 运行 | `lsof -i :18793` 有输出 |
 | 节点 Canvas 能力 | `clawdbot nodes list` 显示 `canvas` |
 | 页面加载成功 | 节点显示 HTML 内容 |
@@ -400,7 +400,7 @@ clawdbot nodes canvas hide --node abc123-def456-ghi789
 > 更新时间：2026-01-27
 
 | 功能 | 文件路径 | 行号 |
-| ----- | --------- | ---- |
+|--- | --- | ---|
 | Canvas Host 服务器 | [`src/canvas-host/server.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/server.ts) | 372-441 |
 | A2UI 协议处理 | [`src/canvas-host/a2ui.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/a2ui.ts) | 150-203 |
 | Canvas 工具定义 | [`src/agents/tools/canvas-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/canvas-tool.ts) | 52-179 |

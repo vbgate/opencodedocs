@@ -203,7 +203,7 @@ Available Tools:
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 安装脚本逻辑 | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L327-L410) | 327-410 |
 | 插件注册逻辑 | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L195-L248) | 195-248 |
 | 冲突检测逻辑 | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L273-L320) | 273-320 |

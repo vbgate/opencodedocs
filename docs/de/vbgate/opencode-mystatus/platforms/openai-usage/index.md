@@ -45,7 +45,7 @@ Wenn Sie:
 OpenAI hat zwei Rate-Limiting-Fenster für API-Aufrufe:
 
 | Fenstertyp | Dauer | Funktion |
-|---------|------|------|
+|--- | --- | ---|
 | **Hauptfenster** (primary) | Wird vom OpenAI-Server zurückgegeben | Verhindert zahlreiche Aufrufe in kurzer Zeit |
 | **Nebenfenster** (secondary) | Wird vom OpenAI-Server zurückgegeben (kann fehlen) | Verhindert langfristige Übernutzung |
 
@@ -143,7 +143,7 @@ Account:        user@example.com (plus)
 Überprüfen Sie, dass Sie Folgendes verstehen:
 
 | Szenario | Was Sie sehen sollten |
-|------|----------|
+|--- | ---|
 | Hauptfenster verbleibend 60% | Fortschrittsbalken ca. 60% voll, zeigt `60% remaining` |
 | Rücksetzung nach 2,5 Stunden | Zeigt `Resets in: 2h 30m` |
 | Limit erreicht | Zeigt `Limit reached!` |
@@ -211,13 +211,13 @@ mystatus fragt Kredite ab, indem es die offizielle OpenAI-API aufruft:
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| ----------------------- | --------------------------------------------------------------------------------------------- | ------- |
-| OpenAI-Kreditabfrage-Einstieg | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L207-L236) | 207-236 |
-| OpenAI-API-Aufruf | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L132-L155) | 132-155 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Ausgabe formatieren | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L164-L194) | 164-194 |
-| JWT-Token-Analyse | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L64-L73) | 64-73 |
-| Benutzer-E-Mail extrahieren | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L78-L81) | 78-81 |
-| Token-Ablaufprüfung | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L216-L221) | 216-221 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | OpenAIAuthData Typdefinition | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L28-L33) | 28-33 |
 
 **Konstanten**:

@@ -26,7 +26,7 @@ order: 1
 Локальный reverse proxy Antigravity Tools предоставляет следующие типы точек доступа:
 
 | Классификация протоколов | Назначение | Типичные клиенты |
-| --- | --- | --- |
+|--- | --- | ---|
 | **Протокол OpenAI** | Совместимость с общими AI приложениями | OpenAI SDK / Совместимые клиенты |
 | **Протокол Anthropic** | Вызовы серии Claude | Claude Code / Anthropic SDK |
 | **Протокол Gemini** | Официальный SDK Google | Google Gemini SDK |
@@ -40,7 +40,7 @@ order: 1
 Эти точки доступа совместимы с форматом API OpenAI, подходят для большинства клиентов, поддерживающих OpenAI SDK.
 
 | Метод | Путь | Точка входа маршрута (Rust handler) | Примечания |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | GET | `/v1/models` | `handlers::openai::handle_list_models` | Совместимость с OpenAI: список моделей |
 | POST | `/v1/chat/completions` | `handlers::openai::handle_chat_completions` | Совместимость с OpenAI: Chat Completions |
 | POST | `/v1/completions` | `handlers::openai::handle_completions` | Совместимость с OpenAI: Legacy Completions |
@@ -60,7 +60,7 @@ order: 1
 Эти точки доступа организованы по пути и формату запросов API Anthropic, для вызовов Claude Code / Anthropic SDK.
 
 | Метод | Путь | Точка входа маршрута (Rust handler) | Примечания |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | POST | `/v1/messages` | `handlers::claude::handle_messages` | Совместимость с Anthropic: Messages |
 | POST | `/v1/messages/count_tokens` | `handlers::claude::handle_count_tokens` | Совместимость с Anthropic: count_tokens |
 | GET | `/v1/models/claude` | `handlers::claude::handle_list_models` | Совместимость с Anthropic: список моделей |
@@ -72,7 +72,7 @@ order: 1
 Эти точки доступа совместимы с форматом API Google Gemini, можно напрямую использовать официальный SDK Google.
 
 | Метод | Путь | Точка входа маршрута (Rust handler) | Примечания |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | GET | `/v1beta/models` | `handlers::gemini::handle_list_models` | Нативный Gemini: список моделей |
 | GET | `/v1beta/models/:model` | `handlers::gemini::handle_get_model` | Нативный Gemini: GetModel |
 | POST | `/v1beta/models/:model` | `handlers::gemini::handle_generate` | Нативный Gemini: generateContent / streamGenerateContent |
@@ -89,7 +89,7 @@ order: 1
 Точки доступа MCP (Model Context Protocol) используются для внешнего предоставления интерфейсов "вызова инструментов" (обрабатываются `handlers::mcp::*`). Включены ли и конкретное поведение зависят от конфигурации; детали см. [Точки доступа MCP](/ru/lbjlaq/Antigravity-Manager/platforms/mcp/).
 
 | Метод | Путь | Точка входа маршрута (Rust handler) | Примечания |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | ANY | `/mcp/web_search_prime/mcp` | `handlers::mcp::handle_web_search_prime` | MCP: Web Search Prime |
 | ANY | `/mcp/web_reader/mcp` | `handlers::mcp::handle_web_reader` | MCP: Web Reader |
 | ANY | `/mcp/zai-mcp-server/mcp` | `handlers::mcp::handle_zai_mcp_server` | MCP: z.ai MCP Server |
@@ -105,7 +105,7 @@ order: 1
 Эти точки доступа используются для внутренних функций и внешнего мониторинга.
 
 | Метод | Путь | Точка входа маршрута (Rust handler) | Примечания |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | POST | `/internal/warmup` | `handlers::warmup::handle_warmup` | Внутренняя точка доступа для прогрева |
 | POST | `/v1/api/event_logging` | `silent_ok_handler` | Перехват логов телеметрии: напрямую возвращает 200 |
 | POST | `/v1/api/event_logging/batch` | `silent_ok_handler` | Перехват логов телеметрии: напрямую возвращает 200 |
@@ -127,7 +127,7 @@ order: 1
 Разрешения доступа всех точек доступа управляются `proxy.auth_mode`:
 
 | Режим | Описание | `/healthz` требует аутентификации? | Другие точки доступа требуют аутентификации? |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `off` | Полностью открыт | ❌ Нет | ❌ Нет |
 | `strict` | Все требуют аутентификации | ✅ Да | ✅ Да |
 | `all_except_health` | Только проверка работоспособности открыта | ❌ Нет | ✅ Да |
@@ -203,7 +203,7 @@ Antigravity Tools предоставляет полный набор точек 
 > Обновлено: 2026-01-23
 
 | Функция | Путь к файлу | Строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Регистрация маршрутов (все точки доступа) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | Middleware аутентификации (совместимость заголовков + исключение `/healthz` + разрешение OPTIONS) | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L14-L78) | 14-78 |
 | Режим auth_mode и правила вывода auto | [`docs/proxy/auth.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy/auth.md#L9-L24) | 9-24 |

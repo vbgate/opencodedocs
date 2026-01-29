@@ -41,7 +41,7 @@ order: 1
 插件按以下优先级查找技能（首个匹配生效）：
 
 | 优先级 | 路径 | 类型 |
-|--------|------|------|
+|--- | --- | ---|
 | 1 | `.opencode/skills/` | 项目级（OpenCode）|
 | 2 | `.claude/skills/` | 项目级（Claude）|
 | 3 | `~/.config/opencode/skills/` | 用户级（OpenCode）|
@@ -344,7 +344,7 @@ description: 技能描述
 **验证必填字段**：
 
 | 字段 | 类型 | 必填 | 约束 |
-|------|------|------|------|
+|--- | --- | --- | ---|
 | name | string | ✅ | 小写字母数字连字符，非空 |
 | description | string | ✅ | 非空 |
 
@@ -396,7 +396,7 @@ description: 技能描述
 技能描述越具体，语义匹配越准确。
 
 | ❌ 糟糕的描述 | ✅ 好的描述 |
-|-------------|-----------|
+|--- | ---|
 | "Git 工具" | "帮助执行 Git 操作：创建分支、提交代码、合并 PR、解决冲突" |
 | "测试辅助" | "生成单元测试、运行测试套件、分析测试覆盖率、修复失败的测试" |
 
@@ -502,7 +502,7 @@ ln -s ../../../scripts/build.sh tools/build.sh
 本课涵盖了使用 OpenCode Agent Skills 插件时常见的 9 类问题：
 
 | 问题类型 | 关键检查点 |
-|---------|-----------|
+|--- | ---|
 | 技能查询不到 | 发现路径、SKILL.md 格式、拼写 |
 | 技能不存在 | 名称正确性、优先级覆盖、文件存在性 |
 | 脚本执行失败 | 脚本路径、可执行权限、脚本逻辑 |
@@ -535,7 +535,7 @@ ln -s ../../../scripts/build.sh tools/build.sh
 > 更新时间：2026-01-24
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | 技能查询模糊匹配建议 | [`src/tools.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/tools.ts#L49-L59) | 49-59 |
 | 技能不存在错误处理 | [`src/tools.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/tools.ts#L89-L97) | 89-97 |
 | 脚本不存在错误处理 | [`src/tools.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/tools.ts#L167-L177) | 167-177 |

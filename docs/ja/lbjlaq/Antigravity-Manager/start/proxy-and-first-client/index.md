@@ -234,7 +234,7 @@ print(resp.text)
 > 更新日時：2026-01-23
 
 | トピック | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | リバースプロキシサービス起動/停止/ステータス | [`src-tauri/src/commands/proxy.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/proxy.rs#L42-L178) | 42-178 |
 | 起動前アカウントプールチェック（アカウントなし時のエラー条件） | [`src-tauri/src/commands/proxy.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/proxy.rs#L81-L91) | 81-91 |
 | ルート登録（`/healthz` を含む） | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |

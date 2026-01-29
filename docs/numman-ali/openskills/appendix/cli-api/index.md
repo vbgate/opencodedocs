@@ -55,13 +55,13 @@ openskills install <source> [options]
 ### Parameters
 
 | Parameter | Type   | Required | Description                                    |
-| --------- | ------ | -------- | ---------------------------------------------- |
+|--- | --- | --- | ---|
 | `<source>` | string | Y        | Skill source (see source formats below)        |
 
 ### Options
 
 | Option       | Short | Type  | Default | Description                                    |
-| ------------ | ----- | ----- | ------- | ---------------------------------------------- |
+|--- | --- | --- | --- | ---|
 | `--global`   | `-g`  | flag  | false   | Install globally to `~/.claude/skills/`       |
 | `--universal`| `-u`  | flag  | false   | Install to `.agent/skills/` (multi-agent env) |
 | `--yes`      | `-y`  | flag  | false   | Skip interactive selection, install all skills |
@@ -69,7 +69,7 @@ openskills install <source> [options]
 ### Source Formats
 
 | Format           | Example                              | Description                      |
-| ---------------- | ------------------------------------ | -------------------------------- |
+|--- | --- | ---|
 | GitHub shorthand | `anthropics/skills`                  | Install from GitHub public repo  |
 | Git URL          | `https://github.com/owner/repo.git` | Full Git URL                     |
 | SSH Git URL      | `git@github.com:owner/repo.git`     | SSH private repo                 |
@@ -166,7 +166,7 @@ openskills read <skill-names...>
 ### Parameters
 
 | Parameter          | Type   | Required | Description                                    |
-| ------------------ | ------ | -------- | ---------------------------------------------- |
+|--- | --- | --- | ---|
 | `<skill-names...>` | string | Y        | Skill names (comma-separated list supported)   |
 
 ### Options
@@ -225,7 +225,7 @@ None.
 ### Options
 
 | Option            | Short | Type   | Default   | Description                                    |
-| ----------------- | ----- | ------ | --------- | ---------------------------------------------- |
+|--- | --- | --- | --- | ---|
 | `--output <path>` | `-o`  | string | `AGENTS.md` | Output file path                             |
 | `--yes`           | `-y`  | flag   | false     | Skip interactive selection, sync all skills   |
 
@@ -297,7 +297,7 @@ openskills update [skill-names...]
 ### Parameters
 
 | Parameter          | Type   | Required | Description                                    |
-| ------------------ | ------ | -------- | ---------------------------------------------- |
+|--- | --- | --- | ---|
 | `[skill-names...]` | string | N        | Skill names (comma-separated), defaults to all |
 
 ### Options
@@ -402,7 +402,7 @@ openskills remove <skill-name>
 ### Parameters
 
 | Parameter     | Type   | Required | Description   |
-| ------------ | ------ | -------- | ------------- |
+|--- | --- | --- | ---|
 | `<skill-name>` | string | Y        | Skill name    |
 
 ### Options
@@ -434,7 +434,7 @@ Source: anthropics/skills
 The following options apply to all commands:
 
 | Option     | Short | Type | Default | Description   |
-| ---------- | ----- | ---- | ------- | ------------- |
+|--- | --- | --- | --- | ---|
 | `--version`| `-V`  | flag | -       | Show version  |
 | `--help`   | `-h`  | flag | -       | Show help     |
 
@@ -469,7 +469,7 @@ When multiple installation locations exist, skills are looked up in the followin
 ## Exit Codes
 
 | Exit Code | Description                           |
-| --------- | ------------------------------------- |
+|--- | ---|
 | 0         | Success                               |
 | 1         | Error (parameter error, command failed, etc.) |
 
@@ -524,7 +524,7 @@ OpenSkills uses the following configuration files:
 > Updated: 2026-01-24
 
 | Command     | File Path                                                                           | Line Numbers |
-| ----------- | ---------------------------------------------------------------------------------- | ------------ |
+|--- | --- | ---|
 | CLI entry   | [`src/cli.ts`](https://github.com/numman-ali/openskills/blob/main/src/cli.ts)         | 13-80        |
 | install     | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts) | 1-562        |
 | list        | [`src/commands/list.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/list.ts)    | 1-50         |

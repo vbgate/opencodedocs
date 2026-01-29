@@ -73,7 +73,7 @@ Wenn Sie im Modus `auth_mode=strict/all_except_health/auto(allow_lan_access=true
 Die Reverse-Proxy-Routen von Antigravity Tools sind "vollständig hardcodiert" (siehe `src-tauri/src/proxy/server.rs`). Die häufigsten Einstiegspunkte sind:
 
 | Protokoll | Pfad | Zweck |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI | `/v1/models` | Modelle auflisten |
 | OpenAI | `/v1/chat/completions` | Chat-Vervollständigung |
 | OpenAI | `/v1/responses` | Codex CLI-Kompatibilität |
@@ -122,7 +122,7 @@ Invoke-WebRequest -UseBasicParsing http://127.0.0.1:8045/v1beta/models | Select-
 Das Problem bei Base URL besteht im Wesentlichen darin, dass der von Ihnen angegebene Pfad und der vom Client angehängte Pfad überlagert werden.
 
 | Was Sie verwenden | Empfohlene Base URL | Die Route, auf die Sie abgleichen |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI SDK (Python/Node etc.) | `http://127.0.0.1:8045/v1` | `/v1/chat/completions`, `/v1/models` |
 | Claude Code CLI (Anthropic) | `http://127.0.0.1:8045` | `/v1/messages` |
 | Gemini SDK / Gemini-Modus-Clients | `http://127.0.0.1:8045` | `/v1beta/models/*` |
@@ -170,7 +170,7 @@ http://127.0.0.1:8045/v1/chat/completions
 Verwenden Sie diese Tabelle, um schnell zu überprüfen, ob Ihr "endgültiger Anfrage-Pfad" Antigravity Tools treffen kann:
 
 | Pfad, den Sie in den Protokollen sehen | Fazit |
-| --- | --- |
+|--- | ---|
 | Beginnt mit `/v1/` (z. B. `/v1/models`, `/v1/chat/completions`) | Geht über OpenAI/Anthropic-kompatible Routen |
 | Beginnt mit `/v1beta/` (z. B. `/v1beta/models/...`) | Geht über native Gemini-Routen |
 | `/v1/v1/` tritt auf | Base URL enthält `/v1`, Client hat es erneut angehängt |
@@ -207,7 +207,7 @@ Verwenden Sie diese Tabelle, um schnell zu überprüfen, ob Ihr "endgültiger An
 ## Zusammenfassung
 
 | Phänomen | Häufigste Ursache | Was Sie ändern sollten |
-| --- | --- | --- |
+|--- | --- | ---|
 | Immer 404 | Base URL-Konkatenation falsch | Verifizieren Sie zuerst mit curl, dass `/v1/models`/`/v1beta/models` nicht 404 sind |
 | `/v1/v1/...` | `/v1` doppelt | Bei OpenAI SDK die Base URL auf `/v1` enden lassen |
 | `/v1/chat/completions/responses` | Client stapelt Pfade | Wechseln Sie zu Gemini-Protokoll oder führen Sie Pfad-Umschreibung durch (nicht für Anfänger empfohlen) |
@@ -233,12 +233,12 @@ Verwenden Sie diese Tabelle, um schnell zu überprüfen, ob Ihr "endgültiger An
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
-| Reverse-Proxy-Routen-Definition (vollständige Routing-Tabelle) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L193) | 120-193 |
-| `AxumServer::start()` (Routing-Erstellungseinstieg) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L79-L216) | 79-216 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | `health_check_handler()` | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L266-L272) | 266-272 |
 | README: Empfohlene Base URL für Claude Code | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L197-L204) | 197-204 |
-| README: Erklärung der Pfad-Stapelung bei Kilo Code und empfohlenes Protokoll | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L206-L211) | 206-211 |
+|--- | --- | ---|
 | README: Beispiel für base_url von Python OpenAI SDK | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L213-L227) | 213-227 |
 
 **Wichtige Funktionen**:

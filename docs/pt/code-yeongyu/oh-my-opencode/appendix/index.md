@@ -18,7 +18,7 @@ Este capítulo contém materiais de referência detalhados e diretrizes de compa
 Este capítulo inclui três seções importantes:
 
 | Subpágina | Descrição | Dificuldade |
-| --------- | ---------- | ----------- |
+|--- | --- | ---|
 | [Compatibilidade com Claude Code](./claude-code-compatibility/) | Guia completo para migrar do Claude Code para o OpenCode, incluindo mecanismos de compatibilidade para Commands, Skills, Agents, MCPs e Hooks | ⭐⭐ |
 | [Referência de Configuração](./configuration-reference/) | Documentação completa do Schema para arquivos de configuração do oh-my-opencode, cobrindo todos os campos, tipos e valores padrão | ⭐⭐⭐ |
 | [MCPs Integrados](./builtin-mcps/) | Recursos e uso de 3 servidores MCP integrados (Exa Websearch, Context7, Grep.app) | ⭐⭐ |

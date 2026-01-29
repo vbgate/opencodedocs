@@ -304,7 +304,7 @@ skill-name/
 **Priority Order** (highest to lowest):
 
 | Priority | Directory                 | Installation Method           | Use Case                                  |
-| -------- | ------------------------- | ----------------------------- | ----------------------------------------- |
+|--- | --- | --- | ---|
 | 1        | `./.agent/skills/`        | `--universal`                 | Multi-agent environment, avoid conflicts with Claude Code |
 | 2        | `~/.agent/skills/`        | `--universal --global`        | Multi-agent environment global skills     |
 | 3        | `./.claude/skills/`       | Default (project-local)       | Project-local skills (default choice)    |
@@ -498,7 +498,7 @@ graph TD
 > Last Updated: 2026-01-24
 
 | Term/Function            | File Path                                                                 | Line #  |
-| ------------------------ | ------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Skill Type Definition    | [`src/types.ts`](https://github.com/numman-ali/openskills/blob/main/src/types.ts#L1-L6) | 1-6     |
 | SkillLocation Type       | [`src/types.ts`](https://github.com/numman-ali/openskills/blob/main/src/types.ts#L8-L12) | 8-12    |
 | InstallOptions Type      | [`src/types.ts`](https://github.com/numman-ali/openskills/blob/main/src/types.ts#L14-L18) | 14-18   |

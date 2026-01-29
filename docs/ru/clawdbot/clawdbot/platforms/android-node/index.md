@@ -74,7 +74,7 @@ order: 180
 Узел Android поддерживает следующие локальные операции на устройстве:
 
 | Функция | Команда | Описание |
-| ---- | ------ | ---- |
+|--- | --- | ---|
 | **Canvas** | `canvas.*` | Отображение визуального интерфейса в реальном времени (A2UI) |
 | **Camera** | `camera.*` | Фотосъемка (JPG) и видеозапись (MP4) |
 | **Screen** | `screen.*` | Запись экрана |
@@ -454,7 +454,7 @@ clawdbot nodes invoke --node "android-node" --command location.get
 > Время обновления: 2026-01-27
 
 | Функция | Путь к файлу | Строки |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Политика команд узла | [`src/gateway/node-command-policy.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/node-command-policy.ts) | 1-112   |
 | Schema протокола узла | [`src/gateway/protocol/schema/nodes.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/schema/nodes.ts) | 1-103   |
 | Документация Android  | [`docs/platforms/android.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/android.md) | 1-142   |

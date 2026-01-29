@@ -69,7 +69,7 @@ DCP 的修剪操作会改变消息内容，这会影响 Prompt Caching。但这�
 **权衡分析**
 
 | 指标 | 无 DCP | 启用 DCP | 影响 |
-| ---- | ------ | -------- | ---- |
+|--- | --- | --- | ---|
 | **缓存命中率** | ~85% | ~65% | ⬇️ 减少 20% |
 | **上下文大小** | 持续增长 | 受控修剪 | ⬇️ 显著减少 |
 | **Token 节省** | 0 | 10-40% | ⬆️ 显著增加 |
@@ -113,7 +113,7 @@ DCP 的修剪操作会改变消息内容，这会影响 Prompt Caching。但这�
 假设一个长会话，包含 100 个消息，总 Token 数为 100K：
 
 | 场景 | 缓存命中率 | 缓存节省 Token | DCP 修剪节省 Token | 总节省 |
-| ---- | ---------- | ------------- | ----------------- | ------ |
+|--- | --- | --- | --- | ---|
 | 无 DCP | 85% | 85K × (1-0.85) = 12.75K | 0 | 12.75K |
 | 启用 DCP | 65% | 100K × (1-0.65) = 35K | 20K（估算） | 35K + 20K - 12.75K = **42.25K** |
 
@@ -167,7 +167,7 @@ Summary:
 **关键指标解读**：
 
 | 指标 | 含义 | 如何评估 |
-| ---- | ---- | -------- |
+|--- | --- | ---|
 | **Pruned** | 已修剪的工具数量和 Token 数 | 越高说明 DCP 节省越多 |
 | **Current context** | 当前会话上下文的 Token 总数 | 应该显著小于 Without DCP |
 | **Without DCP** | 如果不启用 DCP，上下文会有多大 | 用于对比节省效果 |
@@ -199,7 +199,7 @@ Summary:
 使用 `/dcp context` 观察关键指标的变化：
 
 | 指标 | 禁用 DCP | 启用 DCP | 说明 |
-| ---- | -------- | -------- | ---- |
+|--- | --- | --- | ---|
 | **Pruned** | 0 tools | 5-20 tools | DCP 修剪的工具数量 |
 | **Current context** | 较大 | 较小 | DCP 后上下文显著减小 |
 | **Without DCP** | 与 Current 相同 | 大于 Current | 显示 DCP 的节省潜力 |
@@ -234,7 +234,7 @@ DCP 通过移除已完成的工具输出、重复的读取操作等，减少了�
 **实际效果对比**：
 
 | 场景 | 无 DCP | 启用 DCP |
-| ---- | ------ | -------- |
+|--- | --- | ---|
 | 读取同一文件 3 次 | 保留 3 次完整输出（冗余） | 只保留最新一次 |
 | 写入文件后重新读取 | 旧写操作 + 新读取 | 只保留新读取 |
 | 错误工具输出 | 保留完整的错误输入 | 只保留错误消息 |
@@ -246,7 +246,7 @@ DCP 通过移除已完成的工具输出、重复的读取操作等，减少了�
 ### 根据提供商选择策略
 
 | 提供商 | 计费模式 | 建议 | 原因 |
-| ------ | -------- | ---- | ---- |
+|--- | --- | --- | ---|
 | **GitHub Copilot** | 按请求 | ✅ 始终启用 | 零成本优化，只提升性能 |
 | **Google Antigravity** | 按请求 | ✅ 始终启用 | 同上 |
 | **Anthropic** | 按 Token | ✅ 长会话启用<br>⚠️ 短会话可选 | 权衡缓存和节省 |
@@ -361,7 +361,7 @@ DCP 通过移除已完成的工具输出、重复的读取操作等，减少了�
 **权衡决策矩阵**：
 
 | 场景 | 推荐配置 | 原因 |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | GitHub Copilot/Google Antigravity | ✅ 始终启用 | 按请求计费，零成本优化 |
 | Anthropic/OpenAI 长会话 | ✅ 启用所有策略 | Token 节省 > 缓存损失 |
 | Anthropic/OpenAI 短会话 | ⚠️ 只启用去重+清除错误 | 缓存更重要 |
@@ -402,7 +402,7 @@ DCP 通过移除已完成的工具输出、重复的读取操作等，减少了�
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | Prompt Caching 说明 | [`README.md`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/README.md) | 46-52 |
 | Token 计算（含缓存） | [`lib/messages/utils.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/messages/utils.ts) | 66-78 |
 | 上下文分析命令 | [`lib/commands/context.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/commands/context.ts) | 68-174 |

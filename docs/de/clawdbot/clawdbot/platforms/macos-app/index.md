@@ -87,7 +87,7 @@ Die Clawdbot-macOS-App ist ein System mit **doppelter Rolle**:
 **Zwei Betriebsmodi**:
 
 | Modus | Gateway-Standort | Knotendienst | Anwendungsfall |
-| ----- | -------------- | --------- | -------- |
+|--- | --- | --- | ---|
 | **Lokaler Modus** (Standard) | Lokaler Computer (launchd-Dienst) | Nicht gestartet | Gateway läuft auf diesem Mac |
 | **Fernmodus** | Remotecomputer (über SSH/Tailscale) | Gestartet | Gateway läuft auf einem anderen Computer |
 
@@ -318,7 +318,7 @@ Talk Mode bietet ein kontinuierliches Sprachgespräch ähnlich wie Siri/Alexa, o
 **Talk Mode-Oberflächenstatus**:
 
 | Status | Anzeige | Erklärung |
-| ----- | ---- | ---- |
+|--- | --- | ---|
 | **Listening** | Impulsanimation der Wolke + Mikrofonlautstärke | Warten, bis Sie sprechen |
 | **Thinking** | Senkungsanimation | Die KI überlegt |
 | **Speaking** | Strahlungsringanimation + Wellen | Die KI antwortet (TTS-Wiedergabe läuft) |
@@ -359,7 +359,7 @@ Der Knotenmodus ermöglicht es der macOS-App, lokale Fähigkeiten für ein Remot
 **Verfügbare Befehle im Knotenmodus**:
 
 | Befehlskategorie | Befehlsbeispiel | Funktionsbeschreibung |
-| --------- | ---------- | -------- |
+|--- | --- | ---|
 | **Canvas** | `canvas.present`、`canvas.navigate`、`canvas.eval` | Rendering von Visualisierungsoberflächen auf macOS |
 | **Camera** | `camera.snap`、`camera.clip` | Foto- oder Videoaufnahme |
 | **Screen** | `screen.record` | Bildschirmaufzeichnung |
@@ -425,7 +425,7 @@ Die KI wählt automatisch verfügbare Tools basierend auf den Berechtigungen aus
 **Sicherheitsrichtlinientypen**:
 
 | Richtlinie | Verhalten | Anwendungsfall |
-| ----- | ---- | -------- |
+|--- | --- | ---|
 | `deny` | Alle `system.run`-Aufrufe verweigern | Hohe Sicherheit, alle Befehle deaktivieren |
 | `allowlist` | Nur Befehle auf der Whitelist zulassen | Ausgewogene Sicherheit und Bequemlichkeit |
 | `ask` | Benutzer um Genehmigung bitten, wenn nicht auf der Whitelist | Flexibel, erfordert aber Bestätigung |
@@ -468,7 +468,7 @@ Löst eine Gateway `agent`-Anfrage aus, entspricht dem Ausführen von `clawdbot 
 **Parameter**:
 
 | Parameter | Beschreibung | Beispiel |
-| ----- | ---- | ---- |
+|--- | --- | ---|
 | `message` (erforderlich) | An die KI gesendete Nachricht | `message=Hello%20from%20deep%20link` |
 | `sessionKey` (optional) | Zielsitzungsschlüssel, Standard `main` | `sessionKey=main` |
 | `thinking` (optional) | Denkebene: off\|minimal\|low\|medium\|high\|xhigh | `thinking=high` |
@@ -571,7 +571,7 @@ Wenn die Berechtigungsschalter nicht aktiviert werden können oder sofort deakti
 **Mögliche Ursachen und Lösungen**:
 
 | Ursache | Überprüfungsmethode | Lösung |
-| ----- | -------- | -------- |
+|--- | --- | ---|
 | Gateway nicht gestartet | `clawdbot gateway status` ausführen | Gateway-Dienst starten |
 | Falsche Adresse | WebSocket-URL prüfen | Bestätigen Sie `ws://127.0.0.1:18789` oder Remote-Adresse korrekt |
 | Port belegt | `lsof -i :18789` ausführen | Den Prozess schließen, der den Port belegt |
@@ -666,7 +666,7 @@ In dieser Lektion haben Sie gelernt:
 > Aktualisierungszeit: 2026-01-27
 
 | Funktion        | Dateipfad                                                                                    | Zeile    |
-| ----------- | --------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | App-Einstieg     | [`apps/macos/Sources/Clawdbot/ClawdbotApp.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/ClawdbotApp.swift) | Gesamte Datei   |
 | Gateway-Verbindung | [`apps/macos/Sources/Clawdbot/GatewayConnection.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/GatewayConnection.swift) | 1-500   |
 | Voice Wake-Laufzeit | [`apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift) | Gesamte Datei   |

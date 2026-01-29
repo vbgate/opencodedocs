@@ -201,16 +201,16 @@ curl -N "http://127.0.0.1:8045/v1/messages" \
 > Обновлено: 2026-01-23
 
 | Функция | Путь к файлу | Строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Маршруты прокси: `/v1/messages` / `count_tokens` / `models/claude` | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L193) | 120-193 |
 | Главный вход Anthropic: `handle_messages` (включая перехват warmup и цикл повторов) | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L240-L1140) | 240-1140 |
 | Список моделей: `GET /v1/models/claude` | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L1163-L1183) | 1163-1183 |
 | `count_tokens` (возвращает 0, когда z.ai не включён) | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L1186-L1210) | 1186-1210 |
 | Обнаружение и имитация ответа warmup | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L1375-L1493) | 1375-1493 |
-| Совместимость заголовков аутентификации: `Authorization`/`x-api-key`/`x-goog-api-key` | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L14-L77) | 14-77 |
+|--- | --- | ---|
 | Очистка запроса: удаление `cache_control` | [`src-tauri/src/proxy/mappers/claude/request.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/claude/request.rs#L68-L148) | 68-148 |
 | Очистка запроса: объединение последовательных сообщений одной роли | [`src-tauri/src/proxy/mappers/claude/request.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/claude/request.rs#L253-L296) | 253-296 |
-| Точка входа преобразования Claude -> Gemini v1internal: `transform_claude_request_in()` | [`src-tauri/src/proxy/mappers/claude/request.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/claude/request.rs#L332-L618) | 332-618 |
+|--- | --- | ---|
 
 **Ключевые константы**:
 - `MAX_RETRY_ATTEMPTS = 3`: максимальное количество повторов для `/v1/messages`

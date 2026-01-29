@@ -281,7 +281,7 @@ This tool is perfect for reading a skill's:
 > Updated: 2026-01-24
 
 | Feature | File Path | Line |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | ReadSkillFile tool definition | [`src/tools.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/tools.ts#L74-L135) | 74-135 |
 | Path security check | [`src/utils.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/utils.ts#L130-L133) | 130-133 |
 | List skill files | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L289-L316) | 289-316 |

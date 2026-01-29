@@ -56,7 +56,7 @@ Antigravity Tools 的中间件会优先读取 `Authorization`，也兼容 `x-api
 ### 兼容端点速览（本课相关）
 
 | 端点 | 用途 | 代码证据 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `POST /v1/chat/completions` | Chat Completions（含流式） | `src-tauri/src/proxy/server.rs` 路由注册；`src-tauri/src/proxy/handlers/openai.rs` |
 | `POST /v1/completions` | Legacy Completions（复用同一处理器） | `src-tauri/src/proxy/server.rs` 路由注册 |
 | `POST /v1/responses` | Responses/Codex CLI 兼容（复用同一处理器） | `src-tauri/src/proxy/server.rs` 路由注册（注释：兼容 Codex CLI） |
@@ -203,16 +203,16 @@ OpenAI 处理器内置最多 3 次尝试（并受账号池大小限制），遇�
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI 路由注册（含 /v1/responses） | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | Chat Completions 处理器（含 Responses 格式探测） | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L70-L462) | 70-462 |
 | /v1/completions 与 /v1/responses 处理器（Codex/Responses 规范化 + 重试/轮换） | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L464-L1080) | 464-1080 |
 | /v1/models 的返回（动态模型列表） | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L1082-L1102) | 1082-1102 |
 | OpenAI 请求数据结构（messages/instructions/input/size/quality） | [`src-tauri/src/proxy/mappers/openai/models.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/models.rs#L7-L38) | 7-38 |
-| OpenAI -> Gemini 请求转换（systemInstruction/thinkingConfig/tools） | [`src-tauri/src/proxy/mappers/openai/request.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/request.rs#L6-L553) | 6-553 |
-| Gemini -> OpenAI 响应转换（choices/usageMetadata） | [`src-tauri/src/proxy/mappers/openai/response.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/response.rs#L5-L214) | 5-214 |
+|--- | --- | ---|
+|--- | --- | ---|
 | 模型映射与通配符优先级（精确 > 通配符 > 默认） | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L180-L228) | 180-228 |
-| 鉴权中间件（Authorization/x-api-key/x-goog-api-key） | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L15-L77) | 15-77 |
+|--- | --- | ---|
 
 **关键常量**：
 - `MAX_RETRY_ATTEMPTS = 3`：OpenAI 协议最大尝试次数（含轮换）（见 `src-tauri/src/proxy/handlers/openai.rs`）

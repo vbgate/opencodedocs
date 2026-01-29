@@ -114,7 +114,7 @@ type CopilotTier = "free" | "pro" | "pro+" | "business" | "enterprise";
 **Quota limits for each subscription type**:
 
 | tier      | Monthly Limit (Premium Requests) |
-| --------- | --------------------------- |
+|--- | ---|
 | `free`    | 50                          |
 | `pro`     | 300                         |
 | `pro+`    | 1,500                       |
@@ -263,7 +263,7 @@ interface UsageLimitItem {
 **Limit type explanations**:
 
 | type          | Description               | Reset Cycle  |
-| ------------- | ------------------ | --------- |
+|--- | --- | ---|
 | `TOKENS_LIMIT` | 5-hour Token limit  | 5 hours   |
 | `TIME_LIMIT`   | MCP monthly quota      | 1 month   |
 
@@ -522,7 +522,7 @@ interface GoogleQuotaResponse {
 **The 4 displayed models**:
 
 | Display Name | Model Key                                  | Alternate Key              |
-| ------------ | ----------------------------------------- | --------------------- |
+|--- | --- | ---|
 | G3 Pro       | `gemini-3-pro-high`                        | `gemini-3-pro-low`    |
 | G3 Image     | `gemini-3-pro-image`                      | -                     |
 | G3 Flash     | `gemini-3-flash`                          | -                     |
@@ -569,7 +569,7 @@ export const REQUEST_TIMEOUT_MS = 10000;
 > Last updated: 2026-01-23
 
 | Feature              | File Path                                                                                              | Line    |
-| ----------------- | --------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Auth data types      | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L99-L104)        | 99-104  |
 | OpenAI auth       | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L28-L33)         | 28-33   |
 | Zhipu AI auth      | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L38-L41)         | 38-41   |

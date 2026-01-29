@@ -73,7 +73,7 @@ order: 2
 Plannotatorは4種類のプランアノテーションタイプ（およびグローバルコメント）をサポートしています：
 
 | アノテーションタイプ | アイコン | 用途 | 内容入力の必要性 |
-|---------|------|------|---------------|
+|--- | --- | --- | ---|
 | **削除 (DELETION)** | 🗑️ | この内容をプランから削除すべきとマーク | ❌ 不要 |
 | **コメント (COMMENT)** | 💬 | 選択した内容に質問や提案を追加 | ✅ コメント入力が必要 |
 | **置換 (REPLACEMENT)** | コメント経由で実現 | 選択した内容を新しい内容に置換 | ✅ 新しい内容の入力が必要 |
@@ -374,11 +374,11 @@ JWTトークンで認証を行う
 > 更新日：2026-01-24
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | アノテーションタイプの列挙定義 | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L1-L7) | 1-7 |
 | Annotationインターフェース | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L11-L33) | 11-33 |
 | アノテー��ョンツールバーコンポーネント | [`packages/ui/components/AnnotationToolbar.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/components/AnnotationToolbar.tsx#L29-L272) | 29-272 |
-| type-to-commentの実装 | [`packages/ui/components/AnnotationToolbar.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/components/AnnotationToolbar.tsx#L127-L147) | 127-147 |
+|--- | --- | ---|
 | アノテーションエクスポートのフォーマット | [`packages/ui/utils/parser.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/utils/parser.ts#L246-L323) | 246-323 |
 | MarkdownをBlocksにパース | [`packages/ui/utils/parser.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/utils/parser.ts#L70-L244) | 70-244 |
 | Viewerコンポーネント（テキスト選択処理） | [`packages/ui/components/Viewer.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/components/Viewer.tsx#L66-L350) | 66-350 |

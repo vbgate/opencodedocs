@@ -130,7 +130,7 @@ https://accounts.google.com/o/oauth2/v2/auth?client_id=...&code_challenge=...
 插件会自动检测运行环境：
 
 | 环境 | 绑定地址 | 原因 |
-|------|---------|------|
+|--- | --- | ---|
 | 本地 macOS/Linux/Windows | `127.0.0.1` | 最安全，只接受本地连接 |
 | WSL / Docker / SSH 远程 | `0.0.0.0` | 允许浏览器从宿主机访问 |
 
@@ -398,7 +398,7 @@ Using default project ID: rising-fact-p41fc
 插件会在以下情况自动刷新：
 
 | 触发条件 | 行为 | 源码位置 |
-|---------|------|----------|
+|--- | --- | ---|
 | 令牌过期前 60 秒 | 自动刷新 | `src/plugin/auth.ts:33` |
 | 收到 401 Unauthorized | 尝试刷新 | `src/plugin/auth.ts:33` |
 | 刷新失败 | 提示用户重新登录 | `src/plugin.ts:995` |
@@ -445,7 +445,7 @@ OAuth 2.0 PKCE 认证流程的核心要点：
 > 更新时间：2026-01-23
 
 | 功能        | 文件路径                                                                                               | 行号    |
-| ----------- | ------------------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | PKCE 密钥生成 | [`src/antigravity/oauth.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/antigravity/oauth.ts#L91-L113)         | 91-113  |
 | 构建授权 URL   | [`src/antigravity/oauth.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/antigravity/oauth.ts#L91-L113)         | 91-113  |
 | 交换令牌     | [`src/antigravity/oauth.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/antigravity/oauth.ts#L201-L270)         | 201-270 |

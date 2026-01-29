@@ -13,7 +13,7 @@ Este capítulo coleta os códigos de erro mais comuns e cenários de exceção e
 ## Conteúdo do Capítulo
 
 | Tipo de Problema | Página | Descrição |
-|---------|-------|-----------|
+|--- | --- | ---|
 | Invalidação de Conta | [invalid_grant 与 Desativação Automática de Conta](./invalid-grant/) | Conta subitamente indisponível? Entenda causa de expiração do OAuth Token e processo de recuperação |
 | Falha de Autenticação | [401/Falha de Autenticação](./auth-401/) | Solicitação rejeitada? Verifique configuração auth_mode e formato de Header |
 | Erros de Limitação | [429/Erro de Capacidade](./429-rotation/) | 429 frequente? Distingua cota insuficiente e limitação de taxa upstream, use estratégia de rotação para reduzir impacto |

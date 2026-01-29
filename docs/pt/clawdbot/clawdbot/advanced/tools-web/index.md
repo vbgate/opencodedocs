@@ -46,7 +46,7 @@ Você quer que o assistente de IA "fique online", mas não sabe:
 
 ::: tip Guia de seleção de ferramentas
 | Cenário | Ferramenta recomendada | Razão |
-|------|----------|------|
+|--- | --- | ---|
 | Buscar múltiplas fontes | web_search | Retorna múltiplos resultados em uma única consulta |
 | Extrair conteúdo de uma única página | web_fetch | Obtém texto completo, suporta markdown |
 | Páginas dinâmicas/exigem login | [browser](../tools-browser/) | Requer execução de JavaScript |
@@ -111,7 +111,7 @@ web_search e web_fetch são **ferramentas leves** que não executam JavaScript. 
 Ambas as ferramentas incluem cache integrado para reduzir solicitações duplicadas:
 
 | Ferramenta | Chave de cache | TTL padrão | Item de configuração |
-|------|---------|----------|--------|
+|--- | --- | --- | ---|
 | web_search | `provider:query:count:country:search_lang:ui_lang:freshness` | 15 minutos | `tools.web.search.cacheTtlMinutes` |
 | web_fetch | `fetch:url:extractMode:maxChars` | 15 minutos | `tools.web.fetch.cacheTtlMinutes` |
 
@@ -128,7 +128,7 @@ Ambas as ferramentas incluem cache integrado para reduzir solicitações duplica
 Clawdbot suporta dois provedores de busca:
 
 | Provedor | Vantagens | Desvantagens | API Key |
-|--------|------|--------|---------|
+|--- | --- | --- | ---|
 | **Brave** (padrão) | Rápido, resultados estruturados, camada gratuita | Resultados de busca tradicionais | `BRAVE_API_KEY` |
 | **Perplexity** | Respostas sintetizadas por IA, citações, tempo real | Requer acesso Perplexity ou OpenRouter | `OPENROUTER_API_KEY` ou `PERPLEXITY_API_KEY` |
 
@@ -317,7 +317,7 @@ Se você omitir `baseUrl`, Clawdbot escolherá automaticamente conforme o prefix
 #### 4.3 Selecionar modelo Perplexity
 
 | Modelo | Descrição | Caso de uso |
-|------|------|----------|
+|--- | --- | ---|
 | `perplexity/sonar` | Respostas rápidas + busca web | Consultas simples, busca rápida |
 | `perplexity/sonar-pro` (padrão) | Raciocínio de múltiplos passos + busca web | Problemas complexos, requer raciocínio |
 | `perplexity/sonar-reasoning-pro` | Análise de cadeia de pensamento | Pesquisa profunda, requer processo de raciocínio |
@@ -552,7 +552,7 @@ web_fetch bloqueia por padrão IPs de rede interna para evitar ataques SSRF. Se 
 > Data de atualização: 2026-01-27
 
 | Função | Caminho do arquivo | Número da linha |
-|------|----------|------|
+|--- | --- | ---|
 | Definição da ferramenta web_search | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 409-483 |
 | Definição da ferramenta web_fetch | [`src/agents/tools/web-fetch.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-fetch.ts) | 572-624 |
 | Chamada de API Brave Search | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 309-407 |

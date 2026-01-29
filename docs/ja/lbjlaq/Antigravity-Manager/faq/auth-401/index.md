@@ -64,7 +64,7 @@ curl -i http://127.0.0.1:8045/healthz
 `auto` は「独立した戦略」ではなく、`allow_lan_access` に基づいて実際に実行するモードを計算します。
 
 | `proxy.auth_mode` | 追加条件 | 実際の有効値（effective mode） |
-| --- | --- | --- |
+|--- | --- | ---|
 | `off` | - | `off` |
 | `strict` | - | `strict` |
 | `all_except_health` | - | `all_except_health` |
@@ -119,7 +119,7 @@ curl -i http://127.0.0.1:8045/v1/models \
 ## 一般的な罠（すべてソースコードで実際に発生する）
 
 | 現象 | 真の原因 | どう直すべきか |
-| --- | --- | --- |
+|--- | --- | ---|
 | `auth_mode=auto` で、ローカル呼び出しは依然として 401 | `allow_lan_access=true` により `auto` が `all_except_health` として有効になる | `allow_lan_access` を閉じるか、クライアントに key を持たせる |
 | 「明らかに x-api-key を持っているのに」と思っても、依然として 401 | 同時に不一致の `Authorization` を持っていて、ミドルウェアがそれを優先的に使う | 多余な Header を削除し、確実に正しいものだけを残す |
 | `Authorization: Bearer<key>` でも 401 | `Bearer` の後にスペースがなく、`Bearer ` プレフィックスで剥がせない | `Authorization: Bearer <key>` に変更 |
@@ -150,7 +150,7 @@ curl -i http://127.0.0.1:8045/v1/models \
 > 更新時間：2026-01-23
 
 | 機能        | ファイルパス                                                                                             | 行番号    |
-| ----------- | ---------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | ProxyAuthMode 列挙 | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L5-L18) | 5-18 |
 | ProxyConfig: allow_lan_access/auth_mode/api_key とデフォルト値 | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L258) | 174-258 |
 | auto モード解析（effective_auth_mode） | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L1-L30) | 1-30 |

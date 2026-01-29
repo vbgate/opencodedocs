@@ -44,7 +44,7 @@ order: 2
 DCP 提供了两个工具，让 AI 在对话中主动优化上下文：
 
 | 工具 | 用途 | 是否保留内容 |
-|-----|------|-----------|
+|--- | --- | ---|
 | **discard** | 移除已完成的任务或噪声 | ❌ 不保留 |
 | **extract** | 提取关键发现后删除原始内容 | ✅ 保留精简信息 |
 
@@ -94,7 +94,7 @@ AI 会批量修剪，而不是修剪单个小工具输出。这样效率更高�
 DCP 有多层保护，防止 AI 误修剪关键内容：
 
 | 保护层 | 说明 | 配置项 |
-|-------|------|--------|
+|--- | --- | ---|
 | **受保护工具** | 如 task、write、edit 等核心工具不能修剪 | `tools.settings.protectedTools` |
 | **受保护文件** | 匹配 glob 模式的文件路径不能修剪 | `protectedFilePatterns` |
 | **回合保护** | 新工具在 N 回合内不会被放入修剪列表 | `turnProtection.turns` |
@@ -351,11 +351,11 @@ AI 通过 `<prunable-tools>` 列表了解可修剪的工具，并根据场景选
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-|-----|---------|------|
+|--- | --- | ---|
 | discard 工具定义 | [`lib/strategies/tools.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/tools.ts#L155-L180) | 155-180 |
 | extract 工具定义 | [`lib/strategies/tools.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/tools.ts#L183-L220) | 183-220 |
 | 修剪操作执行 | [`lib/strategies/tools.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/tools.ts#L26-L153) | 26-153 |
-| prunable-tools 列表生成 | [`lib/messages/inject.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/messages/inject.ts#L53-L100) | 53-100 |
+|--- | --- | ---|
 | 修剪上下文注入 | [`lib/messages/inject.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/messages/inject.ts#L102-L156) | 102-156 |
 | discard 工具规范 | [`lib/prompts/discard-tool-spec.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/prompts/discard-tool-spec.ts#L1-L41) | 1-41 |
 | extract 工具规范 | [`lib/prompts/extract-tool-spec.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/prompts/extract-tool-spec.ts#L1-L48) | 1-48 |

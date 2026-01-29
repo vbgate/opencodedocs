@@ -67,7 +67,7 @@ Before starting, confirm you have the following software installed:
 OpenSkills is a Node.js CLI tool with two usage methods:
 
 | Method | Command | Pros | Cons | Use Cases |
-| ------ | ------- | ---- | ---- | --------- |
+|--- | --- | --- | --- | ---|
 | **npx** | `npx openskills` | No installation, always uses latest version | Downloads each run (cached) | Occasional use, testing new versions |
 | **Global Install** | `openskills` | Shorter command, faster response | Requires manual updates | Frequent use, fixed version |
 
@@ -492,7 +492,7 @@ You have now completed OpenSkills installation. In the next lesson, we will lear
 ### Core Configuration
 
 | Configuration Item | File Path | Line Number |
-| ------------------ | ----------------------------------------------------------- | ----------- |
+|--- | --- | ---|
 | Node.js version requirement | [`package.json`](https://github.com/numman-ali/openskills/blob/main/package.json) | 45-47 |
 | Package information | [`package.json`](https://github.com/numman-ali/openskills/blob/main/package.json) | 1-9 |
 | CLI entry point | [`src/cli.ts`](https://github.com/numman-ali/openskills/blob/main/src/cli.ts) | 39-80 |

@@ -66,7 +66,7 @@ Premium Requests — это основной индикатор квоты Copil
 Разные типы подписки имеют разные ежемесячные лимиты:
 
 | Тип подписки    | Ежемесячный лимит | Применимые люди               |
-| ----------- | -------- | ---------------------- |
+|--- | --- | ---|
 | Free        | 50 запросов    | Личное试用 разработчика         |
 | Pro         | 300 запросов   | Личная профессиональная версия разработчика       |
 | Pro+        | 1500 запросов | Тяжёлый личный разработчик         |
@@ -307,7 +307,7 @@ GitHub Copilot API запрос неудачен (403): Resource not accessible 
 Если `tier` не соответствует вашей фактической подписке, расчёт лимита будет неверным.
 
 | Ваша фактическая подписка | Поле tier должно быть заполнено           | Пример неправильного заполнения |
-| ------------ | ----------------------- | ------------ |
+|--- | --- | ---|
 | Free         | `free`                  | `pro` ❌     |
 | Pro          | `pro`                   | `free` ❌    |
 | Pro+         | `pro+`                  | `pro` ❌     |
@@ -375,9 +375,9 @@ GitHub Copilot API запрос неудачен (403): Resource not accessible 
 > Время обновления: 2026-01-23
 
 | Функция             | Путь к файлу                                                                                      | Номер строки    |
-| ---------------- | --------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Запрос квоты Copilot | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 481-524 |
-| Чтение Fine-grained PAT  | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 122-151 |
+|--- | --- | ---|
 | Запрос Public Billing API | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 157-177 |
 | Запрос Internal API | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 242-304 |
 | Логика обмена Token   | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 183-208 |

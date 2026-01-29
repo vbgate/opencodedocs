@@ -143,7 +143,7 @@ bunx oh-my-opencode doctor --verbose
 2. Tipos comuns de erros (de `src/config/schema.ts`):
 
 | Mensagem de Erro | Causa | Correção |
-|--------------|-------|-----|
+|--- | --- | ---|
 | `agents.sisyphus.mode: Invalid enum value` | `mode` só pode ser `subagent`/`primary`/`all` | Altere para `primary` |
 | `categories.quick.model: Expected string` | `model` deve ser uma string | Adicione aspas: `"anthropic/claude-haiku-4-5"` |
 | `background_task.defaultConcurrency: Expected number` | Concorrência deve ser um número | Altere para número: `3` |
@@ -223,7 +223,7 @@ Details:
 **Problemas Comuns**:
 
 | Problema | Causa | Solução |
-|-------|-------|----------|
+|--- | --- | ---|
 | Modelo `unknown` | A cadeia de fallback do Provider está vazia | Certifique-se de que pelo menos um Provider esteja disponível |
 | Modelo não usado | Provider não conectado | Execute `opencode` para conectar o Provider |
 | Quer substituir modelo | Usando modelo padrão | Defina `agents.<name>.model` em `oh-my-opencode.json` |
@@ -325,7 +325,7 @@ opencode models --refresh
 O comando Doctor é o canivete suíço do oh-my-opencode, ajudando você a localizar problemas rapidamente:
 
 | Comando | Propósito | Quando Usar |
-|---------|---------|-------------|
+|--- | --- | ---|
 | `bunx oh-my-opencode doctor` | Diagnóstico completo | Após instalação inicial, ao encontrar problemas |
 | `--verbose` | Informações detalhadas | Precisa visualizar detalhes de erro |
 | `--json` | Saída JSON | CI/CD, automação de scripts |
@@ -352,7 +352,7 @@ O comando Doctor é o canivete suíço do oh-my-opencode, ajudando você a local
 > Atualizado: 2026-01-26
 
 | Recurso | Caminho do Arquivo | Números de Linha |
-|---------|-----------|-------------|
+|--- | --- | ---|
 | Entrada do comando Doctor | [`src/cli/doctor/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/cli/doctor/index.ts#L1-L11) | 1-11 |
 | Registro de todas as verificações | [`src/cli/doctor/checks/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/cli/doctor/checks/index.ts#L24-L37) | 24-37 |
 | Verificação de registro de plugin | [`src/cli/doctor/checks/plugin.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/cli/doctor/checks/plugin.ts#L79-L117) | 79-117 |

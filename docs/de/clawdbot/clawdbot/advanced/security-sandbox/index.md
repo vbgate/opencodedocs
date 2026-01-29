@@ -88,7 +88,7 @@ Diese geschichtete Architektur stellt sicher, dass selbst bei einer Manipulation
 Clawdbot bietet drei Schichten der Zugriffskontrolle:
 
 | Schicht | Geschützter Inhalt | Konfigurationsort |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | **Gateway-Authentifizierung** | WebSocket-Verbindungen | `gateway.auth` |
 | **DM-Richtlinie** | Direktnachrichten | `channels.*.dmPolicy` |
 | **Gruppenrichtlinie** | Gruppennachrichten | `channels.*.groupPolicy` / `channels.*.groups` |
@@ -119,7 +119,7 @@ clawdbot security audit --fix
 Das Audit-Tool prüft folgende Aspekte:
 
 | Prüfkategorie | Spezifische Elemente | Risikostufe |
-| --------- | ----- | ----- |
+|--- | --- | ---|
 | **Eingehender Zugriff** | Gateway-Authentifizierung, DM-Richtlinie, Gruppenrichtlinie | Kritisch / Warnung |
 | **Werkzeugzugriff** | Erlaubte Liste für erhöhte exec, Werkzeug allow/deny | Kritisch / Warnung |
 | **Netzwerkexposition** | Gateway-Bindungsmodus, Tailscale Serve/Funnel | Kritisch / Info |
@@ -173,7 +173,7 @@ Standardmäßig erfordert der Gateway eine Authentifizierung, um WebSocket-Verbi
 **Authentifizierungsmodi**:
 
 | Modus | Zweck | Empfohlenes Szenario |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `token` | Gemeinsam genutzter Bearer-Token | Die meisten Situationen, empfohlen |
 | `password` | Passwort-Authentifizierung | Lokale Entwicklung, für schnelles Testen bequem |
 | Tailscale Identity | Tailscale Serve | Remote-Zugriff über Tailscale |
@@ -187,7 +187,7 @@ Standardmäßig erfordert der Gateway eine Authentifizierung, um WebSocket-Verbi
 Die DM-Richtlinie steuert, ob unbekannte Benutzer direkt mit Ihrem KI-Assistenten sprechen können.
 
 | Richtlinie | Verhalten | Empfohlenes Szenario |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `pairing` (Standard) | Unbekannte Absender erhalten einen Pairing-Code, keine Verarbeitung vor dem Pairing | Persönliche Nutzung, empfohlen |
 | `allowlist` | Unbekannte Absender werden abgelehnt | Umgebung mit mehreren vertrauenswürdigen Benutzern |
 | `open` | Jede Person ist erlaubt | Öffentliche Dienste (erfordert, dass `allowFrom` `"*"` enthält) |
@@ -228,7 +228,7 @@ clawdbot pairing approve whatsapp <pairing-code>
 Die Gruppenrichtlinie bestimmt, wie der KI-Assistent in Gruppen auf Nachrichten antwortet.
 
 | Richtlinie | Verhalten | Konfigurationsort |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `allowlist` | Nur Gruppen aus der Whitelist akzeptieren | `channels.whatsapp.groups` |
 | `disabled` | Alle Gruppennachrichten ignorieren | `channels.telegram.groups` |
 | `requireMention` | Nur antworten, wenn @ erwähnt oder durch Befehl ausgelöst | `channels.*.groups.*` |
@@ -307,7 +307,7 @@ Sie können Whitelists und Blacklists für Werkzeuge global oder pro Agent konfi
 ### Häufig verwendete Werkzeugkategorien
 
 | Werkzeugkategorie | Spezifische Werkzeuge | Risikostufe |
-| --------- | ----- | ----- |
+|--- | --- | ---|
 | **Dateioperationen** | `read`, `write`, `edit`, `apply_patch` | Mittel |
 | **Shell-Ausführung** | `exec`, `process` | Hoch |
 | **Browsersteuerung** | `browser` | Hoch |
@@ -353,7 +353,7 @@ Die Sandbox-Isolierung lässt Werkzeuge in Docker-Containern ausführen und schr
 ### Sandbox-Modi
 
 | Modus | Verhalten | Empfohlenes Szenario |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `off` | Alle Werkzeuge auf dem Host ausführen | Persönliche vertrauenswürdige Umgebung |
 | `non-main` (empfohlen) | Hauptsitzung auf dem Host, andere Sitzungen in der Sandbox | Balance zwischen Leistung und Sicherheit |
 | `all` | Alle Sitzungen in der Sandbox | Umgebung mit mehreren Benutzern, öffentliche Dienste |
@@ -375,7 +375,7 @@ Die Sandbox-Isolierung lässt Werkzeuge in Docker-Containern ausführen und schr
 Der Arbeitsplatzzugriff bestimmt, welche Verzeichnisse des Hosts die Sandbox-Container sehen können.
 
 | Zugriffsstufe | Verhalten | Empfohlenes Szenario |
-| --------- | ----- | ----- |
+|--- | --- | ---|
 | `none` (Standard) | Sandbox-Arbeitsplatz `~/.clawdbot/sandboxes` | Maximale Isolierung |
 | `ro` | Agent-Arbeitsplatz schreibgeschützt unter `/agent` eingehängt | Dateien lesen, aber nicht schreiben |
 | `rw` | Agent-Arbeitsplatz lese-schreibbar unter `/workspace` eingehängt | Agenten, die Dateien schreiben müssen |
@@ -397,7 +397,7 @@ Der Arbeitsplatzzugriff bestimmt, welche Verzeichnisse des Hosts die Sandbox-Con
 Der Sandbox-Umfang bestimmt die Granularität der Container-Isolierung.
 
 | Umfang | Verhalten | Anzahl der Container |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `session` (Standard) | Ein Container pro Sitzung | Mehrere Container, bessere Isolierung |
 | `agent` | Ein Container pro Agent | Balance zwischen Isolierung und Ressourcen |
 | `shared` | Alle Sitzungen teilen einen Container | Ressourcenschonend, geringste Isolierung |
@@ -699,7 +699,7 @@ Ausführliche Docker-Installationsanweisungen finden Sie unter: [Bereitstellungs
 ### Zusammenfassung der Best Practices
 
 | Praxis | Grund |
-| ----- | ----- |
+|--- | ---|
 | Standardmäßig `pairing`-Modus verwenden | Balance zwischen Benutzerfreundlichkeit und Sicherheit |
 | `requireMention` für Gruppennachrichten verwenden | Vermeidung von Manipulation |
 | Werkzeug-Whitelist statt Blacklist verwenden | Prinzip der minimalen Berechtigung |
@@ -749,13 +749,13 @@ Diese Lektion führte das Sicherheitsmodell und die Sandbox-Isolierungsfunktione
 > Aktualisiert am: 2026-01-27
 
 | Funktion | Dateipfad | Zeilennummer |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | Sicherheitsaudit | [`src/security/audit.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/audit.ts#L1-L910) | 1-910 |
 | Sicherheitsbehebung | [`src/security/fix.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/fix.ts#L1-L385) | 1-385 |
 | Dateiberechtigungsprüfung | [`src/security/audit-fs.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/audit-fs.ts) | Gesamte Datei |
 | Gateway-Konfigurations-Schema | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | Gesamte Datei |
-| Agent-Defaults-Schema | [`src/config/zod-schema.agent-defaults.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.agent-defaults.ts) | 1-172 |
-| Sandbox-Schema | [`src/config/zod-schema.agent-runtime.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.agent-runtime.ts) | 82-511 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Sandbox-Verwaltung | [`src/agents/sandbox.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/sandbox.ts) | Gesamte Datei |
 | Sandbox-Konfigurationsanalyse | [`src/agents/sandbox/config.js`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/sandbox/config.js) | Gesamte Datei |
 | Docker-Setup | [`src/agents/sandbox/docker.js`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/sandbox/docker.js) | Gesamte Datei |

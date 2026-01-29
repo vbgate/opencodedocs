@@ -121,7 +121,7 @@ Many "why can't I configure this right" problems are actually due to your incorr
 The defaults below come from the backend's `AppConfig::new()` and `ProxyConfig::default()`:
 
 | Config Block | Field | Default Value (Source Code) | What You Need to Remember |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | AppConfig | `language` | `"zh"` | Default Chinese |
 | AppConfig | `theme` | `"system"` | Follow system |
 | AppConfig | `auto_refresh` | `true` | Auto-refresh quota by default |
@@ -271,13 +271,13 @@ You can use this rule to self-check:
 > Updated: 2026-01-24
 
 | Topic | File Path | Line Numbers |
-| --- | --- | --- |
+|--- | --- | ---|
 | AppConfig defaults (`AppConfig::new()`) | [`src-tauri/src/models/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/models/config.rs#L4-L158) | 4-158 |
 | ProxyConfig defaults (port/auth/listen address) | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L74-L292) | 74-292 |
 | StickySessionConfig defaults (scheduling) | [`src-tauri/src/proxy/sticky_config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/sticky_config.rs#L3-L36) | 3-36 |
 | Config storage file name + migration logic (`gui_config.json`) | [`src-tauri/src/modules/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/config.rs#L7-L88) | 7-88 |
 | Data directory (`$HOME/.antigravity_tools`) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
-| `save_config`: save config + which fields are hot-updated | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L296-L334) | 296-334 |
+|--- | --- | ---|
 | AxumServer: `update_mapping/update_proxy/update_security/...` | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L45-L117) | 45-117 |
 | `allow_lan_access` listen address selection | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L81-L92) | 81-92 |
 | Proxy bind address & port on startup (must restart to change) | [`src-tauri/src/commands/proxy.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/proxy.rs#L42-L134) | 42-134 |

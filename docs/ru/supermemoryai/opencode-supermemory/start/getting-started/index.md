@@ -203,7 +203,7 @@ Available Tools:
 > Время обновления: 2026-01-23
 
 | Функция | Путь к файлу | Номер строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Логика скрипта установки | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L327-L410) | 327-410 |
 | Логика регистрации плагина | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L195-L248) | 195-248 |
 | Логика обнаружения конфликтов | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L273-L320) | 273-320 |

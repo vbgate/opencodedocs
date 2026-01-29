@@ -49,7 +49,7 @@ order: 3
 **两种安装位置的适用场景**：
 
 | 安装位置 | 适用场景 | 示例 |
-| -------- | -------- | ---- |
+|--- | --- | ---|
 | **项目本地**（默认） | 项目专用的技能，需要版本控制 | 团队业务规则、项目特定工具 |
 | **全局安装**（`--global`） | 所有项目通用的技能，无需版本控制 | 通用代码生成工具、文件格式转换 |
 
@@ -403,7 +403,7 @@ npx openskills update codebase-reviewer  # 更新项目本地版本
 > 更新时间：2026-01-24
 
 | 功能        | 文件路径                                                                                          | 行号    |
-| ----------- | ------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 安装位置判断 | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L84-L92) | 84-92   |
 | 目录路径工具 | [`src/utils/dirs.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/dirs.ts#L7-L25)     | 7-25    |
 | 技能列表显示 | [`src/commands/list.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/list.ts#L20-L43)   | 20-43   |

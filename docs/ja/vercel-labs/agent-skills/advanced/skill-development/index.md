@@ -432,7 +432,7 @@ trap cleanup EXIT
 > 更新日時：2026-01-25
 
 | 機能               | ファイルパス                                                                                       | 行番号   |
-| ------------------ | -------------------------------------------------------------------------------------------------- | ------ |
+|--- | --- | ---|
 | スキル開発規範       | [`AGENTS.md:9-69`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L9-L69)     | 9-69   |
 | ディレクトリ構造定義   | [`AGENTS.md:11-20`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L11-L20)   | 11-20  |
 | 命名約束           | [`AGENTS.md:22-27`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L22-L27)   | 22-27  |

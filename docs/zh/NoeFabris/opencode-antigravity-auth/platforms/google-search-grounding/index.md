@@ -36,7 +36,7 @@ order: 3
 ## 什么时候用这一招
 
 | 场景 | 是否需要启用 | 原因 |
-| ---- | ------------ | ---- |
+|--- | --- | ---|
 | 代码生成、编程问题 | ❌ 不需要 | 编程知识相对稳定，训练数据足够 |
 | 获取最新资讯（新闻、价格、版本） | ✅ 强烈推荐 | 需要实时数据 |
 | 事实核查（具体日期、统计） | ✅ 推荐 | 避免模型编造信息 |
@@ -114,7 +114,7 @@ EOF
 **配置说明**：
 
 | 字段 | 值 | 说明 |
-| ---- | --- | ---- |
+|--- | --- | ---|
 | `web_search.default_mode` | `"auto"` 或 `"off"` | 启用或禁用 Google Search，默认 `"off"` |
 | `web_search.grounding_threshold` | `0.0` - `1.0` | 搜索阈值，默认 `0.3`，仅在 `auto` 模式生效 |
 
@@ -125,7 +125,7 @@ EOF
 `grounding_threshold` 控制模型搜索的频率：
 
 | 阈值 | 行为 | 适用场景 |
-| ---- | ---- | -------- |
+|--- | --- | ---|
 | `0.0 - 0.2` | 频繁搜索，几乎每次不确定都搜 | 需要高度准确的实时数据 |
 | `0.3`（默认） | 适中，模型需要较确信才会搜 | 日常使用，平衡准确性和速度 |
 | `0.7 - 1.0` | 很少搜索，只在高置信度时搜 | 减少搜索次数，提升速度 |
@@ -261,7 +261,7 @@ cat ~/.config/opencode/antigravity.json | python3 -m json.tool
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | Google Search 配置 Schema | [`src/plugin/config/schema.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/schema.ts) | 303-319 |
 | Google Search 类型定义 | [`src/plugin/transform/types.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/types.ts) | 85-88 |
 | Google Search 注入逻辑 | [`src/plugin/transform/gemini.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/gemini.ts) | 402-419 |

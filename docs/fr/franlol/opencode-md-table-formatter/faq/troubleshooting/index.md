@@ -76,7 +76,7 @@ Ajoutez une ligne de séparation (deuxième ligne, au format `|---|`) :
 
 ```markdown
 | Name | Age |
-|------|-----|
+|--- | ---|
 | Alice | 25 |
 | Bob | 30 |
 ```
@@ -133,7 +133,7 @@ Seulement 1 ligne, format incomplet.
 
 ```markdown
 | Name |
-|------|
+|---|
 ```
 
 Au moins 2 lignes sont nécessaires (y compris la ligne de séparation).
@@ -144,7 +144,7 @@ Au moins 2 lignes sont nécessaires (y compris la ligne de séparation).
 
 ```markdown
 | Name | Age |
-|------|-----|
+|--- | ---|
 | Alice |
 ```
 
@@ -154,7 +154,7 @@ La première ligne a 2 colonnes, la deuxième ligne a 1 colonne, le nombre de co
 
 ```markdown
 | Name | Age |
-|------|-----|
+|--- | ---|
 | Alice | 25 |
 ```
 
@@ -176,7 +176,7 @@ Pas de ligne de séparation comme `|---|---|`.
 
 ```markdown
 | Name | Age |
-|------|-----|
+|--- | ---|
 | Alice | 25 |
 | Bob | 30 |
 ```
@@ -243,7 +243,7 @@ Le plugin enveloppe la logique de formatage avec try-catch, donc même en cas d'
 
 ```markdown
 | Name | Description |
-|------|-------------|
+|--- | ---|
 | Alice | Line 1<br>Line 2 |
 ```
 
@@ -293,7 +293,7 @@ Les symboles Markdown dans le code en ligne (`` `**code**` ``) sont calculés **
 
 ```
 | Symbole | Largeur |
-|---------|---------|
+|--- | ---|
 | Texte normal | 4 |
 | `**bold**` | 8 |
 ```
@@ -342,7 +342,7 @@ Si vous avez vérifié tous les problèmes ci-dessus mais que le problème persi
 > Dernière mise à jour : 2026-01-26
 
 | Fonction            | Chemin du fichier                                                                                    | Ligne    |
-| --------------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Logique de validation du tableau    | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88)     | 70-88   |
 | Détection des lignes de tableau      | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61)     | 58-61   |
 | Détection de la ligne de séparation      | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L63-L68)     | 63-68   |

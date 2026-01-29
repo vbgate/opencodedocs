@@ -131,7 +131,7 @@ graph LR
 Agent Skills を使用する最適なタイミング：
 
 | シナリオ | 使用するスキル | トリガープロンプトの例 |
-| ---- | ---------- | -------------- |
+|--- | --- | ---|
 | React コンポーネントを記述 | react-best-practices | "Review this React component for performance issues" |
 | Next.js ページを最適化 | react-best-practices | "Help me optimize this Next.js page" |
 | UI の品質をチェック | web-design-guidelines | "Check accessibility of my site" |
@@ -193,7 +193,7 @@ Agent Skills は AI コーディングエージェント向けのスキルパッ
 > 更新日時：2026-01-25
 
 | 機能        | ファイルパス                                                              | 行番号    |
-| ----------- | ------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | スキルパッケージリスト | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L7-L80) | 7-80    |
 | スキル構造の説明 | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L103-L110) | 103-110 |
 | AGENTS.md 仕様 | [`AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md) | 全文    |

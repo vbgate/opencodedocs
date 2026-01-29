@@ -103,7 +103,7 @@ function isTableRow(line: string): boolean {
 各セルは正規表現 `/^\s*:?-+:?\s*$/` に一致する必要があります。人間の言葉で言うと：
 
 | 構成要素 | 意味 | 例 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `\s*` | オプションの空白 | `| --- |` または `|---|` を許可 |
 | `:?` | オプションのコロン | 整列方法を指定するために使用 |
 | `-+` | 少なくとも 1 つのハイフン | `-`、`---`、`------` はすべて OK |
@@ -145,12 +145,12 @@ function isSeparatorRow(line: string): boolean {
 ```markdown
 ✅ 正しい（すべての行が 3 列）
 | A | B | C |
-| --- | --- | --- |
+|--- | --- | ---|
 | 1 | 2 | 3 |
 
 ❌ 間違い（3 行目が 2 列のみ）
 | A | B | C |
-| --- | --- | --- |
+|--- | --- | ---|
 | 1 | 2 |
 ```
 
@@ -181,7 +181,7 @@ function isValidTable(lines: string[]): boolean {
 区切り行は区切りのためだけでなく、整列方法を指定するためにも使用されます：
 
 | 構文 | 整列方法 | 効果 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `---` または `:---` | 左揃え | テキストを左に寄せる（デフォルト） |
 | `:---:` | 中央揃え | テキストを中央に配置 |
 | `---:` | 右揃え | テキストを右に寄せる |
@@ -190,7 +190,7 @@ function isValidTable(lines: string[]): boolean {
 
 ```markdown
 | 左揃え | 中央揃え | 右揃え |
-| :--- | :---: | ---: |
+|--- | --- | ---|
 | テキスト | テキスト | テキスト |
 ```
 
@@ -198,7 +198,7 @@ function isValidTable(lines: string[]): boolean {
 
 ```markdown
 | 左揃え |  中央揃え  | 右揃え |
-| :----- | :-------: | -----: |
+|--- | --- | ---|
 | テキスト |  テキスト  |   テキスト |
 ```
 
@@ -220,7 +220,7 @@ function getAlignment(delimiterCell: string): "left" | "center" | "right" {
 ## 一般的なエラーのトラブルシューティング
 
 | エラー現象 | 可能な原因 | 解決方法 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `invalid structure` | 区切り行が不足 | ヘッダーの後に `\| --- \| --- \|` を追加 |
 | `invalid structure` | 列数が不一致 | 各行の `\|` の数が同じか確認 |
 | `invalid structure` | 行頭/行末に `\|` が不足 | 欠けている `\|` を補完 |
@@ -239,7 +239,7 @@ function getAlignment(delimiterCell: string): "left" | "center" | "right" {
 ## このレッスンのまとめ
 
 | 条件 | 要件 |
-| --- | --- |
+|--- | ---|
 | 行頭行末 | `\|` で始まり終わる必要がある |
 | 区切り文字の数 | 少なくとも 2 つの `\|` |
 | 区切り行 | 必須、形式は `:?-+:?` |
@@ -268,7 +268,7 @@ function getAlignment(delimiterCell: string): "left" | "center" | "right" {
 > 更新日時：2026-01-26
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | テーブル行判定 | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61) | 58-61 |
 | 区切り行判定 | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L63-L68) | 63-68 |
 | テーブル検証 | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88) | 70-88 |

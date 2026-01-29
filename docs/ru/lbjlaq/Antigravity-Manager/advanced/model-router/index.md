@@ -172,7 +172,7 @@ $resp.Headers["X-Mapped-Model"]
 ## Напоминания о возможных ошибках
 
 | Сценарий | Вы можете сделать (❌) | Рекомендуемый подход (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Подстановка не работает | Написали `GPT-4*` ожидая сопоставления с `gpt-4-turbo` | Используйте нижний регистр `gpt-4*`; сопоставление подстановок на стороне бэкенда чувствительно к регистру |
 | Две подстановки могут совпадать | Одновременно написали `gpt-*` и `gpt-4*`, не уверены, по какому правилу пойдёт | Сделайте более конкретное правило «длиннее», чтобы у него было больше не-`*` символов |
 | Правила выглядят правильными, но всё ещё не изменяются | Смотрите только на тело ответа, не на заголовки ответа | Проверяйте `X-Mapped-Model` с помощью `curl -i` (это результат, явно возвращаемый бэкендом) |
@@ -198,7 +198,7 @@ $resp.Headers["X-Mapped-Model"]
 > Дата обновления: 2026-01-23
 
 | Функция | Путь к файлу | Номер строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Поле конфигурации: `proxy.custom_mapping` (тип фронтенда) | [`src/types/config.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/types/config.ts#L6-L20) | 6-20 |
 | UI: запись/сброс/предустановки (вызов `update_model_mapping`) | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L371-L475) | 371-475 |
 | UI: карта маршрутизации моделей (применить предустановки/сбросить сопоставления/список и форма добавления) | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L1762-L1931) | 1762-1931 |
@@ -207,7 +207,7 @@ $resp.Headers["X-Mapped-Model"]
 | Алгоритм маршрутизации: точный > подстановка (более конкретное имеет приоритет) > сопоставление по умолчанию | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L180-L228) | 180-228 |
 | Сопоставление подстановки: поддерживает несколько `*`, чувствительно к регистру | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L134-L178) | 134-178 |
 | Вычисление `mapped_model` в запросе (пример: обработчик OpenAI) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L154-L159) | 154-159 |
-| Заголовок ответа возвращает `X-Mapped-Model` (пример: обработчик OpenAI) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L310-L334) | 310-334 |
+|--- | --- | ---|
 
 **Ключевая функция**:
 - `resolve_model_route(original_model, custom_mapping)`: главный вход маршрутизации моделей (см. `src-tauri/src/proxy/common/model_mapping.rs`)

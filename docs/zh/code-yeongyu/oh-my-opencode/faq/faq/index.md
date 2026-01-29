@@ -81,7 +81,7 @@ opencode --version
 配置文件有两个层级：
 
 | 级别 | 位置 | 用途 | 优先级 |
-|------|------|------|--------|
+|--- | --- | --- | ---|
 | 项目级 | `.opencode/oh-my-opencode.json` | 项目特定配置 | 低 |
 | 用户级 | `~/.config/opencode/oh-my-opencode.json` | 全局默认配置 | 高 |
 
@@ -173,7 +173,7 @@ delegate_task(agent="librarian", prompt="Find implementation examples of JWT aut
 **代理权限限制**：
 
 | 代理 | 可写入代码 | 可执行 Bash | 可委托任务 | 说明 |
-|------|-----------|------------|-----------|------|
+|--- | --- | --- | --- | ---|
 | Sisyphus | ✅ | ✅ | ✅ | 主编排器 |
 | Oracle | ❌ | ❌ | ❌ | 只读顾问 |
 | Librarian | ❌ | ❌ | ❌ | 只读研究 |
@@ -266,7 +266,7 @@ background_output(task_id="bg_abc123")
 **内置 Categories**：
 
 | Category | 默认模型 | Temperature | 用例 |
-|----------|-----------|-------------|------|
+|--- | --- | --- | ---|
 | visual-engineering | google/gemini-3-pro | 0.7 | 前端、UI/UX、设计 |
 | ultrabrain | openai/gpt-5.2-codex | 0.1 | 高智商推理任务 |
 | artistry | google/gemini-3-pro | 0.7 | 创意和艺术任务 |
@@ -278,7 +278,7 @@ background_output(task_id="bg_abc123")
 **内置 Skills**：
 
 | Skill | 触发条件 | 描述 |
-|-------|----------|------|
+|--- | --- | ---|
 | playwright | 浏览器相关任务 | Playwright MCP 浏览器自动化 |
 | frontend-ui-ux | UI/UX 任务 | 设计师转开发人员，打造精美界面 |
 | git-master | Git 操作（commit、rebase、squash） | Git 专家，原子提交、历史搜索 |
@@ -305,7 +305,7 @@ Categories 优化成本（用便宜的模型），Skills 确保质量（注入�
 **支持的配置类型**：
 
 | 类型 | 加载位置 | 优先级 |
-|------|----------|--------|
+|--- | --- | ---|
 | Commands | `~/.claude/commands/`, `.claude/commands/` | 低 |
 | Skills | `~/.claude/skills/*/SKILL.md`, `.claude/skills/*/SKILL.md` | 中 |
 | Agents | `~/.claude/agents/*.md`, `.claude/agents/*.md` | 高 |
@@ -347,7 +347,7 @@ OpenCode 项目的配置 > Claude Code 用户的配置
 **是的**，数据存储格式兼容：
 
 | 数据 | 位置 | 格式 | 兼容性 |
-|------|------|------|--------|
+|--- | --- | --- | ---|
 | Todos | `~/.claude/todos/` | JSON | ✅ Claude Code 兼容 |
 | Transcripts | `~/.claude/transcripts/` | JSONL | ✅ Claude Code 兼容 |
 
@@ -439,7 +439,7 @@ opencode --version
 **常见问题**：
 
 | 问题 | 原因 | 解决方案 |
-|------|------|---------|
+|--- | --- | ---|
 | 代理拒绝任务 | 权限配置错误 | 检查 `agents.permission` 配置 |
 | 后台任务超时 | 并发限制过严 | 增加 `providerConcurrency` |
 | 思考块错误 | 模型不支持 thinking | 切换到支持 thinking 的模型 |
@@ -560,7 +560,7 @@ background_cancel(task_id="bg_abc123")
 > 更新时间：2026-01-26
 
 | 功能 | 文件路径 | 行号 |
-|------|----------|------|
+|--- | --- | ---|
 | Keyword Detector (ultrawork 检测) | [`src/hooks/keyword-detector/`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/keyword-detector/) | 全目录 |
 | Background Task Manager | [`src/features/background-agent/manager.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/background-agent/manager.ts) | 1-1377 |
 | Concurrency Control | [`src/features/background-agent/concurrency.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/background-agent/concurrency.ts) | 全文件 |

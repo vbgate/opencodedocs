@@ -13,7 +13,7 @@ This chapter provides technical reference materials for DCP, including internal 
 ## Chapter Contents
 
 | Document | Description | Suitable For |
-|----------|-------------|--------------|
+|--- | --- | ---|
 | [Architecture Overview](./architecture/) | Understand DCP's internal architecture, module dependencies, and call chains | Users who want to understand DCP's working principles |
 | [Token Calculation Principles](./token-calculation/) | Understand how DCP calculates token usage and savings statistics | Users who want to accurately evaluate savings effects |
 | [API Reference](./api-reference/) | Complete API documentation, including configuration interfaces, tool specifications, and state management | Plugin developers |

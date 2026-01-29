@@ -40,7 +40,7 @@ AIアシスタントがありますが、テキストでのみやり取りでき
 **Canvas + A2UIは以下のシナリオに適しています**：
 
 | シナリオ | 例 |
-| ------ | ------ |
+|--- | ---|
 | **データ可視化** | 統計グラフ、プログレスバー、タイムラインの表示 |
 | **対話型フォーム** | ユーザーに操作確認やオプション選択をさせる |
 | **ステータスパネル** | タスク進行状況やシステム状態をリアルタイム表示 |
@@ -334,7 +334,7 @@ clawdbot nodes canvas hide --node abc123-def456-ghi789
 **Canvas機能が正常に動作していることを確認**：
 
 | チェック項目 | 確認方法 |
-| ------- | -------- |
+|--- | ---|
 | Canvas Hostが実行中 | `lsof -i :18793`に出力がある |
 | ノードのCanvas機能 | `clawdbot nodes list`に`canvas`が表示される |
 | ページの読み込み成功 | ノードがHTMLコンテンツを表示する |
@@ -400,7 +400,7 @@ clawdbot nodes canvas hide --node abc123-def456-ghi789
 > 更新日：2026-01-27
 
 | 機能 | ファイルパス | 行番号 |
-| ----- | --------- | ---- |
+|--- | --- | ---|
 | Canvas Hostサーバー | [`src/canvas-host/server.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/server.ts) | 372-441 |
 | A2UIプロトコル処理 | [`src/canvas-host/a2ui.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/a2ui.ts) | 150-203 |
 | Canvasツール定義 | [`src/agents/tools/canvas-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/canvas-tool.ts) | 52-179 |

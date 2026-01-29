@@ -65,7 +65,7 @@ Before starting, ensure you:
 React performance optimization is more than just using a few hooks—it's solving problems at the **architectural level**. Vercel's 57 rules are prioritized into 8 categories:
 
 | Priority | Category | Focus | Typical Gains |
-| -------- | -------- | ----- | ------------- |
+|--- | --- | --- | ---|
 | **CRITICAL** | Eliminate Waterfalls | Avoid serial async operations | 2-10× improvement |
 | **CRITICAL** | Bundle Optimization | Reduce initial bundle size | Significant TTI/LCP improvement |
 | **HIGH** | Server Performance | Optimize data fetching & caching | Reduce server load |
@@ -381,7 +381,7 @@ You'll learn:
 > Last updated: 2026-01-25
 
 | Feature | File Path | Lines |
-| -------- | --------- | ----- |
+|--- | --- | ---|
 | React Best Practices skill definition | [`skills/react-best-practices/SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/SKILL.md) | Full text |
 | Complete rules documentation | [`skills/react-best-practices/AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/AGENTS.md) | Full text |
 | 57 rules files | [`skills/react-best-practices/rules/*.md`](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices/rules) | - |
@@ -392,7 +392,7 @@ You'll learn:
 **Key Files (CRITICAL Rule Examples)**:
 
 | Rule | File Path | Description |
-| ---- | --------- | ----------- |
+|--- | --- | ---|
 | Promise.all() parallel requests | [`async-parallel.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/async-parallel.md) | Eliminate waterfalls |
 | Dynamic import large components | [`bundle-dynamic-imports.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/bundle-dynamic-imports.md) | Reduce bundle size |
 | Defer await | [`async-defer-await.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/async-defer-await.md) | Delay async operations |

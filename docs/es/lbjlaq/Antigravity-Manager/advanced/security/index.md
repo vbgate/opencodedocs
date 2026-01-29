@@ -206,7 +206,7 @@ curl -i "http://127.0.0.1:<PORT>/v1/messages" \
 ::: warning Enfoque incorrecto vs enfoque recomendado
 
 | Escenario | ❌ Error común | ✓ Enfoque recomendado |
-| --- | --- | --- |
+|--- | --- | ---|
 | Necesitas acceso a la red de área local | Solo abrir `allow_lan_access=true`, pero `auth_mode=off` | Usa `auth_mode=auto`, y configura una `api_key` fuerte |
 | Activaste autenticación pero sigues obteniendo 401 | El cliente lleva key, pero el nombre del header no es compatible | El proxy es compatible con tres tipos de header: `Authorization`/`x-api-key`/`x-goog-api-key` |
 | Activaste autenticación pero no configuraste key | `api_key` está vacío y también abriste la autenticación | El backend rechazará directamente (el registro indicará que key está vacío) |
@@ -259,12 +259,12 @@ last_error = Some(format!("Token refresh failed: {}", e));
 > Fecha de actualización: 2026-01-23
 
 | Función | Ruta del archivo | Línea |
-| --- | --- | --- |
+|--- | --- | ---|
 | Los cuatro modos de auth_mode y explicación de la semántica de auto | [`docs/proxy/auth.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy/auth.md#L10-L24) | 10-24 |
 | Enumeración ProxyAuthMode y valor predeterminado (predeterminado off) | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L5-L18) | 5-18 |
 | Campos clave y valores predeterminados de ProxyConfig (allow_lan_access, api_key) | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L259) | 174-259 |
 | Derivación de dirección de escucha (127.0.0.1 vs 0.0.0.0) | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L281-L292) | 281-292 |
-| Lógica de derivación de auto -> effective_auth_mode | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L10-L30) | 10-30 |
+|--- | --- | ---|
 | Middleware de autenticación (OPTIONS permitidos, /healthz exento, compatibilidad con tres tipos de header) | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L14-L78) | 14-78 |
 | UI: interruptores/menús desplegables de allow_lan_access y auth_mode | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L943-L1046) | 943-1046 |
 | UI: edición/restablecimiento/copia de api_key | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L1048-L1120) | 1048-1120 |

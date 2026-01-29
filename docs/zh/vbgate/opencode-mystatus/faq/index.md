@@ -35,7 +35,7 @@ order: 4
 根据错误信息快速找到解决方案：
 
 | 错误关键词 | 可能原因 | 解决方案 |
-|-----------|---------|---------|
+|--- | --- | ---|
 | `auth.json not found` | 认证文件不存在 | [故障排除](./troubleshooting/) |
 | `Token expired` | Token 已过期 | [故障排除](./troubleshooting/) |
 | `Permission denied` | 权限不足 | [Copilot 认证配置](../advanced/copilot-auth/) |

@@ -46,7 +46,7 @@ Ultrawork Mode is a special working mode triggered by a keyword. When your promp
 Ultrawork mode is based on the following core principles (from the [Ultrawork Manifesto](https://github.com/code-yeongyu/oh-my-opencode/blob/main/docs/ultrawork-manifesto.md)):
 
 | Principle | Description |
-|-----------|-------------|
+|--- | ---|
 | **Human intervention is a failure signal** | If you need to constantly correct AI output, it means there's a problem with the system design |
 | **Indistinguishable code** | Code written by AI should be indistinguishable from code written by senior engineers |
 | **Minimize cognitive burden** | You only need to say "what to do", agents are responsible for "how to do it" |
@@ -143,7 +143,7 @@ If any item fails, check:
 ## When to Use This Technique
 
 | Scenario | Use Ultrawork | Normal Mode |
-|----------|--------------|-------------|
+|--- | --- | ---|
 | **Complex new features** | ✅ Recommended (requires multi-agent collaboration) | ❌ May not be efficient enough |
 | **Urgent fixes** | ✅ Recommended (needs quick diagnosis and exploration) | ❌ May miss context |
 | **Simple modifications** | ❌ Overkill (wastes resources) | ✅ More suitable |
@@ -202,7 +202,7 @@ Remember: Ultrawork mode is designed to make agents work like a real team. You j
 > Last updated: 2026-01-26
 
 | Feature | File Path | Line Numbers |
-|---------|-----------|--------------|
+|--- | --- | ---|
 | Ultrawork design philosophy | [`docs/ultrawork-manifesto.md`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/docs/ultrawork-manifesto.md) | 1-198 |
 | Keyword detector Hook | [`src/hooks/keyword-detector/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/keyword-detector/index.ts) | 12-100 |
 | ULTRAWORK instruction template | [`src/hooks/keyword-detector/constants.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/keyword-detector/constants.ts) | 54-280 |
@@ -221,7 +221,7 @@ Remember: Ultrawork mode is designed to make agents work like a real team. You j
 
 **Business rules**:
 | Rule ID | Rule Description | Tag |
-|---------|------------------|-----|
+|--- | --- | ---|
 | BR-4.8.4-1 | Activate Ultrawork mode when "ultrawork" or "ulw" is detected | [Fact] |
 | BR-4.8.4-2 | Ultrawork mode sets `message.variant = "max"` | [Fact] |
 | BR-4.8.4-3 | Ultrawork mode displays Toast notification: "Ultrawork Mode Activated" | [Fact] |

@@ -49,7 +49,7 @@ In fact, OpenSkills supports multiple installation sources. Let's explore them o
 **Use cases for different installation sources**:
 
 | Installation Source | Use Cases | Example |
-| ------------------- | --------- | ------- |
+|--- | --- | ---|
 | **GitHub Repository** | Using open source community skills | `openskills install anthropics/skills` |
 | **Local Path** | Developing and testing your own skills | `openskills install ./my-skill` |
 | **Private Git Repository** | Using company internal skills | `openskills install git@github.com:my-org/private-skills.git` |
@@ -173,9 +173,9 @@ When you only need one skill from a repository, using the subpath format allows 
 #### GitHub Shorthand Rules (source code `install.ts:131-143`)
 
 | Format | Example | Conversion Result |
-| ------ | ------- | ----------------- |
+|--- | --- | ---|
 | `owner/repo` | `anthropics/skills` | `https://github.com/anthropics/skills` |
-| `owner/repo/skill-name` | `my-org/skills/web-scraper` | URL: `https://github.com/my-org/skills` + subpath: `web-scraper` |
+|--- | --- | ---|
 
 ---
 
@@ -244,7 +244,7 @@ This will launch an interactive selection interface, allowing you to choose whic
 #### Local Path Supported Formats (source code `install.ts:25-32`)
 
 | Format | Description | Example |
-| ------ | ----------- | ------- |
+|--- | --- | ---|
 | `/absolute/path` | Absolute path | `/home/user/skills/my-skill` |
 | `./relative/path` | Relative path to current directory | `./local-skills/my-skill` |
 | `../relative/path` | Relative path to parent directory | `../shared-skills/common` |
@@ -350,7 +350,7 @@ For internal team skills, it's recommended to use private Git repositories, as t
 #### Git URL Recognition Rules (source code `install.ts:37-45`)
 
 | Prefix/Suffix | Description | Example |
-| ------------- | ----------- | ------- |
+|--- | --- | ---|
 | `git@` | SSH protocol | `git@github.com:owner/repo.git` |
 | `git://` | Git protocol | `git://github.com/owner/repo.git` |
 | `http://` | HTTP protocol | `http://github.com/owner/repo.git` |
@@ -473,7 +473,7 @@ Through this lesson, you have learned:
 **Quick Reference for Core Commands**:
 
 | Command | Purpose |
-| ------- | ------- |
+|--- | ---|
 | `npx openskills install owner/repo` | Install from GitHub repository (interactive selection) |
 | `npx openskills install owner/repo/skill-name` | Directly install a specific skill from a repository |
 | `npx openskills install ./local-skills/skill` | Install from local path |
@@ -504,7 +504,7 @@ Installation sources are only part of skill management. Next, you need to unders
 > Last updated: 2026-01-24
 
 | Function | File Path | Line Numbers |
-| -------- | --------- | ------------ |
+|--- | --- | ---|
 | Install command entry | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L83-L184) | 83-184 |
 | Local path detection | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L25-L32) | 25-32 |
 | Git URL detection | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L37-L45) | 37-45 |

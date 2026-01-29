@@ -34,7 +34,7 @@ order: 20
 ## 什么时候用这一招
 
 | 场景 | 推荐方式 | 原因 |
-|------|----------|------|
+|--- | --- | ---|
 | 第一次使用 | 插件市场安装 | 最简单，5 分钟搞定 |
 | 想试用特定功能 | 插件市场安装 | 完整体验后再决定 |
 | 有特定需求 | 手动安装 | 精确控制每个组件 |
@@ -427,7 +427,7 @@ sudo cp -r everything-claude-code/agents/*.md ~/.claude/agents/
 **两种安装方式对比**：
 
 | 特性 | 插件市场安装 | 手动安装 |
-|------|------------|---------|
+|--- | --- | ---|
 | 速度 | ⚡ 快 | 🐌 慢 |
 | 难度 | 🟢 简单 | 🟡 中等 |
 | 灵活性 | 🔒 固定 | 🔓 自定义 |
@@ -461,7 +461,7 @@ sudo cp -r everything-claude-code/agents/*.md ~/.claude/agents/
 > 更新时间：2026-01-25
 
 | 功能        | 文件路径                                                                                    | 行号    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 插件元数据 | [`source/affaan-m/everything-claude-code/.claude-plugin/plugin.json`](https://github.com/affaan-m/everything-claude-code/blob/main/.claude-plugin/plugin.json) | 1-28    |
 | 市场清单   | [`source/affaan-m/everything-claude-code/.claude-plugin/marketplace.json`](https://github.com/affaan-m/everything-claude-code/blob/main/.claude-plugin/marketplace.json) | 1-45    |
 | 安装指南   | [`source/affaan-m/everything-claude-code/README.md`](https://github.com/affaan-m/everything-claude-code/blob/main/README.md) | 175-242  |

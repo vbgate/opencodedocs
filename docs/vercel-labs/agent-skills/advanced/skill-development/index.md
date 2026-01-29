@@ -434,7 +434,7 @@ trap cleanup EXIT
 > Updated: 2026-01-25
 
 | Feature                           | File Path                                                                                      | Line Numbers |
-| --------------------------------- | ---------------------------------------------------------------------------------------------- | ------------ |
+|--- | --- | ---|
 | Skill Development Conventions     | [`AGENTS.md:9-69`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L9-L69)     | 9-69         |
 | Directory Structure Definition    | [`AGENTS.md:11-20`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L11-L20)   | 11-20        |
 | Naming Conventions                | [`AGENTS.md:22-27`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L22-L27)   | 22-27        |

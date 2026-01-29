@@ -73,7 +73,7 @@ O sistema de canais do Clawdbot adota uma **arquitetura baseada em plugins**:
 **Conceitos-chave**:
 
 | Conceito | Função |
-| ------------ | ---------------------------- |
+|--- | ---|
 | **Plugin de Canal** | Cada canal é um plugin independente |
 | **Interface Unificada** | Todos os canais usam a mesma API |
 | **Proteção DM** | Mecanismo de emparelhamento habilitado por padrão, recusa remetentes desconhecidos |
@@ -88,7 +88,7 @@ O Clawdbot suporta **13+ canais de comunicação**, divididos em duas categorias
 ### Canais Principais (Integrados)
 
 | Canal | Método de Autenticação | Dificuldade | Características |
-| -------------- | -------------------- | ---- | --------------------------------- |
+|--- | --- | --- | ---|
 | **Telegram** | Bot Token | ⭐ | O mais simples e rápido, recomendado para iniciantes |
 | **WhatsApp** | QR Code / Phone Link | ⭐⭐ | Usa número real, recomendado telefone separado + eSIM |
 | **Slack** | Bot Token + App Token | ⭐⭐ | Escolha principal para ambientes de trabalho, Socket Mode |
@@ -100,7 +100,7 @@ O Clawdbot suporta **13+ canais de comunicação**, divididos em duas categorias
 ### Canais Extendidos (Plugins Externos)
 
 | Canal | Método de Autenticação | Tipo | Características |
-| ---------------- | -------------------- | ---------- | --------------------------------- |
+|--- | --- | --- | ---|
 | **WebChat** | Gateway WebSocket | Integrado | Não requer autenticação de terceiros, o mais simples |
 | **LINE** | Messaging API | Plugin externo | Comum entre usuários asiáticos |
 | **BlueBubbles** | Private API | Plugin de extensão | Extensão iMessage, suporta dispositivos remotos |
@@ -606,7 +606,7 @@ Nesta lição você aprendeu:
 > Última atualização: 2026-01-27
 
 | Funcionalidade | Caminho do Arquivo | Linhas |
-| --------------- | ------------------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | Registro de canais | [`src/channels/registry.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.ts) | 7-100 |
 | Diretório de plugins de canais | [`src/channels/plugins/`](https://github.com/clawdbot/clawdbot/tree/main/src/channels/plugins/) | Diretório completo |
 | Tipo de metadados de canal | [`src/channels/plugins/types.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/types.core.ts) | 74-93 |

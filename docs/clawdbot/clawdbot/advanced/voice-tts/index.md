@@ -83,7 +83,7 @@ flowchart TD
 **Key Differences**:
 
 | Feature | Purpose | Supported Platforms | Trigger Method | Conversation Rounds |
-|---------|---------|---------------------|---------------|---------------------|
+|--- | --- | --- | --- | ---|
 | **Voice Wake** | Single voice command | macOS/iOS/Android | Wake word (e.g., "clawd") | Single |
 | **Talk Mode** | Continuous voice conversation | iOS/Android | Manual start | Multiple (loop) |
 | **TTS** | Text-to-speech | All channels | Auto-triggered by AI reply | None (passive) |
@@ -122,7 +122,7 @@ Talk Mode is a continuous voice conversation loop:
 **Key Features**:
 
 | Feature | Description | Platform Support |
-|---------|-------------|------------------|
+|--- | --- | ---|
 | **Interrupt Playback** | Immediately stop TTS playback when user speaks | iOS/Android |
 | **State Transition** | Listening → Thinking → Speaking three-state loop | iOS/Android |
 | **JSON Commands** | AI can embed JSON in replies to control voice parameters | All |
@@ -141,7 +141,7 @@ providers = ["elevenlabs", "openai", "edge"];
 ```
 
 | Provider | Quality | Speed | Cost | API Key | Recommended Use |
-|----------|---------|-------|------|---------|-----------------|
+|--- | --- | --- | --- | --- | ---|
 | **ElevenLabs** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | Paid | High-quality voice, Talk Mode (streaming) |
 | **OpenAI** | ⭐⭐⭐⭐ | ⭐⭐⭐ | Paid | Standard quality, stable and reliable |
 | **Edge TTS** | ⭐⭐⭐ | ⭐⭐ | Free | Default free option, testing, backup |
@@ -155,7 +155,7 @@ Edge TTS uses Microsoft Edge's online neural TTS service (via `node-edge-tts`), 
 TTS output format is determined by the **target channel**, not configuration:
 
 | Channel | Output Format | Format Description | Reason |
-|---------|---------------|-------------------|--------|
+|--- | --- | --- | ---|
 | **Telegram** | Opus (`opus_48000_64`) | 48kHz/64kbps | Telegram voice messages require Opus |
 | **Other Channels** | MP3 (`mp3_44100_128`) | 44.1kHz/128kbps | Good universal compatibility |
 | **Talk Mode** | PCM (`pcm_44100` / `pcm_24000`) | Raw audio stream | iOS/Android AudioTrack playback |
@@ -332,7 +332,7 @@ Talk Mode provides true voice assistant experience: continuous conversation, int
 
 ::: info Talk Mode Platform Support
 | Platform | Talk Mode | Voice Wake |
-|----------|-----------|------------|
+|--- | --- | ---|
 | macOS | ❌ Not Supported | ✅ Supported |
 | iOS | ✅ Supported | ✅ Supported |
 | Android | ✅ Supported | ✅ Supported |
@@ -379,7 +379,7 @@ AI can embed JSON commands in replies to control voice parameters (source: `docs
 **Supported Parameters**:
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
+|--- | --- | ---|
 | `voice` / `voice_id` | String | ElevenLabs Voice ID |
 | `model` / `model_id` | String | TTS model ID |
 | `speed` | Number | Speech speed (0.5-2.0) |
@@ -408,7 +408,7 @@ messages:
 **TTS Auto Mode** (source: `docs/tts.md:198-203`):
 
 | Mode | Description | Use Case |
-|------|-------------|----------|
+|--- | --- | ---|
 | `off` | Disable auto TTS | Text interaction |
 | `always` | Convert all replies to voice | Voice assistant |
 | `inbound` | Convert to voice only when replying to voice messages | Conversational voice |
@@ -778,7 +778,7 @@ export CLAWDBOT_TTS_PREFS="~/.clawdbot/settings/tts.json"
 ### How to Choose TTS Provider?
 
 | Scenario | Recommended Provider |
-|----------|---------------------|
+|--- | ---|
 | **Free Testing** | Edge TTS (no API Key needed) |
 | **High-Quality Voice** | ElevenLabs (best expressiveness) |
 | **Stable and Reliable** | OpenAI (standard quality, stable API) |
@@ -808,7 +808,7 @@ Clawdbot automatically selects format based on channel, no manual configuration 
 ### How Long Does TTS Take?
 
 | Provider | Typical Latency |
-|----------|-----------------|
+|--- | ---|
 | Edge TTS | 1-3 seconds (depends on network) |
 | OpenAI | 2-4 seconds (standard API) |
 | ElevenLabs (streaming) | < 1 second (Talk Mode real-time playback) |
@@ -884,7 +884,7 @@ TTS: skipped long text (2500 > 1500), summarization disabled
 > Last Updated: 2026-01-27
 
 | Feature | File Path | Line Numbers |
-|---------|-----------|--------------|
+|--- | --- | ---|
 | TTS Core Logic | [`src/tts/tts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/tts/tts.ts) | 1-1472 |
 | TTS Configuration Parsing | [`src/tts/tts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/tts/tts.ts) | 248-303 |
 | ElevenLabs TTS | [`src/tts/tts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/tts/tts.ts) | 916-991 |

@@ -45,7 +45,7 @@ When you:
 OpenAI applies two types of rate limiting windows for API calls:
 
 | Window Type | Duration | Purpose |
-|-------------|----------|---------|
+|--- | --- | ---|
 | **Primary Window** | Returned by OpenAI server | Prevents excessive calls within a short time |
 | **Secondary Window** | Returned by OpenAI server (may not exist) | Prevents long-term overuse |
 
@@ -143,7 +143,7 @@ Account:        user@example.com (plus)
 Verify your understanding:
 
 | Scenario | You should see |
-|----------|---------------|
+|--- | ---|
 | 60% remaining in primary window | Progress bar about 60% full, displaying `60% remaining` |
 | Resets in 2.5 hours | Shows `Resets in: 2h 30m` |
 | Limit reached | Displays `Limit reached!` |
@@ -211,7 +211,7 @@ mystatus queries quotas by calling the official OpenAI API:
 > Last updated: 2026-01-23
 
 | Function                     | File Path                                                                                      | Lines   |
-| ---------------------------- | --------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | OpenAI quota query entry     | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L207-L236) | 207-236 |
 | OpenAI API call             | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L132-L155) | 132-155 |
 | Format output                | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L164-L194) | 164-194 |

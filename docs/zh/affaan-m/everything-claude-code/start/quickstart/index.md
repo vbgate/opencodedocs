@@ -347,13 +347,13 @@ Everything Claude Code 完全支持 Windows。所有 hooks 和脚本都使用 No
 > 更新时间：2026-01-25
 
 | 功能          | 文件路径                                                                                    | 行号  |
-| ------------- | ------------------------------------------------------------------------------------------- | ----- |
+|--- | --- | ---|
 | 插件清单       | [`.claude-plugin/plugin.json`](https://github.com/affaan-m/everything-claude-code/blob/main/.claude-plugin/plugin.json) | 1-28  |
 | Marketplace 配置 | [`.claude-plugin/marketplace.json`](https://github.com/affaan-m/everything-claude-code/blob/main/.claude-plugin/marketplace.json) | 1-45  |
 | 安装说明       | [`README.md`](https://github.com/affaan-m/everything-claude-code/blob/main/README.md)                        | 175-242 |
 | /plan 命令      | [`commands/plan.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/plan.md)            | 1-114 |
 | /tdd 命令      | [`commands/tdd.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/tdd.md)            | 1-327 |
-| /code-review 命令 | [`commands/code-review.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/code-review.md) | 1-200 |
+|--- | --- | ---|
 
 **关键常量**：
 - 插件名称: `everything-claude-code`

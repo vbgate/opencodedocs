@@ -321,7 +321,7 @@ Script discovery rules:
 > Last updated: 2026-01-24
 
 | Function        | File Path                                                                                    | Line Range |
-| ----------- | ------------------------------------------------------------------------------------------- | ---------- |
+|--- | --- | ---|
 | RunSkillScript tool definition | [`src/tools.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/tools.ts#L137-L198) | 137-198 |
 | findScripts function | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L59-L99) | 59-99   |
 

@@ -64,7 +64,7 @@ Avant de commencer, assurez-vous de :
 L'optimisation des performances React ne consiste pas seulement à utiliser quelques hooks, mais à résoudre les problèmes au **niveau architecture**. Les 57 règles de Vercel sont classées en 8 catégories par priorité :
 
 | Priorité | Catégorie | Focus | Bénéfice typique |
-| ------ | ---- | ---- | ---- |
+|--- | --- | --- | ---|
 | **CRITICAL** | Élimination des cascades | Éviter les opérations async sérielles | 2-10× amélioration |
 | **CRITICAL** | Optimisation des bundles | Réduire la taille du bundle initial | Amélioration significative TTI/LCP |
 | **HIGH** | Performance serveur | Optimiser la récupération de données et le cache | Réduire la charge serveur |
@@ -258,7 +258,7 @@ Vous apprendrez :
 > Dernière mise à jour :2026-01-25
 
 | Fonctionnalité | Chemin de fichier | Ligne |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | Définition de la compétence Meilleures pratiques React | [`skills/react-best-practices/SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/SKILL.md) | Tout |
 | Documentation complète des règles | [`skills/react-best-practices/AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/AGENTS.md) | Tout |
 | 57 fichiers de règles | [`skills/react-best-practices/rules/*.md`](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices/rules) | - |
@@ -269,7 +269,7 @@ Vous apprendrez :
 **Fichiers clés (exemples de règles de niveau CRITICAL)** :
 
 | Règle | Chemin de fichier | Description |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | Requêtes en parallèle Promise.all() | [`async-parallel.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/async-parallel.md) | Éliminer les cascades |
 | Importations dynamiques de composants volumineux | [`bundle-dynamic-imports.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/bundle-dynamic-imports.md) | Réduire la taille des bundles |
 | Defer await | [`async-defer-await.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/async-defer-await.md) | Différer l'exécution d'opérations asynchrones |

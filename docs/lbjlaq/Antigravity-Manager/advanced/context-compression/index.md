@@ -62,7 +62,7 @@ If you want to match compression triggers with specific request types/accounts/t
 This stability design doesn't simply delete all history—instead, it intervenes progressively from lowest to highest cost:
 
 | Tier | Trigger Point (Configurable) | What It Does | Cost/Side Effects |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | Layer 1 | `proxy.experimental.context_compression_threshold_l1` (default 0.4) | Identify tool rounds, keep only the most recent N rounds (5 in the code), delete tool_use/tool_result pairs from earlier rounds | Doesn't modify remaining message content, more Prompt Cache-friendly |
 | Layer 2 | `proxy.experimental.context_compression_threshold_l2` (default 0.55) | Compress old Thinking text into `"..."`, but preserve `signature`, and protect the most recent 4 messages from modification | Modifies historical content; comments explicitly note it breaks cache, but can preserve signature chain |
 | Layer 3 | `proxy.experimental.context_compression_threshold_l3` (default 0.7) | Call background model to generate XML summary, then Fork a new message sequence to continue conversation | Depends on background model call; if it fails, returns 400 (with friendly prompt) |
@@ -218,7 +218,7 @@ Remember three key points:
 ## Common Pitfalls
 
 | Scenario | Possible Cause | What You Can Do |
-| --- | --- | --- |
+|--- | --- | ---|
 | Context feels less stable after Layer 2 triggers | Layer 2 modifies historical content; comments explicitly note it breaks cache | If you depend on Prompt Cache consistency, try to let L1 solve problems first, or increase L2 threshold |
 | Direct 400 returned after Layer 3 triggers | Fork + summary failed calling background model (network/account/upstream error, etc.) | First use `/compact` or `/clear` per error JSON suggestion; simultaneously check background model call chain |
 | Images/large content disappear in tool output | tool_result removes base64 images, truncates oversized output | Drop important content to local file/link and reference it; don't expect to stuff 100k lines of text directly back into conversation |
@@ -244,7 +244,7 @@ Remember three key points:
 > Last updated: 2026-01-23
 
 | Feature | File Path | Lines |
-| --- | --- | --- |
+|--- | --- | ---|
 | Experimental config: compression threshold and switch defaults | `src-tauri/src/proxy/config.rs` | 119-168 |
 | Context estimation: multilingual character estimation + 15% margin | `src-tauri/src/proxy/mappers/context_manager.rs` | 9-37 |
 | Token usage estimation: iterate system/messages/tools/thinking | `src-tauri/src/proxy/mappers/context_manager.rs` | 103-198 |
@@ -252,12 +252,12 @@ Remember three key points:
 | Layer 2: Thinking compression while preserving signature (protect last N) | `src-tauri/src/proxy/mappers/context_manager.rs` | 200-271 |
 | Layer 3 helper: extract last valid signature | `src-tauri/src/proxy/mappers/context_manager.rs` | 73-109 |
 | Backend task downgrade: Aggressive purification of Thinking blocks | `src-tauri/src/proxy/handlers/claude.rs` | 540-583 |
-| Three-tier compression main flow: estimate, calibrate, trigger L1/L2/L3 by threshold | `src-tauri/src/proxy/handlers/claude.rs` | 379-731 |
+|--- | --- | ---|
 | Layer 3: XML summary + Fork session implementation | `src-tauri/src/proxy/handlers/claude.rs` | 1560-1687 |
-| Signature caching: TTL/three-layer cache structure (Tool/Family/Session) | `src-tauri/src/proxy/signature_cache.rs` | 5-88 |
+|--- | --- | ---|
 | Signature caching: Session signature write/read | `src-tauri/src/proxy/signature_cache.rs` | 141-223 |
 | SSE streaming parsing: cache thinking/tool signature to Session/Tool cache | `src-tauri/src/proxy/mappers/claude/streaming.rs` | 766-776 |
-| SSE streaming parsing: tool_use cache tool_use_id -> signature | `src-tauri/src/proxy/mappers/claude/streaming.rs` | 958-975 |
+|--- | --- | ---|
 | Request transformation: tool_use prioritize filling signature from Session/Tool cache | `src-tauri/src/proxy/mappers/claude/request.rs` | 1045-1142 |
 | Request transformation: tool_result trigger tool result compression | `src-tauri/src/proxy/mappers/claude/request.rs` | 1159-1225 |
 | Tool result compression: entry `compact_tool_result_text()` | `src-tauri/src/proxy/mappers/tool_result_compressor.rs` | 28-69 |

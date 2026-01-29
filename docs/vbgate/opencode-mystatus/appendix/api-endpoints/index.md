@@ -39,7 +39,7 @@ Understanding these endpoints allows you to:
 **Endpoint Information**:
 
 | Item | Value |
-| --- | --- |
+|--- | ---|
 | URL | `https://chatgpt.com/backend-api/wham/usage` |
 | Method | GET |
 | Authentication | Bearer Token (OAuth) |
@@ -91,7 +91,7 @@ ChatGPT-Account-Id: {team_account_id}  // Optional, required for team accounts
 **Endpoint Information**:
 
 | Item | Value |
-| --- | --- |
+|--- | ---|
 | URL | `https://bigmodel.cn/api/monitor/usage/quota/limit` |
 | Method | GET |
 | Authentication | API Key |
@@ -151,7 +151,7 @@ User-Agent: OpenCode-Status-Plugin/1.0
 **Endpoint Information**:
 
 | Item | Value |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.z.ai/api/monitor/usage/quota/limit` |
 | Method | GET |
 | Authentication | API Key |
@@ -176,7 +176,7 @@ User-Agent: OpenCode-Status-Plugin/1.0
 **Endpoint Information**:
 
 | Item | Value |
-| --- | --- |
+|--- | ---|
 | URL | `https://oauth2.googleapis.com/token` |
 | Method | POST |
 | Authentication | OAuth Refresh Token |
@@ -218,7 +218,7 @@ client_id={client_id}
 **Endpoint Information**:
 
 | Item | Value |
-| --- | --- |
+|--- | ---|
 | URL | `https://cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels` |
 | Method | POST |
 | Authentication | Bearer Token (OAuth) |
@@ -282,7 +282,7 @@ User-Agent: antigravity/1.11.9 windows/amd64
 **Endpoint Information**:
 
 | Item | Value |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.github.com/users/{username}/settings/billing/premium_request/usage` |
 | Method | GET |
 | Authentication | Fine-grained PAT (Personal Access Token) |
@@ -350,7 +350,7 @@ Fine-grained PAT (Fine-grained Personal Access Token) is GitHub's new generation
 **Endpoint Information**:
 
 | Item | Value |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.github.com/copilot_internal/user` |
 | Method | GET |
 | Authentication | Copilot Session Token |
@@ -416,7 +416,7 @@ Copilot-Integration-Id: vscode-chat
 **Endpoint Information**:
 
 | Item | Value |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.github.com/copilot_internal/v2/token` |
 | Method | POST |
 | Authentication | OAuth Token (from OpenCode) |
@@ -461,7 +461,7 @@ This endpoint only applies to the legacy GitHub OAuth authentication flow. The n
 ## Authentication Methods Comparison
 
 | Platform | Authentication Method | Credential Source | Credential File |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | **OpenAI** | OAuth Bearer Token | OpenCode OAuth | `~/.local/share/opencode/auth.json` |
 | **Zhipu AI** | API Key | User manual configuration | `~/.local/share/opencode/auth.json` |
 | **Z.ai** | API Key | User manual configuration | `~/.local/share/opencode/auth.json` |
@@ -475,7 +475,7 @@ This endpoint only applies to the legacy GitHub OAuth authentication flow. The n
 All API requests have a 10-second timeout limit to avoid long waits:
 
 | Configuration | Value | Source Location |
-| --- | --- | --- |
+|--- | --- | ---|
 | Timeout | 10 seconds | `plugin/lib/types.ts:114` |
 | Timeout Implementation | `fetchWithTimeout` function | `plugin/lib/utils.ts:84-100` |
 
@@ -511,7 +511,7 @@ maskString("sk-1234567890abcdef")  // "sk-1****cdef"
 This lesson introduced all official API endpoints called by the opencode-mystatus plugin:
 
 | Platform | API Count | Authentication Method |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI | 1 | OAuth Bearer Token |
 | Zhipu AI | 1 | API Key |
 | Z.ai | 1 | API Key |
@@ -530,7 +530,7 @@ All endpoints are official platform endpoints, ensuring reliable and secure data
 > Last updated: 2026-01-23
 
 | Feature | File Path | Lines |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI quota query API | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L127-L155) | 127-155 |
 | Zhipu AI quota query API | [`plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts#L62-L106) | 62-106 |
 | Z.ai quota query API | [`plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts#L64) | 64 (shared endpoint) |

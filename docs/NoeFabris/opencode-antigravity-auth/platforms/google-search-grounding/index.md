@@ -118,7 +118,7 @@ cat ~/.config/opencode/antigravity.json | python3 -m json.tool
 > Last updated: 2026-01-23
 
 | Feature | File Path | Lines |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | Google Search Config Schema | [`src/plugin/config/schema.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/schema.ts) | 303-319 |
 | Google Search Type Definitions | [`src/plugin/transform/types.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/types.ts) | 85-88 |
 | Google Search Injection Logic | [`src/plugin/transform/gemini.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/gemini.ts) | 402-419 |

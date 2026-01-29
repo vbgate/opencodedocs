@@ -74,7 +74,7 @@ Android デバイス（ノードアプリ）
 Android ノードは以下のデバイスローカル操作をサポートします：
 
 | 機能 | コマンド | 説明 |
-| ---- | ------ | ---- |
+|--- | --- | ---|
 | **Canvas** | `canvas.*` | リアルタイム可視化インターフェースを表示（A2UI） |
 | **Camera** | `camera.*` | 写真撮影（JPG）と動画録画（MP4） |
 | **Screen** | `screen.*` | 画面録画 |
@@ -454,7 +454,7 @@ clawdbot nodes invoke --node "android-node" --command location.get
 > 更新日時：2026-01-27
 
 | 機能        | ファイルパス                                                                                    | 行番号    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | ノードコマンドポリシー | [`src/gateway/node-command-policy.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/node-command-policy.ts) | 1-112   |
 | ノードプロトコル Schema | [`src/gateway/protocol/schema/nodes.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/schema/nodes.ts) | 1-103   |
 | Android ドキュメント  | [`docs/platforms/android.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/android.md) | 1-142   |

@@ -38,7 +38,7 @@ You've configured multiple Google accounts, but:
 The Antigravity Auth plugin supports three account selection strategies that determine how to distribute model requests across multiple Google accounts:
 
 | Strategy | Behavior | Use Case |
-|----------|----------|----------|
+|--- | --- | ---|
 | `sticky` | Keep using the same account unless it's rate limited | Single account, need prompt cache |
 | `round-robin` | Rotate to the next available account for each request | Multiple accounts, maximize throughput |
 | `hybrid` (default) | Intelligent selection combining health score + Token bucket + LRU | 2-3 accounts, balance performance and stability |
@@ -128,7 +128,7 @@ Total Score = Health Score × 2 + Token Score × 5 + Freshness Score × 0.1
 Based on README and CONFIGURATION.md recommendations:
 
 | Your Setup | Recommended Strategy | Reason |
-|------------|---------------------|--------|
+|--- | --- | ---|
 | **1 account** | `sticky` | No rotation needed, preserve prompt cache |
 | **2-3 accounts** | `hybrid` (default) | Intelligent rotation, avoid excessive rate limits |
 | **4+ accounts** | `round-robin` | Maximize throughput, most even quota utilization |
@@ -340,7 +340,7 @@ export OPENCODE_ANTIGRAVITY_DEBUG=2 opencode run "Hello" --model=google/antigrav
 ## Summary
 
 | Strategy | Core Feature | Use Case |
-|----------|--------------|----------|
+|--- | --- | ---|
 | `sticky` | Keep account until rate limited | 1 account, need prompt cache |
 | `round-robin` | Cycle through accounts | 4+ accounts, maximize throughput |
 | `hybrid` | Health + Token + LRU intelligent selection | 2-3 accounts, balance performance and stability |
@@ -375,10 +375,10 @@ export OPENCODE_ANTIGRAVITY_DEBUG=2 opencode run "Hello" --model=google/antigrav
 > Last updated: 2026-01-23
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | Account selection strategy entry | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L340-L412) | 340-412 |
 | Sticky strategy implementation | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L395-L411) | 395-411 |
-| Round-Robin strategy implementation | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L349-L356) | 349-356 |
+|--- | --- | ---|
 | Hybrid strategy implementation | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L358-L383) | 358-383 |
 | Health scoring system | [`src/plugin/rotation.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/rotation.ts#L14-L163) | 14-163 |
 | Token bucket system | [`src/plugin/rotation.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/rotation.ts#L290-L402) | 290-402 |

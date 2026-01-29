@@ -146,7 +146,7 @@ Usage notes:
 Each `<skill>` contains the following required fields:
 
 | Field        | Type     | Valid Values                | Description                                                         |
-| ----------- | -------- | --------------------------- | ------------------------------------------------------------------- |
+|--- | --- | --- | ---|
 | `<name>`    | string   | -                           | Skill name (must match SKILL.md filename or `name` in YAML)         |
 | `<description>` | string | -                           | Skill description (from SKILL.md's YAML frontmatter)                |
 | `<location>` | string   | `project` \| `global`       | Skill installation location marker (for AI agents to understand source) |
@@ -224,7 +224,7 @@ When executing `openskills sync`, OpenSkills will:
 ### Source Code Locations
 
 | Function            | File Path                                                                      | Line Numbers |
-| --------------- | ----------------------------------------------------------------------------- | ------------ |
+|--- | --- | ---|
 | Generate XML        | [`src/utils/agents-md.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/agents-md.ts#L23-L62) | 23-62        |
 | Replace skill section    | [`src/utils/agents-md.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/agents-md.ts#L67-L93) | 67-93        |
 | Parse existing skills    | [`src/utils/agents-md.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/agents-md.ts#L6-L18)  | 6-18         |
@@ -304,7 +304,7 @@ AI agents may adjust their skill loading strategy based on this marker, but most
 > Updated: 2026-01-24
 
 | Function           | File Path                                                                                     | Line Numbers |
-| -------------- | -------------------------------------------------------------------------------------------- | ------------ |
+|--- | --- | ---|
 | Generate skill XML   | [`src/utils/agents-md.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/agents-md.ts#L23-L62) | 23-62        |
 | Replace skill section   | [`src/utils/agents-md.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/agents-md.ts#L67-L93) | 67-93        |
 | Parse existing skills   | [`src/utils/agents-md.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/agents-md.ts#L6-L18)  | 6-18         |

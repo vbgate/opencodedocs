@@ -46,7 +46,7 @@ This lesson helps you quickly find the root cause and solution to problems.
 **Detailed explanation**:
 
 | Comparison      | OpenSkills                        | Claude Code                        |
-| --------------- | --------------------------------- | ---------------------------------- |
+|--- | --- | ---|
 | **Positioning** | Universal skill loader            | Anthropic's official AI coding agent |
 | **Support scope** | All AI agents (Cursor, Windsurf, Aider, etc.) | Claude Code only |
 | **Skill format** | Fully compatible with Claude Code (`SKILL.md`) | Official specification |
@@ -61,7 +61,7 @@ This lesson helps you quickly find the root cause and solution to problems.
 **Core reason**: Skills are static files, MCP is dynamic tools—they solve different problems.
 
 | Comparison Dimension | MCP (Model Context Protocol) | OpenSkills (CLI) |
-| -------------------- | --------------------------- | ----------------- |
+|--- | --- | ---|
 | **Use case**         | Dynamic tools, real-time API calls | Static instructions, documentation, scripts |
 | **Runtime requirements** | Requires MCP server | No server needed (pure files) |
 | **Agent support**    | MCP-supported agents only | All agents that can read `AGENTS.md` |
@@ -198,7 +198,7 @@ npx openskills install anthropics/skills --universal
 **Why it works**:
 
 | Directory          | Used by          | Description |
-| ------------------ | ---------------- | ----------- |
+|--- | --- | ---|
 | `.claude/skills/`  | Claude Code      | Used by Claude Code Marketplace |
 | `.agent/skills/`   | OpenSkills       | Used by other agents (Cursor, Windsurf) |
 
@@ -547,7 +547,7 @@ Core points from OpenSkills FAQ:
 > Updated: 2026-01-24
 
 | Function      | File Path                                                                                                   | Line Numbers |
-| ------------- | ---------------------------------------------------------------------------------------------------------- | ------------ |
+|--- | --- | ---|
 | Install command | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts)     | 1-424        |
 | Sync command   | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts)             | 1-99         |
 | Update command | [`src/commands/update.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/update.ts)       | 1-113        |

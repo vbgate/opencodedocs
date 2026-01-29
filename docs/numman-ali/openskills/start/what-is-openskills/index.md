@@ -50,7 +50,7 @@ Simply put: **One installer serving all AI coding tools**.
 ### What Problems It Solves
 
 | Problem | Solution |
-|---------|----------|
+|--- | ---|
 | Inconsistent skill formats | Use Claude Code's standard SKILL.md format |
 | Skills cannot be shared across tools | Generate unified AGENTS.md that all tools can read |
 | Distributed skill management | Unified install, update, and delete commands |
@@ -160,7 +160,7 @@ OpenSkills and Claude Code are complementary, not substitutes.
 ### Fully Compatible Formats
 
 | Aspect | Claude Code | OpenSkills |
-|--------|-------------|------------|
+|--- | --- | ---|
 | **Prompt format** | `<available_skills>` XML | Same XML |
 | **Skill storage** | `.claude/skills/` | `.claude/skills/` (default) |
 | **Skill invocation** | `Skill("name")` tool | `npx openskills read <name>` |
@@ -170,7 +170,7 @@ OpenSkills and Claude Code are complementary, not substitutes.
 ### Usage Scenario Comparison
 
 | Scenario | Recommended Tool | Reason |
-|----------|------------------|--------|
+|--- | --- | ---|
 | Only using Claude Code | Claude Code built-in | No extra installation needed, official support |
 | Mixing multiple AI tools | OpenSkills | Unified management, avoid duplication |
 | Need private skills | OpenSkills | Supports local and private repositories |
@@ -183,7 +183,7 @@ OpenSkills and Claude Code are complementary, not substitutes.
 OpenSkills supports three installation locations:
 
 | Installation Location | Command | Use Case |
-|----------------------|---------|----------|
+|--- | --- | ---|
 | **Project-local** | Default | Single project use, skills version-controlled with project |
 | **Global installation** | `--global` | All projects share common skills |
 | **Universal mode** | `--universal` | Multi-agent environment, avoid conflicts with Claude Code |
@@ -256,7 +256,7 @@ With OpenSkills, you can:
 > Last updated: 2026-01-24
 
 | Function | File Path | Line Numbers |
-|----------|-----------|--------------|
+|--- | --- | ---|
 | Core type definitions | [`src/types.ts`](https://github.com/numman-ali/openskills/blob/main/src/types.ts#L1-L24) | 1-24 |
 | Skill interface (Skill) | [`src/types.ts`](https://github.com/numman-ali/openskills/blob/main/src/types.ts#L1-L6) | 1-6 |
 | Skill location interface (SkillLocation) | [`src/types.ts`](https://github.com/numman-ali/openskills/blob/main/src/types.ts#L8-L12) | 8-12 |

@@ -40,7 +40,7 @@ Vous disposez d'un assistant IA, mais il ne peut interagir avec vous que par tex
 **Canvas + A2UI convient à ces scénarios** :
 
 | Scénario | Exemple |
-| ------ | ------ |
+|--- | ---|
 | **Visualisation de données** | Afficher des graphiques statistiques, des barres de progression, des chronologies |
 | **Formulaires interactifs** | Demander à l'utilisateur de confirmer des actions, de sélectionner des options |
 | **Panneaux d'état** | Afficher en temps réel la progression des tâches, l'état du système |
@@ -334,7 +334,7 @@ clawdbot nodes canvas hide --node abc123-def456-ghi789
 **Vérifier que les fonctions Canvas fonctionnent correctement** :
 
 | Élément de vérification | Méthode de vérification |
-| ------- | -------- |
+|--- | ---|
 | Canvas Host en cours d'exécution | `lsof -i :18793` a une sortie |
 | Capacité de nœud Canvas | `clawdbot nodes list` affiche `canvas` |
 | Page chargée avec succès | Le nœud affiche le contenu HTML |
@@ -400,7 +400,7 @@ Dans cette leçon, vous avez appris :
 > Date de mise à jour : 2026-01-27
 
 | Fonction | Chemin du fichier | Numéro de ligne |
-| ----- | --------- | ---- |
+|--- | --- | ---|
 | Serveur Canvas Host | [`src/canvas-host/server.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/server.ts) | 372-441 |
 | Traitement du protocole A2UI | [`src/canvas-host/a2ui.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/a2ui.ts) | 150-203 |
 | Définition de l'outil Canvas | [`src/agents/tools/canvas-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/canvas-tool.ts) | 52-179 |

@@ -112,7 +112,7 @@ openskills sync -o .ruler/AGENTS.md →  .ruler/AGENTS.md (嵌套目录)
 不同的 AI 工具可能有不同的期望路径：
 
 | 工具        | 期望路径           | 默认路径是否可用 |
-| ---------- | ------------------ | --------------- |
+|--- | --- | ---|
 | Claude Code | `AGENTS.md`        | ✅ 可用          |
 | Cursor     | `AGENTS.md`        | ✅ 可用          |
 | Windsurf   | `.ruler/AGENTS.md` | ❌ 不可用       |
@@ -543,7 +543,7 @@ npx openskills sync -o my-skills.md
 **核心命令**：
 
 | 命令 | 作用 |
-| ---- | ---- |
+|--- | ---|
 | `npx openskills sync -o custom.md` | 同步到项目根目录的 `custom.md` |
 | `npx openskills sync -o .ruler/AGENTS.md` | 同步到 `.ruler/AGENTS.md`（自动创建目录） |
 | `npx openskills sync -o path/to/file.md` | 同步到任意路径（自动创建嵌套目录） |
@@ -581,7 +581,7 @@ npx openskills sync -o my-skills.md
 > 更新时间：2026-01-24
 
 | 功能 | 文件路径 | 行号 |
-| ---- | --------- | ---- |
+|--- | --- | ---|
 | sync 命令入口 | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts#L18-L109) | 18-109 |
 | CLI 选项定义 | [`src/cli.ts`](https://github.com/numman-ali/openskills/blob/main/src/cli.ts#L66) | 66 |
 | 输出路径获取 | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts#L19) | 19 |

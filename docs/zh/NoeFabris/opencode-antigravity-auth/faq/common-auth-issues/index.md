@@ -96,7 +96,7 @@ Google 对每个 Google 账户的 API 调用有频率限制。当触发限制时
 所有平台（包括 Windows）都使用 `~/.config/opencode/` 作为配置目录：
 
 | 文件 | 路径 | 说明 |
-|------|------|------|
+|--- | --- | ---|
 | 主配置 | `~/.config/opencode/opencode.json` | OpenCode 主配置文件 |
 | 账户文件 | `~/.config/opencode/antigravity-accounts.json` | OAuth 令牌和账户信息 |
 | 插件配置 | `~/.config/opencode/antigravity.json` | 插件特定配置 |
@@ -592,7 +592,7 @@ cat ~/.config/opencode/antigravity-accounts.json | grep rateLimitResetTimes
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-|------|----------|------|
+|--- | --- | ---|
 | OAuth 认证（PKCE） | [`src/antigravity/oauth.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/antigravity/oauth.ts) | 91-270 |
 | 令牌验证与刷新 | [`src/plugin/auth.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/auth.ts) | 1-53 |
 | 账户存储与管理 | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts) | 1-715 |

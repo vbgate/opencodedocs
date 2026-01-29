@@ -62,7 +62,7 @@ const widthCache = new Map<string, number>()
 **예시**:
 
 | 원본 텍스트(Key) | 표시 너비(Value) | 설명 |
-| --------------- | ---------------- | ---- |
+|--- | --- | ---|
 | `**이름**` | 4 | `**` 제거 후 너비가 4 |
 | `*나이*` | 4 | `*` 제거 후 너비가 4 |
 | `` `status` `` | 8 | 코드 블록 기호도 너비에 포함 |
@@ -120,7 +120,7 @@ graph TD
 **단계 분석**:
 
 | 단계 | 작업 | 시간 복잡도 |
-| ---- | ---- | ---------- |
+|--- | --- | ---|
 | 1 | `widthCache.has(text)` 확인 | O(1) |
 | 2 | 캐시 적중 → 즉시 반환 | O(1) |
 | 3 | 캐시 미스 → 너비 계산 | O(n) |
@@ -166,7 +166,7 @@ function cleanupCache() {
 **트리거 조건**(하나라도 충족하면 트리거):
 
 | 조건 | 임계값 | 설명 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | 작업 횟수 | > 100회 포맷팅 작업 | 빈번한 정리 트리거 방지 |
 | 캐시 항목 | > 1000개 셀 | 메모리 사용량 과도 증가 방지 |
 
@@ -192,7 +192,7 @@ function cleanupCache() {
 **캐시 효과**:
 
 | 시나리오 | 캐시 미사용 | 캐시 사용 | 성능 향상 |
-| ---- | ---------- | -------- | -------- |
+|--- | --- | --- | ---|
 | 5열 × 10행(반복 없음) | 50회 계산 | 50회 계산 | 없음 |
 | 5열 × 10행(헤더 반복) | 50회 계산 | 10회 계산 + 40회 캐시 적중 | ~80% |
 
@@ -207,7 +207,7 @@ function cleanupCache() {
 **예시 시나리오**:
 
 | 시나리오 | 캐시 효과 |
-| ---- | -------- |
+|--- | ---|
 | AI 생성 비교 테이블 | ✅ 효과 현저(다열 반복 내용) |
 | 간단한 단행 테이블 | ⚪ 효과 보통(내용 고유) |
 | 테이블 내 Markdown 중첩 | ✅ 효과 현저(기호 제거 오버헤드 큼) |
@@ -254,7 +254,7 @@ function cleanupCache() {
 > 업데이트 시간: 2026-01-26
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | widthCache 정의 | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L6) | 6 |
 | cacheOperationCount 정의 | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L7) | 7 |
 | calculateDisplayWidth 함수 | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L151-L159) | 151-159 |

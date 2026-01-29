@@ -31,7 +31,7 @@ opencode-supermemory는 블랙박스가 아니며 표준 OpenCode Tool 프로토
 플러그인은 Agent에 `supermemory`라는 도구를 등록하며 이는 스위스 아미 나이프와 같이 6가지 모드를 갖습니다:
 
 | 모드 | 역할 | 일반적인 시나리오 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **add** | 메모리 추가 | "기억해, 이 프로젝트는 반드시 Bun으로 실행해야 해" |
 | **search** | 메모리 검색 | "인증 처리를 어떻게 하는지 말한 적이 있나요?" |
 | **profile** | 사용자 프로필 | Agent가 요약한 당신의 코딩 습관 확인 |
@@ -187,7 +187,7 @@ A: 플러그인은 `<private>` 태그 내의 내용을 자동으로 비식별화
 > 업데이트: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | 도구 정의 | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
 | 키워드 감지 | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L34-L37) | 34-37 |
 | 트리거 Prompt | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L20-L28) | 20-28 |

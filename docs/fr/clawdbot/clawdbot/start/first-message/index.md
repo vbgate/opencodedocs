@@ -54,7 +54,7 @@ Avant d'envoyer votre premier message, veuillez confirmer :
 ### Conditions requises
 
 | Condition                     | Comment vérifier                                        |
-| ---------------------- | ------------------------------------------- |
+|--- | ---|
 | **Gateway démarré**   | `clawdbot gateway status` ou vérifier si le processus est en cours d'exécution |
 | **Modèle IA configuré** | `clawdbot models list` pour voir s'il y a des modèles disponibles      |
 | **Port accessible**       | Vérifier que le port 18789 (ou port personnalisé) n'est pas occupé |
@@ -118,7 +118,7 @@ Clawdbot prend en charge trois méthodes principales pour envoyer des messages :
 **Différences clés** :
 
 | Méthode                     | Passe par l'IA | Usage                           |
-| ---------------------- | ----------- | ------------------------------ |
+|--- | --- | ---|
 | `clawdbot agent`     | ✅ Oui       | Discuter avec l'IA, obtenir la réponse et le processus de pensée    |
 | `clawdbot message send` | ❌ Non       | Envoyer directement le message au canal, sans passer par l'IA    |
 | WebChat / Canaux       | ✅ Oui       | Discuter avec l'IA via l'interface graphique         |
@@ -192,7 +192,7 @@ Let me think about what needs to be checked for shipping:
 **Options de niveau de pensée** :
 
 | Niveau        | Explication                           | Scénario d'utilisation             |
-| --------- | ------------------------------ | ------------------ |
+|--- | --- | ---|
 | `off`     | Ne pas afficher le processus de pensée               | Questions simples, réponse rapide |
 | `minimal` | Sortie de pensée minimisée              | Débogage, vérification du processus     |
 | `low`     | Détails faibles                     | Conversation quotidienne           |
@@ -262,7 +262,7 @@ WebChat utilise le même port que Gateway (par défaut 18789). Si vous avez modi
 **Fonctionnalités WebChat** :
 
 | Fonctionnalité     | Explication                           |
-| ------ | ------------------------------ |
+|--- | ---|
 | Texte enrichi   | Prend en charge le format Markdown            |
 | Pièces jointes     | Prend en charge l'upload d'images, de fichiers audio et vidéo    |
 | Historique | Sauvegarde automatique de l'historique de conversation             |
@@ -542,7 +542,7 @@ Dans cette leçon, vous avez appris :
 > Dernière mise à jour : 2026-01-27
 
 | Fonction                  | Chemin du fichier                                                                                             | Ligne    |
-| ------------------- | ---------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Enregistrement de commande CLI Agent  | [`src/cli/program/register.agent.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.agent.ts) | 20-82    |
 | Exécution CLI Agent        | [`src/commands/agent-via-gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/agent-via-gateway.ts) | 82-184   |
 | Enregistrement CLI message send | [`src/cli/program/message/register.send.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/message/register.send.ts) | 1-30     |

@@ -13,7 +13,7 @@ order: 5
 ## このセクションの内容
 
 | ページ | 説明 |
-| --- | --- |
+|--- | ---|
 | [APIリファレンス](./api-reference/) | Plannotatorが提供するすべてのAPIエンドポイントとリクエスト/レスポンス形式を確認 |
 | [データモデル](./data-models/) | Plannotatorで使用されるデータモデル（Annotation、Block、CodeAnnotationなど）を理解 |
 | [ライセンス](./license/) | Plannotatorのライセンス（BSL-1.1）と使用制限を確認 |

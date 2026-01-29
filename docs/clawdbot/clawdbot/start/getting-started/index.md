@@ -54,7 +54,7 @@ Gateway is the control plane of Clawdbot, which:
 ### System Requirements
 
 | Component | Requirements |
-| --------- | ------------ |
+|--- | ---|
 | **Node.js** | ≥ 22.12.0 |
 | **Operating System** | macOS / Linux / Windows (WSL2) |
 | **Package Manager** | npm / pnpm / bun |
@@ -70,7 +70,7 @@ On Windows, **WSL2** is strongly recommended because:
 While any model is supported, we strongly recommend:
 
 | Provider | Recommended Model | Reason |
-| -------- | ---------------- | ------ |
+|--- | --- | ---|
 | Anthropic | Claude Opus 4.5 | Long context advantage, stronger prompt injection resistance |
 | OpenAI | GPT-5.2 + Codex | Strong programming capabilities, multimodal support |
 
@@ -98,7 +98,7 @@ WhatsApp / Telegram / Slack / Discord / Signal / iMessage / WebChat
 **Key Concepts**:
 
 | Concept | Role |
-| ------- | ---- |
+|--- | ---|
 | **Gateway** | Daemon, responsible for session management, channel connections, and tool invocations |
 | **Channel** | Message channel (WhatsApp, Telegram, Slack, etc.) |
 | **Agent** | AI runtime (RPC mode based on pi-mono) |
@@ -156,7 +156,7 @@ clawdbot onboard --install-daemon
 **What the wizard will ask you**:
 
 | Step | Question | Description |
-| ---- | -------- | ----------- |
+|--- | --- | ---|
 | 1 | Choose AI model authentication method | OAuth / API Key |
 | 2 | Configure Gateway (port, authentication) | Default: 127.0.0.1:18789 |
 | 3 | Configure channels (WhatsApp, Telegram, etc.) | Can skip, configure later |
@@ -341,7 +341,7 @@ node --version
 Clawdbot default configuration file location:
 
 | Operating System | Configuration Path |
-| ---------------- | ----------------- |
+|--- | ---|
 | macOS/Linux | `~/.clawdbot/clawdbot.json` |
 | Windows (WSL2) | `~/.clawdbot/clawdbot.json` |
 
@@ -433,7 +433,7 @@ pnpm gateway:watch  # Auto-reload when TS files change
 > Updated: 2026-01-27
 
 | Feature | File Path | Line |
-| ------- | --------- | ---- |
+|--- | --- | ---|
 | CLI Entry | [`src/cli/run-main.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/run-main.ts) | 26-60 |
 | Onboarding Command | [`src/cli/program/register.onboard.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.onboard.ts) | 34-100 |
 | Daemon Installation | [`src/cli/daemon-cli/install.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/daemon-cli/install.ts) | 15-100 |

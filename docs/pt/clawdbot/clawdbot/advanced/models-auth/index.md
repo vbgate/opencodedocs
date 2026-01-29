@@ -67,7 +67,7 @@ Este design permite alternar flexivelmente entre múltiplos provedores e contas 
 Clawdbot suporta três métodos de autenticação, adequados para diferentes cenários:
 
 | Método de Autenticação | Formato de Armazenamento | Cenário Típico | Provedores Suportados |
-|------------------------|--------------------------|----------------|----------------------|
+|--- | --- | --- | ---|
 | **API Key** | `{ type: "api_key", key: "sk-..." }` | Início rápido, teste | Anthropic, OpenAI, OpenRouter, DeepSeek, etc. |
 | **OAuth** | `{ type: "oauth", access: "...", refresh: "..." }` | Longa duração, atualização automática | Anthropic (Claude Code CLI), OpenAI (Codex), Qwen Portal |
 | **Token** | `{ type: "token", token: "..." }` | Bearer token estático | GitHub Copilot, certos proxies personalizados |
@@ -78,7 +78,7 @@ Clawdbot suporta nativamente os seguintes provedores de modelos:
 
 ::: details Lista de provedores internos
 | Provedor | Método de Autenticação | Modelo Recomendado | Observações |
-|----------|------------------------|-------------------|------------|
+|--- | --- | --- | ---|
 | **Anthropic** | API Key / OAuth (Claude Code CLI) | `anthropic/claude-opus-4-5` | Recomenda Claude Pro/Max + Opus 4.5 |
 | **OpenAI** | API Key / OAuth (Codex) | `openai/gpt-5.2` | Suporta OpenAI padrão e versão Codex |
 | **OpenRouter** | API Key | `openrouter/anthropic/claude-sonnet-4-5` | Agrega centenas de modelos |
@@ -460,7 +460,7 @@ auth:
 Clawdbot suporta atualização automática para os seguintes provedores OAuth:
 
 | Provedor | Fluxo OAuth | Mecanismo de Atualização |
-|----------|-------------|--------------------------|
+|--- | --- | ---|
 | **Anthropic** (Claude Code CLI) | Código de autorização padrão | Atualização via pi-mono RPC |
 | **OpenAI** (Codex) | Código de autorização padrão | Atualização via pi-mono RPC |
 | **Qwen Portal** | OAuth personalizado | `refreshQwenPortalCredentials` |
@@ -522,7 +522,7 @@ Aliases são apenas atalhos para IDs de modelo e não afetam a seleção de aute
 Certos provedores não requerem configuração explícita, Clawdbot detectará automaticamente:
 
 | Provedor | Método de Detecção | Arquivo de Configuração |
-|----------|-------------------|------------------------|
+|--- | --- | ---|
 | **GitHub Copilot** | `~/.copilot/credentials.json` | Sem configuração necessária |
 | **AWS Bedrock** | Variáveis de ambiente ou credenciais AWS SDK | `~/.aws/credentials` |
 | **Codex CLI** | `~/.codex/auth.json` | Sem configuração necessária |
@@ -632,7 +632,7 @@ clawdbot gateway restart
 > Última atualização: 2026-01-27
 
 | Funcionalidade | Caminho do Arquivo | Linhas |
-| --------------- | --------- | ---- |
+|--- | --- | ---|
 | Definição de tipos de credenciais de autenticação | [`src/agents/auth-profiles/types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/types.ts) | 1-74 |
 | Análise e atualização de Token OAuth | [`src/agents/auth-profiles/oauth.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/oauth.ts) | 1-220 |
 | Gerenciamento de arquivo de configuração de autenticação | [`src/agents/auth-profiles/profiles.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/profiles.ts) | 1-85 |

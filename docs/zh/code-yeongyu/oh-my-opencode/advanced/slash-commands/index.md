@@ -36,7 +36,7 @@ order: 130
 **斜杠命令**是一键触发的预设工作流模板。这些命令涵盖了常见的开发场景：
 
 | 场景 | 使用命令 |
-|------|---------|
+|--- | ---|
 | 初始化项目知识库 | `/init-deep` |
 | 让 AI 持续工作 | `/ralph-loop` |
 | 智能重构代码 | `/refactor` |
@@ -64,7 +64,7 @@ graph LR
 oh-my-opencode 内置了 6 个斜杠命令：
 
 | 命令 | 功能 | 复杂度 |
-|------|------|---------|
+|--- | --- | ---|
 | `/init-deep` | 生成分层级 AGENTS.md 文件 | 中 |
 | `/ralph-loop` | 自我参考的开发循环 | 高 |
 | `/ulw-loop` | Ultrawork 版本的 ralph-loop | 高 |
@@ -305,7 +305,7 @@ Which plan would you like to work on? (Enter number or plan name)
 ## 本课小结
 
 | 命令 | 核心功能 | 使用频率 |
-|------|---------|---------|
+|--- | --- | ---|
 | `/init-deep` | 自动生成项目知识库 | 初始设置 |
 | `/ralph-loop` | 持续工作循环 | 高 |
 | `/ulw-loop` | Ultrawork 版本的循环 | 中 |
@@ -339,7 +339,7 @@ Which plan would you like to work on? (Enter number or plan name)
 > 更新时间：2026-01-26
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | 命令定义 | [`src/features/builtin-commands/commands.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/commands.ts) | 8-73 |
 | 命令加载器 | [`src/features/builtin-commands/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/index.ts) | 75-89 |
 | init-deep 模板 | [`src/features/builtin-commands/templates/init-deep.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/templates/init-deep.ts) | 全文 |

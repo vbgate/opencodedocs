@@ -66,7 +66,7 @@ Antigravity Tools предоставляет три конечные точки 
 ### Классификация конечных точек
 
 | Тип конечной точки | Способ реализации | Локальный путь | Цель вышестоящего уровня |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | **Web Search** | Удалённый обратный прокси | `/mcp/web_search_prime/mcp` | `https://api.z.ai/api/mcp/web_search_prime/mcp` |
 | **Web Reader** | Удалённый обратный прокси | `/mcp/web_reader/mcp` | `https://api.z.ai/api/mcp/web_reader/mcp` |
 | **Vision MCP** | Встроенный сервер (JSON-RPC 2.0) | `/mcp/zai-mcp-server/mcp` | Внутренний вызов z.ai PaaS API |
@@ -320,7 +320,7 @@ data: keepalive
 ## Справочник инструментов Vision MCP
 
 | Имя инструмента | Функция | Обязательные параметры | Пример сцены |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `ui_to_artifact` | Преобразовать скриншот UI в код/промпт/спецификацию/описание | `image_source`, `output_type`, `prompt` | Генерация фронтенд-кода из дизайна |
 | `extract_text_from_screenshot` | Извлечь текст/код из скриншота (похоже на OCR) | `image_source`, `prompt` | Читать скриншот журнала ошибок |
 | `diagnose_error_screenshot` | Диагностировать скриншот ошибки (стек-трейс, журналы) | `image_source`, `prompt` | Анализировать ошибки выполнения |
@@ -469,7 +469,7 @@ mcpServers:
 > Обновлено: 2026-01-23
 
 | Функция | Путь к файлу | Строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Конечная точка Web Search | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L115-L135) | 115-135 |
 | Конечная точка Web Reader | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L137-L157) | 137-157 |
 | Конечная точка Vision MCP (главный вход) | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L376-L397) | 376-397 |

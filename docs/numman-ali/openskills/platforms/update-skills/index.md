@@ -40,7 +40,7 @@ You may have encountered these situations:
 Typical scenarios for using the `update` command:
 
 | Scenario | Action |
-| ---- | ---- |
+|--- | ---|
 | Discover skill has updates | Run `openskills update` |
 | Update only a few skills | `openskills update skill1,skill2` |
 | Test locally developed skills | Update from local path |
@@ -73,7 +73,7 @@ Older versions of skills (installed without source information) cannot be update
 **Update methods for three installation sources**:
 
 | Source Type | Update Method | Use Case |
-| -------- | -------- | -------- |
+|--- | --- | ---|
 | **Local path** | Copy directly from local path | Develop your own skills |
 | **git repository** | Clone latest code to temp directory | Install from GitHub/GitLab |
 | **GitHub shorthand** | Convert to full URL then clone | Install from GitHub official repository |
@@ -172,7 +172,7 @@ Clone failed (1): git-workflow
 **Corresponding solutions**:
 
 | Error Message | Cause | Solution |
-| -------- | ---- | -------- |
+|--- | --- | ---|
 | `no source metadata` | Old version installation | Reinstall: `openskills install <source>` |
 | `local source missing` | Local path deleted | Restore local path or reinstall |
 | `SKILL.md missing at local source` | Local files deleted | Restore SKILL.md file |
@@ -193,7 +193,7 @@ Confirm you have learned:
 ### ❌ Common Mistakes
 
 | Mistake | Correct Approach |
-| ---- | -------- |
+|--- | ---|
 | Ignore skipped skills | Reinstall or fix issues based on prompts |
 | Delete and reinstall every time | Using `update` command is more efficient |
 | Don't know where skill was installed from | Use `openskills list` to check source |
@@ -250,7 +250,7 @@ The update feature keeps skills at the latest version, ensuring the skills you u
 > Updated: 2026-01-24
 
 | Function | File Path | Line Numbers |
-| ---- | --------- | ---- |
+|--- | --- | ---|
 | Update skills main logic | [`src/commands/update.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/update.ts#L14-L150) | 14-150 |
 | Local path update | [`src/commands/update.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/update.ts#L64-L82) | 64-82 |
 | Git repository update | [`src/commands/update.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/update.ts#L85-L125) | 85-125 |

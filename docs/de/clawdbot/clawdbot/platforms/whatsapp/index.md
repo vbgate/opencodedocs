@@ -102,14 +102,14 @@ Bearbeiten Sie `~/.clawdbot/clawdbot.json` und fügen Sie die WhatsApp-Konfigura
 **Feldbeschreibung**:
 
 | Feld | Typ | Standard | Beschreibung |
-|------|-----|----------|--------------|
+|--- | --- | --- | ---|
 | `dmPolicy` | string | `"pairing"` | DM-Zugriffsrichtlinie: `pairing` (Pairing), `allowlist` (Whitelist), `open` (Öffentlich), `disabled` (Deaktiviert) |
 | `allowFrom` | string[] | `[]` | Liste der zulässigen Absendernummern (E.164-Format, z. B. `+15551234567`) |
 
 **Vergleich der DM-Strategien**:
 
 | Strategie | Verhalten | Anwendungsfall |
-|-----------|-----------|----------------|
+|--- | --- | ---|
 | `pairing` | Unbekannte Absender erhalten Pairing-Code, manuelle Genehmigung erforderlich | **Empfohlen**, Ausgewogenheit zwischen Sicherheit und Komfort |
 | `allowlist` | Nur Nummern aus der `allowFrom`-Liste zulassen | Strikte Kontrolle, bekannte Benutzer |
 | `open` | Jeder kann Nachrichten senden (erfordert `allowFrom` enthält `"*"`) | Öffentlicher Test oder Community-Service |
@@ -229,7 +229,7 @@ Fügen Sie Folgendes zu `clawdbot.json` hinzu:
 **Feldbeschreibung**:
 
 | Feld | Typ | Standard | Beschreibung |
-|------|-----|----------|--------------|
+|--- | --- | --- | ---|
 | `emoji` | string | - | Bestätigungs-Emoji (z. B. `"👀"`, `"✅"`), leere Zeichenfolge deaktiviert |
 | `direct` | boolean | `true` | Ob Bestätigungen in privaten Chats gesendet werden |
 | `group` | string | `"mentions"` | Gruppenverhalten: `"always"` (alle Nachrichten), `"mentions"` (nur @Erwähnungen), `"never"` (niemals) |
@@ -263,7 +263,7 @@ Standardmäßig markiert Clawdbot Nachrichten automatisch als gelesen (blaue Hak
 ```
 
 | Feld | Standard | Beschreibung |
-|------|----------|--------------|
+|--- | --- | ---|
 | `textChunkLimit` | 4000 | Maximale Zeichenanzahl pro Textnachricht |
 | `mediaMaxMb` | 50 | Maximale Größe empfangener Mediendateien (MB) |
 | `chunkMode` | `"length"` | Aufteilungsmodus: `"length"` (nach Länge), `"newline"` (nach Absätzen) |
@@ -376,13 +376,13 @@ Wichtige Punkte zur WhatsApp-Konfiguration:
 > Aktualisiert am: 2026-01-27
 
 | Funktion | Dateipfad | Zeilennummer |
-|----------|-----------|--------------|
+|--- | --- | ---|
 | WhatsApp-Konfigurationstypdefinition | [`src/config/types.whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.whatsapp.ts) | 1-160 |
-| WhatsApp-Konfigurationsschema | [`src/config/zod-schema.providers-whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-whatsapp.ts) | 13-100 |
+|--- | --- | ---|
 | WhatsApp-Onboarding-Konfiguration | [`src/channels/plugins/onboarding/whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/whatsapp.ts) | 1-341 |
 | WhatsApp-Dokumentation | [`docs/channels/whatsapp.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/whatsapp.md) | 1-363 |
-| WhatsApp-Anmelde-Tool | [`src/channels/plugins/agent-tools/whatsapp-login.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/agent-tools/whatsapp-login.ts) | 1-72 |
-| WhatsApp Actions-Tool | [`src/agents/tools/whatsapp-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/whatsapp-actions.ts) | 1-42 |
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Konfigurationsoptionen**:
 - `dmPolicy`: DM-Zugriffsrichtlinie (`pairing`/`allowlist`/`open`/`disabled`)

@@ -120,7 +120,7 @@ Copy-Item (Join-Path $HOME ".antigravity_tools\gui_config.json") (Join-Path $bac
 다음 기본값들은 백엔드 `AppConfig::new()`와 `ProxyConfig::default()`에서 가져온 것입니다:
 
 | 설정 블록 | 필드 | 기본값(소스 코드) | 기억해야 할 점 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | AppConfig | `language` | `"zh"` | 기본 중국어 |
 | AppConfig | `theme` | `"system"` | 시스템 따라가기 |
 | AppConfig | `auto_refresh` | `true` | 기본적으로 쿼터 자동 새로고침 |
@@ -270,7 +270,7 @@ Invoke-WebRequest -UseBasicParsing "http://127.0.0.1:8050/healthz" | Select-Obje
 > 업데이트 시간: 2026-01-24
 
 | 주제 | 파일 경로 | 라인 |
-| --- | --- | --- |
+|--- | --- | ---|
 | AppConfig 기본값(`AppConfig::new()`) | [`src-tauri/src/models/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/models/config.rs#L4-L158) | 4-158 |
 | ProxyConfig 기본값(포트/인증/리스닝 주소) | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L74-L292) | 74-292 |
 | StickySessionConfig 기본값(스케줄링) | [`src-tauri/src/proxy/sticky_config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/sticky_config.rs#L3-L36) | 3-36 |

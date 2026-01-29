@@ -30,7 +30,7 @@ Para lograr esto, hemos limitado deliberadamente algunas funciones para garantiz
 ## Resumen de Limitaciones Conocidas
 
 | Limitación | Descripción | ¿Plan de soporte? |
-| --- | --- | --- |
+|--- | --- | ---|
 | **Tablas HTML** | Solo admite tablas Markdown con tuberías (`\| ... \|`) | ❌ No compatible |
 | **Celdas multilínea** | Las celdas no pueden contener etiquetas de salto de línea como `<br>` | ❌ No compatible |
 | **Tablas sin fila separadora** | Debe tener una fila separadora `|---|` | ❌ No compatible |
@@ -67,7 +67,7 @@ El complemento solo procesa tablas Markdown con tuberías (Pipe Table), es decir
 
 ```markdown
 | Columna 1 | Columna 2 |
-| --- | --- |
+|--- | ---|
 | Dato 1 | Dato 2 |
 ```
 
@@ -97,7 +97,7 @@ Si necesitas formatear tablas HTML, se recomienda:
 
 ```markdown
 | Columna 1 | Columna 2 |
-| --- | --- |
+|--- | ---|
 | Línea 1<br>Línea 2 | Una sola línea |
 ```
 
@@ -166,7 +166,7 @@ return hasSeparator  // Retorna false si no hay fila separadora
 
 ```markdown
 | Columna 1 | Columna 2 |
-| --- | --- |
+|--- | ---|
 | Combinar dos columnas |  ← Se espera que abarque la columna 1 y la columna 2
 | Dato 1 | Dato 2 |
 ```
@@ -187,7 +187,7 @@ El estándar Markdown no admite sintaxis de celdas combinadas, y el complemento 
 **Fenómeno**
 
 ```markdown
-| :--- | :---: | ---: |
+|--- | --- | ---|
 | Alineado a la izquierda | Centrado | Alineado a la derecha |
 | Dato 1 | Dato 2 | Dato 3 |
 ```
@@ -305,7 +305,7 @@ El complemento no tiene límite de ancho máximo de columna, si el contenido de 
 ## Resumen de la Lección
 
 | Limitación | Causa | Alternativa |
-| --- | --- | --- |
+|--- | --- | ---|
 | Tablas HTML no compatibles | El complemento se enfoca en tablas Markdown con tuberías | Usar herramientas de formato HTML |
 | Celdas multilínea no compatibles | Lógica de procesamiento línea por línea | Dividir en múltiples líneas o aceptar que se vuelva más ancha |
 | Tablas sin fila separadora no compatibles | Requisito de la especificación Markdown | Agregar fila separadora `|---|` |
@@ -330,7 +330,7 @@ El complemento no tiene límite de ancho máximo de columna, si el contenido de 
 > Última actualización: 2026-01-26
 
 | Limitación | Ruta del archivo | Número de línea |
-| --- | --- | --- |
+|--- | --- | ---|
 | Detección de tablas HTML | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61) | 58-61 |
 | Detección de fila separadora | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L63-L68) | 63-68 |
 | Validación de tabla (debe incluir fila separadora) | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88) | 70-88 |

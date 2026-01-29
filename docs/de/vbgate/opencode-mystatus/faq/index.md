@@ -35,7 +35,7 @@ Erfahren Sie mehr über den Sicherheitsmechanismus des Plugins:
 Suchen Sie basierend auf der Fehlermeldung die Lösung:
 
 | Fehler-Schlüsselwort | Mögliche Ursache | Lösung |
-|-----------|---------|---------|
+|--- | --- | ---|
 | `auth.json not found` | Authentifizierungsdatei existiert nicht | [Fehlerbehebung](./troubleshooting/) |
 | `Token expired` | Token abgelaufen | [Fehlerbehebung](./troubleshooting/) |
 | `Permission denied` | Unzureichende Berechtigungen | [Copilot-Authentifizierungskonfiguration](../advanced/copilot-auth/) |

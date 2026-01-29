@@ -102,14 +102,14 @@ Edit `~/.clawdbot/clawdbot.json` and add WhatsApp configuration:
 **Field Descriptions**:
 
 | Field | Type | Default | Description |
-|------|------|---------|-------------|
+|--- | --- | --- | ---|
 | `dmPolicy` | string | `"pairing"` | DM access policy: `pairing` (pairing required), `allowlist` (whitelist), `open` (public), `disabled` (disabled) |
 | `allowFrom` | string[] | `[]` | List of allowed sender phone numbers (E.164 format, e.g. `+15551234567`) |
 
 **DM Policy Comparison**:
 
 | Policy | Behavior | Use Case |
-|--------|----------|----------|
+|--- | --- | ---|
 | `pairing` | Unknown senders receive pairing code, requiring manual approval | **Recommended**, balances security and convenience |
 | `allowlist` | Only allow numbers in the `allowFrom` list | Strict control, known users |
 | `open` | Anyone can send (requires `allowFrom` to contain `"*"`) | Public testing or community service |
@@ -230,7 +230,7 @@ Add to `clawdbot.json`:
 **Field Descriptions**:
 
 | Field | Type | Default | Description |
-|------|------|---------|-------------|
+|--- | --- | --- | ---|
 | `emoji` | string | - | Acknowledgment emoji (e.g. `"👀"`, `"✅"`), empty string to disable |
 | `direct` | boolean | `true` | Whether to send acknowledgment in DMs |
 | `group` | string | `"mentions"` | Group behavior: `"always"` (all messages), `"mentions"` (only @ mentions), `"never"` (never) |
@@ -264,7 +264,7 @@ By default, Clawdbot automatically marks messages as read (blue checkmarks). To 
 ```
 
 | Field | Default | Description |
-|------|---------|-------------|
+|--- | --- | ---|
 | `textChunkLimit` | 4000 | Maximum characters per text message |
 | `mediaMaxMb` | 50 | Maximum size of received media files (MB) |
 | `chunkMode` | `"length"` | Chunk mode: `"length"` (by length), `"newline"` (by paragraph) |
@@ -378,7 +378,7 @@ WhatsApp channel configuration key points:
 > Last updated: 2026-01-27
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | WhatsApp configuration type definitions | [`src/config/types.whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.whatsapp.ts) | 1-160 |
 | WhatsApp configuration Schema | [`src/config/zod-schema.providers-whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-whatsapp.ts) | 13-100 |
 | WhatsApp onboarding configuration | [`src/channels/plugins/onboarding/whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/whatsapp.ts) | 1-341 |

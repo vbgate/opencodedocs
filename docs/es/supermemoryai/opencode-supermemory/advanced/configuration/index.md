@@ -128,7 +128,7 @@ Cuando la sesión del contexto es demasiado larga, el plugin activará automáti
 Además del archivo de configuración, también puedes usar variables de entorno para gestionar información sensible o sobrescribir el comportamiento predeterminado.
 
 | Variable de entorno | Descripción | Prioridad |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | `SUPERMEMORY_API_KEY` | Clave de API de Supermemory | Inferior al archivo de configuración |
 | `USER` o `USERNAME` | Identificador usado para generar Hash de ámbito de usuario | Predeterminado del sistema |
 
@@ -236,7 +236,7 @@ Memoria guardada: la ruta base de la API de este proyecto es /api/v2
 > Fecha de actualización: 2026-01-23
 
 | Función | Ruta del archivo | Número de línea |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Definición de interfaz de configuración | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L12-L23) | 12-23 |
 | Definición de valores predeterminados | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L44-L54) | 44-54 |
 | Palabras clave predeterminadas | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L25-L42) | 25-42 |

@@ -58,7 +58,7 @@ Skill names must conform to the following specifications:
 **Examples**:
 
 | ✅ Good Examples | ❌ Bad Examples | Reason |
-| ---------------- | -------------- | ------ |
+|--- | --- | ---|
 | `git-helper` | `GitHelper` | Contains uppercase letters |
 | `docker-build` | `docker_build` | Uses underscores |
 | `code-review` | `code review` | Contains spaces |
@@ -106,7 +106,7 @@ Skill descriptions are not just for user guidance—they're also used for:
 ### Good vs. Bad Descriptions
 
 | ✅ Good Descriptions | ❌ Bad Descriptions | Reason |
-| ------------------- | ------------------- | ------ |
+|--- | --- | ---|
 | "Automate Git branch management and commit workflow, supports auto-generating commit messages" | "Git tool" | Too vague, lacks specific functionality |
 | "Generate type-safe API client code for Node.js projects" | "A useful tool" | Doesn't specify use case |
 | "Translate PDF to Chinese while preserving original formatting" | "Translation tool" | Doesn't mention special capabilities |
@@ -183,7 +183,7 @@ const skipDirs = new Set(['node_modules', '__pycache__', '.git', '.venv', 'venv'
 ### Recommended Directory Naming
 
 | Purpose | Recommended Directory Name | Description |
-| ------- | ------------------------- | ----------- |
+|--- | --- | ---|
 | Script files | `tools/` or `scripts/` | Store runnable scripts |
 | Documentation | `docs/` or `examples/` | Store supporting documentation |
 | Configuration | `config/` | Store configuration files |
@@ -471,7 +471,7 @@ Following these best practices ensures your skills:
 > Last updated: 2026-01-24
 
 | Feature | File Path | Line Numbers |
-| ------- | --------- | ------------ |
+|--- | --- | ---|
 | Skill name validation | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L106-L108) | 106-108 |
 | Skill description validation | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L109-L110) | 109-110 |
 | Frontmatter Schema definition | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L105-L114) | 105-114 |

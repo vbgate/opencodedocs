@@ -65,7 +65,7 @@ order: 120
 Everything Claude Code 提供三层验证：
 
 | 层级 | 机制 | 目的 | 何时使用 |
-|------|------|------|---------|
+|--- | --- | --- | ---|
 | **实时验证** | PostToolUse Hooks | 立即捕获类型错误、console.log 等 | 每次工具调用后 |
 | **周期验证** | `/verify` 命令 | 全面检查：构建、类型、测试、安全 | 每 15 分钟或重大变更后 |
 | **里程碑验证** | `/checkpoint` | 对比状态差异，追踪质量趋势 | 完成里程碑、提交 PR 前 |
@@ -501,7 +501,7 @@ Status: READY FOR REVIEW
 验证循环是保持代码质量的系统化方法：
 
 | 机制 | 作用 | 使用频率 |
-|------|------|---------|
+|--- | --- | ---|
 | **PostToolUse Hooks** | 实时捕获错误 | 每次工具调用 |
 | **`/verify`** | 周期性全面检查 | 每 15 分钟 |
 | **`/checkpoint`** | 里程碑记录和对比 | 每个功能阶段 |
@@ -534,7 +534,7 @@ Status: READY FOR REVIEW
 > 更新时间：2026-01-25
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | Checkpoint 命令定义 | [`commands/checkpoint.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/checkpoint.md) | 1-75 |
 | Verify 命令定义 | [`commands/verify.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/verify.md) | 1-60 |
 | Verification Loop Skill | [`skills/verification-loop/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/verification-loop/SKILL.md) | 1-121 |

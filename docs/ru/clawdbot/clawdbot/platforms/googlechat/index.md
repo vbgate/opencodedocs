@@ -66,7 +66,7 @@ sequenceDiagram
 **Ключевые концепции**:
 
 | Концепция | Описание |
-| ------ | ------ |
+|--- | ---|
 | **Service Account** | Метод аутентификации Google Cloud для идентификации бота |
 | **Webhook** | HTTP-эндпоинт, в который Google Chat отправляет POST-запросы к Gateway |
 | **Audience** | Цель для проверки запросов webhook (app-url или project-number) |
@@ -412,7 +412,7 @@ clawdbot channels status
 ### Аутентификация Service Account
 
 | Параметр | Тип | По умолчанию | Описание |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `serviceAccountFile` | string | - | Путь к файлу JSON Service Account |
 | `serviceAccount` | string\|object | - | Встроенные учетные данные JSON (альтернатива пути к файлу) |
 | `audienceType` | "app-url"\|"project-number" | "app-url" | Тип проверки: URL или номер проекта |
@@ -423,7 +423,7 @@ clawdbot channels status
 По умолчанию незнакомые отправители требуют связывания:
 
 | Параметр | Тип | По умолчанию | Описание |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `dm.enabled` | boolean | Не определено | Включен ли прием DM |
 | `dm.policy` | "pairing"|"open" | "pairing" | Политика доступа: связывание или открытый доступ |
 | `dm.allowFrom` | array | [] | Список разрешенных отправителей (user IDs или emails) |
@@ -437,7 +437,7 @@ clawdbot pairing approve googlechat <код-связывания>
 ### Политика групп
 
 | Параметр | Тип | По умолчанию | Описание |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `groupPolicy` | "allowlist"|"disabled" | "allowlist" | Политика групп: разрешающий список или отключено |
 | `requireMention` | boolean | true | Требовать @упоминание для запуска |
 | `groups` | object | {} | Конфигурация по ID пространства |
@@ -464,7 +464,7 @@ clawdbot pairing approve googlechat <код-связывания>
 ### Другие конфигурации
 
 | Параметр | Тип | По умолчанию | Описание |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `webhookPath` | string | "/googlechat" | Путь Webhook |
 | `botUser` | string | - | Имя ресурса пользователя бота (для обнаружения упоминаний) |
 | `typingIndicator` | "none"|"message"|"reaction" | "message" | Режим индикатора набора текста |
@@ -568,7 +568,7 @@ clawdbot pairing approve googlechat <код-связывания>
 > Время обновления: 2026-01-27
 
 | Функция | Путь к файлу | Номер строки |
-| ------ | --------- | ---- |
+|--- | --- | ---|
 | Определение типа конфигурации Google Chat | [`src/config/types.googlechat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.googlechat.ts) | 1-109 |
 | Схема Zod Google Chat | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts) | 273-341 |
 | Реестр каналов | [`src/channels/registry.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.ts) | 61-67 |

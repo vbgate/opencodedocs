@@ -39,7 +39,7 @@ API 介面（Application Programming Interface）是程式之間通訊的橋樑�
 **介面資訊**：
 
 | 項目 | 值 |
-| --- | --- |
+|--- | ---|
 | URL | `https://chatgpt.com/backend-api/wham/usage` |
 | 方法 | GET |
 | 認證方式 | Bearer Token (OAuth) |
@@ -91,7 +91,7 @@ ChatGPT-Account-Id: {team_account_id}  // 可選，團隊帳號需要
 **介面資訊**：
 
 | 項目 | 值 |
-| --- | --- |
+|--- | ---|
 | URL | `https://bigmodel.cn/api/monitor/usage/quota/limit` |
 | 方法 | GET |
 | 認證方式 | API Key |
@@ -151,7 +151,7 @@ User-Agent: OpenCode-Status-Plugin/1.0
 **介面資訊**：
 
 | 項目 | 值 |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.z.ai/api/monitor/usage/quota/limit` |
 | 方法 | GET |
 | 認證方式 | API Key |
@@ -176,7 +176,7 @@ User-Agent: OpenCode-Status-Plugin/1.0
 **介面資訊**：
 
 | 項目 | 值 |
-| --- | --- |
+|--- | ---|
 | URL | `https://oauth2.googleapis.com/token` |
 | 方法 | POST |
 | 認證方式 | OAuth Refresh Token |
@@ -218,7 +218,7 @@ client_id={client_id}
 **介面資訊**：
 
 | 項目 | 值 |
-| --- | --- |
+|--- | ---|
 | URL | `https://cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels` |
 | 方法 | POST |
 | 認證方式 | Bearer Token (OAuth) |
@@ -282,7 +282,7 @@ User-Agent: antigravity/1.11.9 windows/amd64
 **介面資訊**：
 
 | 項目 | 值 |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.github.com/users/{username}/settings/billing/premium_request/usage` |
 | 方法 | GET |
 | 認證方式 | Fine-grained PAT（Personal Access Token） |
@@ -350,7 +350,7 @@ Fine-grained PAT（Fine-grained Personal Access Token）是 GitHub 的新一代�
 **介面資訊**：
 
 | 項目 | 值 |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.github.com/copilot_internal/user` |
 | 方法 | GET |
 | 認證方式 | Copilot Session Token |
@@ -416,7 +416,7 @@ Copilot-Integration-Id: vscode-chat
 **介面資訊**：
 
 | 項目 | 值 |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.github.com/copilot_internal/v2/token` |
 | 方法 | POST |
 | 認證方式 | OAuth Token（從 OpenCode 取得） |
@@ -461,7 +461,7 @@ Copilot-Integration-Id: vscode-chat
 ## 認證方式對比
 
 | 平台 | 認證方式 | 憑證來源 | 憑證檔案 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | **OpenAI** | OAuth Bearer Token | OpenCode OAuth | `~/.local/share/opencode/auth.json` |
 | **智證 AI** | API Key | 使用者手動設定 | `~/.local/share/opencode/auth.json` |
 | **Z.ai** | API Key | 使用者手動設定 | `~/.local/share/opencode/auth.json` |
@@ -475,7 +475,7 @@ Copilot-Integration-Id: vscode-chat
 所有 API 請求都設定了 10 秒逾時限制，避免長時間等待：
 
 | 設定 | 值 | 原始碼位置 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 逾時時間 | 10 秒 | `plugin/lib/types.ts:114` |
 | 逾時實作 | `fetchWithTimeout` 函數 | `plugin/lib/utils.ts:84-100` |
 
@@ -511,7 +511,7 @@ maskString("sk-1234567890abcdef")  // "sk-1****cdef"
 本課介紹了 opencode-mystatus 外掛呼叫的所有官方 API 介面：
 
 | 平台 | API 數量 | 認證方式 |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI | 1 個 | OAuth Bearer Token |
 | 智證 AI | 1 個 | API Key |
 | Z.ai | 1 個 | API Key |
@@ -530,7 +530,7 @@ maskString("sk-1234567890abcdef")  // "sk-1****cdef"
 > 更新時間：2026-01-23
 
 | 功能 | 檔案路徑 | 行號 |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI 額度查詢 API | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L127-L155) | 127-155 |
 | 智證 AI 額度查詢 API | [`plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts#L62-L106) | 62-106 |
 | Z.ai 額度查詢 API | [`plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts#L64) | 64（共用介面） |

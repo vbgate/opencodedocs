@@ -97,7 +97,7 @@ Wenn der Agent Ihnen sagt "Das Kennwort ist [REDACTED]", funktioniert der Maskie
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
+|--- | --- | ---|
 | Datenschutzmaskierungslogik | [`src/services/privacy.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/privacy.ts#L1-L13) | 1-13 |
 | API Key laden | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L90) | 90 |
 | Plugin-Aufruf Maskierung | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L282) | 282 |

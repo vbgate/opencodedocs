@@ -67,7 +67,7 @@ order: 4
 在 Antigravity 插件中，**模型和 variant 是两个独立的概念**：
 
 | 概念 | 作用 | 示例 |
-|------|------|------|
+|--- | --- | ---|
 | **Model（模型）** | 选择具体的 AI 模型 | `antigravity-claude-sonnet-4-5-thinking` |
 | **Variant（变体）** | 配置模型的思考预算或模式 | `low`（轻量思考）、`max`（最大思考） |
 
@@ -85,7 +85,7 @@ order: 4
 不同需求的推荐模型和 variant 组合：
 
 | 需求 | 模型 | Variant | 特点 |
-|------|------|---------|------|
+|--- | --- | --- | ---|
 | **快速测试** | `antigravity-gemini-3-flash` | `minimal` | 响应最快，适合验证 |
 | **日常开发** | `antigravity-claude-sonnet-4-5-thinking` | `low` | 平衡速度和质量 |
 | **复杂推理** | `antigravity-claude-opus-4-5-thinking` | `max` | 最强推理能力 |
@@ -230,7 +230,7 @@ opencode run "描述这张图片的内容" --model=google/antigravity-gemini-3-p
 完成上述测试后，确认以下清单：
 
 | 检查项 | 预期结果 | 状态 |
-|--------|----------|------|
+|--- | --- | ---|
 | **基础连接** | 第 1 步的简单请求成功 | ☐ |
 | **Thinking 模型** | 第 2 步看到思考过程 | ☐ |
 | **Gemini 3 模型** | 第 3 步两个模型都正常 | ☐ |
@@ -340,7 +340,7 @@ Error: Invalid variant 'max' for model 'antigravity-gemini-3-pro'
 检查模型配置中的 variant 定义：
 
 | 模型类型 | Variant 格式 | 示例值 |
-|----------|-------------|--------|
+|--- | --- | ---|
 | **Claude Thinking** | `thinkingConfig.thinkingBudget` | `{ "thinkingConfig": { "thinkingBudget": 32768 } }` |
 | **Gemini 3** | `thinkingLevel` | `{ "thinkingLevel": "high" }` |
 | **Gemini 2.5** | `thinkingConfig.thinkingBudget` | `{ "thinkingConfig": { "thinkingBudget": 8192 } }` |
@@ -462,7 +462,7 @@ Error: Invalid variant 'max' for model 'antigravity-gemini-3-pro'
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-|------|----------|------|
+|--- | --- | ---|
 | 请求转换入口 | [`src/plugin/request.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request.ts) | 1-100 |
 | 账户选择与令牌管理 | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts) | 1-50 |
 | Claude 模型转换 | [`src/plugin/transform/claude.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/claude.ts) | 全文 |

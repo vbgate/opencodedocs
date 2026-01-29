@@ -37,7 +37,7 @@ order: 20
 Sisyphus 是你的主编排器，适合这些场景：
 
 | 场景 | 是否适合 | 替代方案 |
-|------|---------|---------|
+|--- | --- | ---|
 | 复杂功能开发（3+ 步骤） | ✅ 强烈推荐 | Prometheus + Atlas（需要详细规划） |
 | 快速修复已知 Bug | ✅ 合适 | 直接让 Sisyphus 做 |
 | 需要调研多个仓库/文档 | ✅ 强烈推荐 | 使用 Sisyphus 并行委托 |
@@ -91,7 +91,7 @@ Sisyphus 使用 **Claude Opus 4.5 + 32k thinking budget**。
 这有什么用？
 
 | 低预算（无 thinking） | 32k thinking budget |
-|---------------------|---------------------|
+|--- | ---|
 | 直接开始写代码 | 先深度分析需求、评估复杂度、拆解任务 |
 | 容易遗漏边界情况 | 提前发现潜在问题和风险 |
 | 写到一半发现不对路 | 一开始就选择最优方案 |
@@ -169,7 +169,7 @@ Sisyphus 在实现过程中，可能会：
 **为什么这样快？**
 
 | 串行方式（传统） | 并行方式（Sisyphus） |
-|-----------------|---------------------|
+|--- | ---|
 | 代码库搜索（2 分钟） | ⏳ 代码库搜索（2 分钟） |
 | 等待... | ⏳ 文档研究（2 分钟，同时进行） |
 | 文档研究（2 分钟） | 开始实现（总耗时 2 分钟） |
@@ -226,7 +226,7 @@ Sisyphus 在实现过程中，可能会：
 保持默认配置，让 Sisyphus 自动委托给专家：
 
 | 任务 | Sisyphus 自己做 | 委托给专家 |
-|------|----------------|-----------|
+|--- | --- | ---|
 | 单文件简单修改 | ✅ 可以 | 不需要 |
 | 代码库搜索 | ⚠️ 慢 | ✅ Explore（更快） |
 | 文档研究 | ⚠️ 可能不准确 | ✅ Librarian（更专业） |
@@ -267,7 +267,7 @@ Sisyphus 的威力不在于"更聪明"，而在于：
 > 更新时间：2026-01-26
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | Sisyphus 代理工厂 | [`src/agents/sisyphus.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/sisyphus.ts) | 419-450 |
 | Sisyphus 核心提示词 | [`src/agents/sisyphus.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/sisyphus.ts) | 17-416 |
 | 代理元数据和模型配置 | [`src/agents/AGENTS.md`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/AGENTS.md) | 24-36 |

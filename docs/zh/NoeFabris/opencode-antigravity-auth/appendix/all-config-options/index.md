@@ -41,7 +41,7 @@ Antigravity Auth 插件通过配置文件控制几乎所有行为：从日志级
 ## 配置概览
 
 | 分类 | 配置项数量 | 核心场景 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 通用设置 | 3 | 日志、调试模式 |
 | 思考块 | 1 | 保留思考过程 |
 | 会话恢复 | 3 | 错误自动恢复 |
@@ -377,7 +377,7 @@ Antigravity Auth 插件通过配置文件控制几乎所有行为：从日志级
 账户选择策略。
 
 | 策略 | 说明 | 适用场景 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `sticky` | 使用同一账户直到限速，保留提示缓存 | 单会话、缓存敏感场景 |
 | `round-robin` | 每次请求轮换到下一个账户，最大化吞吐 | 多账户高吞吐场景 |
 | `hybrid` | 基于健康评分 + 令牌桶 + LRU 的确定性选择 | 通用推荐，平衡性能与可靠性 |
@@ -547,7 +547,7 @@ Antigravity Auth 插件通过配置文件控制几乎所有行为：从日志级
 网络搜索的默认模式（未通过 variant 指定时）。
 
 | 模式 | 说明 |
-| --- | --- |
+|--- | ---|
 | `auto` | 模型决定何时搜索（动态检索） |
 | `off` | 默认禁用搜索 |
 
@@ -704,7 +704,7 @@ OPENCODE_ANTIGRAVITY_QUIET=1 opencode
 > 更新时间：2026-01-23
 
 | 功能        | 文件路径                                                                                    | 行号    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 配置 Schema 定义 | [`src/plugin/config/schema.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/schema.ts) | 1-373   |
 | JSON Schema  | [`assets/antigravity.schema.json`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/assets/antigravity.schema.json) | 1-157   |
 | 配置加载    | [`src/plugin/config/loader.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/loader.ts) | -       |

@@ -22,12 +22,12 @@ Diese Seite bietet die vollständige API- und Befehlsreferenz von Agent Skills, 
 Der Impact-Level wird zur Kennzeichnung des Performance-Einflussgrades von Regeln verwendet, mit 6 Levels:
 
 | Wert | Beschreibung | Anwendbare Szenarien |
-| --- | --- | --- |
+|--- | --- | ---|
 | `CRITICAL` | Kritische Engpässe | müssen behoben werden, sonst erhebliche Beeinträchtigung der User Experience (wie Wasserfalls, unoptimierte Bundle-Größen) |
 | `HIGH` | Wichtige Verbesserungen | signifikante Performance-Steigerung (wie Server-Side-Caching, Beseitigung doppelter Props) |
-| `MEDIUM-HIGH` | Mittel-hohe Priorität | deutliche Performance-Verbesserung (wie Data-Fetching-Optimierung) |
+|--- | --- | ---|
 | `MEDIUM` | Mittlere Verbesserungen | messbare Performance-Verbesserung (wie Memo-Optimierung, Reduzierung von Re-renders) |
-| `LOW-MEDIUM` | Niedrig-mittlere Priorität | leichte Performance-Verbesserung (wie Rendering-Optimierung) |
+|--- | --- | ---|
 | `LOW` | Inkrementelle Verbesserungen | Mikro-Optimierungen (wie Code-Stil, erweiterte Muster) |
 
 **Quellcode-Position**: `types.ts:5`
@@ -126,7 +126,7 @@ Dies ist die vollständige API- und Befehlsreferenz von Agent Skills. Alle Build
 > Aktualisierungszeit: 2026-01-25
 
 | Funktion        | Dateipfad                                                                                      | Zeilen  |
-| ----------- | --------------------------------------------------------------------------------------------- | ----- |
+|--- | --- | ---|
 | ImpactLevel Typ | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts#L5) | 5     |
 | CodeExample Interface | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts#L7-L13) | 7-13  |
 

@@ -44,7 +44,7 @@ Detection checks both `dependencies` and `devDependencies`, so frameworks instal
 ### React Ecosystem
 
 | Framework | Detection Dependency | Return Value |
-|-----------|---------------------|--------------|
+|--- | --- | ---|
 | **Next.js** | `next` | `nextjs` |
 | **Gatsby** | `gatsby` | `gatsby` |
 | **Remix** | `@remix-run/` | `remix` |
@@ -57,7 +57,7 @@ Detection checks both `dependencies` and `devDependencies`, so frameworks instal
 ### Vue Ecosystem
 
 | Framework | Detection Dependency | Return Value |
-|-----------|---------------------|--------------|
+|--- | --- | ---|
 | **Nuxt** | `nuxt` | `nuxtjs` |
 | **VitePress** | `vitepress` | `vitepress` |
 | **VuePress** | `vuepress` | `vuepress` |
@@ -66,7 +66,7 @@ Detection checks both `dependencies` and `devDependencies`, so frameworks instal
 ### Svelte Ecosystem
 
 | Framework | Detection Dependency | Return Value |
-|-----------|---------------------|--------------|
+|--- | --- | ---|
 | **SvelteKit** | `@sveltejs/kit` | `sveltekit-1` |
 | **Svelte** | `svelte` | `svelte` |
 | **Sapper** (legacy) | `sapper` | `sapper` |
@@ -74,14 +74,14 @@ Detection checks both `dependencies` and `devDependencies`, so frameworks instal
 ### Angular
 
 | Framework | Detection Dependency | Return Value |
-|-----------|---------------------|--------------|
+|--- | --- | ---|
 | **Angular** | `@angular/core` | `angular` |
 | **Ionic Angular** | `@ionic/angular` | `ionic-angular` |
 
 ### Static Site Generators
 
 | Framework | Detection Dependency | Return Value |
-|-----------|---------------------|--------------|
+|--- | --- | ---|
 | **Astro** | `astro` | `astro` |
 | **Docusaurus** | `@docusaurus/core` | `docusaurus-2` |
 | **Hexo** | `hexo` | `hexo` |
@@ -91,7 +91,7 @@ Detection checks both `dependencies` and `devDependencies`, so frameworks instal
 ### Node.js Backend Frameworks
 
 | Framework | Detection Dependency | Return Value |
-|-----------|---------------------|--------------|
+|--- | --- | ---|
 | **Express** | `express` | `express` |
 | **NestJS** | `@nestjs/core` | `nestjs` |
 | **Hono** | `hono` | `hono` |
@@ -103,7 +103,7 @@ Detection checks both `dependencies` and `devDependencies`, so frameworks instal
 ### Other Frameworks
 
 | Framework | Detection Dependency | Return Value |
-|-----------|---------------------|--------------|
+|--- | --- | ---|
 | **SolidStart** | `@solidjs/start` | `solidstart-1` |
 | **Ember** | `ember-cli`, `ember-source` | `ember` |
 | **Dojo** | `@dojo/framework` | `dojo` |
@@ -119,7 +119,7 @@ Detection checks both `dependencies` and `devDependencies`, so frameworks instal
 ### Build Tools
 
 | Framework | Detection Dependency | Return Value |
-|-----------|---------------------|--------------|
+|--- | --- | ---|
 | **Vite** | `vite` | `vite` |
 | **Parcel** | `parcel` | `parcel` |
 
@@ -316,7 +316,7 @@ Check out [Vercel One-Click Deployment Tutorial](../../platforms/vercel-deploy/)
 > Last updated: 2026-01-25
 
 | Function        | File Path                                                                                             | Lines    |
-| ----------- | ---------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Framework detection logic | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 11-156  |
 | Deployment script entry | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 1-250   |
 | Static HTML handling | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 192-205 |

@@ -84,7 +84,7 @@ MCP 配置文件中的 `YOUR_*_HERE` 占位符未被替换为实际的 API 密�
 **第 3 步：常见 MCP 服务器的密钥获取**
 
 | MCP 服务器 | 环境变量名                     | 获取位置                                                      |
-| ---------- | ------------------------------ | ------------------------------------------------------------- |
+|--- | --- | ---|
 | GitHub     | `GITHUB_PERSONAL_ACCESS_TOKEN` | GitHub Settings → Developer Settings → Personal access tokens |
 | Firecrawl  | `FIRECRAWL_API_KEY`            | Firecrawl Dashboard → API Keys                                |
 | Supabase   | 项目引用                       | Supabase Dashboard → Settings → API                           |
@@ -203,7 +203,7 @@ Failed to connect: Invalid server type
 **第 2 步：修正配置**
 
 | MCP 服务器      | 正确类型 | 正确配置                                                                |
-| --------------- | -------- | ----------------------------------------------------------------------- |
+|--- | --- | ---|
 | GitHub          | npx      | `command: "npx"`, `args: ["-y", "@modelcontextprotocol/server-github"]` |
 | Vercel          | http     | `type: "http"`, `url: "https://mcp.vercel.com"`                         |
 | Cloudflare Docs | http     | `type: "http"`, `url: "https://docs.mcp.cloudflare.com/mcp"`            |
@@ -396,7 +396,7 @@ MCP 连接问题大多与配置相关，记住以下要点：
 > 更新时间：2026-01-25
 
 | 功能           | 文件路径                                                                                                                    | 行号  |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------- | ----- |
+|--- | --- | ---|
 | MCP 配置文件   | [`mcp-configs/mcp-servers.json`](https://github.com/affaan-m/everything-claude-code/blob/main/mcp-configs/mcp-servers.json) | 1-91  |
 | 上下文窗口警告 | [`README.md`](https://github.com/affaan-m/everything-claude-code/blob/main/README.md)                                       | 67-75 |
 

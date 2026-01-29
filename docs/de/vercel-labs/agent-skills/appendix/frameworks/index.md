@@ -39,7 +39,7 @@ Die Erkennung prüft gleichzeitig `dependencies` und `devDependencies`, daher we
 ### React-Ökosystem
 
 | Framework | Erkennungsabhängigkeit | Rückgabewert |
-|------|---------|--------|
+|--- | --- | ---|
 | **Next.js** | `next` | `nextjs` |
 | **Gatsby** | `gatsby` | `gatsby` |
 | **Remix** | `@remix-run/` | `remix` |
@@ -52,7 +52,7 @@ Die Erkennung prüft gleichzeitig `dependencies` und `devDependencies`, daher we
 ### Vue-Ökosystem
 
 | Framework | Erkennungsabhängigkeit | Rückgabewert |
-|------|---------|--------|
+|--- | --- | ---|
 | **Nuxt** | `nuxt` | `nuxtjs` |
 | **VitePress** | `vitepress` | `vitepress` |
 | **VuePress** | `vuepress` | `vuepress` |
@@ -61,7 +61,7 @@ Die Erkennung prüft gleichzeitig `dependencies` und `devDependencies`, daher we
 ### Svelte-Ökosystem
 
 | Framework | Erkennungsabhängigkeit | Rückgabewert |
-|------|---------|--------|
+|--- | --- | ---|
 | **SvelteKit** | `@sveltejs/kit` | `sveltekit-1` |
 | **Svelte** | `svelte` | `svelte` |
 | **Sapper** (legacy) | `sapper` | `sapper` |
@@ -69,14 +69,14 @@ Die Erkennung prüft gleichzeitig `dependencies` und `devDependencies`, daher we
 ### Angular
 
 | Framework | Erkennungsabhängigkeit | Rückgabewert |
-|------|---------|--------|
+|--- | --- | ---|
 | **Angular** | `@angular/core` | `angular` |
 | **Ionic Angular** | `@ionic/angular` | `ionic-angular` |
 
 ### Statische Site-Generatoren
 
 | Framework | Erkennungsabhängigkeit | Rückgabewert |
-|------|---------|--------|
+|--- | --- | ---|
 | **Astro** | `astro` | `astro` |
 | **Docusaurus** | `@docusaurus/core` | `docusaurus-2` |
 | **Hexo** | `hexo` | `hexo` |
@@ -86,7 +86,7 @@ Die Erkennung prüft gleichzeitig `dependencies` und `devDependencies`, daher we
 ### Node.js-Backend-Frameworks
 
 | Framework | Erkennungsabhängigkeit | Rückgabewert |
-|------|---------|--------|
+|--- | --- | ---|
 | **Express** | `express` | `express` |
 | **NestJS** | `@nestjs/core` | `nestjs` |
 | **Hono** | `hono` | `hono` |
@@ -98,7 +98,7 @@ Die Erkennung prüft gleichzeitig `dependencies` und `devDependencies`, daher we
 ### Andere Frameworks
 
 | Framework | Erkennungsabhängigkeit | Rückgabewert |
-|------|---------|--------|
+|--- | --- | ---|
 | **SolidStart** | `@solidjs/start` | `solidstart-1` |
 | **Ember** | `ember-cli`, `ember-source` | `ember` |
 | **Dojo** | `@dojo/framework` | `dojo` |
@@ -114,7 +114,7 @@ Die Erkennung prüft gleichzeitig `dependencies` und `devDependencies`, daher we
 ### Build-Tools
 
 | Framework | Erkennungsabhängigkeit | Rückgabewert |
-|------|---------|--------|
+|--- | --- | ---|
 | **Vite** | `vite` | `vite` |
 | **Parcel** | `parcel` | `parcel` |
 
@@ -175,9 +175,9 @@ Lesen Sie das [Vercel Ein-Klick-Deployment-Tutorial](../../platforms/vercel-depl
 > Aktualisierungszeit: 2026-01-25
 
 | Funktion        | Dateipfad                                                                                             | Zeilen    |
-| ----------- | ------------------------------------------------------------------------------------ | ------- |
-| Framework-Erkennungslogik | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 11-156  |
-| Deployment-Skript-Einstieg | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 1-250   |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Funktion**:
 - `detect_framework()`: Erkennt 45+ Frameworks aus package.json (11-156 Zeilen)

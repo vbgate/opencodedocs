@@ -76,7 +76,7 @@ Usuario de LINE
 **Conceptos clave**:
 
 | Concepto | Función |
-|----------|---------|
+|--- | ---|
 | **Channel Access Token** | Token de autenticación para enviar mensajes |
 | **Channel Secret** | Clave para verificar la firma del Webhook |
 | **Webhook URL** | Endpoint donde Clawdbot recibe eventos de LINE (debe ser HTTPS) |
@@ -88,7 +88,7 @@ Usuario de LINE
 ### Cuentas y herramientas necesarias
 
 | Elemento | Requisito | Cómo obtener |
-|----------|-----------|---------------|
+|--- | --- | ---|
 | **Cuenta de LINE Developers** | Registro gratuito | https://developers.line.biz/console/ |
 | **LINE Provider** | Crear Provider y canal de Messaging API | LINE Console |
 | **Servidor HTTPS** | El Webhook debe ser HTTPS | ngrok, Cloudflare Tunnel, Tailscale Serve/Funnel |
@@ -155,7 +155,7 @@ Visita: https://developers.line.biz/console/
 3. Copia la siguiente información:
 
 | Elemento | Ubicación | Ejemplo |
-|----------|-----------|---------|
+|--- | --- | ---|
 | **Channel Access Token** | Basic settings → Channel access token (long-lived) | `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...` |
 | **Channel Secret** | Basic settings → Channel secret | `1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7` |
 
@@ -261,7 +261,7 @@ ngrok http 18789
 En Webhook settings, marca los siguientes eventos:
 
 | Evento | Propósito |
-|--------|-----------|
+|--- | ---|
 | **Message event** | Recibir mensajes enviados por usuarios |
 | **Follow event** | El usuario añade el Bot como amigo |
 | **Unfollow event** | El usuario elimina el Bot |
@@ -348,7 +348,7 @@ clawdbot pairing approve line ABC123
 Verifica que tu configuración sea correcta:
 
 | Elemento de verificación | Método de verificación | Resultado esperado |
-|-------------------------|------------------------|---------------------|
+|--- | --- | ---|
 | **Plugin instalado** | `clawdbot plugins list` | Ver `@clawdbot/line` |
 | **Configuración válida** | `clawdbot doctor` | Sin errores relacionados con LINE |
 | **Webhook accesible** | Verificación de LINE Console | `✓ Verification succeeded` |
@@ -531,7 +531,7 @@ clawdbot line rich-menu set-default --rich-menu-id <MENU_ID>
 Clawdbot convertirá automáticamente el formato Markdown al formato compatible con LINE:
 
 | Markdown | Resultado de conversión LINE |
-|----------|------------------------------|
+|--- | ---|
 | Bloques de código | Tarjeta Flex |
 | Tablas | Tarjeta Flex |
 | Enlaces | Detección automática y conversión a tarjeta Flex |
@@ -577,7 +577,7 @@ El canal de LINE ofrece tipos de mensajes enriquecidos y métodos de interacció
 > Fecha de actualización: 2026-01-27
 
 | Función | Ruta de archivo | Número de líneas |
-|--------|----------------|------------------|
+|--- | --- | ---|
 | Implementación principal de LINE Bot | [`src/line/bot.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/bot.ts) | 27-83 |
 | Definición de Schema de configuración | [`src/line/config-schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/config-schema.ts) | 1-54 |
 | Manejador de eventos de Webhook | [`src/line/bot-handlers.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/bot-handlers.ts) | 1-100 |

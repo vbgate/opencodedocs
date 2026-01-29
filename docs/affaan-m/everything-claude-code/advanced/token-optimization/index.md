@@ -80,7 +80,7 @@ Different models vary significantly in reasoning ability and cost. Proper select
 **Model Selection Guide**
 
 | Model | Use Cases | Cost | Reasoning Ability |
-|------|----------|------|------------------|
+|--- | --- | --- | ---|
 | **Haiku 4.5** | Lightweight agents, frequent calls, code generation | Low (1/3 of Sonnet) | 90% of Sonnet's capability |
 | **Sonnet 4.5** | Main development work, complex coding tasks, orchestration | Medium | Best coding model |
 | **Opus 4.5** | Architecture decisions, deep reasoning, research analysis | High | Strongest reasoning ability |
@@ -380,10 +380,10 @@ Following these strategies, you can maximize Claude Code's context efficiency an
 > Updated: 2026-01-25
 
 | Function           | File Path                                                                                     | Lines   |
-| ------------------ | --------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Strategic Compact Skill  | [`skills/strategic-compact/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/strategic-compact/SKILL.md) | 1-64    |
 | Compaction Suggestion Hook     | [`scripts/hooks/suggest-compact.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/hooks/suggest-compact.js) | 1-61    |
-| Pre-Compaction Save Hook   | [`scripts/hooks/pre-compact.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/hooks/pre-compact.js) | 1-49    |
+|--- | --- | ---|
 | Performance Optimization Rules      | [`rules/performance.md`](https://github.com/affaan-m/everything-claude-code/blob/main/rules/performance.md) | 1-48    |
 | Hooks Configuration        | [`hooks/hooks.json`](https://github.com/affaan-m/everything-claude-code/blob/main/hooks/hooks.json) | 1-158   |
 | Context Window Documentation    | [`README.md`](https://github.com/affaan-m/everything-claude-code/blob/main/README.md) | 349-359 |

@@ -66,7 +66,7 @@ sequenceDiagram
 **핵심 개념**:
 
 | 개념 | 설명 |
-| ------ | ------ |
+|--- | ---|
 | **Service Account** | 봇 인증을 위한 Google Cloud 인증 방식 |
 | **Webhook** | Google Chat이 Gateway로 POST 메시지를 보내는 HTTP 엔드포인트 |
 | **Audience** | webhook 요청을 검증하는 대상(app-url 또는 project-number) |
@@ -412,7 +412,7 @@ clawdbot channels status
 ### Service Account 인증
 
 | 구성 항목 | 유형 | 기본값 | 설명 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `serviceAccountFile` | string | - | Service Account JSON 파일 경로 |
 | `serviceAccount` | string\|object | - | 인라인 JSON 자격 증명 (파일 경로 대신 사용) |
 | `audienceType` | "app-url"\|"project-number" | "app-url" | 검증 유형: URL 또는 프로젝트 번호 |
@@ -423,7 +423,7 @@ clawdbot channels status
 기본적으로 알 수 없는 발신자는 페어링이 필요합니다:
 
 | 구성 항목 | 유형 | 기본값 | 설명 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `dm.enabled` | boolean | 정의되지 않음 | DM 수신 활성화 여부 |
 | `dm.policy` | "pairing"|"open" | "pairing" | 액세스 정책: 페어링 또는 공개 |
 | `dm.allowFrom` | array | [] | 허용된 발신자 목록 (user IDs 또는 emails) |
@@ -437,7 +437,7 @@ clawdbot pairing approve googlechat <페어링 코드>
 ### 그룹 정책
 
 | 구성 항목 | 유형 | 기본값 | 설명 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `groupPolicy` | "allowlist"|"disabled" | "allowlist" | 그룹 정책: 허용 목록 또는 비활성화 |
 | `requireMention` | boolean | true | @언급 트리거 필요 여부 |
 | `groups` | object | {} | 공간 ID별 구성 |
@@ -464,7 +464,7 @@ clawdbot pairing approve googlechat <페어링 코드>
 ### 기타 구성
 
 | 구성 항목 | 유형 | 기본값 | 설명 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `webhookPath` | string | "/googlechat" | Webhook 경로 |
 | `botUser` | string | - | 봇 사용자 리소스 이름 (언급 감지용) |
 | `typingIndicator` | "none"|"message"|"reaction" | "message" | 입력 표시기 모드 |
@@ -568,7 +568,7 @@ clawdbot pairing approve googlechat <페어링 코드>
 > 업데이트 시간: 2026-01-27
 
 | 기능 | 파일 경로 | 줄 번호 |
-| ------ | --------- | ---- |
+|--- | --- | ---|
 | Google Chat 구성 유형 정의 | [`src/config/types.googlechat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.googlechat.ts) | 1-109 |
 | Google Chat Zod Schema | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts) | 273-341 |
 | 채널 레지스트리 | [`src/channels/registry.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.ts) | 61-67 |

@@ -57,7 +57,7 @@ Before using WebChat, please confirm:
 ### Required Conditions
 
 | Condition | How to Check |
-| ------------ | ------------------------------------------- |
+|--- | ---|
 | **Gateway Started** | `clawdbot gateway status` or check if the process is running |
 | **Port Accessible** | Confirm port 18789 (or custom port) is not in use |
 | **AI Model Configured** | `clawdbot models list` to see available models |
@@ -123,7 +123,7 @@ For detailed information: [Gateway Authentication Configuration](../../advanced/
 **Differences from Other Channels**:
 
 | Feature | WebChat | WhatsApp/Telegram, etc. |
-| ------------ | -------------------------------- | ------------------------------ |
+|--- | --- | ---|
 | **Access Method** | Browser directly accesses Gateway | Requires third-party APP and login |
 | **Configuration Requirements** | No separate configuration, shares Gateway port | Requires channel-specific API Key/Token |
 | **Reply Routing** | Deterministic routing back to WebChat | Routes to corresponding channel |
@@ -349,7 +349,7 @@ WebChat supports slash commands for quick execution of specific actions.
 **Common Commands**:
 
 | Command | Function |
-| ---------------- | ---------------------------- |
+|--- | ---|
 | `/new` | Create a new session |
 | `/reset` | Reset current session history |
 | `/clear` | Clear all messages in current session |
@@ -612,7 +612,7 @@ In this lesson you learned:
 > Last updated: 2026-01-27
 
 | Feature | File Path | Lines |
-| ------------------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | WebChat principle explanation | [`docs/web/webchat.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/web/webchat.md) | Full file |
 | Gateway WebSocket API | [`src/gateway/protocol/`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/) | Full directory |
 | chat.send method | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 296-380 |

@@ -25,7 +25,7 @@ KI-generierte Markdown-Tabellen sehen oft so aus:
 
 ```markdown
 | 名称 | 描述 | 状态 |
-|---|---|---|
+|--- | --- | ---|
 | 功能A | 这是一个很长的描述文本 | 已完成 |
 | B | 短 | 进行中 |
 ```
@@ -125,7 +125,7 @@ Lassen Sie die KI eine Tabelle generieren, zum Beispiel durch Eingabe von:
 
 ```markdown
 | 框架    | 特点                     | 学习曲线 |
-| ------- | ------------------------ | -------- |
+|--- | --- | ---|
 | React   | 组件化、虚拟 DOM         | 中等     |
 | Vue     | 渐进式、双向绑定         | 较低     |
 | Angular | 全功能框架、TypeScript   | 较高     |
@@ -136,9 +136,9 @@ Lassen Sie die KI eine Tabelle generieren, zum Beispiel durch Eingabe von:
 Nach Abschluss der oben genannten Schritte überprüfen Sie folgende Punkte:
 
 | Prüfpunkt              | Erwartetes Ergebnis                                   |
-| ---------------------- | ----------------------------------------------------- |
+|--- | ---|
 | Konfigurationsdatei    | Keine Fehlermeldungen                                 |
-| OpenCode-Start         | Normaler Start, keine Plugin-Ladefehler               |
+|--- | ---|
 | KI-generierte Tabellen | Spaltenbreiten automatisch ausgerichtet, Trennzeilen formatiert |
 
 ## Häufige Stolpersteine
@@ -184,9 +184,9 @@ Weitere Informationen finden Sie im Kapitel [Häufige Probleme](../../faq/troubl
 > Aktualisierungszeit: 2026-01-26
 
 | Funktion          | Dateipfad                                                                                    | Zeilen |
-| ----------------- | -------------------------------------------------------------------------------------------- | ------ |
-| Plugin-Einstieg   | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L9-L23) | 9-23   |
-| Hook-Registrierung | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L11-L13) | 11-13  |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Paketkonfiguration | [`package.json`](https://github.com/franlol/opencode-md-table-formatter/blob/main/package.json#L1-L41) | 1-41   |
 
 **Wichtige Konstanten**:

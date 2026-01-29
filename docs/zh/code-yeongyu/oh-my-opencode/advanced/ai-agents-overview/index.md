@@ -354,7 +354,7 @@ oh-my-opencode 把这些角色做成了 10 个专业 AI 代理，你可以根据
 ## 代理调用方式速查
 
 | 代理 | 调用方式 | 触发条件 |
-|------|---------|---------|
+|--- | --- | ---|
 | **Sisyphus** | 默认主代理 | 日常开发任务 |
 | **Atlas** | `/start-work` 命令 | 启动项目执行 |
 | **Oracle** | `@oracle` 或 `delegate_task(agent="oracle")` | 复杂架构决策、2+ 次修复失败 |
@@ -455,7 +455,7 @@ oh-my-opencode 把这些角色做成了 10 个专业 AI 代理，你可以根据
 ## 代理权限与限制
 
 | 代理 | write | edit | bash | delegate_task | webfetch | read | LSP | AST-Grep |
-|------|--------|-------|-------|--------------|----------|-------|------|-----------|
+|--- | --- | --- | --- | --- | --- | --- | --- | ---|
 | **Sisyphus** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | **Atlas** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | **Oracle** | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ |
@@ -507,7 +507,7 @@ oh-my-opencode 的 10 个 AI 代理覆盖了开发流程的所有环节：
 > 更新时间：2026-01-26
 
 | 代理 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | Sisyphus 主编排器 | [`src/agents/sisyphus.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/sisyphus.ts) | - |
 | Atlas 主编排器 | [`src/agents/atlas.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/atlas.ts) | - |
 | Oracle 顾问 | [`src/agents/oracle.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/oracle.ts) | 1-123 |

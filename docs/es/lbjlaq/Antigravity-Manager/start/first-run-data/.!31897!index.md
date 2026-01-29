@@ -108,7 +108,7 @@ No todos los archivos vale la pena respaldar. Primero distingue "cuáles son dat
 Los siguientes nombres de archivo provienen del código fuente del proyecto y son fijos:
 
 | Lo que verás | Propósito | Lo que te interesa |
-| --- | --- | --- |
+|--- | --- | ---|
 | `accounts.json` | Índice de cuentas (contiene lista de cuentas/cuenta actual) | Se recomienda respaldar junto al migrar cuentas |
 | `accounts/` | Un archivo `*.json` por cada cuenta | Este es el cuerpo principal de datos de cuentas |
 | `logs/` | Directorio de registros de la aplicación | Prioridad al solucionar problemas |
@@ -188,7 +188,7 @@ En Settings -> General encuentra "Auto-start on boot", selecciona habilitar.
 
 ::: info Dos tipos de "autoinicio", no los confundas
 | Nombre | A qué se refiere | Evidencia |
-| --- | --- | --- |
+|--- | --- | ---|
 | Autoinicio al encender | Iniciar automáticamente Antigravity Tools después de que la computadora se inicia (la aplicación de escritorio en sí) | El parámetro de inicio incluye `--minimized`, y se proporciona el comando `toggle_auto_launch` |
 | Autoinicio del proxy | Después de que Antigravity Tools se inicia, si está configurado `proxy.auto_start=true`, intentará iniciar automáticamente el servicio local de proxy | Al iniciar la aplicación lee la configuración y ejecuta `start_proxy_service(...)` |
 :::
@@ -204,7 +204,7 @@ En Settings -> General encuentra "Auto-start on boot", selecciona habilitar.
 ## Recordatorios de trampas
 
 | Escenario | Lo que podrías hacer (❌) | Práctica recomendada (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | No encuentras el directorio de datos | Buscar desordenadamente el directorio de instalación de la App en el sistema | Ve directamente a Settings -> Advanced para ver "Data Directory" y abrir con un clic |
 | Cerraste la ventana pensando que salió | Después de hacer clic en cerrar la ventana ir a cambiar configuración/cambiar puerto | Primero verifica si el icono de la bandeja todavía existe; para salir usa Quit de la bandeja |
 | Demasiados registros difíciles de diagnosticar | Mientras reproduces el problema buscar en registros antiguos | Primero "limpiar registros", luego reproducir una vez, finalmente solo ver el archivo de registro de esta vez |
@@ -233,7 +233,7 @@ En Settings -> General encuentra "Auto-start on boot", selecciona habilitar.
 > Última actualización: 2026-01-23
 
 | Función | Ruta del archivo | Línea |
-| --- | --- | --- |
+|--- | --- | ---|
 | Ubicación del directorio de datos (`~/.antigravity_tools`) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | Índice de cuentas y directorio de archivos de cuentas (`accounts.json` / `accounts/`) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L46) | 16-46 |
 | Directorio de registros y rotación diaria (`logs/` + `app.log`) | [`src-tauri/src/modules/logger.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/logger.rs#L17-L83) | 17-83 |
@@ -242,8 +242,8 @@ En Settings -> General encuentra "Auto-start on boot", selecciona habilitar.
 | Página de configuración limpiar registros con un clic (botón + lógica de diálogo) | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L127-L135) | 127-135 |
 | Página de configuración limpiar registros con un clic (botón de pestaña Advanced) | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L732-L747) | 732-747 |
 | Menú de bandeja y eventos de clic (cambiar cuenta/refrescar/mostrar/salir) | [`src-tauri/src/modules/tray.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/tray.rs#L9-L158) | 9-158 |
-| Cerrar ventana -> ocultar (minimizar a bandeja) | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L150-L160) | 150-160 |
-| Inicialización de plugin de autoinicio al encender (incluye `--minimized`) | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L58-L66) | 58-66 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Interruptor de autoinicio al encender (`toggle_auto_launch` / `is_auto_launch_enabled`) | [`src-tauri/src/commands/autostart.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/autostart.rs#L4-L39) | 4-39 |
 | Comandos: abrir directorio de datos con un clic / obtener ruta / limpiar registros | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L578-L621) | 578-621 |
 | Nombre de archivo de base de datos Token Stats (`token_stats.db`) | [`src-tauri/src/modules/token_stats.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/token_stats.rs#L58-L61) | 58-61 |

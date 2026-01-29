@@ -42,7 +42,7 @@ Chaque Catégorie définit:
 ### 7 Catégories intégrées
 
 | Catégorie | Modèle par défaut | Température | Cas d'utilisation |
-|-----------|-------------------|-------------|-------------------|
+|--- | --- | --- | ---|
 | `visual-engineering` | `google/gemini-3-pro` | 0.7 | Frontend, UI/UX, design, stylisation, animations |
 | `ultrabrain` | `openai/gpt-5.2-codex` (xhigh) | 0.1 | Raisonnement logique approfondi, décisions d'architecture complexes nécessitant une analyse extensive |
 | `artistry` | `google/gemini-3-pro` (max) | 0.7 | Tâches de haute créativité/art, idées novatrices |
@@ -229,7 +229,7 @@ Lors de la délégation de tâches, des prompts **clairs et spécifiques** sont 
 Vous pouvez affiner les Catégories dans `oh-my-opencode.json`.
 
 | Champ | Type | Description |
-|-------|------|-------------|
+|--- | --- | ---|
 | `description` | string | Description lisible par humain de l'objectif de la Catégorie. Affichée dans les prompts delegate_task. |
 | `model` | string | ID du modèle IA à utiliser (ex: `anthropic/claude-opus-4-5`) |
 | `variant` | string | Variante du modèle (ex: `max`, `xhigh`) |

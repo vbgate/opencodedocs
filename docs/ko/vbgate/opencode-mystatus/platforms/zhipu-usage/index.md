@@ -46,7 +46,7 @@ order: 2
 **지푸 AI**와 **Z.ai**의 할당량 시스템은 두 가지 유형으로 나뉩니다:
 
 | 할당량 유형 | 의미 | 재설정 주기 |
-| -------- | ---- | -------- |
+|--- | --- | ---|
 | **5시간 Token 할당량** | API 요청의 Token 사용량 제한 | 5시간 자동 재설정 |
 | **MCP 월간 할당량** | MCP(Model Context Protocol) 검색 횟수의 월간 제한 | 매월 재설정 |
 
@@ -134,7 +134,7 @@ MCP 월간 할당량
 다음 설명에 따라 출력을 확인합니다:
 
 | 출력 필드 | 의미 | 예시 |
-| -------- | ---- | ---- |
+|--- | --- | ---|
 | **Account** | 마스킹된 API Key와 계정 유형 | `9c89****AQVM (Coding Plan)` |
 | **5시간 Token 할당량** | 현재 5시간 주기 내 Token 사용 상황 | 프로그레스 바 + 백분율 |
 | **사용됨: X / Y** | 사용된 Token / 총 할당량 | `0.5M / 10.0M` |
@@ -240,7 +240,7 @@ MCP 월간 할당량
 > 업데이트 날짜: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 지푸 AI 할당량 조회 | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 213-217 |
 | Z.ai 할당량 조회 | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 224-228 |
 | 형식화 출력 | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 115-177 |

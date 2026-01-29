@@ -36,7 +36,7 @@ But implementing these features manually adds development complexity.
 When you need to extend AI agent capabilities:
 
 | Scenario | Recommended MCP |
-|----------|----------------|
+|--- | ---|
 | Need to get the latest technical information, news, or industry trends | **websearch** (Exa) |
 | Query official API documentation for libraries or frameworks | **context7** |
 | Find implementation examples in GitHub repositories | **grep_app** (Grep.app) |
@@ -182,7 +182,7 @@ Disabling unnecessary MCPs can:
 The disable configuration priority for built-in MCPs:
 
 | Configuration Location | Priority |
-|------------------------|----------|
+|--- | ---|
 | User config `~/.config/opencode/oh-my-opencode.json` | High (overrides project config) |
 | Project config `.opencode/oh-my-opencode.json` | Medium |
 | Code default | Low (all enabled) |
@@ -211,7 +211,7 @@ export const websearch = {
 **Configuration Field Descriptions**:
 
 | Field | Type | Description |
-|-------|------|-------------|
+|--- | --- | ---|
 | `type` | `"remote"` | Fixed value, indicating remote MCP |
 | `url` | `string` | HTTP address of the MCP server |
 | `enabled` | `boolean` | Whether enabled (fixed as `true` in code, controlled by `disabled_mcps`) |
@@ -288,7 +288,7 @@ oh-my-opencode doctor --verbose
 This lesson introduced Oh-My-OpenCode's 3 built-in MCP servers:
 
 | MCP | Function | Configuration Requirements | Main Use |
-|-----|----------|---------------------------|----------|
+|--- | --- | --- | ---|
 | **websearch** | Real-time web search | EXA_API_KEY | Get latest information |
 | **context7** | Official documentation query | None | Consult API documentation |
 | **grep_app** | GitHub code search | None | Find implementation examples |
@@ -312,7 +312,7 @@ These MCP servers significantly expand AI agent capabilities, allowing them to a
 > Updated: 2026-01-26
 
 | Function | File Path | Line Numbers |
-|----------|-----------|--------------|
+|--- | --- | ---|
 | MCP factory function | [`src/mcp/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/mcp/index.ts) | 22-32 |
 | websearch configuration | [`src/mcp/websearch.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/mcp/websearch.ts) | 1-11 |
 | context7 configuration | [`src/mcp/context7.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/mcp/context7.ts) | 1-7 |

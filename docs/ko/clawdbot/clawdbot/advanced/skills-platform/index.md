@@ -393,7 +393,7 @@ Bundled 스킬을 사용하고 Workspace 덮어쓰기를 피하려면:
 > 업데이트 날짜: 2026-01-27
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 스킬 구성 유형 정의 | [`src/config/types.skills.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.skills.ts) | 1-32 |
 | 스킬 시스템 문서 | [`docs/tools/skills.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/skills.md) | 1-260 |
 | 스킬 구성 참조 | [`docs/tools/skills-config.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/skills-config.md) | 1-76 |

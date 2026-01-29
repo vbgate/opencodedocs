@@ -51,7 +51,7 @@ clawdbot status --deep
 
 ::: tip 명령 설명
 | 명령 | 기능 | 사용 시나리오 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `clawdbot status` | 로컬 요약: 시스템 정보, Gateway 연결, 서비스 상태, Agent 상태, 제공자 구성 | 첫 번째 확인, 빠른 개요 |
 | `clawdbot status --all` | 완전 진단(읽기 전용, 공유 가능, 비교적 안전), 로그 꼬리 포함 | 디버그 보고서를 공유해야 할 때 |
 | `clawdbot status --deep` | Gateway 헬스 체크 실행(제공자 프로브 포함, 연결 가능한 Gateway 필요) | "구성됨"이지만 "작동 중"이 아닐 때 |
@@ -660,7 +660,7 @@ clawdbot channels login --verbose
 ### 로그 위치
 
 | 로그 | 위치 |
-| --- | --- |
+|--- | ---|
 | Gateway 파일 로그(구조화) | `/tmp/clawdbot/clawdbot-YYYY-MM-DD.log`(또는 `logging.file`) |
 | Gateway 서비스 로그 | macOS: `$CLAWDBOT_STATE_DIR/logs/gateway.log` + `gateway.err.log`<br/>Linux: `journalctl --user -u clawdbot-gateway[-<profile>].service -n 200 --no-pager`<br/>Windows: `schtasks /Query /TN "Clawdbot Gateway (<profile>)" /V /FO LIST` |
 | 세션 파일 | `$CLAWDBOT_STATE_DIR/agents/<agentId>/sessions/` |
@@ -830,7 +830,7 @@ npm install -g clawdbot@<version>
 > 업데이트: 2026-01-27
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 문제 해결 명령 | [`src/commands/doctor.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/doctor.ts) | 전체 |
 | Gateway 헬스 체크 | [`src/gateway/server-channels.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-channels.ts) | 93+ |
 | 로그 시스템 | [`src/logging/index.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/logging/index.ts) | 전체 |

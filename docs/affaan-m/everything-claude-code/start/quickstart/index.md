@@ -347,13 +347,13 @@ Continue learning to dive deeper into the complete installation and configuratio
 > Last updated: 2026-01-25
 
 | Feature       | File Path                                                                                    | Lines |
-| ------------- | ------------------------------------------------------------------------------------------- | ----- |
+|--- | --- | ---|
 | Plugin Manifest | [`.claude-plugin/plugin.json`](https://github.com/affaan-m/everything-claude-code/blob/main/.claude-plugin/plugin.json) | 1-28  |
 | Marketplace Config | [`.claude-plugin/marketplace.json`](https://github.com/affaan-m/everything-claude-code/blob/main/.claude-plugin/marketplace.json) | 1-45  |
 | Installation Guide | [`README.md`](https://github.com/affaan-m/everything-claude-code/blob/main/README.md)                        | 175-242 |
 | /plan command      | [`commands/plan.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/plan.md)            | 1-114 |
 | /tdd command      | [`commands/tdd.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/tdd.md)            | 1-327 |
-| /code-review command | [`commands/code-review.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/code-review.md) | 1-200 |
+|--- | --- | ---|
 
 **Key Constants**:
 - Plugin name: `everything-claude-code`

@@ -37,7 +37,7 @@ OpenSkills 提供了两种删除方式来解决这些问题：**交互式 manage
 ## 什么时候用这一招
 
 | 场景 | 推荐方式 | 命令 |
-|------|---------|------|
+|--- | --- | ---|
 | 手动删除多个技能 | 交互式选择 | `openskills manage` |
 | 脚本或 CI/CD 自动删除 | 精准指定技能名 | `openskills remove <name>` |
 | 只知道技能名，想快速删除 | 直接删除 | `openskills remove <name>` |
@@ -314,7 +314,7 @@ OpenSkills 提供两种技能删除方式：
 > 更新时间：2026-01-24
 
 | 功能        | 文件路径                                                                                           | 行号    |
-| ----------- | -------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | manage 命令实现 | [`src/commands/manage.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/manage.ts) | 10-62   |
 | remove 命令实现 | [`src/commands/remove.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/remove.ts) | 8-21    |
 | 查找所有技能 | [`src/utils/skills.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skills.ts) | 30-64   |

@@ -114,7 +114,7 @@ type CopilotTier = "free" | "pro" | "pro+" | "business" | "enterprise";
 **각 구독 유형의 한도 상한**:
 
 | tier      | 월별 한도(Premium Requests) |
-| --------- | --------------------------- |
+|--- | ---|
 | `free`    | 50                          |
 | `pro`     | 300                         |
 | `pro+`    | 1,500                       |
@@ -263,7 +263,7 @@ interface UsageLimitItem {
 **한도 유형 설명**:
 
 | type          | 설명               | 재설정 주기  |
-| ------------- | ------------------ | --------- |
+|--- | --- | ---|
 | `TOKENS_LIMIT` | 5시간 토큰 한도  | 5시간   |
 | `TIME_LIMIT`   | MCP 월별 할당량      | 1개월   |
 
@@ -522,7 +522,7 @@ interface GoogleQuotaResponse {
 **표시되는 4개 모델**:
 
 | 표시 이름     | 모델 키                                  | 대체 키              |
-| ------------ | ----------------------------------------- | --------------------- |
+|--- | --- | ---|
 | G3 Pro       | `gemini-3-pro-high`                        | `gemini-3-pro-low`    |
 | G3 Image     | `gemini-3-pro-image`                      | -                     |
 | G3 Flash     | `gemini-3-flash`                          | -                     |
@@ -569,7 +569,7 @@ export const REQUEST_TIMEOUT_MS = 10000;
 > 업데이트 시간: 2026-01-23
 
 | 기능              | 파일 경로                                                                                              | 행번호    |
-| ----------------- | --------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 인증 데이터 유형      | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L99-L104)        | 99-104  |
 | OpenAI 인증       | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L28-L33)         | 28-33   |
 | Zhipu AI 인증      | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L38-L41)         | 38-41   |

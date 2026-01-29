@@ -65,7 +65,7 @@ Agent Skills 是为 AI 编码代理（如 Claude、Cursor、Copilot）提供的�
 React 性能优化不仅仅是用几个 Hook，而是要从**架构层面**解决问题。Vercel 的 57 条规则按优先级分为 8 个类别：
 
 | 优先级          | 类别            | 关注点                | 典型收益         |
-| --------------- | --------------- | --------------------- | ---------------- |
+|--- | --- | --- | ---|
 | **CRITICAL**    | 消除瀑布流      | 避免串行的 async 操作 | 2-10× 提升       |
 | **CRITICAL**    | 打包优化        | 减少初始 bundle 大小  | TTI/LCP 显著改善 |
 | **HIGH**        | 服务端性能      | 优化数据获取和缓存    | 减少服务器负载   |
@@ -380,7 +380,7 @@ Vercel 的 57 条规则覆盖了从架构到微优化的所有场景，学会触
 > 更新时间：2026-01-25
 
 | 功能                   | 文件路径                                                                                                                                                 | 行号 |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+|--- | --- | ---|
 | React 最佳实践技能定义 | [`skills/react-best-practices/SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/SKILL.md)                     | 全文 |
 | 完整规则文档           | [`skills/react-best-practices/AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/AGENTS.md)                   | 全文 |
 | 57 条规则文件          | [`skills/react-best-practices/rules/*.md`](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices/rules)                      | -    |
@@ -391,7 +391,7 @@ Vercel 的 57 条规则覆盖了从架构到微优化的所有场景，学会触
 **关键文件（CRITICAL 级别规则示例）**：
 
 | 规则                   | 文件路径                                                                                                                                         | 说明             |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- |
+|--- | --- | ---|
 | Promise.all() 并行请求 | [`async-parallel.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/async-parallel.md)                 | 消除瀑布流       |
 | 动态导入大组件         | [`bundle-dynamic-imports.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/bundle-dynamic-imports.md) | 减少 Bundle 大小 |
 | Defer await            | [`async-defer-await.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/async-defer-await.md)           | 延迟执行异步操作 |

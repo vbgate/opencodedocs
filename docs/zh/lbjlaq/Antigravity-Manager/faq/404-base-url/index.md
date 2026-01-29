@@ -73,7 +73,7 @@ Invoke-WebRequest -UseBasicParsing http://127.0.0.1:8045/healthz | Select-Object
 Antigravity Tools 的反代路由是“全路径硬编码”的（见 `src-tauri/src/proxy/server.rs`），常用入口是：
 
 | 协议 | 路径 | 用途 |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI | `/v1/models` | 列出模型 |
 | OpenAI | `/v1/chat/completions` | 聊天补全 |
 | OpenAI | `/v1/responses` | Codex CLI 兼容 |
@@ -122,7 +122,7 @@ Invoke-WebRequest -UseBasicParsing http://127.0.0.1:8045/v1beta/models | Select-
 Base URL 的坑，本质是“你写的路径”和“客户端追加的路径”叠在一起了。
 
 | 你在用的东西 | Base URL 推荐写法 | 你在对齐的路由 |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI SDK（Python/Node 等） | `http://127.0.0.1:8045/v1` | `/v1/chat/completions`、`/v1/models` |
 | Claude Code CLI（Anthropic） | `http://127.0.0.1:8045` | `/v1/messages` |
 | Gemini SDK / Gemini 模式客户端 | `http://127.0.0.1:8045` | `/v1beta/models/*` |
@@ -170,7 +170,7 @@ http://127.0.0.1:8045/v1/chat/completions
 你可以用这张表快速对照你的“最终请求路径”是否可能命中 Antigravity Tools：
 
 | 你在日志里看到的路径 | 结论 |
-| --- | --- |
+|--- | ---|
 | 以 `/v1/` 开头（比如 `/v1/models`、`/v1/chat/completions`） | 走 OpenAI/Anthropic 兼容路由 |
 | 以 `/v1beta/` 开头（比如 `/v1beta/models/...`） | 走 Gemini 原生路由 |
 | 出现 `/v1/v1/` | Base URL 带了 `/v1`，客户端又拼了一次 |
@@ -207,7 +207,7 @@ http://127.0.0.1:8045/v1/chat/completions
 ## 本课小结
 
 | 现象 | 最常见原因 | 你应该怎么改 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 一直 404 | Base URL 拼接错 | 先用 curl 验证 `/v1/models`/`/v1beta/models` 不为 404 |
 | `/v1/v1/...` | `/v1` 重复 | OpenAI SDK 的 Base URL 保持到 `/v1` 结束 |
 | `/v1/chat/completions/responses` | 客户端叠路径 | 换 Gemini 协议或做路径重写（不推荐新手） |
@@ -233,7 +233,7 @@ http://127.0.0.1:8045/v1/chat/completions
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 反代路由定义（完整路由表） | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L193) | 120-193 |
 | `AxumServer::start()`（路由构建入口） | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L79-L216) | 79-216 |
 | `health_check_handler()` | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L266-L272) | 266-272 |

@@ -66,7 +66,7 @@ Die Protokolle von Proxy Monitor werden in einer SQLite-Datenbank im Datenverzei
 In einem Datensatz von Proxy Monitor (Backend-Struktur `ProxyRequestLog`) sind die folgenden Felder am nützlichsten:
 
 | Feld | Damit beantworten Sie welche Frage |
-| --- | --- |
+|--- | ---|
 | `status` | War diese Anfrage erfolgreich oder fehlgeschlagen (200-399 vs andere) |
 | `url` / `method` | Welchen Endpunkt haben Sie tatsächlich getroffen (z.B. `/v1/messages`, `/v1/chat/completions`) |
 | `protocol` | Welches Protokoll ist dies (OpenAI / Claude(Anthropic) / Gemini) |
@@ -191,7 +191,7 @@ Das Löschen entfernt alle Datensätze aus `proxy_logs.db`.
 ## Warnung vor Fallstricken
 
 | Szenario | Mögliches Verständnis (❌) | Tatsächliches Verhalten (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | "Pausiert" = überhaupt kein Monitoring-Overhead | Glauben, dass pausierte Anfragen nicht geparst werden | Pausieren beeinflusst nur, ob in Proxy Monitor-Protokolle geschrieben wird. Aber Anfrage/Antwort-Parsen (einschließlich SSE-Parsen von Streaming-Daten) findet weiterhin statt, nur die geparsten Daten werden nicht gespeichert. Token-Statistiken werden weiterhin aufgezeichnet (unabhängig davon, ob Monitoring aktiviert ist). |
 | Binäre/große Body-Protokolle sind leer | Glauben, dass Monitoring kaputt ist | Binäre Anfrage/Antwort wird als `[Binary Request Data]` / `[Binary Response Data]` angezeigt. Antwort-Body über 100 MB wird als `[Response too large (>100MB)]` gekennzeichnet; Anfrage-Body über das Limit wird nicht aufgezeichnet. |
 | Wollen Monitor verwenden, um "wer die Anfrage gesendet hat" zu finden | Glauben, dass Sie den Client-Prozess zurückverfolgen können | Monitor zeichnet HTTP-Ebenen-Informationen auf (Methode/Pfad/Modell/Konto), enthält aber nicht "aufrufenden Prozessnamen". Sie müssen die Client-eigenen Protokolle oder System-Netzwerkpaketerfassung kombinieren, um die Quelle zu lokalisieren. |
@@ -248,20 +248,20 @@ Da Proxy Monitor im Wesentlichen SQLite ist, können Sie auch `proxy_logs.db` al
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
-| Monitor-Seiteneinstieg (Mount ProxyMonitor) | [`src/pages/Monitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Monitor.tsx#L1-L12) | 1-12 |
-| Monitor-UI: Tabelle/Filter/Detail-Popup | [`src/components/proxy/ProxyMonitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/proxy/ProxyMonitor.tsx#L13-L713) | 13-713 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | UI: Konfiguration lesen und enable_logging synchronisieren | [`src/components/proxy/ProxyMonitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/proxy/ProxyMonitor.tsx#L174-L243) | 174-243 |
 | UI: Aufzeichnung umschalten (in config schreiben + set_proxy_monitor_enabled) | [`src/components/proxy/ProxyMonitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/proxy/ProxyMonitor.tsx#L254-L267) | 254-267 |
-| UI: Echtzeit-Ereignisüberwachung (proxy://request) und Deduplizierung | [`src/components/proxy/ProxyMonitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/proxy/ProxyMonitor.tsx#L273-L355) | 273-355 |
+|--- | --- | ---|
 | UI: Protokolle löschen (clear_proxy_logs) | [`src/components/proxy/ProxyMonitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/proxy/ProxyMonitor.tsx#L389-L403) | 389-403 |
 | UI: Einzeldetails laden (get_proxy_log_detail) | [`src/components/proxy/ProxyMonitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/proxy/ProxyMonitor.tsx#L505-L519) | 505-519 |
-| Monitoring-Middleware: Anfrage/Antwort abrufen, Token parsen, in monitor schreiben | [`src-tauri/src/proxy/middleware/monitor.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/monitor.rs#L13-L337) | 13-337 |
-| ProxyMonitor: enabled-Schalter, in DB schreiben, Ereignis senden | [`src-tauri/src/proxy/monitor.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/monitor.rs#L33-L194) | 33-194 |
-| Serverseitiges Mounten von Monitoring-Middleware (layer) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L183-L194) | 183-194 |
-| Tauri-Befehle: get/count/filter/detail/clear/export | [`src-tauri/src/commands/proxy.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/proxy.rs#L180-L314) | 180-314 |
-| SQLite: proxy_logs.db-Pfad, Tabellenstruktur und Filter-SQL | [`src-tauri/src/modules/proxy_db.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/proxy_db.rs#L1-L416) | 1-416 |
-| Monitoring-Design-Erklärung (kann von der Implementierung abweichen, Quellcode ist maßgeblich) | [`docs/proxy-monitor-technical.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy-monitor-technical.md#L1-L53) | 1-53 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Konstanten**:
 - `MAX_REQUEST_LOG_SIZE = 100 * 1024 * 1024`: Maximaler Anfrage-Body, den die Monitoring-Middleware lesen kann (über diesen Wert schlägt das Lesen fehl)

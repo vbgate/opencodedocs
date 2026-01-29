@@ -45,7 +45,7 @@ Quand vous :
 OpenAI a deux fenêtres de limitation de débit pour les appels API :
 
 | Type de fenêtre | Durée | Rôle |
-| --------------- | ----- | ---- |
+|--- | --- | ---|
 | **Fenêtre principale** (primary) | Renvoyée par le serveur OpenAI | Empêcher un grand nombre d'appels en peu de temps |
 | **Fenêtre secondaire** (secondary) | Renvoyée par le serveur OpenAI (peut ne pas exister) | Empêcher une utilisation excessive à long terme |
 
@@ -143,7 +143,7 @@ Account:        user@example.com (plus)
 Vérifiez votre compréhension :
 
 | Scénario | Ce que vous devriez voir |
-| -------- | ---------------------- |
+|--- | ---|
 | Fenêtre principale reste 60% | Barre de progression environ 60% pleine, affichage `60% remaining` |
 | Réinitialisation dans 2,5 heures | Affichage `Resets in: 2h 30m` |
 | Limite atteinte | Affichage `Limit reached!` |
@@ -211,7 +211,7 @@ mystatus consulte les quotas en appelant l'API officielle d'OpenAI :
 > Date de mise à jour :2026-01-23
 
 | Fonction | Chemin du fichier | Ligne |
-| ------- | ---------------- | ----- |
+|--- | --- | ---|
 | Entrée de consultation de quota OpenAI | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L207-L236) | 207-236 |
 | Appel API OpenAI | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L132-L155) | 132-155 |
 | Formatage de sortie | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L164-L194) | 164-194 |

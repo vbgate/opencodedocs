@@ -13,7 +13,7 @@ Ce chapitre explique en profondeur les fonctionnalités avancées d'Antigravity 
 ## Ce chapitre contient
 
 | Tutoriel | Description |
-|-----|------|
+|--- | ---|
 | [Configuration complète](./config/) | Champs complets de AppConfig/ProxyConfig, emplacement de persistance et sémantique de mise à jour à chaud |
 | [Sécurité et confidentialité](./security/) | `auth_mode`, `allow_lan_access` et conception de la ligne de base de sécurité |
 | [Planification haute disponibilité](./scheduling/) | Rotation, compte fixe, session sticky et mécanisme de nouvelle tentative en cas d'échec |
@@ -70,7 +70,7 @@ Résolvez les problèmes invisibles des sessions longues, rendez le client plus 
 **Sélection rapide** :
 
 | Votre scénario | Recommandé de lire d'abord |
-|---------|---------|
+|--- | ---|
 | Rotation multi-comptes instable | [Planification haute disponibilité](./scheduling/) |
 | Besoin de fixer un nom de modèle | [Routage de modèles](./model-router/) |
 | Quotas toujours épuisés | [Gouvernance des quotas](./quota/) |

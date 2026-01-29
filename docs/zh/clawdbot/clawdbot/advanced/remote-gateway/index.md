@@ -39,7 +39,7 @@ order: 300
 **远程 Gateway** 适合以下场景：
 
 | 场景 | 推荐方案 | 原因 |
-| ------ | -------- | ---- |
+|--- | --- | ---|
 | 笔记本经常休眠，需要 AI 常驻 | **Tailscale Serve + Linux VPS** | VPS 不休眠，通过 tailnet 安全访问 |
 | 家庭桌面运行 Gateway，笔记本电脑远程控制 | **SSH 隧道** 或 **Tailscale Serve** | 统一 Gateway 会话和配置 |
 | 需要从公网访问（临时测试） | **Tailscale Funnel + 密码** | 快速暴露，但需密码保护 |
@@ -97,7 +97,7 @@ flowchart TD
 ### 三个关键概念
 
 | 概念 | 解释 | 示例 |
-| ------ | ---- | ---- |
+|--- | --- | ---|
 | **Gateway 主机** | 运行 Gateway 服务的机器，拥有会话、认证、渠道和状态 | Linux VPS、家庭桌面 |
 | **客户端** | 连接到 Gateway 的工具（macOS App、CLI、WebChat） | 你的笔记本、手机 |
 | **设备节点** | 通过 Gateway WebSocket 连接的外设，执行设备本地操作 | iOS 设备、Android 设备、macOS 节点模式 |
@@ -107,7 +107,7 @@ flowchart TD
 这是最常见的混淆点：
 
 | 操作类型 | 在哪儿执行 | 原因 |
-| -------- | ---------- | ---- |
+|--- | --- | ---|
 | `exec` 工具 | **Gateway 主机** | Shell 命令在 Gateway 机器上跑 |
 | `browser` 工具 | **Gateway 主机**（或单独的浏览器控制服务器） | 浏览器在 Gateway 机器上启动 |
 | 节点操作（`camera.snap`、`system.run`）| **设备节点** | 需要访问设备本地资源 |
@@ -540,7 +540,7 @@ clawdbot health --url wss://your-funnel-url.ts.net --password your-secure-passwo
 完成上述任一方案后，验证以下几点：
 
 | 检查项 | 命令 | 预期结果 |
-| -------- | ------ | -------- |
+|--- | --- | ---|
 | Gateway 是否运行 | `clawdbot gateway status` | ✅ Running |
 | WebSocket 是否可访问 | `clawdbot health --url <url>` | ✅ Healthy |
 | Channels 是否连接 | `clawdbot channels status` | ✅ connected |
@@ -667,7 +667,7 @@ ssh -N -L 18790:127.0.0.1:18789 clawdbot-remote
 ### 配置对比
 
 | 方案 | 安全性 | 访问范围 | 配置复杂度 | 推荐场景 |
-| ---- | ------ | -------- | ---------- | -------- |
+|--- | --- | --- | --- | ---|
 | Tailscale Serve | ⭐⭐⭐⭐⭐ | Tailnet | 中 | **推荐**：Always-on Gateway |
 | SSH 隧道 | ⭐⭐⭐⭐ | SSH 连接可达 | 低 | 通用回退、家庭桌面远程控制 |
 | Tailscale Funnel | ⭐⭐ | 公网 | 低 | 临时测试、Demo |
@@ -702,7 +702,7 @@ ssh -N -L 18790:127.0.0.1:18789 clawdbot-remote
 > 更新时间：2026-01-27
 
 | 功能 | 文件路径 | 行号 |
-| ----- | -------- | ---- |
+|--- | --- | ---|
 | Gateway 远程配置 Schema | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 200-220 |
 | Gateway Tailscale 配置 Schema | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 150-180 |
 | Tailscale 集成 | [`src/infra/tailscale.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/tailscale.ts) | 1-100 |

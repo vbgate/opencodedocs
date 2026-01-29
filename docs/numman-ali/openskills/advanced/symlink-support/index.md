@@ -51,7 +51,7 @@ Actually, OpenSkills supports symbolic links, allowing you to implement git-base
 **Appropriate scenarios for symbolic links**:
 
 | Scenario | Symlink Needed? | Example |
-| ------- | -------------- | ------- |
+|--- | --- | ---|
 | **Local skill development** | ✅ Yes | Developing custom skills with frequent modifications and testing |
 | **Multi-project skill sharing** | ✅ Yes | Team sharing skill repository used across multiple projects |
 | **Git-based automatic updates** | ✅ Yes | After skill repository updates, all projects automatically get the latest version |
@@ -573,7 +573,7 @@ npx openskills sync
 > Last updated: 2026-01-24
 
 | Function            | File Path                                                                                              | Line Numbers |
-| --------------- | ----------------------------------------------------------------------------------------------------- | --------------- |
+|--- | --- | ---|
 | Symbolic link detection    | [`src/utils/skills.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skills.ts#L10-L25)      | 10-25   |
 | Skill search        | [`src/utils/skills.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skills.ts#L30-L64)      | 30-64   |
 | Single skill search    | [`src/utils/skills.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skills.ts#L69-L84)      | 69-84   |

@@ -196,7 +196,7 @@ Per README recommendations:
 Select relevant MCPs based on project type:
 
 | Project Type | Recommended | Optional |
-|-------------|-------------|----------|
+|--- | --- | ---|
 | Frontend Projects | Vercel, Magic | Filesystem, GitHub |
 | Backend Projects | Supabase, ClickHouse | GitHub, Railway |
 | Full-stack Projects | All | - |
@@ -343,7 +343,7 @@ The core of performance optimization is "using the right tool at the right time"
 > Updated: 2026-01-25
 
 | Function | File Path | Line Numbers |
-|----------|-----------|--------------|
+|--- | --- | ---|
 | Performance Optimization Rules | [`rules/performance.md`](https://github.com/affaan-m/everything-claude-code/blob/main/rules/performance.md) | 1-48 |
 | Strategic Compact Skill | [`skills/strategic-compact/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/strategic-compact/SKILL.md) | 1-64 |
 | Hooks Configuration | [`hooks/hooks.json`](https://github.com/affaan-m/everything-claude-code/blob/main/hooks/hooks.json) | 1-158 |

@@ -314,7 +314,7 @@ Plannotator 是一個本機執行的審查工具，透過視覺化 UI 提升計�
 > 更新時間：2026-01-24
 
 | 功能              | 檔案路徑                                                                                              | 行號    |
-| ----------------- | ----------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | CLI 入口（計畫審查） | [`apps/hook/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/hook/server/index.ts#L1-L50)         | 1-50    |
 | CLI 入口（程式碼審查） | [`apps/hook/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/hook/server/index.ts#L46-L84)         | 46-84   |
 | 計畫審查伺服器     | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts#L1-L200)            | 1-200   |

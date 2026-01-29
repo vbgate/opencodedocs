@@ -46,7 +46,7 @@ AI 助手的知識庫是靜態的，無法存取即時網路資訊：
 
 ::: tip 工具選擇指南
 | 場景 | 推薦工具 | 原因 |
-|------|----------|------|
+|--- | --- | ---|
 | 搜尋多個來源 | web_search | 一次查詢返回多個結果 |
 | 擷取單頁內容 | web_fetch | 取得完整文字，支援 markdown |
 | 動態網頁/需登入 | [browser](../tools-browser/) | 需要執行 JavaScript |
@@ -111,7 +111,7 @@ web_search 與 web_fetch 是**輕量級工具**，不執行 JavaScript。對於�
 兩個工具都內建快取以減少重複請求：
 
 | 工具 | 快取鍵 | 預設 TTL | 配置項 |
-|------|---------|----------|--------|
+|--- | --- | --- | ---|
 | web_search | `provider:query:count:country:search_lang:ui_lang:freshness` | 15 分鐘 | `tools.web.search.cacheTtlMinutes` |
 | web_fetch | `fetch:url:extractMode:maxChars` | 15 分鐘 | `tools.web.fetch.cacheTtlMinutes` |
 
@@ -128,7 +128,7 @@ web_search 與 web_fetch 是**輕量級工具**，不執行 JavaScript。對於�
 Clawdbot 支援兩種搜尋提供商：
 
 | 提供商 | 優勢 | 劣勢 | API Key |
-|--------|------|--------|---------|
+|--- | --- | --- | ---|
 | **Brave**（預設） | 快速、結構化結果、免費層 | 傳統搜尋結果 | `BRAVE_API_KEY` |
 | **Perplexity** | AI 合成答案、引用、即時 | 需要 Perplexity 或 OpenRouter 存取 | `OPENROUTER_API_KEY` 或 `PERPLEXITY_API_KEY` |
 
@@ -317,7 +317,7 @@ clawdbot gateway restart
 #### 4.3 選擇 Perplexity 模型
 
 | 模型 | 描述 | 適用場景 |
-|------|------|----------|
+|--- | --- | ---|
 | `perplexity/sonar` | 快速問答 + 網路搜尋 | 簡單查詢、快速查找 |
 | `perplexity/sonar-pro`（預設） | 多步推理 + 網路搜尋 | 複雜問題、需要推理 |
 | `perplexity/sonar-reasoning-pro` | 思維鏈分析 | 深度研究、需要推理過程 |
@@ -552,7 +552,7 @@ web_fetch 預設阻止內網 IP 以防止 SSRF 攻擊。如果確實需要存取
 > 更新時間：2026-01-27
 
 | 功能 | 檔案路徑 | 行號 |
-|------|----------|------|
+|--- | --- | ---|
 | web_search 工具定義 | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 409-483 |
 | web_fetch 工具定義 | [`src/agents/tools/web-fetch.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-fetch.ts) | 572-624 |
 | Brave Search API 呼叫 | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 309-407 |

@@ -93,7 +93,7 @@ Pour éviter les déclenchements consécutifs entraînant une boucle infinie, au
 Lorsque le compactage se déclenche, Supermemory injecte un System Prompt spécial (`[COMPACTION CONTEXT INJECTION]`) dans l'Agent, exigeant que le résumé contienne les 5 sections suivantes :
 
 | Section | Description | Objectif |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **1. User Requests** | Demande originale de l'utilisateur (conservée telle quelle) | Empêcher la dérive des besoins |
 | **2. Final Goal** | Objectif final à atteindre | Clarifier l'état final |
 | **3. Work Completed** | Travail accompli, fichiers modifiés | Éviter le travail en double |
@@ -228,7 +228,7 @@ Le compactage préemptif est le "secret de l'endurance" de Supermemory. Il trans
 > Date de mise à jour : 2026-01-23
 
 | Fonctionnalité | Chemin du fichier | Lignes |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Définition des constantes de seuil | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L11-L14) | 11-14 |
 | Génération du prompt de guidage | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L58-L98) | 58-98 |
 | Logique de détection de déclenchement | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L317-L358) | 317-358 |

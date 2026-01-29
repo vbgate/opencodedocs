@@ -75,7 +75,7 @@ If you're in `auth_mode=strict/all_except_health/auto(allow_lan_access=true)` mo
 Antigravity Tools' reverse proxy routes are "fully hardcoded" (see `src-tauri/src/proxy/server.rs`), with common entry points:
 
 | Protocol | Path | Purpose |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI | `/v1/models` | List models |
 | OpenAI | `/v1/chat/completions` | Chat completions |
 | OpenAI | `/v1/responses` | Codex CLI compatible |
@@ -124,7 +124,7 @@ Invoke-WebRequest -UseBasicParsing http://127.0.0.1:8045/v1beta/models | Select-
 The Base URL pitfall is essentially "the path you wrote" and "the path the client appends" stacking together.
 
 | What You're Using | Recommended Base URL | Route You're Aligning With |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI SDK (Python/Node, etc.) | `http://127.0.0.1:8045/v1` | `/v1/chat/completions`, `/v1/models` |
 | Claude Code CLI (Anthropic) | `http://127.0.0.1:8045` | `/v1/messages` |
 | Gemini SDK / Gemini Mode Clients | `http://127.0.0.1:8045` | `/v1beta/models/*` |
@@ -172,7 +172,7 @@ http://127.0.0.1:8045/v1/chat/completions
 You can use this table to quickly compare whether your "final request path" might hit Antigravity Tools:
 
 | Path You See in Logs | Conclusion |
-| --- | --- |
+|--- | ---|
 | Starts with `/v1/` (like `/v1/models`, `/v1/chat/completions`) | Uses OpenAI/Anthropic compatible routes |
 | Starts with `/v1beta/` (like `/v1beta/models/...`) | Uses Gemini native routes |
 | Appears `/v1/v1/` | Base URL includes `/v1`, client concatenated again |
@@ -209,7 +209,7 @@ You can use this table to quickly compare whether your "final request path" migh
 ## Lesson Summary
 
 | Phenomenon | Most Common Cause | How to Fix |
-| --- | --- | --- |
+|--- | --- | ---|
 | Always 404 | Base URL concatenated incorrectly | First verify with curl that `/v1/models`/`/v1beta/models` aren't 404 |
 | `/v1/v1/...` | `/v1` duplicated | Keep OpenAI SDK's Base URL ending at `/v1` |
 | `/v1/chat/completions/responses` | Client stacked paths | Switch to Gemini protocol or do path rewriting (not recommended for beginners) |
@@ -235,7 +235,7 @@ You can use this table to quickly compare whether your "final request path" migh
 > Updated: 2026-01-23
 
 | Feature | File Path | Line Numbers |
-| --- | --- | --- |
+|--- | --- | ---|
 | Reverse proxy route definitions (complete routing table) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L193) | 120-193 |
 | `AxumServer::start()` (route building entry) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L79-L216) | 79-216 |
 | `health_check_handler()` | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L266-L272) | 266-272 |

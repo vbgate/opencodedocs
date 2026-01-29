@@ -64,7 +64,7 @@ curl -i http://127.0.0.1:8045/healthz
 `auto` - это не "независимая стратегия", она рассчитывает реальный режим выполнения в зависимости от `allow_lan_access`.
 
 | `proxy.auth_mode` | Дополнительные условия | Фактическое эффективное значение (effective mode) |
-| --- | --- | --- |
+|--- | --- | ---|
 | `off` | - | `off` |
 | `strict` | - | `strict` |
 | `all_except_health` | - | `all_except_health` |
@@ -119,7 +119,7 @@ curl -i http://127.0.0.1:8045/v1/models \
 ## Распространенные ошибки (все реально возникают в исходном коде)
 
 | Симптом | Реальная причина | Как изменить |
-| --- | --- | --- |
+|--- | --- | ---|
 | `auth_mode=auto`, но локальный вызов все равно 401 | `allow_lan_access=true` вызывает `auto` действовать как `all_except_health` | Отключите `allow_lan_access` или попросите клиента принести ключ |
 | Вы думаете "я явно принес x-api-key", но все равно 401 | Одновременно принес неправильный `Authorization`, middleware использует его приоритетно | Удалите лишние заголовки, оставьте только тот, который вы уверены правильный |
 | `Authorization: Bearer<key>` все равно 401 | После `Bearer` нет пробела, нельзя отделить по префиксу `Bearer ` | Измените на `Authorization: Bearer <key>` |
@@ -150,7 +150,7 @@ curl -i http://127.0.0.1:8045/v1/models \
 > Обновлено: 2026-01-23
 
 | Функция        | Путь к файлу                                                                                             | Строки    |
-| ----------- | ---------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Перечисление ProxyAuthMode | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L5-L18) | 5-18 |
 | ProxyConfig: allow_lan_access/auth_mode/api_key и значения по умолчанию | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L258) | 174-258 |
 | Разбор режима auto (effective_auth_mode) | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L1-L30) | 1-30 |

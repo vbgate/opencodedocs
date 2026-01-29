@@ -46,7 +46,7 @@ Antigravity **is not** Vertex AI's direct model API. It is an internal gateway t
 **Core Features**:
 
 | Feature | Description |
-|---------|-------------|
+|--- | ---|
 | **Single API Format** | All models use Gemini-style `contents` array |
 | **Project-Level Access** | Requires valid Google Cloud Project ID |
 | **Internal Routing** | Automatically routes to correct backend (Vertex AI or Gemini API) |
@@ -60,7 +60,7 @@ Antigravity **is not** Vertex AI's direct model API. It is an internal gateway t
 ### API Environments
 
 | Environment | URL | Status | Purpose |
-|-------------|-----|--------|---------|
+|--- | --- | --- | ---|
 | **Daily (Sandbox)** | `https://daily-cloudcode-pa.sandbox.googleapis.com` | ✅ Active | Primary endpoint (consistent with CLIProxy) |
 | **Production** | `https://cloudcode-pa.googleapis.com` | ✅ Active | Gemini CLI models, loadCodeAssist |
 | **Autopush (Sandbox)** | `https://autopush-cloudcode-pa.sandbox.googleapis.com` | ❌ Unavailable | Deprecated |
@@ -70,7 +70,7 @@ Antigravity **is not** Vertex AI's direct model API. It is an internal gateway t
 ### API Paths
 
 | Action | Path | Description |
-|--------|------|-------------|
+|--- | --- | ---|
 | Generate Content | `/v1internal:generateContent` | Non-streaming request |
 | Streaming Generation | `/v1internal:streamGenerateContent?alt=sse` | Streaming request (SSE) |
 | Load Code Assistant | `/v1internal:loadCodeAssist` | Project discovery (auto-get Project ID) |
@@ -200,7 +200,7 @@ Must use **Gemini-style format**. Anthropic-style `messages` array is **not supp
 ```
 
 | Field | Type | Description |
-|-------|------|-------------|
+|--- | --- | ---|
 | `maxOutputTokens` | number | Maximum response token count |
 | `temperature` | number | Randomness (0.0 - 2.0) |
 | `topP` | number | nucleus sampling threshold |
@@ -260,7 +260,7 @@ System Instruction **must be an object containing `parts`**, **cannot** be a pla
 #### Function Naming Rules
 
 | Rule | Description |
-|------|-------------|
+|--- | ---|
 | First Character | Must be letter (a-z, A-Z) or underscore (_) |
 | Allowed Characters | `a-zA-Z0-9`, underscore (_), dot (.), colon (:), hyphen (-) |
 | Max Length | 64 characters |
@@ -280,7 +280,7 @@ System Instruction **must be an object containing `parts`**, **cannot** be a pla
 ### Supported Features
 
 | Feature | Status | Description |
-|---------|--------|-------------|
+|--- | --- | ---|
 | `type` | ✅ Supported | `object`, `string`, `number`, `integer`, `boolean`, `array` |
 | `properties` | ✅ Supported | Object properties |
 | `required` | ✅ Supported | Required field array |
@@ -360,7 +360,7 @@ data: {"response": {"candidates": [{"content": {"role": "model", "parts": [{"tex
 ### Response Field Descriptions
 
 | Field | Description |
-|-------|-------------|
+|--- | ---|
 | `response.candidates` | Response candidate array |
 | `response.candidates[].content.role` | Always `"model"` |
 | `response.candidates[].content.parts` | Content parts array |
@@ -376,7 +376,7 @@ data: {"response": {"candidates": [{"content": {"role": "model", "parts": [{"tex
 ### Response ID Format
 
 | Model Type | Format | Example |
-|-------------|--------|---------|
+|--- | --- | ---|
 | Claude | `msg_vrtx_...` | `msg_vrtx_01UDKZG8PWPj9mjajje8d7u7` |
 | Gemini | Base64-style | `ypM9abPqFKWl0-kPvamgqQw` |
 | GPT-OSS | Base64-style | `y5M9aZaSKq6z2roPoJ7pEA` |
@@ -508,7 +508,7 @@ Claude thinking models may include `thought: true` parts:
 ### Common Error Codes
 
 | Code | Status | Description |
-|------|--------|-------------|
+|--- | --- | ---|
 | 400 | `INVALID_ARGUMENT` | Invalid request format |
 | 401 | `UNAUTHENTICATED` | Invalid or expired token |
 | 403 | `PERMISSION_DENIED` | No access to resource |
@@ -542,7 +542,7 @@ Claude thinking models may include `thought: true` parts:
 The following Anthropic/Vertex AI features are **not supported**:
 
 | Feature | Error |
-|---------|-------|
+|--- | ---|
 | `anthropic_version` | Unknown field |
 | `messages` array | Unknown field (must use `contents`) |
 | `max_tokens` | Unknown field (must use `maxOutputTokens`) |
@@ -591,7 +591,7 @@ The following Anthropic/Vertex AI features are **not supported**:
 ## Response Headers
 
 | Header | Description |
-|--------|-------------|
+|--- | ---|
 | `x-cloudaicompanion-trace-id` | Debug trace ID |
 | `server-timing` | Request duration |
 
@@ -600,7 +600,7 @@ The following Anthropic/Vertex AI features are **not supported**:
 ## Antigravity vs Vertex AI Anthropic Comparison
 
 | Feature | Antigravity | Vertex AI Anthropic |
-|---------|-------------|---------------------|
+|--- | --- | ---|
 | Endpoint | `cloudcode-pa.googleapis.com` | `aiplatform.googleapis.com` |
 | Request Format | Gemini-style `contents` | Anthropic `messages` |
 | `anthropic_version` | Not used | Required |
@@ -649,7 +649,7 @@ If you need to return to the getting started phase, you can start over from [Wha
 > Last updated: 2026-01-23
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | API Endpoint Constants | [`src/constants.ts:32-43`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/constants.ts#L32-L43) | 32-43 |
 | Antigravity Headers | [`src/constants.ts:73-77`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/constants.ts#L73-L77) | 73-77 |
 | Gemini CLI Headers | [`src/constants.ts:79-83`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/constants.ts#L79-L83) | 79-83 |

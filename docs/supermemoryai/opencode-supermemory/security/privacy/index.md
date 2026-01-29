@@ -97,7 +97,7 @@ If the Agent tells you "The password is [REDACTED]", it means the redaction mech
 > Updated: 2026-01-23
 
 | Feature | File Path | Line Number |
-| --- | --- | --- |
+|--- | --- | ---|
 | Privacy Redaction Logic | [`src/services/privacy.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/privacy.ts#L1-L13) | 1-13 |
 | API Key Loading | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L90) | 90 |
 | Plugin Call Redaction | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L282) | 282 |

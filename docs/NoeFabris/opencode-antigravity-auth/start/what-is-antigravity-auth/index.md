@@ -41,7 +41,7 @@ It doesn't proxy all requests but **intercepts and transforms** your model call 
 ### Supported Models
 
 | Model Series | Available Models | Features |
-|-------------|------------------|----------|
+|--- | --- | ---|
 | **Claude** | Opus 4.5, Sonnet 4.5 | Supports extended thinking mode |
 | **Gemini 3** | Pro, Flash | Google Search integration, extended thinking |
 

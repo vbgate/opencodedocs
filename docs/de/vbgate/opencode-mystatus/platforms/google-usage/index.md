@@ -40,7 +40,7 @@ Wenn Sie:
 mystatus zeigt die Kredite der folgenden 4 Modelle an:
 
 | Anzeigename | API-Key (Haupt/Reserve) | Beschreibung |
-| --------- | ----------------- | ---- |
+|--- | --- | ---|
 | G3 Pro | `gemini-3-pro-high` / `gemini-3-pro-low` | Gemini 3 Pro Hochleistungs-Version |
 | G3 Image | `gemini-3-pro-image` | Gemini 3 Pro-Bildgenerierung |
 | G3 Flash | `gemini-3-flash` | Gemini 3 Flash-Schnellversion |
@@ -148,7 +148,7 @@ G3 Image   2h 30m     ██████████░░░░░░░░ 50%
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| ---------- | ----------------------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Modellkonfiguration | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts#L69-L78) | 69-78 |
 | Kontoabfragelogik | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts#L304-L370) | 304-370 |
 

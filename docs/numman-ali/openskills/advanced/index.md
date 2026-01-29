@@ -22,29 +22,29 @@ Before studying this section, please ensure you have completed:
 ### Multi-Agent and Output Configuration
 
 | Tutorial | Description |
-|----------|-------------|
-| [Universal Mode](./universal-mode/) | Use the `--universal` flag to unify skill management in multi-agent environments, avoiding conflicts between Claude Code, Cursor, Windsurf, and other tools |
-| [Custom Output Path](./custom-output-path/) | Use the `-o/--output` flag to sync skills to any `.md` file, configuring independent skill lists for different tools |
+|--- | ---|
+|--- | ---|
+|--- | ---|
 
 ### Skill Development
 
 | Tutorial | Description |
-|----------|-------------|
-| [Symbolic Link Support](./symlink-support/) | Implement git-based skill updates and local development workflows through symbolic links, sharing skills across multiple projects |
+|--- | ---|
+|--- | ---|
 | [Create Custom Skills](./create-skills/) | Create SKILL.md skill files from scratch, mastering YAML frontmatter and directory structure specifications |
 | [Skill Structure Explained](./skill-structure/) | Deep dive into the complete field specifications of SKILL.md, and the design and performance optimization of references/scripts/assets/ resources |
 
 ### Automation and Security
 
 | Tutorial | Description |
-|----------|-------------|
-| [CI/CD Integration](./ci-integration/) | Use the `-y/--yes` flag to implement non-interactive skill installation in GitHub Actions, GitLab CI, and other environments |
+|--- | ---|
+|--- | ---|
 | [Security](./security/) | Learn about the three-layer protection mechanism including path traversal prevention, symbolic link security handling, and YAML parsing security |
 
 ### Comprehensive Guides
 
 | Tutorial | Description |
-|----------|-------------|
+|--- | ---|
 | [Best Practices](./best-practices/) | Experience summary on project configuration, skill management, and team collaboration to help you use OpenSkills efficiently |
 
 ## Recommended Learning Paths

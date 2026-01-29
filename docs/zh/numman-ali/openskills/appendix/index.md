@@ -13,7 +13,7 @@ order: 5
 ## 本章内容
 
 | 文档 | 说明 |
-|------|------|
+|--- | ---|
 | [CLI API 参考](./cli-api/) | 所有命令、选项、参数的完整文档，附带使用示例 |
 | [AGENTS.md 格式规范](./agents-md-format/) | sync 命令生成的 AGENTS.md 文件结构，包括 XML 标签和技能列表格式 |
 | [文件结构](./file-structure/) | OpenSkills 生成的目录和文件说明，帮你理解 `.openskills/` 里都有什么 |

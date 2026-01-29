@@ -116,7 +116,7 @@ Use `disabledMcpServers` in project configuration to disable unnecessary MCPs.
 Everything Claude Code provides **15 pre-configured MCP servers**:
 
 | MCP Server | Type | Needs Key | Purpose |
-|-----------|------|----------|---------|
+|--- | --- | --- | ---|
 | **github** | npx | ✅ GitHub PAT | PR, Issues, Repos operations |
 | **firecrawl** | npx | ✅ API Key | Web scraping and crawling |
 | **supabase** | npx | ✅ Project Ref | Database operations |
@@ -157,7 +157,7 @@ Select MCP servers according to your project needs.
 **Example scenarios**:
 
 | Project Type | Recommended MCPs |
-|-------------|-----------------|
+|--- | ---|
 | **Full-stack app** (GitHub + Supabase + Vercel) | github, supabase, vercel, memory, context7 |
 | **Frontend project** (Vercel + documentation queries) | vercel, cloudflare-docs, context7, magic |
 | **Data project** (ClickHouse + analytics) | clickhouse, sequential-thinking, memory |
@@ -239,7 +239,7 @@ For MCP servers requiring API keys, replace `YOUR_*_HERE` placeholders:
 **Other MCPs requiring keys**:
 
 | MCP | Key Name | Get From |
-|-----|----------|----------|
+|--- | --- | ---|
 | **firecrawl** | FIRECRAWL_API_KEY | https://www.firecrawl.dev/ |
 | **supabase** | --project-ref | https://supabase.com/dashboard |
 
@@ -417,10 +417,10 @@ This lesson covered MCP server configuration:
 > Updated: 2026-01-25
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | MCP configuration template | [`mcp-configs/mcp-servers.json`](https://github.com/affaan-m/everything-claude-code/blob/main/mcp-configs/mcp-servers.json) | 1-92 |
 | README important notes | [`README.md`](https://github.com/affaan-m/everything-claude-code/blob/main/README.md) | 348-369 |
-| Installation guide - MCP configuration | [`README.md`](https://github.com/affaan-m/everything-claude-code/blob/main/README.md) | 236-240 |
+|--- | --- | ---|
 
 **Key configurations**:
 - 15 MCP servers (GitHub, Firecrawl, Supabase, Memory, Sequential-thinking, Vercel, Railway, Cloudflare series, ClickHouse, Context7, Magic, Filesystem)

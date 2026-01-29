@@ -40,7 +40,7 @@ order: 5
 使用 `update` 命令的典型场景：
 
 | 场景 | 操作 |
-| ---- | ---- |
+|--- | ---|
 | 发现技能有更新 | 执行 `openskills update` |
 | 只更新几个技能 | `openskills update skill1,skill2` |
 | 本地开发的技能测试 | 从本地路径更新 |
@@ -73,7 +73,7 @@ OpenSkills 的更新机制很简单：
 **三种安装来源的更新方式**：
 
 | 来源类型 | 更新方式 | 适用场景 |
-| -------- | -------- | -------- |
+|--- | --- | ---|
 | **本地路径** | 直接从本地路径复制 | 开发自己的技能 |
 | **git 仓库** | 克隆最新代码到临时目录 | 从 GitHub/GitLab 安装 |
 | **GitHub shorthand** | 转换为完整 URL 后克隆 | 从 GitHub 官方仓库安装 |
@@ -172,7 +172,7 @@ Clone failed (1): git-workflow
 **对应解决方法**：
 
 | 错误信息 | 原因 | 解决方法 |
-| -------- | ---- | -------- |
+|--- | --- | ---|
 | `no source metadata` | 旧版本安装 | 重新安装：`openskills install <source>` |
 | `local source missing` | 本地路径被删除 | 恢复本地路径或重新安装 |
 | `SKILL.md missing at local source` | 本地文件被删除 | 恢复 SKILL.md 文件 |
@@ -193,7 +193,7 @@ Clone failed (1): git-workflow
 ### ❌ 常见错误
 
 | 错误 | 正确做法 |
-| ---- | -------- |
+|--- | ---|
 | 看到跳过就不管了 | 根据提示重新安装或修复问题 |
 | 每次都删除再安装 | 使用 `update` 命令更高效 |
 | 不知道技能从哪装的 | 用 `openskills list` 查看来源 |
@@ -250,7 +250,7 @@ openskills update
 > 更新时间：2026-01-24
 
 | 功能              | 文件路径                                                                                            | 行号    |
-| ----------------- | --------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 更新技能主逻辑    | [`src/commands/update.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/update.ts#L14-L150) | 14-150  |
 | 本地路径更新      | [`src/commands/update.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/update.ts#L64-L82) | 64-82   |
 | Git 仓库更新      | [`src/commands/update.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/update.ts#L85-L125) | 85-125  |

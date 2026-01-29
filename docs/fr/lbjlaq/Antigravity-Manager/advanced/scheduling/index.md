@@ -249,7 +249,7 @@ Si le compte fixe est marqué comme limité, ou touché par la protection de quo
 > Date de mise à jour : 2026-01-23
 
 | Fonction | Chemin du fichier | Ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Mode de planification et structure de configuration (StickySessionConfig) | [`src-tauri/src/proxy/sticky_config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/sticky_config.rs#L1-L36) | 1-36 |
 | Génération session fingerprint (Claude/OpenAI/Gemini) | [`src-tauri/src/proxy/session_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/session_manager.rs#L1-L159) | 1-159 |
 | TokenManager : champ mode compte fixe et initialisation | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L27-L50) | 27-50 |

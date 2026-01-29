@@ -58,7 +58,7 @@ OpenCode Agent Skills 插件不仅仅是存储技能，还会：
 **示例**：
 
 | ✅ 正确示例 | ❌ 错误示例 | 原因 |
-| ---------- | ---------- | ---- |
+|--- | --- | ---|
 | `git-helper` | `GitHelper` | 包含大写字母 |
 | `docker-build` | `docker_build` | 使用了下划线 |
 | `code-review` | `code review` | 包含空格 |
@@ -106,7 +106,7 @@ description: Git 常用操作助手
 ### 好的描述 vs 差的描述
 
 | ✅ 好的描述 | ❌ 差的描述 | 原因 |
-| ---------- | ---------- | ---- |
+|--- | --- | ---|
 | "自动化 Git 分支管理和提交流程，支持自动生成 commit 信息" | "Git 工具" | 太模糊，缺乏具体功能 |
 | "为 Node.js 项目生成类型安全的 API 客户端代码" | "一个有用的工具" | 未说明适用场景 |
 | "将 PDF 翻译成中文并保留原始排版格式" | "翻译工具" | 未说明特殊能力 |
@@ -183,7 +183,7 @@ const skipDirs = new Set(['node_modules', '__pycache__', '.git', '.venv', 'venv'
 ### 推荐的目录命名
 
 | 用途 | 推荐目录名 | 说明 |
-| ---- | ---------- | ---- |
+|--- | --- | ---|
 | 脚本文件 | `tools/` 或 `scripts/` | 存放可执行脚本 |
 | 文档 | `docs/` 或 `examples/` | 存放辅助文档 |
 | 配置 | `config/` | 存放配置文件 |
@@ -471,7 +471,7 @@ description: 自动化代码审查工具，检查代码质量、潜在 Bug、安
 > 更新时间：2026-01-24
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 技能名称验证 | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L106-L108) | 106-108 |
 | 技能描述验证 | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L109-L110) | 109-110 |
 | Frontmatter Schema 定义 | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L105-L114) | 105-114 |

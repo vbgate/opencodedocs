@@ -38,7 +38,7 @@ When encountering issues, you might:
 Debug logging is suitable for the following scenarios:
 
 | Scenario | Needed | Why |
-| -------- | ------ | --- |
+|--- | --- | ---|
 | Troubleshoot 429 rate limiting | ✅ Yes | See which account and model is rate limited |
 | Troubleshoot authentication failures | ✅ Yes | Check token refresh, OAuth flow |
 | Troubleshoot request transformation issues | ✅ Yes | Compare original and transformed requests |
@@ -69,7 +69,7 @@ How the debug logging system works:
 **Log Content Overview**:
 
 | Log Type | Tag | Content Example |
-| -------- | --- | --------------- |
+|--- | --- | ---|
 | Request Tracking | `Antigravity Debug ANTIGRAVITY-1` | URL, headers, body preview |
 | Response Tracking | `Antigravity Debug ANTIGRAVITY-1` | Status code, duration, response body |
 | Account Context | `[Account]` | Selected account, account index, model family |
@@ -445,7 +445,7 @@ After completing the above steps, you should be able to:
 > Last updated: 2026-01-23
 
 | Feature      | File Path                                                                                    | Lines  |
-| ------------ | ------------------------------------------------------------------------------------------- | ------ |
+|--- | --- | ---|
 | Debug Module | [`src/plugin/debug.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/debug.ts) | Full   |
 | Debug Init   | [`src/plugin/debug.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/debug.ts#L98-L118) | 98-118 |
 | Request Tracking | [`src/plugin/debug.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/debug.ts#L189-L212) | 189-212 |
@@ -457,7 +457,7 @@ After completing the above steps, you should be able to:
 **Key Constants**:
 
 | Constant Name | Value | Description |
-| ------------- | ----- | ----------- |
+|--- | --- | ---|
 | `MAX_BODY_PREVIEW_CHARS` | 12000 | Body preview length for basic level |
 | `MAX_BODY_VERBOSE_CHARS` | 50000 | Body preview length for verbose level |
 | `DEBUG_MESSAGE_PREFIX` | `"[opencode-antigravity-auth debug]"` | Debug log prefix |
@@ -477,14 +477,14 @@ After completing the above steps, you should be able to:
 **Configuration Options** (from schema.ts):
 
 | Option | Type | Default | Description |
-| ------ | ---- | ------- | ----------- |
+|--- | --- | --- | ---|
 | `debug` | boolean | `false` | Enable debug logging |
 | `log_dir` | string? | undefined | Custom log directory |
 
 **Environment Variables**:
 
 | Environment Variable | Value | Description |
-| -------------------- | ----- | ----------- |
+|--- | --- | ---|
 | `OPENCODE_ANTIGRAVITY_DEBUG` | "0"/"1"/"2"/"true"/"verbose" | Override debug config, control log level |
 | `OPENCODE_ANTIGRAVITY_LOG_DIR` | string | Override log_dir config, specify log directory |
 

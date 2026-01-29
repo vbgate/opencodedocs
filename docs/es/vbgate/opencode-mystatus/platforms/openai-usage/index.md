@@ -46,7 +46,7 @@ Cuando tú:
 OpenAI tiene dos ventanas de limitación para las llamadas a la API:
 
 | Tipo de ventana | Duración | Función |
-|---------|------|------|
+|--- | --- | ---|
 | **Ventana principal** (primary) | Devuelta por el servidor OpenAI | Evitar llamadas masivas en poco tiempo |
 | **Ventana secundaria** (secondary) | Devuelta por el servidor OpenAI (puede no existir) | Evitar uso excesivo a largo plazo |
 
@@ -144,7 +144,7 @@ Account:        user@example.com (plus)
 Verifica que has entendido:
 
 | Escenario | Lo que deberías ver |
-|------|----------|
+|--- | ---|
 | Ventana principal con 60% restante | Barra de progreso aproximadamente 60% llena, muestra `60% remaining` |
 | Se restablecerá en 2.5 horas | Muestra `Resets in: 2h 30m` |
 | Límite alcanzado | Muestra `Limit reached!` |
@@ -212,7 +212,7 @@ mystatus consulta la cuota llamando a la API oficial de OpenAI:
 > Fecha de actualización: 2026-01-23
 
 | Función | Ruta de archivo | Línea |
-| ----------------------- | --------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Entrada de consulta de cuota de OpenAI | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L207-L236) | 207-236 |
 | Llamada a API de OpenAI | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L132-L155) | 132-155 |
 | Formato de salida | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L164-L194) | 164-194 |

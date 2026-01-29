@@ -43,7 +43,7 @@ order: 80
 使用后台任务系统可以提升效率的场景：
 
 | 场景 | 示例 | 价值 |
-|-----|------|------|
+|--- | --- | ---|
 | **并行研究** | Explore 查找实现 + Librarian 查文档 | 3 倍速度完成研究 |
 | **多专家审查** | Oracle 审查架构 + Momus 验证计划 | 快速获得多角度反馈 |
 | **异步任务** | 提交 Git commit 时同时进行代码审查 | 不阻塞主流程 |
@@ -172,7 +172,7 @@ Status: pending
 ## Task Status
 
 | Field | Value |
-|-------|-------|
+|--- | ---|
 | Task ID | `bg_abc123` |
 | Description | Explore: 查找认证实现 |
 | Agent | explore |
@@ -266,7 +266,7 @@ Session ID: sess_xyz789
 Cancelled 3 background task(s):
 
 | Task ID | Description | Status | Session ID |
-|---------|-------------|--------|------------|
+|--- | --- | --- | ---|
 | `bg_abc123` | Explore: 查找认证实现 | running | `sess_xyz789` |
 | `bg_def456` | Librarian: 研究最佳实践 | running | `sess_uvwx012` |
 | `bg_ghi789` | Oracle: 审查架构设计 | pending | (not started) |
@@ -359,7 +359,7 @@ Continuable sessions:
 > 更新时间：2026-01-26
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | 后台任务管理器 | [`src/features/background-agent/manager.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/background-agent/manager.ts) | 1-1378 |
 | 并发控制 | [`src/features/background-agent/concurrency.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/background-agent/concurrency.ts) | 1-138 |
 | delegate_task 工具 | [`src/tools/background-task/tools.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/background-task/tools.ts) | 51-119 |

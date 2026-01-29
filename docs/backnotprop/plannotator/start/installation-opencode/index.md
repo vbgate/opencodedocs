@@ -1,8 +1,8 @@
 ---
-title: "Installation: OpenCode Plugin | Plannotator"
-subtitle: "Installation: OpenCode Plugin"
-sidebarTitle: "Install"
-description: "Learn how to install Plannotator plugin in OpenCode. Add plugin via opencode.json, run installation script to get slash commands, configure environment variables (remote mode, port, browser, etc.), and verify installation success."
+title: "OpenCode Plugin Installation | Plannotator"
+sidebarTitle: "OpenCode Install"
+subtitle: "Install the OpenCode Plugin"
+description: "Learn how to install the Plannotator plugin in OpenCode. Configure opencode.json, run installation script to get slash commands, set up environment variables for remote mode, and verify plugin is working."
 tags:
   - "Installation"
   - "Configuration"
@@ -12,40 +12,40 @@ prerequisite:
 order: 3
 ---
 
-# Install OpenCode Plugin
+# Install the OpenCode Plugin
 
 ## What You'll Learn
 
-- Install Plannotator plugin in OpenCode
-- Configure `submit_plan` tool and `/plannotator-review` command
+- Install the Plannotator plugin in OpenCode
+- Configure the `submit_plan` tool and `/plannotator-review` command
 - Set up environment variables (remote mode, port, browser, etc.)
-- Verify plugin installation success
+- Verify that the plugin installation was successful
 
-## The Problem
+## Your Current Struggle
 
-When using AI Agents in OpenCode, plan review requires reading plain text plans in the terminal, making it difficult to provide precise feedback. You want a visual interface to annotate plans, add comments, and automatically send structured feedback back to the Agent.
+When using AI Agent in OpenCode, plan reviews require reading plain text in the terminal, making precise feedback difficult. You want a visual interface to annotate plans, add comments, and automatically send structured feedback back to the Agent.
 
 ## When to Use This
 
-**Required before using Plannotator**: If you're developing in an OpenCode environment and want an interactive plan review experience.
+**Required before using Plannotator**: If you're developing in the OpenCode environment and want an interactive plan review experience.
 
-## 🎒 Prerequisites
+## 🎒 Before You Start
 
 - [ ] [OpenCode](https://opencode.ai/) installed
 - [ ] Basic understanding of `opencode.json` configuration (OpenCode plugin system)
 
 ::: warning Prerequisites
-If you're not familiar with OpenCode basics, we recommend reading the [OpenCode official documentation](https://opencode.ai/docs) first.
+If you're unfamiliar with OpenCode basics, we recommend reading the [OpenCode official documentation](https://opencode.ai/docs) first.
 :::
 
 ## Core Concepts
 
 Plannotator provides two core features for OpenCode:
 
-1. **`submit_plan` tool** - Called when Agent completes plan, opens browser for interactive review
+1. **`submit_plan` tool** - Called when Agent completes the plan, opens browser for interactive review
 2. **`/plannotator-review` command** - Manually triggers Git diff code review
 
-Installation process involves two steps:
+Installation involves two steps:
 1. Add plugin configuration in `opencode.json` (enable `submit_plan` tool)
 2. Run installation script (get `/plannotator-review` command)
 
@@ -72,7 +72,7 @@ What you should see: OpenCode will display a message "Loading plugin: @plannotat
 ### Step 2: Restart OpenCode
 
 **Why**
-Plugin configuration changes require restart to take effect.
+Plugin configuration changes require a restart to take effect.
 
 What you should see: OpenCode reloads all plugins.
 
@@ -94,8 +94,8 @@ irm https://plannotator.ai/install.ps1 | iex
 
 **Why**
 This script will:
-1. Download `plannotator` CLI tool to your system
-2. Install `/plannotator-review` slash command to OpenCode
+1. Download the `plannotator` CLI tool to your system
+2. Install the `/plannotator-review` slash command to OpenCode
 3. Clear any cached plugin versions
 
 What you should see: Installation success message, like "Plannotator installed successfully!"
@@ -111,7 +111,7 @@ Check if the plugin works properly in OpenCode:
 - If plugin is working, Agent should be able to see and call this tool
 
 **Check if `/plannotator-review` command is available**:
-- Type `/plannotator-review` in input box
+- Type `/plannotator-review` in the input box
 - If plugin is working, you should see command suggestions
 
 What you should see: Both features work normally without error messages.
@@ -125,7 +125,7 @@ Plannotator supports the following environment variables, configure according to
 ::: details Environment Variable Reference
 
 | Environment Variable | Purpose | Default | Example |
-| -------------------- | ------- | ------- | ------- |
+|--- | --- | --- | ---|
 | `PLANNOTATOR_REMOTE` | Enable remote mode (devcontainer/SSH) | Not set | `export PLANNOTATOR_REMOTE=1` |
 | `PLANNOTATOR_PORT` | Fixed port (required for remote mode) | Random local, 19432 remote | `export PLANNOTATOR_PORT=9999` |
 | `PLANNOTATOR_BROWSER` | Custom browser path | System default | `export PLANNOTATOR_BROWSER="/Applications/Google Chrome.app"` |
@@ -148,10 +148,10 @@ In `.devcontainer/devcontainer.json`:
 ```
 
 **Why**
-- Remote mode: When running OpenCode in container or remote machine, use fixed port and automatically open browser
-- Port forwarding: Allow host machine to access services inside container
+- Remote mode: When running OpenCode in a container or remote machine, use a fixed port and automatically open browser
+- Port forwarding: Allow host machine to access services inside the container
 
-What you should see: When Agent calls `submit_plan`, console will display server URL (instead of automatically opening browser), for example:
+What you should see: When Agent calls `submit_plan`, console will display the server URL (instead of automatically opening browser), for example:
 ```
 Plannotator server running at http://localhost:9999
 ```
@@ -160,7 +160,7 @@ Plannotator server running at http://localhost:9999
 
 ### Step 6: Restart OpenCode (if environment variables were modified)
 
-If you configured environment variables in Step 5, restart OpenCode again for configuration to take effect.
+If you configured environment variables in Step 5, restart OpenCode again for the configuration to take effect.
 
 ---
 
@@ -211,7 +211,7 @@ After installation, confirm the following:
 **Solution**:
 1. Confirm `PLANNOTATOR_REMOTE=1` is set
 2. Check that `forwardPorts` in `.devcontainer/devcontainer.json` includes your configured port
-3. Manually access displayed URL: `http://localhost:9999`
+3. Manually access the displayed URL: `http://localhost:9999`
 
 ---
 
@@ -223,13 +223,13 @@ After installation, confirm the following:
 
 **Solution**:
 1. Change `PLANNOTATOR_PORT` to another port
-2. Or manually kill process occupying the port (macOS/Linux: `lsof -ti:9999 | xargs kill`)
+2. Or manually kill the process occupying the port (macOS/Linux: `lsof -ti:9999 | xargs kill`)
 
 ---
 
 ## Summary
 
-This lesson covered how to install and configure Plannotator plugin in OpenCode:
+This lesson covered how to install and configure the Plannotator plugin in OpenCode:
 
 1. **Add plugin via `opencode.json`** - Enable `submit_plan` tool
 2. **Run installation script** - Get `/plannotator-review` slash command
@@ -259,10 +259,10 @@ After installation, you can:
 > Updated: 2026-01-24
 
 | Feature | File Path | Line Number |
-| --------------------- | --------------------------------------------------------------------------------------------- | ---------- |
+|--- | --- | ---|
 | Plugin entry definition | [`apps/opencode-plugin/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/opencode-plugin/index.ts) | 34-280     |
 | `submit_plan` tool definition | [`apps/opencode-plugin/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/opencode-plugin/index.ts) | 209-252    |
-| `/plannotator-review` command handler | [`apps/opencode-plugin/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/opencode-plugin/index.ts) | 115-206    |
+|--- | --- | ---|
 | Plugin configuration (opencode.json) injection | [`apps/opencode-plugin/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/opencode-plugin/index.ts) | 55-63      |
 | Environment variable reading | [`apps/opencode-plugin/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/opencode-plugin/index.ts) | 37-51      |
 | Plan review server startup | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts) | Full file |

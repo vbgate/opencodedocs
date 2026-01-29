@@ -97,7 +97,7 @@ export function parseYamlFrontmatter(text: string): Record<string, unknown> {
 **Key Security Settings**:
 
 | Setting | Purpose |
-| ------- | ------- |
+|--- | ---|
 | `schema: "core"` | Only supports basic JSON types (strings, numbers, booleans, arrays, objects), disabling custom tags |
 | `maxAliasCount: 100` | Limits YAML alias recursion depth to prevent DoS attacks |
 
@@ -152,7 +152,7 @@ const SkillFrontmatterSchema = z.object({
 **Validation Rules**:
 
 | Field | Rules | Rejected Examples |
-| ----- | ----- | ----------------- |
+|--- | --- | ---|
 | `name` | Lowercase letters, numbers, hyphens, cannot be empty | `MySkill` (uppercase), `my skill` (spaces) |
 | `description` | Cannot be empty | `""` (empty string) |
 | `license` | Optional string | - |
@@ -217,7 +217,7 @@ async function findScripts(skillPath: string, maxDepth: number = 10): Promise<Sc
 **Security Features**:
 
 | Check Mechanism | Purpose |
-| --------------- | ------- |
+|--- | ---|
 | **Executable bit check** (`stats.mode & 0o111`) | Only executes files explicitly marked as executable by the user, preventing accidental execution of documentation or config files |
 | **Skip hidden directories** (`entry.name.startsWith('.')`) | Does not scan hidden directories like `.git`, `.vscode`, avoiding scanning too many files |
 | **Skip dependency directories** (`skipDirs.has(entry.name)`) | Skips `node_modules`, `__pycache__`, etc., avoiding scanning third-party dependencies |
@@ -308,7 +308,7 @@ Skill discovery priority (`src/skills.ts:241-246`):
 The OpenCode Agent Skills plugin includes multi-layered security protection:
 
 | Security Mechanism | Protection Target | Code Location |
-| ------------------ | ----------------- | ------------- |
+|--- | --- | ---|
 | Path safety checks | Prevent directory traversal, limit file access scope | `utils.ts:130-133` |
 | Secure YAML parsing | Prevent malicious YAML from executing code | `utils.ts:41-49` |
 | Zod Schema validation | Ensure skill frontmatter conforms to specifications | `skills.ts:105-114` |
@@ -335,7 +335,7 @@ Remember: security is a shared responsibility. The plugin provides protection me
 > Last updated: 2026-01-24
 
 | Security Mechanism | File Path | Line Numbers |
-| ------------------ | --------- | ------------ |
+|--- | --- | ---|
 | Path safety checks | [`src/utils.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/utils.ts#L130-L133) | 130-133 |
 | Secure YAML parsing | [`src/utils.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/utils.ts#L41-L56) | 41-56 |
 | Zod Schema validation | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L105-L114) | 105-114 |

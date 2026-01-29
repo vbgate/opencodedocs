@@ -27,7 +27,7 @@ order: 90
 Traditional code search and refactoring tools have obvious limitations:
 
 | Problem | Traditional Solution | Actual Need |
-|---------|---------------------|-------------|
+|--- | --- | ---|
 | **Inaccurate symbol navigation** | Simple string matching | Need semantic understanding, navigate to true definitions |
 | **Missing references** | Regex search | Need precise cross-file, cross-scope reference tracking |
 | **Unsafe refactoring** | Manual replacement + grep | Need to understand code structure, avoid breaking changes |
@@ -40,7 +40,7 @@ Traditional code search and refactoring tools have obvious limitations:
 ## When to Use Which Tool
 
 | Tool | Use Case | Example |
-|------|----------|---------|
+|--- | --- | ---|
 | **LSP Tools** | When you need IDE functionality | Go-to-definition, find all references, get error list, rename symbols |
 | **AST-Grep** | When you need code pattern matching | Search for specific code structures, batch refactor, check code standards |
 | **Grep/Glob** | Simple text search | Find function names, filename matching |
@@ -401,7 +401,7 @@ Applied 2 changes:
 ### LSP Tool Common Issues
 
 | Problem | Cause | Solution |
-|---------|-------|----------|
+|--- | --- | ---|
 | **Cannot find definition** | LSP server not started or misconfigured | Check LSP configuration in `opencode.json` |
 | **Incomplete reference list** | Code has errors, LSP server not fully analyzed | Fix errors in code first |
 | **Rename failed** | New name conflicts with existing symbol | Use more specific name |
@@ -409,7 +409,7 @@ Applied 2 changes:
 ### AST-Grep Common Issues
 
 | Problem | Cause | Solution |
-|---------|-------|----------|
+|--- | --- | ---|
 | **Pattern not matching** | Pattern incomplete or syntax error | Ensure pattern is a complete AST node |
 | **Python pattern trailing colon** | Python's `def` and `class` don't need colons | ❌ `def func():` → ✅ `def func($$$):` |
 | **Too many matches** | Pattern too broad | Use more specific context or limit paths |
@@ -436,7 +436,7 @@ ast_grep_search({
 ## Complete LSP Tool List
 
 | Tool | Function | Parameters |
-|------|----------|------------|
+|--- | --- | ---|
 | `lsp_goto_definition` | Navigate to symbol definition | `filePath`, `line`, `character` |
 | `lsp_find_references` | Find all references | `filePath`, `line`, `character`, `includeDeclaration?` |
 | `lsp_symbols` | Get file outline or workspace symbols | `filePath`, `scope`, `query?`, `limit?` |
@@ -451,7 +451,7 @@ ast_grep_search({
 ## Complete AST-Grep Tool List
 
 | Tool | Function | Parameters |
-|------|----------|------------|
+|--- | --- | ---|
 | `ast_grep_search` | AST pattern search | `pattern`, `lang`, `paths?`, `globs?`, `context?` |
 | `ast_grep_replace` | AST pattern replacement | `pattern`, `rewrite`, `lang`, `paths?`, `globs?`, `dryRun?` |
 
@@ -568,7 +568,7 @@ This lesson introduced oh-my-opencode's LSP tools and AST-Grep tools:
 ### LSP Tools
 
 | Function | File Path | Line Number |
-|----------|-----------|-------------|
+|--- | --- | ---|
 | LSP tool definitions | [`src/tools/lsp/tools.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/lsp/tools.ts) | 29-261 |
 | LSP client implementation | [`src/tools/lsp/client.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/lsp/client.ts) | 1-596 |
 | LSP constants | [`src/tools/lsp/constants.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/lsp/constants.ts) | 1-391 |
@@ -577,11 +577,11 @@ This lesson introduced oh-my-opencode's LSP tools and AST-Grep tools:
 ### AST-Grep Tools
 
 | Function | File Path | Line Number |
-|----------|-----------|-------------|
-| AST-Grep tool definitions | [`src/tools/ast-grep/tools.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/ast-grep/tools.ts) | 35-110 |
-| AST-Grep constants | [`src/tools/ast-grep/constants.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/ast-grep/constants.ts) | 1-262 |
-| AST-Grep CLI integration | [`src/tools/ast-grep/cli.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/ast-grep/cli.ts) | 1-169 |
-| AST-Grep type definitions | [`src/tools/ast-grep/types.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/ast-grep/types.ts) | 1-112 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Key Constants**:
 - `DEFAULT_MAX_REFERENCES = 200` - Maximum returned references

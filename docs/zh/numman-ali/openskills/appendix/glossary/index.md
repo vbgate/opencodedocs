@@ -304,7 +304,7 @@ skill-name/
 **优先级顺序**（从高到低）：
 
 | 优先级 | 目录                 | 安装方式           | 适用场景                     |
-| ------ | -------------------- | ------------------ | ---------------------------- |
+|--- | --- | --- | ---|
 | 1     | `./.agent/skills/`   | `--universal`      | 多代理环境，避免与 Claude Code 冲突 |
 | 2     | `~/.agent/skills/`   | `--universal --global` | 多代理环境全局技能           |
 | 3     | `./.claude/skills/`  | 默认（项目本地）   | 项目本地技能（默认选择）      |
@@ -498,7 +498,7 @@ graph TD
 > 更新时间：2026-01-24
 
 | 术语/功能            | 文件路径                                                                 | 行号    |
-| -------------------- | ------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | Skill 类型定义       | [`src/types.ts`](https://github.com/numman-ali/openskills/blob/main/src/types.ts#L1-L6) | 1-6     |
 | SkillLocation 类型   | [`src/types.ts`](https://github.com/numman-ali/openskills/blob/main/src/types.ts#L8-L12) | 8-12    |
 | InstallOptions 类型  | [`src/types.ts`](https://github.com/numman-ali/openskills/blob/main/src/types.ts#L14-L18) | 14-18   |

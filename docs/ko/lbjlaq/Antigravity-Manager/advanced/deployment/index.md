@@ -61,7 +61,7 @@ Antigravity Tools를 서버에 배포하고 NAS/서버에서 실행하려고 합
 ## 선형 빠른 참조: Docker vs Headless Xvfb
 
 | 가장 중요한 점 | 더 추천하는 것 | 왜? |
-| --- | --- | --- |
+|--- | --- | ---|
 | 브라우저가 필요한 OAuth/인증 | Docker(noVNC) | 컨테이너 내에 Firefox ESR이 내장되어 있어, 브라우저에서 직접 조작할 수 있음(`deploy/docker/README.md` 참조) |
 | systemd 관리/로그 디스크 저장 원함 | Headless Xvfb | install 스크립트는 systemd service를 설치하고, 로그를 `logs/app.log`에 추가함(`deploy/headless-xvfb/install.sh` 참조) |
 | 격리 및 리소스 제한 원함 | Docker | compose 방식은 자연스럽게 격리되며, 리소스 제한 구성도 더 쉬움(`deploy/docker/README.md` 참조) |
@@ -222,7 +222,7 @@ sudo ./upgrade.sh
 ## 일반적인 실수
 
 | 시나리오 | 일반적인 오류(❌) | 추천 방법(✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | 계정/구성 분실 | ❌ "프로그램 실행"만 신경씀 | ✓ 먼저 `.antigravity_tools/`가 영구화되었는지 확인(volume 또는 `/opt/antigravity`) |
 | noVNC 포트 변경이 적용되지 않음 | ❌ `NOVNC_PORT`만 변경 | ✓ 기본 6080 유지; 변경하려면 `start.sh`에서 `websockify` 포트도 동시에 확인 |
 | 8045를 공개 네트워크에 공개 | ❌ `api_key` 설정하지 않음 / auth_mode 확인하지 않음 | ✓ 먼저 **[보안 및 프라이버시](/ko/lbjlaq/Antigravity-Manager/advanced/security/)**로 기선을 만들고, 터널/리버스 프록시 고려 |
@@ -249,7 +249,7 @@ sudo ./upgrade.sh
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 라인 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Docker 배포 입구 및 noVNC URL | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L5-L13) | 5-13 |
 | Docker 배포 환경 변수 설명(VNC_PASSWORD/RESOLUTION/NOVNC_PORT) | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L32-L39) | 32-39 |
 | Docker compose 포트 매핑 및 데이터 볼륨(antigravity_data) | [`deploy/docker/docker-compose.yml`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/docker-compose.yml#L1-L21) | 1-21 |

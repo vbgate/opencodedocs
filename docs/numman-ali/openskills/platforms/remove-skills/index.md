@@ -38,7 +38,7 @@ OpenSkills provides two removal methods to solve these problems: **interactive m
 ## When to Use This Approach
 
 | Scenario | Recommended Method | Command |
-|----------|-------------------|---------|
+|--- | --- | ---|
 | Manually remove multiple skills | Interactive selection | `openskills manage` |
 | Script or CI/CD automatic removal | Precisely specify skill name | `openskills remove <name>` |
 | Only know the skill name, want quick removal | Direct removal | `openskills remove <name>` |
@@ -315,7 +315,7 @@ OpenSkills provides two skill removal methods:
 > Updated: 2026-01-24
 
 | Function | File Path | Line Numbers |
-| --------- | --------- | ------------ |
+|--- | --- | ---|
 | manage command implementation | [`src/commands/manage.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/manage.ts) | 10-62 |
 | remove command implementation | [`src/commands/remove.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/remove.ts) | 8-21 |
 | Find all skills | [`src/utils/skills.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skills.ts) | 30-64 |

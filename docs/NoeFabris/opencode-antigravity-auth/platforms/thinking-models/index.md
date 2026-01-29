@@ -74,7 +74,7 @@ You want AI models to perform better on complex tasks—like multi-step reasonin
 **Key Differences**:
 
 | Regular Models | Thinking Models |
-| ------------- | --------------- |
+|--- | ---|
 | Directly generate answer | Think first → then generate answer |
 | Fast but potentially shallow | Slow but deeper |
 | Suitable for simple tasks | Suitable for complex tasks |
@@ -415,7 +415,7 @@ Signature mismatch in thinking blocks
 Thinking models improve response quality for complex tasks by performing internal reasoning before generating answers:
 
 | Feature | Claude Thinking | Gemini 3 Thinking |
-|---------|----------------|------------------|
+|--- | --- | ---|
 | **Configuration** | `thinkingBudget` (number) | `thinkingLevel` (string) |
 | **Levels** | Custom budget | minimal/low/medium/high |
 | **Keys** | snake_case (`include_thoughts`) | camelCase (`includeThoughts`) |
@@ -448,14 +448,14 @@ Thinking models improve response quality for complex tasks by performing interna
 > Last updated: 2026-01-23
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | Claude Thinking Config Build | [`src/plugin/transform/claude.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/claude.ts) | 62-72 |
 | Gemini 3 Thinking Config Build | [`src/plugin/transform/gemini.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/gemini.ts) | 163-171 |
 | Gemini 2.5 Thinking Config Build | [`src/plugin/transform/gemini.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/gemini.ts) | 176-184 |
 | Claude Thinking Model Detection | [`src/plugin/transform/claude.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/claude.ts) | 34-37 |
 | Gemini 3 Model Detection | [`src/plugin/transform/gemini.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/gemini.ts) | 137-139 |
 | Interleaved Thinking Hint Injection | [`src/plugin/transform/claude.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/claude.ts) | 96-138 |
-| Max Output Tokens Auto-Adjust | [`src/plugin/transform/claude.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/claude.ts) | 78-90 |
+|--- | --- | ---|
 | keep_thinking Config Schema | [`src/plugin/config/schema.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/schema.ts) | 78-87 |
 | Claude Thinking Apply Transform | [`src/plugin/transform/claude.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/claude.ts) | 324-366 |
 | Gemini Thinking Apply Transform | [`src/plugin/transform/gemini.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/gemini.ts) | 372-434 |

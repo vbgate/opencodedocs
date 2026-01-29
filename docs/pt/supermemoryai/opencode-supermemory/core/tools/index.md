@@ -31,7 +31,7 @@ O opencode-supermemory não é uma caixa preta, ele interage com o Agent atravé
 O plugin registra uma ferramenta chamada `supermemory` com o Agent, que é como um canivete suíço com 6 modos:
 
 | Modo | Função | Cenário Típico |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **add** | Adicionar memória | "Lembre-se, este projeto deve ser executado com Bun" |
 | **search** | Pesquisar memória | "Eu já disse antes como lidar com autenticação?" |
 | **profile** | Perfil do usuário | Ver os hábitos de codificação que o Agent resumiu sobre você |
@@ -187,9 +187,9 @@ R: O plugin automaticamente desanonymiza o conteúdo dentro de tags `<private>`.
 > Última atualização: 2026-01-23
 
 | Funcionalidade | Caminho do Arquivo | Linhas |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Definição da ferramenta | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
-| Detecção de palavras-chave | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L34-L37) | 34-37 |
+|--- | --- | ---|
 | Prompt de disparo | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L20-L28) | 20-28 |
 | Implementação do cliente | [`src/services/client.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/client.ts) | Arquivo completo |
 

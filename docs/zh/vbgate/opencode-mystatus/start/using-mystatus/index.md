@@ -134,7 +134,7 @@ Show my AI account status
 **关键配置项说明**：
 
 | 配置项 | 值 | 作用 |
-| ------ | --- | ---- |
+|--- | --- | ---|
 | `description` | "Query quota usage for all AI accounts" | 在命令列表中显示的说明 |
 | `template` | "Use to mystatus tool..." | 提示 OpenCode 如何处理这个命令 |
 
@@ -146,7 +146,7 @@ template 是给 OpenCode 的"指令"，告诉它：当用户输入 `/mystatus` �
 确认你已经掌握了两种使用方式：
 
 | 技能 | 检查方法 | 预期结果 |
-| ---- | -------- | -------- |
+|--- | --- | ---|
 | 斜杠命令查询 | 输入 `/mystatus` | 显示所有平台的额度信息 |
 | 自然语言查询 | 输入 "Check my OpenAI quota" | 显示额度信息 |
 | 理解配置 | 查看 opencode.json | 找到 mystatus 命令配置 |
@@ -212,7 +212,7 @@ mystatus 工具提供了两种使用方式：
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | mystatus 工具定义 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 29-33 |
 | 工具描述 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 30-31 |
 | 斜杠命令配置 | [`command/mystatus.md`](https://github.com/vbgate/opencode-mystatus/blob/main/command/mystatus.md) | 1-6 |

@@ -28,7 +28,7 @@ La IA generó una tabla, pero la alineación de las columnas no se ve estética:
 
 ```markdown
 | 名称 | 类型 | 描述 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 用户 | string | 用户名 |
 | 年龄 | number | 年龄 |
 | is_active | boolean | 是否激活 |
@@ -50,7 +50,7 @@ La alineación de las tablas Markdown no se escribe en cada fila, sino que se es
 La sintaxis de la fila separadora es: `:?-+:?` (dos puntos + guion + dos puntos)
 
 | Posición de dos puntos | Tipo de alineación | Ejemplo |
-| --- | --- | --- |
+|--- | --- | ---|
 | Ambos lados | Centrado | `:---:` |
 | Solo el lado derecho | Alineación derecha | `---:` |
 | Ninguno | Alineación izquierda | `---` o `:---` |
@@ -77,7 +77,7 @@ La alineación izquierda es el comportamiento predeterminado de las tablas y es 
 
 ```markdown
 | 名称   | 描述   |
-| :----- | :----- |
+|--- | ---|
 | 用户   | 用户名 |
 ```
 
@@ -116,7 +116,7 @@ El centrado es adecuado para etiquetas de estado, textos cortos, títulos y otro
 
 ```markdown
 | 名称 | 状态 | 描述 |
-| :--- | :---: | :--- |    ← La columna del medio usa :---: para indicar centrado
+|--- | --- | --- | ---|
 | 用户 | 激活 | 用户名 |
 ```
 
@@ -124,7 +124,7 @@ El centrado es adecuado para etiquetas de estado, textos cortos, títulos y otro
 
 ```markdown
 | 名称   |  状态  | 描述   |
-| :----- | :----: | :----- |
+|--- | --- | ---|
 | 用户   |  激活  | 用户名 |
 ```
 
@@ -149,7 +149,7 @@ Ubicación en código fuente: `index.ts:213-217`
 El formato de la fila separadora centrada es: `:` + guion + `:`
 
 | Ancho objetivo | Fórmula de cálculo | Resultado |
-| --- | --- | --- |
+|--- | --- | ---|
 | 3 | `:` + ` `-`*1 ` + `:` | `:-:` |
 | 5 | `:` + `-`*3 + `:` | `:---:` |
 | 10 | `:` + `-`*8 + `:` | `:--------:` |
@@ -174,7 +174,7 @@ La alineación derecha es adecuada para números, montos, fechas y otros datos q
 
 ```markdown
 | 名称   | 价格 | 数量 |
-| :----- | ----: | ---: |
+|--- | --- | ---|
 | 商品   |  99.9 |  100 |
 ```
 
@@ -185,7 +185,7 @@ Los números están alineados a la derecha, lo que facilita la comparación de m
 El formato de la fila separadora alineada a la derecha es: guion + `:`
 
 | Ancho objetivo | Fórmula de cálculo | Resultado |
-| --- | --- | --- |
+|--- | --- | ---|
 | 3 | `-`*2 + `:` | `--:` |
 | 5 | `-`*4 + `:` | `----:` |
 | 10 | `-`*9 + `:` | `---------:` |
@@ -220,7 +220,7 @@ Ubicación en código fuente: `index.ts:198-211`
 **Reglas de relleno**
 
 | Tipo de alineación | Relleno izquierdo | Relleno derecho | Ejemplo (ancho objetivo 10, texto "abc") |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | Alineación izquierda | 0 | totalPadding | `abc       ` |
 | Centrado | floor(total/2) | total - floor(total/2) | `   abc    ` |
 | Alineación derecha | totalPadding | 0 | `       abc` |
@@ -230,7 +230,7 @@ Ubicación en código fuente: `index.ts:198-211`
 `Math.floor(totalPadding / 2)` asegura que el relleno izquierdo sea un número entero, y el espacio adicional se agrega a la derecha.
 
 | Ancho objetivo | Ancho del texto | totalPadding | Relleno izquierdo | Relleno derecho | Resultado |
-| --- | --- | --- | --- | --- | --- |
+|--- | --- | --- | --- | --- | ---|
 | 10 | 3 | 7 | 3 (7÷2=3.5→3) | 4 (7-3) | `   abc    ` |
 | 11 | 3 | 8 | 4 (8÷2=4) | 4 (8-4) | `    abc    ` |
 | 12 | 3 | 9 | 4 (9÷2=4.5→4) | 5 (9-4) | `    abc     ` |
@@ -241,7 +241,7 @@ Ubicación en código fuente: `index.ts:198-211`
 
 ```markdown
 | 名称 | 状态 | 价格 | 描述 |
-| :--- | :---: | ---: | :--- |
+|--- | --- | --- | ---|
 | 商品A | 激活 | 99.9 | 这是一个商品 |
 | 商品B | 停用 | 199.0 | 这是另一个商品 |
 ```
@@ -250,7 +250,7 @@ Ubicación en código fuente: `index.ts:198-211`
 
 ```markdown
 | 名称   |  状态  | 价格 | 描述         |
-| :----- | :----: | ----: | :----------- |
+|--- | --- | --- | ---|
 | 商品A  |  激活  |  99.9 | 这是一个商品 |
 | 商品B  |  停用  | 199.0 | 这是另一个商品 |
 ```
@@ -258,7 +258,7 @@ Ubicación en código fuente: `index.ts:198-211`
 **Tipo de alineación de cada columna**:
 
 | Nombre de columna | Sintaxis de fila separadora | Tipo de alineación | Descripción |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | 名称 | `:---` | Alineación izquierda | Texto alineado a la izquierda |
 | 状态 | `:---:` | Centrado | Texto centrado |
 | 价格 | `---:` | Alineación derecha | Números alineados a la derecha |
@@ -288,7 +288,7 @@ La fila separadora es la "configuración", las filas de datos son el "contenido"
 La posición de los dos puntos en la fila separadora **debe** corresponder a las columnas.
 
 | Ejemplo incorrecto | Problema |
-| --- | --- |
+|--- | ---|
 | `| :--- | --- |` | Primera columna centrada, segunda columna alineada a la izquierda (2 columnas) |
 | `| :--- | ---: | :--- |` | Primera columna alineada a la izquierda, segunda columna alineada a la derecha, tercera columna alineada a la izquierda (3 columnas) |
 
@@ -298,7 +298,7 @@ El número de columnas en la fila separadora debe ser consistente con el número
 ## Resumen de esta lección
 
 | Tipo de alineación | Sintaxis de fila separadora | Casos de uso |
-| --- | --- | --- |
+|--- | --- | ---|
 | Alineación izquierda | `---` o `:---` | Texto, datos descriptivos (predeterminado) |
 | Centrado | `:---:` | Etiquetas de estado, textos cortos, títulos |
 | Alineación derecha | `---:` | Números, montos, fechas |
@@ -306,7 +306,7 @@ El número de columnas en la fila separadora debe ser consistente con el número
 **Funciones clave**:
 
 | Función | Propósito | Ubicación en código fuente |
-| --- | --- | --- |
+|--- | --- | ---|
 | `getAlignment()` | Analizar el tipo de alineación de las celdas de la fila separadora | 141-149 |
 | `padCell()` | Rellenar celdas al ancho especificado | 198-211 |
 | `formatSeparatorCell()` | Formatear celdas de la fila separadora | 213-217 |
@@ -335,7 +335,7 @@ El número de columnas en la fila separadora debe ser consistente con el número
 > Fecha de actualización: 2026-01-26
 
 | Función | Ruta del archivo | Número de línea |
-| --- | --- | --- |
+|--- | --- | ---|
 | Análisis de alineación | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L141-L149) | 141-149 |
 | Relleno de celdas | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L198-L211) | 198-211 |
 | Formateo de fila separadora | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L213-L217) | 213-217 |

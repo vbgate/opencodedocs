@@ -40,7 +40,7 @@ Sie haben bereits Gateway ausgeführt und die KI-Modelle konfiguriert, haben abe
 **Verwendungsszenarien für Browser-Tools**:
 
 | Szenario | Action | Beispiel |
-| ---- | ------ | ---- |
+|--- | --- | ---|
 | Formular-Automatisierung | `act` + `fill` | Registrierungsformulare ausfüllen, Bestellungen senden |
 | Web Scraping | `snapshot` | Seitenstruktur extrahieren, Daten sammeln |
 | Bildschirmfotos speichern | `screenshot` | Seiten-Bildschirmfotos speichern, Beweise speichern |
@@ -77,7 +77,7 @@ Browser-Tools sind integrierte Automatisierungstools in Clawdbot, die es der KI 
 **Zwei Browser-Modi**:
 
 | Modus | Profile | Treiber | Beschreibung |
-| ---- | ------- | ---- | ---- |
+|--- | --- | --- | ---|
 | **Eigenständiger Browser** | `clawd` (Standard) | clawd | Clawdbot startet eine eigenständige Chrome/Chromium-Instanz |
 | **Chrome-Relais** | `chrome` | extension | Übernimmt Ihre bestehenden Chrome-Tabs (erfordert Installation der Erweiterung) |
 
@@ -211,7 +211,7 @@ Page snapshot:
 ::: tip Auswahl des Snapshot-Formats
 
 | Format | Verwendung | Merkmale |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | `ai` | Standard, für KI | Gute Lesbarkeit, geeignet für KI-Analyse |
 | `aria` | Strukturierte Ausgabe | Geeignet für Szenarien, die präzise Struktur erfordern |
 | `refs="aria"` | Stabil zwischen Aufrufen | Empfohlen für Multi-Schritt-Operationen (snapshot → act) |
@@ -283,7 +283,7 @@ target: sandbox
 ::: tip Häufige UI-Operationen
 
 | Operation | Kind | Parameter |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | Klick | `click` | `ref`, `doubleClick`, `button`, `modifiers` |
 | Texteingabe | `type` | `ref`, `text`, `submit`, `slowly` |
 | Tastendruck | `press` | `key`, `targetId` |
@@ -333,7 +333,7 @@ type: jpeg
 ::: tip Bildschirmfoto-Formate
 
 | Format | Verwendung |
-| ---- | ---- |
+|--- | ---|
 | `png` | Standard, verlustfreie Komprimierung, geeignet für Dokumente |
 | `jpeg` | verlustbehaftete Komprimierung, kleinere Dateien, geeignet für Speicherung |
 
@@ -535,7 +535,7 @@ In dieser Lektion haben Sie gelernt:
 **Schnellreferenz für Schlüsseloperationen**:
 
 | Operation | Action | Schlüsselparameter |
-| ---- | ------ | -------- |
+|--- | --- | ---|
 | Browser starten | `start` | `profile` (clawd/chrome) |
 | Webseite öffnen | `open` | `targetUrl` |
 | Snapshot abrufen | `snapshot` | `targetId`, `snapshotFormat`, `refs` |
@@ -564,10 +564,10 @@ In dieser Lektion haben Sie gelernt:
 > Aktualisierungsdatum: 2026-01-27
 
 | Funktion | Dateipfad | Zeilennummer |
-| ---- | -------- | ---- |
-| Browser-Tool-Definition | [`src/agents/tools/browser-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/browser-tool.ts) | 269-791 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Browser Schema | [`src/agents/tools/browser-tool.schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/browser-tool.schema.ts) | 1-115 |
-| Action-Typ-Definition | [`src/browser/client-actions-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/browser/client-actions-core.ts) | 18-86 |
+|--- | --- | ---|
 | Browser-Konfigurationsanalyse | [`src/browser/config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/browser/config.ts) | 140-231 |
 | Browser-Konstanten | [`src/browser/constants.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/browser/constants.ts) | 1-9 |
 | CDP-Client | [`src/browser/cdp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/browser/cdp.ts) | 1-500 |

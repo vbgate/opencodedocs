@@ -27,7 +27,7 @@ opencode-supermemory unterteilt Speicher in zwei isolierte **Umfänge (Scope)**,
 ### 1. Zwei Arten von Umfängen
 
 | Umfang | Bezeichner (Scope ID) | Lebenszyklus | Typische Verwendung |
-| :--- | :--- | :--- | :--- |
+|--- | --- | --- | ---|
 | **User Scope**<br>(Benutzerumfang) | `user` | **Bleibt für immer bei Ihnen**<br>wird über alle Projekte hinweg geteilt | • Codestilpräferenzen (z. B. "bevorzugt TypeScript")<br>• Persönliche Gewohnheiten (z. B. "schreibt immer Kommentare")<br>• Allgemeines Wissen |
 | **Project Scope**<br>(Projektumfang) | `project` | **Nur für das aktuelle Projekt**<br>wird beim Wechsel des Verzeichnisses ungültig | • Projektarchitekturdesign<br>• Geschäftslogikbeschreibung<br>• Spezifische Lösungen für bestimmte Bugs |
 
@@ -191,11 +191,11 @@ Der Vektorindex von Supermemory ist normalerweise sekundenschnell, kann aber bei
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| :--- | :--- | :--- |
-| Scope-Generierungslogik | [`src/services/tags.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/tags.ts#L18-L36) | 18-36 |
-| Speicher-Tool-Definition | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
-| Speichertyp-Definition | [`src/types/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/types/index.ts) | - |
-| Client-Implementierung | [`src/services/client.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/client.ts) | 23-182 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Funktionen**:
 - `getUserTag()`: Generiert Benutzer-Tag basierend auf Git-E-Mail

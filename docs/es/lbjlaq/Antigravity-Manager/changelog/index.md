@@ -13,7 +13,7 @@ Este capítulo registra la evolución de versiones y las notas de lanzamiento de
 ## Contenido de este capítulo
 
 | Página | Descripción |
-| --- | --- |
+|--- | ---|
 | [Evolución de versiones](./release-notes/) | Cómo leer el Changelog integrado en README para evaluar rápidamente el impacto de la actualización y completar la verificación posterior |
 
 ## Ruta de aprendizaje

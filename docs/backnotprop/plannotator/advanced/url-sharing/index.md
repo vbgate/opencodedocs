@@ -163,7 +163,7 @@ Certain characters have special meanings in URLs (e.g., `+` represents space, `/
 For compression efficiency, Plannotator uses a compact annotation format (`ShareableAnnotation`):
 
 | Original Annotation | Compact Format | Description |
-| ------------------- | -------------- | ----------- |
+|--- | --- | ---|
 | `{type: 'DELETION', originalText: '...', text: undefined, ...}` | `['D', 'old text', null, images?]` | D = Deletion, null means no text |
 | `{type: 'REPLACEMENT', originalText: '...', text: 'new...', ...}` | `['R', 'old text', 'new text', null, images?]` | R = Replacement |
 | `{type: 'COMMENT', originalText: '...', text: 'comment...', ...}` | `['C', 'old text', 'comment text', null, images?]` | C = Comment |
@@ -516,7 +516,7 @@ Source location: `packages/ui/hooks/useSharing.ts:128` (`refreshShareUrl` functi
 > Last updated: 2026-01-24
 
 | Function | File Path | Lines |
-| --- | --- | --- |
+|--- | --- | ---|
 | Compress data (deflate + Base64) | [`packages/ui/utils/sharing.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/utils/sharing.ts#L30-L48) | 30-48 |
 | Decompress data | [`packages/ui/utils/sharing.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/utils/sharing.ts#L53-L71) | 53-71 |
 | Convert annotation format (compact) | [`packages/ui/utils/sharing.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/utils/sharing.ts#L76-L95) | 76-95 |

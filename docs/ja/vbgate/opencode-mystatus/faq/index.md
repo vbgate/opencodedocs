@@ -35,7 +35,7 @@ order: 4
 エラーメッセージに基づいて解決策を素早く見つけます：
 
 | エラーキーワード | 可能な原因 | 解決策 |
-|-----------|---------|---------|
+|--- | --- | ---|
 | `auth.json not found` | 認証ファイルが存在しない | [トラブルシューティング](./troubleshooting/) |
 | `Token expired` | Tokenが期限切れ | [トラブルシューティング](./troubleshooting/) |
 | `Permission denied` | 権限不足 | [Copilot認証設定](../advanced/copilot-auth/) |

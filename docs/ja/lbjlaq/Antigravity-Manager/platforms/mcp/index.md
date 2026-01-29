@@ -66,7 +66,7 @@ Antigravity Tools は3種類の MCP エンドポイントを提供します：
 ### エンドポイントの分類
 
 | エンドポイントタイプ | 実装方法 | ローカルパス | 上流ターゲット |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | **Web Search** | リモートリバースプロキシ | `/mcp/web_search_prime/mcp` | `https://api.z.ai/api/mcp/web_search_prime/mcp` |
 | **Web Reader** | リモートリバースプロキシ | `/mcp/web_reader/mcp` | `https://api.z.ai/api/mcp/web_reader/mcp` |
 | **Vision MCP** | 内蔵サーバー（JSON-RPC 2.0） | `/mcp/zai-mcp-server/mcp` | 内部で z.ai PaaS API を呼び出し |
@@ -320,7 +320,7 @@ data: keepalive
 ## Vision MCP ツールクイックリファレンス
 
 | ツール名 | 機能 | 必須パラメータ | 例シーン |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `ui_to_artifact` | UI スクリーンショットをコード/プロンプト/仕様/説明に変換 | `image_source`、`output_type`、`prompt` | デザイン稿からフロントエンドコードを生成 |
 | `extract_text_from_screenshot` | スクリーンショットからテキスト/コードを抽出（OCR に類似） | `image_source`、`prompt` | エラーログのスクリーンショットを読み取る |
 | `diagnose_error_screenshot` | エラースクリーンショットを診断（スタックトレース、ログ） | `image_source`、`prompt` | 実行時エラーを分析 |
@@ -469,7 +469,7 @@ Antigravity Tools の MCP エンドポイントは z.ai の能力を呼び出し
 > 更新日時：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Web Search エンドポイント | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L115-L135) | 115-135 |
 | Web Reader エンドポイント | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L137-L157) | 137-157 |
 | Vision MCP エンドポイント（メインエントリー） | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L376-L397) | 376-397 |

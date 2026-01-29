@@ -53,14 +53,14 @@ En fonction de vos besoins, vous pouvez choisir différents parcours d'apprentis
 ### Configuration de base
 
 | Sujet | Description | Durée estimée |
-|-------|-------------|---------------|
+|--- | --- | ---|
 | [Configuration des modèles IA et de l'authentification](./models-auth/) | Configurez divers fournisseurs de modèles IA et méthodes d'authentification tels que Anthropic, OpenAI, OpenRouter, Ollama, etc. | 15 minutes |
 | [Gestion de sessions et multi-Agents](./session-management/) | Apprenez les concepts de base tels que le modèle de session, l'isolation de session, la collaboration de sous-Agents, la compression de contexte, etc. | 20 minutes |
 
 ### Système d'outils
 
 | Sujet | Description | Durée estimée |
-|-------|-------------|---------------|
+|--- | --- | ---|
 | [Outils d'automatisation de navigateur](./tools-browser/) | Utilisez les outils de navigateur pour l'automatisation Web, les captures d'écran, les opérations de formulaire, etc. | 25 minutes |
 | [Outils d'exécution de commandes et approbation](./tools-exec/) | Configurez et utilisez l'outil exec, comprenez le mécanisme d'approbation de sécurité et le contrôle des permissions | 15 minutes |
 | [Outils de recherche et de récupération Web](./tools-web/) | Utilisez les outils web_search et web_fetch pour la recherche Web et la récupération de contenu | 20 minutes |
@@ -68,28 +68,28 @@ En fonction de vos besoins, vous pouvez choisir différents parcours d'apprentis
 ### Expérience d'interaction
 
 | Sujet | Description | Durée estimée |
-|-------|-------------|---------------|
+|--- | --- | ---|
 | [Interface visuelle Canvas et A2UI](./canvas/) | Comprenez le mécanisme de push Canvas A2UI, les opérations d'interface visuelle et l'interface personnalisée | 20 minutes |
 | [Réveil vocal et synthèse vocale](./voice-tts/) | Configurez Voice Wake, Talk Mode et les fournisseurs TTS pour réaliser l'interaction vocale | 15 minutes |
 
 ### Extension intelligente
 
 | Sujet | Description | Durée estimée |
-|-------|-------------|---------------|
+|--- | --- | ---|
 | [Système de mémoire et recherche vectorielle](./memory-system/) | Configurez et utilisez le système de mémoire (SQLite-vec, FTS5, recherche hybride) | 25 minutes |
 | [Plateforme de compétences et ClawdHub](./skills-platform/) | Comprenez le système de compétences, les compétences Bundled/Managed/Workspace et l'intégration ClawdHub | 20 minutes |
 
 ### Automatisation et déploiement
 
 | Sujet | Description | Durée estimée |
-|-------|-------------|---------------|
+|--- | --- | ---|
 | [Tâches planifiées Cron et Webhook](./cron-automation/) | Configurez les tâches planifiées, le déclenchement Webhook, Gmail Pub/Sub et d'autres fonctions d'automatisation | 20 minutes |
 | [Passerelle distante et Tailscale](./remote-gateway/) | Accès distant à Gateway via Tailscale Serve/Funnel ou tunnel SSH | 15 minutes |
 
 ### Mécanismes de sécurité
 
 | Sujet | Description | Durée estimée |
-|-------|-------------|---------------|
+|--- | --- | ---|
 | [Sécurité et isolation bac à sable](./security-sandbox/) | Comprenez le modèle de sécurité, le contrôle des permissions d'outils, l'isolement bac à sable, le déploiement Dockerisé | 20 minutes |
 
 ## Prochaines étapes

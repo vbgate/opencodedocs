@@ -55,7 +55,7 @@ Antes de enviar a primeira mensagem, verifique:
 ### Requisitos Obrigatórios
 
 | Condição | Como Verificar |
-| ---------------------- | ------------------------------------------- |
+|--- | ---|
 | **Gateway iniciado** | `clawdbot gateway status` ou verificar se o processo está em execução |
 | **Modelo de IA configurado** | `clawdbot models list` para ver se há modelos disponíveis |
 | **Porta acessível** | Confirmar que a porta 18789 (ou porta personalizada) não está em uso |
@@ -119,7 +119,7 @@ O Clawdbot suporta três métodos principais de envio de mensagens:
 **Diferenças-chave**:
 
 | Método | Passa pela IA | Uso |
-| ---------------------- | ----------- | ------------------------------ |
+|--- | --- | ---|
 | `clawdbot agent` | ✅ Sim | Conversar com IA, obter resposta e processo de pensamento |
 | `clawdbot message send` | ❌ Não | Enviar mensagem diretamente para o canal, sem passar pela IA |
 | WebChat / Canal | ✅ Sim | Conversar com IA via interface gráfica |
@@ -193,7 +193,7 @@ Let me think about what needs to be checked for shipping:
 **Opções de nível de pensamento**:
 
 | Nível | Descrição | Cenário de Uso |
-| --------- | ------------------------------ | ------------------ |
+|--- | --- | ---|
 | `off` | Não mostrar processo de pensamento | Perguntas simples, resposta rápida |
 | `minimal` | Minimizar saída de pensamento | Depuração, verificar fluxo |
 | `low` | Baixo detalhamento | Conversas diárias |
@@ -263,7 +263,7 @@ O WebChat usa a mesma porta que o Gateway (padrão 18789). Se você modificou a 
 **Funcionalidades do WebChat**:
 
 | Funcionalidade | Descrição |
-| ------ | ------------------------------ |
+|--- | ---|
 | Rich text | Suporta formato Markdown |
 | Anexos | Suporta upload de imagens, áudio, vídeo |
 | Histórico | Salva automaticamente histórico de sessões |
@@ -543,7 +543,7 @@ Nesta lição você aprendeu:
 > Última atualização: 2026-01-27
 
 | Funcionalidade | Caminho do Arquivo | Linhas |
-| ------------------- | ---------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Registro de comando CLI Agent | [`src/cli/program/register.agent.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.agent.ts) | 20-82 |
 | Execução do CLI Agent | [`src/commands/agent-via-gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/agent-via-gateway.ts) | 82-184 |
 | Registro de CLI message send | [`src/cli/program/message/register.send.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/message/register.send.ts) | 1-30 |

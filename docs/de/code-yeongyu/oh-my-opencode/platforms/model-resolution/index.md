@@ -89,7 +89,7 @@ flowchart TD
 Jeder Agent hat seine eigene bevorzugte Provider-Reihenfolge, abhängig vom Aufgabentyp und den benötigten Fähigkeiten des Agenten:
 
 | Agent | Empfohlenes Modell (ohne Präfix) | Provider-Prioritätskette | Variante |
-|------|----------------------------------|---------------------------|----------|
+|--- | --- | --- | ---|
 | **Sisyphus** | `claude-opus-4-5` | anthropic → github-copilot → opencode → zai-coding-plan | max |
 | **Oracle** | `gpt-5.2` | openai → anthropic → google | high |
 | **Librarian** | `big-pickle` | zai-coding-plan → opencode → anthropic | - |
@@ -109,7 +109,7 @@ Sisyphus ist der Haupt-Orchestrator und benötigt starke推理fähigkeiten. Clau
 Kategorien folgen der gleichen Auflösungslogik:
 
 | Kategorie | Empfohlenes Modell (ohne Präfix) | Provider-Prioritätskette | Variante |
-|-----------|----------------------------------|---------------------------|----------|
+|--- | --- | --- | ---|
 | **visual-engineering** | `gemini-3-pro` | google → anthropic → openai | - |
 | **ultrabrain** | `gpt-5.2-codex` | openai → anthropic → google | xhigh |
 | **artistry** | `gemini-3-pro` | google → anthropic → openai | max |
@@ -310,7 +310,7 @@ Wenn ein Punkt nicht bestanden wurde, überprüfen Sie:
 ## Wann Sie diesen Trick verwenden
 
 | Szenario | Modell manuell überschreiben | Provider-Herabstufung verwenden |
-|----------|------------------------------|----------------------------------|
+|--- | --- | ---|
 | **Kostenempfindliche Aufgaben** | ✅ Günstiges Modell angeben | ❌ Möglicherweise teures Modell ausgewählt |
 | **Leistungsempfindliche Aufgaben** | ✅ Stärkstes Modell angeben | ❌ Möglicherweise auf schwächeres Modell herabgestuft |
 | **Neue Modelle testen** | ✅ Experimentelles Modell angeben | ❌ Wird nicht automatisch ausgewählt |
@@ -441,13 +441,13 @@ Denken Sie daran:
 > Aktualisierungszeit: 2026-01-26
 
 | Funktion | Dateipfad | Zeilennummer |
-|-----------|-----------|--------------|
+|--- | --- | ---|
 | Kernfunktion der Modellauflösung | [`src/shared/model-resolver.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/shared/model-resolver.ts) | 43-98 |
 | Definition der Agentenmodellanforderungen | [`src/shared/model-requirements.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/shared/model-requirements.ts) | 12-79 |
 | Definition der Kategoriemodellanforderungen | [`src/shared/model-requirements.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/shared/model-requirements.ts) | 81-133 |
 | Modellauflösung bei Agentenerstellung | [`src/agents/utils.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/utils.ts) | 203-208, 245-250, 284-289 |
 | Modellauflösung bei Kategoriedelegation | [`src/tools/delegate-task/tools.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/delegate-task/tools.ts) | 532-540 |
-| Modellauflösungsprüfung des doctor-Befehls | [`src/cli/doctor/checks/model-resolution.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/cli/doctor/checks/model-resolution.ts) | 130-160 |
+|--- | --- | ---|
 
 **Wichtige Typdefinitionen**:
 - `ModelResolutionInput`: Eingabeparameter der Modellauflösung (`src/shared/model-resolver.ts:6-10`)
@@ -469,7 +469,7 @@ Denken Sie daran:
 
 **Geschäftsregeln**:
 | Regel-ID | Regelbeschreibung | Markierung |
-|----------|-------------------|-----------|
+|--- | --- | ---|
 | BR-4.1-7 | Priorität der Modellauflösung: Benutzerüberschreibung > Provider-Herabstufung > Systemstandard | 【Fakt】 |
 | BR-4.1-7-1 | Bei Benutzerüberschreibung direkt zurückgeben, Provider-Herabstufungskette überspringen | 【Fakt】 |
 | BR-4.1-7-2 | Bei Provider-Herabstufung jeden Provider gemäß Reihenfolge der fallbackChain versuchen | 【Fakt】 |

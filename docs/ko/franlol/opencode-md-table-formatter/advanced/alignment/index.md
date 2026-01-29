@@ -28,7 +28,7 @@ AI가 테이블을 생성했지만 열 정렬이 아름답지 않습니다:
 
 ```markdown
 | 이름 | 타입 | 설명 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 사용자 | string | 사용자명 |
 | 나이 | number | 나이 |
 | is_active | boolean | 활성화 여부 |
@@ -50,7 +50,7 @@ Markdown 테이블의 정렬 방식은 각 행에 작성하는 것이 아니라 
 구분 행의 구문은: `:?-+:?` (콜론 + 하이픈 + 콜론)
 
 | 콜론 위치 | 정렬 방식 | 예시 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 양쪽 모두 | 가운데 정렬 | `:---:` |
 | 오른쪽만 | 오른쪽 정렬 | `---:` |
 | 없음 | 왼쪽 정렬 | `---` 또는 `:---` |
@@ -77,7 +77,7 @@ Markdown 테이블의 정렬 방식은 각 행에 작성하는 것이 아니라 
 
 ```markdown
 | 이름   | 설명   |
-| :----- | :----- |
+|--- | ---|
 | 사용자   | 사용자명 |
 ```
 
@@ -116,7 +116,7 @@ function getAlignment(delimiterCell: string): "left" | "center" | "right" {
 
 ```markdown
 | 이름 | 상태 | 설명 |
-| :--- | :---: | :--- |    ← 중간 열을 :---:로 가운데 정렬 표시
+|--- | --- | --- | ---|
 | 사용자 | 활성 | 사용자명 |
 ```
 
@@ -124,7 +124,7 @@ function getAlignment(delimiterCell: string): "left" | "center" | "right" {
 
 ```markdown
 | 이름   |  상태  | 설명   |
-| :----- | :----: | :----- |
+|--- | --- | ---|
 | 사용자   |  활성  | 사용자명 |
 ```
 
@@ -149,7 +149,7 @@ function formatSeparatorCell(width: number, align: "left" | "center" | "right"):
 가운데 정렬의 구분 행 형식은: `:` + 하이픈 + `:`
 
 | 목표 너비 | 계산 공식 | 결과 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 3 | `:` + `-`*1 ` + `:` | `:-:` |
 | 5 | `:` + `-`*3 + `:` | `:---:` |
 | 10 | `:` + `-`*8 + `:` | `:--------:` |
@@ -174,7 +174,7 @@ function formatSeparatorCell(width: number, align: "left" | "center" | "right"):
 
 ```markdown
 | 이름   | 가격 | 수량 |
-| :----- | ----: | ---: |
+|--- | --- | ---|
 | 상품   |  99.9 |  100 |
 ```
 
@@ -185,7 +185,7 @@ function formatSeparatorCell(width: number, align: "left" | "center" | "right"):
 오른쪽 정렬의 구분 행 형식은: 하이픈 + `:`
 
 | 목표 너비 | 계산 공식 | 결과 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 3 | `-`*2 + `:` | `--:` |
 | 5 | `-`*4 + `:` | `----:` |
 | 10 | `-`*9 + `:` | `---------:` |
@@ -220,7 +220,7 @@ function padCell(text: string, width: number, align: "left" | "center" | "right"
 **패딩 규칙**
 
 | 정렬 방식 | 왼쪽 패딩 | 오른쪽 패딩 | 예시 (목표 너비 10, 텍스트 "abc") |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | 왼쪽 정렬 | 0 | totalPadding | `abc       ` |
 | 가운데 정렬 | floor(total/2) | total - floor(total/2) | `   abc    ` |
 | 오른쪽 정렬 | totalPadding | 0 | `       abc` |
@@ -230,7 +230,7 @@ function padCell(text: string, width: number, align: "left" | "center" | "right"
 `Math.floor(totalPadding / 2)`는 왼쪽 패딩이 정수가 되도록 하며 남은 공간은 오른쪽에 추가합니다.
 
 | 목표 너비 | 텍스트 너비 | totalPadding | 왼쪽 패딩 | 오른쪽 패딩 | 결과 |
-| --- | --- | --- | --- | --- | --- |
+|--- | --- | --- | --- | --- | ---|
 | 10 | 3 | 7 | 3 (7÷2=3.5→3) | 4 (7-3) | `   abc    ` |
 | 11 | 3 | 8 | 4 (8÷2=4) | 4 (8-4) | `    abc    ` |
 | 12 | 3 | 9 | 4 (9÷2=4.5→4) | 5 (9-4) | `    abc     ` |
@@ -241,7 +241,7 @@ function padCell(text: string, width: number, align: "left" | "center" | "right"
 
 ```markdown
 | 이름 | 상태 | 가격 | 설명 |
-| :--- | :---: | ---: | :--- |
+|--- | --- | --- | ---|
 | 상품A | 활성 | 99.9 | 이것은 상품입니다 |
 | 상품B | 비활성 | 199.0 | 이것은 다른 상품입니다 |
 ```
@@ -250,7 +250,7 @@ function padCell(text: string, width: number, align: "left" | "center" | "right"
 
 ```markdown
 | 이름   |  상태  | 가격 | 설명         |
-| :----- | :----: | ----: | :----------- |
+|--- | --- | --- | ---|
 | 상품A  |  활성  |  99.9 | 이것은 상품입니다 |
 | 상품B  |  비활성  | 199.0 | 이것은 다른 상품입니다 |
 ```
@@ -258,7 +258,7 @@ function padCell(text: string, width: number, align: "left" | "center" | "right"
 **각 열의 정렬 방식**:
 
 | 열 이름 | 구분 행 구문 | 정렬 방식 | 설명 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | 이름 | `:---` | 왼쪽 정렬 | 텍스트 왼쪽 정렬 |
 | 상태 | `:---:` | 가운데 정렬 | 텍스트 가운데 정렬 |
 | 가격 | `---:` | 오른쪽 정렬 | 숫자 오른쪽 정렬 |
@@ -288,7 +288,7 @@ function padCell(text: string, width: number, align: "left" | "center" | "right"
 구분 행의 콜론 위치는 열과 **반드시** 일치해야 합니다.
 
 | 잘못된 예시 | 문제 |
-| --- | --- |
+|--- | ---|
 | `| :--- | --- |` | 첫 번째 열 가운데, 두 번째 열 왼쪽 정렬 (2열) |
 | `| :--- | ---: | :--- |` | 첫 번째 열 왼쪽, 두 번째 열 오른쪽, 세 번째 열 왼쪽 정렬 (3열) |
 
@@ -298,7 +298,7 @@ function padCell(text: string, width: number, align: "left" | "center" | "right"
 ## 이 과정 요약
 
 | 정렬 방식 | 구분 행 구문 | 적용 시나리오 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 왼쪽 정렬 | `---` 또는 `:---` | 텍스트, 설명 데이터 (기본값) |
 | 가운데 정렬 | `:---:` | 상태 태그, 짧은 텍스트, 제목 |
 | 오른쪽 정렬 | `---:` | 숫자, 금액, 날짜 |
@@ -306,7 +306,7 @@ function padCell(text: string, width: number, align: "left" | "center" | "right"
 **핵심 함수**:
 
 | 함수 | 역할 | 소스 코드 위치 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `getAlignment()` | 구분 행 셀의 정렬 방식 파싱 | 141-149 |
 | `padCell()` | 셀을 지정된 너비로 패딩 | 198-211 |
 | `formatSeparatorCell()` | 구분 행 셀 포맷팅 | 213-217 |
@@ -335,7 +335,7 @@ function padCell(text: string, width: number, align: "left" | "center" | "right"
 > 업데이트 시간: 2026-01-26
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 정렬 방식 파싱 | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L141-L149) | 141-149 |
 | 셀 패딩 | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L198-L211) | 198-211 |
 | 구분 행 포맷팅 | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L213-L217) | 213-217 |

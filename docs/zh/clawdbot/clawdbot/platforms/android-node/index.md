@@ -74,7 +74,7 @@ Android 设备（节点应用）
 Android 节点支持以下设备本地操作：
 
 | 功能 | 命令 | 说明 |
-| ---- | ------ | ---- |
+|--- | --- | ---|
 | **Canvas** | `canvas.*` | 显示实时可视化界面（A2UI） |
 | **Camera** | `camera.*` | 拍照（JPG）和录像（MP4） |
 | **Screen** | `screen.*` | 屏幕录制 |
@@ -454,7 +454,7 @@ clawdbot nodes invoke --node "android-node" --command location.get
 > 更新时间：2026-01-27
 
 | 功能        | 文件路径                                                                                    | 行号    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 节点命令策略 | [`src/gateway/node-command-policy.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/node-command-policy.ts) | 1-112   |
 | 节点协议 Schema | [`src/gateway/protocol/schema/nodes.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/schema/nodes.ts) | 1-103   |
 | Android 文档  | [`docs/platforms/android.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/android.md) | 1-142   |

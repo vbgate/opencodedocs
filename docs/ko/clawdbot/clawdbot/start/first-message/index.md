@@ -55,7 +55,7 @@ order: 40
 ### 필수 조건
 
 | 조件                     | 확인 방법                                        |
-| ---------------------- | ------------------------------------------- |
+|--- | ---|
 | **Gateway 시작됨**   | `clawdbot gateway status` 또는 프로세스가 실행 중인지 확인 |
 | **AI 모델 구성됨** | `clawdbot models list`로 사용 가능한 모델 확인      |
 | **포트 접근 가능**       | 18789 포트(또는 사용자 정의 포트)가 사용 중이 아닌지 확인 |
@@ -119,7 +119,7 @@ Clawdbot은 메시지를 보내는 세 가지 주요 방법을 지원합니다:
 **주요 차이점**:
 
 | 방법                     | AI 통과 여부 | 용도                           |
-| ---------------------- | ----------- | ------------------------------ |
+|--- | --- | ---|
 | `clawdbot agent`     | ✅ 예       | AI와 대화, 회신 및 사고 과정 얻기    |
 | `clawdbot message send` | ❌ 아니오       | 채널에 직접 메시지 전송, AI 통과하지 않음    |
 | WebChat / 채널       | ✅ 예       | 그래픽 인터페이스를 통해 AI와 대화         |
@@ -193,7 +193,7 @@ Let me think about what needs to be checked for shipping:
 **사고 수준 옵션**:
 
 | 수준        | 설명                           | 적용 가능한 시나리오             |
-| --------- | ------------------------------ | ------------------ |
+|--- | --- | ---|
 | `off`     | 사고 과정 표시 안 함               | 간단한 Q&A, 빠른 응답 |
 | `minimal` | 최소한의 사고 출력              | 디버깅, 프로세스 확인     |
 | `low`     | 낮은 상세도                     | 일상 대화           |
@@ -263,7 +263,7 @@ WebChat은 Gateway와 동일한 포트(기본값 18789)를 사용합니다. Gate
 **WebChat 기능**:
 
 | 기능     | 설명                           |
-| ------ | ------------------------------ |
+|--- | ---|
 | 리치 텍스트   | Markdown 형식 지원            |
 | 첨부 파일     | 이미지, 오디오, 비디오 업로드 지원    |
 | 기록 | 세션 기록 자동 저장             |
@@ -543,7 +543,7 @@ clawdbot message send --target +15555550123 --message "Meeting at 3pm"
 > 업데이트: 2026-01-27
 
 | 기능                  | 파일 경로                                                                                             | 행 번호    |
-| ------------------- | ---------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | CLI Agent 명령 등록  | [`src/cli/program/register.agent.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.agent.ts) | 20-82    |
 | Agent CLI 실행        | [`src/commands/agent-via-gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/agent-via-gateway.ts) | 82-184   |
 | CLI message send 등록 | [`src/cli/program/message/register.send.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/message/register.send.ts) | 1-30     |

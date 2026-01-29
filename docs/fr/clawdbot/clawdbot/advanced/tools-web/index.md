@@ -46,7 +46,7 @@ Vous voulez que l'assistant IA "se connecte à internet" mais vous ne savez pas 
 
 ::: tip Guide de sélection d'outils
 | Scénario | Outil recommandé | Raison |
-|------|----------|------|
+|--- | --- | ---|
 | Rechercher plusieurs sources | web_search | Retourne plusieurs résultats en une seule requête |
 | Extraire le contenu d'une seule page | web_fetch | Obtient le texte complet, supporte markdown |
 | Pages dynamiques/nécessitent une connexion | [browser](../tools-browser/) | Nécessite l'exécution de JavaScript |
@@ -111,7 +111,7 @@ web_search et web_fetch sont des **outils légers** qui n'exécutent pas JavaScr
 Les deux outils incluent un cache intégré pour réduire les requêtes en double :
 
 | Outil | Clé de cache | TTL par défaut | Élément de configuration |
-|------|---------|----------|--------|
+|--- | --- | --- | ---|
 | web_search | `provider:query:count:country:search_lang:ui_lang:freshness` | 15 minutes | `tools.web.search.cacheTtlMinutes` |
 | web_fetch | `fetch:url:extractMode:maxChars` | 15 minutes | `tools.web.fetch.cacheTtlMinutes` |
 
@@ -128,7 +128,7 @@ Les deux outils incluent un cache intégré pour réduire les requêtes en doubl
 Clawdbot supporte deux fournisseurs de recherche :
 
 | Fournisseur | Avantages | Inconvénients | API Key |
-|--------|------|--------|---------|
+|--- | --- | --- | ---|
 | **Brave** (par défaut) | Rapide, résultats structurés, niveau gratuit | Résultats de recherche traditionnels | `BRAVE_API_KEY` |
 | **Perplexity** | Réponses synthétisées par l'IA, citations, en temps réel | Nécessite l'accès Perplexity ou OpenRouter | `OPENROUTER_API_KEY` ou `PERPLEXITY_API_KEY` |
 
@@ -317,7 +317,7 @@ Si vous omettez `baseUrl`, Clawdbot choisira automatiquement selon le préfixe d
 #### 4.3 Sélectionner le modèle Perplexity
 
 | Modèle | Description | Cas d'utilisation |
-|------|------|----------|
+|--- | --- | ---|
 | `perplexity/sonar` | Réponses rapides + recherche web | Requêtes simples, recherche rapide |
 | `perplexity/sonar-pro` (par défaut) | Raisonnement multi-étapes + recherche web | Problèmes complexes, nécessite un raisonnement |
 | `perplexity/sonar-reasoning-pro` | Analyse de chaîne de pensée | Recherche approfondie, nécessite un processus de raisonnement |
@@ -552,7 +552,7 @@ web_fetch bloque par défaut les IP de réseau interne pour éviter les attaques
 > Date de mise à jour : 2026-01-27
 
 | Fonction | Chemin du fichier | Numéro de ligne |
-|------|----------|------|
+|--- | --- | ---|
 | Définition de l'outil web_search | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 409-483 |
 | Définition de l'outil web_fetch | [`src/agents/tools/web-fetch.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-fetch.ts) | 572-624 |
 | Appel API Brave Search | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 309-407 |

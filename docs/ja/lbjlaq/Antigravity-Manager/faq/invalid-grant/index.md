@@ -152,7 +152,7 @@ UI だけで「アカウントはある」と見ると、誤って「システ�
 > 更新時間：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 設計説明：invalid_grant の問題と変更動作 | [`docs/proxy-invalid-grant.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy-invalid-grant.md#L1-L52) | 1-52 |
 | アカウントプールをロードする時に `disabled=true` をスキップ | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L70-L158) | 70-158 |
 | token リフレッシュ失敗時に `invalid_grant` を識別しアカウントを無効化 | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L840-L890) | 840-890 |

@@ -21,7 +21,7 @@ This chapter records the version evolution of the opencode-md-table-formatter pl
 ## 📚 Subpage Navigation
 
 | Page | Description | Reading Time |
-|------|-------------|--------------|
+|--- | --- | ---|
 | **[Changelog: Version History and Change Records](./release-notes/)** | View detailed change records for all versions, including new features, technical details, known limitations, and future plans | 5 minutes |
 
 ---

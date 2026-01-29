@@ -73,7 +73,7 @@ Invoke-WebRequest -UseBasicParsing http://127.0.0.1:8045/healthz | Select-Object
 Маршруты reverse proxy Antigravity Tools "жестко кодируют все пути" (см. `src-tauri/src/proxy/server.rs`), основные точки входа:
 
 | Протокол | Путь | Назначение |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI | `/v1/models` | Список моделей |
 | OpenAI | `/v1/chat/completions` | Chat Completions |
 | OpenAI | `/v1/responses` | Совместимость с Codex CLI |
@@ -122,7 +122,7 @@ Invoke-WebRequest -UseBasicParsing http://127.0.0.1:8045/v1beta/models | Select-
 Проблема с Base URL, по сути, заключается в том, что "путь, который вы написали", и "путь, который добавляет клиент", накладываются друг на друга.
 
 | Что вы используете | Рекомендуемый Base URL | Какой маршрут вы используете |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI SDK (Python/Node и т.д.) | `http://127.0.0.1:8045/v1` | `/v1/chat/completions`, `/v1/models` |
 | Claude Code CLI (Anthropic) | `http://127.0.0.1:8045` | `/v1/messages` |
 | Gemini SDK / клиенты в режиме Gemini | `http://127.0.0.1:8045` | `/v1beta/models/*` |
@@ -170,7 +170,7 @@ http://127.0.0.1:8045/v1/chat/completions
 Используйте эту таблицу для быстрой проверки, совпадает ли ваш "итоговый путь запроса" с маршрутами Antigravity Tools:
 
 | Путь, который вы видите в логах | Вывод |
-| --- | --- |
+|--- | ---|
 | Начинается с `/v1/` (например, `/v1/models`, `/v1/chat/completions`) | Использует совместимые маршруты OpenAI/Anthropic |
 | Начинается с `/v1beta/` (например, `/v1beta/models/...`) | Использует нативные маршруты Gemini |
 | Появляется `/v1/v1/` | Base URL содержит `/v1`, клиент добавил его еще раз |
@@ -207,7 +207,7 @@ http://127.0.0.1:8045/v1/chat/completions
 ## Краткий итог урока
 
 | Симптом | Самая частая причина | Что нужно изменить |
-| --- | --- | --- |
+|--- | --- | ---|
 | Постоянно 404 | Неправильная конкатенация Base URL | Сначала проверьте curl на `/v1/models`/`/v1beta/models`, чтобы не было 404 |
 | `/v1/v1/...` | Дублирование `/v1` | Для OpenAI SDK Base URL должен заканчиваться на `/v1` |
 | `/v1/chat/completions/responses` | Клиент дублирует пути | Используйте протокол Gemini или настройте перезапись путей (не рекомендуется новичкам) |
@@ -233,7 +233,7 @@ http://127.0.0.1:8045/v1/chat/completions
 > Обновлено: 2026-01-23
 
 | Функция | Путь к файлу | Строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Определение маршрутов reverse proxy (полная таблица маршрутов) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L193) | 120-193 |
 | `AxumServer::start()` (точка входа в создание маршрутов) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L79-L216) | 79-216 |
 | `health_check_handler()` | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L266-L272) | 266-272 |

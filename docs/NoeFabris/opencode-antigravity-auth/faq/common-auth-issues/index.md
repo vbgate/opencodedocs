@@ -97,7 +97,7 @@ Google enforces frequency limits on API calls for each Google account. When limi
 All platforms (including Windows) use `~/.config/opencode/` as the configuration directory:
 
 | File | Path | Description |
-|------|------|-------------|
+|--- | --- | ---|
 | Main Config | `~/.config/opencode/opencode.json` | OpenCode main configuration file |
 | Account File | `~/.config/opencode/antigravity-accounts.json` | OAuth tokens and account information |
 | Plugin Config | `~/.config/opencode/antigravity.json` | Plugin-specific configuration |
@@ -594,7 +594,7 @@ When encountering issues, first try the **quick reset** (delete account file and
 > Last updated: 2026-01-23
 
 | Feature | File Path | Lines |
-|------|----------|------|
+|--- | --- | ---|
 | OAuth Authentication (PKCE) | [`src/antigravity/oauth.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/antigravity/oauth.ts) | 91-270 |
 | Token Validation and Refresh | [`src/plugin/auth.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/auth.ts) | 1-53 |
 | Account Storage and Management | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts) | 1-715 |

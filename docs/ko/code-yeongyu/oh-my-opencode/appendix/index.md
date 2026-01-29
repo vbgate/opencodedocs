@@ -18,7 +18,7 @@ order: 170
 이 장에는 세 가지 중요한 섹션이 포함되어 있습니다:
 
 | 하위 페이지 | 설명 | 난이도 |
-| ----------- | ----------- | --------- |
+|--- | --- | ---|
 | [Claude Code 호환성](./claude-code-compatibility/) | Claude Code에서 OpenCode로 마이그레이션하는 완전한 가이드, Commands, Skills, Agents, MCPs, Hooks에 대한 호환성 메커니즘 포함 | ⭐⭐ |
 | [구성 참조](./configuration-reference/) | oh-my-opencode 구성 파일의 완전한 스키마 문서, 모든 필드, 유형, 기본값 다룸 | ⭐⭐⭐ |
 | [내장 MCP](./builtin-mcps/) | 3개의 내장 MCP 서버(Exa Websearch, Context7, Grep.app)의 기능 및 사용법 | ⭐⭐ |

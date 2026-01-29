@@ -28,7 +28,7 @@ order: 2
 **API-Informationen**:
 
 | Projekt | Wert |
-| --- | --- |
+|--- | ---|
 | URL | `https://chatgpt.com/backend-api/wham/usage` |
 | Methode | GET |
 | Authentifizierung | Bearer Token (OAuth) |
@@ -41,7 +41,7 @@ order: 2
 **API-Informationen**:
 
 | Projekt | Wert |
-| --- | --- |
+|--- | ---|
 | URL | `https://bigmodel.cn/api/monitor/usage/quota/limit` |
 | Methode | GET |
 | Authentifizierung | API-Key |
@@ -53,7 +53,7 @@ order: 2
 **API-Informationen**:
 
 | Projekt | Wert |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.z.ai/api/monitor/usage/quota/limit` |
 | Methode | GET |
 | Authentifizierung | API-Key |
@@ -65,7 +65,7 @@ order: 2
 **API-Informationen**:
 
 | Projekt | Wert |
-| --- | --- |
+|--- | ---|
 | URL | `https://oauth2.googleapis.com/token` |
 | Methode | POST |
 | Authentifizierung | OAuth Refresh Token |
@@ -75,7 +75,7 @@ order: 2
 **API-Informationen**:
 
 | Projekt | Wert |
-| --- | --- |
+|--- | ---|
 | URL | `https://cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels` |
 | Methode | POST |
 | Authentifizierung | Bearer Token (OAuth) |
@@ -87,7 +87,7 @@ order: 2
 **API-Informationen**:
 
 | Projekt | Wert |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.github.com/users/{username}/settings/billing/premium_request/usage` |
 | Methode | GET |
 | Authentifizierung | Fine-grained PAT |
@@ -97,7 +97,7 @@ order: 2
 **API-Informationen**:
 
 | Projekt | Wert |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.github.com/copilot_internal/user` |
 | Methode | GET |
 | Authentifizierung | Copilot Session Token |
@@ -107,7 +107,7 @@ order: 2
 Alle API-Anfragen haben ein 10-Sekunden-Timeout-Limit:
 
 | Konfiguration | Wert | Quellcodeposition |
-| --- | --- | --- |
+|--- | --- | ---|
 | Timeout-Zeit | 10 Sekunden | `plugin/lib/types.ts:114` |
 
 ## Sicherheit
@@ -127,7 +127,7 @@ Das Plugin maskiert API-Keys automatisch bei der Anzeige und zeigt nur erste und
 ## Zusammenfassung
 
 | Plattform | API-Anzahl | Authentifizierung |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI | 1 | OAuth Bearer Token |
 | Zhipu AI | 1 | API-Key |
 | Z.ai | 1 | API-Key |
@@ -146,8 +146,8 @@ Alle Endpunkte sind offizielle APIs der jeweiligen Plattformen, wodurch die Zuve
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
-| OpenAI-Kreditabfrage-API | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L127-L155) | 127-155 |
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Konstanten**:
 

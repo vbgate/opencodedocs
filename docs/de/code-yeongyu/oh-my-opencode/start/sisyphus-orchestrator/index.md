@@ -37,7 +37,7 @@ Vielleicht haben Sie diese Probleme bereits erlebt:
 Sisyphus ist Ihr Hauptorchestrator und eignet sich für diese Szenarien:
 
 | Szenario | Geeignet | Alternative |
-|----------|----------|-------------|
+|--- | --- | ---|
 | Komplexe Feature-Entwicklung (3+ Schritte) | ✅ Stark empfohlen | Prometheus + Atlas (erfordert detaillierte Planung) |
 | Schnelle Behebung bekannter Bugs | ✅ Geeignet | Lassen Sie Sisyphus es direkt erledigen |
 | Erfordert Untersuchung mehrerer Repos/Dokumentationen | ✅ Stark empfohlen | Verwenden Sie Sisyphus parallele Delegation |
@@ -91,7 +91,7 @@ Sisyphus verwendet **Claude Opus 4.5 + 32k thinking budget**.
 Wofür ist das gut?
 
 | Geringes Budget (kein Thinking) | 32k thinking budget |
-|-------------------------------|---------------------|
+|--- | ---|
 | Beginnt direkt mit dem Schreiben von Code | Analysiert zuerst tiefgehend Anforderungen, bewertet Komplexität, zerlegt Aufgaben |
 | Anfällig für das Übersehen von Randfällen | Identifiziert proaktiv potenzielle Probleme und Risiken |
 | Merkt zur Hälfte, dass es falsch läuft | Wählt von Anfang den optimalen Ansatz |
@@ -171,8 +171,8 @@ Wenn Sie Ergebnisse benötigen, ruft es `background_output(task_id="...")` ab, u
 **Warum ist das schneller?**
 
 | Serieller Ansatz (traditionell) | Paralleler Ansatz (Sisyphus) |
-|-------------------------------|------------------------------|
-| Codebase-Suche (2 Minuten) | ⏳ Codebase-Suche (2 Minuten) |
+|--- | ---|
+|--- | ---|
 | Warten... | Warten... | ⏳ Dokumentationsforschung (2 Minuten, gleichzeitig) |
 | Dokumentationsforschung (2 Minuten) | Start der Implementierung (insgesamt 2 Minuten) |
 | Start der Implementierung (2 Minuten) |  |
@@ -228,7 +228,7 @@ Sie deaktivieren alle Experten-Agents in der Konfiguration und lassen nur Sisyph
 Behalten Sie die Standardkonfiguration bei und lassen Sie Sisyphus automatisch an Experten delegieren:
 
 | Aufgabe | Sisyphus selbst | An Experten delegieren |
-|------|-----------------|-------------------|
+|--- | --- | ---|
 | Einfache Einzeldatei-Änderung | ✅ OK | Nicht erforderlich |
 | Codebase-Suche | ⚠️ Langsam | ✅ Explore (schneller) |
 | Dokumentationsforschung | ⚠️ Möglicherweise ungenau | ✅ Librarian (professioneller) |
@@ -269,11 +269,11 @@ Die Stärke von Sisyphus liegt nicht darin, "schlauer" zu sein, sondern in:
 > Aktualisiert am: 2026-01-26
 
 | Funktion | Dateipfad | Zeilen |
-|---------|-----------|-------|
-| Sisyphus-Agent-Factory | [`src/agents/sisyphus.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/sisyphus.ts) | 419-450 |
-| Sisyphus-Kern-Prompt | [`src/agents/sisyphus.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/sisyphus.ts) | 17-416 |
-| Agent-Metadaten und Modellkonfiguration | [`src/agents/AGENTS.md`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/AGENTS.md) | 24-36 |
-| Tool-Berechtigungseinschränkungen | [`src/agents/AGENTS.md`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/AGENTS.md) | 44-51 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Konfiguration**:
 - **Thinking Budget**: 32k tokens (nur Anthropic-Modelle)

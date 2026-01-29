@@ -39,7 +39,7 @@ API 接口（Application Programming Interface）是程序之间通信的桥梁�
 **接口信息**：
 
 | 项目 | 值 |
-| --- | --- |
+|--- | ---|
 | URL | `https://chatgpt.com/backend-api/wham/usage` |
 | 方法 | GET |
 | 认证方式 | Bearer Token (OAuth) |
@@ -91,7 +91,7 @@ ChatGPT-Account-Id: {team_account_id}  // 可选，团队账号需要
 **接口信息**：
 
 | 项目 | 值 |
-| --- | --- |
+|--- | ---|
 | URL | `https://bigmodel.cn/api/monitor/usage/quota/limit` |
 | 方法 | GET |
 | 认证方式 | API Key |
@@ -151,7 +151,7 @@ User-Agent: OpenCode-Status-Plugin/1.0
 **接口信息**：
 
 | 项目 | 值 |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.z.ai/api/monitor/usage/quota/limit` |
 | 方法 | GET |
 | 认证方式 | API Key |
@@ -176,7 +176,7 @@ User-Agent: OpenCode-Status-Plugin/1.0
 **接口信息**：
 
 | 项目 | 值 |
-| --- | --- |
+|--- | ---|
 | URL | `https://oauth2.googleapis.com/token` |
 | 方法 | POST |
 | 认证方式 | OAuth Refresh Token |
@@ -218,7 +218,7 @@ client_id={client_id}
 **接口信息**：
 
 | 项目 | 值 |
-| --- | --- |
+|--- | ---|
 | URL | `https://cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels` |
 | 方法 | POST |
 | 认证方式 | Bearer Token (OAuth) |
@@ -282,7 +282,7 @@ User-Agent: antigravity/1.11.9 windows/amd64
 **接口信息**：
 
 | 项目 | 值 |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.github.com/users/{username}/settings/billing/premium_request/usage` |
 | 方法 | GET |
 | 认证方式 | Fine-grained PAT（Personal Access Token） |
@@ -350,7 +350,7 @@ Fine-grained PAT（Fine-grained Personal Access Token）是 GitHub 的新一代�
 **接口信息**：
 
 | 项目 | 值 |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.github.com/copilot_internal/user` |
 | 方法 | GET |
 | 认证方式 | Copilot Session Token |
@@ -416,7 +416,7 @@ Copilot-Integration-Id: vscode-chat
 **接口信息**：
 
 | 项目 | 值 |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.github.com/copilot_internal/v2/token` |
 | 方法 | POST |
 | 认证方式 | OAuth Token（从 OpenCode 获取） |
@@ -461,7 +461,7 @@ Copilot-Integration-Id: vscode-chat
 ## 认证方式对比
 
 | 平台 | 认证方式 | 凭证来源 | 凭证文件 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | **OpenAI** | OAuth Bearer Token | OpenCode OAuth | `~/.local/share/opencode/auth.json` |
 | **智谱 AI** | API Key | 用户手动配置 | `~/.local/share/opencode/auth.json` |
 | **Z.ai** | API Key | 用户手动配置 | `~/.local/share/opencode/auth.json` |
@@ -475,7 +475,7 @@ Copilot-Integration-Id: vscode-chat
 所有 API 请求都设置了 10 秒超时限制，避免长时间等待：
 
 | 配置 | 值 | 源码位置 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 超时时间 | 10 秒 | `plugin/lib/types.ts:114` |
 | 超时实现 | `fetchWithTimeout` 函数 | `plugin/lib/utils.ts:84-100` |
 
@@ -511,7 +511,7 @@ maskString("sk-1234567890abcdef")  // "sk-1****cdef"
 本课介绍了 opencode-mystatus 插件调用的所有官方 API 接口：
 
 | 平台 | API 数量 | 认证方式 |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI | 1 个 | OAuth Bearer Token |
 | 智谱 AI | 1 个 | API Key |
 | Z.ai | 1 个 | API Key |
@@ -530,7 +530,7 @@ maskString("sk-1234567890abcdef")  // "sk-1****cdef"
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI 额度查询 API | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L127-L155) | 127-155 |
 | 智谱 AI 额度查询 API | [`plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts#L62-L106) | 62-106 |
 | Z.ai 额度查询 API | [`plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts#L64) | 64（共用接口） |

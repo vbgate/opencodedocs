@@ -192,7 +192,7 @@ TokenManager 对 `target_model` 的归一化是"白名单式"的：只有明确�
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Quota Protection UI（阈值、模型勾选、至少保留 1 个） | [`src/components/settings/QuotaProtection.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/settings/QuotaProtection.tsx#L13-L168) | 13-168 |
 | Smart Warmup UI（启用后默认勾选、至少保留 1 个） | [`src/components/settings/SmartWarmup.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/settings/SmartWarmup.tsx#L14-L120) | 14-120 |
 | 配额治理配置字段（`quota_protection` / `scheduled_warmup`） | [`src/types/config.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/types/config.ts#L54-L94) | 54-94 |

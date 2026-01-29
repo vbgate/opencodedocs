@@ -43,7 +43,7 @@ Vercel Deploy 技能透過掃描專案的 `package.json` 檔案中的 `dependenc
 ### React 生態
 
 | 框架 | 偵測相依性 | 返回值 |
-|------|---------|--------|
+|--- | --- | ---|
 | **Next.js** | `next` | `nextjs` |
 | **Gatsby** | `gatsby` | `gatsby` |
 | **Remix** | `@remix-run/` | `remix` |
@@ -56,7 +56,7 @@ Vercel Deploy 技能透過掃描專案的 `package.json` 檔案中的 `dependenc
 ### Vue 生態
 
 | 框架 | 偵測相依性 | 返回值 |
-|------|---------|--------|
+|--- | --- | ---|
 | **Nuxt** | `nuxt` | `nuxtjs` |
 | **VitePress** | `vitepress` | `vitepress` |
 | **VuePress** | `vuepress` | `vuepress` |
@@ -65,7 +65,7 @@ Vercel Deploy 技能透過掃描專案的 `package.json` 檔案中的 `dependenc
 ### Svelte 生態
 
 | 框架 | 偵測相依性 | 返回值 |
-|------|---------|--------|
+|--- | --- | ---|
 | **SvelteKit** | `@sveltejs/kit` | `sveltekit-1` |
 | **Svelte** | `svelte` | `svelte` |
 | **Sapper** (legacy) | `sapper` | `sapper` |
@@ -73,14 +73,14 @@ Vercel Deploy 技能透過掃描專案的 `package.json` 檔案中的 `dependenc
 ### Angular
 
 | 框架 | 偵測相依性 | 返回值 |
-|------|---------|--------|
+|--- | --- | ---|
 | **Angular** | `@angular/core` | `angular` |
 | **Ionic Angular** | `@ionic/angular` | `ionic-angular` |
 
 ### 靜態站點生成器
 
 | 框架 | 偵測相依性 | 返回值 |
-|------|---------|--------|
+|--- | --- | ---|
 | **Astro** | `astro` | `astro` |
 | **Docusaurus** | `@docusaurus/core` | `docusaurus-2` |
 | **Hexo** | `hexo` | `hexo` |
@@ -90,7 +90,7 @@ Vercel Deploy 技能透過掃描專案的 `package.json` 檔案中的 `dependenc
 ### Node.js 後端框架
 
 | 框架 | 偵測相依性 | 返回值 |
-|------|---------|--------|
+|--- | --- | ---|
 | **Express** | `express` | `express` |
 | **NestJS** | `@nestjs/core` | `nestjs` |
 | **Hono** | `hono` | `hono` |
@@ -102,7 +102,7 @@ Vercel Deploy 技能透過掃描專案的 `package.json` 檔案中的 `dependenc
 ### 其他框架
 
 | 框架 | 偵測相依性 | 返回值 |
-|------|---------|--------|
+|--- | --- | ---|
 | **SolidStart** | `@solidjs/start` | `solidstart-1` |
 | **Ember** | `ember-cli`, `ember-source` | `ember` |
 | **Dojo** | `@dojo/framework` | `dojo` |
@@ -118,7 +118,7 @@ Vercel Deploy 技能透過掃描專案的 `package.json` 檔案中的 `dependenc
 ### 建構工具
 
 | 框架 | 偵測相依性 | 返回值 |
-|------|---------|--------|
+|--- | --- | ---|
 | **Vite** | `vite` | `vite` |
 | **Parcel** | `parcel` | `parcel` |
 
@@ -315,7 +315,7 @@ Agent Skills 的 Vercel Deploy 功能支援 **45+ 種框架**，覆蓋主流前�
 > 更新時間：2026-01-25
 
 | 功能        | 檔案路徑                                                                                             | 行號    |
-| ----------- | ---------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 框架偵測邏輯 | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 11-156  |
 | 部署腳本入口 | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 1-250   |
 | 靜態 HTML 處理 | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 192-205 |

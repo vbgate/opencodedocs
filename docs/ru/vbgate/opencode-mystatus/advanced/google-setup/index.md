@@ -32,7 +32,7 @@ opencode-mystatus поддерживает одновременный запро
 Google Cloud Antigravity предоставляет несколько моделей, плагин отображает 4 наиболее часто используемых из них:
 
 | Отображаемое имя | Ключ модели (основной) | Ключ модели (альтернативный) |
-| -------- | -------------- | --------------- |
+|--- | --- | ---|
 | G3 Pro | `gemini-3-pro-high` | `gemini-3-pro-low` |
 | G3 Image | `gemini-3-pro-image` | - |
 | G3 Flash | `gemini-3-flash` | - |
@@ -230,7 +230,7 @@ Claude     1d 5h      ████████░░░░░░░░░░░ 
 > Время обновления: 2026-01-23
 
 | Функция | Путь к файлу | Номер строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Соответствие моделей | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 69-78 |
 | Параллельный запрос нескольких учётных записей | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 327-334 |
 | Фильтрация учётных записей (должен быть email) | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 318 |

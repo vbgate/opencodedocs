@@ -80,7 +80,7 @@ bash skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh .
 2. Types d'erreurs courants :
 
 | Message d'erreur | Cause possible | Solution |
-| -------- | -------- | -------- |
+|--- | --- | ---|
 | "File too large" | Volume du projet dépassant la limite | Exclure les fichiers inutiles (comme `*.log`, `*.test.ts`) |
 | "Invalid framework" | Échec de la reconnaissance de framework | Ajouter `package.json` ou spécifier manuellement le framework |
 | "Network timeout" | Délai d'attente réseau | Vérifier la connexion réseau, réessayer le déploiement |
@@ -186,7 +186,7 @@ Si les méthodes ci-dessus ne peuvent pas résoudre le problème :
 > Dernière mise à jour :2026-01-25
 
 | Fonctionnalité | Chemin de fichier | Ligne |
-| ----------- | -------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Gestion des erreurs réseau | [`skills/claude.ai/vercel-deploy-claimable/SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/SKILL.md#L100-L113) | 100-113 |
 | Logique de validation des règles | [`packages/react-best-practices-build/src/validate.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/validate.ts) | 21-66 |
 | Logique de détection de frameworks | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 12-156 |

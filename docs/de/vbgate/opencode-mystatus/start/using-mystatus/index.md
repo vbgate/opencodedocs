@@ -109,7 +109,7 @@ Wie funktioniert der Slash-Befehl `/mystatus`? Er ist in der OpenCode-Konfigurat
 **Erklärung der wichtigsten Konfigurationselemente**:
 
 | Konfigurationselement | Wert | Funktion |
-| ------ | --- | ---- |
+|--- | --- | ---|
 | `description` | "Query quota usage for all AI accounts" | In der Befehlsliste angezeigte Beschreibung |
 | `template` | "Use to mystatus tool..." | Weist OpenCode an, wie dieser Befehl zu verarbeiten ist |
 
@@ -121,7 +121,7 @@ Das template ist eine "Anweisung" an OpenCode: Wenn der Benutzer `/mystatus` ein
 Vergewissern Sie sich, dass Sie beide Verwendungsmethoden beherrschen:
 
 | Fertigkeit | Überprüfungsmethode | Erwartetes Ergebnis |
-| ---- | -------- | -------- |
+|--- | --- | ---|
 | Slash-Befehl-Abfrage | `/mystatus` eingeben | Zeigt Kreditinformationen aller Plattformen |
 | Abfrage in natürlicher Sprache | "Check my OpenAI quota" eingeben | Zeigt Kreditinformationen |
 | Konfiguration verstehen | opencode.json aufrufen | Finden Sie die mystatus-Befehlskonfiguration |
@@ -187,12 +187,12 @@ Beide Methoden fragen alle konfigurierten KI-Plattformkredite parallel ab und ge
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
-| mystatus-Tool-Definition | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 29-33 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Toolbeschreibung | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 30-31 |
-| Slash-Befehlskonfiguration | [`command/mystatus.md`](https://github.com/vbgate/opencode-mystatus/blob/main/command/mystatus.md) | 1-6 |
+|--- | --- | ---|
 | Parallele Abfrage aller Plattformen | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 49-56 |
-| Ergebnissammlung und -zusammenfassung | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 58-89 |
+|--- | --- | ---|
 
 **Wichtige Konstanten**:
 Keine (dieser Abschnitt führt hauptsächlich Aufrufmethoden ein, keine spezifischen Konstanten)

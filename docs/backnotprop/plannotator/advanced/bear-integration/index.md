@@ -167,7 +167,7 @@ A note structure similar to this:
 Plannotator intelligently generates tags so you can quickly retrieve plans in Bear. Here are the tag generation rules:
 
 | Tag Source | Example | Priority |
-|------------|---------|----------|
+|--- | --- | ---|
 | Fixed tag | `#plannotator` | Required |
 | Project name | `#myproject`, `#plannotator` | Required |
 | H1 keywords | `#authentication`, `#api` | Optional (up to 3) |
@@ -201,7 +201,7 @@ Final tags: `#plannotator #myproject #user #authentication #system #typescript #
 ## Comparison with Obsidian Integration
 
 | Feature | Bear Integration | Obsidian Integration |
-|---------|------------------|---------------------|
+|--- | --- | ---|
 | Configuration complexity | Simple (toggle only) | Medium (need to select vault and folder) |
 | Storage | Inside Bear app | Specified vault path |
 | Filename | Auto-managed by Bear | `Title - Mon D, YYYY H-MMam.md` |
@@ -242,7 +242,7 @@ Final tags: `#plannotator #myproject #user #authentication #system #typescript #
 > Last updated: 2026-01-24
 
 | Feature        | File Path                                                                                    | Lines   |
-| -------------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Bear config interface | [`packages/server/integrations.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/integrations.ts#L18-L20) | 18-20   |
 | Save to Bear  | [`packages/server/integrations.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/integrations.ts#L234-L257) | 234-257 |
 | Tag extraction | [`packages/server/integrations.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/integrations.ts#L34-L74) | 34-74   |

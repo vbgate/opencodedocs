@@ -39,7 +39,7 @@ API 엔드포인트(Application Programming Interface)는 프로그램 간 통�
 **인터페이스 정보**:
 
 | 항목 | 값 |
-| --- | --- |
+|--- | ---|
 | URL | `https://chatgpt.com/backend-api/wham/usage` |
 | 메서드 | GET |
 | 인증 방식 | Bearer Token (OAuth) |
@@ -91,7 +91,7 @@ ChatGPT-Account-Id: {team_account_id}  // 선택 사항, 팀 계정 필요
 **인터페이스 정보**:
 
 | 항목 | 값 |
-| --- | --- |
+|--- | ---|
 | URL | `https://bigmodel.cn/api/monitor/usage/quota/limit` |
 | 메서드 | GET |
 | 인증 방식 | API Key |
@@ -151,7 +151,7 @@ User-Agent: OpenCode-Status-Plugin/1.0
 **인터페이스 정보**:
 
 | 항목 | 값 |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.z.ai/api/monitor/usage/quota/limit` |
 | 메서드 | GET |
 | 인증 방식 | API Key |
@@ -176,7 +176,7 @@ User-Agent: OpenCode-Status-Plugin/1.0
 **인터페이스 정보**:
 
 | 항목 | 값 |
-| --- | --- |
+|--- | ---|
 | URL | `https://oauth2.googleapis.com/token` |
 | 메서드 | POST |
 | 인증 방식 | OAuth Refresh Token |
@@ -218,7 +218,7 @@ client_id={client_id}
 **인터페이스 정보**:
 
 | 항목 | 값 |
-| --- | --- |
+|--- | ---|
 | URL | `https://cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels` |
 | 메서드 | POST |
 | 인증 방식 | Bearer Token (OAuth) |
@@ -282,7 +282,7 @@ User-Agent: antigravity/1.11.9 windows/amd64
 **인터페이스 정보**:
 
 | 항목 | 값 |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.github.com/users/{username}/settings/billing/premium_request/usage` |
 | 메서드 | GET |
 | 인증 방식 | Fine-grained PAT(Personal Access Token) |
@@ -350,7 +350,7 @@ Fine-grained PAT(Fine-grained Personal Access Token)은 GitHub의 새로운 세�
 **인터페이스 정보**:
 
 | 항목 | 값 |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.github.com/copilot_internal/user` |
 | 메서드 | GET |
 | 인증 방식 | Copilot Session Token |
@@ -416,7 +416,7 @@ Copilot-Integration-Id: vscode-chat
 **인터페이스 정보**:
 
 | 항목 | 값 |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.github.com/copilot_internal/v2/token` |
 | 메서드 | POST |
 | 인증 방식 | OAuth Token(OpenCode에서 가져옴) |
@@ -461,7 +461,7 @@ Copilot-Integration-Id: vscode-chat
 ## 인증 방식 비교
 
 | 플랫폼 | 인증 방식 | 자격 증명 출처 | 자격 증명 파일 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | **OpenAI** | OAuth Bearer Token | OpenCode OAuth | `~/.local/share/opencode/auth.json` |
 | **Zhipu AI** | API Key | 사용자 수동 구성 | `~/.local/share/opencode/auth.json` |
 | **Z.ai** | API Key | 사용자 수동 구성 | `~/.local/share/opencode/auth.json` |
@@ -475,7 +475,7 @@ Copilot-Integration-Id: vscode-chat
 모든 API 요청은 10초 시간 초과 제한을 설정하여 오래 기다리지 않도록 합니다:
 
 | 구성 | 값 | 소스 코드 위치 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 시간 초과 시간 | 10초 | `plugin/lib/types.ts:114` |
 | 시간 초과 구현 | `fetchWithTimeout` 함수 | `plugin/lib/utils.ts:84-100` |
 
@@ -511,7 +511,7 @@ maskString("sk-1234567890abcdef")  // "sk-1****cdef"
 이 수업에서는 opencode-mystatus 플러그인이 호출하는 모든 공식 API 엔드포인트를 소개했습니다:
 
 | 플랫폼 | API 수량 | 인증 방식 |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI | 1개 | OAuth Bearer Token |
 | Zhipu AI | 1개 | API Key |
 | Z.ai | 1개 | API Key |
@@ -530,7 +530,7 @@ maskString("sk-1234567890abcdef")  // "sk-1****cdef"
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI 할당량 조회 API | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L127-L155) | 127-155 |
 | Zhipu AI 할당량 조회 API | [`plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts#L62-L106) | 62-106 |
 | Z.ai 할당량 조회 API | [`plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts#L64) | 64(공통 인터페이스) |

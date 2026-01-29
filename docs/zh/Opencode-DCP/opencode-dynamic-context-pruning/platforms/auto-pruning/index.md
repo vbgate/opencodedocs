@@ -37,7 +37,7 @@ order: 1
 DCP 提供三种**自动修剪策略**，在每次发送请求前静默执行，**零 LLM 成本**：
 
 | 策略 | 默认开关 | 作用 |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | 去重 | ✅ 启用 | 检测重复工具调用，只保留最新一次 |
 | 覆盖写入 | ❌ 禁用 | 清理已被读取覆盖的写操作输入 |
 | 清除错误 | ✅ 启用 | 超过 N 回合后清理错误工具输入 |
@@ -269,7 +269,7 @@ graph LR
 ## 什么时候用这一招
 
 | 场景 | 推荐策略组合 |
-| ---- | ------------ |
+|--- | ---|
 | 日常开发（读多写少） | 去重 + 清除错误（默认配置） |
 | 频繁写入验证 | 全部启用（手动开启覆盖写入） |
 | 调试工具失败 | 只启用去重（禁用清除错误） |
@@ -306,7 +306,7 @@ graph LR
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 去重策略实现 | [`lib/strategies/deduplication.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/deduplication.ts) | 13-83 |
 | 覆盖写入策略实现 | [`lib/strategies/supersede-writes.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/supersede-writes.ts) | 16-105 |
 | 清除错误策略实现 | [`lib/strategies/purge-errors.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/purge-errors.ts) | 16-80 |

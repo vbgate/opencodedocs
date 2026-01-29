@@ -53,14 +53,14 @@ Depending on your needs, you can choose different learning paths:
 ### Core Configuration
 
 | Topic | Description | Estimated Time |
-|------|------|----------|
+|--- | --- | ---|
 | [AI Models & Authentication](./models-auth/) | Configure multiple AI model providers (Anthropic, OpenAI, OpenRouter, Ollama, etc.) and authentication methods | 15 minutes |
 | [Session Management & Multi-Agent](./session-management/) | Learn core concepts: session model, session isolation, sub-Agent collaboration, context compression | 20 minutes |
 
 ### Tool System
 
 | Topic | Description | Estimated Time |
-|------|------|----------|
+|--- | --- | ---|
 | [Browser Automation Tools](./tools-browser/) | Use browser tools for web automation, screenshots, form operations, etc. | 25 minutes |
 | [Command Execution Tools & Approval](./tools-exec/) | Configure and use exec tools, understand security approval mechanisms and permission controls | 15 minutes |
 | [Web Search & Scraping Tools](./tools-web/) | Use web_search and web_fetch tools for web search and content scraping | 20 minutes |
@@ -68,28 +68,28 @@ Depending on your needs, you can choose different learning paths:
 ### Interaction Experience
 
 | Topic | Description | Estimated Time |
-|------|------|----------|
+|--- | --- | ---|
 | [Canvas Visualization Interface & A2UI](./canvas/) | Understand Canvas A2UI push mechanism, visual interface operations, and custom interfaces | 20 minutes |
 | [Voice Wake-up & Text-to-Speech](./voice-tts/) | Configure Voice Wake, Talk Mode, and TTS providers for voice interaction | 15 minutes |
 
 ### Intelligence Extensions
 
 | Topic | Description | Estimated Time |
-|------|------|----------|
+|--- | --- | ---|
 | [Memory System & Vector Search](./memory-system/) | Configure and use memory systems (SQLite-vec, FTS5, hybrid search) | 25 minutes |
 | [Skill Platform & ClawdHub](./skills-platform/) | Understand skill systems, Bundled/Managed/Workspace skills, and ClawdHub integration | 20 minutes |
 
 ### Automation & Deployment
 
 | Topic | Description | Estimated Time |
-|------|------|----------|
+|--- | --- | ---|
 | [Cron Scheduled Tasks & Webhook](./cron-automation/) | Configure scheduled tasks, Webhook triggers, Gmail Pub/Sub, and other automation features | 20 minutes |
 | [Remote Gateway & Tailscale](./remote-gateway/) | Remote access to Gateway via Tailscale Serve/Funnel or SSH tunnels | 15 minutes |
 
 ### Security Mechanisms
 
 | Topic | Description | Estimated Time |
-|------|------|----------|
+|--- | --- | ---|
 | [Security & Sandbox Isolation](./security-sandbox/) | Understand security models, tool permission controls, Sandbox isolation, and Docker deployment | 20 minutes |
 
 ## Next Steps

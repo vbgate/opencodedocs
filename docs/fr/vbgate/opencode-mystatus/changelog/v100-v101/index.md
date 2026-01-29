@@ -52,7 +52,7 @@ npm update @vbgate/opencode-mystatus
 Prend en charge l'interrogation en un clic de l'utilisation du quota des plateformes suivantes :
 
 | Plateforme | Types d'abonnement pris en charge | Types de quota |
-| ---------- | -------------------------------- | -------------- |
+|--- | --- | ---|
 | OpenAI | Plus/Team/Pro | Limite de 3 heures, limite de 24 heures |
 | Zhipu AI | Coding Plan | Limite de token sur 5 heures, quota mensuel MCP |
 | Google Cloud | Antigravity | G3 Pro, G3 Image, G3 Flash, Claude |

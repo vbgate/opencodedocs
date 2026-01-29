@@ -63,7 +63,7 @@ Command Reference → Installation Sources → Global vs Project → List Skills
 Jump directly based on your current task:
 
 | What You Want to Do | Read This |
-|-------------------|----------|
+|--- | ---|
 | Find usage for a specific command | [Command Reference](./cli-commands/) |
 | Install skills from a private repository | [Installation Sources](./install-sources/) |
 | Decide whether to install globally or locally | [Global vs Project](./global-vs-project/) |

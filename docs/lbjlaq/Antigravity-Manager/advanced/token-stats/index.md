@@ -143,7 +143,7 @@ How to do it: go to Settings > Advanced section, click "Open Data Directory", an
 ## Common Pitfalls
 
 | Phenomenon | Common Cause | What You Can Do |
-| --- | --- | --- |
+|--- | --- | ---|
 | Token Stats shows "No data available" | You indeed haven't generated model requests; or upstream responses don't contain parsable token fields | First use an already verified client to send requests; then check if responses include `usage/usageMetadata` |
 | Statistics by "model" look wrong | Statistics use the `model` from requests, not `X-Mapped-Model` | Treat model routing as "request model -> mapped model"; statistics view the "request model" |
 | Account dimension missing | Only writes when `X-Account-Email` is obtained AND token usage is parsed | Confirm requests actually go through the account pool; then cross-reference request logs/response headers |
@@ -164,8 +164,8 @@ How to do it: go to Settings > Advanced section, click "Open Data Directory", an
 > Last updated: 2026-01-23
 
 | Function | File Path | Line Numbers |
-| --- | --- | --- |
-| Token Stats page route `/token-stats` | [`src/App.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/App.tsx#L19-L47) | 19-47 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Token Stats UI: time window/view switching and data fetching | [`src/pages/TokenStats.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/TokenStats.tsx#L49-L166) | 49-166 |
 | Token Stats UI: empty data prompt ("No data available") | [`src/pages/TokenStats.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/TokenStats.tsx#L458-L507) | 458-507 |
 | Token usage extraction: parse model from request, parse usage/usageMetadata from response | [`src-tauri/src/proxy/middleware/monitor.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/monitor.rs#L32-L120) | 32-120 |

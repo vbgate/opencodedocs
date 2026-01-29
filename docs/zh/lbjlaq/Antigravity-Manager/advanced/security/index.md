@@ -206,7 +206,7 @@ curl -i "http://127.0.0.1:<PORT>/v1/messages" \
 ::: warning 错误做法 vs 推荐做法
 
 | 场景 | ❌ 常见错误 | ✓ 推荐做法 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 需要局域网访问 | 只打开 `allow_lan_access=true`，但 `auth_mode=off` | 用 `auth_mode=auto`，并设置强 `api_key` |
 | 开了鉴权但一直 401 | 客户端带了 key，但 header 名不兼容 | 代理兼容 `Authorization`/`x-api-key`/`x-goog-api-key` 三种 header |
 | 鉴权开启却没配 key | `api_key` 为空也打开了鉴权 | 后端会直接拒绝（日志会提示 key 为空） |
@@ -259,12 +259,12 @@ last_error = Some(format!("Token refresh failed: {}", e));
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | auth_mode 的四种模式与 auto 语义说明 | [`docs/proxy/auth.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy/auth.md#L10-L24) | 10-24 |
 | ProxyAuthMode 枚举与默认值（默认 off） | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L5-L18) | 5-18 |
 | ProxyConfig 的关键字段与默认值（allow_lan_access、api_key） | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L259) | 174-259 |
 | 监听地址推导（127.0.0.1 vs 0.0.0.0） | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L281-L292) | 281-292 |
-| auto -> effective_auth_mode 推导逻辑 | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L10-L30) | 10-30 |
+|--- | --- | ---|
 | 鉴权中间件（OPTIONS 放行、/healthz 豁免、三种 header 兼容） | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L14-L78) | 14-78 |
 | UI：allow_lan_access 与 auth_mode 的开关/下拉框 | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L943-L1046) | 943-1046 |
 | UI：api_key 的编辑/重置/复制 | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L1048-L1120) | 1048-1120 |

@@ -172,7 +172,7 @@ $resp.Headers["X-Mapped-Model"]
 ## 일반적인 실수
 
 | 시나리오 | 할 수 있는 것(❌) | 추천 방법(✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | 와일드카드가 적용되지 않음 | `GPT-4*`를 작성하여 `gpt-4-turbo`를 일치시키기를 기대함 | 소문자 `gpt-4*` 사용; 백엔드 와일드카드 일치는 대소문자 구분임 |
 | 두 와일드카드가 모두 일치함 | 동시에 `gpt-*`와 `gpt-4*`를 작성하고, 어떤 규칙을 따를지 확실하지 않음 | 더 구체적인 규칙이 더 "길게" 만들어, `*`가 아닌 문자가 더 많게 함 |
 | 규칙이 맞는 것 같지만 변하지 않음 | 응답 body만 보고, 응답 헤더를 보지 않음 | `curl -i`를 사용하여 `X-Mapped-Model`을 확인합니다(이것은 백엔드가 명시적으로 반환한 결과임) |
@@ -198,7 +198,7 @@ $resp.Headers["X-Mapped-Model"]
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 라인 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 구성 필드: `proxy.custom_mapping`(프론트엔드 타입) | [`src/types/config.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/types/config.ts#L6-L20) | 6-20 |
 | UI: 쓰기/초기화/프리셋(`update_model_mapping` 호출) | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L371-L475) | 371-475 |
 | UI: 모델 라우팅 카드(프리셋 매핑 적용 / 매핑 초기화 / 목록 및 추가 양식) | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L1762-L1931) | 1762-1931 |
@@ -207,7 +207,7 @@ $resp.Headers["X-Mapped-Model"]
 | 라우팅 알고리즘: 정확 > 와일드카드(더 구체적인 것 우선) > 기본 매핑 | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L180-L228) | 180-228 |
 | 와일드카드 일치: 다중 `*` 지원, 대소문자 구분 | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L134-L178) | 134-178 |
 | 요청에서 `mapped_model` 계산(예: OpenAI 핸들러) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L154-L159) | 154-159 |
-| 응답 헤더에 `X-Mapped-Model` 반환(예: OpenAI 핸들러) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L310-L334) | 310-334 |
+|--- | --- | ---|
 
 **핵심 함수**:
 - `resolve_model_route(original_model, custom_mapping)`: 모델 라우팅 주 진입점(`src-tauri/src/proxy/common/model_mapping.rs` 참조)

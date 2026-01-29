@@ -128,7 +128,7 @@ In code review, you need to provide feedback on specific code lines. If you only
 Plannotator supports three code annotation types, each with different purposes:
 
 | Annotation Type | Purpose | Typical Scenario | Suggested Code |
-| --------------- | ------- | ---------------- | -------------- |
+|--- | --- | --- | ---|
 | **Comment** | Comment on a code section, provide general feedback | "This logic can be simplified", "Variable naming is not clear" | Optional |
 | **Suggestion** | Provide specific code modification suggestions | "Suggest using map instead of for loop", "Use await instead of Promise.then" | Recommended |
 | **Concern** | Mark potential issues or risk points | "This SQL query may have performance issues", "Missing error handling" | Optional |
@@ -142,7 +142,7 @@ Plannotator supports three code annotation types, each with different purposes:
 ### Comment vs Suggestion vs Concern
 
 | Scenario | Choose Type | Example Text |
-| -------- | ----------- | ------------ |
+|--- | --- | ---|
 | Code works but has optimization space | Comment | "This can be simplified with async/await" |
 | Code has a clear improvement plan | Suggestion | "Suggest using `Array.from()` instead of spread operator" (with code) |
 | Found bug or serious issue | Concern | "Missing null check here, may cause runtime error" |
@@ -433,7 +433,7 @@ Code annotations are Plannotator's core feature for code review, allowing you to
 > Updated: 2026-01-24
 
 | Feature | File Path | Line Numbers |
-| ----------------- | ----------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | CodeAnnotation type definition | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L53-L56) | 53-56 |
 | CodeAnnotation interface | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L55-L66) | 55-66 |
 | DiffViewer component | [`packages/review-editor/components/DiffViewer.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/review-editor/components/DiffViewer.tsx#L1-L349) | 1-349 |

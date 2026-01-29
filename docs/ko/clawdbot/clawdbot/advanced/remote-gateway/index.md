@@ -39,7 +39,7 @@ order: 300
 **원격 Gateway**는 다음 시나리오에 적합합니다:
 
 | 시나리오 | 추천 솔루션 | 이유 |
-| ------ | -------- | ---- |
+|--- | --- | ---|
 | 노트북이 자주 절전 모드로 들어가며 AI 상주가 필요한 경우 | **Tailscale Serve + Linux VPS** | VPS는 절전 모드로 들어가지 않으며, tailnet을 통해 안전하게 액세스 |
 | 가정용 데스크톱에서 Gateway를 실행하고 노트북에서 원격 제어 | **SSH 터널** 또는 **Tailscale Serve** | Gateway 세션 및 구성 통합 |
 | 공용 네트워크에서 액세스해야 하는 경우(임시 테스트) | **Tailscale Funnel + 비밀번호** | 빠른 노출, 비밀번호 보호 필요 |
@@ -97,7 +97,7 @@ flowchart TD
 ### 세 가지 핵심 개념
 
 | 개념 | 설명 | 예시 |
-| ------ | ---- | ---- |
+|--- | --- | ---|
 | **Gateway 호스트** | Gateway 서비스를 실행하는 시스템, 세션, 인증, 채널, 상태 보유 | Linux VPS, 가정용 데스크톱 |
 | **클라이언트** | Gateway에 연결하는 도구(macOS App, CLI, WebChat) | 노트북, 휴대폰 |
 | **장치 노드** | Gateway WebSocket을 통해 연결된 외부 장치, 장치 로컬 작업 실행 | iOS 장치, Android 장치, macOS 노드 모드 |
@@ -107,7 +107,7 @@ flowchart TD
 가장 흔히 혼동되는 부분입니다:
 
 | 작업 유형 | 실행 위치 | 이유 |
-| -------- | ---------- | ---- |
+|--- | --- | ---|
 | `exec` 도구 | **Gateway 호스트** | Shell 명령이 Gateway 시스템에서 실행됨 |
 | `browser` 도구 | **Gateway 호스트**(또는 별도의 브라우저 제어 서버) | 브라우저가 Gateway 시스템에서 시작됨 |
 | 노드 작업(`camera.snap`, `system.run`)| **장치 노드** | 장치 로컬 리소스 액세스 필요 |
@@ -540,7 +540,7 @@ clawdbot health --url wss://your-funnel-url.ts.net --password your-secure-passwo
 위 솔루션 중 하나를 완료한 후 다음을 확인하세요:
 
 | 확인 항목 | 명령 | 예상 결과 |
-| -------- | ------ | -------- |
+|--- | --- | ---|
 | Gateway 실행 중 | `clawdbot gateway status` | ✅ Running |
 | WebSocket 액세스 가능 | `clawdbot health --url <url>` | ✅ Healthy |
 | Channels 연결됨 | `clawdbot channels status` | ✅ connected |
@@ -667,7 +667,7 @@ ssh -N -L 18790:127.0.0.1:18789 clawdbot-remote
 ### 구성 비교
 
 | 솔루션 | 보안성 | 액세스 범위 | 구성 복잡도 | 권장 시나리오 |
-| ---- | ------ | -------- | ---------- | -------- |
+|--- | --- | --- | --- | ---|
 | Tailscale Serve | ⭐⭐⭐⭐⭐ | Tailnet | 중 | **권장**: Always-on Gateway |
 | SSH 터널 | ⭐⭐⭐⭐ | SSH 연결 가능 | 낮 | 일용 후백, 가정용 데스크톱 원격 제어 |
 | Tailscale Funnel | ⭐⭐ | 공용 | 낮 | 임시 테스트, Demo |
@@ -702,7 +702,7 @@ ssh -N -L 18790:127.0.0.1:18789 clawdbot-remote
 > 업데이트: 2026-01-27
 
 | 기능 | 파일 경로 | 행 번호 |
-| ----- | -------- | ---- |
+|--- | --- | ---|
 | Gateway 원격 구성 스키마 | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 200-220 |
 | Gateway Tailscale 구성 스키마 | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 150-180 |
 | Tailscale 통합 | [`src/infra/tailscale.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/tailscale.ts) | 1-100 |

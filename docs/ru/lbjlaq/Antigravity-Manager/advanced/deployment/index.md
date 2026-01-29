@@ -61,7 +61,7 @@ order: 10
 ## Быстрая справка по выбору: Docker vs Headless Xvfb
 
 | То, что вам важнее всего | Рекомендуется | Почему |
-| --- | --- | --- |
+|--- | --- | ---|
 | Нужен браузер для OAuth/авторизации | Docker (noVNC) | В контейнере есть встроенный Firefox ESR, можно напрямую работать в браузере (см. `deploy/docker/README.md`) |
 | Хотите управление systemd/журналы на диск | Headless Xvfb | Скрипт установки установит systemd service, журналы будут дописываться в `logs/app.log` (см. `deploy/headless-xvfb/install.sh`) |
 | Хотите изоляцию и ограничения ресурсов | Docker | Способ compose обеспечивает естественную изоляцию, также проще настроить ограничения ресурсов (см. `deploy/docker/README.md`) |
@@ -222,7 +222,7 @@ sudo ./upgrade.sh
 ## Напоминания о возможных ошибках
 
 | Сценарий | Частая ошибка (❌) | Рекомендуемый подход (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Потеря учётных записей/конфигурации | ❌ Только заботитесь о том, чтобы «программа запустилась» | ✓ Сначала подтвердите, что `.antigravity_tools/` сохраняется (volume или `/opt/antigravity`) |
 | Порт noVNC не обновился | ❌ Изменили только `NOVNC_PORT` | ✓ Сохраните по умолчанию 6080; если меняете, одновременно проверьте порт `websockify` в `start.sh` |
 | Открытие 8045 в общественную сеть | ❌ Не настраиваете `api_key`/не смотрите auth_mode | ✓ Сначала выполните базовые требования согласно **[Безопасность и приватность](/ru/lbjlaq/Antigravity-Manager/advanced/security/)**, затем рассмотрите туннель/обратный прокси |
@@ -249,7 +249,7 @@ sudo ./upgrade.sh
 > Дата обновления: 2026-01-23
 
 | Функция | Путь к файлу | Номер строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Вход для развертывания Docker и URL noVNC | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L5-L13) | 5-13 |
 | Описание переменных окружения развертывания Docker (VNC_PASSWORD/RESOLUTION/NOVNC_PORT) | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L32-L39) | 32-39 |
 | Отображение портов и томов данных Docker compose (antigravity_data) | [`deploy/docker/docker-compose.yml`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/docker-compose.yml#L1-L21) | 1-21 |

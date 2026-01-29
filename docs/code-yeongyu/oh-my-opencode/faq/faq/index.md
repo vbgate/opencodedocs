@@ -81,7 +81,7 @@ opencode --version
 Configuration files have two levels:
 
 | Level | Location | Purpose | Priority |
-|-------|----------|---------|----------|
+|--- | --- | --- | ---|
 | Project | `.opencode/oh-my-opencode.json` | Project-specific configuration | Low |
 | User | `~/.config/opencode/oh-my-opencode.json` | Global default configuration | High |
 
@@ -173,7 +173,7 @@ delegate_task(agent="librarian", prompt="Find implementation examples of JWT aut
 **Agent permission limits**:
 
 | Agent | Can Write Code | Can Execute Bash | Can Delegate Tasks | Description |
-|-------|---------------|------------------|--------------------|-------------|
+|--- | --- | --- | --- | ---|
 | Sisyphus | ✅ | ✅ | ✅ | Main orchestrator |
 | Oracle | ❌ | ❌ | ❌ | Read-only advisor |
 | Librarian | ❌ | ❌ | ❌ | Read-only research |
@@ -265,7 +265,7 @@ Avoid API rate limits and runaway costs. For example, Claude Opus 4.5 is expensi
 **Built-in Categories**:
 
 | Category | Default Model | Temperature | Use Cases |
-|----------|---------------|-------------|----------|
+|--- | --- | --- | ---|
 | visual-engineering | google/gemini-3-pro | 0.7 | Frontend, UI/UX, design |
 | ultrabrain | openai/gpt-5.2-codex | 0.1 | High-IQ reasoning tasks |
 | artistry | google/gemini-3-pro | 0.7 | Creative and artistic tasks |
@@ -277,7 +277,7 @@ Avoid API rate limits and runaway costs. For example, Claude Opus 4.5 is expensi
 **Built-in Skills**:
 
 | Skill | Trigger Condition | Description |
-|-------|-------------------|-------------|
+|--- | --- | ---|
 | playwright | Browser-related tasks | Playwright MCP browser automation |
 | frontend-ui-ux | UI/UX tasks | Designer-turned-developer, crafting beautiful interfaces |
 | git-master | Git operations (commit, rebase, squash) | Git expert, atomic commits, history search |
@@ -304,7 +304,7 @@ Categories optimize costs (use cheaper models), Skills ensure quality (inject ex
 **Supported configuration types**:
 
 | Type | Load Location | Priority |
-|------|--------------|----------|
+|--- | --- | ---|
 | Commands | `~/.claude/commands/`, `.claude/commands/` | Low |
 | Skills | `~/.claude/skills/*/SKILL.md`, `.claude/skills/*/SKILL.md` | Medium |
 | Agents | `~/.claude/agents/*.md`, `.claude/agents/*.md` | High |
@@ -346,7 +346,7 @@ As of January 2026, Anthropic has restricted third-party OAuth access, citing To
 **Yes**, data storage format is compatible:
 
 | Data | Location | Format | Compatibility |
-|------|----------|--------|---------------|
+|--- | --- | --- | ---|
 | Todos | `~/.claude/todos/` | JSON | ✅ Claude Code compatible |
 | Transcripts | `~/.claude/transcripts/` | JSONL | ✅ Claude Code compatible |
 
@@ -438,7 +438,7 @@ opencode --version
 **Common issues**:
 
 | Issue | Cause | Solution |
-|-------|-------|----------|
+|--- | --- | ---|
 | Agent refuses task | Incorrect permission configuration | Check `agents.permission` configuration |
 | Background task timeout | Concurrency limit too strict | Increase `providerConcurrency` |
 | Thinking block error | Model doesn't support thinking | Switch to a model that supports thinking |
@@ -559,7 +559,7 @@ Remember these key points:
 > Updated: 2026-01-26
 
 | Feature | File Path | Lines |
-|--------|-----------|-------|
+|--- | --- | ---|
 | Keyword Detector (ultrawork detection) | [`src/hooks/keyword-detector/`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/keyword-detector/) | Entire directory |
 | Background Task Manager | [`src/features/background-agent/manager.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/background-agent/manager.ts) | 1-1377 |
 | Concurrency Control | [`src/features/background-agent/concurrency.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/background-agent/concurrency.ts) | Entire file |

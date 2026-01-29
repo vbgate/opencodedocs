@@ -21,7 +21,7 @@ The latest stable version is **v0.6.4** (2026-01-20)
 ## Version Timeline
 
 | Version | Release Date | Type | Main Content |
-| ------- | ----------- | ---- | ------------ |
+|--- | --- | --- | ---|
 | 0.6.4 | 2026-01-20 | Fix | YAML parsing, Claude v2 support |
 | 0.6.3 | 2025-12-16 | Improvement | Optimize skill recommendation prompts |
 | 0.6.2 | 2025-12-15 | Fix | Separate skill name from directory name |
@@ -141,7 +141,7 @@ The latest stable version is **v0.6.4** (2026-01-20)
 ## Feature Evolution Overview
 
 | Feature | Introduced Version | Evolution Path |
-| ------- | ----------------- | -------------- |
+|--- | --- | ---|
 | 4 Basic Tools | v0.1.0 | v0.5.0 added fuzzy matching |
 | Multi-location Skill Discovery | v0.1.0 | v0.4.1 simplified installation, v0.6.4 added Claude v2 support |
 | Auto Context Injection | v0.1.0 | v0.3.0 added file list, v0.6.1 avoided duplicate recommendations |
@@ -186,7 +186,7 @@ Added support for Superpowers workflow mode, requiring installation of `using-su
 > Updated: 2026-01-24
 
 | Feature | File Path | Line |
-| ------- | --------- | ---- |
+|--- | --- | ---|
 | Current Version | [`package.json`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/package.json#L3-L3) | 3 |
 | Version History | [`CHANGELOG.md`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/CHANGELOG.md#L19-L152) | 19-152 |
 

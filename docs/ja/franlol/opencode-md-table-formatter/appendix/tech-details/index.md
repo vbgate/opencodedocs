@@ -62,7 +62,7 @@ const widthCache = new Map<string, number>()
 **例**：
 
 | 元のテキスト（Key） | 表示幅（Value） | 説明 |
-| --------------- | ---------------- | ---- |
+|--- | --- | ---|
 | `**姓名**` | 4 | `**` を削除後の幅が 4 |
 | `*年龄*` | 4 | `*` を削除後の幅が 4 |
 | `` `status` `` | 8 | コードブロック記号も幅に含まれる |
@@ -120,7 +120,7 @@ graph TD
 **ステップの詳細**：
 
 | ステップ | 操作 | 時間計算量 |
-| ---- | ---- | ---------- |
+|--- | --- | ---|
 | 1 | `widthCache.has(text)` をチェック | O(1) |
 | 2 | キャッシュヒット → 直接返す | O(1) |
 | 3 | キャッシュミス → 幅を計算 | O(n) |
@@ -166,7 +166,7 @@ function cleanupCache() {
 **トリガー条件**（いずれかを満たすとトリガー）：
 
 | 条件 | しきい値 | 説明 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | 操作回数 | > 100 回のフォーマット操作 | 頻繁なクリーンアップを回避 |
 | キャッシュエントリ | > 1000 個のセル | メモリ使用量の増大を防止 |
 
@@ -192,7 +192,7 @@ function cleanupCache() {
 **キャッシュの効果**：
 
 | シナリオ | キャッシュなし | キャッシュあり | パフォーマンス向上 |
-| ---- | ---------- | -------- | -------- |
+|--- | --- | --- | ---|
 | 5 列 × 10 行（重複なし） | 50 回の計算 | 50 回の計算 | なし |
 | 5 列 × 10 行（ヘッダー重複） | 50 回の計算 | 10 回の計算 + 40 回のキャッシュヒット | ~80% |
 
@@ -207,7 +207,7 @@ function cleanupCache() {
 **シナリオの例**：
 
 | シナリオ | キャッシュの効果 |
-| ---- | -------- |
+|--- | ---|
 | AI 生成の比較テーブル | ✅ 効果が顕著（複数列の重複内容） |
 | シンプルな単一行テーブル | ⚪ 効果は普通（内容は一意） |
 | テーブル内の Markdown ネスト | ✅ 効果が顕著（記号削除のオーバーヘッドが大きい） |
@@ -254,7 +254,7 @@ function cleanupCache() {
 > 更新日時：2026-01-26
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | widthCache 定義 | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L6) | 6 |
 | cacheOperationCount 定義 | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L7) | 7 |
 | calculateDisplayWidth 関数 | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L151-L159) | 151-159 |

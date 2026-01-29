@@ -74,7 +74,7 @@ order: 4
 **关键区别**：
 
 | 普通模型 | Thinking 模型 |
-| --------- | ------------- |
+|--- | ---|
 | 直接生成答案 | 先思考 → 再生成答案 |
 | 快速但可能浅薄 | 慢速但更深入 |
 | 适合简单任务 | 适合复杂任务 |
@@ -415,7 +415,7 @@ Signature mismatch in thinking blocks
 Thinking 模型通过在生成答案前进行内部推理，提升复杂任务的回答质量：
 
 | 功能 | Claude Thinking | Gemini 3 Thinking |
-|------|---------------|-----------------|
+|--- | --- | ---|
 | **配置方式** | `thinkingBudget`（数字） | `thinkingLevel`（字符串） |
 | **Levels** | 自定义 budget | minimal/low/medium/high |
 | **Keys** | snake_case（`include_thoughts`） | camelCase（`includeThoughts`） |
@@ -448,7 +448,7 @@ Thinking 模型通过在生成答案前进行内部推理，提升复杂任务�
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | Claude Thinking 配置构建 | [`src/plugin/transform/claude.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/claude.ts) | 62-72 |
 | Gemini 3 Thinking 配置构建 | [`src/plugin/transform/gemini.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/gemini.ts) | 163-171 |
 | Gemini 2.5 Thinking 配置构建 | [`src/plugin/transform/gemini.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/gemini.ts) | 176-184 |

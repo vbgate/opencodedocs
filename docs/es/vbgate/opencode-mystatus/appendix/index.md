@@ -34,7 +34,7 @@ Ver todos los endpoints oficiales de API llamados por el plugin:
 ## Escenarios de uso
 
 | Escenario | Documento recomendado |
-|------|---------|
+|--- | ---|
 | Quieres comprender cómo funciona el plugin | [Modelos de datos](./data-models/) |
 | Quieres llamar a la API manualmente | [Resumen de endpoints de API](./api-endpoints/) |
 | Quieres extender soporte para nuevas plataformas | Necesitas ambos documentos |

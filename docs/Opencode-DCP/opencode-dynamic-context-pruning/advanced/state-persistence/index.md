@@ -58,7 +58,7 @@ With persistence, DCP can:
 DCP saves two types of state:
 
 | Type | Content | Purpose |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | **Pruning State** | List of pruned tool IDs | Avoid re-pruning, cross-session tracking |
 | **Statistics** | Token savings count (current session + historical cumulative) | Show DCP effectiveness, long-term trend analysis |
 
@@ -155,7 +155,7 @@ cat ~/.local/share/opencode/storage/plugin/dcp/{sessionId}.json
 **Field Descriptions**:
 
 | Field | Type | Meaning |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | `sessionName` | string (optional) | Session name for identification |
 | `prune.toolIds` | string[] | List of pruned tool IDs |
 | `stats.pruneTokenCounter` | number | Tokens saved in current session (unarchived) |
@@ -194,7 +194,7 @@ All-time:
 **Statistics Meaning**:
 
 | Statistic | Source | Description |
-| ------ | ---- | ---- |
+|--- | --- | ---|
 | **Session** | Current memory state | Pruning effectiveness for current session |
 | **All-time** | All persistent files | Cumulative effectiveness across all historical sessions |
 
@@ -216,7 +216,7 @@ Knowing when DCP saves state prevents accidental data loss
 DCP automatically saves state to disk at the following times:
 
 | Trigger | Saved Content | Call Location |
-| -------- | -------- | -------- |
+|--- | --- | ---|
 | After AI calls `discard`/`extract` tools | Updated pruning state + stats | `lib/strategies/tools.ts:148-150` |
 | After user executes `/dcp sweep` command | Updated pruning state + stats | `lib/commands/sweep.ts:234-236` |
 | After pruning operations complete | Async save, doesn't block main flow | `saveSessionState()` |
@@ -247,7 +247,7 @@ Knowing when DCP loads persistent state helps understand session switching behav
 DCP automatically loads persistent state at the following times:
 
 | Trigger | Loaded Content | Call Location |
-| -------- | -------- | -------- |
+|--- | --- | ---|
 | When OpenCode starts or switches sessions | Historical pruning state + stats for that session | `lib/state/state.ts:104` (inside `ensureSessionInitialized` function) |
 
 **Load Process**:
@@ -387,7 +387,7 @@ Context compression → Clear memory state (don't delete disk files)
 > Last updated: 2026-01-23
 
 | Feature | File Path | Line Number |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | Persistence interface definition | [`lib/state/persistence.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/state/persistence.ts) | 14-19 |
 | Save session state | [`lib/state/persistence.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/state/persistence.ts) | 33-66 |
 | Load session state | [`lib/state/persistence.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/state/persistence.ts) | 68-101 |

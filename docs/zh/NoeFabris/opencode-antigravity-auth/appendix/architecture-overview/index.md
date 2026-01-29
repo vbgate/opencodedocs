@@ -110,7 +110,7 @@ graph TD
 ### 各模块职责
 
 | 模块 | 文件 | 职责 |
-| ----- | ------ | ----- |
+|--- | --- | ---|
 | **主入口** | `plugin.ts` | fetch 拦截器、插件初始化、事件处理 |
 | **账户管理** | `accounts.ts` | 多账户池、负载均衡策略、速率限制追踪 |
 | **请求转换** | `request.ts` | 请求格式转换、响应流式处理 |
@@ -309,7 +309,7 @@ interface AccountPool {
 **2. 账户选择策略**
 
 | 策略 | 描述 | 适用场景 |
-| ----- | ------ | -------- |
+|--- | --- | ---|
 | **sticky** | 保持当前账户直到速率限制 | 单会话使用，保留提示词缓存 |
 | **round-robin** | 每次请求轮换到下一个账户 | 多会话并行，最大化吞吐量 |
 | **hybrid** | 健康评分 + Token bucket + LRU 综合决策 | 默认策略，平衡性能和可靠性 |
@@ -529,7 +529,7 @@ await client.session.prompt({
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 插件主入口、fetch 拦截器 | [`src/plugin.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin.ts) | 654-1334 |
 | 账户管理器、负载均衡 | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts) | 1-715 |
 | 请求转换、响应流式 | [`src/plugin/request.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request.ts) | 1-1664 |

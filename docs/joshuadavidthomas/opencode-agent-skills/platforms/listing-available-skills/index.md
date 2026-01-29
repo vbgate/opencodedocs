@@ -249,7 +249,7 @@ The plugin automatically injects the skill list at the start of a session, so yo
 > Last updated: 2026-01-24
 
 | Function        | File Path                                                                                    | Line Range |
-| ----------- | ------------------------------------------------------------------------------------------- | ---------- |
+|--- | --- | ---|
 | GetAvailableSkills tool definition | [`src/tools.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/tools.ts#L29-L72)         | 29-72   |
 | discoverAllSkills function | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L240-L263) | 240-263 |
 | resolveSkill function | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L269-L283) | 269-283 |

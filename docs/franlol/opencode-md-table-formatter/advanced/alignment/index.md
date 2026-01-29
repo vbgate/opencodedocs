@@ -28,7 +28,7 @@ AI generated a table, but the column alignment isn't aesthetically pleasing:
 
 ```markdown
 | 名称 | 类型 | 描述 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 用户 | string | 用户名 |
 | 年龄 | number | 年龄 |
 | is_active | boolean | 是否激活 |
@@ -50,7 +50,7 @@ In Markdown tables, alignment isn't specified on every row—it's set uniformly 
 The separator row syntax is: `:?-+:?` (colon + dash + colon)
 
 | Colon Position | Alignment | Example |
-| --- | --- | --- |
+|--- | --- | ---|
 | Both sides | Center | `:---:` |
 | Right side only | Right-aligned | `---:` |
 | Neither | Left-aligned | `---` or `:---` |
@@ -77,7 +77,7 @@ Left-alignment is the default behavior for tables, suitable for text-based data.
 
 ```markdown
 | 名称   | 描述   |
-| :----- | :----- |
+|--- | ---|
 | 用户   | 用户名 |
 ```
 
@@ -116,7 +116,7 @@ Center alignment is suitable for content that needs visual centering, such as st
 
 ```markdown
 | 名称 | 状态 | 描述 |
-| :--- | :---: | :--- |    ← Middle column uses :---: to indicate center alignment
+|--- | --- | --- | ---|
 | 用户 | 激活 | 用户名 |
 ```
 
@@ -124,7 +124,7 @@ Center alignment is suitable for content that needs visual centering, such as st
 
 ```markdown
 | 名称   |  状态  | 描述   |
-| :----- | :----: | :----- |
+|--- | --- | ---|
 | 用户   |  激活  | 用户名 |
 ```
 
@@ -149,7 +149,7 @@ Source location: `index.ts:213-217`
 The centered separator row format is: `:` + dashes + `:`
 
 | Target Width | Calculation Formula | Result |
-| --- | --- | --- |
+|--- | --- | ---|
 | 3 | `:` + ` `-`*1 ` + `:` | `:-:` |
 | 5 | `:` + `-`*3 + `:` | `:---:` |
 | 10 | `:` + `-`*8 + `:` | `:--------:` |
@@ -174,7 +174,7 @@ Right-alignment is suitable for data that needs to be compared from right to lef
 
 ```markdown
 | 名称   | 价格 | 数量 |
-| :----- | ----: | ---: |
+|--- | --- | ---|
 | 商品   |  99.9 |  100 |
 ```
 
@@ -185,7 +185,7 @@ Numbers are aligned to the right, making it easy to compare sizes.
 The right-aligned separator row format is: dashes + `:`
 
 | Target Width | Calculation Formula | Result |
-| --- | --- | --- |
+|--- | --- | ---|
 | 3 | `-`*2 + `:` | `--:` |
 | 5 | `-`*4 + `:` | `----:` |
 | 10 | `-`*9 + `:` | `---------:` |
@@ -220,7 +220,7 @@ Source location: `index.ts:198-211`
 **Padding Rules**
 
 | Alignment | Left Padding | Right Padding | Example (target width 10, text "abc") |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | Left-align | 0 | totalPadding | `abc       ` |
 | Center | floor(total/2) | total - floor(total/2) | `   abc    ` |
 | Right-align | totalPadding | 0 | `       abc` |
@@ -230,7 +230,7 @@ Source location: `index.ts:198-211`
 `Math.floor(totalPadding / 2)` ensures left padding is an integer, with extra space added to the right.
 
 | Target Width | Text Width | totalPadding | Left Padding | Right Padding | Result |
-| --- | --- | --- | --- | --- | --- |
+|--- | --- | --- | --- | --- | ---|
 | 10 | 3 | 7 | 3 (7÷2=3.5→3) | 4 (7-3) | `   abc    ` |
 | 11 | 3 | 8 | 4 (8÷2=4) | 4 (8-4) | `    abc    ` |
 | 12 | 3 | 9 | 4 (9÷2=4.5→4) | 5 (9-4) | `    abc     ` |
@@ -241,7 +241,7 @@ Source location: `index.ts:198-211`
 
 ```markdown
 | 名称 | 状态 | 价格 | 描述 |
-| :--- | :---: | ---: | :--- |
+|--- | --- | --- | ---|
 | 商品A | 激活 | 99.9 | 这是一个商品 |
 | 商品B | 停用 | 199.0 | 这是另一个商品 |
 ```
@@ -250,7 +250,7 @@ Source location: `index.ts:198-211`
 
 ```markdown
 | 名称   |  状态  | 价格 | 描述         |
-| :----- | :----: | ----: | :----------- |
+|--- | --- | --- | ---|
 | 商品A  |  激活  |  99.9 | 这是一个商品 |
 | 商品B  |  停用  | 199.0 | 这是另一个商品 |
 ```
@@ -258,7 +258,7 @@ Source location: `index.ts:198-211`
 **Alignment for each column**:
 
 | Column Name | Separator Row Syntax | Alignment | Description |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | 名称 | `:---` | Left-align | Text aligned left |
 | 状态 | `:---:` | Center | Text centered |
 | 价格 | `---:` | Right-align | Numbers aligned right |
@@ -288,7 +288,7 @@ The separator row is the "configuration", data rows are the "content"—one conf
 The colon position in the separator row **must** correspond to the columns.
 
 | Wrong Example | Problem |
-| --- | --- |
+|--- | ---|
 | `| :--- | --- |` | First column centered, second column left-aligned (2 columns) |
 | `| :--- | ---: | :--- |` | First column left-aligned, second column right-aligned, third column left-aligned (3 columns) |
 
@@ -298,7 +298,7 @@ The separator row's column count must match the header and data row column count
 ## Lesson Summary
 
 | Alignment | Separator Row Syntax | Use Cases |
-| --- | --- | --- |
+|--- | --- | ---|
 | Left-align | `---` or `:---` | Text, description data (default) |
 | Center | `:---:` | Status tags, short text, headers |
 | Right-align | `---:` | Numbers, amounts, dates |
@@ -306,7 +306,7 @@ The separator row's column count must match the header and data row column count
 **Key Functions**:
 
 | Function | Purpose | Source Location |
-| --- | --- | --- |
+|--- | --- | ---|
 | `getAlignment()` | Parse alignment method of separator row cells | 141-149 |
 | `padCell()` | Pad cells to specified width | 198-211 |
 | `formatSeparatorCell()` | Format separator row cells | 213-217 |
@@ -335,7 +335,7 @@ The separator row's column count must match the header and data row column count
 > Last updated: 2026-01-26
 
 | Feature | File Path | Line Number |
-| --- | --- | --- |
+|--- | --- | ---|
 | Alignment method parsing | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L141-L149) | 141-149 |
 | Cell padding | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L198-L211) | 198-211 |
 | Separator row formatting | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L213-L217) | 213-217 |

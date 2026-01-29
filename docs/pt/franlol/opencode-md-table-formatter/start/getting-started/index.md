@@ -25,7 +25,7 @@ As tabelas Markdown geradas por IA frequentemente ficam assim:
 
 ```markdown
 | 名称 | 描述 | 状态 |
-|---|---|---|
+|--- | --- | ---|
 | 功能A | 这是一个很长的描述文本 | 已完成 |
 | B | 短 | 进行中 |
 ```
@@ -125,7 +125,7 @@ Gere uma tabela comparando os recursos dos frameworks React, Vue e Angular
 
 ```markdown
 | 框架    | 特点                     | 学习曲线 |
-| ------- | ------------------------ | -------- |
+|--- | --- | ---|
 | React   | 组件化、虚拟 DOM         | 中等     |
 | Vue     | 渐进式、双向绑定         | 较低     |
 | Angular | 全功能框架、TypeScript   | 较高     |
@@ -136,7 +136,7 @@ Gere uma tabela comparando os recursos dos frameworks React, Vue e Angular
 Após concluir as etapas acima, verifique os seguintes pontos:
 
 | Item de verificação                   | Resultado esperado                       |
-| ------------------------ | ------------------------------ |
+|--- | ---|
 | Sintaxe do arquivo de configuração             | Sem erros                         |
 | Inicialização do OpenCode            | Inicia normalmente, sem erros de carregamento de plugin       |
 | Tabelas geradas pela IA              | Larguras das colunas alinhadas automaticamente, formato da linha separador unificado   |
@@ -184,7 +184,7 @@ Consulte a seção [Perguntas Frequentes](../../faq/troubleshooting/) para obter
 > Atualizado em: 2026-01-26
 
 | Função           | Caminho do arquivo                                                                                     | Número da linha    |
-| -------------- | -------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Entrada do plugin       | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L9-L23) | 9-23    |
 | Registro de hooks       | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L11-L13) | 11-13   |
 | Configuração do pacote         | [`package.json`](https://github.com/franlol/opencode-md-table-formatter/blob/main/package.json#L1-L41) | 1-41    |

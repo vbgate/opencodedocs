@@ -40,7 +40,7 @@ order: 240
 Everything Claude Code 支持两种配置层级：
 
 | 配置类型 | 位置 | 作用范围 | 典型用途 |
-| -------- | ---- | -------- | -------- |
+|--- | --- | --- | ---|
 | **项目级配置** | 项目根目录 `CLAUDE.md` | 仅当前项目 | 项目特定规则、技术栈、文件结构 |
 | **用户级配置** | `~/.claude/CLAUDE.md` | 所有项目 | 个人编码偏好、通用规则、编辑器设置 |
 
@@ -104,11 +104,11 @@ Everything Claude Code 支持两种配置层级：
 
 ```
 src/
-|-- app/              # Next.js app router
-|-- components/       # Reusable UI components
-|-- hooks/            # Custom React hooks
-|-- lib/              # Utility libraries
-|-- types/            # TypeScript definitions
+|---|
+|---|
+|---|
+|---|
+|---|
 ```
 
 ## Key Patterns
@@ -178,7 +178,7 @@ DEBUG=false
 这是最重要的部分，定义项目必须遵守的规则：
 
 | 规则类别 | 说明 | 必填 |
-| -------- | ---- | ---- |
+|--- | --- | ---|
 | Code Organization | 文件组织原则 | 是 |
 | Code Style | 编码风格 | 是 |
 | Testing | 测试要求 | 是 |
@@ -242,7 +242,7 @@ You are Claude Code. I use specialized agents and skills for complex tasks.
 Detailed guidelines are in `~/.claude/rules/`:
 
 | Rule File | Contents |
-|-----------|----------|
+|--- | ---|
 | security.md | Security checks, secret management |
 | coding-style.md | Immutability, file organization, error handling |
 | testing.md | TDD workflow, 80% coverage requirement |
@@ -258,10 +258,10 @@ Detailed guidelines are in `~/.claude/rules/`:
 Located in `~/.claude/agents/`:
 
 | Agent | Purpose |
-|-------|---------|
+|--- | ---|
 | planner | Feature implementation planning |
 | architect | System design and architecture |
-| tdd-guide | Test-driven development |
+|--- | ---|
 | code-reviewer | Code review for quality/security |
 | security-reviewer | Security vulnerability analysis |
 | build-error-resolver | Build error resolution |
@@ -342,7 +342,7 @@ You are Claude Code. I use specialized agents and skills for complex tasks.
 Detailed guidelines are in `~/.claude/rules/`:
 
 | Rule File | Contents |
-|-----------|----------|
+|--- | ---|
 | security.md | Security checks, secret management |
 | coding-style.md | Immutability, file organization, error handling |
 | testing.md | TDD workflow, 80% coverage requirement |
@@ -392,7 +392,7 @@ affoon:~/projects/myapp main* ctx:73% sonnet-4.5 14:30 todos:3
 ```
 
 | 组件 | 含义 | 示例 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | `user` | 当前用户名 | `affoon` |
 | `path` | 当前目录（~ 缩写） | `~/projects/myapp` |
 | `branch*` | Git 分支（* 表示有未提交变更） | `main*` |
@@ -406,7 +406,7 @@ affoon:~/projects/myapp main* ctx:73% sonnet-4.5 14:30 todos:3
 状态栏使用 ANSI 颜色码，可以自定义：
 
 | 颜色代码 | 变量 | 用途 | RGB |
-| -------- | ---- | ---- | --- |
+|--- | --- | --- | ---|
 | 蓝色 | `B` | 目录路径 | 30,102,245 |
 | 绿色 | `G` | Git 分支 | 64,160,43 |
 | 黄色 | `Y` | 脏状态、时间 | 223,142,29 |

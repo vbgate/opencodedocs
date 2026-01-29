@@ -173,7 +173,7 @@ Clique em "Resetar Mapeamento".
 ## Lembrete de Armadilhas
 
 | Cenário | O Que Você Pode Fazer (❌) | Recomendado (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Curinga não entrou em vigor | Escreveu `GPT-4*` esperando corresponder `gpt-4-turbo` | Use minúsculas `gpt-4*`; correspondência curinga backend é sensível a maiúsculas/minúsculas |
 | Dois curingas podem corresponder | Escreveu simultaneamente `gpt-*` e `gpt-4*`, incerto qual irá | Faça regra mais específica mais "longa", garanta seus caracteres não `*` são mais |
 | Regras parecem corretas, mas ainda não mudou | Apenas olhar corpo de resposta, não headers de resposta | Use `curl -i` para confirmar `X-Mapped-Model` (este é resultado explicitamente retornado pelo backend) |
@@ -199,7 +199,7 @@ Clique em "Resetar Mapeamento".
 > Última Atualização: 2026-01-23
 
 | Função | Caminho do Arquivo | Número da Linha |
-| --- | --- | --- |
+|--- | --- | ---|
 | Campo de Configuração: `proxy.custom_mapping` (tipo frontend) | [`src/types/config.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/types/config.ts#L6-L20) | 6-20 |
 | UI: escrever/resetar/preset (chamar `update_model_mapping`) | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L371-L475) | 371-475 |
 | UI: cartão de roteamento de modelo (aplicar mapeamento preset / resetar mapeamento / lista e formulário de adição) | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L1762-L1931) | 1762-1931 |
@@ -208,7 +208,7 @@ Clique em "Resetar Mapeamento".
 | Algoritmo de roteamento: exato > curinga (mais específico tem prioridade) > mapeamento padrão | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L180-L228) | 180-228 |
 | Correspondência curinga: suporta múltiplos `*`, e sensível a maiúsculas/minúsculas | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L134-L178) | 134-178 |
 | Calcular `mapped_model` na solicitação (exemplo: handler OpenAI) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L154-L159) | 154-159 |
-| Header de resposta retornado `X-Mapped-Model` (exemplo: handler OpenAI) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L310-L334) | 310-334 |
+|--- | --- | ---|
 
 **Funções Chave**:
 - `resolve_model_route(original_model, custom_mapping)`: entrada principal de roteamento de modelo (veja `src-tauri/src/proxy/common/model_mapping.rs`)

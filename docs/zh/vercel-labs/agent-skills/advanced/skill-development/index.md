@@ -434,7 +434,7 @@ trap cleanup EXIT
 > 更新时间：2026-01-25
 
 | 功能               | 文件路径                                                                                       | 行号   |
-| ------------------ | ---------------------------------------------------------------------------------------------- | ------ |
+|--- | --- | ---|
 | 技能开发规范       | [`AGENTS.md:9-69`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L9-L69)     | 9-69   |
 | 目录结构定义       | [`AGENTS.md:11-20`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L11-L20)   | 11-20  |
 | 命名约定           | [`AGENTS.md:22-27`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L22-L27)   | 22-27  |

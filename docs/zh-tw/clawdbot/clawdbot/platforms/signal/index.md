@@ -220,7 +220,7 @@ Signal 允許最多關聯 4 個裝置。Clawdbot 會作為其中一個裝置執�
 **設定說明**：
 
 | 欄位 | 值 | 說明 |
-|------|-----|------|
+|--- | --- | ---|
 | `enabled` | `true` | 啟用 Signal 頻道 |
 | `account` | `"+15551234567"` | 你的 Signal 帳號（E.164 格式） |
 | `cliPath` | `"signal-cli"` | signal-cli 指令路徑 |
@@ -576,7 +576,7 @@ which signal-cli
 > 更新時間：2026-01-27
 
 | 功能        | 檔案路徑                                                                                    | 行號    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Signal RPC 客戶端 | [`src/signal/client.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/client.ts)         | 1-186   |
 | Signal 守護程序管理 | [`src/signal/daemon.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/daemon.ts)         | 1-85    |
 | 多帳戶支援 | [`src/signal/accounts.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/accounts.ts)       | 1-84    |

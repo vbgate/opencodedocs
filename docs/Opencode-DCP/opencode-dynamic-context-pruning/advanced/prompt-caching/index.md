@@ -69,7 +69,7 @@ This operation changes the exact content of the message (originally full tool ou
 **Trade-off Analysis**
 
 | Metric | Without DCP | With DCP | Impact |
-| ---- | ------ | -------- | ---- |
+|--- | --- | --- | ---|
 | **Cache Hit Rate** | ~85% | ~65% | ⬇️ Decrease by 20% |
 | **Context Size** | Continuously growing | Controlled pruning | ⬇️ Significantly reduced |
 | **Token Savings** | 0 | 10-40% | ⬆️ Significantly increased |
@@ -114,7 +114,7 @@ Need to weigh cache loss against token savings.
 Assume a long session with 100 messages, total tokens of 100K:
 
 | Scenario | Cache Hit Rate | Cache-Saved Tokens | DCP Pruning-Saved Tokens | Total Savings |
-| ---- | ---------- | ------------- | ----------------- | ------ |
+|--- | --- | --- | --- | ---|
 | Without DCP | 85% | 85K × (1-0.85) = 12.75K | 0 | 12.75K |
 | With DCP | 65% | 100K × (1-0.65) = 35K | 20K (estimated) | 35K + 20K - 12.75K = **42.25K** |
 
@@ -169,7 +169,7 @@ Summary:
 **Key Metrics Interpretation**:
 
 | Metric | Meaning | How to Evaluate |
-| ---- | ---- | -------- |
+|--- | --- | ---|
 | **Pruned** | Number of pruned tools and token count | Higher means DCP saves more |
 | **Current context** | Total tokens in current session context | Should be significantly smaller than Without DCP |
 | **Without DCP** | How large context would be without DCP | Used to compare savings effect |
@@ -201,7 +201,7 @@ Intuitively feel the difference in caching and token savings through comparison
 Use `/dcp context` to observe changes in key metrics:
 
 | Metric | Without DCP | With DCP | Explanation |
-| ---- | -------- | -------- | ---- |
+|--- | --- | --- | ---|
 | **Pruned** | 0 tools | 5-20 tools | Number of tools pruned by DCP |
 | **Current context** | Larger | Smaller | Context significantly reduced after DCP |
 | **Without DCP** | Same as Current | Greater than Current | Shows DCP's savings potential |
@@ -238,7 +238,7 @@ DCP reduces this pollution by removing completed tool outputs, duplicate read op
 **Actual effect comparison**:
 
 | Scenario | Without DCP | With DCP |
-| ---- | ------ | -------- |
+|--- | --- | ---|
 | Read the same file 3 times | Keep 3 complete outputs (redundant) | Keep only the latest one |
 | Re-read after writing to file | Old write + new read | Keep only new read |
 | Error tool output | Keep complete error input | Keep only error message |
@@ -250,7 +250,7 @@ After reducing context pollution, the model can more accurately understand curre
 ### Choose Strategy Based on Provider
 
 | Provider | Billing Model | Recommendation | Reason |
-| ------ | -------- | ---- | ---- |
+|--- | --- | --- | ---|
 | **GitHub Copilot** | Per request | ✅ Always enable | Zero-cost optimization, only improves performance |
 | **Google Antigravity** | Per request | ✅ Always enable | Same as above |
 | **Anthropic** | Per token | ✅ Enable for long sessions<br>⚠️ Optional for short sessions | Weigh caching vs savings |
@@ -365,7 +365,7 @@ By comparing `Without DCP` and `Current context`, you can see the actual number 
 **Trade-off Decision Matrix**:
 
 | Scenario | Recommended Configuration | Reason |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | GitHub Copilot/Google Antigravity | ✅ Always enable | Request-based billing, zero-cost optimization |
 | Anthropic/OpenAI long sessions | ✅ Enable all strategies | Token savings > cache loss |
 | Anthropic/OpenAI short sessions | ⚠️ Only enable deduplication + purge errors | Caching is more important |
@@ -406,7 +406,7 @@ By comparing `Without DCP` and `Current context`, you can see the actual number 
 > Last updated: 2026-01-23
 
 | Feature | File Path | Line Numbers |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | Prompt Caching explanation | [`README.md`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/README.md) | 46-52 |
 | Token calculation (including cache) | [`lib/messages/utils.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/messages/utils.ts) | 66-78 |
 | Context analysis command | [`lib/commands/context.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/commands/context.ts) | 68-174 |

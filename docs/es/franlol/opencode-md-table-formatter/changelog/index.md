@@ -15,7 +15,7 @@ Este capítulo registra la evolución de versiones del complemento opencode-md-t
 ## 📚 Navegación de subpáginas
 
 | Página | Descripción | Tiempo de lectura |
-|--------|-------------|-------------------|
+|--- | --- | ---|
 | **[Registro de cambios: historial de versiones y registro de modificaciones](./release-notes/)** | Ver registros detallados de cambios de todas las versiones, incluyendo nuevas funciones, detalles técnicos, limitaciones conocidas y planes futuros | 5 minutos |
 
 ---

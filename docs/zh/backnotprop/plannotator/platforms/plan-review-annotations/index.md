@@ -73,7 +73,7 @@ order: 2
 Plannotator 支持四种计划注释类型（外加一种全局评论）：
 
 | 注释类型 | 图标 | 用途 | 是否需要输入内容 |
-|---------|------|------|---------------|
+|--- | --- | --- | ---|
 | **删除 (DELETION)** | 🗑️ | 标记此内容应从计划中移除 | ❌ 不需要 |
 | **评论 (COMMENT)** | 💬 | 对选中内容提出问题或建议 | ✅ 需要输入评论 |
 | **替换 (REPLACEMENT)** | 通过评论实现 | 用新内容替换选中内容 | ✅ 需要输入新内容 |
@@ -374,11 +374,11 @@ Plannotator 支持四种计划注释类型（外加一种全局评论）：
 > 更新时间：2026-01-24
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 注释类型枚举定义 | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L1-L7) | 1-7 |
 | Annotation 接口 | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L11-L33) | 11-33 |
 | 注释工具栏组件 | [`packages/ui/components/AnnotationToolbar.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/components/AnnotationToolbar.tsx#L29-L272) | 29-272 |
-| type-to-comment 实现 | [`packages/ui/components/AnnotationToolbar.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/components/AnnotationToolbar.tsx#L127-L147) | 127-147 |
+|--- | --- | ---|
 | 注释导出格式化 | [`packages/ui/utils/parser.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/utils/parser.ts#L246-L323) | 246-323 |
 | Markdown 解析为 Blocks | [`packages/ui/utils/parser.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/utils/parser.ts#L70-L244) | 70-244 |
 | Viewer 组件（文本选择处理） | [`packages/ui/components/Viewer.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/components/Viewer.tsx#L66-L350) | 66-350 |

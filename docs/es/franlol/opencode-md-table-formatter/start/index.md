@@ -24,7 +24,7 @@ Se recomienda estudiar en el siguiente orden:
 ## Contenido del Capítulo
 
 | Curso | Descripción | Tiempo de Aprendizaje |
-|------|-------------|----------------------|
+|--- | --- | ---|
 | [Comenzar en un Minuto: Instalación y Configuración](./getting-started/) | Aprende a instalar el complemento y configurar OpenCode, observando de inmediato el efecto de formateo | 3 minutos |
 | [Visión General de Funciones: La Magia del Formateo Automático](./features/) | Conoce las 8 funciones principales del complemento, comprendiendo qué puede y qué no puede hacer | 5 minutos |
 

@@ -206,7 +206,7 @@ curl -i "http://127.0.0.1:<PORT>/v1/messages" \
 ::: warning 間違った方法 vs 推奨方法
 
 | シナリオ | ❌ よくある間違い | ✓ 推奨方法 |
-| --- | --- | --- |
+|--- | --- | ---|
 | LAN アクセスが必要 | `allow_lan_access=true` だけを有効にするが、`auth_mode=off` | `auth_mode=auto` を使用し、強力な `api_key` を設定する |
 | 認証を有効にしても常に 401 | クライアントが key を持っているが、ヘッダー名が互換性がない | プロキシは `Authorization`/`x-api-key`/`x-goog-api-key` の 3 種類のヘッダーに互換性がある |
 | 認証を有効にしているが key を設定していない | `api_key` が空でも認証を有効にしている | バックエンドは直接拒否する（ログで key が空であることが示される） |
@@ -259,12 +259,12 @@ last_error = Some(format!("Token refresh failed: {}", e));
 > 更新日時：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | auth_mode の 4 種類のモードと auto の意味説明 | [`docs/proxy/auth.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy/auth.md#L10-L24) | 10-24 |
 | ProxyAuthMode 列挙型とデフォルト値（デフォルト off） | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L5-L18) | 5-18 |
 | ProxyConfig の重要フィールドとデフォルト値（allow_lan_access、api_key） | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L259) | 174-259 |
 | リッスンアドレス導出（127.0.0.1 vs 0.0.0.0） | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L281-L292) | 281-292 |
-| auto -> effective_auth_mode 導出ロジック | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L10-L30) | 10-30 |
+|--- | --- | ---|
 | 認証ミドルウェア（OPTIONS 通過、/healthz 除外、3 種類の header 互換） | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L14-L78) | 14-78 |
 | UI：allow_lan_access と auth_mode のスイッチ/ドロップダウン | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L943-L1046) | 943-1046 |
 | UI：api_key の編集/リセット/コピー | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L1048-L1120) | 1048-1120 |

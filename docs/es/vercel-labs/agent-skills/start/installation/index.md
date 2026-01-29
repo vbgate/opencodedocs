@@ -281,7 +281,7 @@ Después de completar la instalación, puedes hacer que Claude use automáticame
 > Fecha de actualización: 2026-01-25
 
 | Función          | Ruta de archivo                                                                                      | Número de línea    |
-| ---------------- | ------------------------------------------------------------------------------------------------- | ----------------- |
+|--- | --- | ---|
 | Método de instalación npx  | [`README.md:83-86`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L83-L86)  | 83-86   |
 | Instalación manual en Claude Code | [`AGENTS.md:98-105`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L98-L105) | 98-105  |
 | Método de instalación en claude.ai | [`AGENTS.md:106-109`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L106-L109) | 106-109  |

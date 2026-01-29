@@ -68,7 +68,7 @@ export default plugin
 **参数**：
 
 | 参数名 | 类型 | 描述 |
-| ------ | ------ | ---- |
+|--- | --- | ---|
 | ctx | `PluginInput` | OpenCode 插件上下文，包含 client 和 directory 等信息 |
 
 **返回值**：
@@ -76,7 +76,7 @@ export default plugin
 插件配置对象，包含以下字段：
 
 | 字段 | 类型 | 描述 |
-| ---- | ------ | ---- |
+|--- | --- | ---|
 | `experimental.chat.system.transform` | `Handler` | 系统提示词注入钩子 |
 | `experimental.chat.messages.transform` | `Handler` | 消息转换钩子 |
 | `chat.message` | `Handler` | 消息捕获钩子 |
@@ -118,7 +118,7 @@ export interface PluginConfig {
 #### 顶层配置
 
 | 配置项 | 类型 | 默认值 | 描述 |
-| ------ | ------ | ------- | ---- |
+|--- | --- | --- | ---|
 | `enabled` | `boolean` | `true` | 是否启用插件 |
 | `debug` | `boolean` | `false` | 是否启用调试日志，日志写入 `~/.config/opencode/logs/dcp/` |
 | `pruneNotification` | `"off" \| "minimal" \| "detailed"` | `"detailed"` | 通知显示模式 |
@@ -134,7 +134,7 @@ export interface Commands {
 ```
 
 | 字段 | 类型 | 默认值 | 描述 |
-| ---- | ------ | ------- | ---- |
+|--- | --- | --- | ---|
 | `enabled` | `boolean` | `true` | 是否启用 `/dcp` 命令 |
 | `protectedTools` | `string[]` | `[...DEFAULT_PROTECTED_TOOLS]` | 命令保护工具列表，这些工具不会被 `/dcp sweep` 修剪 |
 
@@ -148,7 +148,7 @@ export interface TurnProtection {
 ```
 
 | 字段 | 类型 | 默认值 | 描述 |
-| ---- | ------ | ------- | ---- |
+|--- | --- | --- | ---|
 | `enabled` | `boolean` | `false` | 是否启用回合保护 |
 | `turns` | `number` | `4` | 保护回合数，最近 N 个回合的工具不会被修剪 |
 
@@ -173,7 +173,7 @@ export interface ToolSettings {
 ```
 
 | 字段 | 类型 | 默认值 | 描述 |
-| ---- | ------ | ------- | ---- |
+|--- | --- | --- | ---|
 | `nudgeEnabled` | `boolean` | `true` | 是否启用 AI 提醒 |
 | `nudgeFrequency` | `number` | `10` | 提醒频率，每 N 个工具结果后提醒 AI 使用修剪工具 |
 | `protectedTools` | `string[]` | `[...DEFAULT_PROTECTED_TOOLS]` | 工具保护列表 |
@@ -187,7 +187,7 @@ export interface DiscardTool {
 ```
 
 | 字段 | 类型 | 默认值 | 描述 |
-| ---- | ------ | ------- | ---- |
+|--- | --- | --- | ---|
 | `enabled` | `boolean` | `true` | 是否启用 discard 工具 |
 
 **ExtractTool**：
@@ -200,7 +200,7 @@ export interface ExtractTool {
 ```
 
 | 字段 | 类型 | 默认值 | 描述 |
-| ---- | ------ | ------- | ---- |
+|--- | --- | --- | ---|
 | `enabled` | `boolean` | `true` | 是否启用 extract 工具 |
 | `showDistillation` | `boolean` | `false` | 是否在通知中显示提取内容 |
 
@@ -216,7 +216,7 @@ export interface Deduplication {
 ```
 
 | 字段 | 类型 | 默认值 | 描述 |
-| ---- | ------ | ------- | ---- |
+|--- | --- | --- | ---|
 | `enabled` | `boolean` | `true` | 是否启用去重策略 |
 | `protectedTools` | `string[]` | `[...DEFAULT_PROTECTED_TOOLS]` | 不参与去重的工具列表 |
 
@@ -229,7 +229,7 @@ export interface SupersedeWrites {
 ```
 
 | 字段 | 类型 | 默认值 | 描述 |
-| ---- | ------ | ------- | ---- |
+|--- | --- | --- | ---|
 | `enabled` | `boolean` | `false` | 是否启用覆盖写入策略 |
 
 **PurgeErrors**：
@@ -243,7 +243,7 @@ export interface PurgeErrors {
 ```
 
 | 字段 | 类型 | 默认值 | 描述 |
-| ---- | ------ | ------- | ---- |
+|--- | --- | --- | ---|
 | `enabled` | `boolean` | `true` | 是否启用错误清理策略 |
 | `turns` | `number` | `4` | 错误清理阈值（回合数） |
 | `protectedTools` | `string[]` | `[...DEFAULT_PROTECTED_TOOLS]` | 不参与清理的工具列表 |
@@ -259,7 +259,7 @@ export function getConfig(ctx: PluginInput): PluginConfig
 **参数**：
 
 | 参数名 | 类型 | 描述 |
-| ------ | ------ | ---- |
+|--- | --- | ---|
 | ctx | `PluginInput` | OpenCode 插件上下文 |
 
 **返回值**：
@@ -288,13 +288,13 @@ export function createDiscardTool(ctx: PruneToolContext): ReturnType<typeof tool
 **参数**：
 
 | 参数名 | 类型 | 描述 |
-| ------ | ------ | ---- |
+|--- | --- | ---|
 | ctx | `PruneToolContext` | 工具上下文，包含 client、state、logger、config、workingDirectory |
 
 **工具规范**：
 
 | 字段 | 类型 | 描述 |
-| ---- | ------ | ---- |
+|--- | --- | ---|
 | `ids` | `string[]` | 首元素为原因（`'completion'` 或 `'noise'`），后续为数字 ID |
 
 **源码位置**：[`lib/strategies/tools.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/tools.ts#L155-L181)
@@ -310,13 +310,13 @@ export function createExtractTool(ctx: PruneToolContext): ReturnType<typeof tool
 **参数**：
 
 | 参数名 | 类型 | 描述 |
-| ------ | ------ | ---- |
+|--- | --- | ---|
 | ctx | `PruneToolContext` | 工具上下文，包含 client、state、logger、config、workingDirectory |
 
 **工具规范**：
 
 | 字段 | 类型 | 描述 |
-| ---- | ------ | ---- |
+|--- | --- | ---|
 | `ids` | `string[]` | 数字 ID 数组 |
 | `distillation` | `string[]` | 提取内容数组，长度与 ids 一致 |
 
@@ -348,7 +348,7 @@ export interface SessionState {
 **字段说明**：
 
 | 字段 | 类型 | 描述 |
-| ---- | ------ | ---- |
+|--- | --- | ---|
 | `sessionId` | `string \| null` | OpenCode 会话 ID |
 | `isSubAgent` | `boolean` | 是否为子代理会话 |
 | `prune` | `Prune` | 修剪状态 |
@@ -376,7 +376,7 @@ export interface SessionStats {
 **字段说明**：
 
 | 字段 | 类型 | 描述 |
-| ---- | ------ | ---- |
+|--- | --- | ---|
 | `pruneTokenCounter` | `number` | 当前会话已修剪 Token 数（累计） |
 | `totalPruneTokens` | `number` | 历史累计已修剪 Token 数 |
 
@@ -395,7 +395,7 @@ export interface Prune {
 **字段说明**：
 
 | 字段 | 类型 | 描述 |
-| ---- | ------ | ---- |
+|--- | --- | ---|
 | `toolIds` | `string[]` | 已标记修剪的工具调用 ID 列表 |
 
 **源码位置**：[`lib/state/types.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/state/types.ts#L23-L25)
@@ -417,7 +417,7 @@ export interface ToolParameterEntry {
 **字段说明**：
 
 | 字段 | 类型 | 描述 |
-| ---- | ------ | ---- |
+|--- | --- | ---|
 | `tool` | `string` | 工具名称 |
 | `parameters` | `any` | 工具参数 |
 | `status` | `ToolStatus \| undefined` | 工具执行状态 |
@@ -461,7 +461,7 @@ export function createSystemPromptHandler(
 **参数**：
 
 | 参数名 | 类型 | 描述 |
-| ------ | ------ | ---- |
+|--- | --- | ---|
 | state | `SessionState` | 会话状态对象 |
 | logger | `Logger` | 日志系统实例 |
 | config | `PluginConfig` | 配置对象 |
@@ -491,7 +491,7 @@ export function createChatMessageTransformHandler(
 **参数**：
 
 | 参数名 | 类型 | 描述 |
-| ------ | ------ | ---- |
+|--- | --- | ---|
 | client | `any` | OpenCode 客户端实例 |
 | state | `SessionState` | 会话状态对象 |
 | logger | `Logger` | 日志系统实例 |
@@ -525,7 +525,7 @@ export function createCommandExecuteHandler(
 **参数**：
 
 | 参数名 | 类型 | 描述 |
-| ------ | ------ | ---- |
+|--- | --- | ---|
 | client | `any` | OpenCode 客户端实例 |
 | state | `SessionState` | 会话状态对象 |
 | logger | `Logger` | 日志系统实例 |
@@ -565,7 +565,7 @@ export function createCommandExecuteHandler(
 > 更新时间：2026-01-23
 
 | 功能        | 文件路径                                                                                    | 行号    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 插件入口函数 | [`index.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/index.ts#L12-L102)         | 12-102   |
 | 配置接口定义 | [`lib/config.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/config.ts#L7-L66) | 7-66   |
 | getConfig 函数 | [`lib/config.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/config.ts#L669-L797) | 669-797   |

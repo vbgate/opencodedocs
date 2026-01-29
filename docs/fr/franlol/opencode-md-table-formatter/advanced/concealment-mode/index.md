@@ -28,7 +28,7 @@ Vous écrivez du code avec OpenCode, l'IA génère un joli tableau :
 
 ```markdown
 | 字段 | 类型 | 说明 |
-| --- | --- | --- |
+|--- | --- | ---|
 | **name** | string | 用户名 |
 | age | number | 年龄 |
 ```
@@ -37,7 +37,7 @@ Dans la vue du code source, il semble bien aligné. Mais en passant en mode aper
 
 ```
 | 字段     | 类型   | 说明   |
-| -------- | ------ | ------ |
+|--- | --- | ---|
 | name | string | 用户名 |    ← Pourquoi c'est plus court ?
 | age      | number | 年龄   |
 ```
@@ -49,7 +49,7 @@ Où est le problème ? **Le mode de masquage**.
 OpenCode active par défaut le **mode de masquage (Concealment Mode)**, qui masque les symboles de syntaxe Markdown lors du rendu :
 
 | Code source | Affichage en mode de masquage |
-| --- | --- |
+|--- | ---|
 | `**粗体**` | 粗体（4 个字符） |
 | `*斜体*` | 斜体（4 个字符） |
 | `~~删除线~~` | 删除线（6 个字符） |
@@ -107,7 +107,7 @@ let textWithPlaceholders = text.replace(/`(.+?)`/g, (match, content) => {
 **Fonctionnement**
 
 | Entrée | Après traitement | Tableau codeBlocks |
-| --- | --- | --- |
+|--- | --- | ---|
 | `` `**bold**` `` | `\x00CODE0\x00` | `["**bold**"]` |
 | `` `a` and `b` `` | `\x00CODE0\x00 and \x00CODE1\x00` | `["a", "b"]` |
 
@@ -176,7 +176,7 @@ return Bun.stringWidth(visualText)
 `Bun.stringWidth` peut calculer correctement :
 
 | Type de caractère | Exemple | Nombre de caractères | Largeur d'affichage |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | ASCII | `abc` | 3 | 3 |
 | Chinois | `你好` | 2 | 4（chaque caractère occupe 2 cases） |
 | Emoji | `😀` | 1 | 2（occupe 2 cases） |
@@ -234,7 +234,7 @@ Donc la largeur de `` `**bold**` `` est 8（`**bold**`）, et non 4（`bold`）�
 ## Résumé de la leçon
 
 | Étape | Rôle | Code clé |
-| --- | --- | --- |
+|--- | --- | ---|
 | Protéger les blocs de code | Empêcher la suppression accidentelle des symboles dans les blocs de code | `text.replace(/\`(.+?)\`/g, ...)` |
 | Supprimer Markdown | Calculer le contenu d'affichage réel en mode de masquage | Remplacements regex multi-tours |
 | Calculer la largeur | Traiter les caractères spéciaux comme le chinois, les emoji | `Bun.stringWidth()` |
@@ -258,7 +258,7 @@ Donc la largeur de `` `**bold**` `` est 8（`**bold**`）, et non 4（`bold`）�
 > Date de mise à jour : 2026-01-26
 
 | Fonctionnalité | Chemin du fichier | Numéros de ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Point d'entrée du calcul de la largeur d'affichage | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L151-L159) | 151-159 |
 | Protection des blocs de code | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L168-L173) | 168-173 |
 | Suppression des symboles Markdown | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L175-L188) | 175-188 |

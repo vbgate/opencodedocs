@@ -55,7 +55,7 @@ OpenCode Agent Skills 有很多技能,但你:
 举个例子:
 
 | 用户输入                    | 技能描述                           | 关键词匹配 | 语义匹配 |
-| ------------------------- | ------------------------------ | ------ | ---- |
+|--- | --- | --- | ---|
 | "创建一个数据库连接池"      | "数据库连接管理和优化工具"       | ❌     | ✅   |
 | "帮我写个 API 文档"        | "自动化 API 文档生成器"         | ✅     | ✅   |
 | "项目初始化脚手架"        | "快速搭建项目结构的工具"         | ❌     | ✅   |
@@ -101,7 +101,7 @@ similarity = (A · B) / (|A| × |B|)
 **结果范围**: `-1` 到 `1`
 
 | 相似度范围  | 含义              | 是否推荐 |
-| ------- | --------------- | --- |
+|--- | --- | ---|
 | 0.7-1.0 | 非常相似,几乎同一意思  | ✅ 强烈推荐 |
 | 0.35-0.7 | 有点关联,值得考虑    | ✅ 推荐  |
 | 0.0-0.35 | 关联度低或无关联    | ❌ 不推荐  |
@@ -216,7 +216,7 @@ get_available_skills()
 ### 查看示例:好的 vs 差的描述
 
 | ❌ 差的描述                          | ✅ 好的描述                              |
-| ------------------------------- | ----------------------------------- |
+|--- | ---|
 | "工具"                            | "自动化测试框架集成,支持 Jest 和 Vitest" |
 | "帮助"                            | "Git 操作助手,提供常用命令和工作流指导"     |
 | "文档"                            | "从代码注释生成 API 文档"                |
@@ -413,7 +413,7 @@ export async function precomputeSkillEmbeddings(skills: SkillSummary[]): Promise
 自动技能推荐通过以下方式提升体验:
 
 | 技术手段          | 作用                          | 用户体验提升          |
-| ------------- | ------------------------- | --------------- |
+|--- | --- | ---|
 | Embedding 模型    | 将文本转换为向量                | 理解语义,不仅是关键词      |
 | 余弦相似度        | 计算向量相似度                  | 精准匹配相关技能       |
 | 缓存机制          | 磁盘缓存 embeddings            | 首次后响应更快        |
@@ -449,7 +449,7 @@ export async function precomputeSkillEmbeddings(skills: SkillSummary[]): Promise
 > 更新时间:2026-01-24
 
 | 功能              | 文件路径                                                                                                | 行号    |
-| ---------------- | --------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 语义匹配核心函数      | [`src/embeddings.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/embeddings.ts#L108-L135)       | 108-135 |
 | 生成文本 embedding   | [`src/embeddings.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/embeddings.ts#L38-L66)         | 38-66   |
 | 计算余弦相似度      | [`src/embeddings.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/embeddings.ts#L71-L90)         | 71-90   |
@@ -461,7 +461,7 @@ export async function precomputeSkillEmbeddings(skills: SkillSummary[]): Promise
 **关键常量**:
 
 | 常量名                  | 值                         | 说明             | 来源               |
-| ------------------- | ------------------------ | -------------- | ---------------- |
+|--- | --- | --- | ---|
 | MODEL_NAME          | Xenova/all-MiniLM-L6-v2  | 使用的 embedding 模型 | `embeddings.ts:8`   |
 | QUANTIZATION        | q8                       | 模型量化级别        | `embeddings.ts:9`   |
 | SIMILARITY_THRESHOLD | 0.35                     | 相似度推荐阈值      | `embeddings.ts:10`  |

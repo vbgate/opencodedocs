@@ -95,7 +95,7 @@ description: Deploy applications and websites to Vercel. Use this skill when use
 ### Guide de sélection des mots-clés déclencheurs
 
 | Scénario d'écriture | Mots-clés recommandés | À éviter |
-|---------|-----------|---------|
+|--- | --- | ---|
 | **Opérations de déploiement** | « deploy », « production », « push », « publish » | « send », « move » |
 | **Audit de code** | « review », « check », « audit », « optimize » | « look at », « see » |
 | **Vérification de conception** | « accessibility », « a11y », « UX check », « design audit » | « design », « style » |
@@ -144,7 +144,7 @@ Les tokens sont une ressource limitée. Si `SKILL.md` est trop long, il occupera
 Selon la documentation officielle, les stratégies suivantes peuvent minimiser l'utilisation du contexte :
 
 | Stratégie | Description | Effet |
-|-----|------|------|
+|--- | --- | ---|
 | **Garder SKILL.md concis** | Mettre les références détaillées dans des fichiers séparés | Réduire la quantité de chargement initial |
 | **Écrire une description spécifique** | Aider l'IA à juger précisément quand activer | Éviter les déclenchements erronés |
 | **Divulgation progressive** | Ne lire les fichiers de support que si nécessaire | Contrôler la consommation réelle de tokens |
@@ -192,11 +192,11 @@ Selon la documentation officielle, les stratégies suivantes peuvent minimiser l
 > Dernière mise à jour :2026-01-25
 
 | Fonctionnalité | Chemin de fichier | Ligne |
-| ----------- | -------------------------------------------------------------------------- | ------ |
+|--- | --- | ---|
 | Meilleures pratiques de gestion du contexte | [`AGENTS.md:70-78`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L70-L78) | 70-78 |
 | Exemples de déclenchement de compétences | [`README.md:88-102`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L88-L102) | 88-102 |
-| Mots-clés de compétences React | [`SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/SKILL.md) | 1-30 |
-| Mots-clés de déploiement Vercel | [`SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/SKILL.md) | 1-30 |
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Principes clés** :
 - Keep SKILL.md under 500 lines : garder le fichier de compétence concis

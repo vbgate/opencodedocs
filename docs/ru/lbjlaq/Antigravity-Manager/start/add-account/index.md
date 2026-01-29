@@ -112,7 +112,7 @@ order: 4
 Поддерживаемые формы ввода (фронтенд будет разбирать и массово добавлять):
 
 | Тип ввода | Пример | Логика разбора |
-| --- | --- | --- |
+|--- | --- | ---|
 | Чистый текст token | `1//abc...` | Регулярное извлечение: `/1\/\/[a-zA-Z0-9_\-]+/g` (см. `AddAccountDialog.tsx:213-220`) |
 | Встроенный в большой фрагмент текста | логи/экспорт текст содержит несколько `1//...` | Регулярное массовое извлечение и дедупликация (см. `AddAccountDialog.tsx:213-224`) |
 | Массив JSON | `[{"refresh_token":"1//..."}]` | Разбор массива и извлечение `item.refresh_token` (см. `AddAccountDialog.tsx:198-207`) |
@@ -173,7 +173,7 @@ order: 4
 ### 4) правильный/неправильный пример Refresh Token
 
 | Пример | Распознается ли | Причина |
-| --- | --- | --- |
+|--- | --- | ---|
 | `1//0gAbC...` | ✓ | Соответствует правилу префикса `1//` (см. `AddAccountDialog.tsx:215-219`) |
 | `ya29.a0...` | ✗ | Не соответствует правилу извлечения фронтенда, будет считаться недопустимым вводом |
 
@@ -203,7 +203,7 @@ order: 4
 > Дата обновления: 2026-01-23
 
 | Функция | Путь к файлу | Строка |
-| --- | --- | --- |
+|--- | --- | ---|
 | Страница Accounts монтирует диалог добавления | [`src/pages/Accounts.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Accounts.tsx#L267-L731) | 267-731 |
 | OAuth URL предгенерация + событие автоматического завершения обратного вызова | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L49-L125) | 49-125 |
 | Событие обратного вызова OAuth запускает `completeOAuthLogin()` | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L67-L109) | 67-109 |
@@ -212,7 +212,7 @@ order: 4
 | Бэкенд add_account: игнорирует email, использует refresh_token для получения реального email и сохранения на диск | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L19-L60) | 19-60 |
 | Бэкенд OAuth: проверяет отсутствие refresh_token и дает решение с отозвом | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L38-L79) | 38-79 |
 | Сервер обратного вызова OAuth: одновременно прослушивает IPv4/IPv6 и выбирает redirect_uri | [`src-tauri/src/modules/oauth_server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/oauth_server.rs#L43-L113) | 43-113 |
-| Сервер обратного вызова OAuth: разбирает `code` и выдает `oauth-callback-received` | [`src-tauri/src/modules/oauth_server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/oauth_server.rs#L140-L180) | 140-180 |
+|--- | --- | ---|
 
 **Ключевые имена событий**:
 - `oauth-url-generated`: после генерации OAuth URL бэкенд отправляет на фронтенд (см. `oauth_server.rs:250-252`)

@@ -76,7 +76,7 @@ Android Device (Node App)
 Android nodes support the following device local operations:
 
 | Capability | Command | Description |
-| ---------- | ------- | ----------- |
+|--- | --- | ---|
 | **Canvas** | `canvas.*` | Display real-time visualization interface (A2UI) |
 | **Camera** | `camera.*` | Take photos (JPG) and record videos (MP4) |
 | **Screen** | `screen.*` | Screen recording |
@@ -456,7 +456,7 @@ In this lesson, you learned how to configure Android nodes to execute device loc
 > Last updated: 2026-01-27
 
 | Capability        | File Path                                                                                    | Lines   |
-| ----------------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Node Command Policy | [`src/gateway/node-command-policy.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/node-command-policy.ts) | 1-112   |
 | Node Protocol Schema | [`src/gateway/protocol/schema/nodes.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/schema/nodes.ts) | 1-103   |
 | Android Documentation  | [`docs/platforms/android.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/android.md) | 1-142   |

@@ -90,7 +90,7 @@ rules/*.md (57 files)
 **Four Core Commands**:
 
 | Command | Function | Use Case |
-|---------|----------|----------|
+|--- | --- | ---|
 | `pnpm validate` | Validate format and completeness of all rule files | Pre-commit check, CI validation |
 | `pnpm build` | Generate AGENTS.md and test-cases.json | After rule modifications, before release |
 | `pnpm dev` | Execute build + validate (development workflow) | Rapid iteration, developing new rules |
@@ -419,7 +419,7 @@ jobs:
 CI automatically runs under the following conditions:
 
 | Event | Condition |
-|------|----------|
+|--- | ---|
 | `push` | Commit to `main` branch, and modified `skills/react-best-practices/**` or `packages/react-best-practices-build/**` |
 | `pull_request` | Create or update PR to `main` branch, and modified the above paths |
 
@@ -593,7 +593,7 @@ PR review → Merge to main
 > Last updated: 2026-01-25
 
 | Feature | File Path | Line Numbers |
-| -------- | --------- | ------------ |
+|--- | --- | ---|
 | package.json script definition | [`packages/react-best-practices-build/package.json`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/package.json) | 6-12 |
 | Build entry function | [`packages/react-best-practices-build/src/build.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/build.ts) | 131-290 |
 | Rule parser | [`packages/react-best-practices-build/src/parser.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/parser.ts) | Full text |

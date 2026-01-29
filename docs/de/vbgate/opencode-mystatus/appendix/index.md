@@ -34,7 +34,7 @@ Zeigen Sie alle offiziellen APIs an, die das Plugin aufruft:
 ## Anwendungsszenarien
 
 | Szenario | Empfohlenes Dokument |
-|------|---------|
+|--- | ---|
 | Funktionsweise des Plugins verstehen | [Datenmodelle](./data-models/) |
 | Manuell API aufrufen | [API-Endpunktesammlung](./api-endpoints/) |
 | Unterstützung für neue Plattformen erweitern | Beide Dokumente erforderlich |

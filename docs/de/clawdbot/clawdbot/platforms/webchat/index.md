@@ -57,7 +57,7 @@ Bevor Sie WebChat verwenden, bestätigen Sie bitte:
 ### Erforderliche Voraussetzungen
 
 | Voraussetzung                     | Überprüfung                                        |
-| ---------------------- | ------------------------------------------- |
+|--- | ---|
 | **Gateway gestartet**   | `clawdbot gateway status` oder Überprüfen, ob der Prozess läuft |
 | **Port erreichbar**       | Bestätigen Sie, dass Port 18789 (oder der benutzerdefinierte Port) nicht belegt ist |
 | **KI-Modell konfiguriert** | `clawdbot models list` um verfügbare Modelle anzuzeigen      |
@@ -123,7 +123,7 @@ Detaillierte Beschreibung: [Gateway-Authentifizierungskonfiguration](../../advan
 **Unterschiede zu anderen Kanälen**:
 
 | Merkmal         | WebChat                          | WhatsApp/Telegram usw.                |
-| ------------ | -------------------------------- | ------------------------------ |
+|--- | --- | ---|
 | **Zugangsart** | Direkter Browser-Zugriff zum Gateway           | Erfordert Drittanbieter-APP und Login         |
 | **Konfigurationsbedarf** | Keine separate Konfiguration, Gateway-Port wiederverwenden   | Erfordert kanalspezifische API-Key/Token  |
 | **Antwort-Routing** | Deterministisches Routing zurück zu WebChat          | Routing zum entsprechenden Kanal              |
@@ -349,7 +349,7 @@ WebChat unterstützt Slash-Befehle für schnelle Ausführung bestimmter Aktionen
 **Häufige Befehle**:
 
 | Befehl             | Funktion                         |
-| ---------------- | ---------------------------- |
+|--- | ---|
 | `/new`          | Neue Sitzung erstellen                   |
 | `/reset`        | Historie der aktuellen Sitzung zurücksetzen           |
 | `/clear`        | Alle Nachrichten der aktuellen Sitzung löschen       |
@@ -612,14 +612,14 @@ In dieser Lektion haben Sie gelernt:
 > Aktualisierungsdatum: 2026-01-27
 
 | Funktion                  | Dateipfad                                                                                    | Zeilennummer    |
-| ------------------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | WebChat-Prinzip-Erklärung     | [`docs/web/webchat.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/web/webchat.md) | Gesamte Datei   |
 | Gateway WebSocket API | [`src/gateway/protocol/`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/) | Gesamtes Verzeichnis   |
-| chat.send-Methode        | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 296-380  |
-| chat.history-Methode     | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 1-295    |
-| chat.inject-Methode      | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 381-450  |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Web-UI-Eingang         | [`ui/index.html`](https://github.com/clawdbot/clawdbot/blob/main/ui/index.html) | 1-15     |
-| Gateway-Authentifizierungskonfiguration     | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | 1-100    |
+|--- | --- | ---|
 | Tailscale-Integration       | [`src/gateway/server-startup-log.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup-log.ts) | Gesamte Datei   |
 | macOS WebChat-Integration  | [`apps/macos/`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/) | Gesamtes Verzeichnis   |
 

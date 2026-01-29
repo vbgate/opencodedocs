@@ -65,7 +65,7 @@ order: 4
 ## 快速定位问题
 
 | 错误现象 | 推荐阅读 |
-| -------- | -------- |
+|--- | ---|
 | 认证失败、授权超时 | [OAuth 认证失败排查](./common-auth-issues/) |
 | invalid_grant、Permission Denied | [OAuth 认证失败排查](./common-auth-issues/) |
 | Model not found、400 错误 | [模型未找到排查](./model-not-found/) |

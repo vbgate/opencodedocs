@@ -84,7 +84,7 @@ Follow the **[Launch Local Reverse Proxy and Connect First Client (/healthz + SD
 ## Recent Version Summary (Excerpt from README)
 
 | Version | Date | Points You Should Focus On |
-| --- | --- | --- |
+|--- | --- | ---|
 | `v3.3.49` | 2026-01-22 | Thinking interruption and 0 Token defense; remove `gemini-2.5-flash-lite` and remind you to manually replace custom mappings; language/theme settings take effect immediately; monitoring dashboard enhancements; OAuth compatibility improvements |
 | `v3.3.48` | 2026-01-21 | Windows platform background process silent running (fix console flicker) |
 | `v3.3.47` | 2026-01-21 | Image generation parameter mapping enhancements (`size`/`quality`); Cloudflared tunnel support; fix startup failure caused by merge conflicts; three-tier progressive context compression |
@@ -106,11 +106,11 @@ Prioritize finding these two types of sentences:
 > Last updated: 2026-01-23
 
 | Content | File Path | Lines |
-| --- | --- | --- |
+|--- | --- | ---|
 | README embedded Changelog (Version Evolution) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L324-L455) | 324-455 |
 | About page display version number and "Check Updates" button | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L821-L954) | 821-954 |
 | About page "Check Updates" command return structure | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L187-L215) | 187-215 |
-| Auto-update notification (download and restart) | [`src/components/UpdateNotification.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/UpdateNotification.tsx#L33-L96) | 33-96 |
+|--- | --- | ---|
 | Current version number (build metadata) | [`package.json`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/package.json#L1-L4) | 1-4 |
 
 </details>

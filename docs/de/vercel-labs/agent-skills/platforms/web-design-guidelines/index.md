@@ -65,7 +65,7 @@ Vergewissern Sie sich vor dem Start, dass Sie bereits:
 Web-Interface-Design-Richtlinien umfassen **17 Kategorien**, die nach Priorität in drei Blöcke unterteilt sind:
 
 | Kategorienblock | Fokus | Typische Gewinne |
-| ------ | ---- | ---- |
+|--- | --- | ---|
 | **Barrierefreiheit (Accessibility)** | Stellen sicher, dass alle Benutzer die Website nutzen können (inklusive Screen Reader, Tastaturbenutzer) | Erfüllung von WCAG-Standards, Erweiterung der Benutzerbasis |
 | **Performance & UX** | Optimieren der Ladegeschwindigkeit, Animationsflüssigkeit, Interaktions-Erfahrung | Erhöhung der Benutzerbindung, Reduzierung der Absprungrate |
 | **Vollständigkeit & Details** | Dark Mode, Responsive, Formularvalidierung, Fehlerbehandlung | Reduzierung von Benutzerbeschwerden, Verbesserung des Markenimages |
@@ -73,7 +73,7 @@ Web-Interface-Design-Richtlinien umfassen **17 Kategorien**, die nach Priorität
 **17 Regelkategorien**:
 
 | Kategorie | Typische Regeln | Priorität |
-| ---- | ------- | ------ |
+|--- | --- | ---|
 | Accessibility | aria-labels, semantisches HTML, Tastaturbehandlung | ⭐⭐⭐ Höchste |
 | Focus States | Sichtbarer Focus, :focus-visible statt :focus | ⭐⭐⭐ Höchste |
 | Forms | Autocomplete, Validierung, Fehlerbehandlung | ⭐⭐⭐ Höchste |
@@ -411,15 +411,15 @@ Die 100 Regeln von Vercel decken alle Szenarien von den Grundlagen bis zu Detail
 > Aktualisierungszeit:2026-01-25
 
 | Funktion | Dateipfad | Zeilen |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | Web-Interface-Design-Richtlinien-Skilldefinition | [`skills/web-design-guidelines/SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/web-design-guidelines/SKILL.md) | Ganze Datei |
 | Regelnquelle (100 Regeln) | [`https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md`](https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md) | Ganze Datei |
-| README-Übersicht | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md) | 28-50 |
+|--- | --- | ---|
 
 **17 Regelkategorien**:
 
 | Kategorie | Anzahl abgedeckter Regeln | Typische Regeln |
-| ---- | --------- | ------- |
+|--- | --- | ---|
 | Accessibility | 10 Regeln | aria-labels, semantisches HTML, Tastaturbehandlung |
 | Focus States | 4 Regeln | Sichtbarer Focus, :focus-visible |
 | Forms | 11 Regeln | Autocomplete, Validierung, Fehlerbehandlung |

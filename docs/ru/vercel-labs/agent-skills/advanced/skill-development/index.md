@@ -433,14 +433,14 @@ trap cleanup EXIT
 > Обновлено: 2026-01-25
 
 | Функция               | Путь к файлу                                                                                       | Строки   |
-| ---------------------- | -------------------------------------------------------------------------------------------------- | -------- |
+|--- | --- | ---|
 | Спецификация разработки навыков       | [`AGENTS.md:9-69`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L9-L69)     | 9-69     |
 | Определение структуры каталогов       | [`AGENTS.md:11-20`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L11-L20)   | 11-20    |
 | Соглашение об именах           | [`AGENTS.md:22-27`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L22-L27)   | 22-27    |
 | Формат SKILL.md      | [`AGENTS.md:29-68`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L29-L68)   | 29-68    |
 | Лучшая практика эффективности контекста | [`AGENTS.md:70-78`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L70-L78)   | 70-78    |
 | Требования к скриптам           | [`AGENTS.md:80-87`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L80-L87)   | 80-87    |
-| Zip-упаковка           | [`AGENTS.md:89-96`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L89-L96)   | 89-96    |
+|--- | --- | ---|
 | Метод установки пользователя       | [`AGENTS.md:98-110`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L98-L110) | 98-110   |
 
 **Ключевые константы**:

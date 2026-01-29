@@ -46,7 +46,7 @@ When you:
 **Zhipu AI** and **Z.ai** quota systems are divided into two types:
 
 | Quota Type | Meaning | Reset Cycle |
-| ---------- | ------- | ----------- |
+|--- | --- | ---|
 | **5-Hour Token Limit** | Token usage limit for API requests | Automatically resets every 5 hours |
 | **MCP Monthly Quota** | Monthly limit on MCP (Model Context Protocol) search count | Resets monthly |
 
@@ -143,7 +143,7 @@ Understanding the meaning of each output line allows you to effectively manage q
 Compare your output with the following explanation:
 
 | Output Field | Meaning | Example |
-| ----------- | ------- | ------- |
+|--- | --- | ---|
 | **Account** | Masked API Key and account type | `9c89****AQVM (Coding Plan)` |
 | **5-Hour Token Limit** | Token usage within current 5-hour period | Progress bar + percentage |
 | **Used: X / Y** | Used tokens / Total quota | `0.5M / 10.0M` |
@@ -249,7 +249,7 @@ In this lesson, we learned how to use opencode-mystatus to query quotas for Zhip
 > Last updated: 2026-01-23
 
 | Feature | File Path | Lines |
-| ------- | --------- | ----- |
+|--- | --- | ---|
 | Query Zhipu AI quota | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 213-217 |
 | Query Z.ai quota | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 224-228 |
 | Format output | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 115-177 |

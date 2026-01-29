@@ -58,7 +58,7 @@ OpenCode의 새 OAuth 통합은 할당량 API 액세스를 지원하지 않습�
 mystatus는 **두 가지 Copilot 인증 방식**을 지원합니다:
 
 | 인증 방식 | 설명 | 장점 | 단점 |
-|---------|------|------|------|
+|--- | --- | --- | ---|
 | **OAuth 토큰** (기본값) | OpenCode 로그인 시 얻은 GitHub OAuth 토큰 사용 | 추가 구성 불필요, 즉시 사용 가능 | 새로운 OpenCode의 OAuth 토큰은 Copilot 권한이 없을 수 있음 |
 | **Fine-grained PAT** (권장) | 사용자가 수동으로 생성한 Fine-grained Personal Access Token | 안정적이고 신뢰할 수 있음, OAuth 권한에 의존하지 않음 | 수동으로 한 번 생성 필요 |
 
@@ -124,7 +124,7 @@ https://github.com/settings/tokens?type=beta
 **구성 매개변수**:
 
 | 필드 | 값 |
-|------|-----|
+|--- | ---|
 | **Name** | `mystatus-copilot`(또는 원하는 이름) |
 | **Expiration** | 만료 시간 선택(예: 90 days 또는 No expiration) |
 | **Resource owner** | 선택 불필요(기본값) |
@@ -167,7 +167,7 @@ https://github.com/
 Copilot 구독 유형을 알아야 합니다. 다른 유형은 월별 할당량이 다릅니다:
 
 | 구독 유형 | 월별 할당량 | 적용 대상 |
-|---------|---------|---------|
+|--- | --- | ---|
 | `free` | 50 | Copilot Free(무료 사용자) |
 | `pro` | 300 | Copilot Pro(개인 프로 버전) |
 | `pro+` | 1500 | Copilot Pro+(개인 향상 버전) |
@@ -255,7 +255,7 @@ Period: 2026-01
 이해했는지 확인해 보세요:
 
 | 시나리오 | 확인해야 할 것/해야 할 작업 |
-|------|--------------|
+|--- | ---|
 | 구성 파일이 이미 존재함 | `ls ~/.config/opencode/copilot-quota-token.json`가 파일을 표시함 |
 | PAT 생성 성공 | 토큰이 `github_pat_`로 시작함 |
 | 구독 유형이 올바름 | 구성의 `tier` 값이 free/pro/pro+/business/enterprise 중 하나임 |
@@ -344,9 +344,9 @@ Fine-grained PAT 구성 권장 단계:
 > 업데이트 시간: 2026-01-23
 
 | 기능                        | 파일 경로                                                                                   | 행번호    |
-| --------------------------- | ------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | Copilot 인증 전략 진입점        | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L481-L524) | 481-524 |
-| Fine-grained PAT 구성 읽기  | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L122-L151) | 122-151 |
+|--- | --- | ---|
 | 공용 Billing API 호출       | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L157-L177) | 157-177 |
 | OAuth 토큰 교환           | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L183-L208) | 183-208 |
 | 내부 API 호출(OAuth)     | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L242-L304) | 242-304 |
@@ -372,7 +372,7 @@ Fine-grained PAT 구성 권장 단계:
 **인증 흐름 비교**:
 
 | 전략 | 토큰 유형 | API 엔드포인트 | 우선순위 |
-|------|-----------|---------|--------|
+|--- | --- | --- | ---|
 | Fine-grained PAT | Fine-grained PAT | `/users/{username}/settings/billing/premium_request/usage` | 1(우선) |
 | OAuth 토큰(캐시) | Copilot 세션 토큰 | `/copilot_internal/user` | 2 |
 | OAuth 토큰(직접) | GitHub OAuth 토큰 | `/copilot_internal/user` | 3 |

@@ -76,7 +76,7 @@ order: 140
 **Ключевые понятия**:
 
 | Понятие | Назначение |
-|---------|-----------|
+|--- | ---|
 | **Channel Access Token** | Токен аутентификации для отправки сообщений |
 | **Channel Secret** | Ключ для проверки подписи Webhook |
 | **Webhook URL** | Конечная точка Clawdbot для получения событий LINE (обязательно HTTPS) |
@@ -88,7 +88,7 @@ order: 140
 ### Необходимые аккаунты и инструменты
 
 | Элемент | Требование | Как получить |
-|---------|------------|--------------|
+|--- | --- | ---|
 | **Аккаунт LINE Developers** | Бесплатная регистрация | https://developers.line.biz/console/ |
 | **LINE Provider** | Создать Provider и Messaging API channel | LINE Console |
 | **HTTPS сервер** | Webhook должен быть HTTPS | ngrok, Cloudflare Tunnel, Tailscale Serve/Funnel |
@@ -155,7 +155,7 @@ clawdbot plugins install ./extensions/line
 3. Скопируйте следующую информацию:
 
 | Элемент | Расположение | Пример |
-|---------|-------------|-------|
+|--- | --- | ---|
 | **Channel Access Token** | Basic settings → Channel access token (long-lived) | `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...` |
 | **Channel Secret** | Basic settings → Channel secret | `1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7` |
 
@@ -261,7 +261,7 @@ ngrok http 18789
 В Webhook settings отметьте следующие события:
 
 | Событие | Назначение |
-|---------|-----------|
+|--- | ---|
 | **Message event** | Получение сообщений от пользователей |
 | **Follow event** | Пользователь добавляет Bot в друзья |
 | **Unfollow event** | Пользователь удаляет Bot |
@@ -348,7 +348,7 @@ clawdbot pairing approve line ABC123
 Проверьте правильность вашей конфигурации:
 
 | Проверка | Метод проверки | Ожидаемый результат |
-|----------|----------------|---------------------|
+|--- | --- | ---|
 | **Плагин установлен** | `clawdbot plugins list` | Виден `@clawdbot/line` |
 | **Конфигурация действительна** | `clawdbot doctor` | Нет ошибок, связанных с LINE |
 | **Webhook доступен** | Проверка LINE Console | `✓ Verification succeeded` |
@@ -531,7 +531,7 @@ clawdbot line rich-menu set-default --rich-menu-id <MENU_ID>
 Clawdbot автоматически конвертирует формат Markdown в формат, поддерживаемый LINE:
 
 | Markdown | Результат конвертации LINE |
-|----------|---------------------------|
+|--- | ---|
 | Блок кода | Flex-карточка |
 | Таблица | Flex-карточка |
 | Ссылки | Автоматически обнаруживаются и конвертируются в Flex-карточку |
@@ -577,12 +577,12 @@ LINE не поддерживает формат Markdown, Clawdbot пытает�
 > Время обновления: 2026-01-27
 
 | Функция | Путь к файлу | Строки |
-|---------|--------------|--------|
+|--- | --- | ---|
 | Основная реализация LINE Bot | [`src/line/bot.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/bot.ts) | 27-83 |
 | Определение Schema конфигурации | [`src/line/config-schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/config-schema.ts) | 1-54 |
 | Обработчик событий Webhook | [`src/line/bot-handlers.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/bot-handlers.ts) | 1-100 |
 | Функция отправки сообщений | [`src/line/send.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/send.ts) | - |
-| Генерация Flex-шаблонов | [`src/line/flex-templates.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/flex-templates.ts) | - |
+|--- | --- | ---|
 | Операции Rich Menu | [`src/line/rich-menu.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/rich-menu.ts) | - |
 | Template сообщения | [`src/line/template-messages.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/template-messages.ts) | - |
 | Markdown в LINE | [`src/line/markdown-to-line.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/markdown-to-line.ts) | - |

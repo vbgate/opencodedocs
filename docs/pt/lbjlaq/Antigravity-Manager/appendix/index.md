@@ -13,7 +13,7 @@ Este capítulo reúne materiais de referência técnica do Antigravity Tools, in
 ## Conteúdo do Capítulo
 
 | Documento | Descrição | Cenário Adequado |
-|---------|-----------|-----------------|
+|--- | --- | ---|
 | **[Tabela Rápida de Endpoints](./endpoints/)** | Visão geral de rotas HTTP externas: endpoints OpenAI/Anthropic/Gemini/MCP, modo de autenticação e uso de Header API Key | Integrar novo cliente, solucionar 404/401 |
 | **[Dados e Modelos](./storage-models/)** | Estrutura de arquivos de conta, estrutura de tabelas de banco de dados SQLite, campos de métrica de chave | Backup/migração, consulta direta de banco, solução de problemas |
 | **[Limites de Integração z.ai](./zai-boundaries/)** | Lista de funcionalidades z.ai implementadas vs claramente não implementadas | Avaliar capacidades z.ai, evitar uso incorreto |

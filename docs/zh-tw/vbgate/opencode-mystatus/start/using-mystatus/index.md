@@ -135,7 +135,7 @@ Show my AI account status
 **關鍵配置項說明**：
 
 | 配置項 | 值 | 作用 |
-| ------ | --- | ---- |
+|--- | --- | ---|
 | `description` | "Query quota usage for all AI accounts" | 在指令清單中顯示的說明 |
 | `template` | "Use to mystatus tool..." | 提示 OpenCode 如何處理這個指令 |
 
@@ -147,7 +147,7 @@ template 是給 OpenCode 的"指令"，告訴它：當使用者輸入 `/mystatus
 確認你已經掌握了兩種使用方式：
 
 | 技能 | 檢查方法 | 預期結果 |
-| ---- | -------- | -------- |
+|--- | --- | ---|
 | 斜線指令查詢 | 輸入 `/mystatus` | 顯示所有平台的額度資訊 |
 | 自然語言查詢 | 輸入 "Check my OpenAI quota" | 顯示額度資訊 |
 | 理解配置 | 查看 opencode.json | 找到 mystatus 指令配置 |
@@ -213,7 +213,7 @@ mystatus 工具提供了兩種使用方式：
 > 更新時間：2026-01-23
 
 | 功能 | 檔案路徑 | 行號 |
-| --- | --- | --- |
+|--- | --- | ---|
 | mystatus 工具定義 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 29-33 |
 | 工具描述 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 30-31 |
 | 斜線指令配置 | [`command/mystatus.md`](https://github.com/vbgate/opencode-mystatus/blob/main/command/mystatus.md) | 1-6 |

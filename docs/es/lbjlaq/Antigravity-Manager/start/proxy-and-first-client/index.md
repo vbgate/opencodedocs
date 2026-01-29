@@ -234,7 +234,7 @@ Si vas a usarlo así, al menos habilita `auth_mode` y configura una `api_key` fu
 > Última actualización: 2026-01-23
 
 | Tema | Ruta del archivo | Líneas |
-| --- | --- | --- |
+|--- | --- | ---|
 | Inicio/parada/estado del servicio de reverse proxy | [`src-tauri/src/commands/proxy.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/proxy.rs#L42-L178) | 42-178 |
 | Verificación del grupo de cuentas antes del inicio (condiciones de error sin cuentas) | [`src-tauri/src/commands/proxy.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/proxy.rs#L81-L91) | 81-91 |
 | Registro de rutas (incluyendo `/healthz`) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |

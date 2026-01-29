@@ -15,7 +15,7 @@ order: 2
 opencode-mystatusは以下の4つの主流AIプラットフォームをサポートしています：
 
 | プラットフォーム | クォータタイプ | 特徴 |
-|------|---------|------|
+|--- | --- | ---|
 | OpenAI | 3時間 / 24時間スライディングウィンドウ | Plus、Team、Proサブスクリプションをサポート |
 | Zhipu AI | 5時間 Token / MCP 月次クォータ | Coding Planをサポート |
 | GitHub Copilot | 月次クォータ | Premium Requests使用量を表示 |

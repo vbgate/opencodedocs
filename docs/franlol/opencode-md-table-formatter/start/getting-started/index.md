@@ -25,7 +25,7 @@ AI-generated Markdown tables often look like this:
 
 ```markdown
 | 名称 | 描述 | 状态 |
-|---|---|---|
+|--- | --- | ---|
 | 功能A | 这是一个很长的描述文本 | 已完成 |
 | B | 短 | 进行中 |
 ```
@@ -125,7 +125,7 @@ Ask AI to generate a table, for example input:
 
 ```markdown
 | 框架    | 特点                     | 学习曲线 |
-| ------- | ------------------------ | -------- |
+|--- | --- | ---|
 | React   | 组件化、虚拟 DOM         | 中等     |
 | Vue     | 渐进式、双向绑定         | 较低     |
 | Angular | 全功能框架、TypeScript   | 较高     |
@@ -136,7 +136,7 @@ Ask AI to generate a table, for example input:
 After completing the above steps, check the following points:
 
 | Check item              | Expected result                                    |
-| ----------------------- | -------------------------------------------------- |
+|--- | ---|
 | Configuration file syntax | No errors                                          |
 | OpenCode startup        | Normal startup, no plugin loading errors           |
 | AI-generated tables     | Column widths automatically aligned, separator row format unified |
@@ -184,7 +184,7 @@ See the [Troubleshooting](../../faq/troubleshooting/) section for details.
 > Last updated: 2026-01-26
 
 | Feature            | File path                                                                                       | Line number |
-| ------------------ | ---------------------------------------------------------------------------------------------- | ----------- |
+|--- | --- | ---|
 | Plugin entry point | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L9-L23) | 9-23        |
 | Hook registration  | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L11-L13) | 11-13       |
 | Package config     | [`package.json`](https://github.com/franlol/opencode-md-table-formatter/blob/main/package.json#L1-L41) | 1-41        |

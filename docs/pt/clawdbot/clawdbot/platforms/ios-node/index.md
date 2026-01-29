@@ -241,7 +241,7 @@ Comandos de câmera exigem que o aplicativo iOS esteja em **primeiro plano**. Se
 **Parâmetros da câmera iOS**:
 
 | Parâmetro | Tipo | Padrão | Descrição |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `facing` | `front\|back` | `front` | Orientação da câmera |
 | `maxWidth` | number | `1600` | Largura máxima (pixels) |
 | `quality` | `0..1` | `0.9` | Qualidade JPEG (0-1) |
@@ -388,7 +388,7 @@ Nesta lição, você aprendeu:
 > Última atualização: 2026-01-27
 
 | Funcionalidade | Caminho do Arquivo | Linha |
-| --- | --- | --- |
+|--- | --- | ---|
 | Entrada do aplicativo iOS | [`apps/ios/Sources/ClawdbotApp.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/ClawdbotApp.swift) | 1-30 |
 | Renderização Canvas | [`apps/ios/Sources/RootCanvas.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/RootCanvas.swift) | 1-250 |
 | Conexão Gateway | [`apps/ios/Sources/Gateway/`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/Gateway/) | - |

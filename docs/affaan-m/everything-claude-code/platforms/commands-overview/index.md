@@ -57,7 +57,7 @@ A command typically calls one or more agents, and agents may reference relevant 
 15 commands categorized by function:
 
 | Category | Command | Purpose |
-|----------|---------|---------|
+|--- | --- | ---|
 | **Development Workflow** | `/plan` | Create implementation plan |
 | | `/tdd` | Execute test-driven development |
 | | `/orchestrate` | Execute multiple agents in sequence |
@@ -250,7 +250,7 @@ Coverage: 100% ✅ (Target: 80%)
 **Workflow Types**:
 
 | Workflow Type | Agent Sequence |
-|--------------|---------------|
+|--- | ---|
 | `feature` | planner → tdd-guide → code-reviewer → security-reviewer |
 | `bugfix` | explorer → tdd-guide → code-reviewer |
 | `refactor` | architect → code-reviewer → tdd-guide |
@@ -320,7 +320,7 @@ RECOMMENDATION
 **Check Items**:
 
 | Category | Check Content | Severity |
-|----------|---------------|----------|
+|--- | --- | ---|
 | **Security** | Hardcoded keys, SQL injection, XSS, missing input validation | CRITICAL |
 | **Code Quality** | Functions > 50 lines, files > 800 lines, nesting depth > 4 | HIGH |
 | **Best Practices** | Mutation patterns, console.log, missing tests, TODO/FIXME | MEDIUM |
@@ -1356,7 +1356,7 @@ $env:CLAUDE_PACKAGE_MANAGER = "pnpm"
 ## Command Comparison Cheat Sheet
 
 | Command | Main Purpose | Triggers Agent | Output |
-|---------|-------------|----------------|--------|
+|--- | --- | --- | ---|
 | `/plan` | Create implementation plan | planner | Phased plan |
 | `/tdd` | TDD development | tdd-guide | Tests + implementation + coverage |
 | `/orchestrate` | Execute agents in sequence | Multiple agents | Comprehensive report |
@@ -1456,7 +1456,7 @@ Master these commands to complete development work efficiently, safely, and with
 > Last updated: 2026-01-25
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | TDD Command | [`commands/tdd.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/tdd.md) | 1-327 |
 | Plan Command | [`commands/plan.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/plan.md) | 1-114 |
 | Code Review Command | [`commands/code-review.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/code-review.md) | 1-41 |

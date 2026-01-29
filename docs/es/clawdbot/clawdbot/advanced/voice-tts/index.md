@@ -177,7 +177,7 @@ Toca el botón Talk en la aplicación iOS/Android para activar.
 > Actualizado: 2026-01-27
 
 | Función | Ruta de archivo | Número de línea |
-| ----- | --------- | ---- |
+|--- | --- | ---|
 | Lógica central de TTS | [`src/tts/tts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/tts/tts.ts) | 1-1472 |
 | ElevenLabs TTS | [`src/tts/tts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/tts/tts.ts) | 916-991 |
 | OpenAI TTS | [`src/tts/tts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/tts/tts.ts) | 993-1037 |

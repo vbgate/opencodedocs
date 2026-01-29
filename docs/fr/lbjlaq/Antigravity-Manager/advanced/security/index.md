@@ -206,7 +206,7 @@ curl -i "http://127.0.0.1:<PORT>/v1/messages" \
 ::: warning Mauvaise pratique vs Pratique recommandée
 
 | Scénario | ❌ Erreur courante | ✓ Pratique recommandée |
-| --- | --- | --- |
+|--- | --- | ---|
 | Besoin d'accès réseau local | Seulement activer `allow_lan_access=true`, mais `auth_mode=off` | Utiliser `auth_mode=auto` et définir un `api_key` fort |
 | Authentification activée mais toujours 401 | Le client porte la clé, mais le nom du header n'est pas compatible | Le proxy prend en charge trois types de headers : `Authorization`/`x-api-key`/`x-goog-api-key` |
 | Authentification activée mais clé non configurée | Activer l'authentification avec `api_key` vide | Le backend rejettera directement (les journaux indiqueront que la clé est vide) |
@@ -259,16 +259,16 @@ last_error = Some(format!("Token refresh failed: {}", e));
 > Date de mise à jour : 2026-01-23
 
 | Fonction | Chemin du fichier | Lignes |
-| --- | --- | --- |
+|--- | --- | ---|
 | Les 4 modes d'auth_mode et explication de la sémantique auto | [`docs/proxy/auth.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy/auth.md#L10-L24) | 10-24 |
 | Énumération ProxyAuthMode et valeur par défaut (off par défaut) | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L5-L18) | 5-18 |
 | Champs clés et valeurs par défaut de ProxyConfig (allow_lan_access, api_key) | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L259) | 174-259 |
 | Dérivation de l'adresse d'écoute (127.0.0.1 vs 0.0.0.0) | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L281-L292) | 281-292 |
-| Logique de déduction auto -> effective_auth_mode | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L10-L30) | 10-30 |
+|--- | --- | ---|
 | Middleware d'authentification (OPTIONS autorisés, /healthz exempté, compatibilité 3 headers) | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L14-L78) | 14-78 |
 | Interface : commutateurs/listes déroulantes allow_lan_access et auth_mode | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L943-L1046) | 943-1046 |
 | Interface : modification/réinitialisation/copie de api_key | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L1048-L1120) | 1048-1120 |
-| Désactivation automatique invalid_grant et réécriture d'erreur "éviter la fuite d'e-mail" | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L841-L940) | 841-940 |
+|--- | --- | ---|
 | disable_account : écrire disabled/disabled_at/disabled_reason et retirer du pool de mémoire | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L942-L969) | 942-969 |
 | Transfert z.ai : réduire les headers transmissibles (éviter la fuite de clés locales/cookies) | [`src-tauri/src/proxy/providers/zai_anthropic.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/providers/zai_anthropic.rs#L70-L89) | 70-89 |
 | Comportement de désactivation du pool de comptes et affichage de l'interface (documentation) | [`docs/proxy/accounts.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy/accounts.md#L9-L44) | 9-44 |

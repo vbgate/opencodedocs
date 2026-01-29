@@ -166,7 +166,7 @@ The first discovered match wins.
 完成上述步骤后，验证以下内容：
 
 | 检查项 | 预期结果 |
-|--------|----------|
+|--- | ---|
 | 环境变量设置正确 | `echo $OPENCODE_AGENT_SKILLS_SUPERPOWERS_MODE` 输出 `true` |
 | Superpowers 技能可发现 | 调用 `get_available_skills()` 能看到 `using-superpowers` |
 | 新会话自动注入 | 创建新会话后，AI 知道自己有 superpowers |
@@ -212,7 +212,7 @@ The first discovered match wins.
 插件会自动注入以下工具映射，帮助 AI 正确调用 OpenCode 工具：
 
 | Superpowers 工具 | OpenCode 工具 | 说明 |
-|----------------|---------------|------|
+|--- | --- | ---|
 | `TodoWrite` | `todowrite` | Todo 写入工具 |
 | `Task` (带 subagents) | `task` + `subagent_type` | 子代理调用 |
 | `Skill` | `use_skill` | 加载技能 |
@@ -279,7 +279,7 @@ Superpowers 集成提供了严格的工作流指导，核心要点：
 > 更新时间：2026-01-24
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | Superpowers 集成模块 | [`src/superpowers.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/superpowers.ts#L1-L59) | 1-59 |
 | 工具映射定义 | [`src/superpowers.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/superpowers.ts#L12-L16) | 12-16 |
 | 技能命名空间定义 | [`src/superpowers.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/superpowers.ts#L18-L25) | 18-25 |

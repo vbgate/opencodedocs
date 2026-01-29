@@ -73,7 +73,7 @@ order: 2
 Plannotator 支援四種計畫註解類型（外加一種全域評論）：
 
 | 註解類型 | 圖示 | 用途 | 是否需要輸入內容 |
-|---------|------|------|---------------|
+|--- | --- | --- | ---|
 | **刪除 (DELETION)** | 🗑️ | 標記此內容應從計畫中移除 | ❌ 不需要 |
 | **評論 (COMMENT)** | 💬 | 對選取內容提出問題或建議 | ✅ 需要輸入評論 |
 | **取代 (REPLACEMENT)** | 透過評論實現 | 用新內容取代選取內容 | ✅ 需要輸入新內容 |
@@ -374,11 +374,11 @@ Plannotator 支援四種計畫註解類型（外加一種全域評論）：
 > 更新時間：2026-01-24
 
 | 功能 | 檔案路徑 | 行號 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 註解類型列舉定義 | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L1-L7) | 1-7 |
 | Annotation 介面 | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L11-L33) | 11-33 |
 | 註解工具列元件 | [`packages/ui/components/AnnotationToolbar.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/components/AnnotationToolbar.tsx#L29-L272) | 29-272 |
-| type-to-comment 實現 | [`packages/ui/components/AnnotationToolbar.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/components/AnnotationToolbar.tsx#L127-L147) | 127-147 |
+|--- | --- | ---|
 | 註解匯出格式化 | [`packages/ui/utils/parser.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/utils/parser.ts#L246-L323) | 246-323 |
 | Markdown 解析為 Blocks | [`packages/ui/utils/parser.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/utils/parser.ts#L70-L244) | 70-244 |
 | Viewer 元件（文字選取處理） | [`packages/ui/components/Viewer.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/components/Viewer.tsx#L66-L350) | 66-350 |

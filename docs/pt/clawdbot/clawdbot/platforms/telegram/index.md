@@ -67,7 +67,7 @@ Por padrão, o arquivo de configuração do Clawdbot está localizado em:
 Ao contrário de outras plataformas de mensagens instantâneas, o Telegram usa a arquitetura **Bot API**:
 
 | Recurso | Telegram | WhatsApp | Slack |
-| ------- | -------- | -------- | ----- |
+|--- | --- | --- | ---|
 | Método de Conexão | Bot API (HTTP) | Web Client | Bot API + WebSocket |
 | Modo de Mensagem | Push (Bot envia ativamente) | Pull (escuta Web Client) | Pull (escuta WebSocket) |
 | Modo de Privacidade | **Suportado** (Bot pode escolher) | N/A | N/A |
@@ -187,7 +187,7 @@ Crie ou edite `~/.clawdbot/clawdbot.json`:
 **Explicação dos Campos de Configuração**:
 
 | Campo | Tipo | Padrão | Descrição |
-| ----- | ---- | ------ | --------- |
+|--- | --- | --- | ---|
 | `enabled` | boolean | `true` | Se o canal Telegram está habilitado |
 | `botToken` | string | - | Bot Token (obrigatório) |
 | `dmPolicy` | string | `"pairing"` | Política de acesso DM |
@@ -277,7 +277,7 @@ clawdbot pairing approve telegram CLAW-ABC123
 **Se o Bot Não Responder**:
 
 | Problema | Possível Causa | Solução |
-| -------- | -------------- | ------- |
+|--- | --- | ---|
 | Bot sem resposta | Token de Bot incorreto | Verifique o valor `botToken` em `clawdbot.json` |
 | Bot sem resposta | Gateway não iniciado | Execute `clawdbot gateway --verbose` para ver erros |
 | Bot sem resposta | Problema de rede | Verifique se o servidor pode acessar `api.telegram.org` |
@@ -444,7 +444,7 @@ Por padrão, usa-se **Long-polling** (busca ativa de atualizações). Se você t
 **Webhook vs Long-polling**:
 
 | Recurso | Long-polling | Webhook |
-| ------- | ------------ | ------- |
+|--- | --- | ---|
 | Requisito de Rede | Precisa acessar `api.telegram.org` ativamente | Precisa de endpoint HTTPS público |
 | Latência | ~1-3 segundos de intervalo de polling | Push quase em tempo real |
 | Recursos do Servidor | Mais alto (polling contínuo) | Menor (recebe passivamente) |
@@ -607,7 +607,7 @@ Controlar se o Agent recebe reações dos usuários às mensagens (emoji).
 ### Erros de Configuração Comuns
 
 | Erro | Sintoma | Causa | Solução |
-| ---- | ------- | ------ | ------- |
+|--- | --- | --- | ---|
 | Formato de Token Incorreto | Erro "Invalid token" | Copiou Token incompleto | Verifique se o Token está completo (inclui dois pontos) |
 | Conflito de Variável de Ambiente | Bot usa Token diferente | Variável de ambiente substitui arquivo de configuração | Dê prioridade ao `channels.telegram.botToken` |
 | Grupo Sem Resposta | Bot não processa mensagens de grupo | Modo de privacidade não desativado | Execute `/setprivacy` em @BotFather |
@@ -669,7 +669,7 @@ Nesta aula você aprendeu:
 **Revisão dos Campos de Configuração Principais**:
 
 | Campo | Valor Recomendado | Descrição |
-| ----- | ---------------- | --------- |
+|--- | --- | ---|
 | `dmPolicy` | `"pairing"` | Política DM mais segura padrão |
 | `groups.*.requireMention` | `true` | Padrão de grupo exige menção |
 | `reactionNotifications` | `"own"` | Responder apenas a reações de mensagens do Bot |
@@ -695,7 +695,7 @@ Nesta aula você aprendeu:
 > Última atualização: 2026-01-27
 
 | Recurso | Caminho do Arquivo | Linhas |
-| ------- | ----------------- | ------ |
+|--- | --- | ---|
 | Criação do Telegram Bot | [`src/telegram/bot.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/telegram/bot.ts) | 106-452 |
 | Definição de Tipos de Configuração | [`src/config/types.telegram.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.telegram.ts) | 14-157 |
 | Documentação do Telegram | [`docs/channels/telegram.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/telegram.md) | 1-547 |

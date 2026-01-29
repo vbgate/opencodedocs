@@ -15,7 +15,7 @@ Este capítulo registra o histórico de evolução de versões do plugin opencod
 ## 📚 Navegação de subpáginas
 
 | Página | Descrição | Tempo de leitura |
-|------|------|---------|
+|--- | --- | ---|
 | **[Log de Atualizações: Histórico de Versões e Registro de Alterações](./release-notes/)** | Veja registros detalhados de alterações de todas as versões, incluindo novos recursos, detalhes técnicos, limitações conhecidas e planos futuros | 5 minutos |
 
 ---

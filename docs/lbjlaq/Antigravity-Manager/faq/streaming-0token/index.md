@@ -142,7 +142,7 @@ You can use 2 signals to determine whether it entered fix logic:
 ## Common Pitfalls
 
 | Scenario | What You Might Do (❌) | Recommended Practice (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | See 0 token and immediately manually retry many times | Keep pressing client retry button, not checking logs at all | First check Proxy Monitor + app.log once, confirm if it's peek phase early termination (will auto retry/rotate) |
 | Encounter `Invalid \`signature\`` and directly clear data directory | Delete `.antigravity_tools` entirely, losing accounts/statistics | First let proxy execute one "signature fix retry"; only consider manual intervention when logs explicitly indicate unrecoverable |
 | Treat "server-side fluctuation" as "account broken" | Rotate account for all 400/503/529 | Whether rotation is effective depends on status code; proxy itself has `should_rotate_account(...)` rules (`src-tauri/src/proxy/handlers/claude.rs#L226-L236`) |
@@ -167,9 +167,9 @@ You can use 2 signals to determine whether it entered fix logic:
 > Last updated: 2026-01-23
 
 | Feature | File Path | Lines |
-| --- | --- | --- |
+|--- | --- | ---|
 | Claude handler: backoff retry strategy + rotation rules | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L117-L236) | 117-236 |
-| Claude handler: internal non-streaming to streaming conversion (better quota) | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L665-L776) | 665-776 |
+|--- | --- | ---|
 | Claude handler: peek prefetch (skip heartbeat/comments, avoid empty streams) | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L812-L926) | 812-926 |
 | Claude handler: 400 signature/block order error fix retry | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L999-L1102) | 999-1102 |
 | Gemini handler: peek prefetch (prevent empty stream 200 OK) | [`src-tauri/src/proxy/handlers/gemini.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/gemini.rs#L117-L149) | 117-149 |

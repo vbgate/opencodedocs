@@ -36,7 +36,7 @@ Mas implementar esses recursos manualmente adiciona complexidade ao desenvolvime
 Quando você precisa estender as capacidades de agentes de IA:
 
 | Cenário | MCP Recomendado |
-|----------|----------------|
+|--- | ---|
 | Precisa obter informações técnicas recentes, notícias ou tendências do setor | **websearch** (Exa) |
 | Consultar documentação oficial de APIs para bibliotecas ou frameworks | **context7** |
 | Encontrar exemplos de implementação em repositórios GitHub | **grep_app** (Grep.app) |
@@ -182,7 +182,7 @@ Desabilitar MCPs desnecessários pode:
 A prioridade de configuração de desabilitação para MCPs integrados:
 
 | Localização da Configuração | Prioridade |
-|-----------------------------|------------|
+|--- | ---|
 | Config do usuário `~/.config/opencode/oh-my-opencode.json` | Alta (sobrepõe config do projeto) |
 | Config do projeto `.opencode/oh-my-opencode.json` | Média |
 | Padrão do código | Baixa (todos habilitados) |
@@ -211,7 +211,7 @@ export const websearch = {
 **Descrições dos Campos de Configuração**:
 
 | Campo | Tipo | Descrição |
-|-------|------|-----------|
+|--- | --- | ---|
 | `type` | `"remote"` | Valor fixo, indicando MCP remoto |
 | `url` | `string` | Endereço HTTP do servidor MCP |
 | `enabled` | `boolean` | Se está habilitado (fixado como `true` no código, controlado por `disabled_mcps`) |
@@ -288,7 +288,7 @@ oh-my-opencode doctor --verbose
 Esta lição apresentou os 3 servidores MCP integrados do Oh-My-OpenCode:
 
 | MCP | Função | Requisitos de Configuração | Uso Principal |
-|-----|----------|---------------------------|---------------|
+|--- | --- | --- | ---|
 | **websearch** | Pesquisa web em tempo real | EXA_API_KEY | Obter informações recentes |
 | **context7** | Consulta de documentação oficial | Nenhum | Consultar documentação de API |
 | **grep_app** | Pesquisa de código GitHub | Nenhum | Encontrar exemplos de implementação |
@@ -312,7 +312,7 @@ Esses servidores MCP expandem significativamente as capacidades dos agentes de I
 > Atualizado: 2026-01-26
 
 | Função | Caminho do Arquivo | Números de Linha |
-|----------|-----------|--------------|
+|--- | --- | ---|
 | Função de fábrica MCP | [`src/mcp/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/mcp/index.ts) | 22-32 |
 | Configuração websearch | [`src/mcp/websearch.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/mcp/websearch.ts) | 1-11 |
 | Configuração context7 | [`src/mcp/context7.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/mcp/context7.ts) | 1-7 |

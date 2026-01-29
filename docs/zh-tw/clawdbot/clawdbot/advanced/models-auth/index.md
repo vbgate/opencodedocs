@@ -67,7 +67,7 @@ Clawdbot 支援數十種模型提供者，但設定起來可能讓人困惑：
 Clawdbot 支援三種認證方式，適用於不同場景：
 
 | 認證方式 | 儲存格式 | 典型場景 | 支援的提供者 |
-|---------|---------|-----------|------------|
+|--- | --- | --- | ---|
 | **API Key** | `{ type: "api_key", key: "sk-..." }` | 快速開始、測試 | Anthropic、OpenAI、OpenRouter、DeepSeek 等 |
 | **OAuth** | `{ type: "oauth", access: "...", refresh: "..." }` | 長期執行、自動重新整理 | Anthropic (Claude Code CLI)、OpenAI (Codex)、Qwen Portal |
 | **Token** | `{ type: "token", token: "..." }` | 靜態 Bearer token | GitHub Copilot、某些自訂代理 |
@@ -78,7 +78,7 @@ Clawdbot 內建支援以下模型提供者：
 
 ::: details 內建提供者清單
 | 提供者 | 認證方式 | 推薦模型 | 備註 |
-|---------|----------|----------|------|
+|--- | --- | --- | ---|
 | **Anthropic** | API Key / OAuth (Claude Code CLI) | `anthropic/claude-opus-4-5` | 推薦 Claude Pro/Max + Opus 4.5 |
 | **OpenAI** | API Key / OAuth (Codex) | `openai/gpt-5.2` | 支援標準 OpenAI 和 Codex 版本 |
 | **OpenRouter** | API Key | `openrouter/anthropic/claude-sonnet-4-5` | 聚合數百個模型 |
@@ -460,7 +460,7 @@ auth:
 Clawdbot 支援以下 OAuth 提供者的自動重新整理：
 
 | 提供者 | OAuth 流程 | 重新整理機制 |
-|---------|-----------|----------|
+|--- | --- | ---|
 | **Anthropic** (Claude Code CLI) | 標準授權碼 | pi-mono RPC 重新整理 |
 | **OpenAI** (Codex) | 標準授權碼 | pi-mono RPC 重新整理 |
 | **Qwen Portal** | 自訂 OAuth | `refreshQwenPortalCredentials` |
@@ -522,7 +522,7 @@ agents:
 某些提供者無需明確設定，Clawdbot 會自動偵測：
 
 | 提供者 | 偵測方式 | 設定檔 |
-|---------|----------|----------|
+|--- | --- | ---|
 | **GitHub Copilot** | `~/.copilot/credentials.json` | 無需設定 |
 | **AWS Bedrock** | 環境變數或 AWS SDK 憑證 | `~/.aws/credentials` |
 | **Codex CLI** | `~/.codex/auth.json` | 無需設定 |
@@ -632,7 +632,7 @@ clawdbot gateway restart
 > 更新時間：2026-01-27
 
 | 功能 | 檔案路徑 | 行號 |
-| ----- | --------- | ---- |
+|--- | --- | ---|
 | 認證憑證類型定義 | [`src/agents/auth-profiles/types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/types.ts) | 1-74 |
 | OAuth Token 解析和重新整理 | [`src/agents/auth-profiles/oauth.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/oauth.ts) | 1-220 |
 | 認證設定檔管理 | [`src/agents/auth-profiles/profiles.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/profiles.ts) | 1-85 |

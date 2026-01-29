@@ -27,7 +27,7 @@ opencode-supermemory는 메모리를 두 개의 격리된 **범위(Scope)**로 �
 ### 1. 두 가지 범위
 
 | 범위 | 식별자(Scope ID) | 생명주기 | 전형적인 용도 |
-| :--- | :--- | :--- | :--- |
+|--- | --- | --- | ---|
 | **User Scope**<br>(사용자 범위) | `user` | **영구적으로 따라감**<br>모든 프로젝트에 걸쳐 공유 | • 코딩 스타일 기본 설정 (예: "TypeScript 선호")<br>• 개인 습관 (예: "항상 주석 작성")<br>• 일반적인 지식 |
 | **Project Scope**<br>(프로젝트 범위) | `project` | **현재 프로젝트에 한함**<br>디렉토리 전환 시 무효화 | • 프로젝트 아키텍처 설계<br>• 비즈니스 로직 설명<br>• 특정 버그 수정 방안 |
 
@@ -191,7 +191,7 @@ Supermemory의 벡터 인덱스는 보통 초 단위이지만, 네트워크 불�
 > 업데이트: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Scope 생성 로직 | [`src/services/tags.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/tags.ts#L18-L36) | 18-36 |
 | 메모리 도구 정의 | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
 | 메모리 타입 정의 | [`src/types/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/types/index.ts) | - |

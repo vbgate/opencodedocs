@@ -51,7 +51,7 @@ clawdbot status --deep
 
 ::: tip Command Reference
 | Command | Function | Use Case |
-| --- | --- | --- |
+|--- | --- | ---|
 | `clawdbot status` | Local summary: system info, Gateway connection, service status, Agent status, provider config | First check, quick overview |
 | `clawdbot status --all` | Complete diagnostics (read-only, shareable, relatively safe), includes log tail | When sharing debug reports |
 | `clawdbot status --deep` | Run Gateway health check (includes provider probing, requires connectable Gateway) | When "configured" doesn't equal "working" |
@@ -660,7 +660,7 @@ clawdbot channels login --verbose
 ### Log Locations
 
 | Log | Location |
-| --- | --- |
+|--- | ---|
 | Gateway file logs (structured) | `/tmp/clawdbot/clawdbot-YYYY-MM-DD.log` (or `logging.file`) |
 | Gateway service logs | macOS: `$CLAWDBOT_STATE_DIR/logs/gateway.log` + `gateway.err.log`<br/>Linux: `journalctl --user -u clawdbot-gateway[-<profile>].service -n 200 --no-pager`<br/>Windows: `schtasks /Query /TN "Clawdbot Gateway (<profile>)" /V /FO LIST` |
 | Session files | `$CLAWDBOT_STATE_DIR/agents/<agentId>/sessions/` |
@@ -830,7 +830,7 @@ Remember: Most problems have clear causes and solutions—systematic troubleshoo
 > Updated: 2026-01-27
 
 | Feature | File Path | Line |
-| --- | --- | --- |
+|--- | --- | ---|
 | Troubleshooting commands | [`src/commands/doctor.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/doctor.ts) | Full text |
 | Gateway health check | [`src/gateway/server-channels.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-channels.ts) | 93+ |
 | Logging system | [`src/logging/index.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/logging/index.ts) | Full text |

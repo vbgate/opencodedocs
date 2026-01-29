@@ -117,7 +117,7 @@ You should notice the YAML frontmatter at the top of the file, containing creati
 Each saved plan includes the following frontmatter fields:
 
 | Field   | Example                           | Description                         |
-| ------ | -------------------------------- | ---------------------------- |
+|--- | --- | ---|
 | `created` | `2026-01-24T14:30:00.000Z`    | ISO 8601 formatted creation timestamp     |
 | `source` | `plannotator`                   | Fixed value, identifies source             |
 | `tags` | `[plan, authentication, typescript]` | Automatically extracted tag array |
@@ -142,7 +142,7 @@ Tag count limit: Maximum 7 tags, ordered by extraction sequence.
 Filenames use a highly readable format: `Title - Jan 2, 2026 2-30pm.md`
 
 | Part       | Example         | Description                  |
-| ---------- | ------------ | --------------------- |
+|--- | --- | ---|
 | Title       | `User Authentication` | Extracted from H1, limited to 50 characters |
 | Date       | `Jan 2, 2026` | Current date               |
 | Time       | `2-30pm`     | Current time (12-hour format)   |
@@ -160,7 +160,7 @@ Each plan file has a `[[Plannotator Plans]]` link inserted at the bottom. This b
 Plannotator automatically detects Obsidian configuration file locations across different operating systems:
 
 | Operating System | Configuration File Path                                    |
-| -------- | ----------------------------------------------- |
+|--- | ---|
 | macOS     | `~/Library/Application Support/obsidian/obsidian.json` |
 | Windows   | `%APPDATA%\obsidian/obsidian.json`                 |
 | Linux     | `~/.config/obsidian/obsidian.json`                 |
@@ -229,7 +229,7 @@ After configuring once, every review will be automatically archived—no more ma
 > Updated: 2026-01-24
 
 | Feature                | File Path                                                                                     | Line Number |
-| ------------------- | -------------------------------------------------------------------------------------------- | ----------- |
+|--- | --- | ---|
 | Detect Obsidian vaults | [`packages/server/integrations.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/integrations.ts#L135-L175) | 135-175 |
 | Save plans to Obsidian | [`packages/server/integrations.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/integrations.ts#L180-L227) | 180-227 |
 | Extract tags             | [`packages/server/integrations.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/integrations.ts#L34-L74) | 34-74   |

@@ -61,7 +61,7 @@ Como a detecção de idioma é baseada no ambiente do sistema, o plugin identifi
 
 **Idiomas suportados**:
 | Idioma | Código | Condição de detecção |
-| ------ | ------ | ------------------- |
+|--- | --- | ---|
 | Chinês | `zh` | locale começa com `zh` (como `zh-CN`, `zh-TW`) |
 | Inglês | `en` | Outros casos |
 
@@ -195,7 +195,7 @@ source ~/.bashrc
 Verifique se a detecção de idioma está correta:
 
 | Item de teste | Operação | Resultado esperado |
-| ------------- | -------- | ------------------ |
+|--- | --- | ---|
 | Sistema em chinês | Executar `/mystatus` | Saída em chinês (como `3小时限额`) |
 | Sistema em inglês | Executar `/mystatus` | Saída em inglês (como `3-hour limit`) |
 | Alternância temporária | Modificar a variável de ambiente `LANG` e executar o comando | O idioma de saída muda de acordo |
@@ -205,7 +205,7 @@ Verifique se a detecção de idioma está correta:
 ### Problemas comuns
 
 | Problema | Causa | Solução |
-| -------- | ------ | ------- |
+|--- | --- | ---|
 | O idioma de saída não corresponde ao esperado | Configuração de idioma do sistema incorreta | Verifique a variável de ambiente `LANG` ou as configurações de idioma do sistema |
 | API Intl não disponível | Versão do Node.js muito antiga ou ambiente não suportado | O plugin fará fallback automaticamente para a detecção de variáveis de ambiente |
 | Sistema em chinês exibindo inglês | A variável de ambiente `LANG` não está definida como `zh_*` | Defina o valor correto de `LANG` (como `zh_CN.UTF-8`) |
@@ -255,7 +255,7 @@ O plugin detecta o idioma **apenas uma vez** durante o carregamento do módulo. 
 > Data de atualização: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Número da linha |
-| -------------- | ------------------ | --------------- |
+|--- | --- | ---|
 | Função de detecção de idioma | [`plugin/lib/i18n.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/i18n.ts#L24-L40) | 24-40 |
 | Definição de tradução em chinês | [`plugin/lib/i18n.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/i18n.ts#L46-L124) | 46-124 |
 | Definição de tradução em inglês | [`plugin/lib/i18n.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/i18n.ts#L125-L203) | 125-203 |

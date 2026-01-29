@@ -394,7 +394,7 @@ Z.ai API 요청 실패 (200): {"code": 400, "msg": "Bad request"}
 독립적으로 일반적인 문제를 해결할 수 있는지 확인하세요:
 
 | 기술 | 확인 방법 | 예상 결과 |
-| ---- | -------- | -------- |
+|--- | --- | ---|
 | 인증 파일 문제 해결 | auth.json이 존재하고 형식이 올바른지 확인 | 파일이 존재하며 JSON 형식 올바름 |
 | OpenAI 토큰 새로 고침 | OpenCode에서 OpenAI 모델 사용 | 토큰이 업데이트되고 할당량 정상 조회 가능 |
 | Copilot PAT 구성 | copilot-quota-token.json 생성 | Copilot 할당량 정상 조회 가능 |
@@ -433,7 +433,7 @@ mystatus의 오류 처리는 세 계층으로 나뉩니다: 인증 파일 읽기
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 오류 처리 주요 로직 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 41-87 |
 | 인증 파일 읽기 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 38-46 |
 | 계정 찾을 수 없음 메시지 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 78-80 |

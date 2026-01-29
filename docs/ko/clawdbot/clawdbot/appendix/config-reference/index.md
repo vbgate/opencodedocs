@@ -97,7 +97,7 @@ Clawdbot 구성 파일은 다음 주요 구성 섹션을 포함하는 계층적 
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `lastTouchedVersion` | string | - | 이 구성을 마지막으로 수정한 Clawdbot 버전 |
 | `lastTouchedAt` | string | - | 이 구성을 마지막으로 수정한 시간(ISO 8601) |
 
@@ -123,7 +123,7 @@ Clawdbot 구성 파일은 다음 주요 구성 섹션을 포함하는 계층적 
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `shellEnv.enabled` | boolean | `false` | 로그인 쉘에서 환경 변수 가져오기(누락된 키만 가져오기) |
 | `shellEnv.timeoutMs` | number | `15000` | 쉘 환경 가져오기 시간 초과(밀리초) |
 | `vars` | object | - | 인라인 환경 변수(키-값 쌍) |
@@ -150,7 +150,7 @@ CLI 마법사(`onboard`, `configure`, `doctor`)가 작성한 메타데이터.
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `lastRunAt` | string | - | 마법사를 마지막으로 실행한 시간 |
 | `lastRunVersion` | string | - | 마법사를 마지막으로 실행했을 때의 Clawdbot 버전 |
 | `lastRunCommit` | string | - | 마법사를 마지막으로 실행했을 때의 Git 커밋 해시 |
@@ -192,7 +192,7 @@ CLI 마법사(`onboard`, `configure`, `doctor`)가 작성한 메타데이터.
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `enabled` | boolean | `false` | 진단 기능 활성화 |
 | `flags` | string[] | - | 진단 플래그 목록 |
 | `otel.enabled` | boolean | `false` | OpenTelemetry 원격 분석 활성화 |
@@ -232,7 +232,7 @@ CLI 마법사(`onboard`, `configure`, `doctor`)가 작성한 메타데이터.
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `level` | string | `info` | 로그 수준(`silent` \| `fatal` \| `error` \| `warn` \| `info` \| `debug` \| `trace`) |
 | `file` | string | - | 로그 파일 경로(기본값: `/tmp/clawdbot/clawdbot-YYYY-MM-DD.log`) |
 | `consoleLevel` | string | `info` | 콘솔 로그 수준(`level` 옵션과 동일) |
@@ -257,7 +257,7 @@ CLI 마법사(`onboard`, `configure`, `doctor`)가 작성한 메타데이터.
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `channel` | string | `stable` | 업데이트 채널(`stable` \| `beta` \| `dev`) |
 | `checkOnStart` | boolean | - | 시작 시 업데이트 확인 |
 
@@ -296,7 +296,7 @@ CLI 마법사(`onboard`, `configure`, `doctor`)가 작성한 메타데이터.
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `enabled` | boolean | - | 브라우저 도구 활성화 |
 | `controlUrl` | string | - | 브라우저 제어 WebSocket URL |
 | `controlToken` | string | - | 브라우저 제어 인증 토큰 |
@@ -338,7 +338,7 @@ UI 사용자 지정 구성(Control UI, WebChat).
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `seamColor` | string | - | Seam 색상의 16진수 값 |
 | `assistant.name` | string | - | 어시스턴트 표시 이름(최대 50자) |
 | `assistant.avatar` | string | - | 어시스턴트 아바타 경로 또는 URL(최대 200자) |
@@ -389,7 +389,7 @@ UI 사용자 지정 구성(Control UI, WebChat).
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `profiles` | object | - | 프로필 매핑(키: 프로필 ID, 값: 구성) |
 | `profiles.<profileId>.provider` | string | - | 제공자 이름 |
 | `profiles.<profileId>.mode` | string | - | 인증 모드(`api_key` \| `oauth` \| `token`) |
@@ -492,7 +492,7 @@ AI 모델 제공자 및 구성.
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `mode` | string | - | 모델 병합 모드(`merge` \| `replace`) |
 | `providers` | object | - | 제공자 매핑(키: 제공자 ID, 값: 제공자 구성) |
 | `providers.<providerId>.baseUrl` | string | - | API 기본 URL |
@@ -664,7 +664,7 @@ AI 모델 제공자 및 구성.
 **기본 구성**(`agents.defaults`):
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `workspace` | string | `~/clawd` | 에이전트 작업 공간 디렉터리 |
 | `repoRoot` | string | - | Git 저장소 루트 디렉터리(시스템 프롬프트용) |
 | `skipBootstrap` | boolean | `false` | 작업 공간 부트스트랩 파일 생성 건너뛰기 |
@@ -693,7 +693,7 @@ AI 모델 제공자 및 구성.
 **에이전트 목록**(`agents.list`):
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `id` | string | 필수 | 에이전트 ID(안정적인 식별자) |
 | `default` | boolean | `false` | 기본 에이전트인지 여부(여러 개인 경우 첫 번째가 우선) |
 | `name` | string | - | 에이전트 표시 이름 |
@@ -751,7 +751,7 @@ AI 모델 제공자 및 구성.
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `agentId` | string | 필수 | 대상 에이전트 ID(`agents.list`에 있어야 함) |
 | `match.channel` | string | 필수 | 일치하는 채널 |
 | `match.accountId` | string | - | 일치하는 계정 ID(`*` = 모든 계정, 생략 = 기본 계정) |
@@ -801,7 +801,7 @@ AI 모델 제공자 및 구성.
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `exec.elevated.enabled` | boolean | `false` | 상승된 bash 활성화(`! <cmd>`) |
 | `exec.elevated.allowFrom` | object | - | 채널별 상승 허용 목록 |
 | `browser.enabled` | boolean | - | 브라우저 도구 활성화 |
@@ -826,7 +826,7 @@ AI 모델 제공자 및 구성.
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `strategy` | string | - | 브로드캐스트 전략(`parallel` \| `sequential`) |
 | `<peerId>` | string[] | - | 메시지를 이러한 에이전트로 전송(동적 키) |
 
@@ -898,7 +898,7 @@ AI 모델 제공자 및 구성.
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `responsePrefix` | string | - | 모든 아웃바운드 회신의 접두사(템플릿 변수 지원) |
 | `ackReaction` | string | - | 인바운드 메시지를 확인하는 이모지 |
 | `ackReactionScope` | string | - | 확인을 보낼 시기(`group-mentions` \| `group-all` \| `direct` \| `all`) |
@@ -915,7 +915,7 @@ AI 모델 제공자 및 구성.
 **템플릿 변수**(`responsePrefix`용):
 
 | 변수 | 설명 | 예 |
-|--------|------|------|
+|--- | --- | ---|
 | `{model}` | 짧은 모델 이름 | `claude-opus-4-5`, `gpt-4` |
 | `{modelFull}` | 전체 모델 식별자 | `anthropic/claude-opus-4-5` |
 | `{provider}` | 제공자 이름 | `anthropic`, `openai` |
@@ -947,7 +947,7 @@ AI 모델 제공자 및 구성.
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `native` | string | `auto` | 기본 명령(`auto` \| `true` \| `false`) |
 | `text` | boolean | `true` | 채팅 메시지에서 슬래시 명령 구문 분석 |
 | `bash` | boolean | `false` | `!` 허용(`/bash`의 별칭) |
@@ -984,7 +984,7 @@ AI 모델 제공자 및 구성.
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `activation.defaultMode` | string | `auto` | 기본 활성화 모드(`auto` \| `always` \| `manual`) |
 | `activation.defaultDurationMs` | number | - | 기본 활성화 기간(밀리초) |
 | `activation.keepAlive` | boolean | - | 활성 상태 유지 |
@@ -1012,7 +1012,7 @@ AI 모델 제공자 및 구성.
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `enabled` | boolean | - | Cron 엔진 활성화 |
 | `store` | string | - | Cron 저장 파일 경로 |
 | `maxConcurrentRuns` | number | - | 최대 동시 실행 수 |
@@ -1056,7 +1056,7 @@ AI 모델 제공자 및 구성.
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `enabled` | boolean | - | Hooks 활성화 |
 | `path` | string | - | Hooks 디렉터리 경로 |
 | `token` | string | - | 웹훅 인증 토큰 |
@@ -1315,7 +1315,7 @@ Gateway WebSocket 서버 및 인증.
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `port` | number | `18789` | Gateway WebSocket 포트 |
 | `mode` | string | `local` | Gateway 모드(`local` \| `remote`) |
 | `bind` | string | - | 바인딩 주소(`auto` \| `lan` \| `loopback` \| `custom` \| `tailnet`) |
@@ -1382,7 +1382,7 @@ Serve/Funnel을 활성화하면 `gateway.bind`는 `loopback`(Clawdbot가 이 규
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `allowBundled` | string[] | - | 허용된 내장 스킬 목록 |
 | `load.extraDirs` | string[] | - | 추가 스킬 디렉터리 |
 | `load.watch` | boolean | - | 스킬 파일 변경 감시 |
@@ -1417,7 +1417,7 @@ Serve/Funnel을 활성화하면 `gateway.bind`는 `loopback`(Clawdbot가 이 규
 ```
 
 | 필드 | 유형 | 필수 | 기본값 | 설명 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `enabled` | boolean | - | 플러그인 시스템 활성화 |
 | `allow` | string[] | - | 허용된 플러그인 목록 |
 | `deny` | string[] | - | 거부된 플러그인 목록 |
@@ -1526,7 +1526,7 @@ clawdbot doctor --yes
 ## 구성 파일 경로
 
 | 파일 | 경로 | 설명 |
-|------|--------|------|
+|--- | --- | ---|
 | 주 구성 | `~/.clawdbot/clawdbot.json` | 주 구성 파일 |
 | 환경 변수 | `~/.clawdbot/.env` | 전역 환경 변수 |
 | 작업 공간 환경 | `~/clawd/.env` | 작업 공간 환경 변수 |
@@ -1569,7 +1569,7 @@ clawdbot doctor --yes
 > 업데이트 날짜: 2026-01-27
 
 | 구성 섹션 | 파일 경로 | 행 번호 |
-|---------|-----------|------|
+|--- | --- | ---|
 | 주 스키마 | [`src/config/zod-schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.ts) | 1-556 |
 | 코어 스키마 | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | 1-300 |
 | 에이전트 스키마 | [`src/config/zod-schema.agents.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.agents.ts) | 1-54 |

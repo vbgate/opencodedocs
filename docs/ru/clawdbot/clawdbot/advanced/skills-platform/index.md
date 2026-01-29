@@ -393,7 +393,7 @@ ls -la <workspace>/skills/
 > Дата обновления: 2026-01-27
 
 | Функциональность | Путь к файлу | Номер строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Определение типа конфигурации навыков | [`src/config/types.skills.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.skills.ts) | 1-32 |
 | Документация системы навыков | [`docs/tools/skills.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/skills.md) | 1-260 |
 | Справочник по конфигурации навыков | [`docs/tools/skills-config.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/skills-config.md) | 1-76 |

@@ -27,7 +27,7 @@ By reading this API reference, you will:
 The OpenCode Agent Skills plugin provides the following 4 tools:
 
 | Tool Name | Description | Use Cases |
-|-----------|-------------|-----------|
+|--- | --- | ---|
 | `get_available_skills` | Get list of available skills | View all available skills with search and filtering support |
 | `read_skill_file` | Read skill files | Access documentation, configuration, and other support files within skills |
 | `run_skill_script` | Execute skill scripts | Run automation scripts within the skill directory |
@@ -42,7 +42,7 @@ Get the list of available skills with optional search filtering.
 ### Parameters
 
 | Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
+|--- | --- | --- | ---|
 | `query` | string | No | Search query string to match skill names and descriptions (supports `*` wildcard) |
 
 ### Return Value
@@ -111,7 +111,7 @@ Read support files within a skill directory (documentation, configuration, examp
 ### Parameters
 
 | Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
+|--- | --- | --- | ---|
 | `skill` | string | Yes | Skill name |
 | `filename` | string | Yes | File path (relative to skill directory, e.g., `docs/guide.md`, `scripts/helper.sh`) |
 
@@ -141,7 +141,7 @@ The file content is injected into the session context in XML format:
 ### Error Handling
 
 | Error Type | Return Message |
-|------------|----------------|
+|--- | ---|
 | Skill not found | `Skill "xxx" not found. Use get_available_skills to list available skills.` |
 | Unsafe path | `Invalid path: cannot access files outside skill directory.` |
 | File not found | `File "xxx" not found. Available files: file1, file2, ...` |
@@ -183,7 +183,7 @@ Execute executable scripts within a skill directory.
 ### Parameters
 
 | Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
+|--- | --- | --- | ---|
 | `skill` | string | Yes | Skill name |
 | `script` | string | Yes | Script relative path (e.g., `build.sh`, `tools/deploy.sh`) |
 | `arguments` | string[] | No | Array of command-line arguments to pass to the script |
@@ -203,7 +203,7 @@ Build complete.
 ### Error Handling
 
 | Error Type | Return Message |
-|------------|----------------|
+|--- | ---|
 | Skill not found | `Skill "xxx" not found. Use get_available_skills to list available skills.` |
 | Script not found | `Script "xxx" not found in skill "yyy". Available scripts: script1, script2, ...` |
 | Execution failed | `Script failed (exit 1): error message` |
@@ -256,7 +256,7 @@ Load the SKILL.md content of a skill into the session context.
 ### Parameters
 
 | Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
+|--- | --- | --- | ---|
 | `skill` | string | Yes | Skill name (supports namespace prefix, e.g., `project:my-skill`, `user:my-skill`) |
 
 ### Return Value
@@ -300,17 +300,17 @@ The skill content is injected into the session context in XML format:
 Use namespace prefixes to precisely specify skill source:
 
 | Namespace | Description | Example |
-|-----------|-------------|---------|
+|--- | --- | ---|
 | `project:` | Project-level OpenCode skills | `project:my-skill` |
 | `user:` | User-level OpenCode skills | `user:my-skill` |
-| `claude-project:` | Project-level Claude skills | `claude-project:my-skill` |
-| `claude-user:` | User-level Claude skills | `claude-user:my-skill` |
+|--- | --- | ---|
+|--- | --- | ---|
 | No prefix | Uses default priority | `my-skill` |
 
 ### Error Handling
 
 | Error Type | Return Message |
-|------------|----------------|
+|--- | ---|
 | Skill not found | `Skill "xxx" not found. Use get_available_skills to list available skills.` |
 
 ### Auto-injection Features
@@ -352,7 +352,7 @@ use_skill({
 > Last updated: 2026-01-24
 
 | Tool | File Path | Line Range |
-|------|-----------|------------|
+|--- | --- | ---|
 | GetAvailableSkills tool | [`src/tools.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/tools.ts#L29-L72) | 29-72 |
 | ReadSkillFile tool | [`src/tools.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/tools.ts#L74-L135) | 74-135 |
 | RunSkillScript tool | [`src/tools.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/tools.ts#L137-L198) | 137-198 |

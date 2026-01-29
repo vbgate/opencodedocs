@@ -52,7 +52,7 @@ npm update @vbgate/opencode-mystatus
 One-click quota usage queries for the following platforms:
 
 | Platform | Supported Subscription Types | Quota Types |
-| -------- | ---------------------------- | ----------- |
+|--- | --- | ---|
 | OpenAI | Plus/Team/Pro | 3-hour quota, 24-hour quota |
 | Zhipu AI | Coding Plan | 5-hour Token limit, MCP monthly quota |
 | Google Cloud | Antigravity | G3 Pro, G3 Image, G3 Flash, Claude |

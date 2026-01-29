@@ -36,7 +36,7 @@ order: 30
 **推荐启动方式**：
 
 | 场景                  | 使用命令                               | 说明                                   |
-| ----------------------- | -------------------------------------- | -------------------------------------- |
+|--- | --- | ---|
 | 日常使用                | `clawdbot gateway install` + `clawdbot gateway start` | 作为后台服务自动启动                  |
 | 开发调试                | `clawdbot gateway --dev`                     | 创建开发配置，自动重载                  |
 | 临时测试                | `clawdbot gateway`                           | 前台运行，日志直接输出到终端            |
@@ -487,7 +487,7 @@ clawdbot gateway --port 19001  # 使用不同端口
 **关键命令速查**：
 
 | 场景                   | 命令                                        |
-| ---------------------- | ------------------------------------------- |
+|--- | ---|
 | 日常使用（服务）       | `clawdbot gateway install && clawdbot gateway start` |
 | 开发调试              | `clawdbot gateway --dev`                     |
 | 临时测试              | `clawdbot gateway`                           |
@@ -516,7 +516,7 @@ clawdbot gateway --port 19001  # 使用不同端口
 > 更新时间：2026-01-27
 
 | 功能                        | 文件路径                                                                                   | 行号     |
-| --------------------------- | -------------------------------------------------------------------------------------- | -------- |
+|--- | --- | ---|
 | Gateway 启动入口            | [`src/cli/gateway-cli/run.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/gateway-cli/run.ts) | 55-310   |
 | 守护进程服务抽象         | [`src/daemon/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/service.ts) | 66-155    |
 | 启动侧边栏服务           | [`src/gateway/server-startup.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup.ts) | 26-160    |

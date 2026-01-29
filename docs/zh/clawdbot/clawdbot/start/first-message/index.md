@@ -55,7 +55,7 @@ order: 40
 ### 必需条件
 
 | 条件                     | 如何检查                                        |
-| ---------------------- | ------------------------------------------- |
+|--- | ---|
 | **Gateway 已启动**   | `clawdbot gateway status` 或查看进程是否在运行 |
 | **AI 模型已配置** | `clawdbot models list` 查看是否有可用模型      |
 | **端口可访问**       | 确认 18789 端口（或自定义端口）未被占用 |
@@ -119,7 +119,7 @@ Clawdbot 支持三种主要方式发送消息：
 **关键区别**：
 
 | 方式                     | 是否经过 AI | 用途                           |
-| ---------------------- | ----------- | ------------------------------ |
+|--- | --- | ---|
 | `clawdbot agent`     | ✅ 是       | 与 AI 对话，获取回复和思考过程    |
 | `clawdbot message send` | ❌ 否       | 直接发送消息到渠道，不经过 AI    |
 | WebChat / 渠道       | ✅ 是       | 通过图形界面与 AI 对话         |
@@ -193,7 +193,7 @@ Let me think about what needs to be checked for shipping:
 **思考级别选项**：
 
 | 级别        | 说明                           | 适用场景             |
-| --------- | ------------------------------ | ------------------ |
+|--- | --- | ---|
 | `off`     | 不显示思考过程               | 简单问答、快速响应 |
 | `minimal` | 最小化思考输出              | 调试、检查流程     |
 | `low`     | 低详细度                     | 日常对话           |
@@ -263,7 +263,7 @@ WebChat 使用与 Gateway 相同的端口（默认 18789）。如果你修改了
 **WebChat 功能**：
 
 | 功能     | 说明                           |
-| ------ | ------------------------------ |
+|--- | ---|
 | 富文本   | 支持 Markdown 格式            |
 | 附件     | 支持图片、音频、视频上传    |
 | 历史记录 | 自动保存会话历史             |
@@ -543,7 +543,7 @@ clawdbot message send --target +15555550123 --message "Meeting at 3pm"
 > 更新时间：2026-01-27
 
 | 功能                  | 文件路径                                                                                             | 行号    |
-| ------------------- | ---------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | CLI Agent 命令注册  | [`src/cli/program/register.agent.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.agent.ts) | 20-82    |
 | Agent CLI 执行        | [`src/commands/agent-via-gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/agent-via-gateway.ts) | 82-184   |
 | CLI message send 注册 | [`src/cli/program/message/register.send.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/message/register.send.ts) | 1-30     |

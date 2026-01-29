@@ -193,7 +193,7 @@ oh-my-opencode 内置默认值 (最低优先级)
 **权限说明**：
 
 | 权限           | 值            | 说明                                               |
-| -------------- | ------------- | -------------------------------------------------- |
+|--- | --- | ---|
 | `edit`         | `ask/allow/deny` | 文件编辑权限                                    |
 | `bash`         | `ask/allow/deny` 或对象 | Bash 执行权限（可细化到具体命令）             |
 | `webfetch`     | `ask/allow/deny` | Web 请求权限                                  |
@@ -304,7 +304,7 @@ Category 是 v3.0 的新特性，实现**动态代理组合**：
 **Category 配置字段**：
 
 | 字段              | 说明                         | 示例                              |
-| ----------------- | ---------------------------- | --------------------------------- |
+|--- | --- | ---|
 | `model`           | 使用的模型                   | `"anthropic/claude-sonnet-4-5"`    |
 | `temperature`     | 温度（0-2）                 | `0.2` (确定性) / `0.8` (创造性)    |
 | `top_p`           | 核采样（0-1）               | `0.9`                              |
@@ -372,7 +372,7 @@ delegate_task(category="quick", prompt="搜索这个函数的定义")
 **可用 Hooks 列表**（部分）：
 
 | Hook 名称                | 功能                           |
-| ----------------------- | ------------------------------ |
+|--- | ---|
 | `todo-continuation-enforcer` | 强制完成 TODO 列表              |
 | `comment-checker`          | 检测冗余注释                  |
 | `tool-output-truncator`     | 截断工具输出以节省上下文        |
@@ -533,7 +533,7 @@ cat ~/.config/opencode/oh-my-opencode.json | jq .
 **配置深度定制 = 精确控制**：
 
 | 配置项           | 用途                          | 常见场景                         |
-| ---------------- | ----------------------------- | -------------------------------- |
+|--- | --- | ---|
 | `agents.model`    | 覆盖代理模型                  | 成本优化、任务适配             |
 | `agents.permission` | 控制代理权限                | 安全隔离、只读模式           |
 | `agents.prompt_append` | 追加额外指令                | 遵循架构规范、优化搜索策略 |
@@ -568,7 +568,7 @@ cat ~/.config/opencode/oh-my-opencode.json | jq .
 > 更新时间：2026-01-26
 
 | 功能                | 文件路径                                                                 | 行号    |
-| ------------------- | -------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 配置 Schema 定义    | [`src/config/schema.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/config/schema.ts) | 1-378   |
 | AgentOverrideConfig | [`src/config/schema.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/config/schema.ts) | 98-119   |
 | CategoryConfig      | [`src/config/schema.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/config/schema.ts) | 154-172  |

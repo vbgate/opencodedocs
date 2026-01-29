@@ -13,15 +13,15 @@ Dieses Kapitel vertieft die fortgeschrittenen Funktionen von Antigravity Tools: 
 ## In diesem Kapitel
 
 | Tutorial | Beschreibung |
-|---------|-------------|
+|--- | ---|
 | [Konfiguration komplett](./config/) | Vollständige Felder von AppConfig/ProxyConfig, Speicherorte und Hot-Update-Semantik |
 | [Sicherheit und Datenschutz](./security/) | `auth_mode`, `allow_lan_access` und Sicherheitsbaseline-Design |
 | [Hochverfügbare Verwaltung](./scheduling/) | Rotation, feste Konten, klebrige Sitzungen und Retry-Mechanismen |
-| [Modell-Routing](./model-router/) | Benutzerdefinierte Zuordnung, Platzhalter-Priorität und vordefinierte Strategien |
+|--- | ---|
 | [Quotenmanagement](./quota/) | Kombinationsstrategie aus Quota Protection + Smart Warmup |
 | [Proxy Monitor](./monitoring/) | Anforderungsprotokolle, Filterung, Detailrekonstruktion und Export |
 | [Token-Statistiken](./token-stats/) | Kostenperspektive und Diagramminterpretation |
-| [Stabilität langer Sitzungen](./context-compression/) | Kontextkomprimierung, Signatur-Caching und Komprimierung von Werkzeugergebnissen |
+|--- | ---|
 | [Systemfunktionen](./system/) | Mehrsprachigkeit/Themen/Updates/Autostart/HTTP API Server |
 | [Server-Bereitstellung](./deployment/) | Docker noVNC vs Headless Xvfb Auswahl und Betrieb |
 
@@ -70,12 +70,12 @@ Lösen Sie die versteckten Probleme langer Sitzungen, machen Sie den Client mehr
 **Schnellauswahl**:
 
 | Ihre Szenario | Empfohlen zuerst |
-|---------------|------------------|
+|--- | ---|
 | Mehrkontenrotation instabil | [Hochverfügbare Verwaltung](./scheduling/) |
 | Einen Modellnamen fixieren | [Modell-Routing](./model-router/) |
 | Quoten immer verbraucht | [Quotenmanagement](./quota/) |
 | Anforderungsprotokolle ansehen | [Proxy Monitor](./monitoring/) |
-| Token-Verbrauch statistisch erfassen | [Token-Statistiken](./token-stats/) |
+|--- | ---|
 | Lange Konversationen fehleranfällig | [Stabilität langer Sitzungen](./context-compression/) |
 | Im LAN freigeben | [Sicherheit und Datenschutz](./security/) |
 | Auf Server bereitstellen | [Server-Bereitstellung](./deployment/) |

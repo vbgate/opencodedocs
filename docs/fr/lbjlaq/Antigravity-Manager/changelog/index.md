@@ -13,7 +13,7 @@ Ce chapitre enregistre l'évolution des versions et les notes de publication d'A
 ## Contenu de ce chapitre
 
 | Page | Description |
-| --- | --- |
+|--- | ---|
 | [Évolution des versions](./release-notes/) | Comment lire le Changelog intégré dans le README, juger rapidement l'impact de la mise à niveau et effectuer la vérification après mise à niveau |
 
 ## Parcours d'apprentissage

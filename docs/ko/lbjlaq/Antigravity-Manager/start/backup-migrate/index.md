@@ -179,7 +179,7 @@ Antigravity/IDE에서 로그인 계정을 전환할 때, Manager는 고정 간�
 ## 흔한 오류
 
 | 시나리오 | 잘못된 방법 (❌) | 권장 방법 (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | 백업 파일 보안 | 내보내기한 JSON을 일반 설정 파일로 여기저기 보냄 | JSON을 암호처럼 취급, 전파 범위 최소화, 공개 인터넷 노출 피함 |
 | JSON 가져오기 실패 | JSON이 배열이 아니거나, refresh_token에 `1//` 접두사가 없음 | 이 프로젝트에서 내보내기한 JSON을 템플릿으로 사용, 필드명과 구조 일치 유지 |
 | DB 가져오기에서 데이터를 찾지 못함 | Antigravity 로그인하지 않았거나, DB에 `jetskiStateSync.agentManagerInitState` 누락 | Antigravity/IDE 로그인 확인 후 다시 가져오기 시도; 필요 시 Custom DB로 올바른 파일 선택 |
@@ -211,14 +211,14 @@ Antigravity/IDE에서 로그인 계정을 전환할 때, Manager는 고정 간�
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Accounts 내보내기/가져오기 JSON (`save_text_file` / `read_text_file`) | [`src/pages/Accounts.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Accounts.tsx#L458-L578) | 458-578 |
 | Dashboard 계정 JSON 내보내기 | [`src/pages/Dashboard.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Dashboard.tsx#L113-L148) | 113-148 |
 | Import 탭: DB 가져오기 / Custom DB / V1 가져오기 버튼 | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L491-L539) | 491-539 |
 | 계정 추가: 프론트엔드 email 무시, refresh_token으로 실제 이메일 가져오기, 자동 할당량 갱신, Proxy 핫 리로드 | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L19-L60) | 19-60 |
-| V1 가져오기: `~/.antigravity-agent` 스캔 및 다중 형식 호환 | [`src-tauri/src/modules/migration.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/migration.rs#L9-L190) | 9-190 |
+|--- | --- | ---|
 | DB 가져오기: `state.vscdb`에서 refresh_token 추출 (ItemTable + base64 + protobuf) | [`src-tauri/src/modules/migration.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/migration.rs#L192-L267) | 192-267 |
-| 기본 DB 경로 유도 (`--user-data-dir` / portable / 표준 경로) | [`src-tauri/src/modules/db.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/db.rs#L18-L63) | 18-63 |
+|--- | --- | ---|
 | DB 가져오기 후 자동으로 "현재 계정"으로 설정 및 할당량 갱신 | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L495-L511) | 495-511 |
 | auto_sync: refresh_token 비교, 같으면 바로 건너뜀; 변화 시 DB 가져오기 트리거 | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L532-L564) | 532-564 |
 | 프론트엔드 백그라운드 작업: `sync_interval`으로 주기적 `syncAccountFromDb()` 호출 | [`src/components/common/BackgroundTaskRunner.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/common/BackgroundTaskRunner.tsx#L43-L72) | 43-72 |

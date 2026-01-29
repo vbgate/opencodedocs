@@ -41,7 +41,7 @@ Comprenez le mécanisme de détection automatique de langue :
 ## Scénarios d'utilisation
 
 | Scénario | Tutoriel recommandé |
-| -------- | ------------------- |
+|--- | ---|
 | Utiliser plusieurs comptes Google | [Configuration Google Cloud](./google-setup/) |
 | Échec de la consultation des quotas Copilot | [Configuration de l'authentification Copilot](./copilot-auth/) |
 | Changer la langue de sortie | [Support multilingue](./i18n-setup/) |

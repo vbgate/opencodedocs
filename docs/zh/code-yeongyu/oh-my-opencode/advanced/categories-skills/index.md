@@ -29,7 +29,7 @@ order: 100
 想想这个场景：
 
 | 问题 | 传统方案 | 实际需求 |
-|------|---------|---------|
+|--- | --- | ---|
 | **UI 任务用超强大模型** | 用 Claude Opus 处理简单样式调整 | 成本高，浪费算力 |
 | **复杂逻辑用轻量模型** | 用 Haiku 处理架构设计 | 推理能力不足，方案错误 |
 | **Git 提交风格不统一** | 手动管理 commit，容易出错 | 需要自动检测并遵循项目规范 |
@@ -47,7 +47,7 @@ order: 100
 ## 什么时候用这一招
 
 | 场景 | 推荐组合 | 效果 |
-|------|----------|------|
+|--- | --- | ---|
 | **UI 设计和实现** | `category="visual-engineering"` + `skills=["frontend-ui-ux", "playwright"]` | 自动选择 Gemini 3 Pro + 设计师思维 + 浏览器验证 |
 | **快速修复和提交** | `category="quick"` + `skills=["git-master"]` | 用 Haiku 低成本完成 + 自动检测提交风格 |
 | **深度架构分析** | `category="ultrabrain"` + `skills=[]` | 用 GPT-5.2 Codex (xhigh) 纯推理 |
@@ -75,7 +75,7 @@ order: 100
 oh-my-opencode 提供了 7 个内置 Categories，每个类别都预配置了最优模型和思维模式：
 
 | Category | 默认模型 | Temperature | 用途 |
-|----------|-----------|-------------|------|
+|--- | --- | --- | ---|
 | `visual-engineering` | `google/gemini-3-pro` | 0.7 | 前端、UI/UX、设计任务 |
 | `ultrabrain` | `openai/gpt-5.2-codex` (xhigh) | 0.1 | 高智商推理任务（复杂架构决策） |
 | `artistry` | `google/gemini-3-pro` (max) | 0.7 | 创意和艺术任务（新颖想法） |
@@ -103,7 +103,7 @@ Skill 是通过 SKILL.md 文件定义的领域专家，可以注入：
 内置 4 个 Skills：
 
 | Skill | 功能 | MCP | 用途 |
-|-------|------|-----|------|
+|--- | --- | --- | ---|
 | `playwright` | 浏览器自动化 | `@playwright/mcp` | UI 验证、截图、爬虫 |
 | `agent-browser` | 浏览器自动化（Vercel） | 手动安装 | 同上，备选方案 |
 | `frontend-ui-ux` | 设计师思维 | 无 | 打造精美界面 |
@@ -339,7 +339,7 @@ Risks and Mitigations:
 **字段说明**：
 
 | 字段 | 类型 | 说明 |
-|------|------|------|
+|--- | --- | ---|
 | `model` | string | 覆盖 Category 使用的模型 |
 | `temperature` | number | 创造性级别（0-2） |
 | `prompt_append` | string | 追加到系统提示词的内容 |
@@ -484,7 +484,7 @@ delegate_task(category="visual-engineering", load_skills=["playwright"], prompt=
 Categories 和 Skills 系统让你可以灵活组合代理：
 
 | 组件 | 作用 | 配置方式 |
-|------|------|---------|
+|--- | --- | ---|
 | **Category** | 决定模型和思维模式 | `delegate_task(category="...")` 或配置文件 |
 | **Skill** | 注入专业知识和 MCP | `delegate_task(load_skills=["..."])` 或 SKILL.md 文件 |
 | **Sisyphus Junior** | 执行任务，不能再次委托 | 自动生成，无需手动指定 |
@@ -522,7 +522,7 @@ Categories 和 Skills 系统让你可以灵活组合代理：
 > 更新时间：2026-01-26
 
 | 功能 | 文件路径 | 行号 |
-|------|----------|------|
+|--- | --- | ---|
 | delegate_task 工具实现 | [`src/tools/delegate-task/tools.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/delegate-task/tools.ts) | 全文（1070 行） |
 | resolveCategoryConfig 函数 | [`src/tools/delegate-task/tools.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/delegate-task/tools.ts) | 113-152 |
 | buildSystemContent 函数 | [`src/tools/delegate-task/tools.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/delegate-task/tools.ts) | 176-188 |

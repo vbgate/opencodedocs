@@ -53,7 +53,7 @@ Actually, OpenSkills provides Universal mode, specifically designed to solve ski
 **Universal mode is suitable for these scenarios**:
 
 | Scenario | Need Universal Mode? | Example |
-| ---- | --------------------- | ---- |
+|--- | --- | ---|
 | **Single agent** (Claude Code only) | ❌ No | Only using Claude Code, use default `.claude/skills` directly |
 | **Multiple agents** (Claude Code + others) | ✅ Yes | Using Claude Code and Cursor/Windsurf/Aider simultaneously |
 | **Avoid Marketplace conflicts** | ✅ Yes | Want to avoid conflicts with Claude Code's native plugin marketplace |
@@ -502,7 +502,7 @@ npx openskills sync -o .windsurf/AGENTS.md  # Windsurf
 > Updated: 2026-01-24
 
 | Function | File Path | Line Numbers |
-| ----------- | ------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Directory path utilities | [`src/utils/dirs.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/dirs.ts#L7-L25) | 7-25 |
 | Installation location judgment | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L84-L92) | 84-92 |
 | Command line argument definition | [`src/cli.ts`](https://github.com/numman-ali/openskills/blob/main/src/cli.ts#L48) | 48 |

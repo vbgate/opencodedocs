@@ -108,7 +108,7 @@ Nem todos os arquivos valem ser backup. Primeiro separe "quais são dados de con
 Abaixo nomes de arquivos vêm de código-fonte do projeto, todos são fixos:
 
 | Você verá conteúdo | Finalidade | O que você precisa se importar |
-|-------------------|------------|-------------------------------|
+|--- | --- | ---|
 | `accounts.json` | Índice de contas (incluindo lista de contas/conta atual) | Recomendado fazer backup junto ao migrar contas |
 | `accounts/` | Cada conta um arquivo `*.json` | Este é corpo principal de dados de conta |
 | `logs/` | Diretório de logs do aplicativo | Prioridade ao resolver problemas |
@@ -188,7 +188,7 @@ Em Settings -> General encontre "Início Automático ao Ligado", escolha habilit
 
 ::: info Dois tipos de "início automático", não confunda
 | Nome | Significado | Evidência |
-|------|-------------|-----------|
+|--- | --- | ---|
 | Início automático ao ligar | Após iniciar computador, inicia Antigravity Tools automaticamente (aplicativo de desktop em si) | Parâmetros de início incluem `--minimized`, e fornece comando `toggle_auto_launch` |
 | Início automático de proxy reverso | Após Antigravity Tools iniciar, se configurado `proxy.auto_start=true`, tentará iniciar serviço de proxy reverso local automaticamente | Ao iniciar aplicativo lê configuração e `start_proxy_service(...)` |
 :::
@@ -204,7 +204,7 @@ Em Settings -> General encontre "Início Automático ao Ligado", escolha habilit
 ## Aviso sobre armadilhas
 
 | Cenário | O que você pode fazer (❌) | Prática recomendada (✓) |
-|---------|---------------------------|--------------------------|
+|--- | --- | ---|
 | Não encontra diretório de dados | Procurar aleatoriamente por diretório de instalação do App no sistema | Vá diretamente Settings -> Advanced ver "Diretório de dados" e abrir com um clique |
 | Fechou janela achando que saiu | Após clicar fechar janela vai mudar configuração/mudar porta | Primeiro veja se ícone da bandeja ainda existe; para sair use Quit da bandeja |
 | Muitos logs difíceis de resolver | Reproduzir problema enquanto folheia logs antigos | Primeiro "Limpar Logs", depois reproduzir uma vez, finalmente só ver arquivo de log desta vez |
@@ -233,7 +233,7 @@ Em Settings -> General encontre "Início Automático ao Ligado", escolha habilit
 > Atualizado em: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Linha |
-|---------------|---------------------|-------|
+|--- | --- | ---|
 | Localização do diretório de dados (`~/.antigravity_tools`) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | Índice de contas e diretório de arquivos de contas (`accounts.json` / `accounts/`) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L46) | 16-46 |
 | Diretório de logs e rodar por dia (`logs/` + `app.log`) | [`src-tauri/src/modules/logger.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/logger.rs#L17-L83) | 17-83 |
@@ -242,8 +242,8 @@ Em Settings -> General encontre "Início Automático ao Ligado", escolha habilit
 | Página de configurações limpar logs com um clique (botão + lógica de diálogo) | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L127-L135) | 127-135 |
 | Página de configurações limpar logs com um clique (botão aba Advanced) | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L732-L747) | 732-747 |
 | Menu da bandeja e eventos de clique (alternar conta/atualizar/mostrar/sair) | [`src-tauri/src/modules/tray.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/tray.rs#L9-L158) | 9-158 |
-| Fechar janela -> esconder (minimizar para bandeja) | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L150-L160) | 150-160 |
-| Inicialização do plugin de início automático ao ligar (incluindo `--minimized`) | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L58-L66) | 58-66 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Interruptor de início automático ao ligar (`toggle_auto_launch` / `is_auto_launch_enabled`) | [`src-tauri/src/commands/autostart.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/autostart.rs#L4-L39) | 4-39 |
 | Comandos abrir diretório de dados / obter caminho / limpar logs | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L578-L621) | 578-621 |
 | Nome do arquivo do banco de dados Token Stats (`token_stats.db`) | [`src-tauri/src/modules/token_stats.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/token_stats.rs#L58-L61) | 58-61 |

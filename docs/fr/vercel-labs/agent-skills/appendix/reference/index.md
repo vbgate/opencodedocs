@@ -22,7 +22,7 @@ Cette page fournit la référence complète de l'API et des commandes d'Agent Sk
 Le niveau d'impact identifie le degré d'impact sur les performances des règles, avec 6 niveaux :
 
 | Valeur | Description | Scénario d'application |
-| --- | --- | --- |
+|--- | --- | ---|
 | `CRITICAL` | Goulot d'étranglement critique | Doit être corrigé, sinon impacte gravement l'expérience utilisateur (comme les requêtes en cascade, bundle non optimisé) |
 | `HIGH` | Amélioration importante | Amélioration significative des performances (comme le cache serveur, élimination des props dupliquées) |
 | `MEDIUM-HIGH` | Priorité moyennement élevée | Amélioration notable des performances (comme l'optimisation de la récupération de données) |
@@ -37,7 +37,7 @@ Le niveau d'impact identifie le degré d'impact sur les performances des règles
 Structure de l'exemple de code dans les règles :
 
 | Champ | Type | Obligatoire | Description |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `label` | string | ✅ | Étiquette de l'exemple (comme « Incorrect », « Correct ») |
 | `description` | string | ❌ | Description de l'étiquette (optionnel) |
 | `code` | string | ✅ | Contenu du code |
@@ -51,7 +51,7 @@ Structure de l'exemple de code dans les règles :
 Structure complète d'une seule règle d'optimisation des performances :
 
 | Champ | Type | Obligatoire | Description |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `id` | string | ✅ | ID de règle (généré automatiquement, comme « 1.1 », « 2.3 ») |
 | `title` | string | ✅ | Titre de la règle |
 | `section` | number | ✅ | Section d'appartenance (1-8) |
@@ -70,7 +70,7 @@ Structure complète d'une seule règle d'optimisation des performances :
 Structure de section des règles :
 
 | Champ | Type | Obligatoire | Description |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `number` | number | ✅ | Numéro de section (1-8) |
 | `title` | string | ✅ | Titre de section |
 | `impact` | ImpactLevel | ✅ | Niveau d'impact global |
@@ -85,7 +85,7 @@ Structure de section des règles :
 Structure complète du document de directives :
 
 | Champ | Type | Obligatoire | Description |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `version` | string | ✅ | Numéro de version |
 | `organization` | string | ✅ | Nom de l'organisation |
 | `date` | string | ✅ | Date |
@@ -100,7 +100,7 @@ Structure complète du document de directives :
 Structure des cas de test extraits des règles :
 
 | Champ | Type | Obligatoire | Description |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `ruleId` | string | ✅ | ID de règle (comme « 1.1 ») |
 | `ruleTitle` | string | ✅ | Titre de règle |
 | `type` | 'bad' \| 'good' | ✅ | Type de cas de test |
@@ -226,7 +226,7 @@ bash /mnt/skills/user/{skill-name}/scripts/{script}.sh [args]
 > Dernière mise à jour :2026-01-25
 
 | Fonctionnalité | Chemin de fichier | Ligne |
-| ----------- | --------------------------------------------------------------------------------------------- | ----- |
+|--- | --- | ---|
 | Définition du type ImpactLevel | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts#L5) | 5 |
 | Interface CodeExample | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts#L7-L13) | 7-13 |
 | Interface Rule | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts#L15-L26) | 15-26 |

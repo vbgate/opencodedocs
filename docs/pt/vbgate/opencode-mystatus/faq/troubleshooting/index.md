@@ -394,7 +394,7 @@ Z.ai API 请求失败 (200): {"code": 400, "msg": "Bad request"}
 Confirme se você consegue resolver problemas comuns de forma independente:
 
 | Habilidade | Método de verificação | Resultado esperado |
-| ---------- | ------------------- | ------------------ |
+|--- | --- | ---|
 | Solucionar problemas de arquivo de autenticação | Verifique se auth.json existe e se o formato está correto | O arquivo existe, formato JSON correto |
 | Atualizar token OpenAI | Use o modelo OpenAI uma vez no OpenCode | Token atualizado, pode consultar cota normalmente |
 | Configurar PAT Copilot | Crie copilot-quota-token.json | Pode consultar cota Copilot normalmente |
@@ -433,7 +433,7 @@ A maioria dos erros pode ser resolvida por configuração ou reautorização, a 
 > Data de atualização: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Número da linha |
-| -------------- | ----------------- | --------------- |
+|--- | --- | ---|
 | Lógica principal de tratamento de erros | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 41-87 |
 | Leitura de arquivo de autenticação | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 38-46 |
 | Prompt de nenhuma conta encontrada | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 78-80 |

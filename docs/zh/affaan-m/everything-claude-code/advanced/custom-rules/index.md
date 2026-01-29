@@ -92,7 +92,7 @@ ls rules/
 你会看到以下 8 个规则文件：
 
 | 规则文件 | 用途 | 适用场景 |
-|---------|------|---------|
+|--- | --- | ---|
 | `security.md` | 安全检查 | 涉及 API 密钥、用户输入、数据库操作 |
 | `coding-style.md` | 代码风格 | 函数大小、文件组织、不可变模式 |
 | `testing.md` | 测试要求 | 测试覆盖率、TDD 流程、测试类型 |
@@ -553,7 +553,7 @@ function example() { ... }
 > 更新时间：2026-01-25
 
 | 功能           | 文件路径                                                                                   | 行号    |
-| -------------- | ------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | 安全规则       | [`rules/security.md`](https://github.com/affaan-m/everything-claude-code/blob/main/rules/security.md) | 1-37    |
 | 代码风格规则   | [`rules/coding-style.md`](https://github.com/affaan-m/everything-claude-code/blob/main/rules/coding-style.md) | 1-71    |
 | 测试规则       | [`rules/testing.md`](https://github.com/affaan-m/everything-claude-code/blob/main/rules/testing.md) | 1-31    |

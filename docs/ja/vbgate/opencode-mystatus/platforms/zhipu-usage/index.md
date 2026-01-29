@@ -46,7 +46,7 @@ order: 2
 **Zhipu AI**と**Z.ai**のクォータシステムは2つのタイプに分かれています：
 
 | クォータタイプ | 意味 | リセットサイクル |
-| -------- | ---- | -------- |
+|--- | --- | ---|
 | **5時間Token制限** | APIリクエストのToken使用量制限 | 5時間自動リセット |
 | **MCP月次クォータ** | MCP（Model Context Protocol）検索回数の月次制限 | 毎月リセット |
 
@@ -144,7 +144,7 @@ Resets in: 4h
 以下の説明を参照して自分の出力を確認：
 
 | 出力フィールド | 意味 | 例 |
-| -------- | ---- | ---- |
+|--- | --- | ---|
 | **Account** | マスキングされたAPIキーとアカウントタイプ | `9c89****AQVM (Coding Plan)` |
 | **5-hour token limit** | 現在の5時間サイクル内のToken使用状況 | プログレスバー + パーセンテージ |
 | **Used: X / Y** | 使用済み / 総量 | `0.5M / 10.0M` |
@@ -250,7 +250,7 @@ Resets in: 4h
 > 更新日時：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Zhipu AIクォータクエリ | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 213-217 |
 | Z.aiクォータクエリ | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 224-228 |
 | 出力フォーマット | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 115-177 |

@@ -64,7 +64,7 @@ Antes de começar, certifique-se de que você:
 Otimização de desempenho do React não é apenas usar alguns Hooks, mas sim resolver problemas do nível de **arquitetura**. As 57 regras da Vercel são divididas em 8 categorias por prioridade:
 
 | Prioridade   | Categoria   | Foco                     | Benefício Típico                    |
-| -------------- | ---------- | ------------------------ | ------------------------------------ |
+|--- | --- | --- | ---|
 | **CRITICAL** | Eliminando Cachoeiras | Evita operações assíncronas em série | Melhoria 2-10×              |
 | **CRITICAL** | Otimização de Bundle      | Reduz o tamanho do bundle inicial | Melhoria significativa no TTI/LCP |
 | **HIGH**      | Desempenho no Servidor  | Otimiza busca de dados e cache   | Reduz a carga no servidor          |
@@ -381,7 +381,7 @@ Você aprenderá:
 > Atualizado em: 2026-01-25
 
 | Funcionalidade                  | Caminho do Arquivo                                                                      | Número de Linha    |
-| ------------------- | ---------------------------------------------------------------------------------------- | ------------------ |
+|--- | --- | ---|
 | Definição de habilidade de melhores práticas do React | [`skills/react-best-practices/SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/SKILL.md) | Total            |
 | Documento de regras completo | [`skills/react-best-practices/AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/AGENTS.md) | Total            |
 | 57 arquivos de regras        | [`skills/react-best-practices/rules/*.md`](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices/rules) | -                |
@@ -392,7 +392,7 @@ Você aprenderá:
 **Arquivos de Regras Chave** (nível CRITICAL):
 
 | Regra                    | Caminho do Arquivo                                                                         | Descrição                     |
-| ----                      | ---------------------------------------------------------------------------------------- | --------------------------- |
+|--- | --- | ---|
 | Requisições paralelas Promise.all() | [`async-parallel.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/async-parallel.md) | Eliminar cachoeiras    |
 | Importações dinâmicas para componentes grandes | [`bundle-dynamic-imports.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/bundle-dynamic-imports.md) | Reduzir tamanho do bundle |
 | Defer Await                 | [`async-defer-await.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/async-defer-await.md) | Adiar operações assíncronas não críticas |

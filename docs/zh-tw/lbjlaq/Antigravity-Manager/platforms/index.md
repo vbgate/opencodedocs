@@ -13,7 +13,7 @@ Antigravity Tools 的核心能力是把多家 AI 平台的協定轉換為統一�
 ## 本章包含
 
 | 教程 | 說明 |
-|-----|------|
+|--- | ---|
 | [OpenAI 相容 API](./openai/) | `/v1/chat/completions` 與 `/v1/responses` 的落地方案，讓 OpenAI SDK 無感接入 |
 | [Anthropic 相容 API](./anthropic/) | `/v1/messages` 與 Claude Code 的關鍵契約，支撐思維鏈、系統提示詞等核心能力 |
 | [Gemini 原生 API](./gemini/) | `/v1beta/models` 以及 Google SDK 的端點接入，支援 `x-goog-api-key` 相容 |
@@ -34,7 +34,7 @@ Antigravity Tools 的核心能力是把多家 AI 平台的協定轉換為統一�
 **快速選擇**：
 
 | 你的場景 | 推薦先看 |
-|---------|---------|
+|--- | ---|
 | 使用 Claude Code CLI | [Anthropic 相容 API](./anthropic/) |
 | 使用 OpenAI Python SDK | [OpenAI 相容 API](./openai/) |
 | 使用 Google 官方 SDK | [Gemini 原生 API](./gemini/) |

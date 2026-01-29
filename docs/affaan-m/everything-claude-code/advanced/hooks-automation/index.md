@@ -68,7 +68,7 @@ For example, when you use the Bash tool to execute `npm run dev`:
 Everything Claude Code uses 6 hook types:
 
 | Hook Type | Trigger Timing | Use Cases |
-| --------- | -------------- | --------- |
+|--- | --- | ---|
 | **PreToolUse** | Before any tool executes | Validate commands, block operations, show suggestions |
 | **PostToolUse** | After any tool executes | Auto-format, type checking, log records |
 | **PreCompact** | Before context compression | Save state, log compression events |
@@ -102,7 +102,7 @@ Each hook uses a `matcher` expression to decide whether to execute. Claude Code 
 All hooks in Everything Claude Code use Node.js scripts instead of shell scripts. The reasons are:
 
 | Advantage | Shell Script | Node.js Script |
-| --------- | ------------ | -------------- |
+|--- | --- | ---|
 | **Cross-platform** | ❌ Requires Windows/macOS/Linux branches | ✅ Automatically cross-platform |
 | **JSON Processing** | ❌ Needs extra tools (jq) | ✅ Native support |
 | **File Operations** | ⚠️ Complex commands | ✅ Clean fs API |
@@ -563,7 +563,7 @@ main().catch(err => {
 **Solution**: Use Node.js scripts instead of shell scripts
 
 | Function | Shell Script | Node.js Script |
-| -------- | ----------- | -------------- |
+|--- | --- | ---|
 | File Read | `cat file.txt` | `fs.readFileSync('file.txt')` |
 | Directory Check | `[ -d dir ]` | `fs.existsSync(dir)` |
 | Environment Variable | `$VAR` | `process.env.VAR` |
@@ -620,7 +620,7 @@ if (someCondition) {
 **6 Hook Types Summary**:
 
 | Hook Type | Trigger Timing | Typical Uses | Everything Claude Code Count |
-| --------- | -------------- | ------------ | ---------------------------- |
+|--- | --- | --- | ---|
 | PreToolUse | Before tool execution | Validate, block, suggest | 5 |
 | PostToolUse | After tool execution | Format, check, record | 4 |
 | PreCompact | Before context compression | Save state | 1 |
@@ -668,7 +668,7 @@ if (someCondition) {
 > Updated: 2026-01-25
 
 | Function | File Path | Line Numbers |
-| -------- | --------- | ------------ |
+|--- | --- | ---|
 | Hooks main config | [`hooks/hooks.json`](https://github.com/affaan-m/everything-claude-code/blob/main/hooks/hooks.json) | 1-158 |
 | SessionStart script | [`scripts/hooks/session-start.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/hooks/session-start.js) | 1-62 |
 | SessionEnd script | [`scripts/hooks/session-end.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/hooks/session-end.js) | 1-83 |

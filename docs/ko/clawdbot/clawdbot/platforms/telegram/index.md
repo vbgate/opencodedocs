@@ -67,7 +67,7 @@ Telegram 채널을 사용하기에 적합한 시나리오:
 다른 인스턴트 메시징 플랫폼과 달리 Telegram은 **Bot API** 아키텍처를 사용합니다:
 
 | 기능 | Telegram | WhatsApp | Slack |
-| ------ | --------- | --------- | ------ |
+|--- | --- | --- | ---|
 | 연결 방식 | Bot API(HTTP) | Web Client | Bot API + WebSocket |
 | 메시지 모드 | 푸시(Bot이 능동적으로 전송) | 풀(Web Client 수신) | 풀(WebSocket 수신) |
 | 프라이버시 모드 | **지원**(Bot 선택 가능) | N/A | N/A |
@@ -187,7 +187,7 @@ to control your bot.
 **구성 필드 설명**:
 
 | 필드 | 타입 | 기본값 | 설명 |
-| ----- | ---- | ------- | ---- |
+|--- | --- | --- | ---|
 | `enabled` | boolean | `true` | Telegram 채널 시작 여부 |
 | `botToken` | string | - | Bot Token(필수) |
 | `dmPolicy` | string | `"pairing"` | DM 액세스 정책 |
@@ -277,7 +277,7 @@ clawdbot pairing approve telegram CLAW-ABC123
 **Bot이 응답하지 않는 경우**:
 
 | 문제 | 가능한 원인 | 해결 방법 |
-| ---- | --------- | -------- |
+|--- | --- | ---|
 | Bot 응답 없음 | Bot Token 오류 | `clawdbot.json`의 `botToken` 값 확인 |
 | Bot 응답 없음 | Gateway 시작 안 됨 | `clawdbot gateway --verbose` 실행하여 오류 확인 |
 | Bot 응답 없음 | 네트워크 문제 | 서버가 `api.telegram.org`에 액세스할 수 있는지 확인 |
@@ -444,7 +444,7 @@ clawdbot logs --follow
 **Webhook vs Long-polling**:
 
 | 기능 | Long-polling | Webhook |
-| ----- | ------------- | -------- |
+|--- | --- | ---|
 | 네트워크 요구사항 | `api.telegram.org`에 능동적으로 액세스 필요 | 공용 HTTPS 엔드포인트 필요 |
 | 지연 | ~1-3초 폴링 간격 | 거의 실시간 푸시 |
 | 서버 리소스 | 높음(지속적인 폴링) | 낮음(수동 수신) |
@@ -607,7 +607,7 @@ Agent가 사용자의 메시지 반응(emoji)을 수신할지 여부를 제어�
 ### 일반적인 구성 오류
 
 | 오류 | 증상 | 원인 | 해결 방법 |
-| ----- | ---- | ---- | -------- |
+|--- | --- | --- | ---|
 | Token 형식 오류 | "Invalid token" 오류 | 불완전한 Token 복사 | Token이 완전한지 확인(콜론 포함) |
 | 환경 변수 충돌 | Bot이 다른 Token 사용 | 환경 변수가 구성 파일을 덮어씀 | `channels.telegram.botToken`을 우선 사용 |
 | 그룹 응답 없음 | Bot이 그룹 메시지 처리 안 함 | 프라이버시 모드 꺼지지 않음 | @BotFather에서 `/setprivacy` 실행 |
@@ -669,7 +669,7 @@ dig +short api.telegram.org AAAA # IPv6
 **핵심 구성 필드 요약**:
 
 | 필드 | 권장 값 | 설명 |
-| ----- | --------- | ---- |
+|--- | --- | ---|
 | `dmPolicy` | `"pairing"` | 가장 안전한 기본 DM 정책 |
 | `groups.*.requireMention` | `true` | 그룹 기본 멘션 요구 |
 | `reactionNotifications` | `"own"` | Bot 메시지 반응에만 응답 |
@@ -695,7 +695,7 @@ dig +short api.telegram.org AAAA # IPv6
 > 업데이트 날짜: 2026-01-27
 
 | 기능 | 파일 경로 | 행 번호 |
-| ----- | --------- | ---- |
+|--- | --- | ---|
 | Telegram Bot 생성 | [`src/telegram/bot.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/telegram/bot.ts) | 106-452 |
 | 구성 타입 정의 | [`src/config/types.telegram.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.telegram.ts) | 14-157 |
 | Telegram 문서 | [`docs/channels/telegram.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/telegram.md) | 1-547 |

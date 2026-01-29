@@ -40,10 +40,10 @@ Sie haben einen KI-Assistenten, aber er kann nur über Text mit Ihnen interagier
 **Canvas + A2UI eignet sich für diese Szenarien**:
 
 | Szenario | Beispiel |
-| ------ | ------ |
+|--- | ---|
 | **Datenvisualisierung** | Statistische Diagramme, Fortschrittsbalken, Zeitachsen anzeigen |
 | **Interaktive Formulare** | Benutzer zur Bestätigung von Aktionen auffordern, Optionen auswählen lassen |
-| **Status-Panels** | Echtzeit-Task-Fortschritt, Systemstatus anzeigen |
+|--- | ---|
 | **Spiele und Unterhaltung** | Einfache Minispiele, interaktive Demos |
 
 ::: tip A2UI vs. statisches HTML
@@ -334,12 +334,12 @@ clawdbot nodes canvas hide --node abc123-def456-ghi789
 **Überprüfen, ob Canvas-Funktionen korrekt funktionieren**:
 
 | Überprüfungselement | Überprüfungsmethode |
-| ------- | -------- |
+|--- | ---|
 | Canvas Host läuft | `lsof -i :18793` hat Ausgabe |
 | Knoten-Canvas-Fähigkeit | `clawdbot nodes list` zeigt `canvas` |
 | Seite erfolgreich geladen | Knoten zeigt HTML-Inhalt |
-| A2UI-Push erfolgreich | Canvas zeigt blaue A2UI-Schnittstelle |
-| JS-Ausführung gibt Ergebnis zurück | Der `eval`-Befehl gibt einen Wert zurück |
+|--- | ---|
+|--- | ---|
 | Screenshot generiert | Temporäres Verzeichnis hat `.jpg`- oder `.png`-Datei |
 
 ## Warnungen
@@ -400,11 +400,11 @@ In dieser Lektion haben Sie gelernt:
 > Aktualisierungsdatum: 2026-01-27
 
 | Funktion | Dateipfad | Zeilennummer |
-| ----- | --------- | ---- |
-| Canvas-Host-Server | [`src/canvas-host/server.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/server.ts) | 372-441 |
-| A2UI-Protokollverarbeitung | [`src/canvas-host/a2ui.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/a2ui.ts) | 150-203 |
-| Canvas-Tool-Definition | [`src/agents/tools/canvas-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/canvas-tool.ts) | 52-179 |
-| Canvas-Pfad-Konstanten | [`src/canvas-host/a2ui.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/a2ui.ts) | 8-10 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Konstanten**:
 - `A2UI_PATH = "/__clawdbot__/a2ui"`: A2UI-Host-Pfad

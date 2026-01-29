@@ -90,7 +90,7 @@ This layered design ensures that even if the model is compromised, the attack sc
 Clawdbot provides three layers of access control:
 
 | Layer | Protection Content | Configuration Location |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | **Gateway Authentication** | WebSocket connection | `gateway.auth` |
 | **DM Policy** | Private messages | `channels.*.dmPolicy` |
 | **Group Policy** | Group messages | `channels.*.groupPolicy` / `channels.*.groups` |
@@ -121,7 +121,7 @@ clawdbot security audit --fix
 The audit tool checks the following aspects:
 
 | Check Category | Specific Items | Risk Level |
-| --------- | ----- | ----- |
+|--- | --- | ---|
 | **Inbound Access** | Gateway authentication, DM policy, Group policy | Critical / Warn |
 | **Tool Access** | Elevated exec allowlist, tool allow/deny | Critical / Warn |
 | **Network Exposure** | Gateway bind mode, Tailscale Serve/Funnel | Critical / Info |
@@ -175,7 +175,7 @@ By default, Gateway requires authentication to accept WebSocket connections.
 **Authentication Modes**:
 
 | Mode | Purpose | Recommended Scenario |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `token` | Shared bearer token | Most cases, recommended |
 | `password` | Password authentication | Local development, convenient for quick testing |
 | Tailscale Identity | Tailscale Serve | Remote access via Tailscale |
@@ -189,7 +189,7 @@ By default, Gateway requires authentication to accept WebSocket connections.
 DM policy controls whether unknown users can directly talk to your AI assistant.
 
 | Policy | Behavior | Recommended Scenario |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `pairing` (default) | Unknown sender receives pairing code, doesn't process until paired | Personal use, recommended |
 | `allowlist` | Unknown senders are rejected | Multi-user trusted environment |
 | `open` | Allow anyone | Public service (requires `allowFrom` to include `"*"`) |
@@ -230,7 +230,7 @@ clawdbot pairing approve whatsapp <pairing-code>
 Group policy decides how the AI assistant responds to messages in groups.
 
 | Policy | Behavior | Configuration Location |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `allowlist` | Only accept groups in the allowlist | `channels.whatsapp.groups` |
 | `disabled` | Ignore all group messages | `channels.telegram.groups` |
 | `requireMention` | Only respond when @mentioned or triggered by commands | `channels.*.groups.*` |
@@ -309,7 +309,7 @@ You can configure tool whitelists and blacklists globally or per agent.
 ### Common Tool Categories
 
 | Tool Category | Specific Tools | Risk Level |
-| --------- | ----- | ----- |
+|--- | --- | ---|
 | **File Operations** | `read`, `write`, `edit`, `apply_patch` | Medium |
 | **Shell Execution** | `exec`, `process` | High |
 | **Browser Control** | `browser` | High |
@@ -355,7 +355,7 @@ Sandbox isolation runs tools in Docker containers, restricting file system and n
 ### Sandbox Modes
 
 | Mode | Behavior | Recommended Scenario |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `off` | All tools run on host | Personal trusted environment |
 | `non-main` (recommended) | Main session on host, other sessions in sandbox | Balance performance and security |
 | `all` | All sessions in sandbox | Multi-user environment, public service |
@@ -377,7 +377,7 @@ Sandbox isolation runs tools in Docker containers, restricting file system and n
 Workspace access determines which host directories the sandbox container can see.
 
 | Access Level | Behavior | Recommended Scenario |
-| --------- | ----- | ----- |
+|--- | --- | ---|
 | `none` (default) | Sandbox workspace `~/.clawdbot/sandboxes` | Maximum isolation |
 | `ro` | Agent workspace mounted read-only at `/agent` | Read but don't write files |
 | `rw` | Agent workspace mounted read-write at `/workspace` | Agents that need to write files |
@@ -399,7 +399,7 @@ Workspace access determines which host directories the sandbox container can see
 Sandbox scope determines container isolation granularity.
 
 | Scope | Behavior | Container Count |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `session` (default) | One container per session | More containers, better isolation |
 | `agent` | One container per agent | Balance isolation and resources |
 | `shared` | All sessions share one container | Save resources, lowest isolation |
@@ -699,7 +699,7 @@ For detailed Docker installation instructions, please refer to: [Deployment Opti
 ### Best Practices Summary
 
 | Practice | Reason |
-| ----- | ----- |
+|--- | ---|
 | Default to `pairing` mode | Balance user experience and security |
 | Use `requireMention` for group messages | Avoid manipulation |
 | Use tool whitelists instead of blacklists | Principle of least privilege |
@@ -749,7 +749,7 @@ This lesson covered Clawdbot's security model and sandbox isolation features:
 > Updated: 2026-01-27
 
 | Feature | File Path | Line Numbers |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | Security Audit | [`src/security/audit.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/audit.ts#L1-L910) | 1-910 |
 | Security Fixes | [`src/security/fix.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/fix.ts#L1-L385) | 1-385 |
 | File Permission Checks | [`src/security/audit-fs.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/audit-fs.ts) | Full file |

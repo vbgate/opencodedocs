@@ -62,7 +62,7 @@ Si quieres correlacionar el disparo de compresión con qué tipo de solicitud/qu
 Este diseño de estabilidad no elimina todo el historial directamente, sino que interviene capa por capa de menor a mayor costo:
 
 | Capa | Punto de disparo (configurable) | Qué hace | Costo/efectos secundarios |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | Layer 1 | `proxy.experimental.context_compression_threshold_l1` (por defecto 0.4) | Identifica rondas de herramientas, solo conserva las N rondas más recientes (en el código es 5), elimina pares tool_use/tool_result anteriores | No modifica el contenido de los mensajes restantes, más amigable con Prompt Cache |
 | Layer 2 | `proxy.experimental.context_compression_threshold_l2` (por defecto 0.55) | Comprime el texto Thinking antiguo en `"..."`, pero preserva `signature`, y protege los últimos 4 mensajes sin modificar | Modifica el contenido histórico, los comentarios indican explícitamente que romperá el caché, pero puede mantener la cadena de firmas |
 | Layer 3 | `proxy.experimental.context_compression_threshold_l3` (por defecto 0.7) | Llama al modelo en segundo plano para generar resúmenes XML, luego Fork una nueva secuencia de mensajes para continuar la conversación | Depende de llamadas al modelo en segundo plano; si falla, devolverá 400 (con indicación amigable) |
@@ -218,7 +218,7 @@ Recuerda tres puntos clave:
 ## Advertencias Sobre Problemas Comunes
 
 | Fenómeno | Causa Posible | Qué Puedes Hacer |
-| --- | --- | --- |
+|--- | --- | ---|
 | Después de disparar Layer 2 sientes que el contexto no es tan estable | Layer 2 modifica el contenido histórico, los comentarios indican explícitamente que romperá el caché | Si dependes de la consistencia de Prompt Cache, deja que L1 resuelva el problema primero, o aumenta el umbral L2 |
 | Después de disparar Layer 3 se devuelve directamente 400 | Fork + resumen falló la llamada al modelo en segundo plano (red/cuenta/error upstream, etc.) | Primero usa `/compact` o `/clear` según la sugerencia en el error JSON; al mismo tiempo verifica la ruta de llamada del modelo en segundo plano |
 | Imágenes/contenido grande desaparecen en la salida de herramientas | tool_result eliminará imágenes base64, truncará salidas excesivamente largas | Guarda el contenido importante en archivos locales/enlaces y luego reférencia; no esperes meter 100,000 líneas de texto directamente en la conversación |
@@ -244,7 +244,7 @@ Recuerda tres puntos clave:
 > Última actualización: 2026-01-23
 
 | Función | Ruta del Archivo | Líneas |
-| --- | --- | --- |
+|--- | --- | ---|
 | Configuración experimental: umbrales de compresión y valores por defecto de interruptores | `src-tauri/src/proxy/config.rs` | 119-168 |
 | Estimación de contexto: estimación de caracteres multilingüe + 15% de margen | `src-tauri/src/proxy/mappers/context_manager.rs` | 9-37 |
 | Estimación de uso de tokens: iterar sobre system/messages/tools/thinking | `src-tauri/src/proxy/mappers/context_manager.rs` | 103-198 |
@@ -257,7 +257,7 @@ Recuerda tres puntos clave:
 | Caché de firmas: TTL/estructura de caché de tres capas (Tool/Family/Session) | `src-tauri/src/proxy/signature_cache.rs` | 5-88 |
 | Caché de firmas: escritura/lectura de firma Session | `src-tauri/src/proxy/signature_cache.rs` | 141-223 |
 | Análisis de flujo SSE: cachear signature de thinking/tool en Session/Tool cache | `src-tauri/src/proxy/mappers/claude/streaming.rs` | 766-776 |
-| Análisis de flujo SSE: tool_use cachea tool_use_id -> signature | `src-tauri/src/proxy/mappers/claude/streaming.rs` | 958-975 |
+|--- | --- | ---|
 | Conversión de solicitudes: tool_use recupera firma de Session/Tool cache | `src-tauri/src/proxy/mappers/claude/request.rs` | 1045-1142 |
 | Conversión de solicitudes: tool_result dispara compresión de resultados de herramientas | `src-tauri/src/proxy/mappers/claude/request.rs` | 1159-1225 |
 | Compresión de resultados de herramientas: entrada `compact_tool_result_text()` | `src-tauri/src/proxy/mappers/tool_result_compressor.rs` | 28-69 |

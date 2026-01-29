@@ -104,7 +104,7 @@ OAuth 프로세스는 두 단계로 나뉨: 브라우저 권한 부여로 `code`
 지원하는 입력 형식 (프론트엔드가 분석하여 일괄 추가):
 
 | 입력 유형 | 예시 | 분석 로직 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 순수 토큰 텍스트 | `1//abc...` | 정규식 추출: `/1\/\/[a-zA-Z0-9_\-]+/g` (`AddAccountDialog.tsx:213-220` 참조) |
 | 큰 텍스트 내에 포함 | 로그/내보내기 텍스트에 여러 개의 `1//...` 포함 | 정규식 일괄 추출 및 중복 제거 (`AddAccountDialog.tsx:213-224` 참조) |
 | JSON 배열 | `[{"refresh_token":"1//..."}]` | 배열 분석 후 `item.refresh_token` 추출 (`AddAccountDialog.tsx:198-207` 참조) |
@@ -165,7 +165,7 @@ OAuth 콜백은 브라우저가 로컬 콜백 주소를 요청해야 함. 실패
 ### 4) Refresh Token의 올바른/잘못된 예시
 
 | 예시 | 인식 여부 | 원인 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `1//0gAbC...` | ✓ | `1//` 접두사 규칙 준수 (`AddAccountDialog.tsx:215-219` 참조) |
 | `ya29.a0...` | ✗ | 프론트엔드 추출 규칙 불일치, 잘못된 입력으로 간주됨 |
 
@@ -191,7 +191,7 @@ OAuth 콜백은 브라우저가 로컬 콜백 주소를 요청해야 함. 실패
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Accounts 페이지에 추가 대화상자 마운트 | [`src/pages/Accounts.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Accounts.tsx#L267-L731) | 267-731 |
 | OAuth URL 미리 생성 + 콜백 이벤트 자동 마무리 | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L49-L125) | 49-125 |
 | OAuth 콜백 이벤트가 `completeOAuthLogin()` 트리거 | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L67-L109) | 67-109 |
@@ -200,7 +200,7 @@ OAuth 콜백은 브라우저가 로컬 콜백 주소를 요청해야 함. 실패
 | 백엔드 add_account: email 무시, refresh_token으로 실제 이메일 가져와서 저장 | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L19-L60) | 19-60 |
 | 백엔드 OAuth: refresh_token 누락 확인 및 권한 취소 해결 방법 제공 | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L38-L79) | 38-79 |
 | OAuth 콜백 server: IPv4/IPv6 동시 수신 및 redirect_uri 선택 | [`src-tauri/src/modules/oauth_server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/oauth_server.rs#L43-L113) | 43-113 |
-| OAuth 콜백이 `code` 분석하여 `oauth-callback-received` 전송 | [`src-tauri/src/modules/oauth_server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/oauth_server.rs#L140-L180) | 140-180 |
+|--- | --- | ---|
 
 **핵심 이벤트 이름**:
 - `oauth-url-generated`: 백엔드에서 OAuth URL 생성 후 프론트엔드로 전송 (`oauth_server.rs:250-252` 참조)

@@ -312,7 +312,7 @@ Then follow the prompts:
 When GitHub Copilot is the best available provider, oh-my-opencode uses the following model assignment:
 
 | Agent        | Model                          |
-| ------------ | ------------------------------ |
+|--- | ---|
 | **Sisyphus** | `github-copilot/claude-opus-4.5` |
 | **Oracle**   | `github-copilot/gpt-5.2`       |
 | **Explore**  | `opencode/gpt-5-nano`           |
@@ -340,7 +340,7 @@ bunx oh-my-opencode install --no-tui \
 **Parameter description**:
 
 | Parameter           | Value           | Description                                        |
-| ------------------ | --------------- | -------------------------------------------------- |
+|--- | --- | ---|
 | `--no-tui`         | -               | Disable interactive interface (must specify other parameters) |
 | `--claude`         | `yes/no/max20`  | Claude subscription status                           |
 | `--openai`         | `yes/no`        | OpenAI/ChatGPT subscription (GPT-5.2 for Oracle)    |
@@ -553,7 +553,7 @@ The plugin automatically switches between accounts to avoid single account exhau
 **Solution**: Confirm configuration file location
 
 | Config Type | File Path | Priority |
-| ----------- | --------- | -------- |
+|--- | --- | ---|
 | **User config** | `~/.config/opencode/oh-my-opencode.json` | High |
 | **Project config** | `.opencode/oh-my-opencode.json` | Low |
 
@@ -589,7 +589,7 @@ If both user config and project config exist, **user config overrides project co
 > Updated: 2026-01-26
 
 | Feature         | File Path                                                                                              | Line   |
-| --------------- | ------------------------------------------------------------------------------------------------------ | ------ |
+|--- | --- | ---|
 | CLI install entry | [`src/cli/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/master/src/cli/index.ts)         | 22-60  |
 | Interactive installer | [`src/cli/install.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/master/src/cli/install.ts)     | 1-400+ |
 | Config manager  | [`src/cli/config-manager.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/master/src/cli/config-manager.ts) | 1-200+ |

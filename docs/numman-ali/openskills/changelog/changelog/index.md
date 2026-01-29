@@ -170,7 +170,7 @@ This page records OpenSkills version history, helping you understand new feature
 > Updated: 2026-01-24
 
 | Feature        | File Path                                                                      |
-| -------------- | ----------------------------------------------------------------------------- |
+|--- | ---|
 | Changelog original | [`CHANGELOG.md`](https://github.com/numman-ali/openskills/blob/main/CHANGELOG.md) |
 
 </details>

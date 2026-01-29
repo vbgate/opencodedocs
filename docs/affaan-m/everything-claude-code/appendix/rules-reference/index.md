@@ -42,7 +42,7 @@ This reference document helps you fully understand the content, use cases, and c
 Everything Claude Code includes 8 mandatory rule sets, each with clear goals and use cases:
 
 | Rule Set | Goal | Priority | Corresponding Agent |
-| -------- | ---- | -------- | ------------------ |
+|--- | --- | --- | ---|
 | **Security** | Prevent security vulnerabilities, sensitive data leaks | P0 | security-reviewer |
 | **Coding Style** | Code readability, immutable patterns, small files | P0 | code-reviewer |
 | **Testing** | 80%+ test coverage, TDD workflow | P0 | tdd-guide |
@@ -293,7 +293,7 @@ When creating PR:
 Located in `~/.claude/agents/`:
 
 | Agent | Purpose | When to Use |
-| ----- | ------- | ----------- |
+|--- | --- | ---|
 | planner | Implementation planning | Complex features, refactoring |
 | architect | System design | Architecture decisions |
 | tdd-guide | Test-driven development | New features, bug fixes |
@@ -318,7 +318,7 @@ Located in `~/.claude/agents/`:
 **Always use parallel task execution for independent operations**:
 
 | Approach | Description |
-| ------- | ----------- |
+|--- | ---|
 | ✅ Good: Parallel execution | Launch 3 agents in parallel: Agent 1 (auth.ts security analysis), Agent 2 (cache system performance review), Agent 3 (utils.ts type checking) |
 | ❌ Bad: Sequential execution | Run agent 1, then agent 2, then agent 3 |
 
@@ -541,7 +541,7 @@ Remember, these rules are not constraints, but guides to help you write high-qua
 > Last updated: 2026-01-25
 
 | Feature | File Path | Lines |
-| --- | --- | --- |
+|--- | --- | ---|
 | Security rules | [`rules/security.md`](https://github.com/affaan-m/everything-claude-code/blob/main/rules/security.md) | 1-37 |
 | Coding Style rules | [`rules/coding-style.md`](https://github.com/affaan-m/everything-claude-code/blob/main/rules/coding-style.md) | 1-71 |
 | Testing rules | [`rules/testing.md`](https://github.com/affaan-m/everything-claude-code/blob/main/rules/testing.md) | 1-31 |

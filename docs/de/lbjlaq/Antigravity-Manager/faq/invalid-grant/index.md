@@ -152,13 +152,13 @@ Der Auslösepunkt für `invalid_grant` ist der `refresh_token`, der beim Aktuali
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
-| Design-Erklärung: invalid_grant-Problem und Änderungsverhalten | [`docs/proxy-invalid-grant.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy-invalid-grant.md#L1-L52) | 1-52 |
-| Überspringen von `disabled=true` beim Laden des Konto-Pools | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L70-L158) | 70-158 |
-| Erkennen von `invalid_grant` und Deaktivieren des Kontos, wenn die Token-Aktualisierung fehlschlägt | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L840-L890) | 840-890 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Persistentes Schreiben von `disabled/disabled_at/disabled_reason` und Entfernen aus dem Arbeitsspeicher | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L942-L969) | 942-969 |
 | Abschneiden von `disabled_reason` (Vermeiden von Vergrößerung der Kontodatei) | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L1464-L1471) | 1464-1471 |
-| Automatisches Löschen von `disabled_*` beim Upsert (Token-Änderung wird als Benutzer-Anmeldeinformationen-Fix betrachtet) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L178-L206) | 178-206 |
-| Automatisches Neuladen der Proxy-Konten nach erneutem Hinzufügen des Kontos (sofort wirksam während des Betriebs) | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L21-L59) | 21-59 |
+|--- | --- | ---|
+|--- | --- | ---|
 
 </details>

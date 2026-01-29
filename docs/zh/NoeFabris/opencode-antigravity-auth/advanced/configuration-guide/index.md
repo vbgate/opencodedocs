@@ -49,7 +49,7 @@ order: 2
 根据操作系统，用户级配置文件位置不同：
 
 | 系统 | 路径 |
-|------|------|
+|--- | ---|
 | Linux/macOS | `~/.config/opencode/antigravity.json` |
 | Windows | `%APPDATA%\opencode\antigravity.json` |
 
@@ -178,7 +178,7 @@ Set-Content -Path "$env:APPDATA\opencode\antigravity.json" -Value $json
 #### keep_thinking
 
 | 值 | 默认值 | 说明 |
-|----|-------|------|
+|--- | --- | ---|
 | `true` | - | 保留 Claude 思考块，跨轮次保持连贯性 |
 | `false` | ✓ | 剥离思考块，更稳定，上下文更小 |
 
@@ -189,14 +189,14 @@ Set-Content -Path "$env:APPDATA\opencode\antigravity.json" -Value $json
 #### session_recovery
 
 | 值 | 默认值 | 说明 |
-|----|-------|------|
+|--- | --- | ---|
 | `true` | ✓ | 自动恢复工具调用中断的会话 |
 | `false` | - | 遇到错误时不自动恢复 |
 
 #### auto_resume
 
 | 值 | 默认值 | 说明 |
-|----|-------|------|
+|--- | --- | ---|
 | `true` | - | 恢复后自动发送 "continue" |
 | `false` | ✓ | 恢复后只显示提示，手动继续 |
 
@@ -207,7 +207,7 @@ Set-Content -Path "$env:APPDATA\opencode\antigravity.json" -Value $json
 #### web_search
 
 | 选项 | 默认值 | 说明 |
-|------|-------|------|
+|--- | --- | ---|
 | `default_mode` | `"off"` | `"auto"` 或 `"off"` |
 | `grounding_threshold` | `0.3` | 搜索阈值（0=总是搜索，1=从不搜索） |
 
@@ -224,7 +224,7 @@ Set-Content -Path "$env:APPDATA\opencode\antigravity.json" -Value $json
 #### account_selection_strategy
 
 | 策略 | 默认值 | 适用场景 |
-|------|-------|---------|
+|--- | --- | ---|
 | `sticky` | - | 单账户，保留 prompt cache |
 | `round-robin` | - | 4+ 账户，最大化吞吐量 |
 | `hybrid` | ✓ | 2-3 账户，智能轮换 |
@@ -240,14 +240,14 @@ Set-Content -Path "$env:APPDATA\opencode\antigravity.json" -Value $json
 #### switch_on_first_rate_limit
 
 | 值 | 默认值 | 说明 |
-|----|-------|------|
+|--- | --- | ---|
 | `true` | ✓ | 第一次遇到 429 立即切换账户 |
 | `false` | - | 先重试当前账户，第二次 429 才切换 |
 
 #### pid_offset_enabled
 
 | 值 | 默认值 | 说明 |
-|----|-------|------|
+|--- | --- | ---|
 | `true` | - | 不同会话（PID）使用不同起始账户 |
 | `false` | ✓ | 所有会话从同一账户开始 |
 
@@ -258,7 +258,7 @@ Set-Content -Path "$env:APPDATA\opencode\antigravity.json" -Value $json
 #### quota_fallback
 
 | 值 | 默认值 | 说明 |
-|----|-------|------|
+|--- | --- | ---|
 | `true` | - | Gemini 模型配额池 fallback |
 | `false` | ✓ | 不启用 fallback |
 
@@ -275,14 +275,14 @@ Set-Content -Path "$env:APPDATA\opencode\antigravity.json" -Value $json
 #### quiet_mode
 
 | 值 | 默认值 | 说明 |
-|----|-------|------|
+|--- | --- | ---|
 | `true` | - | 静默大多数 toast 通知（恢复通知除外） |
 | `false` | ✓ | 显示所有通知 |
 
 #### debug
 
 | 值 | 默认值 | 说明 |
-|----|-------|------|
+|--- | --- | ---|
 | `true` | - | 启用调试日志 |
 | `false` | ✓ | 不记录调试日志 |
 
@@ -301,7 +301,7 @@ OPENCODE_ANTIGRAVITY_DEBUG=2 opencode   # 详细日志
 #### auto_update
 
 | 值 | 默认值 | 说明 |
-|----|-------|------|
+|--- | --- | ---|
 | `true` | ✓ | 自动检查并更新插件 |
 | `false` | - | 不自动更新 |
 
@@ -317,7 +317,7 @@ OPENCODE_ANTIGRAVITY_DEBUG=2 opencode   # 详细日志
 #### 错误恢复
 
 | 选项 | 默认值 | 说明 |
-|------|-------|------|
+|--- | --- | ---|
 | `empty_response_max_attempts` | `4` | 空响应重试次数 |
 | `empty_response_retry_delay_ms` | `2000` | 重试间隔（毫秒） |
 | `tool_id_recovery` | `true` | 修复工具 ID 不匹配 |
@@ -327,7 +327,7 @@ OPENCODE_ANTIGRAVITY_DEBUG=2 opencode   # 详细日志
 #### 令牌管理
 
 | 选项 | 默认值 | 说明 |
-|------|-------|------|
+|--- | --- | ---|
 | `proactive_token_refresh` | `true` | 过期前主动刷新令牌 |
 | `proactive_refresh_buffer_seconds` | `1800` | 提前 30 分钟刷新 |
 | `proactive_refresh_check_interval_seconds` | `300` | 刷新检查间隔（秒） |
@@ -335,7 +335,7 @@ OPENCODE_ANTIGRAVITY_DEBUG=2 opencode   # 详细日志
 #### 签名缓存（`keep_thinking: true` 时生效）
 
 | 选项 | 默认值 | 说明 |
-|------|-------|------|
+|--- | --- | ---|
 | `signature_cache.enabled` | `true` | 启用磁盘缓存 |
 | `signature_cache.memory_ttl_seconds` | `3600` | 内存缓存 TTL（1 小时） |
 | `signature_cache.disk_ttl_seconds` | `172800` | 磁盘缓存 TTL（48 小时） |
@@ -344,7 +344,7 @@ OPENCODE_ANTIGRAVITY_DEBUG=2 opencode   # 详细日志
 #### 健康评分（`hybrid` 策略使用）
 
 | 选项 | 默认值 | 说明 |
-|------|-------|------|
+|--- | --- | ---|
 | `health_score.initial` | `70` | 初始健康分 |
 | `health_score.success_reward` | `1` | 成功奖励分数 |
 | `health_score.rate_limit_penalty` | `-10` | 限速惩罚分数 |
@@ -356,7 +356,7 @@ OPENCODE_ANTIGRAVITY_DEBUG=2 opencode   # 详细日志
 #### Token Bucket（`hybrid` 策略使用）
 
 | 选项 | 默认值 | 说明 |
-|------|-------|------|
+|--- | --- | ---|
 | `token_bucket.max_tokens` | `50` | 桶最大容量 |
 | `token_bucket.regeneration_rate_per_minute` | `6` | 每分钟恢复速度 |
 | `token_bucket.initial_tokens` | `50` | 初始令牌数 |
@@ -491,7 +491,7 @@ OPENCODE_ANTIGRAVITY_DEBUG=2 opencode   # 详细日志
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-|------|----------|------|
+|--- | --- | ---|
 | 配置 Schema 定义 | [`src/plugin/config/schema.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/schema.ts) | 12-323 |
 | 默认配置值 | [`src/plugin/config/schema.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/schema.ts) | 325-373 |
 | 配置加载逻辑 | [`src/plugin/config/loader.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/loader.ts) | 1-100 |

@@ -172,7 +172,7 @@ curl.exe -i http://127.0.0.1:PORT/v1/images/generations `
 Imagen 3 上流は標準化された `aspectRatio` を受け取ります。`size` を一般的な幅と高さのセットにするだけで、安定して標準比率にマッピングできます。
 
 | あなたが送る size | プロキシが計算する aspectRatio |
-| --- | --- |
+|--- | ---|
 | `"1024x1024"` | `1:1` |
 | `"1920x1080"` / `"1280x720"` | `16:9` |
 | `"1080x1920"` / `"720x1280"` | `9:16` |
@@ -188,7 +188,7 @@ Imagen 3 上流は標準化された `aspectRatio` を受け取ります。`size
 Imagen 3 の内部フィールドを覚える必要はなく、OpenAI Images の `quality` を使用するだけで解像度グレードを切り替えられます。
 
 | あなたが送る quality | プロキシが書き込む imageSize |
-| --- | --- |
+|--- | ---|
 | `"standard"` | 設定しない（上流デフォルト） |
 | `"medium"` | `"2K"` |
 | `"hd"` | `"4K"` |
@@ -201,7 +201,7 @@ Imagen 3 の内部フィールドを覚える必要はなく、OpenAI Images の
 この実装では `response_format: "url"` はパブリックからアクセス可能な URL を提供せず、`data:<mime>;base64,...` の Data URI を返します。多くのツールは `b64_json` を直接使用する方が適しています。
 
 | response_format | data[] のフィールド |
-| --- | --- |
+|--- | ---|
 | `"b64_json"`（デフォルト） | `{ "b64_json": "..." }` |
 | `"url"` | `{ "url": "data:image/png;base64,..." }` |
 
@@ -219,7 +219,7 @@ Imagen 3 の内部フィールドを覚える必要はなく、OpenAI Images の
 ここでの `size` 解析ロジックは `WIDTHxHEIGHT` で分割されます。`size` がこの形式でない場合、直接 `1:1` にフォールバックします。
 
 | 書き方 | 結果 |
-| --- | --- |
+|--- | ---|
 | ✓ `"1920x1080"` | 16:9 |
 | ❌ `"16:9"` | フォールバック 1:1 |
 
@@ -254,12 +254,12 @@ Imagen 3 の内部フィールドを覚える必要はなく、OpenAI Images の
 > 更新日時：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI Images ルートを公開 | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L123-L146) | 123-146 |
 | Images 生成エンドポイント：prompt/size/quality を解析 + OpenAI レスポンスを構築 | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L1104-L1333) | 1104-1333 |
-| size/quality 解析とマッピング（size->aspectRatio、quality->imageSize） | [`src-tauri/src/proxy/mappers/common_utils.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/common_utils.rs#L19-L222) | 19-222 |
+|--- | --- | ---|
 | OpenAIRequest 宣言 size/quality（プロトコル層互換用） | [`src-tauri/src/proxy/mappers/openai/models.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/models.rs#L6-L38) | 6-38 |
-| OpenAI->Gemini リクエスト変換：size/quality を統一解析関数に渡す | [`src-tauri/src/proxy/mappers/openai/request.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/request.rs#L19-L27) | 19-27 |
+|--- | --- | ---|
 
 **重要なフィールド（ソースコードから）**：
 - `size`：`WIDTHxHEIGHT` として `aspectRatio` に解析

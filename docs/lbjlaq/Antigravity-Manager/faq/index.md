@@ -13,7 +13,7 @@ This chapter collects the most frequently encountered error codes and exceptiona
 ## In This Chapter
 
 | Issue Type | Page | Description |
-|-----------|------|-------------|
+|--- | --- | ---|
 | Account Invalid | [invalid_grant & Auto-Disable](./invalid-grant/) | Account suddenly unavailable? Understand OAuth Token failure causes and recovery process |
 | Auth Failure | [401/Auth Failed](./auth-401/) | Request rejected? Check auth_mode configuration and Header format |
 | Rate Limit Errors | [429/Capacity Errors](./429-rotation/) | Frequent 429s? Distinguish quota exhaustion from upstream rate limiting, use rotation to reduce impact |

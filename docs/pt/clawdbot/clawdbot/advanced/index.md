@@ -53,14 +53,14 @@ De acordo com suas necessidades, você pode escolher diferentes caminhos de apre
 ### Configurações Principais
 
 | Tópico | Descrição | Tempo Estimado |
-|--------|----------|----------------|
+|--- | --- | ---|
 | [Configuração de Modelos e Autenticação de IA](./models-auth/) | Configure múltiplos provedores de modelos de IA e métodos de autenticação como Anthropic, OpenAI, OpenRouter, Ollama, etc. | 15 minutos |
 | [Gerenciamento de Sessões e Múltiplos Agentes](./session-management/) | Aprenda conceitos principais como modelo de sessão, isolamento de sessão, colaboração de sub-agentes, compressão de contexto, etc. | 20 minutos |
 
 ### Sistema de Ferramentas
 
 | Tópico | Descrição | Tempo Estimado |
-|--------|----------|----------------|
+|--- | --- | ---|
 | [Ferramentas de Automação de Navegador](./tools-browser/) | Use ferramentas de navegador para automação de páginas da Web, capturas de tela, operações de formulários, etc. | 25 minutos |
 | [Ferramentas de Execução de Comandos e Aprovação](./tools-exec/) | Configure e use ferramentas exec, entenda mecanismo de aprovação de segurança e controle de permissões | 15 minutos |
 | [Ferramentas de Busca e Coleta na Web](./tools-web/) | Use ferramentas web_search e web_fetch para busca na Web e coleta de conteúdo | 20 minutos |
@@ -68,28 +68,28 @@ De acordo com suas necessidades, você pode escolher diferentes caminhos de apre
 ### Experiência de Interação
 
 | Tópico | Descrição | Tempo Estimado |
-|--------|----------|----------------|
+|--- | --- | ---|
 | [Interface Visual Canvas e A2UI](./canvas/) | Entenda mecanismo de push Canvas A2UI, operações de interface visual e interfaces personalizadas | 20 minutos |
 | [Ativação de Voz e Texto para Voz](./voice-tts/) | Configure Voice Wake, Talk Mode e provedores TTS para implementar interação por voz | 15 minutos |
 
 ### Extensão de Inteligência
 
 | Tópico | Descrição | Tempo Estimado |
-|--------|----------|----------------|
+|--- | --- | ---|
 | [Sistema de Memória e Busca Vetorial](./memory-system/) | Configure e use sistema de memória (SQLite-vec, FTS5, busca híbrida) | 25 minutos |
 | [Plataforma de Habilidades e ClawdHub](./skills-platform/) | Entenda sistema de habilidades, habilidades Bundled/Managed/Workspace, integração ClawdHub | 20 minutos |
 
 ### Automação e Implantação
 
 | Tópico | Descrição | Tempo Estimado |
-|--------|----------|----------------|
+|--- | --- | ---|
 | [Tarefas Agendadas Cron e Webhook](./cron-automation/) | Configure tarefas agendadas, gatilhos Webhook, Pub/Sub Gmail e outras funcionalidades de automação | 20 minutos |
 | [Gateway Remoto e Tailscale](./remote-gateway/) | Acesse Gateway remotamente via Tailscale Serve/Funnel ou túnel SSH | 15 minutos |
 
 ### Mecanismos de Segurança
 
 | Tópico | Descrição | Tempo Estimado |
-|--------|----------|----------------|
+|--- | --- | ---|
 | [Segurança e Isolamento Sandbox](./security-sandbox/) | Entenda modelo de segurança, controle de permissões de ferramentas, isolamento Sandbox, implantação em Docker | 20 minutos |
 
 ## Próximos Passos

@@ -36,7 +36,7 @@ Você já completou a configuração do assistente, as configurações básicas 
 **Métodos de inicialização recomendados**:
 
 | Cenário                  | Comando                               | Descrição                                   |
-| ----------------------- | -------------------------------------- | -------------------------------------- |
+|--- | --- | ---|
 | Uso diário                | `clawdbot gateway install` + `clawdbot gateway start` | Inicia automaticamente como serviço em segundo plano                  |
 | Desenvolvimento e depuração                | `clawdbot gateway --dev`                     | Cria configuração de desenvolvimento, recarregamento automático                  |
 | Teste temporário                | `clawdbot gateway`                           | Executa em primeiro plano, logs diretos no terminal            |
@@ -487,7 +487,7 @@ Nesta lição você aprendeu:
 **Referência Rápida de Comandos Chave**:
 
 | Cenário                   | Comando                                        |
-| ---------------------- | ------------------------------------------- |
+|--- | ---|
 | Uso diário (serviço)       | `clawdbot gateway install && clawdbot gateway start` |
 | Desenvolvimento e depuração              | `clawdbot gateway --dev`                     |
 | Teste temporário              | `clawdbot gateway`                           |
@@ -516,7 +516,7 @@ Nesta lição você aprendeu:
 > Última atualização: 2026-01-27
 
 | Funcionalidade                        | Caminho do Arquivo                                                                                   | Linha     |
-| --------------------------- | -------------------------------------------------------------------------------------- | -------- |
+|--- | --- | ---|
 | Entrada de inicialização do Gateway            | [`src/cli/gateway-cli/run.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/gateway-cli/run.ts) | 55-310   |
 | Abstração de serviço de daemon         | [`src/daemon/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/service.ts) | 66-155    |
 | Inicializar serviço de sidebar           | [`src/gateway/server-startup.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup.ts) | 26-160    |

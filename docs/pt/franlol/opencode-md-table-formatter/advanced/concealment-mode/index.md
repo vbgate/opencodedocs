@@ -28,7 +28,7 @@ Você usa o OpenCode para escrever código, e a IA gerou uma tabela bonita:
 
 ```markdown
 | 字段 | 类型 | 说明 |
-| --- | --- | --- |
+|--- | --- | ---|
 | **name** | string | 用户名 |
 | age | number | 年龄 |
 ```
@@ -37,7 +37,7 @@ Na visualização do código-fonte, parece organizada. Mas ao mudar para o modo 
 
 ```
 | 字段     | 类型   | 说明   |
-| -------- | ------ | ------ |
+|--- | --- | ---|
 | name | string | 用户名 |    ← 怎么短了？
 | age      | number | 年龄   |
 ```
@@ -49,7 +49,7 @@ Qual é o problema? **Modo de ocultação**.
 O OpenCode ativa o **modo de ocultação (Concealment Mode)** por padrão, que oculta símbolos de sintaxe Markdown ao renderizar:
 
 | Código-fonte | Exibição no modo de ocultação |
-| --- | --- |
+|--- | ---|
 | `**粗体**` | 粗体（4 个字符） |
 | `*斜体*` | 斜体（4 个字符） |
 | `~~删除线~~` | 删除线（6 个字符） |
@@ -107,7 +107,7 @@ let textWithPlaceholders = text.replace(/`(.+?)`/g, (match, content) => {
 **Como funciona**
 
 | Entrada | Após processamento | Array codeBlocks |
-| --- | --- | --- |
+|--- | --- | ---|
 | `` `**bold**` `` | `\x00CODE0\x00` | `["**bold**"]` |
 | `` `a` and `b` `` | `\x00CODE0\x00 and \x00CODE1\x00` | `["a", "b"]` |
 
@@ -176,7 +176,7 @@ return Bun.stringWidth(visualText)
 `Bun.stringWidth` pode calcular corretamente:
 
 | Tipo de caractere | Exemplo | Número de caracteres | Largura de exibição |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | ASCII | `abc` | 3 | 3 |
 | Chinês | `你好` | 2 | 4（cada um ocupa 2 espaços） |
 | Emoji | `😀` | 1 | 2（ocupa 2 espaços） |
@@ -234,7 +234,7 @@ Portanto, a largura de `` `**bold**` `` é 8 (`**bold**`), não 4 (`bold`).
 ## Resumo da aula
 
 | Passo | Função | Código principal |
-| --- | --- | --- |
+|--- | --- | ---|
 | Proteger blocos de código | Evita que símbolos dentro dos blocos sejam removidos por engano | `text.replace(/\`(.+?)\`/g, ...)` |
 | Remover Markdown | Calcula o conteúdo real exibido no modo de ocultação | Múltiplas substituições com regex |
 | Calcular largura | Processa caracteres especiais como chinês, Emoji | `Bun.stringWidth()` |
@@ -258,7 +258,7 @@ Portanto, a largura de `` `**bold**` `` é 8 (`**bold**`), não 4 (`bold`).
 > Atualizado em: 2026-01-26
 
 | Função | Caminho do arquivo | Número da linha |
-| --- | --- | --- |
+|--- | --- | ---|
 | Entrada de cálculo de largura de exibição | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L151-L159) | 151-159 |
 | Proteção de blocos de código | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L168-L173) | 168-173 |
 | Remoção de símbolos Markdown | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L175-L188) | 175-188 |

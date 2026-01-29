@@ -47,7 +47,7 @@ Le **point de terminaison de transcription audio** est une route compatible Open
 ## Aperçu du point de terminaison et des limites
 
 | Élément | Conclusion | Preuve de code |
-| --- | --- | --- |
+|--- | --- | ---|
 | Route d'entrée | `POST /v1/audio/transcriptions` | `src-tauri/src/proxy/server.rs` enregistre la route vers `handlers::audio::handle_audio_transcription` |
 | Formats pris en charge | Reconnus par extension de fichier : `mp3/wav/m4a/ogg/flac/aiff(aif)` | `src-tauri/src/proxy/audio/mod.rs` `detect_mime_type()` |
 | Taille de fichier | **Limite stricte de 15 Mo** (renvoie 413 + message d'erreur texte si dépassé) | `src-tauri/src/proxy/audio/mod.rs` `exceeds_size_limit()` ; `src-tauri/src/proxy/handlers/audio.rs` |
@@ -140,7 +140,7 @@ print(transcript.text)
 Antigravity Tools détermine le type MIME par extension de fichier (pas par détection de contenu de fichier).
 
 | Format | Type MIME | Extension |
-| --- | --- | --- |
+|--- | --- | ---|
 | MP3 | `audio/mp3` | `.mp3` |
 | WAV | `audio/wav` | `.wav` |
 | AAC (M4A) | `audio/aac` | `.m4a` |
@@ -217,7 +217,7 @@ Le corps audio lui-même n'est pas visible dans les journaux, mais vous pouvez t
 Ce point de terminaison lit explicitement seulement 3 champs de formulaire :
 
 | Champ | Obligatoire | Valeur par défaut | Méthode de traitement |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `file` | ✅ | Aucun | Doit être fourni ; manquant renvoie `400` + texte `缺少音频文件` |
 | `model` | ❌ | `gemini-2.0-flash-exp` | Transmis comme chaîne et participe à l'obtention de jetons (les règles amont spécifiques sont basées sur la réponse réelle) |
 | `prompt` | ❌ | `Generate a transcript of the speech.` | Envoyé comme premier paragraphe `text` à l'amont pour guider la transcription |
@@ -279,7 +279,7 @@ Méthode correcte : Ne téléchargez que des fichiers audio (`.mp3`, `.wav`, etc
 > Dernière mise à jour : 2026-01-23
 
 | Fonction | Chemin du fichier | Numéro de ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Enregistrement de route (/v1/audio/transcriptions + limite de corps) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | Processeur de transcription audio (multipart/15 Mo/inlineData) | [`src-tauri/src/proxy/handlers/audio.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/audio.rs#L16-L162) | 16-162 |
 | Formats pris en charge (extension → MIME + 15 Mo) | [`src-tauri/src/proxy/audio/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/audio/mod.rs#L6-L35) | 6-35 |

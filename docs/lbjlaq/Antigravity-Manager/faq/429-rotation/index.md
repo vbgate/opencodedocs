@@ -39,7 +39,7 @@ order: 999
 The proxy tries to parse `error.details[0].reason` or `error.message` from the response body, roughly categorizing 429 into several types (actual classification depends on the returned data):
 
 | Type identified by proxy | Common reason / clues | Typical characteristics |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **Quota exhausted** | `QUOTA_EXHAUSTED` / Text contains `exhausted`, `quota` | May need to wait for quota to refresh |
 | **Rate limited** | `RATE_LIMIT_EXCEEDED` / Text contains `per minute`, `rate limit`, `too many requests` | Usually cooldown at the tens-of-seconds level |
 | **Model capacity insufficient** | `MODEL_CAPACITY_EXHAUSTED` / Text contains `model_capacity` | Commonly temporary overload, recoverable shortly |
@@ -134,14 +134,14 @@ Check the response body of the 429 error in Proxy Monitor, focusing on two types
 Go to the **API Proxy** page and view scheduling strategy:
 
 | Configuration | Description | Default/Suggested |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **Scheduling Mode** | Scheduling mode | `Balance` (default) |
 | **Preferred Account** | Fixed account mode | Unchecked (default) |
 
 **Scheduling Mode Comparison**:
 
 | Mode | Account Reuse Strategy | Rate Limit Handling | Applicable Scenarios |
-| :--- | :--- | :--- | :--- |
+|--- | --- | --- | ---|
 | **CacheFirst** | Enables sticky sessions and 60s window reuse | **Prioritizes waiting**, greatly improving Prompt Caching hit rate | Conversational/high cache hit rate requirements |
 | **Balance** | Enables sticky sessions and 60s window reuse | **Immediately switches** to backup accounts, balancing success rate and performance | General scenarios, default |
 | **PerformanceFirst** | Skips sticky sessions and 60s window reuse, pure round-robin | Immediately switches, most balanced account load | High concurrency, stateless requests |
@@ -295,7 +295,7 @@ All accounts are currently limited. Please wait 30s.
 A: No.
 
 | Feature | Quota Protection | Rate Limit Tracking |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **Trigger Condition** | Model quota below threshold | Received 429 error |
 | **Scope** | Specific models | Entire account |
 | **Duration** | Until quota recovers | Determined by upstream (usually seconds to minutes) |
@@ -337,7 +337,7 @@ Within a single request, the proxy also force rotates during retries (when `atte
 > Updated: 2026-01-23
 
 | Feature | File Path | Line Numbers |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | 429 retry delay parsing (RetryInfo / quotaResetDelay) | [`src-tauri/src/proxy/upstream/retry.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/upstream/retry.rs#L38-L67) | 38-67 |
 | Duration parsing utility | [`src-tauri/src/proxy/upstream/retry.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/upstream/retry.rs#L11-L35) | 11-35 |
 | Scheduling mode enum (CacheFirst/Balance/PerformanceFirst) | [`src-tauri/src/proxy/sticky_config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/sticky_config.rs#L3-L12) | 3-12 |
@@ -348,7 +348,7 @@ Within a single request, the proxy also force rotates during retries (when `atte
 | Account sorting priority (ULTRA > PRO > FREE + remaining_quota) | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L504-L538) | 504-538 |
 | 60s window reuse + avoid rate limit/quota protection | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L624-L739) | 624-739 |
 | Rate limit record entry (mark_rate_limited) | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L1089-L1113) | 1089-1113 |
-| 429 precise lock/real-time quota refresh/fallback strategy (mark_rate_limited_async) | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L1258-L1417) | 1258-1417 |
+|--- | --- | ---|
 
 **Key Constants**:
 - `MAX_RETRY_ATTEMPTS = 3`: Maximum retry count within a single request (OpenAI/Gemini handler)

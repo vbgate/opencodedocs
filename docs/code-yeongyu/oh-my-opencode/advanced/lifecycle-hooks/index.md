@@ -60,7 +60,7 @@ Hooks are similar to middleware in web frameworks—both are mechanisms for "doi
 oh-my-opencode provides 32 built-in hooks divided into 7 categories:
 
 | Category | Hook Count | Primary Function |
-|----------|------------|-------------------|
+|--- | --- | ---|
 | **Context Injection** | 4 | Auto-inject project docs, rules |
 | **Productivity & Control** | 6 | Keyword detection, mode switching, loop management |
 | **Quality & Security** | 4 | Code comment checking, thinking block verification |
@@ -299,7 +299,7 @@ stateDiagram-v2
 **Function**: Detects keywords in user prompts and automatically activates corresponding modes:
 
 | Keyword | Activates Mode | Description |
-|---------|----------------|-------------|
+|--- | --- | ---|
 | `ultrawork` / `ulw` | **Maximum Performance Mode** | Activate all professional agents and parallel tasks |
 | `search` / `find` | **Parallel Exploration Mode** | Parallel launch explore/librarian |
 | `analyze` / `investigate` | **Deep Analysis Mode** | Activate deep exploration and analysis |
@@ -497,15 +497,15 @@ This lesson introduced oh-my-opencode's 32 lifecycle hooks:
 > Last Updated: 2026-01-26
 
 | Function | File Path | Line Number |
-|----------|-----------|-------------|
-| directory-agents-injector | [`src/hooks/directory-agents-injector/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/directory-agents-injector/index.ts) | 1-183 |
-| todo-continuation-enforcer | [`src/hooks/todo-continuation-enforcer.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/todo-continuation-enforcer.ts) | 1-490 |
-| keyword-detector | [`src/hooks/keyword-detector/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/keyword-detector/index.ts) | 1-101 |
-| tool-output-truncator | [`src/hooks/tool-output-truncator.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/tool-output-truncator.ts) | 1-62 |
-| comment-checker | [`src/hooks/comment-checker/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/comment-checker/index.ts) | 1-172 |
-| context-window-monitor | [`src/hooks/context-window-monitor.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/context-window-monitor.ts) | - |
-| session-recovery | [`src/hooks/session-recovery/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/session-recovery/index.ts) | - |
-| claude-code-hooks | [`src/hooks/claude-code-hooks/`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/claude-code-hooks) | - |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Key Constants**:
 - `AGENTS_FILENAME = "AGENTS.md"`: Agent context file name (`src/hooks/directory-agents-injector/constants.ts`)

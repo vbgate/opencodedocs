@@ -81,7 +81,7 @@ bash skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh .
 2. 常见错误类型：
 
 | 错误消息            | 可能原因     | 解决方案                                    |
-| ------------------- | ------------ | ------------------------------------------- |
+|--- | --- | ---|
 | "File too large"    | 项目体积超限 | 排除不必要的文件（如 `*.log`、`*.test.ts`） |
 | "Invalid framework" | 框架识别失败 | 添加 `package.json` 或手动指定框架          |
 | "Network timeout"   | 网络超时     | 检查网络连接，重试部署                      |
@@ -116,7 +116,7 @@ tar -czf "$TARBALL" -C "$PROJECT_PATH" \
 **解决方案**：
 
 | 场景                          | 解决方法                                                                                                                                                                                                              |
-| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|--- | ---|
 | `package.json` 存在但检测失败 | 检查依赖是否在 `dependencies` 或 `devDependencies` 中                                                                                                                                                                 |
 | 纯静态 HTML 项目              | 确保根目录有 `index.html`，脚本会自动重命名单个 HTML 文件（见源码 [`deploy.sh:198-205`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh#L198-L205)） |
 | 框架不在支持列表              | 直接部署（framework 为 null），Vercel 会自动检测                                                                                                                                                                      |
@@ -209,7 +209,7 @@ curl -I https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/m
 ::: tip 验证错误示例及修复
 
 | 错误消息                                         | 原因                     | 修复方法                                                      |
-| ------------------------------------------------ | ------------------------ | ------------------------------------------------------------- |
+|--- | --- | ---|
 | `Missing or empty title`                         | frontmatter 缺少 `title` | 在规则文件顶部添加：<br>`---`<br>`title: "规则标题"`<br>`---` |
 | `Missing or empty explanation`                   | 缺少规则说明             | 在 frontmatter 中添加 `explanation` 字段                      |
 | `Missing examples`                               | 没有代码示例             | 添加 `**Incorrect:**` 和 `**Correct:**` 代码块                |
@@ -459,7 +459,7 @@ Agent Skills 的常见问题主要集中在：
 > 更新时间：2026-01-25
 
 | 功能           | 文件路径                                                                                                                                                                         | 行号    |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 网络错误处理   | [`skills/claude.ai/vercel-deploy-claimable/SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/SKILL.md#L100-L113)         | 100-113 |
 | 规则验证逻辑   | [`packages/react-best-practices-build/src/validate.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/validate.ts)               | 21-66   |
 | 框架检测逻辑   | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 12-156  |

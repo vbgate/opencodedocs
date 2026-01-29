@@ -19,7 +19,7 @@ description: "Plannotatorのチームコラボレーションとノートアプ�
 ## このセクションの内容
 
 | レッスン | 説明 | 適したシナリオ |
-|------|------|----------|
+|--- | --- | ---|
 | [URL共有](./url-sharing/) | URLでプランとアノテーションを共有し、バックエンド不要のチームコラボレーションを実現 | チームメンバーとレビュー結果を共有したい |
 | [Obsidian連携](./obsidian-integration/) | 承認されたプランをObsidian vaultに自動保存 | Obsidianでナレッジベースを管理している |
 | [Bear連携](./bear-integration/) | x-callback-urlでプランをBearに保存 | macOS/iOSユーザーでBearノートを使用 |

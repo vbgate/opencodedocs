@@ -103,7 +103,7 @@ La fila separadora es la línea entre el encabezado y las filas de datos, utiliz
 Cada celda debe coincidir con la expresión regular `/^\s*:?-+:?\s*$/`, traducido al lenguaje humano significa:
 
 | Componente | Significado | Ejemplo |
-| --- | --- | --- |
+|--- | --- | ---|
 | `\s*` | Espacio opcional | Permite `| --- |` o `|---|` |
 | `:?` | Dos puntos opcionales | Para especificar la alineación |
 | `-+` | Al menos un guion | `-`, `---`, `------` funcionan |
@@ -145,12 +145,12 @@ Si la primera fila tiene 3 columnas, cada fila posterior debe tener 3 columnas.
 ```markdown
 ✅ Correcto (cada fila tiene 3 columnas)
 | A | B | C |
-| --- | --- | --- |
+|--- | --- | ---|
 | 1 | 2 | 3 |
 
 ❌ Incorrecto (la tercera fila solo tiene 2 columnas)
 | A | B | C |
-| --- | --- | --- |
+|--- | --- | ---|
 | 1 | 2 |
 ```
 
@@ -181,7 +181,7 @@ Ubicación en código fuente: `index.ts:70-88`
 La fila separadora no solo sirve para separar, sino también para especificar el método de alineación:
 
 | Sintaxis | Alineación | Efecto |
-| --- | --- | --- |
+|--- | --- | ---|
 | `---` o `:---` | Alineación izquierda | Texto a la izquierda (predeterminado) |
 | `:---:` | Centrado | Texto centrado |
 | `---:` | Alineación derecha | Texto a la derecha |
@@ -190,7 +190,7 @@ La fila separadora no solo sirve para separar, sino también para especificar el
 
 ```markdown
 | Alineación izquierda | Centrado | Alineación derecha |
-| :--- | :---: | ---: |
+|--- | --- | ---|
 | Texto | Texto | Texto |
 ```
 
@@ -198,7 +198,7 @@ Después de formatear:
 
 ```markdown
 | Alineación izquierda | Centrado | Alineación derecha |
-| :------------------- | :------: | ----------------: |
+|--- | --- | ---|
 | Texto                |  Texto   |            Texto |
 ```
 
@@ -220,7 +220,7 @@ Ubicación en código fuente: `index.ts:141-149`
 ## Solución de errores comunes
 
 | Síntoma de error | Causa posible | Solución |
-| --- | --- | --- |
+|--- | --- | ---|
 | `invalid structure` | Falta fila separadora | Agrega `\| --- \| --- \|` después del encabezado |
 | `invalid structure` | Número de columnas inconsistente | Verifica que cada fila tenga el mismo número de `\|` |
 | `invalid structure` | Falta `\|` al inicio/final de fila | Agrega los `\|` faltantes |
@@ -239,7 +239,7 @@ Al completar esta lección, deberías poder responder:
 ## Resumen de esta lección
 
 | Condición | Requisito |
-| --- | --- |
+|--- | ---|
 | Inicio y final de fila | Debe comenzar y terminar con `\|` |
 | Cantidad de separadores | Al menos 2 `\|` |
 | Fila separadora | Debe existir, formato `:?-+:?` |
@@ -268,7 +268,7 @@ Al completar esta lección, deberías poder responder:
 > Fecha de actualización: 2026-01-26
 
 | Función | Ruta del archivo | Número de línea |
-| --- | --- | --- |
+|--- | --- | ---|
 | Determinación de fila de tabla | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61) | 58-61 |
 | Determinación de fila separadora | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L63-L68) | 63-68 |
 | Validación de tabla | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88) | 70-88 |

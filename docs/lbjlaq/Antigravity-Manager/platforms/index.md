@@ -13,7 +13,7 @@ Antigravity Tools' core capability is converting protocols from multiple AI plat
 ## In This Chapter
 
 | Tutorial | Description |
-|----------|-------------|
+|--- | ---|
 | [OpenAI Compatible API](./openai/) | Implementation strategy for `/v1/chat/completions` and `/v1/responses`, enabling seamless OpenAI SDK integration |
 | [Anthropic Compatible API](./anthropic/) | Key contracts for `/v1/messages` and Claude Code, supporting core features like chain-of-thought and system prompts |
 | [Gemini Native API](./gemini/) | `/v1beta/models` and Google SDK endpoint integration, supporting `x-goog-api-key` compatibility |
@@ -34,7 +34,7 @@ Antigravity Tools' core capability is converting protocols from multiple AI plat
 **Quick Selection**:
 
 | Your Scenario | Start With |
-|---------------|------------|
+|--- | ---|
 | Using Claude Code CLI | [Anthropic Compatible API](./anthropic/) |
 | Using OpenAI Python SDK | [OpenAI Compatible API](./openai/) |
 | Using Google Official SDK | [Gemini Native API](./gemini/) |

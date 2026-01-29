@@ -108,7 +108,7 @@ Get-ChildItem -Force $dataDir
 다음 파일 이름은 프로젝트 소스 코드에서 오며 모두 고정됨:
 
 | 보게 될 내용 | 용도 | 신경 써야 할 것 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `accounts.json` | 계정 인덱스 (계정 목록/현재 계정 포함) | 계정 마이그레이션 시 함께 백업 권장 |
 | `accounts/` | 각 계정마다 하나의 `*.json` 파일 | 이것이 계정 데이터 본체 |
 | `logs/` | 애플리케이션 로그 디렉토리 | 문제 해결 시 우선 확인 |
@@ -188,7 +188,7 @@ Settings -> General에서 "시작 시 자동 시작" 찾고, 활성화 선택.
 
 ::: info 두 가지 "자동 시작" 혼동 금지
 | 이름 | 의미 | 증거 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 시작 시 자동 시작 | 컴퓨터 시작 후 Antigravity Tools 자동 시작 (데스크톱 애플리케이션 자체) | 시작 매개변수에 `--minimized` 포함, `toggle_auto_launch` 명령 제공 |
 | 역방향 프록시 자동 시작 | Antigravity Tools 시작 후, `proxy.auto_start=true` 구성되면 로컬 역방향 프록시 서비스 자동 시작 시도 | 애플리케이션 시작 시 구성 읽기 및 `start_proxy_service(...)` |
 :::
@@ -204,7 +204,7 @@ Settings -> General에서 "시작 시 자동 시작" 찾고, 활성화 선택.
 ## 흔한 오류
 
 | 시나리오 | 잘못된 방법 (❌) | 권장 방법 (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | 데이터 디렉토리를 찾지 못함 | 시스템에서 앱 설치 디렉토리를 무작위 검색 | Settings -> Advanced에서 "데이터 디렉토리" 확인 및 한 번 클릭으로 열기 |
 | 창 닫기 후 종료했다고 생각 | 창 닫기 후 설정/포트 변경 | 먼저 트레이 아이콘이 여전히 있는지 확인; 종료하려면 트레이 Quit 사용 |
 | 로그가 너무 많아서 문제 해결 어려움 | 문제 재현 중 구 로그 뒤집기 | 먼저 "로그 정리" 후 재현 한 번, 마지막으로 이번 로그 파일만 확인 |
@@ -233,7 +233,7 @@ Settings -> General에서 "시작 시 자동 시작" 찾고, 활성화 선택.
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 데이터 디렉토리 위치 (`~/.antigravity_tools`) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | 계정 인덱스 및 계정 파일 디렉토리 (`accounts.json` / `accounts/`) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L46) | 16-46 |
 | 로그 디렉토리 및 일일별 롤링 (`logs/` + `app.log`) | [`src-tauri/src/modules/logger.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/logger.rs#L17-L83) | 17-83 |
@@ -242,8 +242,8 @@ Settings -> General에서 "시작 시 자동 시작" 찾고, 활성화 선택.
 | 설정 페이지 한 번 클릭 로그 정리 (버튼 + 대화상자 로직) | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L127-L135) | 127-135 |
 | 설정 페이지 한 번 클릭 로그 정리 (Advanced 탭 버튼) | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L732-L747) | 732-747 |
 | 트레이 메뉴 및 클릭 이벤트 (계정 전환/갱신/표시/종료) | [`src-tauri/src/modules/tray.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/tray.rs#L9-L158) | 9-158 |
-| 창 닫기 -> 숨기기 (트레이로 최소화) | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L150-L160) | 150-160 |
-| 시작 시 자동 시작 플러그인 초기화 (함께 `--minimized`) | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L58-L66) | 58-66 |
+|--- | --- | ---|
+|--- | --- | ---|
 | 시작 시 자동 시작 스위치 (`toggle_auto_launch` / `is_auto_launch_enabled`) | [`src-tauri/src/commands/autostart.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/autostart.rs#L4-L39) | 4-39 |
 | 한 번 클릭 데이터 디렉토리 열기 / 경로 가져오기 / 로그 정리 명령 | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L578-L621) | 578-621 |
 | Token Stats 데이터베이스 파일명 (`token_stats.db`) | [`src-tauri/src/modules/token_stats.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/token_stats.rs#L58-L61) | 58-61 |

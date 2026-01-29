@@ -53,14 +53,14 @@ order: 185
 ### 核心配置
 
 | 主题 | 描述 | 预计时间 |
-|------|------|----------|
+|--- | --- | ---|
 | [AI 模型与认证配置](./models-auth/) | 配置 Anthropic、OpenAI、OpenRouter、Ollama 等多种 AI 模型提供商和认证方式 | 15 分钟 |
 | [会话管理与多 Agent](./session-management/) | 学习会话模型、会话隔离、子 Agent 协作、上下文压缩等核心概念 | 20 分钟 |
 
 ### 工具系统
 
 | 主题 | 描述 | 预计时间 |
-|------|------|----------|
+|--- | --- | ---|
 | [浏览器自动化工具](./tools-browser/) | 使用浏览器工具进行网页自动化、截图、操作表单等 | 25 分钟 |
 | [命令执行工具与审批](./tools-exec/) | 配置和使用 exec 工具，了解安全审批机制和权限控制 | 15 分钟 |
 | [Web 搜索与抓取工具](./tools-web/) | 使用 web_search 和 web_fetch 工具进行网络搜索和内容抓取 | 20 分钟 |
@@ -68,28 +68,28 @@ order: 185
 ### 交互体验
 
 | 主题 | 描述 | 预计时间 |
-|------|------|----------|
+|--- | --- | ---|
 | [Canvas 可视化界面与 A2UI](./canvas/) | 了解 Canvas A2UI 推送机制、可视化界面操作和自定义界面 | 20 分钟 |
 | [语音唤醒与文本转语音](./voice-tts/) | 配置 Voice Wake、Talk Mode 和 TTS 提供商，实现语音交互 | 15 分钟 |
 
 ### 智能扩展
 
 | 主题 | 描述 | 预计时间 |
-|------|------|----------|
+|--- | --- | ---|
 | [记忆系统与向量搜索](./memory-system/) | 配置和使用记忆系统（SQLite-vec、FTS5、混合搜索） | 25 分钟 |
 | [技能平台与 ClawdHub](./skills-platform/) | 了解技能系统、Bundled/Managed/Workspace 技能、ClawdHub 集成 | 20 分钟 |
 
 ### 自动化与部署
 
 | 主题 | 描述 | 预计时间 |
-|------|------|----------|
+|--- | --- | ---|
 | [Cron 定时任务与 Webhook](./cron-automation/) | 配置定时任务、Webhook 触发、Gmail Pub/Sub 等自动化功能 | 20 分钟 |
 | [远程 Gateway 与 Tailscale](./remote-gateway/) | 通过 Tailscale Serve/Funnel 或 SSH 隧道远程访问 Gateway | 15 分钟 |
 
 ### 安全机制
 
 | 主题 | 描述 | 预计时间 |
-|------|------|----------|
+|--- | --- | ---|
 | [安全与沙箱隔离](./security-sandbox/) | 了解安全模型、工具权限控制、Sandbox 隔离、Docker 化部署 | 20 分钟 |
 
 ## 下一步

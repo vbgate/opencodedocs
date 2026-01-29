@@ -15,7 +15,7 @@ Ce chapitre enregistre l'évolution des versions du plugin opencode-md-table-for
 ## 📚 Navigation des sous-pages
 
 | Page | Description | Temps de lecture |
-|------|------------|------------------|
+|--- | --- | ---|
 | **[Journal des modifications : Historique des versions et enregistrement des modifications](./release-notes/)** | Consultez les enregistrements détaillés des changements de toutes les versions, y compris les nouvelles fonctionnalités, les détails techniques, les limitations connues et les plans futurs | 5 minutes |
 
 ---

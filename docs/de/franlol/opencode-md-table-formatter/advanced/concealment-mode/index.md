@@ -28,7 +28,7 @@ Sie schreiben Code mit OpenCode, und die KI generiert eine schöne Tabelle:
 
 ```markdown
 | Feld | Typ | Beschreibung |
-| --- | --- | --- |
+|--- | --- | ---|
 | **name** | string | Benutzername |
 | age | number | Alter |
 ```
@@ -37,7 +37,7 @@ In der Quellcodeansicht sieht es ordentlich aus. Aber in der Vorschau ist die Ta
 
 ```
 | Feld     | Typ   | Beschreibung   |
-| -------- | ------ | ------ |
+|--- | --- | ---|
 | name | string | Benutzername |    ← Warum ist es kürzer?
 | age      | number | Alter   |
 ```
@@ -49,7 +49,7 @@ Wo liegt das Problem? **Versteckter Modus**.
 OpenCode aktiviert standardmäßig den **Versteckten Modus (Concealment Mode)**, der Markdown-Syntaxsymbole beim Rendern ausblendet:
 
 | Quellcode | Im versteckten Modus angezeigt |
-| --- | --- |
+|--- | ---|
 | `**fett**` | fett (4 Zeichen) |
 | `*kursiv*` | kursiv (4 Zeichen) |
 | `~~durchgestrichen~~` | durchgestrichen (6 Zeichen) |
@@ -107,7 +107,7 @@ let textWithPlaceholders = text.replace(/`(.+?)`/g, (match, content) => {
 **Funktionsweise**
 
 | Eingabe | Nach der Verarbeitung | codeBlocks-Array |
-| --- | --- | --- |
+|--- | --- | ---|
 | `` `**bold**` `` | `\x00CODE0\x00` | `["**bold**"]` |
 | `` `a` and `b` `` | `\x00CODE0\x00 and \x00CODE1\x00` | `["a", "b"]` |
 
@@ -176,7 +176,7 @@ return Bun.stringWidth(visualText)
 `Bun.stringWidth` kann korrekt berechnen:
 
 | Zeichentyp | Beispiel | Zeichenanzahl | Anzeigebreite |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | ASCII | `abc` | 3 | 3 |
 | Chinesisch | `你好` | 2 | 4 (jedes belegt 2 Positionen) |
 | Emoji | `😀` | 1 | 2 (belegt 2 Positionen) |
@@ -234,7 +234,7 @@ Daher ist die Breite von `` `**bold**` `` 8 (`**bold**`), nicht 4 (`bold`).
 ## Zusammenfassung dieser Lektion
 
 | Schritt | Funktion | Schlüsselcode |
-| --- | --- | --- |
+|--- | --- | ---|
 | Codeblöcke schützen | Verhindert, dass Symbole in Codeblöcken versehentlich entfernt werden | `text.replace(/\`(.+?)\`/g, ...)` |
 | Markdown entfernen | Berechnet den tatsächlichen Anzeigeinhalt im versteckten Modus | Mehrere Regex-Ersetzungen |
 | Breite berechnen | Verarbeitet chinesische Zeichen, Emojis und andere Sonderzeichen | `Bun.stringWidth()` |
@@ -258,11 +258,11 @@ Daher ist die Breite von `` `**bold**` `` 8 (`**bold**`), nicht 4 (`bold`).
 > Aktualisierungszeit: 2026-01-26
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
+|--- | --- | ---|
 | Einstiegspunkt für Anzeigebreitenberechnung | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L151-L159) | 151-159 |
-| Codeblock-Schutz | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L168-L173) | 168-173 |
-| Markdown-Symbolentfernung | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L175-L188) | 175-188 |
-| Codeblock-Wiederherstellung | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L190-L193) | 190-193 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Bun.stringWidth-Aufruf | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L195) | 195 |
 
 **Schlüsselfunktionen**:

@@ -92,7 +92,7 @@ ls rules/
 You'll see these 8 rule files:
 
 | Rule File | Purpose | Applicable Scenarios |
-|-----------|---------|---------------------|
+|--- | --- | ---|
 | `security.md` | Security checks | API keys, user input, database operations |
 | `coding-style.md` | Code style | Function size, file organization, immutability patterns |
 | `testing.md` | Testing requirements | Test coverage, TDD workflow, test types |
@@ -511,7 +511,7 @@ Through custom Rules, you can make Claude automatically follow project standards
 > Last updated: 2026-01-25
 
 | Feature | File Path | Lines |
-| -------------- | ------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | Security Rules | [`rules/security.md`](https://github.com/affaan-m/everything-claude-code/blob/main/rules/security.md) | 1-37 |
 | Code Style Rules | [`rules/coding-style.md`](https://github.com/affaan-m/everything-claude-code/blob/main/rules/coding-style.md) | 1-71 |
 | Testing Rules | [`rules/testing.md`](https://github.com/affaan-m/everything-claude-code/blob/main/rules/testing.md) | 1-31 |

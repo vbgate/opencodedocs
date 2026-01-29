@@ -131,7 +131,7 @@ graph LR
 使用 Agent Skills 的最佳时机：
 
 | 场景              | 使用的技能              | 触发提示词示例                                       |
-| ----------------- | ----------------------- | ---------------------------------------------------- |
+|--- | --- | ---|
 | 编写 React 组件   | react-best-practices    | "Review this React component for performance issues" |
 | 优化 Next.js 页面 | react-best-practices    | "Help me optimize this Next.js page"                 |
 | 检查 UI 质量      | web-design-guidelines   | "Check accessibility of my site"                     |
@@ -190,7 +190,7 @@ Agent Skills 是为 AI 编码代理设计的技能包系统，提供：
 > 更新时间：2026-01-25
 
 | 功能           | 文件路径                                                                                                                                                     | 行号    |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | 技能包列表     | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L7-L80)                                                                        | 7-80    |
 | 技能结构说明   | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L103-L110)                                                                     | 103-110 |
 | AGENTS.md 规范 | [`AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md)                                                                               | 全文    |

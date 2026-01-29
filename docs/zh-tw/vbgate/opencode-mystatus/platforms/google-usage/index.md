@@ -58,7 +58,7 @@ Google Cloud Antigravity 透過 OAuth 機制認證，每個帳號有獨立的 Re
 mystatus 顯示以下 4 個模型的額度：
 
 | 顯示名稱 | 模型 Key（主/備） | 說明 |
-| --------- | ----------------- | ---- |
+|--- | --- | ---|
 | G3 Pro | `gemini-3-pro-high` / `gemini-3-pro-low` | Gemini 3 Pro 高效能版本 |
 | G3 Image | `gemini-3-pro-image` | Gemini 3 Pro 影像生成 |
 | G3 Flash | `gemini-3-flash` | Gemini 3 Flash 快速版本 |
@@ -226,7 +226,7 @@ user@gmail.com: No project ID found
 > 更新時間：2026-01-23
 
 | 功能          | 檔案路徑                                                                                                                  | 行號    |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 模型設定      | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts#L69-L78)                    | 69-78   |
 | 帳號查詢邏輯  | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts#L304-L370)                   | 304-370 |
 | Token 重新整理    | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts#L162-L184)                   | 162-184 |

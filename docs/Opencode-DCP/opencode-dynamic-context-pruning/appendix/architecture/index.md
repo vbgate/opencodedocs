@@ -605,7 +605,7 @@ const finalConfig = {
 ## Module Dependency Relationships
 
 | Module     | Responsibility         | Dependent Modules                         | Depended By               |
-| ---------- | ---------------------- | ----------------------------------------- | ------------------------- |
+|--- | --- | --- | ---|
 | config     | Configuration management | -                                         | index, hooks, strategies, commands |
 | hooks      | Hook adapter           | config, state, logger, messages, strategies, commands | index |
 | state      | State management       | logger                                    | index, hooks, strategies  |
@@ -721,7 +721,7 @@ The entire flow is completed in the `experimental.chat.messages.transform` hook:
 > Last updated: 2026-01-23
 
 | Function             | File Path                                                                                    | Line Number |
-| -------------------- | ------------------------------------------------------------------------------------------- | ---------- |
+|--- | --- | ---|
 | Plugin entry and hook registration | [`index.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/index.ts) | 12-102     |
 | System prompt injection hook | [`lib/hooks.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/hooks.ts) | 20-53      |
 | Message transform hook | [`lib/hooks.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/hooks.ts) | 55-82      |
@@ -734,7 +734,7 @@ The entire flow is completed in the `experimental.chat.messages.transform` hook:
 | Deduplication strategy | [`lib/strategies/deduplication.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/deduplication.ts) | 13-83      |
 | Supersede writes strategy | [`lib/strategies/supersede-writes.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/supersede-writes.ts) | -          |
 | Purge errors strategy | [`lib/strategies/purge-errors.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/purge-errors.ts) | -          |
-| LLM-driven tools | [`lib/strategies/tools.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/tools.ts) | -          |
+|--- | --- | ---|
 | Context command | [`lib/commands/context.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/commands/context.ts) | -          |
 | Stats command | [`lib/commands/stats.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/commands/stats.ts) | -          |
 | Sweep command | [`lib/commands/sweep.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/commands/sweep.ts) | -          |

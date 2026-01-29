@@ -53,14 +53,14 @@ order: 185
 ### 核心設定
 
 | 主題 | 描述 | 預計時間 |
-|------|------|----------|
+|--- | --- | ---|
 | [AI 模型與認證設定](./models-auth/) | 設定 Anthropic、OpenAI、OpenRouter、Ollama 等多種 AI 模型提供商和認證方式 | 15 分鐘 |
 | [會話管理與多 Agent](./session-management/) | 學習會話模型、會話隔離、子 Agent 協作、上下文壓縮等核心概念 | 20 分鐘 |
 
 ### 工具系統
 
 | 主題 | 描述 | 預計時間 |
-|------|------|----------|
+|--- | --- | ---|
 | [瀏覽器自動化工具](./tools-browser/) | 使用瀏覽器工具進行網頁自動化、截圖、操作表單等 | 25 分鐘 |
 | [指令執行工具與審批](./tools-exec/) | 設定和使用 exec 工具，了解安全審批機制和權限控制 | 15 分鐘 |
 | [Web 搜尋與抓取工具](./tools-web/) | 使用 web_search 和 web_fetch 工具進行網路搜尋和內容抓取 | 20 分鐘 |
@@ -68,28 +68,28 @@ order: 185
 ### 互動體驗
 
 | 主題 | 描述 | 預計時間 |
-|------|------|----------|
+|--- | --- | ---|
 | [Canvas 可視化介面與 A2UI](./canvas/) | 了解 Canvas A2UI 推送機制、可視化介面操作和自訂介面 | 20 分鐘 |
 | [語音喚醒與文字轉語音](./voice-tts/) | 設定 Voice Wake、Talk Mode 和 TTS 提供商，實現語音互動 | 15 分鐘 |
 
 ### 智慧擴展
 
 | 主題 | 描述 | 預計時間 |
-|------|------|----------|
+|--- | --- | ---|
 | [記憶系統與向量搜尋](./memory-system/) | 設定和使用記憶系統（SQLite-vec、FTS5、混合搜尋） | 25 分鐘 |
 | [技能平台與 ClawdHub](./skills-platform/) | 了解技能系統、Bundled/Managed/Workspace 技能、ClawdHub 整合 | 20 分鐘 |
 
 ### 自動化與部署
 
 | 主題 | 描述 | 預計時間 |
-|------|------|----------|
+|--- | --- | ---|
 | [Cron 定時任務與 Webhook](./cron-automation/) | 設定定時任務、Webhook 觸發、Gmail Pub/Sub 等自動化功能 | 20 分鐘 |
 | [遠端 Gateway 與 Tailscale](./remote-gateway/) | 透過 Tailscale Serve/Funnel 或 SSH 隧道遠端存取 Gateway | 15 分鐘 |
 
 ### 安全機制
 
 | 主題 | 描述 | 預計時間 |
-|------|------|----------|
+|--- | --- | ---|
 | [安全與沙箱隔離](./security-sandbox/) | 了解安全模型、工具權限控制、Sandbox 隔離、Docker 化部署 | 20 分鐘 |
 
 ## 下一步

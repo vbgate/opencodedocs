@@ -47,7 +47,7 @@ opencode-mystatus 遵循「只读本地文件 + 官方 API 直接查询」的原
 插件只读取两个本地配置文件，并且都是**只读模式**：
 
 | 文件路径 | 用途 | 源码位置 |
-| -------- | ---- | -------- |
+|--- | --- | ---|
 | `~/.local/share/opencode/auth.json` | OpenCode 官方认证存储 | `mystatus.ts:35` |
 | `~/.config/opencode/antigravity-accounts.json` | Antigravity 插件账号存储 | `google.ts`（读取逻辑） |
 
@@ -130,7 +130,7 @@ Account:        9c89****AQVM (Coding Plan)
 插件仅调用各平台的**官方 API**，不经过任何第三方服务器：
 
 | 平台 | API 端点 | 用途 |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | OpenAI | `https://chatgpt.com/backend-api/wham/usage` | 额度查询 |
 | 智谱 AI | `https://bigmodel.cn/api/monitor/usage/quota/limit` | Token 限额查询 |
 | Z.ai | `https://api.z.ai/api/monitor/usage/quota/limit` | Token 限额查询 |
@@ -189,7 +189,7 @@ export async function fetchWithTimeout(
 ### 插件不会做的事情
 
 | 操作 | 插件行为 |
-| ---- | -------- |
+|--- | ---|
 | 存储数据 | ❌ 不存储任何用户数据 |
 | 上传数据 | ❌ 不上传任何数据到第三方服务器 |
 | 缓存结果 | ❌ 不缓存查询结果 |
@@ -199,7 +199,7 @@ export async function fetchWithTimeout(
 ### 插件会做的事情
 
 | 操作 | 插件行为 |
-| ---- | -------- |
+|--- | ---|
 | 读取文件 | ✅ 只读本地认证文件 |
 | 调用 API | ✅ 仅调用官方 API 端点 |
 | 脱敏显示 | ✅ 自动隐藏 API Key 等敏感信息 |
@@ -265,7 +265,7 @@ export async function fetchWithTimeout(
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 认证文件读取 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts#L38-L40) | 38-40 |
 | API 脱敏函数 | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L130-L135) | 130-135 |
 | 请求超时配置 | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L114) | 114 |

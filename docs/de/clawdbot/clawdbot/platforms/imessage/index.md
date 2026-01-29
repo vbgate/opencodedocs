@@ -71,10 +71,10 @@ sequenceDiagram
 **Wichtige Konzepte**:
 
 | Konzept | Beschreibung |
-| ------ | ------ |
+|--- | ---|
 | **imsg CLI** | Drittanbieter-Tool, das über JSON-RPC über stdio mit Messages interagiert |
 | **Full Disk Access** | macOS-Berechtigung, die Clawdbot das Lesen der Messages chat.db ermöglicht |
-| **Automation-Berechtigung** | macOS-Berechtigung, die es imsg ermöglicht, Nachrichten über die Automation-API zu senden |
+|--- | ---|
 | **chat_id** | Stabiler Chat-Bezeichner für Routing und Gesprächsisolierung |
 | **pairing** | Standard-DM-Schutzmechanismus, unbekannte Absender benötigen Genehmigung |
 
@@ -409,7 +409,7 @@ exec ssh -T bot@mac-mini.tailnet-1234.ts.net imsg "$@"
 ### Grundkonfiguration
 
 | Konfiguration | Typ | Standard | Beschreibung |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `enabled` | boolean | false | Ob der iMessage-Kanal aktiviert ist |
 | `cliPath` | string | "imsg" | imsg CLI-Pfad (kann SSH-Wrapper sein) |
 | `dbPath` | string | - | Messages chat.db Pfad |
@@ -418,7 +418,7 @@ exec ssh -T bot@mac-mini.tailnet-1234.ts.net imsg "$@"
 ### DM-Richtlinie
 
 | Konfiguration | Typ | Standard | Beschreibung |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `dmPolicy` | "pairing"|"allowlist"|"open"|"disabled" | "pairing" | DM-Zugriffsrichtlinie |
 | `allowFrom` | array | [] | Liste der zulässigen Absender (Handles, E-Mails, E.164, `chat_id:*`) |
 
@@ -439,7 +439,7 @@ iMessage hat kein Benutzerkonzept, verwendet Handles (Telefonnummern oder E-Mail
 ### Gruppenrichtlinie
 
 | Konfiguration | Typ | Standard | Beschreibung |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `groupPolicy` | "allowlist"|"open"|"disabled" | "allowlist" | Gruppenzugriffsrichtlinie |
 | `groupAllowFrom` | array | [] | Absender, die in Gruppen KI auslösen können |
 | `groups` | object | {} | Gruppenkonfiguration nach chat_id |
@@ -466,7 +466,7 @@ iMessage hat kein Benutzerkonzept, verwendet Handles (Telefonnummern oder E-Mail
 ### Medien- und Textbeschränkungen
 
 | Konfiguration | Typ | Standard | Beschreibung |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `includeAttachments` | boolean | false | Ob Anhänge im Kontext enthalten sein sollen |
 | `mediaMaxMb` | number | 16 | Maximale Mediendateigröße (MB) |
 | `textChunkLimit` | number | 4000 | Größe des ausgehenden Text-Chunks (Zeichen) |
@@ -475,7 +475,7 @@ iMessage hat kein Benutzerkonzept, verwendet Handles (Telefonnummern oder E-Mail
 ### Verlauf
 
 | Konfiguration | Typ | Standard | Beschreibung |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `historyLimit` | number | - | Maximale Anzahl an Gruppen-Historiennachrichten (0 deaktivieren) |
 | `dmHistoryLimit` | number | - | DM-Historienlimit (Benutzer-Runden) |
 | `dms["<handle>"].historyLimit` | number | - | DM-Historienlimit nach Handle überschreiben |
@@ -569,12 +569,12 @@ iMessage hat kein Benutzerkonzept, verwendet Handles (Telefonnummern oder E-Mail
 > Aktualisiert am: 2026-01-27
 
 | Funktion | Dateipfad | Zeilen |
-| ------ | --------- | ---- |
+|--- | --- | ---|
 | iMessage-Konfigurationstypdefinitionen | [`src/config/types.imessage.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.imessage.ts) | 1-80 |
 | iMessage-Kontenauflösung | [`src/imessage/accounts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/imessage/accounts.ts) | 1-83 |
 | iMessage-Untersuchung | [`src/imessage/probe.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/imessage/probe.ts) | 1-92 |
 | iMessage-Senden | [`src/imessage/send.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/imessage/send.ts) | 1-135 |
-| iMessage-Monitor-Anbieter | [`src/imessage/monitor/monitor-provider.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/imessage/monitor/monitor-provider.ts) | 1-600+ |
+|--- | --- | ---|
 | Zieladressenauflösung | [`src/imessage/targets.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/imessage/targets.ts) | 1-200+ |
 | Onboarding-Adapter | [`src/channels/plugins/onboarding/imessage.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/imessage.ts) | 1-262 |
 | iMessage-Dokumentation | [`docs/channels/imessage.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/imessage.md) | 1-262 |

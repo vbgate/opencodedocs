@@ -44,7 +44,7 @@ La sortie de mystatus a un format unifié, mais des différences selon les plate
 
 **Différences de plateforme** :
 | Plateforme | Cycle de limite | Caractéristiques |
-| ---------- | --------------- | --------------- |
+|--- | --- | ---|
 | OpenAI | 3h / 24h | Peut afficher deux fenêtres |
 | Zhipu AI / Z.ai | Limite de token 5h / Quota mensuel MCP | Deux types de limites différents |
 | GitHub Copilot | Mensuel | Affiche des valeurs spécifiques (229/300) |
@@ -209,7 +209,7 @@ Quota resets: 19d 0h (2026-02-01)
 
 **Différences selon le type d'abonnement** :
 | Type d'abonnement | Quota mensuel | Description |
-| ---------------- | ------------- | ------------ |
+|--- | --- | ---|
 | Free | N/A | Pas de limite de quota, mais fonctionnalités limitées |
 | Pro | 300 | Version personnelle standard |
 | Pro+ | Plus élevé | Version mise à jour |
@@ -236,7 +236,7 @@ G3 Image   4h 59m     ███████████████████�
 
 **Explication des 4 modèles** :
 | Nom du modèle | Clé API correspondante | Utilisation |
-| ------------ | --------------------- | ----------- |
+|--- | --- | ---|
 | G3 Pro | `gemini-3-pro-high` / `gemini-3-pro-low` | Inférence avancée |
 | G3 Image | `gemini-3-pro-image` | Génération d'images |
 | G3 Flash | `gemini-3-flash` | Génération rapide |
@@ -252,7 +252,7 @@ G3 Image   4h 59m     ███████████████████�
 ### Malentendus courants
 
 | Malentendu | Fait |
-| ---------- | ---- |
+|--- | ---|
 | Barre de progression toute pleine = pas utilisé | Blocs pleins = **plus de reste**, continuez à utiliser |
 | Temps de réinitialisation court = quota presque épuisé | Temps de réinitialisation court = va bientôt se réinitialiser, continuez à utiliser |
 | Pourcentage 100% = tout utilisé | Pourcentage 100% = **tout reste** |
@@ -296,7 +296,7 @@ mystatus est un **outil en lecture seule**, il ne consomme pas votre quota et ne
 > Date de mise à jour :2026-01-23
 
 | Fonction | Chemin du fichier | Ligne |
-| ------- | ---------------- | ----- |
+|--- | --- | ---|
 | Génération des barres de progression | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L40-L53) | 40-53 |
 | Formatage du temps | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L18-L29) | 18-29 |
 | Calcul du pourcentage restant | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L63-L65) | 63-65 |

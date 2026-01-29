@@ -48,7 +48,7 @@ Você quer converter gravação de reunião, podcast ou chamada de serviço ao c
 ## Visão rápida de endpoint e limitações
 
 | Item | Conclusão | Evidência de código |
-| --- | --- | --- |
+|--- | --- | ---|
 | Rota de entrada | `POST /v1/audio/transcriptions` | `src-tauri/src/proxy/server.rs` registra rota para `handlers::audio::handle_audio_transcription` |
 | Formatos suportados | Reconhecidos por extensão de arquivo: `mp3/wav/m4a/ogg/flac/aiff(aif)` | `src-tauri/src/proxy/audio/mod.rs` `detect_mime_type()` |
 | Tamanho de arquivo | **Limite rígido 15MB** (acima retorna 413 + mensagem de erro de texto) | `src-tauri/src/proxy/audio/mod.rs` `exceeds_size_limit()`; `src-tauri/src/proxy/handlers/audio.rs` |
@@ -141,7 +141,7 @@ print(transcript.text)
 Antigravity Tools decide tipo MIME por extensão de arquivo (não por detecção de conteúdo de arquivo).
 
 | Formato | Tipo MIME | Extensão |
-| --- | --- | --- |
+|--- | --- | ---|
 | MP3 | `audio/mp3` | `.mp3` |
 | WAV | `audio/wav` | `.wav` |
 | AAC (M4A) | `audio/aac` | `.m4a` |
@@ -218,7 +218,7 @@ No log não vê corpo de áudio, mas você ainda pode usar `status/duration/X-Ac
 Este endpoint só lê explicitamente 3 campos de formulário:
 
 | Campo | Obrigatório | Valor padrão | Maneira de tratamento |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `file` | ✅ | Nenhum | Deve fornecer; falta retorna `400` + texto `Falta arquivo de áudio` |
 | `model` | ❌ | `gemini-2.0-flash-exp` | Passa como string, e participa de obtenção de token (regra específica upstream baseada em resposta real) |
 | `prompt` | ❌ | `Generate a transcript of speech.` | Envia como primeiro trecho `text` para upstream, usado para guiar transcrição |
@@ -280,10 +280,10 @@ Prática correta: só fazer upload de arquivo de áudio (`.mp3`, `.wav`, etc).
 > Atualizado em: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Linha |
-|---------------|---------------------|-------|
+|--- | --- | ---|
 | Registro de rota (/v1/audio/transcriptions + body limit) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | Processador de transcrição de áudio (multipart/15MB/inlineData) | [`src-tauri/src/proxy/handlers/audio.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/audio.rs#L16-L162) | 16-162 |
-| Formatos suportados (extensão -> MIME + 15MB) | [`src-tauri/src/proxy/audio/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/audio/mod.rs#L6-L35) | 6-35 |
+|--- | --- | ---|
 | Middleware Monitor (Binary Request Data) | [`src-tauri/src/proxy/middleware/monitor.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/monitor.rs#L13-L337) | 13-337 |
 
 **Constantes principais**:

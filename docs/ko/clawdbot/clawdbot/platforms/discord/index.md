@@ -90,7 +90,7 @@ Discord 사용자(응답 표시)
 ### DM과 서버 채널의 차이
 
 | 유형 | 세션 격리 | 기본 동작 | 사용 시나리오 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | **개인 메시지(DM)** | 모든 DM이 `agent:main:main` 세션 공유 | 페어링(pairing) 보호 필요 | 개인 대화, 컨텍스트 연속 |
 | **서버 채널** | 각 채널 독립 세션 `agent:<agentId>:discord:channel:<channelId>` | @멘션 시에만 응답 | 서버 스마트 어시스턴트, 다중 채널 병렬 |
 
@@ -148,7 +148,7 @@ Discord는 기본적으로 Bot이 메시지 내용을 읽도록 허용하지 않
 **Bot → Privileged Gateway Intents**(특권 Gateway 의도)에서 활성화:
 
 | Intent | 필수 여부 | 설명 |
-| --- | --- | --- |
+|--- | --- | ---|
 | **Message Content Intent** | ✅ **필수** | 메시지 텍스트 내용 읽기(없으면 Bot이 메시지를 볼 수 없음) |
 | **Server Members Intent** | ⚠️ **권장** | 멤버 검색 및 사용자 이름 확인용 |
 
@@ -173,7 +173,7 @@ Bot이 서버에서 메시지를 읽고 보내려면 권한이 필요합니다.
 3. **Bot Permissions**(Bot 권한)에서 최소한 다음을 선택:
 
 | 권한 | 설명 |
-| --- | --- |
+|--- | ---|
 | **View Channels** | 채널 보기 |
 | **Send Messages** | 메시지 전송 |
 | **Read Message History** | 메시지 기록 읽기 |
@@ -209,7 +209,7 @@ Clawdbot 구성은 ID(숫자) 사용을 우선시합니다. ID는 변경되지 �
 #### 3.2 ID 복사
 
 | 유형 | 작업 |
-| --- | --- |
+|--- | ---|
 | **서버 ID** | 서버 이름 우클릭 → **Copy Server ID** |
 | **채널 ID** | 채널(예: `#general`) 우클릭 → **Copy Channel ID** |
 | **사용자 ID** | 사용자 아바타 우클릭 → **Copy User ID** |
@@ -307,7 +307,7 @@ Bot이 응답하지 않는 경우 [문제 해결](#문제-해결) 섹션을 확�
 기본 정책은 `pairing`(페어링 모드)으로 개인 사용에 적합합니다. 필요에 따라 조정할 수 있습니다:
 
 | 정책 | 설명 | 구성 예시 |
-| --- | --- | --- |
+|--- | --- | ---|
 | **pairing**(기본) | 낯선 사용자가 페어링 코드를 받고 수동 승인 필요 | `"dm": { "policy": "pairing" }` |
 | **allowlist** | 목록에 있는 사용자만 허용 | `"dm": { "policy": "allowlist", "allowFrom": ["123456", "alice"] }` |
 | **open** | 모두 허용(`allowFrom`에 `"*"` 포함 필요) | `"dm": { "policy": "open", "allowFrom": ["*"] }` |
@@ -399,7 +399,7 @@ clawdbot pairing approve discord <페어링 코드>
 AI Agent는 `discord` 도구를 호출하여 Discord 특정 작업을 수행할 수 있습니다. `channels.discord.actions`를 통해 권한 제어:
 
 | 작업 범주 | 기본 상태 | 설명 |
-| --- | --- | --- |
+|--- | --- | ---|
 | **reactions** | ✅ 활성화 | 반응 추가/읽기 |
 | **messages** | ✅ 활성화 | 메시지 읽기/전송/편집/삭제 |
 | **threads** | ✅ 활성화 | 스레드 생성/응답 |
@@ -434,7 +434,7 @@ AI Agent는 `discord` 도구를 호출하여 Discord 특정 작업을 수행할 
 ### 기타 구성 옵션
 
 | 구성 항목 | 설명 | 기본값 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `historyLimit` | 서버 채널 컨텍스트에 포함할 기록 메시지 수 | 20 |
 | `dmHistoryLimit` | DM 세션 기록 메시지 수 | 무제한 |
 | `textChunkLimit` | 단일 메시지 최대 문자 수 | 2000 |
@@ -560,7 +560,7 @@ clawdbot gateway --port 18789 --verbose
 > 업데이트 시간: 2026-01-27
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Discord Bot 구성 Schema | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts#L320-L427) | 320-427 |
 | Discord 온보딩 마법사 | [`src/channels/plugins/onboarding/discord.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/discord.ts) | 1-485 |
 | Discord 도구 작업 | [`src/agents/tools/discord-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/discord-actions.ts) | 1-72 |

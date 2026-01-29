@@ -127,10 +127,10 @@ description: When to use this skill.  # 必需：1-2 句话，第三人称
 ::: danger 常见错误
 
 | 错误示例 | 修正方法 |
-| -------- | -------- |
+|--- | ---|
 | `name: My Skill`（空格） | 改为 `name: my-skill`（连字符） |
 | `description: You should use this for...`（第二人称） | 改为 `description: Use this skill for...`（第三人称） |
-| 缺少结尾的 `---` | 在 YAML 结束后添加 `---` |
+|--- | ---|
 | `description` 太长（超过 100 词） | 精简为 1-2 句话的概述 |
 
 :::
@@ -172,7 +172,7 @@ For detailed information, see references/guide.md
 **写作规范**：
 
 | ✅ 正确写法（imperative/infinitive） | ❌ 错误写法（second person） |
-| ---------------------------------- | -------------------------- |
+|--- | ---|
 | "To accomplish X, execute Y"        | "You should do X"          |
 | "Load this skill when Z"            | "If you need Y"            |
 | "See references/guide.md"           | "When you want Z"           |
@@ -481,7 +481,7 @@ description: Use this skill to demonstrate how to write proper instructions.
 > 更新时间：2026-01-24
 
 | 功能           | 文件路径                                                                 | 行号    |
-| -------------- | ------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | YAML frontmatter 验证 | [`src/utils/yaml.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/yaml.ts) | 12-14   |
 | YAML 字段提取  | [`src/utils/yaml.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/yaml.ts) | 4-7     |
 | 安装时验证格式  | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts) | 242, 291, 340 |

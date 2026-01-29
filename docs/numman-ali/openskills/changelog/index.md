@@ -13,7 +13,7 @@ This section records the version change history of OpenSkills, helping you under
 ## This Section
 
 | Page | Description |
-|------|-------------|
+|--- | ---|
 | [Changelog](./changelog/) | Complete version change records, including new features, improvements, bug fixes, and security updates |
 
 ## How to Use the Changelog

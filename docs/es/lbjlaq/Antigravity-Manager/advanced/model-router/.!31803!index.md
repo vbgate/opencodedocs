@@ -172,7 +172,7 @@ Haz clic en "Restablecer mapeo".
 ## Recordatorio de errores comunes
 
 | Escenario | Lo que podrías hacer (❌) | Recomendación (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | El comodín no funciona | Escribes `GPT-4*` esperando coincidir con `gpt-4-turbo` | Usa minúsculas `gpt-4*`; la coincidencia de comodines del backend distingue mayúsculas y minúsculas |
 | Dos comodines pueden coincidir | Escribes `gpt-*` y `gpt-4*` al mismo tiempo, no estás seguro de cuál se seguirá | Haz que la regla más específica sea más "larga", asegurando que tenga más caracteres que no son `*` |
 | La regla parece correcta, pero no cambia | Solo miras el cuerpo de respuesta, no el encabezado de respuesta | Usa `curl -i` para confirmar `X-Mapped-Model` (este es el resultado explícitamente devuelto por el backend) |
@@ -198,7 +198,7 @@ Haz clic en "Restablecer mapeo".
 > Última actualización: 2026-01-23
 
 | Función | Ruta de archivo | Línea |
-| --- | --- | --- |
+|--- | --- | ---|
 | Campo de configuración: `proxy.custom_mapping` (tipo frontend) | [`src/types/config.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/types/config.ts#L6-L20) | 6-20 |
 | UI: escribir/restablecer/preajuste (llamar a `update_model_mapping`) | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L371-L475) | 371-475 |
 | UI: tarjeta de enrutamiento de modelos (aplicar mapeo predefinido / restablecer mapeo / lista y formulario de agregar) | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L1762-L1931) | 1762-1931 |
@@ -207,7 +207,7 @@ Haz clic en "Restablecer mapeo".
 | Algoritmo de enrutamiento: exacto > comodín (más específico prioridad) > mapeo predeterminado | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L180-L228) | 180-228 |
 | Coincidencia de comodín: soporta múltiples `*`, y distingue mayúsculas y minúsculas | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L134-L178) | 134-178 |
 | Calcular `mapped_model` en la solicitud (ejemplo: handler OpenAI) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L154-L159) | 154-159 |
-| Devolver `X-Mapped-Model` en el encabezado de respuesta (ejemplo: handler OpenAI) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L310-L334) | 310-334 |
+|--- | --- | ---|
 
 **Funciones clave**:
 - `resolve_model_route(original_model, custom_mapping)`: entrada principal de enrutamiento de modelos (ver `src-tauri/src/proxy/common/model_mapping.rs`)

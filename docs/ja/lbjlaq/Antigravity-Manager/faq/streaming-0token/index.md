@@ -141,7 +141,7 @@ Get-ChildItem -Force (Join-Path $HOME ".antigravity_tools\logs") | Sort-Object L
 ## 罠の警告
 
 | シナリオ | あなたがしそうなこと（❌） | 推奨做法（✓） |
-| --- | --- | --- |
+|--- | --- | ---|
 | 0 Token を見てすぐに何度も手動再試行 | クライアントの再試行ボタンを押し続け、ログを全く見ない | まず一度 Proxy Monitor + app.log を見て、peek 段階で早夭しているか（自動再試行/ローテーション）を確認 |
 | `Invalid \`signature\`` に遭遇したらすぐデータディレクトリをクリア | `.antigravity_tools` 全部削除、アカウント/統計全部消える | まずプロキシに一度「署名修復再試行」を実行させる。ログが明確に回復不可と提示した時だけ、手動介入を考える |
 | 「サーバー側変動」を「アカウントが壊れた」と間違える | 400/503/529 全部アカウントローテーション | ローテーションが有効かどうかはステータスコードに依存する。プロキシ自体に `should_rotate_account(...)` ルールがある（`src-tauri/src/proxy/handlers/claude.rs#L226-L236`） |
@@ -166,7 +166,7 @@ Get-ChildItem -Force (Join-Path $HOME ".antigravity_tools\logs") | Sort-Object L
 > 更新時間：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Claude handler：退避再試行戦略 + ローテーションルール | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L117-L236) | 117-236 |
 | Claude handler：内部的に非ストリームをストリームに変換（better quota） | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L665-L776) | 665-776 |
 | Claude handler：peek 先読み（ハートビート/コメントをスキップ、空ストリーム回避） | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L812-L926) | 812-926 |

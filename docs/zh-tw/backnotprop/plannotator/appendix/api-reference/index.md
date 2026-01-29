@@ -54,7 +54,7 @@ Plannotator 在本機執行 HTTP 伺服器（使用 Bun.serve），為計畫審�
 ```
 
 | 欄位 | 類型 | 說明 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | `plan` | string | 計畫的 Markdown 內容 |
 | `origin` | string | 來源識別碼（`"claude-code"` 或 `"opencode"`） |
 | `permissionMode` | string | 目前權限模式（Claude Code 專用） |
@@ -101,7 +101,7 @@ Plannotator 在本機執行 HTTP 伺服器（使用 Bun.serve），為計畫審�
 **欄位說明**：
 
 | 欄位 | 類型 | 必填 | 說明 |
-| ---- | ---- | ---- | ---- |
+|--- | --- | --- | ---|
 | `obsidian` | object | 否 | Obsidian 儲存設定 |
 | `bear` | object | 否 | Bear 儲存設定 |
 | `feedback` | string | 否 | 核准時附帶的備註（僅 OpenCode） |
@@ -112,7 +112,7 @@ Plannotator 在本機執行 HTTP 伺服器（使用 Bun.serve），為計畫審�
 **Obsidian 設定欄位**：
 
 | 欄位 | 類型 | 必填 | 說明 |
-| ---- | ---- | ---- | ---- |
+|--- | --- | --- | ---|
 | `vaultPath` | string | 是 | Vault 檔案路徑 |
 | `folder` | string | 否 | 目標資料夾（預設根目錄） |
 | `tags` | string[] | 否 | 自動產生的標籤 |
@@ -148,7 +148,7 @@ Plannotator 在本機執行 HTTP 伺服器（使用 Bun.serve），為計畫審�
 **欄位說明**：
 
 | 欄位 | 類型 | 必填 | 說明 |
-| ---- | ---- | ---- | ---- |
+|--- | --- | --- | ---|
 | `feedback` | string | 否 | 拒絕理由（預設 "Plan rejected by user"） |
 | `planSave` | object | 否 | 計畫儲存設定 |
 
@@ -208,7 +208,7 @@ Plannotator 在本機執行 HTTP 伺服器（使用 Bun.serve），為計畫審�
 ```
 
 | 欄位 | 類型 | 說明 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | `rawPatch` | string | Git diff 統一格式 patch |
 | `gitRef` | string | 使用的 Git 參照 |
 | `origin` | string | 來源識別碼 |
@@ -219,7 +219,7 @@ Plannotator 在本機執行 HTTP 伺服器（使用 Bun.serve），為計畫審�
 **gitContext 欄位說明**：
 
 | 欄位 | 類型 | 說明 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | `currentBranch` | string | 目前分支名稱 |
 | `defaultBranch` | string | 預設分支名稱（main 或 master） |
 | `diffOptions` | object[] | 可用的 diff 類型選項（包含 id 和 label） |
@@ -241,7 +241,7 @@ Plannotator 在本機執行 HTTP 伺服器（使用 Bun.serve），為計畫審�
 **支援的 diff 類型**：
 
 | 類型 | Git 指令 | 說明 |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | `uncommitted` | `git diff HEAD` | 未提交的變更（預設） |
 | `staged` | `git diff --staged` | 已暫存的變更 |
 | `last-commit` | `git diff HEAD~1..HEAD` | 最後一次提交 |
@@ -287,7 +287,7 @@ Plannotator 在本機執行 HTTP 伺服器（使用 Bun.serve），為計畫審�
 **欄位說明**：
 
 | 欄位 | 類型 | 必填 | 說明 |
-| ---- | ---- | ---- | ---- |
+|--- | --- | --- | ---|
 | `feedback` | string | 否 | 文字回饋（LGTM 或其他） |
 | `annotations` | array | 否 | 結構化註解陣列 |
 | `agentSwitch` | string | 否 | 切換到的 Agent 名稱（僅 OpenCode） |
@@ -295,7 +295,7 @@ Plannotator 在本機執行 HTTP 伺服器（使用 Bun.serve），為計畫審�
 **annotation 物件欄位**：
 
 | 欄位 | 類型 | 必填 | 說明 |
-| ---- | ---- | ---- | ---- |
+|--- | --- | --- | ---|
 | `id` | string | 是 | 唯一識別碼 |
 | `type` | string | 是 | 類型：`comment`、`suggestion`、`concern` |
 | `filePath` | string | 是 | 檔案路徑 |
@@ -324,7 +324,7 @@ Plannotator 在本機執行 HTTP 伺服器（使用 Bun.serve），為計畫審�
 **請求參數**：
 
 | 參數 | 類型 | 必填 | 說明 |
-| ---- | ---- | ---- | ---- |
+|--- | --- | --- | ---|
 | `path` | string | 是 | 圖片檔案路徑 |
 
 **範例請求**：`GET /api/image?path=/tmp/plannotator/abc-123.png`
@@ -345,7 +345,7 @@ Plannotator 在本機執行 HTTP 伺服器（使用 Bun.serve），為計畫審�
 **請求**：`multipart/form-data`
 
 | 欄位 | 類型 | 必填 | 說明 |
-| ---- | ---- | ---- | ---- |
+|--- | --- | --- | ---|
 | `file` | File | 是 | 圖片檔案 |
 
 **支援的格式**：PNG、JPEG、WebP
@@ -413,7 +413,7 @@ Plannotator 在本機執行 HTTP 伺服器（使用 Bun.serve），為計畫審�
 ### HTTP 狀態碼
 
 | 狀態碼 | 說明 |
-| ------ | ---- |
+|--- | ---|
 | `200` | 請求成功 |
 | `400` | 參數驗證失敗 |
 | `404` | 資源不存在 |
@@ -430,7 +430,7 @@ Plannotator 在本機執行 HTTP 伺服器（使用 Bun.serve），為計畫審�
 ### 常見錯誤
 
 | 錯誤 | 觸發條件 |
-| ---- | -------- |
+|--- | ---|
 | `Missing path parameter` | `/api/image` 缺少 `path` 參數 |
 | `File not found` | `/api/image` 指定的檔案不存在 |
 | `No file provided` | `/api/upload` 未上傳檔案 |
@@ -484,7 +484,7 @@ Content-Type: text/html
 ## 環境變數
 
 | 變數 | 說明 | 預設值 |
-| ---- | ---- | ------ |
+|--- | --- | ---|
 | `PLANNOTATOR_REMOTE` | 啟用遠端模式 | 未設定 |
 | `PLANNOTATOR_PORT` | 固定連接埠號 | 隨機（本機）/ 19432（遠端） |
 | `PLANNOTATOR_ORIGIN` | 來源識別碼 | `"claude-code"` 或 `"opencode"` |
@@ -517,7 +517,7 @@ Plannotator 提供了完整的本機 HTTP API，支援計畫審查和程式碼�
 > 更新時間：2026-01-24
 
 | 功能 | 檔案路徑 | 行號 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 計畫審查伺服器進入點 | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts#L91-L355) | 91-355 |
 | GET /api/plan | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts#L132-L134) | 132-134 |
 | POST /api/approve | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts#L200-L277) | 200-277 |

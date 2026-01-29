@@ -46,7 +46,7 @@ order: 2
 **智證 AI**和**Z.ai**的額度系統分為兩種類型：
 
 | 額度類型 | 含義 | 重置週期 |
-| -------- | ---- | -------- |
+|--- | --- | ---|
 | **5 小時 Token 限額** | API 請求的 Token 使用量限制 | 5 小時自動重置 |
 | **MCP 月度配額** | MCP（Model Context Protocol）搜尋次數的月度限制 | 每月重置 |
 
@@ -143,7 +143,7 @@ Account:        9c89****AQVM (Z.ai)
 對照以下說明查看你的輸出：
 
 | 輸出欄位 | 含義 | 範例 |
-| -------- | ---- | ---- |
+|--- | --- | ---|
 | **Account** | 脫敏後的 API Key 和帳號類型 | `9c89****AQVM (Coding Plan)` |
 | **5 小時 Token 限額** | 目前 5 小時週期內的 Token 使用情況 | 進度條 + 百分比 |
 | **已用: X / Y** | 已使用 Token / 總配額 | `0.5M / 10.0M` |
@@ -249,7 +249,7 @@ Account:        9c89****AQVM (Z.ai)
 > 更新時間：2026-01-23
 
 | 功能 | 檔案路徑 | 行號 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 查詢智證 AI 額度 | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 213-217 |
 | 查詢 Z.ai 額度 | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 224-228 |
 | 格式化輸出 | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 115-177 |

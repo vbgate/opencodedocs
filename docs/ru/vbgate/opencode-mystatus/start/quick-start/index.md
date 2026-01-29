@@ -115,7 +115,7 @@ code %APPDATA%\opencode\opencode.json
 **Зачем так настраивать**:
 
 | Параметр     | Значение                                    | Назначение                                |
-| ------------ | ------------------------------------------- | ----------------------------------------- |
+|--- | --- | ---|
 | `plugin` массив | `["opencode-mystatus"]`                 | Сообщает OpenCode загрузить этот плагин    |
 | `description` | "Query quota usage for all AI accounts"    | Описание в списке слэш-команд             |
 | `template`    | "Use the mystatus tool..."                  | Указывает OpenCode, как вызывать mystatus |
@@ -234,7 +234,7 @@ Supported account types:
 #### 5.2 Понимание вывода
 
 | Элемент (китайская версия) | Элемент (английская версия) | Значение                        |
-| --------------------------- | --------------------------- | ------------------------------- |
+|--- | --- | ---|
 | `## OpenAI 账号额度`        | `## OpenAI Account Quota`    | Заголовок платформы              |
 | `user@example.com (team)`    | `user@example.com (team)`    | Информация об аккаунте (email/команда) |
 | `3小时限额`                 | `3-hour limit`               | Тип лимита (3-часовой лимит)    |
@@ -248,7 +248,7 @@ Supported account types:
 Убедитесь, что вы выполнили следующие шаги:
 
 | Шаг                 | Метод проверки                               | Ожидаемый результат                                    |
-| -------------------- | ------------------------------------------- | ----------------------------------------------------- |
+|--- | --- | ---|
 | Установка плагина    | Проверьте `~/.config/opencode/opencode.json` | Массив `plugin` содержит `"opencode-mystatus"`          |
 | Настройка команды    | Проверьте тот же файл                        | Объект `command` содержит конфигурацию `mystatus`      |
 | Перезапуск OpenCode  | Проверьте процесс OpenCode                   | Перезапущен                                             |
@@ -363,13 +363,13 @@ Supported account types:
 > Обновлено: 2026-01-23
 
 | Функция              | Путь к файлу                                                                                           | Строка  |
-| ------------------- | ------------------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | Точка входа плагина  | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts)   | 26-94   |
 | Определение инструмента mystatus | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts)   | 29-33   |
 | Чтение файла аутентификации      | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts)   | 35-46   |
 | Параллельный запрос всех платформ  | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts)   | 49-56   |
 | Сбор и объединение результатов    | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts)   | 58-89   |
-| Настройка слэш-команды      | [`command/mystatus.md`](https://github.com/vbgate/opencode-mystatus/blob/main/command/mystatus.md) | 1-6     |
+|--- | --- | ---|
 
 **Ключевые константы**:
 - Путь к файлу аутентификации: `~/.local/share/opencode/auth.json` (`plugin/mystatus.ts:35`)

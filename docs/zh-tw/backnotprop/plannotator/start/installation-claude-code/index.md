@@ -243,7 +243,7 @@ Host your-server
 > 更新時間：2026-01-24
 
 | 功能              | 檔案路徑                                                                                                | 行號    |
-| ----------------- | ------------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 安裝腳本入口      | [`README.md`](https://github.com/backnotprop/plannotator/blob/main/README.md#L35-L60)                     | 35-60   |
 | Hook 設定說明     | [`apps/hook/README.md`](https://github.com/backnotprop/plannotator/blob/main/apps/hook/README.md#L30-L39)   | 30-39   |
 | 手動 Hook 範例    | [`apps/hook/README.md`](https://github.com/backnotprop/plannotator/blob/main/apps/hook/README.md#L42-L62)   | 42-62   |

@@ -98,7 +98,7 @@ description: Deploy applications and websites to Vercel. Use this skill when the
 ### 触发关键词选择指南
 
 | 编写场景     | 推荐关键词                                          | 避免使用           |
-| ------------ | --------------------------------------------------- | ------------------ |
+|--- | --- | ---|
 | **部署操作** | "deploy", "production", "push", "publish"           | "send", "move"     |
 | **代码审查** | "review", "check", "audit", "optimize"              | "look at", "see"   |
 | **设计检查** | "accessibility", "a11y", "UX check", "design audit" | "design", "style"  |
@@ -147,7 +147,7 @@ Token是有限的资源。如果`SKILL.md`文件太长,会占用大量上下文,
 根据官方文档,以下策略可以最小化上下文使用:
 
 | 策略                 | 说明                                | 效果              |
-| -------------------- | ----------------------------------- | ----------------- |
+|--- | --- | ---|
 | **保持SKILL.md简洁** | 将详细参考材料放到单独文件          | 减少初始加载量    |
 | **编写具体描述**     | 帮助AI精确判断何时激活              | 避免误触          |
 | **渐进式披露**       | 只在需要时读取支持文件              | 控制实际Token消耗 |
@@ -233,7 +233,7 @@ For complete API reference, see:
 ### 实战示例:Vercel Deploy vs React Best Practices
 
 | 技能                  | SKILL.md 行数 | 加载内容            | 优化策略             |
-| --------------------- | ------------- | ------------------- | -------------------- |
+|--- | --- | --- | ---|
 | Vercel Deploy         | ~60 行        | 简明用法 + 输出格式 | 脚本处理复杂逻辑     |
 | React Best Practices  | ~300 行       | 规则索引 + 分类     | 详细规则在 AGENTS.md |
 | Web Design Guidelines | ~50 行        | 审计流程            | 动态从GitHub拉取规则 |
@@ -338,7 +338,7 @@ AI: (加载vercel-deploy,执行一次)
 **对比**:完成同样的任务,哪种消耗更少?
 
 | 方式                             | Token消耗                     | 推荐场景        |
-| -------------------------------- | ----------------------------- | --------------- |
+|--- | --- | ---|
 | **内联代码**(在SKILL.md中写逻辑) | 高(每次触发都加载)            | 简单任务(<10行) |
 | **Bash脚本**                     | 低(只加载脚本路径,不加载内容) | 复杂任务(>10行) |
 
@@ -528,7 +528,7 @@ description: "Review React code for accessibility and UX"
 > 更新时间:2026-01-25
 
 | 功能                | 文件路径                                                                                                              | 行号   |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------- | ------ |
+|--- | --- | ---|
 | 上下文管理最佳实践  | [`AGENTS.md:70-78`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L70-L78)                          | 70-78  |
 | 技能触发示例        | [`README.md:88-102`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L88-L102)                        | 88-102 |
 | React技能触发词     | [`SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/SKILL.md)              | 1-30   |

@@ -52,7 +52,7 @@ npm update @vbgate/opencode-mystatus
 Suporta consultar em um clique a cota de uso das seguintes plataformas:
 
 | Plataforma | Tipos de Assinatura Suportados | Tipo de Cota |
-|-----------|------------------------------|---------------|
+|--- | --- | ---|
 | OpenAI | Plus/Team/Pro | Cota de 3 horas, cota de 24 horas |
 | Zhipu AI | Coding Plan | Cota de 5 horas Token, cota mensal MCP |
 | Google Cloud | Antigravity | G3 Pro, G3 Image, G3 Flash, Claude |

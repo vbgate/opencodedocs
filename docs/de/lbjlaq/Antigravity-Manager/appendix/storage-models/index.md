@@ -190,7 +190,7 @@ Die vollständigen Daten jedes Kontos werden im JSON-Format separat im Verzeichn
 ### Erklärung der Schlüsselfelder
 
 | Feld | Typ | Geschäftliche Bedeutung | Auslösebedingung |
-| ----- | ---- | -------- | -------- |
+|--- | --- | --- | ---|
 | `disabled` | bool | Konto dauerhaft deaktiviert (z.B. refresh_token ungültig) | Automatisch auf `true` gesetzt bei `invalid_grant` |
 | `proxy_disabled` | bool | Nur Proxy-Funktion deaktiviert, beeinträchtigt GUI-Nutzung nicht | Manuelles Deaktivieren oder durch Quota-Schutz ausgelöst |
 | `protected_models` | string[] | "Eingeschränkte Modellliste" für modellbasierten Quota-Schutz | Wird durch Quota-Schutz-Logik aktualisiert |
@@ -220,7 +220,7 @@ Die Token-Statistikdatenbank zeichnet den Token-Verbrauch bei jeder Proxy-Anford
 #### token_usage (ursprüngliche Nutzungsaufzeichnungen)
 
 | Feld | Typ | Beschreibung |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | id | INTEGER PRIMARY KEY AUTOINCREMENT | Auto-Inkrement-Primärschlüssel |
 | timestamp | INTEGER | Anforderungszeitstempel |
 | account_email | TEXT | Konto-E-Mail |
@@ -320,7 +320,7 @@ Die Proxy-Protokolldatenbank zeichnet detaillierte Informationen zu jeder Proxy-
 ### Tabellenstruktur: request_logs
 
 | Feld | Typ | Beschreibung |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | id | TEXT PRIMARY KEY | Eindeutige Anforderungs-ID (UUID) |
 | timestamp | INTEGER | Anforderungszeitstempel |
 | method | TEXT | HTTP-Methode (GET/POST) |
@@ -556,23 +556,23 @@ Ob der "Quota-Schutz" ausgelöst wird, wird durch `quota_protection.enabled/thre
 > Aktualisiert am: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
+|--- | --- | ---|
 | Datenverzeichnis (.antigravity_tools) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
-| Konto-Verzeichnis (accounts/) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L35-L46) | 35-46 |
+|--- | --- | ---|
 | accounts.json Struktur | [`src-tauri/src/models/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/models/account.rs#L76-L92) | 76-92 |
-| Account-Struktur (Backend) | [`src-tauri/src/models/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/models/account.rs#L6-L42) | 6-42 |
-| Account-Struktur (Frontend) | [`src/types/account.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/types/account.ts#L1-L55) | 1-55 |
+|--- | --- | ---|
+|--- | --- | ---|
 | TokenData/QuotaData Struktur | [`src-tauri/src/models/token.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/models/token.rs#L3-L16) | 3-16 |
 | TokenData/QuotaData Struktur | [`src-tauri/src/models/quota.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/models/quota.rs#L3-L21) | 3-21 |
-| Initialisierung der Token-Statistikdatenbank (Schema) | [`src-tauri/src/modules/token_stats.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/token_stats.rs#L58-L159) | 58-159 |
-| Initialisierung der Proxy-Protokolldatenbank (Schema) | [`src-tauri/src/modules/proxy_db.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/proxy_db.rs#L5-L65) | 5-65 |
-| Automatische Bereinigung von Proxy-Protokollen (30 Tage) | [`src-tauri/src/proxy/monitor.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/monitor.rs#L41-L60) | 41-60 |
-| Implementierung der automatischen Bereinigung von Proxy-Protokollen | [`src-tauri/src/modules/proxy_db.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/proxy_db.rs#L194-L209) | 194-209 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | gui_config.json Lese/Schreibzugriff | [`src-tauri/src/modules/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/config.rs#L7-L88) | 7-88 |
 | logs/ Verzeichnis und app.log | [`src-tauri/src/modules/logger.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/logger.rs#L17-L45) | 17-45 |
 | bin/cloudflared Pfad | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L92-L101) | 92-101 |
 | device_original.json | [`src-tauri/src/modules/device.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/device.rs#L11-L13) | 11-13 |
-| invalid_grant -> disabled schreiben | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L869-L969) | 869-969 |
+|--- | --- | ---|
 
 **Wichtige Konstanten**:
 - `DATA_DIR = ".antigravity_tools"`: Name des Datenverzeichnisses (`src-tauri/src/modules/account.rs:16-18`)

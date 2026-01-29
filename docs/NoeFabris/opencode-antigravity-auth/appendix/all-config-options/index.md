@@ -41,7 +41,7 @@ All configuration items can be overridden via environment variables. Environment
 ## Configuration Overview
 
 | Category | Configuration Items | Core Scenarios |
-| --- | --- | --- |
+|--- | --- | ---|
 | General Settings | 3 | Logging, debug mode |
 | Thinking Block | 1 | Preserve thinking process |
 | Session Recovery | 3 | Automatic error recovery |
@@ -377,7 +377,7 @@ If the model name explicitly contains `:antigravity` or `:gemini-cli`, the speci
 Account selection strategy.
 
 | Strategy | Description | Use Cases |
-| --- | --- | --- |
+|--- | --- | ---|
 | `sticky` | Use the same account until rate-limited, preserve prompt cache | Single session, cache-sensitive scenarios |
 | `round-robin` | Rotate to the next account for each request, maximize throughput | Multi-account high-throughput scenarios |
 | `hybrid` | Deterministic selection based on health score + token bucket + LRU | General recommendation, balances performance and reliability |
@@ -547,7 +547,7 @@ Enable plugin auto-update.
 Default mode for web search (when not specified via variant).
 
 | Mode | Description |
-| --- | --- |
+|--- | ---|
 | `auto` | Model decides when to search (dynamic retrieval) |
 | `off` | Search disabled by default |
 
@@ -704,7 +704,7 @@ Logs will display loaded configuration:
 > Last updated: 2026-01-23
 
 | Feature | File Path | Lines |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Configuration Schema Definition | [`src/plugin/config/schema.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/schema.ts) | 1-373   |
 | JSON Schema  | [`assets/antigravity.schema.json`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/assets/antigravity.schema.json) | 1-157   |
 | Configuration Loading    | [`src/plugin/config/loader.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/loader.ts) | -       |

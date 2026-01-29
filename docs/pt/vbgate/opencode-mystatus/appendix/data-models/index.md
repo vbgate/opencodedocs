@@ -114,7 +114,7 @@ type CopilotTier = "free" | "pro" | "pro+" | "business" | "enterprise";
 **Limites de cota para cada tipo de assinatura**:
 
 | tier | Limite mensal (Premium Requests) |
-| ---- | ------------------------------- |
+|--- | ---|
 | `free` | 50 |
 | `pro` | 300 |
 | `pro+` | 1.500 |
@@ -263,7 +263,7 @@ interface UsageLimitItem {
 **Explicação dos tipos de limite**:
 
 | type | Descrição | Ciclo de redefinição |
-| ---- | --------- | -------------------- |
+|--- | --- | ---|
 | `TOKENS_LIMIT` | Limite de tokens de 5 horas | 5 horas |
 | `TIME_LIMIT` | Cota mensal de MCP | 1 mês |
 
@@ -522,7 +522,7 @@ interface GoogleQuotaResponse {
 **4 modelos exibidos**:
 
 | Nome de exibição | Chave do modelo | Chave alternativa |
-| ---------------- | --------------- | ---------------- |
+|--- | --- | ---|
 | G3 Pro | `gemini-3-pro-high` | `gemini-3-pro-low` |
 | G3 Image | `gemini-3-pro-image` | - |
 | G3 Flash | `gemini-3-flash` | - |
@@ -569,7 +569,7 @@ export const REQUEST_TIMEOUT_MS = 10000;
 > Data de atualização: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Número da linha |
-| -------------- | ----------------- | --------------- |
+|--- | --- | ---|
 | Tipos de dados de autenticação | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L99-L104) | 99-104 |
 | Autenticação OpenAI | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L28-L33) | 28-33 |
 | Autenticação Zhipu AI | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L38-L41) | 38-41 |

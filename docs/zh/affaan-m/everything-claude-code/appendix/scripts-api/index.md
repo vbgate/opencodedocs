@@ -76,7 +76,7 @@ const {
 ```
 
 | 函数 | 类型 | 返回值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `isWindows` | boolean | `true/false` | 当前是否为 Windows 平台 |
 | `isMacOS` | boolean | `true/false` | 当前是否为 macOS 平台 |
 | `isLinux` | boolean | `true/false` | 当前是否为 Linux 平台 |
@@ -532,7 +532,7 @@ const { PACKAGE_MANAGERS } = require('./lib/package-manager');
 ```
 
 | 包管理器 | lock 文件 | install 命令 | run 命令 | exec 命令 |
-|---------|-----------|--------------|----------|-----------|
+|--- | --- | --- | --- | ---|
 | `npm` | package-lock.json | `npm install` | `npm run` | `npx` |
 | `pnpm` | pnpm-lock.yaml | `pnpm install` | `pnpm` | `pnpm dlx` |
 | `yarn` | yarn.lock | `yarn` | `yarn` | `yarn dlx` |
@@ -727,10 +727,10 @@ node scripts/setup-package-manager.js --help
 ### 命令行参数
 
 | 参数 | 说明 |
-|------|------|
+|--- | ---|
 | `--detect` | 检测并显示当前包管理器 |
-| `--global <pm>` | 设置全局偏好（保存到 `~/.claude/package-manager.json`） |
-| `--project <pm>` | 设置项目偏好（保存到 `.claude/package-manager.json`） |
+|--- | ---|
+|--- | ---|
 | `--list` | 列出所有可用的包管理器 |
 | `--help` | 显示帮助信息 |
 
@@ -1159,7 +1159,7 @@ async function main() {
 > 更新时间：2026-01-25
 
 | 功能模块 | 文件路径 | 行号 |
-|---------|---------|------|
+|--- | --- | ---|
 | 通用工具函数 | [`scripts/lib/utils.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/lib/utils.js) | 1-384 |
 | 包管理器 API | [`scripts/lib/package-manager.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/lib/package-manager.js) | 1-391 |
 | 包管理器设置脚本 | [`scripts/setup-package-manager.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/setup-package-manager.js) | 1-207 |

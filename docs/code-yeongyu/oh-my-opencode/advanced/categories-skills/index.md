@@ -29,7 +29,7 @@ order: 100
 Consider this scenario:
 
 | Problem | Traditional Approach | Actual Need |
-|---------|---------------------|-------------|
+|--- | --- | ---|
 | **Using powerful models for UI tasks** | Use Claude Opus for simple style adjustments | High cost, wasted compute |
 | **Using lightweight models for complex logic** | Use Haiku for architecture design | Insufficient reasoning, incorrect solutions |
 | **Inconsistent Git commit styles** | Manual commit management, error-prone | Need automatic detection and adherence to project standards |
@@ -47,7 +47,7 @@ Consider this scenario:
 ## When to Use This Approach
 
 | Scenario | Recommended Combination | Effect |
-|----------|-------------------------|--------|
+|--- | --- | ---|
 | **UI design and implementation** | `category="visual-engineering"` + `skills=["frontend-ui-ux", "playwright"]` | Auto-select Gemini 3 Pro + designer mindset + browser verification |
 | **Quick fixes and commits** | `category="quick"` + `skills=["git-master"]` | Low-cost with Haiku + automatic commit style detection |
 | **Deep architecture analysis** | `category="ultrabrain"` + `skills=[]` | Pure reasoning with GPT-5.2 Codex (xhigh) |
@@ -75,7 +75,7 @@ Before starting this tutorial, ensure:
 oh-my-opencode provides 7 built-in Categories, each pre-configured with optimal model and thinking mode:
 
 | Category | Default Model | Temperature | Purpose |
-|----------|---------------|-------------|---------|
+|--- | --- | --- | ---|
 | `visual-engineering` | `google/gemini-3-pro` | 0.7 | Frontend, UI/UX, design tasks |
 | `ultrabrain` | `openai/gpt-5.2-codex` (xhigh) | 0.1 | High-IQ reasoning tasks (complex architecture decisions) |
 | `artistry` | `google/gemini-3-pro` (max) | 0.7 | Creative and artistic tasks (novel ideas) |
@@ -103,7 +103,7 @@ Skills are domain experts defined through SKILL.md files that can inject:
 4 built-in Skills:
 
 | Skill | Functionality | MCP | Purpose |
-|-------|---------------|-----|---------|
+|--- | --- | --- | ---|
 | `playwright` | Browser automation | `@playwright/mcp` | UI verification, screenshots, web scraping |
 | `agent-browser` | Browser automation (Vercel) | Manual installation | Same as above, alternative solution |
 | `frontend-ui-ux` | Designer mindset | None | Create beautiful interfaces |
@@ -339,7 +339,7 @@ Edit `~/.config/opencode/oh-my-opencode.json`:
 **Field Descriptions**:
 
 | Field | Type | Description |
-|-------|------|-------------|
+|--- | --- | ---|
 | `model` | string | Override model used by Category |
 | `temperature` | number | Creativity level (0-2) |
 | `prompt_append` | string | Content appended to system prompt |
@@ -484,7 +484,7 @@ If Playwright MCP is not configured, `playwright` Skill will automatically start
 Categories and Skills system lets you flexibly combine agents:
 
 | Component | Role | Configuration |
-|-----------|------|---------------|
+|--- | --- | ---|
 | **Category** | Determines model and thinking mode | `delegate_task(category="...")` or config file |
 | **Skill** | Injects specialized knowledge and MCP | `delegate_task(load_skills=["..."])` or SKILL.md file |
 | **Sisyphus Junior** | Executes tasks, cannot delegate again | Auto-generated, no manual specification needed |
@@ -522,7 +522,7 @@ Categories and Skills system lets you flexibly combine agents:
 > Last Updated: 2026-01-26
 
 | Functionality | File Path | Line Number |
-|---------------|-----------|-------------|
+|--- | --- | ---|
 | delegate_task tool implementation | [`src/tools/delegate-task/tools.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/delegate-task/tools.ts) | Full file (1070 lines) |
 | resolveCategoryConfig function | [`src/tools/delegate-task/tools.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/delegate-task/tools.ts) | 113-152 |
 | buildSystemContent function | [`src/tools/delegate-task/tools.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/delegate-task/tools.ts) | 176-188 |

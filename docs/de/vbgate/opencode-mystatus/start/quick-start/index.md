@@ -115,7 +115,7 @@ Fügen Sie den folgenden Inhalt zur Konfigurationsdatei hinzu (behalten Sie die 
 **Warum diese Konfiguration**:
 
 | Konfigurationselement | Wert | Funktion |
-| ------------- | --------------------------------------- | ------------------------------------ |
+|--- | --- | ---|
 | `plugin` Array | `["opencode-mystatus"]` | Weist OpenCode an, dieses Plugin zu laden |
 | `description` | "Query quota usage for all AI accounts" | In der Befehlsliste angezeigte Beschreibung |
 | `template` | "Use the mystatus tool..." | Weist OpenCode an, wie der mystatus-Befehl aufgerufen werden soll |
@@ -234,7 +234,7 @@ Supported account types:
 #### 5.2 Bedeutung der Ausgabe verstehen
 
 | Element (Chinesisch) | Element (Englisch) | Bedeutung |
-| ------------------------- | ------------------------- | ---------------------- |
+|--- | --- | ---|
 | `## OpenAI 账号额度` | `## OpenAI Account Quota` | Plattformtitel |
 | `user@example.com (team)` | `user@example.com (team)` | Kontoinformationen (E-Mail oder Team) |
 | `3小时限额` | `3-hour limit` | Kreditart (3-Stunden-Limit) |
@@ -248,7 +248,7 @@ Supported account types:
 Vergewissern Sie sich, dass Sie die folgenden Schritte abgeschlossen haben:
 
 | Schritt | Überprüfungsmethode | Erwartetes Ergebnis |
-| ------------- | --------------------------------------- | --------------------------------------- |
+|--- | --- | ---|
 | Plugin installieren | `~/.config/opencode/opencode.json` aufrufen | Das `plugin`-Array enthält `"opencode-mystatus"` |
 | Slash-Befehl konfigurieren | Dieselbe Datei aufrufen | Das `command`-Objekt enthält die `mystatus`-Konfiguration |
 | OpenCode neu starten | OpenCode-Prozess aufrufen | Wurde neu gestartet |
@@ -364,13 +364,13 @@ Nach der Installation können Sie den Befehl `/mystatus` oder natürliche Sprach
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| ----------------- | -------------------------------------------------------------------------------------------------- | ----- |
+|--- | --- | ---|
 | Plugineinstieg | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 26-94 |
-| mystatus-Tool-Definition | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 29-33 |
+|--- | --- | ---|
 | Authentifizierungsdatei lesen | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 35-46 |
 | Parallele Abfrage aller Plattformen | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 49-56 |
-| Ergebnissammlung und -zusammenfassung | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 58-89 |
-| Slash-Befehlskonfiguration | [`command/mystatus.md`](https://github.com/vbgate/opencode-mystatus/blob/main/command/mystatus.md) | 1-6 |
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Konstanten**:
 - Pfad der Authentifizierungsdatei: `~/.local/share/opencode/auth.json` (`plugin/mystatus.ts:35`)

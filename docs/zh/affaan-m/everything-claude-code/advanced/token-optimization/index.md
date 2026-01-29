@@ -78,7 +78,7 @@ Claude 的自动压缩在任意时刻触发，往往在任务中间打断流程�
 **模型选择指南**
 
 | 模型 | 适用场景 | 成本 | 推理能力 |
-|------|---------|------|---------|
+|--- | --- | --- | ---|
 | **Haiku 4.5** | 轻量级 agent、频繁调用、代码生成 | 低（Sonnet 的 1/3） | 90% 的 Sonnet 能力 |
 | **Sonnet 4.5** | 主开发工作、复杂编码任务、orchestration | 中 | 最佳编码模型 |
 | **Opus 4.5** | 架构决策、深度推理、研究分析 | 高 | 最强推理能力 |
@@ -378,7 +378,7 @@ Token 优化的核心是**在关键时刻保留有价值的信息**：
 > 更新时间：2026-01-25
 
 | 功能              | 文件路径                                                                                      | 行号    |
-| ----------------- | --------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 策略性压缩 Skill  | [`skills/strategic-compact/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/strategic-compact/SKILL.md) | 1-64    |
 | 压缩建议 Hook     | [`scripts/hooks/suggest-compact.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/hooks/suggest-compact.js) | 1-61    |
 | 压缩前保存 Hook   | [`scripts/hooks/pre-compact.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/hooks/pre-compact.js) | 1-49    |

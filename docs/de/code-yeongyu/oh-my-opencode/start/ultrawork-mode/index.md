@@ -46,7 +46,7 @@ Der Ultrawork-Modus ist ein spezieller Arbeitsmodus, der durch ein Schlüsselwor
 Der Ultrawork-Modus basiert auf den folgenden Kernprinzipien (aus dem [Ultrawork-Manifest](https://github.com/code-yeongyu/oh-my-opencode/blob/main/docs/ultrawork-manifesto.md)):
 
 | Prinzip | Beschreibung |
-|----------|-------------|
+|--- | ---|
 | **Menschliches Eingreifen ist ein Fehlersignal** | Wenn Sie ständig KI-Ausgaben korrigieren müssen, bedeutet das, dass ein Problem mit dem Systemdesign vorliegt |
 | **Ununterscheidbarer Code** | Von KI geschriebener Code sollte von Code von Senior-Ingenieuren ununterscheidbar sein |
 | **Kognitive Belastung minimieren** | Sie müssen nur sagen, "was zu tun ist", Agenten sind für "wie es zu tun ist" verantwortlich |
@@ -143,7 +143,7 @@ Wenn ein Punkt fehlschlägt, überprüfen Sie:
 ## Wann Sie diese Technik verwenden sollten
 
 | Szenario | Ultrawork verwenden | Normaler Modus |
-|----------|-------------------|----------------|
+|--- | --- | ---|
 | **Komplexe neue Funktionen** | ✅ Empfohlen (erfordert Multi-Agent-Zusammenarbeit) | ❌ Möglicherweise nicht effizient genug |
 | **Dringende Fixes** | ✅ Empfohlen (benötigt schnelle Diagnose und Erkundung) | ❌ Möglicherweise Kontext verpassen |
 | **Einfache Änderungen** | ❌ Übertrieben (verschwendet Ressourcen) | ✅ Geeigneter |
@@ -202,11 +202,11 @@ Denken Sie daran: Der Ultrawork-Modus ist so konzipiert, dass Agenten wie ein ec
 > Zuletzt aktualisiert: 2026-01-26
 
 | Funktion | Dateipfad | Zeilennummern |
-|----------|-----------|--------------|
-| Ultrawork-Designphilosophie | [`docs/ultrawork-manifesto.md`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/docs/ultrawork-manifesto.md) | 1-198 |
-| Schlüsselwort-Detector Hook | [`src/hooks/keyword-detector/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/keyword-detector/index.ts) | 12-100 |
-| ULTRAWORK-Anweisungsvorlage | [`src/hooks/keyword-detector/constants.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/keyword-detector/constants.ts) | 54-280 |
-| Schlüsselwort-Erkennungslogik | [`src/hooks/keyword-detector/detector.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/keyword-detector/detector.ts) | 26-53 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Konstanten**:
 - `KEYWORD_DETECTORS`: Konfiguration des Schlüsselwort-Detectors, einschließlich drei Modi: ultrawork, search, analyze
@@ -221,7 +221,7 @@ Denken Sie daran: Der Ultrawork-Modus ist so konzipiert, dass Agenten wie ein ec
 
 **Geschäftsregeln**:
 | Regel-ID | Regelbeschreibung | Tag |
-|----------|-------------------|-----|
+|--- | --- | ---|
 | BR-4.8.4-1 | Aktiviert Ultrawork-Modus, wenn "ultrawork" oder "ulw" erkannt wird | [Fact] |
 | BR-4.8.4-2 | Ultrawork-Modus setzt `message.variant = "max"` | [Fact] |
 | BR-4.8.4-3 | Ultrawork-Modus zeigt Toast-Benachrichtigung: "Ultrawork-Modus aktiviert" | [Fact] |

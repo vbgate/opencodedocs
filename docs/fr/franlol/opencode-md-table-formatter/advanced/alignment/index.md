@@ -28,7 +28,7 @@ L'IA a généré un tableau, mais l'alignement des colonnes n'est pas très esth
 
 ```markdown
 | 名称 | 类型 | 描述 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 用户 | string | 用户名 |
 | 年龄 | number | 年龄 |
 | is_active | boolean | 是否激活 |
@@ -50,7 +50,7 @@ Le mode d'alignement des tableaux Markdown n'est pas spécifié dans chaque lign
 La syntaxe de la ligne de séparation est : `:?-+:?` (deux-points + tiret + deux-points)
 
 | Position des deux-points | Mode d'alignement | Exemple |
-| --- | --- | --- |
+|--- | --- | ---|
 | Des deux côtés | Centré | `:---:` |
 | Seulement à droite | Aligné à droite | `---:` |
 | Aucun | Aligné à gauche | `---` ou `:---` |
@@ -69,7 +69,7 @@ L'alignement à gauche est le comportement par défaut des tableaux, adapté aux
 
 ```markdown
 | 名称 | 描述 |
-| :--- | :--- |    ← Un deux-points à gauche ou aucun deux-points signifie alignement à gauche
+|--- | --- | ---|
 | 用户 | 用户名 |
 ```
 
@@ -77,7 +77,7 @@ L'alignement à gauche est le comportement par défaut des tableaux, adapté aux
 
 ```markdown
 | 名称   | 描述   |
-| :----- | :----- |
+|--- | ---|
 | 用户   | 用户名 |
 ```
 
@@ -116,7 +116,7 @@ Le centrage convient aux étiquettes de statut, aux textes courts, aux titres et
 
 ```markdown
 | 名称 | 状态 | 描述 |
-| :--- | :---: | :--- |    ← La colonne du milieu utilise :---: pour indiquer le centrage
+|--- | --- | --- | ---|
 | 用户 | 激活 | 用户名 |
 ```
 
@@ -124,7 +124,7 @@ Le centrage convient aux étiquettes de statut, aux textes courts, aux titres et
 
 ```markdown
 | 名称   |  状态  | 描述   |
-| :----- | :----: | :----- |
+|--- | --- | ---|
 | 用户   |  激活  | 用户名 |
 ```
 
@@ -149,7 +149,7 @@ Emplacement du code source : `index.ts:213-217`
 Le format de la ligne de séparation centrée est : `:` + tiret + `:`
 
 | Largeur cible | Formule de calcul | Résultat |
-| --- | --- | --- |
+|--- | --- | ---|
 | 3 | `:` + `-`*1 + `:` | `:-:` |
 | 5 | `:` + `-`*3 + `:` | `:---:` |
 | 10 | `:` + `-`*8 + `:` | `:--------:` |
@@ -166,7 +166,7 @@ L'alignement à droite convient aux données numériques, aux montants, aux date
 
 ```markdown
 | 名称 | 价格 | 数量 |
-| :--- | ---: | ---: |    ← Un deux-points à droite indique l'alignement à droite
+|--- | --- | --- | ---|
 | 商品 | 99.9 | 100 |
 ```
 
@@ -174,7 +174,7 @@ L'alignement à droite convient aux données numériques, aux montants, aux date
 
 ```markdown
 | 名称   | 价格 | 数量 |
-| :----- | ----: | ---: |
+|--- | --- | ---|
 | 商品   |  99.9 |  100 |
 ```
 
@@ -185,7 +185,7 @@ Les nombres sont alignés à droite, facilitant la comparaison des valeurs.
 Le format de la ligne de séparation alignée à droite est : tiret + `:`
 
 | Largeur cible | Formule de calcul | Résultat |
-| --- | --- | --- |
+|--- | --- | ---|
 | 3 | `-`*2 + `:` | `--:` |
 | 5 | `-`*4 + `:` | `----:` |
 | 10 | `-`*9 + `:` | `---------:` |
@@ -220,7 +220,7 @@ Emplacement du code source : `index.ts:198-211`
 **Règles de remplissage**
 
 | Mode d'alignement | Remplissage gauche | Remplissage droite | Exemple (largeur cible 10, texte "abc") |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | Alignement à gauche | 0 | totalPadding | `abc       ` |
 | Centré | floor(total/2) | total - floor(total/2) | `   abc    ` |
 | Alignement à droite | totalPadding | 0 | `       abc` |
@@ -230,7 +230,7 @@ Emplacement du code source : `index.ts:198-211`
 `Math.floor(totalPadding / 2)` garantit que le remplissage gauche est un entier, l'espace supplémentaire est ajouté à droite.
 
 | Largeur cible | Largeur du texte | totalPadding | Remplissage gauche | Remplissage droite | Résultat |
-| --- | --- | --- | --- | --- | --- |
+|--- | --- | --- | --- | --- | ---|
 | 10 | 3 | 7 | 3 (7÷2=3.5→3) | 4 (7-3) | `   abc    ` |
 | 11 | 3 | 8 | 4 (8÷2=4) | 4 (8-4) | `    abc    ` |
 | 12 | 3 | 9 | 4 (9÷2=4.5→4) | 5 (9-4) | `    abc     ` |
@@ -241,7 +241,7 @@ Emplacement du code source : `index.ts:198-211`
 
 ```markdown
 | 名称 | 状态 | 价格 | 描述 |
-| :--- | :---: | ---: | :--- |
+|--- | --- | --- | ---|
 | 商品A | 激活 | 99.9 | 这是一个商品 |
 | 商品B | 停用 | 199.0 | 这是另一个商品 |
 ```
@@ -250,7 +250,7 @@ Emplacement du code source : `index.ts:198-211`
 
 ```markdown
 | 名称   |  状态  | 价格 | 描述         |
-| :----- | :----: | ----: | :----------- |
+|--- | --- | --- | ---|
 | 商品A  |  激活  |  99.9 | 这是一个商品 |
 | 商品B  |  停用  | 199.0 | 这是另一个商品 |
 ```
@@ -258,7 +258,7 @@ Emplacement du code source : `index.ts:198-211`
 **Mode d'alignement de chaque colonne** :
 
 | Nom de la colonne | Syntaxe de la ligne de séparation | Mode d'alignement | Explication |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | 名称 | `:---` | Alignement à gauche | Texte aligné à gauche |
 | 状态 | `:---:` | Centré | Texte centré |
 | 价格 | `---:` | Alignement à droite | Nombres alignés à droite |
@@ -288,7 +288,7 @@ La ligne de séparation est la "configuration", les lignes de données sont le "
 La position des deux-points dans la ligne de séparation **doit** correspondre aux colonnes.
 
 | Exemple erroné | Problème |
-| --- | --- |
+|--- | ---|
 | `| :--- | --- |` | Première colonne centrée, deuxième colonne alignée à gauche (2 colonnes) |
 | `| :--- | ---: | :--- |` | Première colonne alignée à gauche, deuxième colonne alignée à droite, troisième colonne alignée à gauche (3 colonnes) |
 
@@ -298,7 +298,7 @@ Le nombre de colonnes de la ligne de séparation doit correspondre au nombre de 
 ## Résumé du cours
 
 | Mode d'alignement | Syntaxe de la ligne de séparation | Scénario d'utilisation |
-| --- | --- | --- |
+|--- | --- | ---|
 | Alignement à gauche | `---` ou `:---` | Texte, données descriptives (par défaut) |
 | Centré | `:---:` | Étiquettes de statut, textes courts, titres |
 | Alignement à droite | `---:` | Nombres, montants, dates |
@@ -306,7 +306,7 @@ Le nombre de colonnes de la ligne de séparation doit correspondre au nombre de 
 **Fonctions clés** :
 
 | Fonction | Rôle | Emplacement du code source |
-| --- | --- | --- |
+|--- | --- | ---|
 | `getAlignment()` | Analyse le mode d'alignement des cellules de la ligne de séparation | 141-149 |
 | `padCell()` | Remplit les cellules à la largeur spécifiée | 198-211 |
 | `formatSeparatorCell()` | Formate les cellules de la ligne de séparation | 213-217 |
@@ -335,7 +335,7 @@ Le nombre de colonnes de la ligne de séparation doit correspondre au nombre de 
 > Dernière mise à jour : 2026-01-26
 
 | Fonctionnalité | Chemin du fichier | Numéros de ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Analyse du mode d'alignement | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L141-L149) | 141-149 |
 | Remplissage des cellules | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L198-L211) | 198-211 |
 | Formatage de la ligne de séparation | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L213-L217) | 213-217 |

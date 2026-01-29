@@ -32,7 +32,7 @@ When DCP prunes tool outputs, it changes message content, which causes Prompt Ca
 **Test Data Comparison**:
 
 | Scenario       | Cache Hit Rate | Token Savings | Overall Benefit |
-| -------------- | --------- | --------- | ------ |
+|--- | --- | --- | ---|
 | Without DCP    | ~85%      | 0%        | Baseline   |
 | With DCP       | ~65%      | 20-40%    | ✅ Net Positive |
 
@@ -73,7 +73,7 @@ The "Custom Config Directory" is specified by setting the `$OPENCODE_CONFIG_DIR`
 ### Recommended Configuration Strategy
 
 | Scenario               | Recommended Config Location | Example Configuration Focus                     |
-| ---------------------- | ---------- | ------------------------ |
+|--- | --- | ---|
 | **Personal Dev Environment**   | Global Config    | Enable auto strategies, disable debug logs          |
 | **Team Collaboration Project**   | Project Config    | Project-specific protected files, strategy toggles         |
 | **CI/CD Environment**   | Custom Config Directory  | Disable notifications, enable debug logs             |
@@ -120,7 +120,7 @@ You must restart OpenCode for configuration changes to take effect.
 **Recommended Settings**:
 
 | Scenario                   | Recommended Value    | Reason                     |
-| ---------------------- | ------- | ------------------------ |
+|--- | --- | ---|
 | **Complex Problem Solving**       | 4-6 turns | AI needs multiple iterations to analyze tool outputs      |
 | **Code Refactoring**           | 2-3 turns | Context switches quickly, longer protection affects performance    |
 | **Rapid Prototyping**       | 2-4 turns | Balance protection and Token savings        |
@@ -154,7 +154,7 @@ If you use IDE auto-completion, the Schema file (`dcp.schema.json`) may display 
 **When to Add Additional Protected Tools**:
 
 | Scenario                   | Example Configuration                              | Reason                     |
-| ---------------------- | ----------------------------- | ------------------------ |
+|--- | --- | ---|
 | **Critical Business Tools**       | `protectedTools: ["critical_tool"]` | Ensure critical operations remain visible            |
 | **Tools Requiring Historical Context** | `protectedTools: ["analyze_history"]` | Preserve complete history for analysis            |
 | **Custom Task Tools**     | `protectedTools: ["custom_task"]` | Protect custom task workflows            |
@@ -180,7 +180,7 @@ If you use IDE auto-completion, the Schema file (`dcp.schema.json`) may display 
 **Recommended Protection Patterns**:
 
 | File Type             | Recommended Pattern                     | Protection Reason                 |
-| ------------------ | ------------------------ | ---------------------- |
+|--- | --- | ---|
 | **Config Files**           | `"*.env"`, `".env*"`        | Prevent sensitive information from being pruned/lost          |
 | **Database Config**          | `"**/config/database/*"`    | Ensure database connection config remains available        |
 | **Secret Files**           | `"**/secrets/**"`          | Protect all secrets and certificates            |
@@ -247,7 +247,7 @@ If you use IDE auto-completion, the Schema file (`dcp.schema.json`) may display 
 **Configuration Recommendations**:
 
 | Scenario                   | Recommended Value  | Reason                     |
-| ---------------------- | ----- | ------------------------ |
+|--- | --- | ---|
 | **Default Config**           | 4 turns | Tested equilibrium point              |
 | **Fast Fail Scenarios**       | 2 turns | Clean up error inputs early, reduce context pollution       |
 | **Need Error History**       | 6-8 turns | Preserve more error info for debugging          |
@@ -274,7 +274,7 @@ DCP reminds the AI to use pruning tools every 10 tool calls by default.
 **Recommended Configuration**:
 
 | Scenario                   | nudgeFrequency | Effect Description                |
-| ---------------------- | ------------- | ------------------- |
+|--- | --- | ---|
 | **Dense Tool Calls**       | 8-12          | Remind AI to clean up in time            |
 | **Low-frequency Tool Calls**       | 15-20         | Reduce notification distraction              |
 | **Disable Nudge**           | Infinity      | Rely entirely on AI's autonomous judgment         |
@@ -367,7 +367,7 @@ DCP reminds the AI to use pruning tools every 10 tool calls by default.
 **Usage Tips**:
 
 | Command              | Purpose               |
-| ---------------- | ------------------ |
+|--- | ---|
 | `/dcp sweep`      | Prune all tools after the last user message |
 | `/dcp sweep 10`   | Only prune the last 10 tools      |
 | `/dcp sweep 5`    | Only prune the last 5 tools       |
@@ -385,7 +385,7 @@ DCP reminds the AI to use pruning tools every 10 tool calls by default.
 ### Comparison of Three Notification Modes
 
 | Mode       | Display Content                          | Applicable Scenarios             |
-| -------- | ----------------------------- | ---------------- |
+|--- | --- | ---|
 | **off**   | Show no notifications                       | Work environments without disturbance needs      |
 | **minimal** | Only show pruning count and Token savings             | Need to understand effects without focusing on details    |
 | **detailed** | Show each pruned tool and reason (default)          | Debugging or scenarios requiring detailed monitoring   |
@@ -393,7 +393,7 @@ DCP reminds the AI to use pruning tools every 10 tool calls by default.
 ### Recommended Configuration
 
 | Scenario               | Recommended Mode   | Reason               |
-| ---------------- | ------ | ---------------- |
+|--- | --- | ---|
 | **Daily Development**       | minimal | Focus on effects, reduce distraction        |
 | **Debugging Issues**       | detailed | View reasons for each pruning operation      |
 | **Presentations or Recording**  | off     | Avoid notifications interfering with demo flow       |
@@ -442,7 +442,7 @@ Although DCP is disabled in subagents, you can still:
 ## Lesson Summary
 
 | Best Practice Area       | Core Recommendations                          |
-| -------------- | ----------------------------- |
+|--- | ---|
 | **Prompt Caching**  | Token savings in long conversations usually exceed cache loss          |
 | **Configuration Priority**      | Use global config for general settings, project config for specific needs         |
 | **Turn Protection**       | 4-6 turns for complex tasks, 2-3 turns for quick tasks         |
@@ -463,7 +463,7 @@ Although DCP is disabled in subagents, you can still:
 > Updated: 2026-01-23
 
 | Function         | File Path                                                                                              | Line Numbers        |
-| ---------- | --------------------------------------------------------------------------------------------------- | ----------- |
+|--- | --- | ---|
 | Config Merging      | [`lib/config.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/config.ts#L691-794)    | 691-794     |
 | Config Validation      | [`lib/config.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/config.ts#L147-375)    | 147-375     |
 | Default Config      | [`lib/config.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/config.ts#L68-134)     | 68-134      |

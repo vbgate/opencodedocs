@@ -46,7 +46,7 @@ order: 3
 DCP 提供了 4 个 Slash 命令，帮助你监控和控制 Token 使用：
 
 | 命令 | 用途 | 适用场景 |
-|------|------|---------|
+|--- | --- | ---|
 | `/dcp` | 显示帮助 | 忘记命令时查看 |
 | `/dcp context` | 分析当前会话 Token 分布 | 了解上下文构成 |
 | `/dcp stats` | 查看累计修剪统计 | 验证长期效果 |
@@ -112,7 +112,7 @@ Summary:
 **Token 分类说明**：
 
 | 分类 | 计算方式 | 说明 |
-|------|---------|------|
+|--- | --- | ---|
 | **System** | `firstAssistant.input + cache.read - tokenizer(firstUserMessage)` | 系统提示词 |
 | **Tools** | `tokenizer(toolInputs + toolOutputs) - prunedTokens` | 工具调用（已扣除修剪部分） |
 | **User** | `tokenizer(all user messages)` | 所有用户消息 |
@@ -267,7 +267,7 @@ Tokens saved: ~7,892
 DCP 的 4 个命令帮助你监控和控制 Token 使用：
 
 | 命令 | 核心功能 |
-|------|---------|
+|--- | ---|
 | `/dcp` | 显示帮助信息 |
 | `/dcp context` | 分析当前会话 Token 分布 |
 | `/dcp stats` | 查看累计修剪统计 |
@@ -310,7 +310,7 @@ DCP 的 4 个命令帮助你监控和控制 Token 使用：
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | /dcp 帮助命令 | [`lib/commands/help.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/commands/help.ts) | 19-32 |
 | /dcp context 命令 | [`lib/commands/context.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/commands/context.ts) | 238-247 |
 | Token 计算策略 | [`lib/commands/context.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/commands/context.ts) | 5-38 |

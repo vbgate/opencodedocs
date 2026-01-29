@@ -66,7 +66,7 @@ Os logs do Proxy Monitor são gravados no SQLite no diretório de dados: `proxy_
 Em um registro do Proxy Monitor (struct do backend `ProxyRequestLog`), os mais úteis são estes campos:
 
 | Campo | Com que pergunta você o usa |
-| --- | --- |
+|--- | ---|
 | `status` | Esta solicitação foi bem-sucedida ou falhou (200-399 vs outros) |
 | `url` / `method` | Qual endpoint você realmente atingiu (por exemplo `/v1/messages`, `/v1/chat/completions`) |
 | `protocol` | É qual protocolo: OpenAI / Claude(Anthropic) / Gemini |
@@ -191,7 +191,7 @@ Limpar excluirá todos os registros em `proxy_logs.db`.
 ## Avisos sobre armadilhas
 
 | Cenário | Você pode entender (❌) | Comportamento real (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | "Pausado" = nenhum custo de monitoramento | Acredita que após pausar, solicitações não serão analisadas | Pausar só afeta "se grava ou não logs do Proxy Monitor". Mas análise de solicitação/resposta (incluindo análise SSE de dados de streaming) ainda ocorrerá, apenas dados analisados não serão salvos. Token Stats ainda gravará (independentemente do monitor estar ativado). |
 | Logs binários/grandes ficam vazios | Acredita que monitoramento quebrou | Solicitações/respostas binárias mostrarão como `[Binary Request Data]` / `[Binary Response Data]`. Corpos de resposta acima de 100MB serão marcados como `[Response too large (>100MB)]`; corpos de solicitação acima do limite não serão gravados. |
 | Quer usar Monitor para encontrar "quem iniciou a solicitação" | Acredita que pode rastrear até o processo do cliente | O Monitor registra informações na camada HTTP (método/caminho/modelo/conta), não contém "nome do processo solicitante". Você precisa combinar logs do próprio cliente ou captura de pacotes de rede do sistema para localizar a fonte. |
@@ -248,7 +248,7 @@ Como o Proxy Monitor é essencialmente SQLite, você também pode tratar `proxy_
 > Atualizado em: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Número da linha |
-| --- | --- | --- |
+|--- | --- | ---|
 | Entrada da página Monitor (montando ProxyMonitor) | [`src/pages/Monitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Monitor.tsx#L1-L12) | 1-12 |
 | UI do Monitor: tabela/filtragem/popup de detalhes | [`src/components/proxy/ProxyMonitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/proxy/ProxyMonitor.tsx#L13-L713) | 13-713 |
 | UI: ler configuração e sincronizar enable_logging | [`src/components/proxy/ProxyMonitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/proxy/ProxyMonitor.tsx#L174-L243) | 174-243 |
@@ -261,7 +261,7 @@ Como o Proxy Monitor é essencialmente SQLite, você também pode tratar `proxy_
 | Servidor montando middleware de monitoramento (layer) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L183-L194) | 183-194 |
 | Comandos Tauri: get/count/filter/detail/clear/export | [`src-tauri/src/commands/proxy.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/proxy.rs#L180-L314) | 180-314 |
 | SQLite: caminho proxy_logs.db, estrutura de tabela e SQL de filtragem | [`src-tauri/src/modules/proxy_db.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/proxy_db.rs#L1-L416) | 1-416 |
-| Documentação de design de monitoramento (pode diferir da implementação, prevalece o código-fonte) | [`docs/proxy-monitor-technical.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy-monitor-technical.md#L1-L53) | 1-53 |
+|--- | --- | ---|
 
 **Constantes-chave**:
 - `MAX_REQUEST_LOG_SIZE = 100 * 1024 * 1024`: corpo de solicitação máximo que middleware de monitoramento pode ler (falhará se exceder)

@@ -30,7 +30,7 @@ Para isso, limitamos deliberadamente algumas funções para garantir a confiabil
 ## Visão geral das limitações
 
 | Limitação | Descrição | Planejado para suportar |
-| --- | --- | --- |
+|--- | --- | ---|
 | **Tabelas HTML** | Apenas suporta tabelas de pipe Markdown (`\| ... \|`) | ❌ Não suportado |
 | **Células multilinha** | Células não podem conter tags `<br>` ou outras quebras de linha | ❌ Não suportado |
 | **Tabelas sem linha separadora** | Deve ter linha separadora `|---|` | ❌ Não suportado |
@@ -67,7 +67,7 @@ O plugin processa apenas tabelas de pipe Markdown (Pipe Table), ou seja, o forma
 
 ```markdown
 | 列 1 | 列 2 |
-| --- | --- |
+|--- | ---|
 | 数据 1 | 数据 2 |
 ```
 
@@ -97,7 +97,7 @@ Se você precisa formatar tabelas HTML, recomenda-se:
 
 ```markdown
 | 列 1 | 列 2 |
-| --- | --- |
+|--- | ---|
 | 第 1 行<br>第 2 行 | 单行 |
 ```
 
@@ -166,7 +166,7 @@ return hasSeparator  // Retorna false se não houver linha separadora
 
 ```markdown
 | 列 1 | 列 2 |
-| --- | --- |
+|--- | ---|
 | 合并两列 |  ← Espera atravessar coluna 1 e coluna 2
 | 数据 1 | 数据 2 |
 ```
@@ -187,7 +187,7 @@ O padrão Markdown não suporta sintaxe de mesclagem de células, e o plugin nã
 **Fenômeno**
 
 ```markdown
-| :--- | :---: | ---: |
+|--- | --- | ---|
 | 左对齐 | 居中 | 右对齐 |
 | 数据 1 | 数据 2 | 数据 3 |
 ```
@@ -305,7 +305,7 @@ O plugin não tem limite de largura máxima de coluna, se o conteúdo da célula
 ## Resumo da aula
 
 | Limitação | Causa | Solução alternativa |
-| --- | --- | --- |
+|--- | --- | ---|
 | Tabelas HTML não suportadas | O plugin se concentra em tabelas de pipe Markdown | Use ferramentas de formatação HTML |
 | Células multilinha não suportadas | Lógica de processamento linha por linha | Divida em múltiplas linhas ou aceite a largura maior |
 | Tabelas sem linha separadora não suportadas | Requisito da especificação Markdown | Adicione linha separadora `|---|` |
@@ -330,7 +330,7 @@ O plugin não tem limite de largura máxima de coluna, se o conteúdo da célula
 > Atualizado em: 2026-01-26
 
 | Limitação | Caminho do arquivo | Número da linha |
-| --- | --- | --- |
+|--- | --- | ---|
 | Detecção de tabelas HTML | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61) | 58-61 |
 | Detecção de linha separadora | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L63-L68) | 63-68 |
 | Validação de tabela (deve conter linha separadora) | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88) | 70-88 |

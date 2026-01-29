@@ -314,7 +314,7 @@ Plannotatorは、ローカルで動作するレビューツールで、ビジュ
 > 更新日：2026-01-24
 
 | 機能              | ファイルパス                                                                                              | 行番号    |
-| ----------------- | ----------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | CLIエントリ（プランレビュー） | [`apps/hook/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/hook/server/index.ts#L1-L50)         | 1-50    |
 | CLIエントリ（コードレビュー） | [`apps/hook/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/hook/server/index.ts#L46-L84)         | 46-84   |
 | プランレビューサーバー     | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts#L1-L200)            | 1-200   |

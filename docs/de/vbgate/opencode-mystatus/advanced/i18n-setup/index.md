@@ -34,7 +34,7 @@ order: 3
 
 **Unterstützte Sprachen**:
 | Sprache | Code | Erkennungsbedingung |
-| ---- | ---- | -------- |
+|--- | --- | ---|
 | Chinesisch | `zh` | locale beginnt mit `zh` (z. B. `zh-CN`, `zh-TW`) |
 | Englisch | `en` | Andere Fälle |
 
@@ -85,9 +85,9 @@ Dies ist nur ein temporärer Test, die Systemsprache wird nicht dauerhaft geänd
 ### Häufige Probleme
 
 | Problem | Ursache | Lösung |
-| ---- | ---- | -------- |
+|--- | --- | ---|
 | Ausgabesprache entspricht nicht den Erwartungen | Falsche Systemspracheinstellung | Überprüfen Sie die Umgebungsvariable `LANG` oder die Systemspracheinstellung |
-| Intl-API nicht verfügbar | Node.js-Version zu niedrig oder Umgebung nicht unterstützt | Das Plugin fällt automatisch auf die Umgebungsvariablen-Erkennung zurück |
+|--- | --- | ---|
 | Chinesisches System zeigt Englisch an | Umgebungsvariable `LANG` nicht auf `zh_*` gesetzt | Stellen Sie den korrekten `LANG`-Wert ein (z. B. `zh_CN.UTF-8`) |
 
 ## Zusammenfassung
@@ -107,7 +107,7 @@ Dies ist nur ein temporärer Test, die Systemsprache wird nicht dauerhaft geänd
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
+|--- | --- | ---|
 | Spracherkennungsfunktion | [`plugin/lib/i18n.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/i18n.ts#L24-L40) | 24-40 |
 
 **Wichtige Funktionen**:

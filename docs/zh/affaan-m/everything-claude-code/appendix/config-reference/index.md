@@ -95,7 +95,7 @@ Hooks 是 Everything Claude Code 的核心自动化机制，定义了在特定�
 ### Hook 类型与触发时机
 
 | Hook 类型 | 触发时机 | 用途 |
-|----------|---------|------|
+|--- | --- | ---|
 | `SessionStart` | Claude Code 会话开始时 | 加载上下文、检测包管理器 |
 | `SessionEnd` | Claude Code 会话结束时 | 保存会话状态、评估提取模式 |
 | `PreToolUse` | 工具调用前 | 验证命令、阻止危险操作 |
@@ -125,7 +125,7 @@ Hooks 是 Everything Claude Code 的核心自动化机制，定义了在特定�
 定义触发条件，支持以下变量：
 
 | 变量 | 含义 | 示例值 |
-|-----|------|-------|
+|--- | --- | ---|
 | `tool` | 工具名称 | `"Bash"`, `"Write"`, `"Edit"` |
 | `tool_input.command` | Bash 命令内容 | `"npm run dev"` |
 | `tool_input.file_path` | Write/Edit 的文件路径 | `"/path/to/file.ts"` |
@@ -573,7 +573,7 @@ MCP（Model Context Protocol）服务器扩展了 Claude Code 的外部服务集
 以下是所有预配置的 MCP 服务器列表：
 
 | 服务器名 | 类型 | 描述 | 需要配置 |
-|---------|-----|------|---------|
+|--- | --- | --- | ---|
 | `github` | npx | GitHub 操作（PR、Issues、Repos） | GitHub PAT |
 | `firecrawl` | npx | Web 抓取和爬取 | Firecrawl API Key |
 | `supabase` | npx | Supabase 数据库操作 | Project Ref |
@@ -689,7 +689,7 @@ MCP（Model Context Protocol）服务器扩展了 Claude Code 的外部服务集
 ### 字段说明
 
 | 字段 | 类型 | 必填 | 说明 |
-|-----|-----|-----|------|
+|--- | --- | --- | ---|
 | `name` | string | Y | 插件名称 |
 | `description` | string | Y | 插件描述 |
 | `author.name` | string | Y | 作者姓名 |
@@ -1015,7 +1015,7 @@ cat ~/.claude/settings.json | python -m json.tool
 > 更新时间：2026-01-25
 
 | 功能          | 文件路径                                                                                         | 行号  |
-| ------------- | ------------------------------------------------------------------------------------------------ | ----- |
+|--- | --- | ---|
 | Hooks 配置    | [`hooks/hooks.json`](https://github.com/affaan-m/everything-claude-code/blob/main/hooks/hooks.json)                 | 1-158 |
 | 插件清单      | [`.claude-plugin/plugin.json`](https://github.com/affaan-m/everything-claude-code/blob/main/.claude-plugin/plugin.json) | 1-28  |
 | MCP 服务器配置 | [`mcp-configs/mcp-servers.json`](https://github.com/affaan-m/everything-claude-code/blob/main/mcp-configs/mcp-servers.json) | 1-92  |

@@ -192,7 +192,7 @@ La gestión de cuotas resuelve "cómo gastar de forma más estable". El próximo
 > Fecha de actualización: 2026-01-23
 
 | Función | Ruta del archivo | Línea |
-| --- | --- | --- |
+|--- | --- | ---|
 | UI de Quota Protection (umbral, selección de modelos, al menos 1) | [`src/components/settings/QuotaProtection.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/settings/QuotaProtection.tsx#L13-L168) | 13-168 |
 | UI de Smart Warmup (marcado predeterminado al habilitar, al menos 1) | [`src/components/settings/SmartWarmup.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/settings/SmartWarmup.tsx#L14-L120) | 14-120 |
 | Campos de configuración de gestión de cuotas (`quota_protection` / `scheduled_warmup`) | [`src/types/config.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/types/config.ts#L54-L94) | 54-94 |

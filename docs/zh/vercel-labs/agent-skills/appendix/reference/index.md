@@ -23,7 +23,7 @@ prerequisite: []
 影响级别用于标识规则的性能影响程度，有 6 个级别：
 
 | 值            | 说明       | 适用场景                                                         |
-| ------------- | ---------- | ---------------------------------------------------------------- |
+|--- | --- | ---|
 | `CRITICAL`    | 关键瓶颈   | 必须修复，否则严重影响用户体验（如瀑布式请求、未优化的打包体积） |
 | `HIGH`        | 重要改进   | 显著提升性能（如服务端缓存、重复 props 消除）                    |
 | `MEDIUM-HIGH` | 中高优先级 | 明显性能提升（如数据获取优化）                                   |
@@ -38,7 +38,7 @@ prerequisite: []
 规则中的代码示例结构：
 
 | 字段             | 类型   | 必填 | 说明                                  |
-| ---------------- | ------ | ---- | ------------------------------------- |
+|--- | --- | --- | ---|
 | `label`          | string | ✅    | 示例标签（如 "Incorrect"、"Correct"） |
 | `description`    | string | ❌    | 标签描述（可选）                      |
 | `code`           | string | ✅    | 代码内容                              |
@@ -52,7 +52,7 @@ prerequisite: []
 单条性能优化规则的完整结构：
 
 | 字段                | 类型          | 必填 | 说明                                 |
-| ------------------- | ------------- | ---- | ------------------------------------ |
+|--- | --- | --- | ---|
 | `id`                | string        | ✅    | 规则 ID（自动生成，如 "1.1"、"2.3"） |
 | `title`             | string        | ✅    | 规则标题                             |
 | `section`           | number        | ✅    | 所属章节（1-8）                      |
@@ -71,7 +71,7 @@ prerequisite: []
 规则章节结构：
 
 | 字段                | 类型        | 必填 | 说明           |
-| ------------------- | ----------- | ---- | -------------- |
+|--- | --- | --- | ---|
 | `number`            | number      | ✅    | 章节号（1-8）  |
 | `title`             | string      | ✅    | 章节标题       |
 | `impact`            | ImpactLevel | ✅    | 整体影响级别   |
@@ -86,7 +86,7 @@ prerequisite: []
 完整的指南文档结构：
 
 | 字段           | 类型      | 必填 | 说明     |
-| -------------- | --------- | ---- | -------- |
+|--- | --- | --- | ---|
 | `version`      | string    | ✅    | 版本号   |
 | `organization` | string    | ✅    | 组织名称 |
 | `date`         | string    | ✅    | 日期     |
@@ -101,7 +101,7 @@ prerequisite: []
 从规则中提取的测试用例结构：
 
 | 字段          | 类型            | 必填 | 说明         |
-| ------------- | --------------- | ---- | ------------ |
+|--- | --- | --- | ---|
 | `ruleId`      | string          | ✅    | 规则 ID      |
 | `ruleTitle`   | string          | ✅    | 规则标题     |
 | `type`        | 'bad' \| 'good' | ✅    | 测试用例类型 |
@@ -278,7 +278,7 @@ bash /mnt/skills/user/{skill-name}/scripts/{script}.sh [args]
 ### 必填字段说明
 
 | 字段                      | 说明                   | 示例                                                               |
-| ------------------------- | ---------------------- | ------------------------------------------------------------------ |
+|--- | --- | ---|
 | `name`                    | Skill 名称（目录名）   | `vercel-deploy`                                                    |
 | `description`             | 单句描述，包含触发短语 | `Deploy applications to Vercel when user requests "Deploy my app"` |
 | `title`                   | Skill 标题             | `Vercel Deploy`                                                    |
@@ -294,7 +294,7 @@ bash /mnt/skills/user/{skill-name}/scripts/{script}.sh [args]
 ### 规则文件名前缀 → 章节 → 级别
 
 | 文件前缀     | 章节号 | 章节标题        | 默认级别    |
-| ------------ | ------ | --------------- | ----------- |
+|--- | --- | --- | ---|
 | `async-`     | 1      | 消除瀑布        | CRITICAL    |
 | `bundle-`    | 2      | 打包优化        | CRITICAL    |
 | `server-`    | 3      | 服务端性能      | HIGH        |
@@ -307,7 +307,7 @@ bash /mnt/skills/user/{skill-name}/scripts/{script}.sh [args]
 ### 示例文件
 
 | 文件名                      | 自动推断的章节      | 自动推断的级别 |
-| --------------------------- | ------------------- | -------------- |
+|--- | --- | ---|
 | `async-parallel.md`         | 1（消除瀑布）       | CRITICAL       |
 | `bundle-dynamic-imports.md` | 2（打包优化）       | CRITICAL       |
 | `server-cache-react.md`     | 3（服务端性能）     | HIGH           |
@@ -357,7 +357,7 @@ bash /mnt/skills/user/vercel-deploy/scripts/deploy.sh /path/to/project.tgz
 > 更新时间：2026-01-25
 
 | 功能                    | 文件路径                                                                                                                                                                   | 行号    |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | ImpactLevel 类型        | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts#L5)            | 5       |
 | CodeExample 接口        | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts#L7-L13)        | 7-13    |
 | Rule 接口               | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts#L15-L26)       | 15-26   |

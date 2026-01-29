@@ -61,7 +61,7 @@ Resets in: 2h 30m
 
 **支持的语言**：
 | 语言 | 代码 | 检测条件 |
-| ---- | ---- | -------- |
+|--- | --- | ---|
 | 中文 | `zh` | locale 以 `zh` 开头（如 `zh-CN`、`zh-TW`） |
 | 英文 | `en` | 其他情况 |
 
@@ -195,7 +195,7 @@ source ~/.bashrc
 验证语言检测是否正确：
 
 | 测试项 | 操作 | 预期结果 |
-| ------ | ---- | -------- |
+|--- | --- | ---|
 | 中文系统 | 执行 `/mystatus` | 输出为中文（如 `3小时限额`） |
 | 英文系统 | 执行 `/mystatus` | 输出为英文（如 `3-hour limit`） |
 | 临时切换 | 修改 `LANG` 环境变量后执行命令 | 输出语言随之改变 |
@@ -205,7 +205,7 @@ source ~/.bashrc
 ### 常见问题
 
 | 问题 | 原因 | 解决方法 |
-| ---- | ---- | -------- |
+|--- | --- | ---|
 | 输出语言不符合预期 | 系统语言设置错误 | 检查 `LANG` 环境变量或系统语言设置 |
 | Intl API 不可用 | Node.js 版本过低或环境不支持 | 插件会自动回退到环境变量检测 |
 | 中文系统显示英文 | 环境变量 `LANG` 未设置为 `zh_*` | 设置正确的 `LANG` 值（如 `zh_CN.UTF-8`） |
@@ -255,7 +255,7 @@ source ~/.bashrc
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 语言检测函数 | [`plugin/lib/i18n.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/i18n.ts#L24-L40) | 24-40 |
 | 中文翻译定义 | [`plugin/lib/i18n.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/i18n.ts#L46-L124) | 46-124 |
 | 英文翻译定义 | [`plugin/lib/i18n.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/i18n.ts#L125-L203) | 125-203 |

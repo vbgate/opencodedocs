@@ -36,7 +36,7 @@ Estas instrucciones largas pierden tiempo y son propensas a omitir pasos.
 Los **comandos slash** son plantillas de flujo de trabajo preestablecidas que activan tareas complejas con un clic. Estos comandos cubren escenarios comunes de desarrollo:
 
 | Escenario | Comando a Usar |
-|-----------|----------------|
+|--- | ---|
 | Inicializar base de conocimiento del proyecto | `/init-deep` |
 | Hacer que la IA trabaje continuamente | `/ralph-loop` |
 | Refactorizar código inteligentemente | `/refactor` |
@@ -64,7 +64,7 @@ graph LR
 oh-my-opencode incluye 6 comandos slash integrados:
 
 | Comando | Función | Complejidad |
-|----------|---------|-------------|
+|--- | --- | ---|
 | `/init-deep` | Generar archivos AGENTS.md jerárquicos | Media |
 | `/ralph-loop` | Bucle de desarrollo auto-referencial | Alta |
 | `/ulw-loop` | Versión Ultrawork de ralph-loop | Alta |
@@ -305,7 +305,7 @@ ID de Sesión: abc123
 ## Resumen
 
 | Comando | Función Principal | Frecuencia de Uso |
-|----------|-------------------|-------------------|
+|--- | --- | ---|
 | `/init-deep` | Autogenerar base de conocimiento del proyecto | Configuración inicial |
 | `/ralph-loop` | Bucle de trabajo continuo | Alta |
 | `/ulw-loop` | Versión Ultrawork del bucle | Media |
@@ -339,7 +339,7 @@ ID de Sesión: abc123
 > Actualizado: 2026-01-26
 
 | Característica | Ruta del Archivo | Números de Línea |
-|-----------------|------------------|-------------------|
+|--- | --- | ---|
 | Definiciones de comandos | [`src/features/builtin-commands/commands.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/commands.ts) | 8-73 |
 | Cargador de comandos | [`src/features/builtin-commands/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/index.ts) | 75-89 |
 | Plantilla init-deep | [`src/features/builtin-commands/templates/init-deep.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/templates/init-deep.ts) | Texto completo |

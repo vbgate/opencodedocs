@@ -284,8 +284,8 @@ Nach der Installation können Sie Claude automatisch diese Skills für die Code�
 > Aktualisierungszeit: 2026-01-25
 
 | Funktion          | Dateipfad                                                                                      | Zeilen    |
-| ------------- | --------------------------------------------------------------------------------------------- | ------- |
-| npx-Installationsmethode  | [`README.md:83-86`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L83-L86)  | 83-86   |
+|--- | --- | ---|
+|--- | --- | ---|
 | Claude Code manuelle Installation | [`AGENTS.md:98-105`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L98-L105) | 98-105  |
 | claude.ai Installationsmethode | [`AGENTS.md:106-109`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L106-L109) | 106-109  |
 | Netzwerkberechtigungskonfiguration  | [`skills/claude.ai/vercel-deploy-claimable/SKILL.md:104-112`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/SKILL.md#L104-L112) | 104-112  |

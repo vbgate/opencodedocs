@@ -363,7 +363,7 @@ Skill loading is a key mechanism for making AI follow specific workflows and rul
 > Updated: 2026-01-24
 
 | Feature        | File Path                                                                                    | Lines   |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | UseSkill tool definition | [`src/tools.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/tools.ts#L200-L267)         | 200-267 |
 | injectSyntheticContent function | [`src/utils.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/utils.ts#L147-L162)    | 147-162 |
 | injectSkillsList function | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L345-L370) | 345-370 |

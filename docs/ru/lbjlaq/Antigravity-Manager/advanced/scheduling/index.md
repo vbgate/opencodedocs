@@ -249,7 +249,7 @@ X-Mapped-Model: gemini-3-pro-high
 > Дата обновления: 2026-01-23
 
 | Функция | Путь к файлу | Номер строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Режим планирования и структура конфигурации (StickySessionConfig) | [`src-tauri/src/proxy/sticky_config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/sticky_config.rs#L1-L36) | 1-36 |
 | Генерация отпечатка сессии (Claude/OpenAI/Gemini) | [`src-tauri/src/proxy/session_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/session_manager.rs#L1-L159) | 1-159 |
 | TokenManager: поля режима фиксированной учётной записи и инициализация | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L27-L50) | 27-50 |

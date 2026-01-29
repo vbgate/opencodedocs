@@ -171,9 +171,9 @@ Klicken Sie auf "Zuordnung zurücksetzen".
 ## Häufige Fallstricke
 
 | Szenario | Möglicher Ansatz (❌) | Empfohlene Vorgehensweise (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Platzhalter funktioniert nicht | `GPT-4*` geschrieben, erwartet Übereinstimmung mit `gpt-4-turbo` | Verwenden Sie Kleinbuchstaben `gpt-4*`; die Backend-Platzhalter-Übereinstimmung ist groß-/kleinschreibungsempfindlich |
-| Beide Platzhalter-Regeln treffen | `gpt-*` und `gpt-4*` gleichzeitig geschrieben, unklar welche Regel gewählt wird | Machen Sie die spezifischere Regel "länger", stellen Sie sicher, dass sie mehr nicht `*`-Zeichen enthält |
+|--- | --- | ---|
 | Regel sieht korrekt aus, aber keine Änderung | Nur Antwort-Body geprüft, nicht Antwort-Header | Verwenden Sie `curl -i`, um `X-Mapped-Model` zu bestätigen (dies ist das explizit vom Backend zurückgegebene Ergebnis) |
 | Beide Regeln "gleich spezifisch" | Zwei Platzhalterregeln mit gleicher Anzahl nicht `*`-Zeichen | Vermeiden Sie diese Konfiguration; der Quellcode-Kommentar gibt an, dass das Ergebnis in diesem Fall von der `HashMap`-Traversierungsreihenfolge abhängt, was instabil sein kann (Quelle: `src-tauri/src/proxy/common/model_mapping.rs`) |
 
@@ -197,16 +197,16 @@ Klicken Sie auf "Zuordnung zurücksetzen".
 > Aktualisierungsdatum: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
-| Konfigurationsfeld: `proxy.custom_mapping` (Frontend-Typ) | [`src/types/config.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/types/config.ts#L6-L20) | 6-20 |
+|--- | --- | ---|
+|--- | --- | ---|
 | UI: Schreiben/Zurücksetzen/Voreinstellungen (Aufruf von `update_model_mapping`) | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L371-L475) | 371-475 |
-| UI: Modell-Routing-Karte (Voreingestellte Zuordnung anwenden / Zuordnung zurücksetzen / Liste und Hinzufügeformular) | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L1762-L1931) | 1762-1931 |
-| Backend-Befehl: Hot-Update und Persistenz von `custom_mapping` | [`src-tauri/src/commands/proxy.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/proxy.rs#L344-L365) | 344-365 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Serverstatus: `custom_mapping` wird mit `RwLock<HashMap<..>>` gespeichert | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L16-L53) | 16-53 |
-| Routing-Algorithmus: Exakt > Platzhalter (spezifischer geht vor) > Standardzuordnung | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L180-L228) | 180-228 |
-| Platzhalter-Übereinstimmung: Unterstützt mehrere `*` und ist groß-/kleinschreibungsempfindlich | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L134-L178) | 134-178 |
-| Berechnung von `mapped_model` in der Anfrage (Beispiel: OpenAI-Handler) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L154-L159) | 154-159 |
-| Rückgabe von `X-Mapped-Model` im Antwort-Header (Beispiel: OpenAI-Handler) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L310-L334) | 310-334 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Funktionen**:
 - `resolve_model_route(original_model, custom_mapping)`: Hauptzugangspunkt für Modell-Routing (siehe `src-tauri/src/proxy/common/model_mapping.rs`)

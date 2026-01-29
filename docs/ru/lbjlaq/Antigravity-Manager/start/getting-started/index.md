@@ -126,7 +126,7 @@ order: 1
 ## Частые ошибки
 
 | Ситуация | Что вы можете сделать (❌) | Рекомендуемый подход (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Хотите, чтобы мобильный/другой компьютер получил доступ | Сразу откройте `allow_lan_access=true`, но не установите аутентификацию | Одновременно включите аутентификацию и сначала проверьте `GET /healthz` в локальной сети |
 | Клиент возвращает 404 | Только меняете host/port, игнорируете, как клиент объединяет `/v1` | Сначала подтвердите стратегию объединения base_url клиента, затем решите, нужно ли приносить префикс `/v1` |
 | Сразу начинаете устранять неполадки с Claude Code | Сразу подключаете сложный клиент, при неудаче не знаете, где искать | Сначала запустите минимальный цикл: запустить Proxy -> `GET /healthz` -> затем подключить клиент |
@@ -155,11 +155,11 @@ order: 1
 > Обновлено: 2026-01-23
 
 | Функция | Путь к файлу | Строки |
-| --- | --- | --- |
-| Позиционирование продукта (локальная AI-транзитная станция/протокольная пропасть) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L35-L77) | 35-77 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Обзор Router конечных точек (OpenAI/Claude/Gemini/healthz) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | Логика порта по умолчанию/только локальный по умолчанию/key по умолчанию и bind address | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L291) | 174-291 |
-| Фактическое решение `auth_mode=auto` (LAN -> all_except_health) | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L10-L29) | 10-29 |
+|--- | --- | ---|
 | Структура маршрутизации GUI страниц (Dashboard/Accounts/API Proxy/Monitor/Token Stats/Settings) | [`src/App.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/App.tsx#L19-L48) | 19-48 |
 
 **Ключевые значения по умолчанию**:

@@ -241,7 +241,7 @@ Camera commands require the iOS app to be in the **foreground**. If the app is i
 **iOS Camera Parameters**:
 
 | Parameter | Type | Default | Description |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `facing` | `front\|back` | `front` | Camera facing direction |
 | `maxWidth` | number | `1600` | Maximum width (pixels) |
 | `quality` | `0..1` | `0.9` | JPEG quality (0-1) |
@@ -388,7 +388,7 @@ In this lesson, you learned:
 > Last updated: 2026-01-27
 
 | Feature | File Path | Lines |
-| --- | --- | --- |
+|--- | --- | ---|
 | iOS App Entry | [`apps/ios/Sources/ClawdbotApp.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/ClawdbotApp.swift) | 1-30 |
 | Canvas Rendering | [`apps/ios/Sources/RootCanvas.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/RootCanvas.swift) | 1-250 |
 | Gateway Connection | [`apps/ios/Sources/Gateway/`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/Gateway/) | - |

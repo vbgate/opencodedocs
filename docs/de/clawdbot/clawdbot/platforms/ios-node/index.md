@@ -244,7 +244,7 @@ Kamerabefehle erfordern, dass die iOS-Anwendung im **Vordergrund** ist. Wenn die
 **iOS-Kameraparameter**:
 
 | Parameter | Typ | Standardwert | Beschreibung |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `facing` | `front\|back` | `front` | Kameraausrichtung |
 | `maxWidth` | number | `1600` | Maximale Breite (Pixel) |
 | `quality` | `0..1` | `0.9` | JPEG-Qualität (0-1) |
@@ -391,11 +391,11 @@ In dieser Lektion haben Sie gelernt:
 > Aktualisiert am: 2026-01-27
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
+|--- | --- | ---|
 | iOS-Anwendungseinstieg | [`apps/ios/Sources/ClawdbotApp.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/ClawdbotApp.swift) | 1-30 |
 | Canvas-Rendering | [`apps/ios/Sources/RootCanvas.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/RootCanvas.swift) | 1-250 |
 | Gateway-Verbindung | [`apps/ios/Sources/Gateway/`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/Gateway/) | - |
-| Knotenprotokoll-Runner | [`src/node-host/runner.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/node-host/runner.ts) | 1-1100 |
+|--- | --- | ---|
 | Knotenkonfiguration | [`src/node-host/config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/node-host/config.ts) | 1-50 |
 | iOS-Plattform-Dokumentation | [`docs/platforms/ios.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/ios.md) | 1-105 |
 | Knotensystem-Dokumentation | [`docs/nodes/index.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/nodes/index.md) | 1-306 |

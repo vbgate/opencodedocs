@@ -13,7 +13,7 @@ A capacidade central do Antigravity Tools é converter protocolos de múltiplas 
 ## Este capítulo inclui
 
 | Tutorial | Descrição |
-|---------|-----------|
+|--- | ---|
 | [API Compatível OpenAI](./openai/) | Estratégia de implementação de `/v1/chat/completions` e `/v1/responses`, permitindo integração transparente do OpenAI SDK |
 | [API Compatível Anthropic](./anthropic/) | Contratos chave de `/v1/messages` e Claude Code, suporta capacidades principais como chain of thought, system prompts |
 | [API Nativa Gemini](./gemini/) | Endpoint de integração do `/v1beta/models` e Google SDK, suporta compatibilidade `x-goog-api-key` |
@@ -34,7 +34,7 @@ A capacidade central do Antigravity Tools é converter protocolos de múltiplas 
 **Seleção rápida**:
 
 | Seu cenário | Recomendado ver primeiro |
-|-------------|---------------------------|
+|--- | ---|
 | Usa Claude Code CLI | [API Compatível Anthropic](./anthropic/) |
 | Usa OpenAI Python SDK | [API Compatível OpenAI](./openai/) |
 | Usa SDK oficial Google | [API Nativa Gemini](./gemini/) |

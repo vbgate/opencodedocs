@@ -60,7 +60,7 @@ opencode-notify works simply: it listens to OpenCode events and sends native des
 opencode-notify provides two installation methods:
 
 | Method | Use Case | Pros | Cons |
-| ------ | -------- | ---- | ---- |
+|--- | --- | --- | ---|
 | **OCX Package Manager** | Most users | One-click install, auto-updates, complete dependency management | Requires OCX installation first |
 | **Manual Installation** | Special needs | Full control, no OCX required | Manual dependency and update management |
 
@@ -217,7 +217,7 @@ After completing the steps above, confirm:
 **Solutions**:
 
 | Platform | Solution |
-| -------- | -------- |
+|--- | ---|
 | macOS | System Settings → Notifications → OpenCode → Allow Notifications |
 | Windows | Settings → System → Notifications → Turn on notifications |
 | Linux | Install libnotify-bin: `sudo apt install libnotify-bin` |
@@ -274,12 +274,12 @@ In this lesson, we completed:
 > Last updated: 2026-01-27
 
 | Function | File Path | Lines |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Plugin Main Entry | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L1-L407) | 1-407   |
 | Configuration Loading | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L90-L114) | 90-114  |
-| Event Handler - Session Idle | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L215-L248) | 215-248 |
-| Event Handler - Session Error | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L251-L276) | 251-276 |
-| Event Handler - Permission Updated | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L311-L329) | 311-329 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Notification Sending | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L280-L308) | 280-308 |
 | Terminal Detection | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L145-L176) | 145-176 |
 | Quiet Hours Check | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L181-L199) | 181-199 |

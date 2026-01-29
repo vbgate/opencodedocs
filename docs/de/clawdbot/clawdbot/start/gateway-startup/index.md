@@ -36,13 +36,13 @@ Sie haben die Einrichtung im Assistenten abgeschlossen und die Grundeinstellunge
 **Empfohlene Startmethoden**:
 
 | Szenario                  | Befehl                               | Beschreibung                                   |
-| ----------------------- | -------------------------------------- | -------------------------------------- |
+|--- | --- | ---|
 | Tägliche Nutzung                | `clawdbot gateway install` + `clawdbot gateway start` | Automatisch als Hintergrunddienst starten                  |
 | Entwicklung und Debugging                | `clawdbot gateway --dev`                     | Entwicklungskonfiguration erstellen, automatisches Neuladen                  |
 | Vorübergehendes Testen                | `clawdbot gateway`                           | Im Vordergrund ausführen, Protokolle direkt im Terminal ausgeben            |
 | Port-Konflikt                | `clawdbot gateway --force`                   | Port freigeben und starten                    |
-| LAN-Zugriff              | `clawdbot gateway --bind lan`                 | Verbindungen von LAN-Geräten zulassen                   |
-| Tailscale-Fernzugriff         | `clawdbot gateway --tailscale serve`          | Gateway über Tailscale-Netzwerk verfügbar machen          |
+|--- | --- | ---|
+|--- | --- | ---|
 
 ## 🎒 Vorbereitungen
 
@@ -487,13 +487,13 @@ In dieser Lektion haben Sie gelernt:
 **Schnellreferenz der wichtigsten Befehle**:
 
 | Szenario                   | Befehl                                        |
-| ---------------------- | ------------------------------------------- |
+|--- | ---|
 | Tägliche Nutzung (Dienst)       | `clawdbot gateway install && clawdbot gateway start` |
 | Entwicklung und Debugging              | `clawdbot gateway --dev`                     |
 | Vorübergehendes Testen              | `clawdbot gateway`                           |
 | Port zwangsweise freigeben          | `clawdbot gateway --force`                   |
-| LAN-Zugriff           | `clawdbot gateway --bind lan --token "xxx"`   |
-| Tailscale-Fernzugriff       | `clawdbot gateway --tailscale serve`          |
+|--- | ---|
+|--- | ---|
 | Status anzeigen              | `clawdbot gateway status`                     |
 | Gesundheitsprüfung              | `clawdbot gateway health`                     |
 
@@ -516,14 +516,14 @@ In dieser Lektion haben Sie gelernt:
 > Aktualisiert am: 2026-01-27
 
 | Funktion                        | Dateipfad                                                                                   | Zeilennummer     |
-| --------------------------- | -------------------------------------------------------------------------------------- | -------- |
-| Gateway-Starteinstieg            | [`src/cli/gateway-cli/run.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/gateway-cli/run.ts) | 55-310   |
+|--- | --- | ---|
+|--- | --- | ---|
 | Daemon-Dienst-Abstraktion         | [`src/daemon/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/service.ts) | 66-155    |
-| Server-Start für Gateway           | [`src/gateway/server-startup.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup.ts) | 26-160    |
+|--- | --- | ---|
 | Gateway-Server-Implementierung         | [`src/gateway/server.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server.ts) | 1-500     |
-| Programmargument-Parser             | [`src/daemon/program-args.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/program-args.ts) | 1-250     |
-| Startprotokoll-Ausgabe              | [`src/gateway/server-startup-log.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup-log.ts) | 7-40      |
-| Entwicklungsmodus-Konfiguration             | [`src/cli/gateway-cli/dev.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/gateway-cli/dev.ts) | 1-100     |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Port-Freigabe-Logik             | [`src/cli/ports.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/ports.ts) | 1-80      |
 
 **Wichtige Konstanten**:

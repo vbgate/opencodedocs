@@ -64,7 +64,7 @@ The proxy registers `GET /healthz` in routes (see `src-tauri/src/proxy/server.rs
 `auto` is not an "independent policy"—it calculates the actual mode to execute based on `allow_lan_access`.
 
 | `proxy.auth_mode` | Additional Condition | Effective Mode |
-| --- | --- | --- |
+|--- | --- | ---|
 | `off` | - | `off` |
 | `strict` | - | `strict` |
 | `all_except_health` | - | `all_except_health` |
@@ -119,7 +119,7 @@ curl -i http://127.0.0.1:8045/v1/models \
 ## Common Pitfalls (All Real Issues from Source Code)
 
 | Symptom | Real Cause | How to Fix |
-| --- | --- | --- |
+|--- | --- | ---|
 | `auth_mode=auto`, but localhost calls still get 401 | `allow_lan_access=true` causes `auto` to evaluate to `all_except_health` | Disable `allow_lan_access`, or make the client carry the key |
 | You think "I clearly sent x-api-key", but still get 401 | Also sent a mismatching `Authorization`, middleware prioritizes that | Remove extra Headers, keep only one you're sure is correct |
 | `Authorization: Bearer<key>` still gets 401 | Missing space after `Bearer`, cannot strip by `Bearer ` prefix | Change to `Authorization: Bearer <key>` |
@@ -150,7 +150,7 @@ curl -i http://127.0.0.1:8045/v1/models \
 > Updated: 2026-01-23
 
 | Feature | File Path | Line Numbers |
-| ----------- | ---------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | ProxyAuthMode enum | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L5-L18) | 5-18 |
 | ProxyConfig: allow_lan_access/auth_mode/api_key and defaults | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L258) | 174-258 |
 | auto mode parsing (effective_auth_mode) | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L1-L30) | 1-30 |

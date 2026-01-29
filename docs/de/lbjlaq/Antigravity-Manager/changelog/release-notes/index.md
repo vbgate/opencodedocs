@@ -84,7 +84,7 @@ Führen Sie den Fluss aus **[Lokalen Reverse-Proxy starten und ersten Client ans
 ## Zusammenfassung neuerer Versionen (aus README)
 
 | Version | Datum | Punkte, die Sie beachten sollten |
-| --- | --- | --- |
+|--- | --- | ---|
 | `v3.3.49` | 2026-01-22 | Denkunterbrechung und 0-Token-Verteidigung; Entfernung von `gemini-2.5-flash-lite` und Hinweis zum manuellen Ersetzen benutzerdefinierter Mappings; Sprache/Theme-Einstellungen wirken sofort; Monitoring-Dashboard-Verbesserungen; OAuth-Kompatibilitätserhöhung |
 | `v3.3.48` | 2026-01-21 | Hintergrundprozess unter Windows läuft im Hintergrund (behebt Konsolenflackern) |
 | `v3.3.47` | 2026-01-21 | Bildgenerierungsparameter-Mapping-Verbesserung (`size`/`quality`); Cloudflared-Tunnel-Unterstützung; Behebung von Startfehlern durch Merge-Konflikte; dreischichtige progressive Kontextkomprimierung |
@@ -106,11 +106,11 @@ Suchen Sie vorrangig nach zwei Arten von Sätzen:
 > Aktualisierungszeit: 2026-01-23
 
 | Inhalt | Dateipfad | Zeilennummer |
-| --- | --- | --- |
-| README-eingebetteter Changelog (Versionsverlauf) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L324-L455) | 324-455 |
-| About-Seite zeigt Versionsnummer und "Update prüfen"-Button | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L821-L954) | 821-954 |
-| About-Seite "Update prüfen"-Befehl gibt Rückgabestruktur zurück | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L187-L215) | 187-215 |
-| Auto-Update-Benachrichtigung (Download und Neustart) | [`src/components/UpdateNotification.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/UpdateNotification.tsx#L33-L96) | 33-96 |
-| Aktuelle Versionsnummer (Build-Metadaten) | [`package.json`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/package.json#L1-L4) | 1-4 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 </details>

@@ -38,7 +38,7 @@ The `openskills list` command is designed to solve these confusions—it's like 
 ## When to Use This Approach
 
 | Scenario | Action |
-|----------|--------|
+|--- | ---|
 | Confirm successful installation after installing a skill | Run `openskills list` to check if the skill appears |
 | Switch to a new project and check available skills | Run `openskills list` to see which project skills are available |
 | Take inventory before cleaning up skills | Run `openskills list` to list all skills, then delete unneeded ones |
@@ -116,7 +116,7 @@ Understanding what each line represents helps you quickly locate the information
 Output format explanation:
 
 | Part | Description |
-|------|-------------|
+|--- | ---|
 | `pdf` | Skill name (extracted from the `name` field in SKILL.md) |
 | `(project)` | Location tag: blue indicates project-level skill, gray indicates global skill |
 | `Comprehensive PDF...` | Skill description (extracted from the `description` field in SKILL.md) |
@@ -239,7 +239,7 @@ Core rules:
 > Updated: 2026-01-24
 
 | Function | File Path | Line Numbers |
-| --------- | --------- | ------------ |
+|--- | --- | ---|
 | list command implementation | [`src/commands/list.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/list.ts) | 7-43 |
 | Find all skills | [`src/utils/skills.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skills.ts) | 30-64 |
 | Search directory configuration | [`src/utils/dirs.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/dirs.ts) | 18-25 |

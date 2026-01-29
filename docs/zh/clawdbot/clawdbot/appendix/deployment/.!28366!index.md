@@ -39,7 +39,7 @@ order: 360
 ## 什么时候用这一招
 
 | 部署方式 | 适用场景 |
-|---------|---------|
+|--- | ---|
 | **本地安装** | 个人电脑、开发测试、快速上手 |
 | **Docker** | 隔离环境、服务器部署、快速重建 |
 | **Nix** | 可重现部署、已用 NixOS/Home Manager、需要版本回滚 |
@@ -434,7 +434,7 @@ primary_region = "iad"
 **关键设置说明**：
 
 | 设置 | 原因 |
-|-----|------|
+|--- | ---|
 | `--bind lan` | 绑定到 `0.0.0.0`，让 Fly 的代理可以访问 Gateway |
 | `--allow-unconfigured` | 在没有配置文件的情况下启动（你会在之后创建） |
 | `internal_port = 3000` | 必须匹配 `--port 3000`（或 `CLAWDBOT_GATEWAY_PORT`）用于 Fly 健康检查 |
@@ -870,15 +870,15 @@ RUN apt-get update && apt-get install -y socat && rm -rf /var/lib/apt/lists/*
 
 # 示例二进制文件 1：Gmail CLI
 RUN curl -L https://github.com/steipete/gog/releases/latest/download/gog_Linux_x86_64.tar.gz \
-  | tar -xz -C /usr/local/bin && chmod +x /usr/local/bin/gog
+|---|
 
 # 示例二进制文件 2：Google Places CLI
 RUN curl -L https://github.com/steipete/goplaces/releases/latest/download/goplaces_Linux_x86_64.tar.gz \
-  | tar -xz -C /usr/local/bin && chmod +x /usr/local/bin/goplaces
+|---|
 
 # 示例二进制文件 3：WhatsApp CLI
 RUN curl -L https://github.com/steipete/wacli/releases/latest/download/wacli_Linux_x86_64.tar.gz \
-  | tar -xz -C /usr/local/bin && chmod +x /usr/local/bin/wacli
+|---|
 
 # 使用相同模式在下面添加更多二进制文件
 
@@ -953,7 +953,7 @@ Clawdbot 在 Docker 中运行，但 Docker 不是真相源。
 所有长期运行的状态必须在重启、重建和重启后保持存活。
 
 | 组件 | 位置 | 持久化机制 | 备注 |
-|---|---|---|---|
+|--- | --- | --- | ---|
 | Gateway config | `/home/node/.clawdbot/` | 主机卷挂载 | 包括 `clawdbot.json`、tokens |
 | Model auth profiles | `/home/node/.clawdbot/` | 主机卷挂载 | OAuth tokens、API keys |
 | Skill configs | `/home/node/.clawdbot/skills/` | 主机卷挂载 | 技能级状态 |
@@ -1143,7 +1143,7 @@ clawdbot health
 ### 根据使用场景选择
 
 | 场景 | 推荐部署 | 原因 |
-|------|---------|------|
+|--- | --- | ---|
 | **个人使用、快速上手** | 本地安装 | 最简单，无需基础设施 |
 | **多设备访问、偶尔关闭** | Fly.io | 24/7 在线，可从任何地方访问 |
 | **完全控制、自有基础设施** | Hetzner VPS | 完全控制、持久化状态、低成本 |
@@ -1262,7 +1262,7 @@ ssh root@YOUR_VPS_IP "docker compose logs -f clawdbot-gateway"
 > 更新时间：2026-01-27
 
 | 功能/章节 | 文件路径 | 行号 |
-|-----------|----------|------|
+|--- | --- | ---|
 | Docker 部署脚本 | [`docker-setup.sh`](https://github.com/clawdbot/clawdbot/blob/main/docker-setup.sh) | 全文 |
 | Docker 镜像定义 | [`Dockerfile`](https://github.com/clawdbot/clawdbot/blob/main/Dockerfile) | 全文 |
 | Docker Compose 配置 | [`docker-compose.yml`](https://github.com/clawdbot/clawdbot/blob/main/docker-compose.yml) | 全文 |

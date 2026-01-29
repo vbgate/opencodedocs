@@ -70,7 +70,7 @@ Para proteger seu assistente de IA, o Clawdbot fornece um **mecanismo de emparel
 **Todos os canais usam `dmPolicy="pairing"` por padrão**, o que significa:
 
 | Política | Comportamento |
-| -------- | ------------- |
+|--- | ---|
 | `pairing` | Remetentes desconhecidos recebem código de emparelhamento, mensagens não são processadas (padrão) |
 | `allowlist` | Apenas permite remetentes da lista `allowFrom` |
 | `open` | Permite todos os remetentes (requer configuração explícita `"*"`) |
@@ -296,7 +296,7 @@ Lembre-se: **o mecanismo de emparelhamento é a base de segurança do Clawdbot**
 > Última atualização: 2026-01-27
 
 | Funcionalidade | Caminho do Arquivo | Linhas |
-| --- | --- | --- |
+|--- | --- | ---|
 | Geração de código de emparelhamento (8 caracteres, exclui caracteres confusos) | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L173-L181) | 173-181 |
 | Armazenamento e TTL de solicitações de emparelhamento (1 hora) | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L11-L14) | 11-14 |
 | Comando de aprovação de emparelhamento | [`src/cli/pairing-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/pairing-cli.ts#L107-L143) | 107-143 |

@@ -36,7 +36,7 @@ Add a `$schema` field at the top of your configuration file to get IDE autocompl
 ## Root-Level Fields
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `$schema` | string | No | - | JSON Schema link for autocompletion |
 | `disabled_mcps` | string[] | No | [] | List of disabled MCPs |
 | `disabled_agents` | string[] | No | [] | List of disabled agents |
@@ -65,7 +65,7 @@ Override built-in agent settings. Each agent supports the following fields:
 ### Common Agent Fields
 
 | Field | Type | Required | Description |
-|-------|------|----------|-------------|
+|--- | --- | --- | ---|
 | `model` | string | No | Override the model used by the agent (deprecated, recommend using category) |
 | `variant` | string | No | Model variant |
 | `category` | string | No | Inherit model and configuration from Category |
@@ -84,7 +84,7 @@ Override built-in agent settings. Each agent supports the following fields:
 ### permission - Agent Permissions
 
 | Field | Type | Required | Values | Description |
-|-------|------|----------|--------|-------------|
+|--- | --- | --- | --- | ---|
 | `edit` | string | No | `ask`/`allow`/`deny` | File edit permission |
 | `bash` | string/object | No | `ask`/`allow`/`deny` or per-command | Bash execution permission |
 | `webfetch` | string | No | `ask`/`allow`/`deny` | Web request permission |
@@ -94,7 +94,7 @@ Override built-in agent settings. Each agent supports the following fields:
 ### Configurable Agents List
 
 | Agent Name | Description |
-|------------|-------------|
+|--- | ---|
 | `sisyphus` | Main orchestrator agent |
 | `prometheus` | Strategic planner agent |
 | `oracle` | Strategic advisor agent |
@@ -104,7 +104,7 @@ Override built-in agent settings. Each agent supports the following fields:
 | `metis` | Pre-planning analysis agent |
 | `momus` | Planning reviewer agent |
 | `atlas` | Main orchestrator agent |
-| `sisyphus-junior` | Category-generated task executor agent |
+|--- | ---|
 
 ### Configuration Example
 
@@ -137,7 +137,7 @@ Define Categories (model abstractions) for dynamic agent composition.
 ### Category Fields
 
 | Field | Type | Required | Description |
-|-------|------|----------|-------------|
+|--- | --- | --- | ---|
 | `description` | string | No | Purpose description of the Category (shown in delegate_task prompt) |
 | `model` | string | No | Override the model used by the Category |
 | `variant` | string | No | Model variant |
@@ -154,14 +154,14 @@ Define Categories (model abstractions) for dynamic agent composition.
 ### thinking Configuration
 
 | Field | Type | Required | Values | Description |
-|-------|------|----------|--------|-------------|
+|--- | --- | --- | --- | ---|
 | `type` | string | Yes | `enabled`/`disabled` | Whether Thinking is enabled |
 | `budgetTokens` | number | No | - | Thinking budget token count |
 
 ### Built-in Categories
 
 | Category | Default Model | Temperature | Description |
-|----------|----------------|-------------|-------------|
+|--- | --- | --- | ---|
 | `visual-engineering` | `google/gemini-3-pro` | 0.7 | Frontend, UI/UX, design tasks |
 | `ultrabrain` | `openai/gpt-5.2-codex` | 0.1 | High-IQ reasoning tasks |
 | `artistry` | `google/gemini-3-pro` | 0.7 | Creative and artistic tasks |
@@ -196,7 +196,7 @@ Control various features of the Claude Code compatibility layer.
 ### Fields
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `mcp` | boolean | No | - | Whether to load `.mcp.json` file |
 | `commands` | boolean | No | - | Whether to load Commands |
 | `skills` | boolean | No | - | Whether to load Skills |
@@ -229,7 +229,7 @@ Control the behavior of the Sisyphus orchestration system.
 ### Fields
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `disabled` | boolean | No | false | Disable Sisyphus orchestration system |
 | `default_builder_enabled` | boolean | No | false | Enable OpenCode-Builder agent |
 | `planner_enabled` | boolean | No | true | Enable Prometheus (Planner) agent |
@@ -255,7 +255,7 @@ Control the concurrency behavior of the background agent management system.
 ### Fields
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `defaultConcurrency` | number | No | - | Default maximum concurrency |
 | `providerConcurrency` | object | No | - | Provider-level concurrency limit (`{providerName: number}`) |
 | `modelConcurrency` | object | No | - | Model-level concurrency limit (`{modelName: number}`) |
@@ -292,7 +292,7 @@ Control the behavior of the Git Master skill.
 ### Fields
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `commit_footer` | boolean | No | true | Add "Ultraworked with Sisyphus" footer to commit messages |
 | `include_co_authored_by` | boolean | No | true | Add "Co-authored-by: Sisyphus" trailer to commit messages |
 
@@ -314,15 +314,15 @@ Select the browser automation provider.
 ### Fields
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `provider` | enum | No | `playwright` | Browser automation provider |
 
 ### provider Available Values
 
 | Value | Description | Installation Requirements |
-|-------|-------------|----------------------------|
+|--- | --- | ---|
 | `playwright` | Use Playwright MCP server | Auto-installed |
-| `agent-browser` | Use Vercel's agent-browser CLI | `bun add -g agent-browser` |
+|--- | --- | ---|
 
 ### Configuration Example
 
@@ -341,7 +341,7 @@ Control Tmux session management behavior.
 ### Fields
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | No | false | Whether to enable Tmux session management |
 | `layout` | enum | No | `main-vertical` | Tmux layout |
 | `main_pane_size` | number | No | 60 | Main pane size (20-80) |
@@ -351,7 +351,7 @@ Control Tmux session management behavior.
 ### layout Available Values
 
 | Value | Description |
-|-------|-------------|
+|--- | ---|
 | `main-horizontal` | Main pane at top, agent panes stacked at bottom |
 | `main-vertical` | Main pane on left, agent panes stacked on right (default) |
 | `tiled` | All panes in equal-sized grid |
@@ -379,7 +379,7 @@ Control the behavior of the Ralph Loop workflow.
 ### Fields
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | No | false | Whether to enable Ralph Loop feature |
 | `default_max_iterations` | number | No | 100 | Default maximum iterations (1-1000) |
 | `state_dir` | string | No | - | Custom state file directory (relative to project root) |
@@ -403,7 +403,7 @@ Control system notification behavior.
 ### Fields
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `force_enable` | boolean | No | false | Force enable session-notification even if external notification plugin detected |
 
 ### Configuration Example
@@ -423,7 +423,7 @@ Control comment checker behavior.
 ### Fields
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `custom_prompt` | string | No | - | Custom prompt to replace default warning message. Use `{{comments}}` placeholder for detected comment XML |
 
 ### Configuration Example
@@ -443,7 +443,7 @@ Control the enablement of experimental features.
 ### Fields
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `aggressive_truncation` | boolean | No | - | Enable more aggressive truncation behavior |
 | `auto_resume` | boolean | No | - | Enable auto-resume (recover from thinking block errors or thinking disable violations) |
 | `truncate_all_tool_outputs` | boolean | No | false | Truncate all tool outputs, not just whitelisted tools |
@@ -452,7 +452,7 @@ Control the enablement of experimental features.
 ### dynamic_context_pruning Configuration
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | No | false | Enable dynamic context pruning |
 | `notification` | enum | No | `detailed` | Notification level: `off` / `minimal` / `detailed` |
 | `turn_protection` | object | No | - | Turn protection configuration |
@@ -462,14 +462,14 @@ Control the enablement of experimental features.
 ### turn_protection Configuration
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | No | true | Enable turn protection |
 | `turns` | number | No | 3 | Protect last N turns of tool outputs (1-10) |
 
 ### strategies Configuration
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `deduplication` | object | No | - | Deduplication strategy configuration |
 | `supersede_writes` | object | No | - | Write supersede strategy configuration |
 | `purge_errors` | object | No | - | Error purge strategy configuration |
@@ -477,20 +477,20 @@ Control the enablement of experimental features.
 ### deduplication Configuration
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | No | true | Remove duplicate tool calls (same tool + same parameters) |
 
 ### supersede_writes Configuration
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | No | true | Prune write inputs on subsequent reads |
 | `aggressive` | boolean | No | false | Aggressive mode: prune ANY write on ANY subsequent read |
 
 ### purge_errors Configuration
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | No | true | Prune error tool inputs after N turns |
 | `turns` | number | No | 5 | Number of turns to prune error tool inputs (1-20) |
 
@@ -574,7 +574,7 @@ Skills support two formats:
 ### Skill Definition Fields
 
 | Field | Type | Required | Description |
-|-------|------|----------|-------------|
+|--- | --- | --- | ---|
 | `description` | string | No | Skill description |
 | `template` | string | No | Skill template |
 | `from` | string | No | Source |
@@ -591,7 +591,7 @@ Skills support two formats:
 ### Built-in Skills
 
 | Skill | Description |
-|-------|-------------|
+|--- | ---|
 | `playwright` | Browser automation (default) |
 | `agent-browser` | Browser automation (Vercel CLI) |
 | `frontend-ui-ux` | Frontend UI/UX design |
@@ -651,7 +651,7 @@ The following fields are used to disable specific feature modules.
 > Last updated: 2026-01-26
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | Configuration Schema Definition | [`src/config/schema.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/master/src/config/schema.ts) | 1-378 |
 | JSON Schema | [`assets/oh-my-opencode.schema.json`](https://github.com/code-yeongyu/oh-my-opencode/blob/master/assets/oh-my-opencode.schema.json) | 1-51200 |
 | Configuration Documentation | [`docs/configurations.md`](https://github.com/code-yeongyu/oh-my-opencode/blob/master/docs/configurations.md) | 1-595 |

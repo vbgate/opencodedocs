@@ -28,7 +28,7 @@ Die KI hat eine Tabelle generiert, aber die Spaltenausrichtung ist nicht sehr sc
 
 ```markdown
 | 名称 | 类型 | 描述 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 用户 | string | 用户名 |
 | 年龄 | number | 年龄 |
 | is_active | boolean | 是否激活 |
@@ -50,7 +50,7 @@ Die Ausrichtung von Markdown-Tabellen wird nicht in jeder Zeile angegeben, sonde
 Die Syntax der Trennzeile ist: `:?-+:?` (Doppelpunkt + Bindestrich + Doppelpunkt)
 
 | Position des Doppelpunkts | Ausrichtung | Beispiel |
-| --- | --- | --- |
+|--- | --- | ---|
 | Links und rechts | Zentriert | `:---:` |
 | Nur rechts | Rechtsbündig | `---:` |
 | Keiner | Linksbündig | `---` oder `:---` |
@@ -77,7 +77,7 @@ Linksbündig ist das Standardverhalten von Tabellen und eignet sich für textbas
 
 ```markdown
 | 名称   | 描述   |
-| :----- | :----- |
+|--- | ---|
 | 用户   | 用户名 |
 ```
 
@@ -116,7 +116,7 @@ Zentriert eignet sich für Status-Tags, kurze Texte, Überschriften und andere I
 
 ```markdown
 | 名称 | 状态 | 描述 |
-| :--- | :---: | :--- |    ← Mittlere Spalte mit :---: für zentriert
+|--- | --- | --- | ---|
 | 用户 | 激活 | 用户名 |
 ```
 
@@ -124,7 +124,7 @@ Zentriert eignet sich für Status-Tags, kurze Texte, Überschriften und andere I
 
 ```markdown
 | 名称   |  状态  | 描述   |
-| :----- | :----: | :----- |
+|--- | --- | ---|
 | 用户   |  激活  | 用户名 |
 ```
 
@@ -149,7 +149,7 @@ Quellcode-Position: `index.ts:213-217`
 Das Format der zentrierten Trennzeile ist: `:` + Bindestrich + `:`
 
 | Zielbreite | Berechnungsformel | Ergebnis |
-| --- | --- | --- |
+|--- | --- | ---|
 | 3 | `:` + ` `-`*1 ` + `:` | `:-:` |
 | 5 | `:` + `-`*3 + `:` | `:---:` |
 | 10 | `:` + `-`*8 + `:` | `:--------:` |
@@ -174,7 +174,7 @@ Rechtsbündig eignet sich für Zahlen, Beträge, Daten und andere Daten, die von
 
 ```markdown
 | 名称   | 价格 | 数量 |
-| :----- | ----: | ---: |
+|--- | --- | ---|
 | 商品   |  99.9 |  100 |
 ```
 
@@ -185,7 +185,7 @@ Zahlen sind rechtsbündig ausgerichtet, was den Größenvergleich erleichtert.
 Das Format der rechtsbündigen Trennzeile ist: Bindestrich + `:`
 
 | Zielbreite | Berechnungsformel | Ergebnis |
-| --- | --- | --- |
+|--- | --- | ---|
 | 3 | `-`*2 + `:` | `--:` |
 | 5 | `-`*4 + `:` | `----:` |
 | 10 | `-`*9 + `:` | `---------:` |
@@ -220,7 +220,7 @@ Quellcode-Position: `index.ts:198-211`
 **Füllregeln**
 
 | Ausrichtung | Linke Füllung | Rechte Füllung | Beispiel (Zielbreite 10, Text "abc") |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | Linksbündig | 0 | totalPadding | `abc       ` |
 | Zentriert | floor(total/2) | total - floor(total/2) | `   abc    ` |
 | Rechtsbündig | totalPadding | 0 | `       abc` |
@@ -230,7 +230,7 @@ Quellcode-Position: `index.ts:198-211`
 `Math.floor(totalPadding / 2)` stellt sicher, dass die linke Füllung eine ganze Zahl ist, und der zusätzliche Platz wird rechts hinzugefügt.
 
 | Zielbreite | Textbreite | totalPadding | Linke Füllung | Rechte Füllung | Ergebnis |
-| --- | --- | --- | --- | --- | --- |
+|--- | --- | --- | --- | --- | ---|
 | 10 | 3 | 7 | 3 (7÷2=3.5→3) | 4 (7-3) | `   abc    ` |
 | 11 | 3 | 8 | 4 (8÷2=4) | 4 (8-4) | `    abc    ` |
 | 12 | 3 | 9 | 4 (9÷2=4.5→4) | 5 (9-4) | `    abc     ` |
@@ -241,7 +241,7 @@ Quellcode-Position: `index.ts:198-211`
 
 ```markdown
 | 名称 | 状态 | 价格 | 描述 |
-| :--- | :---: | ---: | :--- |
+|--- | --- | --- | ---|
 | 商品A | 激活 | 99.9 | 这是一个商品 |
 | 商品B | 停用 | 199.0 | 这是另一个商品 |
 ```
@@ -250,7 +250,7 @@ Quellcode-Position: `index.ts:198-211`
 
 ```markdown
 | 名称   |  状态  | 价格 | 描述         |
-| :----- | :----: | ----: | :----------- |
+|--- | --- | --- | ---|
 | 商品A  |  激活  |  99.9 | 这是一个商品 |
 | 商品B  |  停用  | 199.0 | 这是另一个商品 |
 ```
@@ -258,7 +258,7 @@ Quellcode-Position: `index.ts:198-211`
 **Ausrichtung jeder Spalte**:
 
 | Spaltenname | Trennzeilen-Syntax | Ausrichtung | Erklärung |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | 名称 | `:---` | Linksbündig | Text linksbündig |
 | 状态 | `:---:` | Zentriert | Text zentriert |
 | 价格 | `---:` | Rechtsbündig | Zahlen rechtsbündig |
@@ -288,7 +288,7 @@ Die Trennzeile ist die "Konfiguration", Datenzeilen sind der "Inhalt". Eine Konf
 Die Position der Doppelpunkte in der Trennzeile **muss** mit den Spalten übereinstimmen.
 
 | Falsches Beispiel | Problem |
-| --- | --- |
+|--- | ---|
 | `| :--- | --- |` | Erste Spalte zentriert, zweite Spalte linksbündig (2 Spalten) |
 | `| :--- | ---: | :--- |` | Erste Spalte linksbündig, zweite Spalte rechtsbündig, dritte Spalte linksbündig (3 Spalten) |
 
@@ -298,7 +298,7 @@ Die Anzahl der Spalten in der Trennzeile muss mit der Anzahl der Spalten in der 
 ## Zusammenfassung dieser Lektion
 
 | Ausrichtung | Trennzeilen-Syntax | Anwendungsfall |
-| --- | --- | --- |
+|--- | --- | ---|
 | Linksbündig | `---` oder `:---` | Texte, beschreibende Daten (Standard) |
 | Zentriert | `:---:` | Status-Tags, kurze Texte, Überschriften |
 | Rechtsbündig | `---:` | Zahlen, Beträge, Daten |
@@ -306,7 +306,7 @@ Die Anzahl der Spalten in der Trennzeile muss mit der Anzahl der Spalten in der 
 **Wichtige Funktionen**:
 
 | Funktion | Zweck | Quellcode-Position |
-| --- | --- | --- |
+|--- | --- | ---|
 | `getAlignment()` | Analysiert die Ausrichtung der Trennzeilen-Zelle | 141-149 |
 | `padCell()` | Füllt Zellen auf die angegebene Breite | 198-211 |
 | `formatSeparatorCell()` | Formatiert Trennzeilen-Zellen | 213-217 |
@@ -335,10 +335,10 @@ Die Anzahl der Spalten in der Trennzeile muss mit der Anzahl der Spalten in der 
 > Aktualisiert am: 2026-01-26
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
+|--- | --- | ---|
 | Ausrichtungsanalyse | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L141-L149) | 141-149 |
 | Zellenfüllung | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L198-L211) | 198-211 |
-| Trennzeilen-Formatierung | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L213-L217) | 213-217 |
+|--- | --- | ---|
 | Ausrichtungsanwendung | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L107-L113) | 107-113 |
 
 **Wichtige Funktionen**:

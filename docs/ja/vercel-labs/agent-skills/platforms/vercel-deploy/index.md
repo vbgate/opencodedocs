@@ -181,7 +181,7 @@ To transfer this deployment to your Vercel account, visit Claim URL.
 Vercel Deploy スキルは **40 以上のフレームワーク**を自動的に検出できます：
 
 | カテゴリ | フレームワーク（一部例） |
-| ---- | --------------- |
+|--- | ---|
 | **React** | Next.js, Gatsby, Create React App, Remix |
 | **Vue** | Nuxt, Vitepress, Vuepress |
 | **Svelte** | SvelteKit, Svelte |
@@ -346,7 +346,7 @@ Vercel Deploy スキルにより、デプロイがかつてないほど簡単に
 > 更新日時：2026-01-25
 
 | 機能              | ファイルパス                                                                                             | 行番号     |
-| ----------------- | ---------------------------------------------------------------------------------------------------- | -------- |
+|--- | --- | ---|
 | デプロイスクリプトエントリ      | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 1-250    |
 | フレームワーク検出ロジック      | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 12-156   |
 | パッケージ化と API へのアップロード  | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 208-222  |

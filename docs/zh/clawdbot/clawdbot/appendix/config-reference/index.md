@@ -97,7 +97,7 @@ Clawdbot 配置文件是一个分层对象，包含以下主要配置节：
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `lastTouchedVersion` | string | - | 最后修改此配置的 Clawdbot 版本 |
 | `lastTouchedAt` | string | - | 最后修改此配置的时间（ISO 8601） |
 
@@ -123,7 +123,7 @@ Clawdbot 配置文件是一个分层对象，包含以下主要配置节：
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `shellEnv.enabled` | boolean | `false` | 是否从登录 shell 导入环境变量（仅导入缺失的键） |
 | `shellEnv.timeoutMs` | number | `15000` | shell 环境导入超时（毫秒） |
 | `vars` | object | - | 内联环境变量（键值对） |
@@ -150,7 +150,7 @@ Clawdbot 配置文件是一个分层对象，包含以下主要配置节：
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `lastRunAt` | string | - | 最后运行向导的时间 |
 | `lastRunVersion` | string | - | 最后运行向导时的 Clawdbot 版本 |
 | `lastRunCommit` | string | - | 最后运行向导时的 Git commit hash |
@@ -192,7 +192,7 @@ Clawdbot 配置文件是一个分层对象，包含以下主要配置节：
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `enabled` | boolean | `false` | 启用诊断功能 |
 | `flags` | string[] | - | 诊断标志列表 |
 | `otel.enabled` | boolean | `false` | 启用 OpenTelemetry 遥测 |
@@ -232,7 +232,7 @@ Clawdbot 配置文件是一个分层对象，包含以下主要配置节：
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `level` | string | `info` | 日志级别（`silent` \| `fatal` \| `error` \| `warn` \| `info` \| `debug` \| `trace`） |
 | `file` | string | - | 日志文件路径（默认：`/tmp/clawdbot/clawdbot-YYYY-MM-DD.log`） |
 | `consoleLevel` | string | `info` | 控制台日志级别（与 `level` 选项相同） |
@@ -257,7 +257,7 @@ Clawdbot 配置文件是一个分层对象，包含以下主要配置节：
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `channel` | string | `stable` | 更新通道（`stable` \| `beta` \| `dev`） |
 | `checkOnStart` | boolean | - | 启动时检查更新 |
 
@@ -296,7 +296,7 @@ Clawdbot 配置文件是一个分层对象，包含以下主要配置节：
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `enabled` | boolean | - | 启用浏览器工具 |
 | `controlUrl` | string | - | 浏览器控制 WebSocket URL |
 | `controlToken` | string | - | 浏览器控制认证令牌 |
@@ -338,7 +338,7 @@ UI 自定义配置（Control UI、WebChat）。
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `seamColor` | string | - | Seam 颜色的十六进制值 |
 | `assistant.name` | string | - | 助手显示名称（最多 50 字符） |
 | `assistant.avatar` | string | - | 助手头像路径或 URL（最多 200 字符） |
@@ -389,7 +389,7 @@ UI 自定义配置（Control UI、WebChat）。
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `profiles` | object | - | 配置文件映射（键：配置文件 ID，值：配置） |
 | `profiles.<profileId>.provider` | string | - | 提供商名称 |
 | `profiles.<profileId>.mode` | string | - | 认证模式（`api_key` \| `oauth` \| `token`） |
@@ -492,7 +492,7 @@ AI 模型提供商和配置。
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `mode` | string | - | 模型合并模式（`merge` \| `replace`） |
 | `providers` | object | - | 提供商映射（键：提供商 ID，值：提供商配置） |
 | `providers.<providerId>.baseUrl` | string | - | API 基础 URL |
@@ -664,7 +664,7 @@ AI 模型提供商和配置。
 **默认配置**（`agents.defaults`）：
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `workspace` | string | `~/clawd` | 代理工作区目录 |
 | `repoRoot` | string | - | Git 仓库根目录（用于系统提示） |
 | `skipBootstrap` | boolean | `false` | 跳过工作区引导文件创建 |
@@ -693,7 +693,7 @@ AI 模型提供商和配置。
 **代理列表**（`agents.list`）：
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `id` | string | 必填 | 代理 ID（稳定标识符） |
 | `default` | boolean | `false` | 是否为默认代理（多个时第一个获胜） |
 | `name` | string | - | 代理显示名称 |
@@ -751,7 +751,7 @@ AI 模型提供商和配置。
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `agentId` | string | 必填 | 目标代理 ID（必须在 `agents.list` 中） |
 | `match.channel` | string | 必填 | 匹配的渠道 |
 | `match.accountId` | string | - | 匹配的账户 ID（`*` = 任意账户；省略 = 默认账户） |
@@ -801,7 +801,7 @@ AI 模型提供商和配置。
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `exec.elevated.enabled` | boolean | `false` | 启用提升 bash（`! <cmd>`） |
 | `exec.elevated.allowFrom` | object | - | 每个渠道的提升 allowlist |
 | `browser.enabled` | boolean | - | 启用浏览器工具 |
@@ -826,7 +826,7 @@ AI 模型提供商和配置。
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `strategy` | string | - | 广播策略（`parallel` \| `sequential`） |
 | `<peerId>` | string[] | - | 将消息发送到这些代理（动态键） |
 
@@ -898,7 +898,7 @@ AI 模型提供商和配置。
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `responsePrefix` | string | - | 所有出站回复的前缀（支持模板变量） |
 | `ackReaction` | string | - | 确认入站消息的 emoji |
 | `ackReactionScope` | string | - | 何时发送确认（`group-mentions` \| `group-all` \| `direct` \| `all`） |
@@ -915,7 +915,7 @@ AI 模型提供商和配置。
 **模板变量**（用于 `responsePrefix`）：
 
 | 变量 | 说明 | 示例 |
-|--------|------|------|
+|--- | --- | ---|
 | `{model}` | 短模型名称 | `claude-opus-4-5`，`gpt-4` |
 | `{modelFull}` | 完整模型标识符 | `anthropic/claude-opus-4-5` |
 | `{provider}` | 提供商名称 | `anthropic`，`openai` |
@@ -947,7 +947,7 @@ AI 模型提供商和配置。
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `native` | string | `auto` | 原生命令（`auto` \| `true` \| `false`） |
 | `text` | boolean | `true` | 解析聊天消息中的斜杠命令 |
 | `bash` | boolean | `false` | 允许 `!`（`/bash` 的别名） |
@@ -984,7 +984,7 @@ AI 模型提供商和配置。
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `activation.defaultMode` | string | `auto` | 默认激活模式（`auto` \| `always` \| `manual`） |
 | `activation.defaultDurationMs` | number | - | 默认激活时长（毫秒） |
 | `activation.keepAlive` | boolean | - | 保持活动状态 |
@@ -1012,7 +1012,7 @@ AI 模型提供商和配置。
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `enabled` | boolean | - | 启用 Cron 引擎 |
 | `store` | string | - | Cron 存储文件路径 |
 | `maxConcurrentRuns` | number | - | 最大并发运行数 |
@@ -1056,7 +1056,7 @@ Webhook 和事件转发。
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `enabled` | boolean | - | 启用 Hooks |
 | `path` | string | - | Hooks 目录路径 |
 | `token` | string | - | Webhook 认证令牌 |
@@ -1315,7 +1315,7 @@ Gateway WebSocket 服务器和认证。
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `port` | number | `18789` | Gateway WebSocket 端口 |
 | `mode` | string | `local` | Gateway 模式（`local` \| `remote`） |
 | `bind` | string | - | 绑定地址（`auto` \| `lan` \| `loopback` \| `custom` \| `tailnet`） |
@@ -1382,7 +1382,7 @@ Gateway WebSocket 服务器和认证。
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `allowBundled` | string[] | - | 允许的内置技能列表 |
 | `load.extraDirs` | string[] | - | 额外的技能目录 |
 | `load.watch` | boolean | - | 监视技能文件更改 |
@@ -1417,7 +1417,7 @@ Gateway WebSocket 服务器和认证。
 ```
 
 | 字段 | 类型 | 必填 | 默认值 | 说明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `enabled` | boolean | - | 启用插件系统 |
 | `allow` | string[] | - | 允许的插件列表 |
 | `deny` | string[] | - | 拒绝的插件列表 |
@@ -1526,7 +1526,7 @@ clawdbot doctor --yes
 ## 配置文件路径
 
 | 文件 | 路径 | 说明 |
-|------|--------|------|
+|--- | --- | ---|
 | 主配置 | `~/.clawdbot/clawdbot.json` | 主配置文件 |
 | 环境变量 | `~/.clawdbot/.env` | 全局环境变量 |
 | 工作区环境 | `~/clawd/.env` | 工作区环境变量 |
@@ -1569,7 +1569,7 @@ clawdbot doctor --yes
 > 更新时间：2026-01-27
 
 | 配置节 | 文件路径 | 行号 |
-|---------|-----------|------|
+|--- | --- | ---|
 | 主 Schema | [`src/config/zod-schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.ts) | 1-556 |
 | 核心 Schema | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | 1-300 |
 | 代理 Schema | [`src/config/zod-schema.agents.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.agents.ts) | 1-54 |

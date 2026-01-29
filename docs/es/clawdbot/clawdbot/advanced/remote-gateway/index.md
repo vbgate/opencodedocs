@@ -39,7 +39,7 @@ Es posible que tengas estos problemas:
 **Gateway Remoto** es adecuado para estos escenarios:
 
 | Escenario | Solución recomendada | Motivo |
-| ------ | -------- | ---- |
+|--- | --- | ---|
 | Portátil que entra en suspensión con frecuencia, IA necesaria de forma permanente | **Tailscale Serve + VPS Linux** | El VPS no se suspende, acceso seguro a través de tailnet |
 | Gateway ejecutándose en un equipo de escritorio doméstico, control remoto desde el portátil | **Tunnel SSH** o **Tailscale Serve** | Sesiones y configuración de Gateway unificadas |
 | Necesidad de acceso desde la red pública (pruebas temporales) | **Tailscale Funnel + contraseña** | Exposición rápida, pero requiere protección con contraseña |
@@ -97,7 +97,7 @@ flowchart TD
 ### Tres conceptos clave
 
 | Concepto | Explicación | Ejemplo |
-| ------ | ---- | ---- |
+|--- | --- | ---|
 | **Host del Gateway** | Máquina que ejecuta el servicio Gateway, con sesiones, autenticación, canales y estado | VPS Linux, escritorio doméstico |
 | **Cliente** | Herramienta que se conecta al Gateway (macOS App, CLI, WebChat) | Tu portátil, móvil |
 | **Nodos de dispositivo** | Dispositivos externos conectados mediante el WebSocket de Gateway, que ejecutan operaciones locales del dispositivo | Dispositivo iOS, dispositivo Android, modo nodo de macOS |
@@ -107,7 +107,7 @@ flowchart TD
 Este es el punto de confusión más común:
 
 | Tipo de operación | Dónde se ejecuta | Motivo |
-| -------- | ---------- | ---- |
+|--- | --- | ---|
 | Herramienta `exec` | **Host del Gateway** | Los comandos de Shell se ejecutan en la máquina del Gateway |
 | Herramienta `browser` | **Host del Gateway** (o servidor de control del navegador separado) | El navegador se inicia en la máquina del Gateway |
 | Operaciones de nodo (`camera.snap`, `system.run`) | **Nodos de dispositivo** | Necesitan acceder a recursos locales del dispositivo |
@@ -540,7 +540,7 @@ clawdbot health --url wss://your-funnel-url.ts.net --password your-secure-passwo
 Después de completar cualquiera de las opciones anteriores, verifica lo siguiente:
 
 | Elemento a comprobar | Comando | Resultado esperado |
-| -------- | ------ | -------- |
+|--- | --- | ---|
 | ¿El Gateway se está ejecutando? | `clawdbot gateway status` | ✅ Running |
 | ¿El WebSocket es accesible? | `clawdbot health --url <url>` | ✅ Healthy |
 | ¿Los canales están conectados? | `clawdbot channels status` | ✅ connected |
@@ -667,7 +667,7 @@ ssh -N -L 18790:127.0.0.1:18789 clawdbot-remote
 ### Comparación de configuraciones
 
 | Solución | Seguridad | Alcance del acceso | Complejidad de configuración | Escenario recomendado |
-| ---- | ------ | -------- | ---------- | -------- |
+|--- | --- | --- | --- | ---|
 | Tailscale Serve | ⭐⭐⭐⭐⭐ | Tailnet | Media | **Recomendado**: Gateway siempre activo |
 | Tunnel SSH | ⭐⭐⭐⭐ | Alcance de conexión SSH | Baja | Copia de seguridad universal, control remoto de escritorio doméstico |
 | Tailscale Funnel | ⭐⭐ | Red pública | Baja | Pruebas temporales, Demo |
@@ -702,7 +702,7 @@ ssh -N -L 18790:127.0.0.1:18789 clawdbot-remote
 > Última actualización: 2026-01-27
 
 | Función | Ruta del archivo | Líneas |
-| ----- | -------- | ---- |
+|--- | --- | ---|
 | Esquema de configuración remota de Gateway | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 200-220 |
 | Esquema de configuración de Tailscale de Gateway | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 150-180 |
 | Integración de Tailscale | [`src/infra/tailscale.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/tailscale.ts) | 1-100 |

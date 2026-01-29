@@ -58,7 +58,7 @@ order: 7
 Встроенная в проект логика «автоматическая загрузка + установка» покрывает только следующие комбинации OS/архитектура (другие платформы вернут `Unsupported platform`).
 
 | Операционная система | Архитектура | Состояние поддержки |
-| --- | --- | --- |
+|--- | --- | ---|
 | macOS | Apple Silicon (arm64) | ✅ |
 | macOS | Intel (x86_64) | ✅ |
 | Linux | x86_64 | ✅ |
@@ -68,7 +68,7 @@ order: 7
 ### Сравнение двух режимов
 
 | Характеристика | Режим Quick | Режим Auth |
-| --- | --- | --- |
+|--- | --- | ---|
 | **Тип URL** | `https://xxx.trycloudflare.com`（временный URL, извлечённый из журналов） | Приложение не обязательно может автоматически извлечь URL (зависит от журналов cloudflared); домен входа основан на вашей конфигурации в Cloudflare |
 | **Нужен Token** | ❌ Не нужен | ✅ Нужен (получить из консоли Cloudflare) |
 | **Стабильность** | URL может меняться при перезапуске процесса | Зависит от того, как вы настроили на стороне Cloudflare (приложение только отвечает за запуск процесса) |
@@ -138,7 +138,7 @@ Get-ChildItem "$HOME\.antigravity_tools\bin\"
 2. Нажмите для выбора:
 
 | Режим | Описание | Когда выбирать |
-| --- | --- | --- |
+|--- | --- | ---|
 | **Quick Tunnel** | Автоматически генерировать временный URL（`*.trycloudflare.com`） | Быстрое тестирование, временный доступ |
 | **Named Tunnel** | Использовать аккаунт Cloudflare и пользовательский домен | Производственная среда, потребность в фиксированном домене |
 
@@ -378,12 +378,12 @@ print(response.choices[0].message.content)
 > Обновлено: 2026-01-23
 
 | Функция | Путь к файлу | Строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Имя каталога данных（`.antigravity_tools`） | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | Структура конфигурации и значения по умолчанию（`CloudflaredConfig`、`TunnelMode`） | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L16-L59) | 16-59 |
 | Правила автоматического URL загрузки（поддерживаемые OS/архитектура） | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L70-L88) | 70-88 |
 | Логика установки（загрузка/запись/распаковка/права） | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L147-L211) | 147-211 |
-| Параметры запуска Quick/Auth（`tunnel --url` vs `tunnel run --token`） | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L233-L266) | 233-266 |
+|--- | --- | ---|
 | Правило извлечения URL（только распознаёт `*.trycloudflare.com`） | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L390-L413) | 390-413 |
 | Интерфейс команд Tauri（check/install/start/stop/get_status） | [`src-tauri/src/commands/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/cloudflared.rs#L6-L118) | 6-118 |
 | Карточка UI（режим/Token/HTTP2/отображение и копирование URL） | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L1597-L1753) | 1597-1753 |

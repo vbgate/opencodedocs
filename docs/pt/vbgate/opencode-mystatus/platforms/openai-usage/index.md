@@ -45,7 +45,7 @@ Quando você:
 O OpenAI tem dois tipos de janelas de limitação de taxa para chamadas de API:
 
 | Tipo de janela | Duração | Função |
-| -------------- | ------- | ------ |
+|--- | --- | ---|
 | **Janela principal** (primary) | Retornado pelo servidor OpenAI | Evitar um grande número de chamadas em curto período |
 | **Janela secundária** (secondary) | Retornado pelo servidor OpenAI (pode não existir) | Evitar uso excessivo a longo prazo |
 
@@ -143,7 +143,7 @@ Account:        user@example.com (plus)
 Verifique se você entendeu:
 
 | Cenário | O que você deve ver |
-| ------- | ------------------ |
+|--- | ---|
 | Janela principal 60% restante | Barra de progresso aproximadamente 60% cheia, exibe `60% remaining` |
 | Redefinir após 2.5 horas | Exibe `Resets in: 2h 30m` |
 | Limite atingido | Exibe `Limit reached!` |
@@ -211,12 +211,12 @@ O mystatus consulta a cota chamando a API oficial OpenAI:
 > Data de atualização: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Número da linha |
-| ------------- | ----------------- | --------------- |
+|--- | --- | ---|
 | Entrada de consulta de cota OpenAI | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L207-L236) | 207-236 |
 | Chamada de API OpenAI | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L132-L155) | 132-155 |
 | Formatação de saída | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L164-L194) | 164-194 |
 | Análise de token JWT | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L64-L73) | 64-73 |
-| Extração de e-mail do usuário | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L78-L81) | 78-81 |
+|--- | --- | ---|
 | Verificação de expiração de token | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L216-L221) | 216-221 |
 | Definição de tipo OpenAIAuthData | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L28-L33) | 28-33 |
 

@@ -64,7 +64,7 @@ Le proxy enregistre `GET /healthz` dans le routage (voir `src-tauri/src/proxy/se
 `auto` n'est pas une « stratégie indépendante », il calcule le mode réel à exécuter selon `allow_lan_access`.
 
 | `proxy.auth_mode` | Condition supplémentaire | Valeur effective (effective mode) |
-| --- | --- | --- |
+|--- | --- | ---|
 | `off` | - | `off` |
 | `strict` | - | `strict` |
 | `all_except_health` | - | `all_except_health` |
@@ -119,7 +119,7 @@ curl -i http://127.0.0.1:8045/v1/models \
 ## Pièges courants (tous se produisent réellement dans le code source)
 
 | Phénomène | Vraie cause | Comment corriger |
-| --- | --- | --- |
+|--- | --- | ---|
 | `auth_mode=auto`, mais l'appel local renvoie toujours 401 | `allow_lan_access=true` fait que `auto` prend effet comme `all_except_health` | Désactivez `allow_lan_access`, ou faites porter une clé au client |
 | Vous pensez « j'ai bien porté x-api-key », mais toujours 401 | Portez simultanément un `Authorization` non correspondant, le middleware le privilégie | Supprimez l'en-tête en trop, ne gardez qu'un que vous êtes sûr correct |
 | `Authorization: Bearer<key>` toujours 401 | Il manque un espace après `Bearer`, impossible de dépouiller selon le préfixe `Bearer ` | Changez en `Authorization: Bearer <key>` |
@@ -150,11 +150,11 @@ curl -i http://127.0.0.1:8045/v1/models \
 > Heure de mise à jour : 2026-01-23
 
 | Fonction        | Chemin du fichier                                                                                             | Ligne    |
-| ----------- | ---------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Énumération ProxyAuthMode | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L5-L18) | 5-18 |
 | ProxyConfig: allow_lan_access/auth_mode/api_key et valeurs par défaut | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L258) | 174-258 |
 | Analyse du mode auto (effective_auth_mode) | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L1-L30) | 1-30 |
-| Middleware d'authentification (extraction et priorité des en-têtes, exemption /healthz, autorisation OPTIONS) | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L14-L77) | 14-77 |
+|--- | --- | ---|
 | Enregistrement de route /healthz et ordre des middlewares | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L170-L193) | 170-193 |
 | Documentation d'authentification (modes et conventions client) | [`docs/proxy/auth.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy/auth.md#L1-L45) | 1-45 |
 

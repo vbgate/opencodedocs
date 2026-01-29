@@ -40,7 +40,7 @@ order: 210
 **브라우저 도구 사용 시나리오**:
 
 | 시나리오 | Action | 예시 |
-| ---- | ------ | ---- |
+|--- | --- | ---|
 | 양식 자동화 | `act` + `fill` | 등록 양식 작성, 주문 제출 |
 | 웹 스크래핑 | `snapshot` | 웹페이지 구조 추출, 데이터 수집 |
 | 스크린샷 저장 | `screenshot` | 웹페이지 스크린샷 저장, 증거 저장 |
@@ -77,7 +77,7 @@ order: 210
 **두 가지 브라우저 모드**:
 
 | 모드 | Profile | 드라이버 | 설명 |
-| ---- | ------- | ---- | ---- |
+|--- | --- | --- | ---|
 | **독립 브라우저** | `clawd`(기본값) | clawd | Clawdbot이 독립적인 Chrome/Chromium 인스턴스 시작 |
 | **Chrome 릴레이** | `chrome` | extension | 기존 Chrome 탭 제어(확장 프로그램 설치 필요) |
 
@@ -211,7 +211,7 @@ Page snapshot:
 ::: tip 스냅샷 형식 선택
 
 | 형식 | 용도 | 특징 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | `ai` | 기본값, AI 이해 | 가독성이 좋고 AI 구문 분석에 적합 |
 | `aria` | 구조화된 출력 | 정확한 구조가 필요한 시나리오에 적합 |
 | `refs="aria"` | 호출 간 안정적 | 다단계 작업(snapshot → act)에 권장 |
@@ -283,7 +283,7 @@ target: sandbox
 ::: tip 일반적인 UI 작업
 
 | 작업 | Kind | 매개변수 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | 클릭 | `click` | `ref`, `doubleClick`, `button`, `modifiers` |
 | 텍스트 입력 | `type` | `ref`, `text`, `submit`, `slowly` |
 | 키 누르기 | `press` | `key`, `targetId` |
@@ -333,7 +333,7 @@ type: jpeg
 ::: tip 스크린샷 형식
 
 | 형식 | 용도 |
-| ---- | ---- |
+|--- | ---|
 | `png` | 기본값, 무손실 압축, 문서에 적합 |
 | `jpeg` | 손실 압축, 파일 크기가 작음, 저장에 적합 |
 
@@ -535,7 +535,7 @@ Node browser proxy is disabled (gateway.nodes.browser.mode=off).
 **핵심 작업 빠른 참조**:
 
 | 작업 | Action | 핵심 매개변수 |
-| ---- | ------ | -------- |
+|--- | --- | ---|
 | 브라우저 시작 | `start` | `profile`(clawd/chrome) |
 | 웹페이지 열기 | `open` | `targetUrl` |
 | 스냅샷 가져오기 | `snapshot` | `targetId`, `snapshotFormat`, `refs` |
@@ -564,7 +564,7 @@ Node browser proxy is disabled (gateway.nodes.browser.mode=off).
 > 업데이트 날짜: 2026-01-27
 
 | 기능 | 파일 경로 | 행 번호 |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | Browser 도구 정의 | [`src/agents/tools/browser-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/browser-tool.ts) | 269-791 |
 | Browser Schema | [`src/agents/tools/browser-tool.schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/browser-tool.schema.ts) | 1-115 |
 | Action 유형 정의 | [`src/browser/client-actions-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/browser/client-actions-core.ts) | 18-86 |

@@ -93,7 +93,7 @@ Supermemory 会实时监控每个会话的 Token 使用情况。压缩流程由�
 当压缩触发时，Supermemory 会向 Agent 注入一个特殊的 System Prompt（`[COMPACTION CONTEXT INJECTION]`），强制要求总结包含以下 5 个部分：
 
 | 章节 | 内容说明 | 目的 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **1. User Requests** | 用户原始需求（原样保留） | 防止需求漂移 |
 | **2. Final Goal** | 最终要达成的目标 | 明确终局状态 |
 | **3. Work Completed** | 已完成的工作、修改的文件 | 避免重复劳动 |
@@ -228,7 +228,7 @@ opencode run supermemory list --scope project --limit 1
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | 阈值常量定义 | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L11-L14) | 11-14 |
 | 引导 Prompt 生成 | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L58-L98) | 58-98 |
 | 触发检测逻辑 | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L317-L358) | 317-358 |

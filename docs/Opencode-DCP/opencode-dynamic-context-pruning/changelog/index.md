@@ -13,7 +13,7 @@ This chapter records the version evolution history of the DCP plugin, helping yo
 ## Chapter Contents
 
 | Page | Description |
-|------|-------------|
+|--- | ---|
 | [Version History](./version-history/) | View complete update records from v1.0.1 to the latest version, including new features, improvements, and bug fixes |
 
 ## Reading Recommendations

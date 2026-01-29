@@ -88,7 +88,7 @@ graph TB
 Clawdbot 提供三層存取控制：
 
 | 層级 | 保護內容 | 配置位置 |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | **Gateway 認證** | WebSocket 連線 | `gateway.auth` |
 | **DM 策略** | 私聊訊息 | `channels.*.dmPolicy` |
 | **Group 策略** | 群组訊息 | `channels.*.groupPolicy` / `channels.*.groups` |
@@ -119,7 +119,7 @@ clawdbot security audit --fix
 稽核工具会检查以下方面：
 
 | 检查類別别 | 具體專案 | 風險等级 |
-| --------- | ----- | ----- |
+|--- | --- | ---|
 | **入站存取** | Gateway 認證、DM 策略、Group 策略 | Critical / Warn |
 | **工具存取** | Elevated exec 允許清單、工具 allow/deny | Critical / Warn |
 | **網路暴露** | Gateway 繫結模式、Tailscale Serve/Funnel | Critical / Info |
@@ -173,7 +173,7 @@ clawdbot security audit --fix
 **認證模式**：
 
 | 模式 | 用途 | 推薦場景 |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `token` | 共享 bearer token | 大多数情况，推薦 |
 | `password` | 密码認證 | 本地開发，方便快速测试 |
 | Tailscale Identity | Tailscale Serve | 远程存取透過 Tailscale |
@@ -187,7 +187,7 @@ clawdbot security audit --fix
 DM 策略控制陌生使用者是否能直接與你的 AI 助手對話。
 
 | 策略 | 行为 | 推薦場景 |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `pairing`（預設） | 未知發送者收到配对程式碼，配对前不处理 | 個人使用，推薦 |
 | `allowlist` | 未知發送者被拒絕 | 多人可信环境 |
 | `open` | 允許任何人 | 公開服務（需 `allowFrom` 套件含 `"*"`） |
@@ -228,7 +228,7 @@ clawdbot pairing approve whatsapp <配对程式碼>
 Group 策略決定 AI 助手如何在群组中回應訊息。
 
 | 策略 | 行为 | 配置位置 |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `allowlist` | 仅接受白名单中的群组 | `channels.whatsapp.groups` |
 | `disabled` | 忽略所有群组訊息 | `channels.telegram.groups` |
 | `requireMention` | 仅在被 @ 提及或指令触发時回應 | `channels.*.groups.*` |
@@ -307,7 +307,7 @@ Group 策略決定 AI 助手如何在群组中回應訊息。
 ### 常用工具分類別
 
 | 工具類別别 | 具體工具 | 風險等级 |
-| --------- | ----- | ----- |
+|--- | --- | ---|
 | **檔案操作** | `read`、`write`、`edit`、`apply_patch` | 中等 |
 | **Shell 執行** | `exec`、`process` | 高 |
 | **瀏覽器控制** | `browser` | 高 |
@@ -353,7 +353,7 @@ Elevated exec 是一個特殊的逃生口，允許工具在主机上執行，绕
 ### 沙箱模式
 
 | 模式 | 行为 | 推薦場景 |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `off` | 所有工具在主机上執行 | 個人可信环境 |
 | `non-main`（推薦） | 主會話在主机，其他會話在沙箱 | 平衡性能和安全 |
 | `all` | 所有會話在沙箱 | 多人环境、公開服務 |
@@ -375,7 +375,7 @@ Elevated exec 是一個特殊的逃生口，允許工具在主机上執行，绕
 工作区存取決定沙箱容器能看到主机的哪些目錄。
 
 | 存取级别 | 行为 | 推薦場景 |
-| --------- | ----- | ----- |
+|--- | --- | ---|
 | `none`（預設） | 沙箱工作区 `~/.clawdbot/sandboxes` | 最大隔離 |
 | `ro` | 代理工作区只读掛載在 `/agent` | 讀取但不寫入檔案 |
 | `rw` | 代理工作区读写掛載在 `/workspace` | 需要寫入檔案的 Agent |
@@ -397,7 +397,7 @@ Elevated exec 是一個特殊的逃生口，允許工具在主机上執行，绕
 沙箱範圍決定容器隔離粒度。
 
 | 範圍 | 行为 | 容器数量 |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `session`（預設） | 每個會話一個容器 | 较多容器，更好隔離 |
 | `agent` | 每個 Agent 一個容器 | 平衡隔離和资源 |
 | `shared` | 所有會話共享一個容器 | 节省资源，隔離性最低 |
@@ -698,7 +698,7 @@ Elevated exec 是一個特殊的逃生口，允許工具在主机上執行，绕
 ### 最佳實踐总结
 
 | 實踐 | 原因 |
-| ----- | ----- |
+|--- | ---|
 | 預設使用 `pairing` 模式 | 平衡使用者體验和安全 |
 | 群组訊息使用 `requireMention` | 避免被操控 |
 | 使用工具白名单而非黑名单 | 最小權限原则 |
@@ -748,7 +748,7 @@ Elevated exec 是一個特殊的逃生口，允許工具在主机上執行，绕
 > 更新時間：2026-01-27
 
 | 功能 | 檔案路徑 | 行号 |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | 安全稽核 | [`src/security/audit.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/audit.ts#L1-L910) | 1-910 |
 | 安全修復 | [`src/security/fix.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/fix.ts#L1-L385) | 1-385 |
 | 檔案權限检查 | [`src/security/audit-fs.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/audit-fs.ts) | 全檔案 |

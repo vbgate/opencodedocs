@@ -53,7 +53,7 @@ Actually, OpenSkills provides the `--yes/-y` flag specifically for non-interacti
 **Applicable Scenarios for CI/CD Integration**:
 
 | Scenario | Non-interactive Mode Needed? | Example |
-| -------- | --------------------------- | ------- |
+|--- | --- | ---|
 | **GitHub Actions** | ✅ Yes | Automatically install skills on every PR or push |
 | **GitLab CI** | ✅ Yes | Automatically sync AGENTS.md on merge requests |
 | **Docker Build** | ✅ Yes | Automatically install skills to container during image build |
@@ -191,7 +191,7 @@ npx openskills install anthropics/skills -y
 **Comparison Table**:
 
 | Feature | Interactive Mode (Default) | Non-interactive Mode (-y) |
-| ------- | ------------------------- | -------------------------- |
+|--- | --- | ---|
 | **Skill Selection** | Shows selection interface, manual check | Auto-install all found skills |
 | **Overwrite Confirmation** | Asks whether to overwrite existing skills | Auto-overwrite, shows prompt |
 | **TTY Requirement** | Requires interactive terminal | Not needed, can run in CI environment |
@@ -720,10 +720,10 @@ COPY . .
 > Last updated: 2026-01-24
 
 | Feature              | File Path                                                                                                    | Lines   |
-| ----------------- | ----------------------------------------------------------------------------------------------------------- | -------- |
-| Non-interactive installation      | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L424-L455) | 424-455 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Conflict detection and overwrite    | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L521-L550) | 521-550 |
-| Non-interactive sync      | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts#L46-L93)   | 46-93   |
+|--- | --- | ---|
 | Command line parameter definition    | [`src/cli.ts`](https://github.com/numman-ali/openskills/blob/main/src/cli.ts#L49)                          | 49      |
 | Command line parameter definition    | [`src/cli.ts`](https://github.com/numman-ali/openskills/blob/main/src/cli.ts#L65)                          | 65      |
 

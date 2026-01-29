@@ -178,7 +178,7 @@ Antigravity/IDE でログインアカウントを切り替える際、Manager �
 ## トラブルシューティング
 
 | シナリオ | 間違ったやり方（❌） | 推奨されるやり方（✓） |
-| --- | --- | --- |
+|--- | --- | ---|
 | バックアップファイルのセキュリティ | エクスポートされた JSON を通常の設定ファイルとして手放しに配布する | JSON をパスワードとして扱い、伝播範囲を最小限にし、パブリックネットワークへの露出を避ける |
 | JSON インポート失敗 | JSON が配列ではない、または refresh_token に `1//` 接頭辞がない | プロジェクトからエクスポートされた JSON をテンプレートとして使用し、フィールド名と構造を一致させる |
 | DB インポートでデータが見つからない | Antigravity がログインしていない、または DB に `jetskiStateSync.agentManagerInitState` が不足している | 最初に Antigravity/IDE がログインしていることを確認し、インポートを再試行する。必要に応じて Custom DB で正しいファイルを選択する |
@@ -210,14 +210,14 @@ Antigravity/IDE でログインアカウントを切り替える際、Manager �
 > 更新日時：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Accounts エクスポート/インポート JSON（`save_text_file` / `read_text_file`） | [`src/pages/Accounts.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Accounts.tsx#L458-L578) | 458-578 |
 | Dashboard でアカウント JSON をエクスポート | [`src/pages/Dashboard.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Dashboard.tsx#L113-L148) | 113-148 |
 | Import タブ：DB インポート / Custom DB / V1 インポートボタン | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L491-L539) | 491-539 |
 | アカウント追加：フロントエンド email を無視、refresh_token を使用して実際のメールアドレスを取得し、自動クォータ更新、Proxy ホットリロード | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L19-L60) | 19-60 |
-| V1 インポート：`~/.antigravity-agent` をスキャンし、複数形式と互換性 | [`src-tauri/src/modules/migration.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/migration.rs#L9-L190) | 9-190 |
+|--- | --- | ---|
 | DB インポート：`state.vscdb` から refresh_token を抽出（ItemTable + base64 + protobuf） | [`src-tauri/src/modules/migration.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/migration.rs#L192-L267) | 192-267 |
-| デフォルト DB パス導出（`--user-data-dir` / portable / 標準パス） | [`src-tauri/src/modules/db.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/db.rs#L18-L63) | 18-63 |
+|--- | --- | ---|
 | DB インポート後、自動的に「現在のアカウント」に設定し、クォータを更新 | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L495-L511) | 495-511 |
 | auto_sync：refresh_token を比較し、同じ場合はスキップ、変更がある場合は DB インポートをトリガー | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L532-L564) | 532-564 |
 | フロントエンドバックグラウンドタスク：`sync_interval` に従って定期的に `syncAccountFromDb()` を呼び出し | [`src/components/common/BackgroundTaskRunner.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/common/BackgroundTaskRunner.tsx#L43-L72) | 43-72 |

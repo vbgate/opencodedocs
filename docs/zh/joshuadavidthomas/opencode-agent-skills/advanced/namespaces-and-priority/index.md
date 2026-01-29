@@ -56,7 +56,7 @@ order: 3
 OpenCode Agent Skills 支持多个技能来源，每个来源都有对应的标签：
 
 | 来源 | 标签（label） | 路径 | 说明 |
-|------|---------------|------|------|
+|--- | --- | --- | ---|
 | **OpenCode 项目级** | `project` | `.opencode/skills/` | 当前项目专用的技能 |
 | **Claude 项目级** | `claude-project` | `.claude/skills/` | Claude Code 兼容的项目技能 |
 | **OpenCode 用户级** | `user` | `~/.config/opencode/skills/` | 所有项目共享的通用技能 |
@@ -344,7 +344,7 @@ OpenCode Agent Skills 的命名空间系统通过标签和优先级规则，实�
 > 更新时间：2026-01-24
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | SkillLabel 类型定义 | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L30) | 30 |
 | 发现优先级列表 | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L241-L246) | 241-246 |
 | 同名技能去重逻辑 | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L258-L259) | 258-259 |

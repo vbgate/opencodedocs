@@ -43,7 +43,7 @@ O opencode-supermemory é extremamente contido, acionando a injeção automátic
 O plugin obtém paralelamente três tipos de dados, combinando-os em um bloco de prompt `[SUPERMEMORY]`:
 
 | Dimensão de Dados | Origem | Função | Exemplo |
-| :--- | :--- | :--- | :--- |
+|--- | --- | --- | ---|
 | **1. Perfil do Usuário** (Profile) | `getProfile` | Suas preferências de longo prazo | "Usuário prefere programação funcional", "prefere arrow functions" |
 | **2. Conhecimento do Projeto** (Project) | `listMemories` | Conhecimento global do projeto atual | "Este projeto usa Clean Architecture", "API está em src/api" |
 | **3. Memórias Relevantes** (Relevant) | `searchMemories` | Experiências passadas relacionadas à sua primeira frase | Você pergunta "como corrigir este Bug", ele busca registros de correções anteriores semelhantes |
@@ -180,9 +180,9 @@ Após modificar a configuração, você precisa reiniciar o OpenCode ou recarreg
 > Última atualização: 2026-01-23
 
 | Funcionalidade | Caminho do Arquivo | Linhas |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Lógica de disparo de injeção | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L125-L176) | 125-176 |
-| Detecção de palavras-chave | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L34-L37) | 34-37 |
+|--- | --- | ---|
 | Formatação do Prompt | [`src/services/context.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/context.ts#L14-L64) | 14-64 |
 | Configuração padrão | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L44-L54) | 44-54 |
 

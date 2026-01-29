@@ -56,7 +56,7 @@ Antigravity Tools 的中介程式會優先讀取 `Authorization`，也相容 `x-
 ### 相容端點速覽（本課相關）
 
 | 端點 | 用途 | 程式碼證據 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `POST /v1/chat/completions` | Chat Completions（含串流） | `src-tauri/src/proxy/server.rs` 路由註冊；`src-tauri/src/proxy/handlers/openai.rs` |
 | `POST /v1/completions` | Legacy Completions（複用同一處理器） | `src-tauri/src/proxy/server.rs` 路由註冊 |
 | `POST /v1/responses` | Responses/Codex CLI 相容（複用同一處理器） | `src-tauri/src/proxy/server.rs` 路由註冊（註解：相容 Codex CLI） |
@@ -203,16 +203,16 @@ OpenAI 處理器內建最多 3 次嘗試（並受帳號池大小限制），遇�
 > 更新時間：2026-01-23
 
 | 功能 | 檔案路徑 | 行號 |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI 路由註冊（含 /v1/responses） | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | Chat Completions 處理器（含 Responses 格式偵測） | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L70-L462) | 70-462 |
 | /v1/completions 與 /v1/responses 處理器（Codex/Responses 正規化 + 重試/輪換） | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L464-L1080) | 464-1080 |
 | /v1/models 的回傳（動態模型列表） | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L1082-L1102) | 1082-1102 |
 | OpenAI 請求資料結構（messages/instructions/input/size/quality） | [`src-tauri/src/proxy/mappers/openai/models.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/models.rs#L7-L38) | 7-38 |
-| OpenAI -> Gemini 請求轉換（systemInstruction/thinkingConfig/tools） | [`src-tauri/src/proxy/mappers/openai/request.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/request.rs#L6-L553) | 6-553 |
-| Gemini -> OpenAI 回應轉換（choices/usageMetadata） | [`src-tauri/src/proxy/mappers/openai/response.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/response.rs#L5-L214) | 5-214 |
+|--- | --- | ---|
+|--- | --- | ---|
 | 模型對應與萬用字元優先級（精確 > 萬用字元 > 預設） | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L180-L228) | 180-228 |
-| 驗證中介程式（Authorization/x-api-key/x-goog-api-key） | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L15-L77) | 15-77 |
+|--- | --- | ---|
 
 **關鍵常數**：
 - `MAX_RETRY_ATTEMPTS = 3`：OpenAI 協定最大嘗試次數（含輪換）（見 `src-tauri/src/proxy/handlers/openai.rs`）

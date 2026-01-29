@@ -73,7 +73,7 @@ Si estás en modo `auth_mode=strict/all_except_health/auto(allow_lan_access=true
 Las rutas de proxy inverso de Antigravity Tools están "codificadas con rutas completas" (consulta `src-tauri/src/proxy/server.rs`), y los puntos de entrada comunes son:
 
 | Protocolo | Ruta | Uso |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI | `/v1/models` | Listar modelos |
 | OpenAI | `/v1/chat/completions` | Completado de chat |
 | OpenAI | `/v1/responses` | Compatibilidad con Codex CLI |
@@ -122,7 +122,7 @@ Invoke-WebRequest -UseBasicParsing http://127.0.0.1:8045/v1beta/models | Select-
 El problema de Base URL es esencialmente que "la ruta que escribiste" y "la ruta que agrega el cliente" se superponen.
 
 | Lo que estás usando | Recomendación de Base URL | Ruta con la que te alineas |
-| --- | --- | --- |
+|--- | --- | ---|
 | SDK de OpenAI (Python/Node, etc.) | `http://127.0.0.1:8045/v1` | `/v1/chat/completions`, `/v1/models` |
 | Claude Code CLI (Anthropic) | `http://127.0.0.1:8045` | `/v1/messages` |
 | SDK de Gemini / cliente en modo Gemini | `http://127.0.0.1:8045` | `/v1beta/models/*` |
@@ -170,7 +170,7 @@ http://127.0.0.1:8045/v1/chat/completions
 Puedes usar esta tabla para verificar rápidamente si tu "ruta de solicitud final" puede coincidir con las rutas de Antigravity Tools:
 
 | Ruta que ves en los registros | Conclusión |
-| --- | --- |
+|--- | ---|
 | Empieza con `/v1/` (por ejemplo `/v1/models`, `/v1/chat/completions`) | Usa rutas compatibles con OpenAI/Anthropic |
 | Empieza con `/v1beta/` (por ejemplo `/v1beta/models/...`) | Usa rutas nativas de Gemini |
 | Aparece `/v1/v1/` | La Base URL incluye `/v1` y el cliente la concatenó nuevamente |
@@ -207,7 +207,7 @@ Puedes usar esta tabla para verificar rápidamente si tu "ruta de solicitud fina
 ## Resumen de esta lección
 
 | Síntoma | Causa más común | Cómo corregirlo |
-| --- | --- | --- |
+|--- | --- | ---|
 | Siempre 404 | Concatenación incorrecta de Base URL | Primero usa curl para verificar que `/v1/models`/`/v1beta/models` no son 404 |
 | `/v1/v1/...` | `/v1` duplicado | La Base URL del SDK de OpenAI debe terminar en `/v1` |
 | `/v1/chat/completions/responses` | Cliente de rutas superpuestas | Cambia al protocolo Gemini o haz reescritura de rutas (no recomendado para principiantes) |
@@ -233,7 +233,7 @@ Puedes usar esta tabla para verificar rápidamente si tu "ruta de solicitud fina
 > Actualizado: 2026-01-23
 
 | Función | Ruta del archivo | Líneas |
-| --- | --- | --- |
+|--- | --- | ---|
 | Definición de rutas de proxy inverso (tabla de rutas completa) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L193) | 120-193 |
 | `AxumServer::start()` (entrada de construcción de rutas) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L79-L216) | 79-216 |
 | `health_check_handler()` | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L266-L272) | 266-272 |

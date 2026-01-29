@@ -47,7 +47,7 @@ These three principles work together to ensure your data is secure throughout th
 The plugin only reads two local configuration files, both in **read-only mode**:
 
 | File Path | Purpose | Source Location |
-| --------- | ------- | --------------- |
+|--- | --- | ---|
 | `~/.local/share/opencode/auth.json` | OpenCode official authentication storage | `mystatus.ts:35` |
 | `~/.config/opencode/antigravity-accounts.json` | Antigravity plugin account storage | `google.ts` (read logic) |
 
@@ -130,7 +130,7 @@ Even if you share a screenshot of the query results with others, your real API K
 The plugin only calls **official APIs** from each platform, without passing through any third-party servers:
 
 | Platform | API Endpoint | Purpose |
-| -------- | ----------- | ------- |
+|--- | --- | ---|
 | OpenAI | `https://chatgpt.com/backend-api/wham/usage` | Quota query |
 | Zhipu AI | `https://bigmodel.cn/api/monitor/usage/quota/limit` | Token limit query |
 | Z.ai | `https://api.z.ai/api/monitor/usage/quota/limit` | Token limit query |
@@ -189,7 +189,7 @@ export async function fetchWithTimeout(
 ### What the Plugin Will NOT Do
 
 | Operation | Plugin Behavior |
-| --------- | --------------- |
+|--- | ---|
 | Store data | ❌ Does not store any user data |
 | Upload data | ❌ Does not upload any data to third-party servers |
 | Cache results | ❌ Does not cache query results |
@@ -199,7 +199,7 @@ export async function fetchWithTimeout(
 ### What the Plugin WILL Do
 
 | Operation | Plugin Behavior |
-| --------- | --------------- |
+|--- | ---|
 | Read files | ✅ Read-only local authentication files |
 | Call APIs | ✅ Only call official API endpoints |
 | Mask display | ✅ Automatically hide sensitive information like API Keys |
@@ -265,7 +265,7 @@ No. The plugin has no telemetry or data collection functionality and does not tr
 > Last updated: 2026-01-23
 
 | Function | File Path | Lines |
-| --------- | --------- | ----- |
+|--- | --- | ---|
 | Authentication file reading | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts#L38-L40) | 38-40 |
 | API masking function | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L130-L135) | 130-135 |
 | Request timeout configuration | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L114) | 114 |

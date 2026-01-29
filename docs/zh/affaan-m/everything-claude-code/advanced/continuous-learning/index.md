@@ -209,7 +209,7 @@ Claude 提示文件已保存：
 **配置说明**：
 
 | 字段 | 说明 | 推荐值 |
-|------|------|--------|
+|--- | --- | ---|
 | `min_session_length` | 最小会话长度（用户消息数） | 10 |
 | `extraction_threshold` | 提取阈值 | medium |
 | `auto_approve` | 是否自动保存（推荐 false） | false |
@@ -253,7 +253,7 @@ Stop hook 会在每次会话结束时自动触发，无需手动运行 `/learn`�
 **脚本路径说明**：
 
 | 平台 | 脚本路径 |
-|------|---------|
+|--- | ---|
 | macOS/Linux | `~/.claude/skills/continuous-learning/evaluate-session.sh` |
 | Windows | `C:\Users\YourName\.claude\skills\continuous-learning\evaluate-session.cmd` |
 
@@ -529,7 +529,7 @@ mv ~/.claude/skills/learned/*types*.md ~/.claude/skills/learned/types/
 > 更新时间：2026-01-25
 
 | 功能                  | 文件路径                                                                                                  | 行号     |
-| --------------------- | --------------------------------------------------------------------------------------------------------- | -------- |
+|--- | --- | ---|
 | /learn 命令定义       | [`commands/learn.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/learn.md)         | 1-71     |
 | Continuous Learning Skill | [`skills/continuous-learning/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/continuous-learning/SKILL.md) | 1-81     |
 | Stop Hook 脚本        | [`scripts/hooks/evaluate-session.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/hooks/evaluate-session.js) | 1-79     |
@@ -547,7 +547,7 @@ mv ~/.claude/skills/learned/*types*.md ~/.claude/skills/learned/types/
 
 **配置项**：
 | 配置项                | 类型    | 默认值                      | 说明                               |
-| --------------------- | ------- | --------------------------- | ---------------------------------- |
+|--- | --- | --- | ---|
 | `min_session_length`  | number  | 10                          | 最小会话长度（用户消息数）          |
 | `extraction_threshold` | string  | "medium"                    | 提取阈值                           |
 | `auto_approve`        | boolean | false                       | 是否自动保存（推荐 false）          |

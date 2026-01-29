@@ -44,7 +44,7 @@ La salida de mystatus tiene un formato unificado, pero hay diferencias entre pla
 
 **Diferencias por plataforma**:
 | Plataforma | Ciclo de límite | Características |
-| -------------- | --------------------------- | ----------------------- |
+|--- | --- | ---|
 | OpenAI | 3 horas / 24 horas | Puede mostrar dos ventanas |
 | Zhipu AI / Z.ai | Token de 5 horas / cuota mensual de MCP | Dos tipos diferentes de límite |
 | GitHub Copilot | Mensual | Muestra valores numéricos específicos (229/300) |
@@ -209,7 +209,7 @@ Quota resets: 19d 0h (2026-02-01)
 
 **Diferencias por tipo de suscripción**:
 | Tipo de suscripción | Cuota mensual | Descripción |
-| ---------- | -------- | ---------------------- |
+|--- | --- | ---|
 | Free | N/A | Sin límite de cuota, pero funciones limitadas |
 | Pro | 300 | Versión personal estándar |
 | Pro+ | Mayor | Versión mejorada |
@@ -236,7 +236,7 @@ G3 Image   4h 59m     ███████████████████�
 
 **Explicación de los 4 modelos**:
 | Nombre del modelo | API Key correspondiente | Uso |
-| -------- | ---------------------------------------------- | ----------- |
+|--- | --- | ---|
 | G3 Pro | `gemini-3-pro-high` / `gemini-3-pro-low` | Razonamiento avanzado |
 | G3 Image | `gemini-3-pro-image` | Generación de imágenes |
 | G3 Flash | `gemini-3-flash` | Generación rápida |
@@ -252,7 +252,7 @@ G3 Image   4h 59m     ███████████████████�
 ### Malentendidos comunes
 
 | Malentendido | Realidad |
-| ------------------------- | -------------------------------------- |
+|--- | ---|
 | Barra de progreso completamente sólida = no usado | Barra sólida llena = **más restante**, puedes usar con confianza |
 | Tiempo de restablecimiento corto = cuota casi agotada | Tiempo de restablecimiento corto = se restablecerá pronto, puedes continuar usando |
 | Porcentaje 100% = agotado | Porcentaje 100% = **completamente restante** |
@@ -296,7 +296,7 @@ mystatus es una herramienta **solo de lectura**, no consume tu cuota ni activa n
 > Fecha de actualización: 2026-01-23
 
 | Función | Ruta de archivo | Línea |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Generación de barra de progreso | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L40-L53) | 40-53 |
 | Formato de tiempo | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L18-L29) | 18-29 |
 | Cálculo de porcentaje restante | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L63-L65) | 63-65 |

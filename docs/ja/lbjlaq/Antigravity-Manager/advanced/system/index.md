@@ -226,7 +226,7 @@ Invoke-RestMethod "http://127.0.0.1:19527/logs?limit=50&offset=0&filter=&errors_
 > 更新日時：2026-01-23
 
 | テーマ | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | i18n 初期化とフォールバック | [`src/i18n.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/i18n.ts#L1-L67) | 1-67 |
 | Settings：言語/テーマ/起動時自動起動/更新設定/HTTP API 設定 | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L16-L730) | 16-730 |
 | App：言語同期 + 起動時更新チェックトリガ | [`src/App.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/App.tsx#L52-L124) | 52-124 |

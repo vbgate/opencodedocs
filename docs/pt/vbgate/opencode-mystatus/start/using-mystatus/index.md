@@ -134,7 +134,7 @@ Abra `~/.config/opencode/opencode.json`, encontre a parte `command`:
 **Explicação dos itens de configuração principais**:
 
 | Item de configuração | Valor | Função |
-| ------------------- | ----- | ------ |
+|--- | --- | ---|
 | `description` | "Query quota usage for all AI accounts" | Descrição exibida na lista de comandos |
 | `template` | "Use to mystatus tool..." | Instrui o OpenCode como processar este comando |
 
@@ -146,7 +146,7 @@ O template é uma "instrução" para o OpenCode, dizendo: quando o usuário digi
 Confirme se você dominou os dois métodos de uso:
 
 | Habilidade | Método de verificação | Resultado esperado |
-| ---------- | ------------------- | ------------------ |
+|--- | --- | ---|
 | Consulta com comando de barra | Digitar `/mystatus` | Exibe informações de cota de todas as plataformas |
 | Consulta em linguagem natural | Digitar "Check my OpenAI quota" | Exibe informações de cota |
 | Entender a configuração | Ver opencode.json | Encontrar a configuração do comando mystatus |
@@ -212,7 +212,7 @@ Ambos os métodos consultam paralelamente a cota de todas as plataformas de IA c
 > Data de atualização: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Número da linha |
-| ------------- | ----------------- | --------------- |
+|--- | --- | ---|
 | Definição da ferramenta mystatus | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 29-33 |
 | Descrição da ferramenta | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 30-31 |
 | Configuração de comando de barra | [`command/mystatus.md`](https://github.com/vbgate/opencode-mystatus/blob/main/command/mystatus.md) | 1-6 |

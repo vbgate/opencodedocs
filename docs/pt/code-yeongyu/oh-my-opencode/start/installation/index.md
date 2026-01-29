@@ -316,7 +316,7 @@ Em seguida, siga os prompts:
 Quando o GitHub Copilot é o melhor provedor disponível, o oh-my-opencode usa a seguinte atribuição de modelo:
 
 | Agente        | Modelo                          |
-| ------------ | ------------------------------ |
+|--- | ---|
 | **Sisyphus** | `github-copilot/claude-opus-4.5` |
 | **Oracle**   | `github-copilot/gpt-5.2`       |
 | **Explore**  | `opencode/gpt-5-nano`           |
@@ -344,7 +344,7 @@ bunx oh-my-opencode install --no-tui \
 **Descrição dos parâmetros**:
 
 | Parâmetro           | Valor           | Descrição                                        |
-| ------------------ | --------------- | -------------------------------------------------- |
+|--- | --- | ---|
 | `--no-tui`         | -               | Desabilitar interface interativa (deve especificar outros parâmetros) |
 | `--claude`         | `yes/no/max20`  | Status da assinatura Claude                           |
 | `--openai`         | `yes/no`        | Assinatura OpenAI/ChatGPT (GPT-5.2 para Oracle)    |
@@ -556,7 +556,7 @@ O plugin alterna automaticamente entre contas para evitar esgotamento de conta �
 **Solução**: Confirmar localização do arquivo de configuração
 
 | Tipo de Configuração | Caminho do Arquivo | Prioridade |
-| ----------- | --------- | -------- |
+|--- | --- | ---|
 | **Configuração do usuário** | `~/.config/opencode/oh-my-opencode.json` | Alta |
 | **Configuração do projeto** | `.opencode/oh-my-opencode.json` | Baixa |
 
@@ -592,7 +592,7 @@ Se a configuração do usuário e a configuração do projeto existirem, **a con
 > Atualizado: 2026-01-26
 
 | Recurso         | Caminho do Arquivo                                                                                              | Linha   |
-| --------------- | ------------------------------------------------------------------------------------------------------ | ------ |
+|--- | --- | ---|
 | Entrada de instalação CLI | [`src/cli/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/master/src/cli/index.ts)         | 22-60  |
 | Instalador interativo | [`src/cli/install.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/master/src/cli/install.ts)     | 1-400+ |
 | Gerenciador de configuração  | [`src/cli/config-manager.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/master/src/cli/config-manager.ts) | 1-200+ |

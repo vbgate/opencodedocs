@@ -93,7 +93,7 @@ Supermemory는 각 세션의 Token 사용 상황을 실시간 모니터링합니
 압축이 트리거될 때, Supermemory는 Agent에 특수한 System Prompt(`[COMPACTION CONTEXT INJECTION]`)를 주입하여 요약이 다음 5개 부분을 포함하도록 강제:
 
 | 섹션 | 내용 설명 | 목적 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **1. User Requests** | 사용자의 원래 요구사항(원문 유지) | 요구사항 드리프트 방지 |
 | **2. Final Goal** | 최종적으로 달성하려는 목표 | 최종 상태 명확히 |
 | **3. Work Completed** | 완료된 작업, 수정된 파일 | 중복 노동 방지 |
@@ -228,7 +228,7 @@ opencode run supermemory list --scope project --limit 1
 > 업데이트: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | 임계값 상수 정의 | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L11-L14) | 11-14 |
 | 안내 Prompt 생성 | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L58-L98) | 58-98 |
 | 트리거 감지 로직 | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L317-L358) | 317-358 |

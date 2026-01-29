@@ -82,7 +82,7 @@ Run with merged configuration
 #### notifyChildSessions
 
 | Option | Type | Default | Description |
-| ------ | ---- | ------ | ----------- |
+|--- | --- | --- | ---|
 | `notifyChildSessions` | boolean | `false` | Whether to notify for child sessions |
 
 **Purpose**: Controls whether to send notifications for child sessions (sub-sessions).
@@ -120,7 +120,7 @@ Focus detection feature only works on macOS. Windows and Linux do not support th
 #### sounds
 
 | Option | Type | Default | Platform Support | Description |
-| ------ | ---- | ------ | ---------------- | ----------- |
+|--- | --- | --- | --- | ---|
 | `sounds.idle` | string | `"Glass"` | ✅ macOS | Task completion sound |
 | `sounds.error` | string | `"Basso"` | ✅ macOS | Error notification sound |
 | `sounds.permission` | string | `"Submarine"` | ✅ macOS | Permission request sound |
@@ -131,7 +131,7 @@ Focus detection feature only works on macOS. Windows and Linux do not support th
 **Available Sound List**:
 
 | Sound Name | Characteristic | Recommended Use Case |
-| ---------- | -------------- | ------------------- |
+|--- | --- | ---|
 | Glass | Light, crisp | Task completion (default) |
 | Basso | Low-pitched, warning | Error notification (default) |
 | Submarine | Alert, gentle | Permission request (default) |
@@ -164,7 +164,7 @@ Focus detection feature only works on macOS. Windows and Linux do not support th
 #### quietHours
 
 | Option | Type | Default | Description |
-| ------ | ---- | ------ | ----------- |
+|--- | --- | --- | ---|
 | `quietHours.enabled` | boolean | `false` | Whether to enable quiet hours |
 | `quietHours.start` | string | `"22:00"` | Quiet hours start time (HH:MM format) |
 | `quietHours.end` | string | `"08:00"` | Quiet hours end time (HH:MM format) |
@@ -194,7 +194,7 @@ Quiet hours has the highest priority. Even if other conditions are met, no notif
 #### terminal
 
 | Option | Type | Default | Description |
-| ------ | ---- | ------ | ----------- |
+|--- | --- | --- | ---|
 | `terminal` | string | Not set | Manually specify terminal type (override auto-detection) |
 
 **Purpose**: Manually specify your terminal emulator type, overriding the plugin's auto-detection.
@@ -210,7 +210,7 @@ Quiet hours has the highest priority. Even if other conditions are met, no notif
 **Common Terminal Values**:
 
 | Terminal App | Configuration Value |
-| ------------ | ------------------- |
+|--- | ---|
 | Ghostty | `"ghostty"` |
 | Kitty | `"kitty"` |
 | iTerm2 | `"iterm2"` |
@@ -232,7 +232,7 @@ Quiet hours has the highest priority. Even if other conditions are met, no notif
 Different platforms have different levels of support for configuration options:
 
 | Configuration Option | macOS | Windows | Linux |
-| ------------------- | ----- | ------- | ----- |
+|--- | --- | --- | ---|
 | `notifyChildSessions` | ✅ | ✅ | ✅ |
 | Focus Detection (hardcoded) | ✅ | ❌ | ❌ |
 | `sounds.*` | ✅ | ❌ | ❌ |
@@ -408,7 +408,7 @@ If the configuration file format is incorrect:
 **Common JSON Errors**:
 
 | Error Type | Example | Fix Method |
-| ---------- | ------- | ---------- |
+|--- | --- | ---|
 | Missing comma | `"key1": "value1" "key2": "value2"` | Add comma: `"key1": "value1",` |
 | Extra comma | `"key1": "value1",}` | Remove last comma: `"key1": "value1"}` |
 | Unclosed quotes | `"key": value` | Add quotes: `"key": "value"` |
@@ -426,7 +426,7 @@ This lesson provides a complete configuration reference for opencode-notify:
 **Core Configuration Options**:
 
 | Configuration Option | Purpose | Default Value | Platform Support |
-| ------------------- | ------- | ------------- | ---------------- |
+|--- | --- | --- | ---|
 | `notifyChildSessions` | Child session notification toggle | `false` | All platforms |
 | Focus Detection | Terminal focus suppression (hardcoded) | No configuration | macOS only |
 | `sounds.*` | Custom sounds | See individual fields | macOS only |
@@ -462,7 +462,7 @@ This lesson provides a complete configuration reference for opencode-notify:
 > Last updated: 2026-01-27
 
 | Feature | File Path | Lines |
-| ------- | --------- | ----- |
+|--- | --- | ---|
 | Configuration interface definition | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L30-L48) | 30-48 |
 | Default configuration | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L56-L68) | 56-68 |
 | Configuration file loading | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L91-L114) | 91-114 |

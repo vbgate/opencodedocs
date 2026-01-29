@@ -20,7 +20,7 @@ order: 2
 Plannotator 使用 TypeScript 定义了以下核心数据模型：
 
 | 模型 | 用途 | 定义位置 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `Annotation` | 计划评审中的注释 | [`packages/ui/types.ts:11-33`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L11-L33) |
 | `Block` | Markdown 解析后的内容块 | [`packages/ui/types.ts:35-44`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L35-L44) |
 | `CodeAnnotation` | 代码评审中的注释 | [`packages/ui/types.ts:55-66`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L55-L66) |
@@ -72,7 +72,7 @@ export enum AnnotationType {
 ### 字段说明
 
 | 字段 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `id` | string | ✅ | 唯一标识符，通常为自动生成的 UUID |
 | `blockId` | string | ✅ | 关联的 `Block` ID（已废弃，保留兼容性） |
 | `startOffset` | number | ✅ | 起始字符偏移量（已废弃，保留兼容性） |
@@ -163,7 +163,7 @@ type BlockType =
   | 'paragraph'     // 段落
   | 'heading'       // 标题
   | 'blockquote'    // 引用块
-  | 'list-item'     // 列表项
+|---|
   | 'code'          // 代码块
   | 'hr'            // 分割线
   | 'table';        // 表格
@@ -172,7 +172,7 @@ type BlockType =
 ### 字段说明
 
 | 字段 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `id` | string | ✅ | 唯一标识符，格式为 `block-{数字}` |
 | `type` | BlockType | ✅ | 块类型（paragraph/heading/blockquote/list-item/code/hr/table） |
 | `content` | string | ✅ | 块的纯文本内容 |
@@ -273,7 +273,7 @@ export type CodeAnnotationType =
 ### 字段说明
 
 | 字段 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `id` | string | ✅ | 唯一标识符 |
 | `type` | CodeAnnotationType | ✅ | 注释类型（comment/suggestion/concern） |
 | `filePath` | string | ✅ | 被注释文件的相对路径（如 `src/auth.ts`） |
@@ -290,7 +290,7 @@ export type CodeAnnotationType =
 `side` 字段对应 [@pierre/diffs](https://www.npmjs.com/package/@pierre/diffs) 库的 diff 视图：
 
 | side 值 | @pierre/diffs 对应 | 说明 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `'old'` | `deletions` | 删除的行（旧版本中的内容） |
 | `'new'` | `additions` | 新增的行（新版本中的内容） |
 
@@ -345,7 +345,7 @@ export type ShareableAnnotation =
 ### 类型说明
 
 | 类型 | 首字符 | 元组结构 | 说明 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | DELETION | `'D'` | `['D', original, author?, images?]` | 删除内容 |
 | REPLACEMENT | `'R'` | `['R', original, replacement, author?, images?]` | 替换内容 |
 | COMMENT | `'C'` | `['C', original, comment, author?, images?]` | 评论内容 |
@@ -394,7 +394,7 @@ export interface SharePayload {
 ### 字段说明
 
 | 字段 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `p` | string | ✅ | 原始计划的 Markdown 内容 |
 | `a` | ShareableAnnotation[] | ✅ | 注释数组（使用 `ShareableAnnotation` 精简格式） |
 | `g` | string[] | ❌ | 全局附件路径（不关联具体注释的图片） |
@@ -556,7 +556,7 @@ function exportDiff(blocks: Block[], annotations: Annotation[]): string
 > 更新时间：2026-01-24
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Annotation 接口 | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L11-L33) | 11-33 |
 | AnnotationType 枚举 | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L1-L7) | 1-7 |
 | Block 接口 | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L35-L44) | 35-44 |

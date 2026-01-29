@@ -168,7 +168,7 @@ Plannotator 會讀取 Bear 設定，如果已啟用，會在批准的同時呼�
 Plannotator 會智慧產生標籤，讓你在 Bear 中快速檢索計畫。以下是標籤的產生規則：
 
 | 標籤來源 | 範例 | 優先順序 |
-|---------|------|---------|
+|--- | --- | ---|
 | 固定標籤 | `#plannotator` | 必選 |
 | 專案名稱 | `#myproject`、`#plannotator` | 必選 |
 | H1 關鍵字 | `#authentication`、`#api` | 可選（最多 3 個） |
@@ -203,7 +203,7 @@ Plannotator 會智慧產生標籤，讓你在 Bear 中快速檢索計畫。以�
 ## 與 Obsidian 整合對比
 
 | 特性 | Bear 整合 | Obsidian 整合 |
-|-----|----------|--------------|
+|--- | --- | ---|
 | 設定複雜度 | 簡單（僅開關） | 中等（需要選擇 vault 和資料夾） |
 | 儲存位置 | Bear 應用程式內 | 指定 vault 路徑 |
 | 檔案名稱 | Bear 自動管理 | `Title - Mon D, YYYY H-MMam.md` |
@@ -244,7 +244,7 @@ Plannotator 會智慧產生標籤，讓你在 Bear 中快速檢索計畫。以�
 > 更新時間：2026-01-24
 
 | 功能        | 檔案路徑                                                                                    | 行號    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Bear 設定介面 | [`packages/server/integrations.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/integrations.ts#L18-L20) | 18-20   |
 | 儲存到 Bear | [`packages/server/integrations.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/integrations.ts#L234-L257) | 234-257 |
 | 標籤擷取     | [`packages/server/integrations.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/integrations.ts#L34-L74) | 34-74   |

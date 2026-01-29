@@ -40,7 +40,7 @@ You have an AI assistant, but it can only interact with you through text. You wa
 **Canvas + A2UI** is suitable for these scenarios:
 
 | Scenario | Example |
-|----------|---------|
+|--- | ---|
 | **Data Visualization** | Display charts, progress bars, timelines |
 | **Interactive Forms** | Let users confirm actions, select options |
 | **Status Panels** | Real-time task progress, system status |
@@ -334,7 +334,7 @@ clawdbot nodes canvas hide --node abc123-def456-ghi789
 **Verify Canvas functionality works properly**:
 
 | Check Item | Verification Method |
-|-----------|---------------------|
+|--- | ---|
 | Canvas Host running | `lsof -i :18793` has output |
 | Node Canvas capability | `clawdbot nodes list` shows `canvas` |
 | Page loads successfully | Node displays HTML content |
@@ -400,7 +400,7 @@ In this lesson, you learned:
 > Last updated: 2026-01-27
 
 | Function | File Path | Lines |
-|----------|-----------|-------|
+|--- | --- | ---|
 | Canvas Host Server | [`src/canvas-host/server.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/server.ts) | 372-441 |
 | A2UI Protocol Handler | [`src/canvas-host/a2ui.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/a2ui.ts) | 150-203 |
 | Canvas Tool Definition | [`src/agents/tools/canvas-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/canvas-tool.ts) | 52-179 |

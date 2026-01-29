@@ -41,7 +41,7 @@ order: 3
 ## 适用场景
 
 | 场景 | 推荐教程 |
-|------|---------|
+|--- | ---|
 | 使用多个 Google 账号 | [Google Cloud 配置](./google-setup/) |
 | Copilot 额度查询失败 | [Copilot 认证配置](./copilot-auth/) |
 | 想切换输出语言 | [多语言支持](./i18n-setup/) |

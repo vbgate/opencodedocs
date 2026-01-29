@@ -178,7 +178,7 @@ Antigravity Tools 的「遷移」本質上就兩件事：
 ## 踩坑提醒
 
 | 場景 | 你可能會怎麼做（❌） | 推薦做法（✓） |
-| --- | --- | --- |
+|--- | --- | ---|
 | 備份檔案安全 | 把匯出的 JSON 當普通設定檔隨手發出去 | 把 JSON 當密碼，最小化傳播範圍，避免公網暴露 |
 | JSON 匯入失敗 | JSON 不是陣列，或 refresh_token 沒有 `1//` 前綴 | 用本專案匯出的 JSON 作為範本，保持欄位名與結構一致 |
 | DB 匯入找不到資料 | Antigravity 沒有登入過，或 DB 裡缺少 `jetskiStateSync.agentManagerInitState` | 先確認 Antigravity/IDE 已登入，再嘗試匯入；必要時用 Custom DB 選對檔案 |
@@ -210,14 +210,14 @@ Antigravity Tools 的「遷移」本質上就兩件事：
 > 更新時間：2026-01-23
 
 | 功能 | 檔案路徑 | 行號 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Accounts 匯出/匯入 JSON（`save_text_file` / `read_text_file`） | [`src/pages/Accounts.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Accounts.tsx#L458-L578) | 458-578 |
 | Dashboard 匯出帳號 JSON | [`src/pages/Dashboard.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Dashboard.tsx#L113-L148) | 113-148 |
 | Import 標籤頁：DB 匯入 / Custom DB / V1 匯入按鈕 | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L491-L539) | 491-539 |
 | 新增帳號：忽略前端 email、用 refresh_token 取得真實信箱、自動刷新配額、Proxy 熱 reload | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L19-L60) | 19-60 |
-| V1 匯入：掃描 `~/.antigravity-agent` 與多格式相容 | [`src-tauri/src/modules/migration.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/migration.rs#L9-L190) | 9-190 |
+|--- | --- | ---|
 | DB 匯入：從 `state.vscdb` 提取 refresh_token（ItemTable + base64 + protobuf） | [`src-tauri/src/modules/migration.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/migration.rs#L192-L267) | 192-267 |
-| 預設 DB 路徑推導（`--user-data-dir` / portable / 標準路徑） | [`src-tauri/src/modules/db.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/db.rs#L18-L63) | 18-63 |
+|--- | --- | ---|
 | DB 匯入後自動設為「目前帳號」並刷新配額 | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L495-L511) | 495-511 |
 | auto_sync：比較 refresh_token，相同直接跳過；變化則觸發 DB 匯入 | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L532-L564) | 532-564 |
 | 前端背景工作：按 `sync_interval` 週期性呼叫 `syncAccountFromDb()` | [`src/components/common/BackgroundTaskRunner.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/common/BackgroundTaskRunner.tsx#L43-L72) | 43-72 |

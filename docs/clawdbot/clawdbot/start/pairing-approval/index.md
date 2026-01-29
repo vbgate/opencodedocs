@@ -70,7 +70,7 @@ To protect your AI assistant, Clawdbot provides a **pairing mechanism**:
 **All channels use `dmPolicy="pairing"` by default**, which means:
 
 | Policy | Behavior |
-| ------ | ---- |
+|--- | ---|
 | `pairing` | Unknown senders receive a pairing code, message is not processed (default) |
 | `allowlist` | Only allow senders in the `allowFrom` list |
 | `open` | Allow all senders (requires explicit configuration `"*"`) |
@@ -296,7 +296,7 @@ Remember: **The pairing mechanism is the security foundation of Clawdbot**, ensu
 > Updated: 2026-01-27
 
 | Function | File Path | Line Numbers |
-| --- | --- | --- |
+|--- | --- | ---|
 | Pairing code generation (8 characters, excludes confusing characters) | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L173-L181) | 173-181 |
 | Pairing request storage and TTL (1 hour) | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L11-L14) | 11-14 |
 | Approve pairing command | [`src/cli/pairing-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/pairing-cli.ts#L107-L143) | 107-143 |

@@ -103,7 +103,7 @@ The separator row is the line between the header and data rows, used to define a
 Each cell must match the regex `/^\s*:?-+:?\s*$/`, which translates to:
 
 | Component | Meaning | Example |
-| --- | --- | --- |
+|--- | --- | ---|
 | `\s*` | Optional whitespace | Allows `| --- |` or `|---|` |
 | `:?` | Optional colon | Used to specify alignment method |
 | `-+` | At least one dash | `-`, `---`, `------` all work |
@@ -145,12 +145,12 @@ If the first row has 3 columns, every subsequent row must also have 3 columns.
 ```markdown
 ✅ Correct (each row has 3 columns)
 | A | B | C |
-| --- | --- | --- |
+|--- | --- | ---|
 | 1 | 2 | 3 |
 
 ❌ Wrong (third row only has 2 columns)
 | A | B | C |
-| --- | --- | --- |
+|--- | --- | ---|
 | 1 | 2 |
 ```
 
@@ -181,7 +181,7 @@ Source location: `index.ts:70-88`
 The separator row is not only for separation, but also for specifying alignment methods:
 
 | Syntax | Alignment | Effect |
-| --- | --- | --- |
+|--- | --- | ---|
 | `---` or `:---` | Left-aligned | Text aligned left (default) |
 | `:---:` | Center-aligned | Text centered |
 | `---:` | Right-aligned | Text aligned right |
@@ -190,7 +190,7 @@ The separator row is not only for separation, but also for specifying alignment 
 
 ```markdown
 | Left-aligned | Center | Right-aligned |
-| :--- | :---: | ---: |
+|--- | --- | ---|
 | Text | Text | Text |
 ```
 
@@ -198,7 +198,7 @@ After formatting:
 
 ```markdown
 | Left-aligned |  Center  | Right-aligned |
-| :------------ | :------: | -------------: |
+|--- | --- | ---|
 | Text         |  Text    |          Text |
 ```
 
@@ -220,7 +220,7 @@ Source location: `index.ts:141-149`
 ## Common Error Troubleshooting
 
 | Error Symptom | Possible Cause | Solution |
-| --- | --- | --- |
+|--- | --- | ---|
 | `invalid structure` | Missing separator row | Add `\| --- \| --- \|` after the header |
 | `invalid structure` | Inconsistent column count | Check if each row has the same number of `\|` |
 | `invalid structure` | Missing leading/trailing `\|` | Add the missing `\|` |
@@ -239,7 +239,7 @@ After completing this lesson, you should be able to answer:
 ## Lesson Summary
 
 | Condition | Requirement |
-| --- | --- |
+|--- | ---|
 | Leading/trailing | Must start and end with `\|` |
 | Separator count | At least 2 `\|` |
 | Separator row | Must have, format is `:?-+:?` |
@@ -268,7 +268,7 @@ After completing this lesson, you should be able to answer:
 > Last updated: 2026-01-26
 
 | Function | File path | Line number |
-| --- | --- | --- |
+|--- | --- | ---|
 | Table row detection | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61) | 58-61 |
 | Separator row detection | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L63-L68) | 63-68 |
 | Table validation | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88) | 70-88 |

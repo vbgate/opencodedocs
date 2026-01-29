@@ -108,7 +108,7 @@ supermemory(mode: "list", scope: "project")
 Agent가 다음과 같은 구조화된 메모리 목록을 표시합니다:
 
 | 유형 | 예시 내용 |
-| :--- | :--- |
+|--- | ---|
 | `project-config` | "Uses Bun runtime. Build command: bun run build" |
 | `architecture` | "API routes are located in src/routes/, using Hono framework" |
 | `preference` | "Strict TypeScript usage: no 'any' type allowed" |
@@ -162,7 +162,7 @@ Agent가 확인 응답을 보내고 `supermemory(mode: "add")`를 호출하여 �
 > 업데이트: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | 초기화 Prompt 정의 | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L13-L163) | 13-163 |
 | 메모리 도구 구현 | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
 

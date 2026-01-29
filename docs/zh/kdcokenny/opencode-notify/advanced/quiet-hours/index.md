@@ -90,7 +90,7 @@ notepad $env:USERPROFILE\.config\opencode\kdco-notify.json
 **配置项说明**：
 
 | 配置项 | 类型 | 默认值 | 说明 |
-|-------|------|--------|------|
+|--- | --- | --- | ---|
 | `enabled` | boolean | `false` | 是否启用静音时段 |
 | `start` | string | `"22:00"` | 静音开始时间，格式为 `"HH:MM"` |
 | `end` | string | `"08:00"` | 静音结束时间，格式为 `"HH:MM"` |
@@ -334,7 +334,7 @@ graph TD
 > 更新时间：2026-01-27
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 静音时段检查 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L181-L199) | 181-199 |
 | 配置接口定义 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L30-L48) | 30-48 |
 | 默认配置 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L56-L68) | 56-68 |

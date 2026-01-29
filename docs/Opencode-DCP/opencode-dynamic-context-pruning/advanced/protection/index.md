@@ -118,7 +118,7 @@ state.currentTurn - turnCounter < turnProtectionTurns
 ### Recommended Configuration
 
 | Scenario                     | Recommended Turns | Explanation                             |
-| ------------------------ | ---------- | -------------------------------- |
+|--- | --- | ---|
 | Long conversations (10+ turns)      | 4-6        | Give AI enough time to reference historical content       |
 | Short conversations (< 5 turns)      | 2-3        | No need for too long a protection period               |
 | Highly context-dependent tasks     | 6-8        | Like code refactoring, long document analysis         |
@@ -137,7 +137,7 @@ Turn protection increases context size because more tool outputs will be retaine
 DCP protects the following tools by default, which are **never** pruned:
 
 | Tool Name       | Explanation                             |
-| ------------ | -------------------------------- |
+|--- | ---|
 | `task`       | Task management tool                       |
 | `todowrite`  | Write todo items                     |
 | `todoread`   | Read todo items                     |
@@ -256,7 +256,7 @@ Add to your configuration file:
 DCP supports standard Glob patterns:
 
 | Pattern       | Explanation                       | Example Match Paths                           |
-| ---------- | -------------------------- | -------------------------------------- |
+|--- | --- | ---|
 | `**`       | Match directories at any level         | `src/`, `src/components/`, `a/b/c/`   |
 | `*`        | Match any file under a single directory   | `src/*.ts` matches `src/index.ts`        |
 | `?`        | Match a single character             | `file?.txt` matches `file1.txt`, `file2.txt` |
@@ -530,7 +530,7 @@ DCP's protection mechanism includes three layers:
 > Last updated: 2026-01-23
 
 | Feature             | File Path                                                                                              | Line Numbers     |
-| ---------------- | --------------------------------------------------------------------------------------------------- | -------- |
+|--- | --- | ---|
 | Turn protection logic     | [`lib/state/tool-cache.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/state/tool-cache.ts#L39-L44) | 39-44    |
 | Default protected tools   | [`lib/config.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/config.ts#L68-L79)         | 68-79    |
 | Protected file matching   | [`lib/protected-file-patterns.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/protected-file-patterns.ts#L77-L82) | 77-82    |

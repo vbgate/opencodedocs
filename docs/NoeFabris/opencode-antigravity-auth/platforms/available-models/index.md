@@ -50,7 +50,7 @@ These models are accessed with the `antigravity-` prefix and use the Antigravity
 
 #### Gemini 3 Pro
 | Model Name | Variants | Thinking Levels | Description |
-|------------|----------|-----------------|-------------|
+|--- | --- | --- | ---|
 | `antigravity-gemini-3-pro` | low, high | low, high | Balances quality and speed |
 
 **Variant Configuration Examples**:
@@ -64,7 +64,7 @@ opencode run "Complex reasoning" --model=google/antigravity-gemini-3-pro --varia
 
 #### Gemini 3 Flash
 | Model Name | Variants | Thinking Levels | Description |
-|------------|----------|-----------------|-------------|
+|--- | --- | --- | ---|
 | `antigravity-gemini-3-flash` | minimal, low, medium, high | minimal, low, medium, high | Ultra-fast response, supports 4 thinking levels |
 
 **Variant Configuration Examples**:
@@ -87,7 +87,7 @@ opencode run "Complex analysis" --model=google/antigravity-gemini-3-flash --vari
 
 #### Claude Sonnet 4.5 (Non-Thinking)
 | Model Name | Variants | Thinking Budget | Description |
-|------------|----------|-----------------|-------------|
+|--- | --- | --- | ---|
 | `antigravity-claude-sonnet-4-5` | — | — | Standard mode, no extended thinking |
 
 **Usage Example**:
@@ -98,7 +98,7 @@ opencode run "Daily conversation" --model=google/antigravity-claude-sonnet-4-5
 
 #### Claude Sonnet 4.5 Thinking
 | Model Name | Variants | Thinking Budget (tokens) | Description |
-|------------|----------|--------------------------|-------------|
+|--- | --- | --- | ---|
 | `antigravity-claude-sonnet-4-5-thinking` | low, max | 8192 (low) / 32768 (max) | Balanced mode |
 
 **Variant Configuration Examples**:
@@ -112,7 +112,7 @@ opencode run "Deep analysis" --model=google/antigravity-claude-sonnet-4-5-thinki
 
 #### Claude Opus 4.5 Thinking
 | Model Name | Variants | Thinking Budget (tokens) | Description |
-|------------|----------|--------------------------|-------------|
+|--- | --- | --- | ---|
 | `antigravity-claude-opus-4-5-thinking` | low, max | 8192 (low) / 32768 (max) | Strongest reasoning capability |
 
 **Variant Configuration Examples**:
@@ -135,7 +135,7 @@ opencode run "Expert-level analysis" --model=google/antigravity-claude-opus-4-5-
 These models don't have the `antigravity-` prefix and use the Gemini CLI API's separate quota pool. They don't support thinking mode.
 
 | Model Name | Description |
-|------------|-------------|
+|--- | ---|
 | `gemini-2.5-flash` | Gemini 2.5 Flash (fast response) |
 | `gemini-2.5-pro` | Gemini 2.5 Pro (balances quality and speed) |
 | `gemini-3-flash-preview` | Gemini 3 Flash Preview (preview version) |
@@ -157,7 +157,7 @@ opencode run "Preview model testing" --model=google/gemini-3-pro-preview
 ## Model Comparison Overview
 
 | Feature | Claude 4.5 | Gemini 3 | Gemini 2.5 |
-|---------|-----------|----------|-----------|
+|--- | --- | --- | ---|
 | **Thinking Support** | ✅ (thinkingBudget) | ✅ (thinkingLevel) | ❌ |
 | **Google Search** | ❌ | ✅ | ✅ |
 | **Quota Pool** | Antigravity | Antigravity + Gemini CLI | Gemini CLI |
@@ -178,7 +178,7 @@ opencode run "Preview model testing" --model=google/gemini-3-pro-preview
 ### Which Thinking Level?
 
 | Level | Claude (tokens) | Gemini 3 | Use Cases |
-|-------|-----------------|----------|-----------|
+|--- | --- | --- | ---|
 | **minimal** | — | Flash only | Ultra-fast tasks like translation, summarization |
 | **low** | 8192 | Pro/Flash | Balances quality and speed, suitable for most tasks |
 | **medium** | — | Flash only | Moderately complex tasks |
@@ -312,7 +312,7 @@ When choosing models, consider your task type (reasoning vs search), complexity 
 > Updated: 2026-01-23
 
 | Feature | File Path | Line Numbers |
-|---------|-----------|--------------|
+|--- | --- | ---|
 | Model parsing and tier extraction | [`src/plugin/transform/model-resolver.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/model-resolver.ts) | 177-282 |
 | Thinking tier budget definitions | [`src/plugin/transform/model-resolver.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/model-resolver.ts) | 14-19 |
 | Gemini 3 thinking level definitions | [`src/plugin/transform/model-resolver.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/model-resolver.ts) | 26 |

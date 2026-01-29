@@ -50,7 +50,7 @@ OpenCode 的 variant 系统让你不用为每个 thinking 级别定义独立模�
 
 #### Gemini 3 Pro
 | 模型名 | Variants | Thinking 级别 | 说明 |
-|--------|----------|----------------|------|
+|--- | --- | --- | ---|
 | `antigravity-gemini-3-pro` | low, high | low, high | 平衡质量和速度 |
 
 **Variant 配置示例**：
@@ -64,7 +64,7 @@ opencode run "复杂推理" --model=google/antigravity-gemini-3-pro --variant=hi
 
 #### Gemini 3 Flash
 | 模型名 | Variants | Thinking 级别 | 说明 |
-|--------|----------|----------------|------|
+|--- | --- | --- | ---|
 | `antigravity-gemini-3-flash` | minimal, low, medium, high | minimal, low, medium, high | 极速响应，支持 4 种思考级别 |
 
 **Variant 配置示例**：
@@ -87,7 +87,7 @@ opencode run "复杂分析" --model=google/antigravity-gemini-3-flash --variant=
 
 #### Claude Sonnet 4.5（非 Thinking）
 | 模型名 | Variants | Thinking 预算 | 说明 |
-|--------|----------|----------------|------|
+|--- | --- | --- | ---|
 | `antigravity-claude-sonnet-4-5` | — | — | 标准模式，无扩展思考 |
 
 **使用示例**：
@@ -98,7 +98,7 @@ opencode run "日常对话" --model=google/antigravity-claude-sonnet-4-5
 
 #### Claude Sonnet 4.5 Thinking
 | 模型名 | Variants | Thinking 预算（tokens） | 说明 |
-|--------|----------|----------------------|------|
+|--- | --- | --- | ---|
 | `antigravity-claude-sonnet-4-5-thinking` | low, max | 8192 (low) / 32768 (max) | 平衡模式 |
 
 **Variant 配置示例**：
@@ -112,7 +112,7 @@ opencode run "深度分析" --model=google/antigravity-claude-sonnet-4-5-thinkin
 
 #### Claude Opus 4.5 Thinking
 | 模型名 | Variants | Thinking 预算（tokens） | 说明 |
-|--------|----------|----------------------|------|
+|--- | --- | --- | ---|
 | `antigravity-claude-opus-4-5-thinking` | low, max | 8192 (low) / 32768 (max) | 最强推理能力 |
 
 **Variant 配置示例**：
@@ -135,7 +135,7 @@ opencode run "专家级分析" --model=google/antigravity-claude-opus-4-5-thinki
 这些模型没有 `antigravity-` 前缀，使用 Gemini CLI API 的独立配额池。它们不支持 thinking 模式。
 
 | 模型名 | 说明 |
-|--------|------|
+|--- | ---|
 | `gemini-2.5-flash` | Gemini 2.5 Flash（快速响应） |
 | `gemini-2.5-pro` | Gemini 2.5 Pro（平衡质量和速度） |
 | `gemini-3-flash-preview` | Gemini 3 Flash Preview（预览版） |
@@ -157,7 +157,7 @@ opencode run "预览模型测试" --model=google/gemini-3-pro-preview
 ## 模型对比总览
 
 | 特性 | Claude 4.5 | Gemini 3 | Gemini 2.5 |
-|------|-----------|----------|-----------|
+|--- | --- | --- | ---|
 | **Thinking 支持** | ✅（thinkingBudget） | ✅（thinkingLevel） | ❌ |
 | **Google Search** | ❌ | ✅ | ✅ |
 | **配额池** | Antigravity | Antigravity + Gemini CLI | Gemini CLI |
@@ -178,7 +178,7 @@ opencode run "预览模型测试" --model=google/gemini-3-pro-preview
 ### 选择哪个 Thinking 级别？
 
 | 级别 | Claude (tokens) | Gemini 3 | 适用场景 |
-|------|-----------------|----------|----------|
+|--- | --- | --- | ---|
 | **minimal** | — | Flash 专用 | 极速任务，如翻译、摘要 |
 | **low** | 8192 | Pro/Flash | 平衡质量和速度，适合大多数任务 |
 | **medium** | — | Flash 专用 | 中等复杂度任务 |
@@ -312,7 +312,7 @@ Antigravity Auth 提供了丰富的模型选择和灵活的 variant 配置：
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-|------|----------|------|
+|--- | --- | ---|
 | 模型解析与 tier 提取 | [`src/plugin/transform/model-resolver.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/model-resolver.ts) | 177-282 |
 | Thinking tier 预算定义 | [`src/plugin/transform/model-resolver.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/model-resolver.ts) | 14-19 |
 | Gemini 3 thinking 级别定义 | [`src/plugin/transform/model-resolver.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/model-resolver.ts) | 26 |

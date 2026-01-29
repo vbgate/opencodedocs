@@ -103,7 +103,7 @@ function isTableRow(line: string): boolean {
 每个单元格必须匹配正则 `/^\s*:?-+:?\s*$/`，翻译成人话就是：
 
 | 组成部分 | 含义 | 示例 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `\s*` | 可选的空白 | 允许 `| --- |` 或 `|---|` |
 | `:?` | 可选的冒号 | 用于指定对齐方式 |
 | `-+` | 至少一个短横线 | `-`、`---`、`------` 都行 |
@@ -145,12 +145,12 @@ function isSeparatorRow(line: string): boolean {
 ```markdown
 ✅ 正确（每行都是 3 列）
 | A | B | C |
-| --- | --- | --- |
+|--- | --- | ---|
 | 1 | 2 | 3 |
 
 ❌ 错误（第三行只有 2 列）
 | A | B | C |
-| --- | --- | --- |
+|--- | --- | ---|
 | 1 | 2 |
 ```
 
@@ -181,7 +181,7 @@ function isValidTable(lines: string[]): boolean {
 分隔行不仅用于分隔，还用于指定对齐方式：
 
 | 语法 | 对齐方式 | 效果 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `---` 或 `:---` | 左对齐 | 文本靠左（默认） |
 | `:---:` | 居中 | 文本居中 |
 | `---:` | 右对齐 | 文本靠右 |
@@ -190,7 +190,7 @@ function isValidTable(lines: string[]): boolean {
 
 ```markdown
 | 左对齐 | 居中 | 右对齐 |
-| :--- | :---: | ---: |
+|--- | --- | ---|
 | 文本 | 文本 | 文本 |
 ```
 
@@ -198,7 +198,7 @@ function isValidTable(lines: string[]): boolean {
 
 ```markdown
 | 左对齐 |  居中  | 右对齐 |
-| :----- | :----: | -----: |
+|--- | --- | ---|
 | 文本   |  文本  |   文本 |
 ```
 
@@ -220,7 +220,7 @@ function getAlignment(delimiterCell: string): "left" | "center" | "right" {
 ## 常见错误排查
 
 | 错误现象 | 可能原因 | 解决方法 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `invalid structure` | 缺少分隔行 | 在表头后添加 `\| --- \| --- \|` |
 | `invalid structure` | 列数不一致 | 检查每行的 `\|` 数量是否相同 |
 | `invalid structure` | 行首/行尾缺少 `\|` | 补上缺失的 `\|` |
@@ -239,7 +239,7 @@ function getAlignment(delimiterCell: string): "left" | "center" | "right" {
 ## 本课小结
 
 | 条件 | 要求 |
-| --- | --- |
+|--- | ---|
 | 行首行尾 | 必须以 `\|` 开头和结尾 |
 | 分隔符数量 | 至少 2 个 `\|` |
 | 分隔行 | 必须有，格式为 `:?-+:?` |
@@ -268,7 +268,7 @@ function getAlignment(delimiterCell: string): "left" | "center" | "right" {
 > 更新时间：2026-01-26
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 表格行判定 | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61) | 58-61 |
 | 分隔行判定 | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L63-L68) | 63-68 |
 | 表格验证 | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88) | 70-88 |

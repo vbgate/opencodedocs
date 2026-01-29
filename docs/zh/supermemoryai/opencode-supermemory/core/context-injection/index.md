@@ -43,7 +43,7 @@ opencode-supermemory 极其克制，只在 **会话的第一条消息** 时触�
 插件会并行获取三类数据，组合成一个 `[SUPERMEMORY]` 提示块：
 
 | 数据维度 | 来源 | 作用 | 示例 |
-| :--- | :--- | :--- | :--- |
+|--- | --- | --- | ---|
 | **1. 用户画像** (Profile) | `getProfile` | 你的长期偏好 | "用户喜欢函数式编程"、"偏好箭头函数" |
 | **2. 项目知识** (Project) | `listMemories` | 当前项目的全局知识 | "本项目使用 Clean Architecture"、"API 放在 src/api" |
 | **3. 相关记忆** (Relevant) | `searchMemories` | 与你第一句话相关的过往经验 | 你问 "怎么修这个 Bug"，它搜出之前的类似修复记录 |
@@ -180,7 +180,7 @@ Agent 看到这些信息后，就会表现得像一个在这个项目工作了�
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | 注入触发逻辑 | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L125-L176) | 125-176 |
 | 关键词检测 | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L34-L37) | 34-37 |
 | Prompt 格式化 | [`src/services/context.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/context.ts#L14-L64) | 14-64 |

@@ -46,7 +46,7 @@ Quand vous :
 Le système de quota de **Zhipu AI** et **Z.ai** se divise en deux types :
 
 | Type de quota | Signification | Cycle de réinitialisation |
-| ------------ | ------------ | ------------------------ |
+|--- | --- | ---|
 | **Limite de token de 5 heures** | Limite d'utilisation de tokens pour les requêtes API | Réinitialisation automatique de 5 heures |
 | **Quota mensuel MCP** | Limite mensuelle du nombre de recherches MCP (Model Context Protocol) | Réinitialisation mensuelle |
 
@@ -143,7 +143,7 @@ Seule la compréhension de la signification de chaque ligne de sortie vous perme
 Comparez les explications suivantes avec votre sortie :
 
 | Champ de sortie | Signification | Exemple |
-| --------------- | ------------- | -------- |
+|--- | --- | ---|
 | **Account** | Clé API masquée et type de compte | `9c89****AQVM (Coding Plan)` |
 | **5 小时 Token 限额** | Situation d'utilisation des tokens dans le cycle de 5 heures actuel | Barre de progression + pourcentage |
 | **已用: X / Y** | Utilisé / Quota total | `0.5M / 10.0M` |
@@ -249,7 +249,7 @@ Cette leçon a couvert l'utilisation d'opencode-mystatus pour consulter les quot
 > Date de mise à jour :2026-01-23
 
 | Fonction | Chemin du fichier | Ligne |
-| ------- | ---------------- | ----- |
+|--- | --- | ---|
 | Consultation des quotas Zhipu AI | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 213-217 |
 | Consultation des quotas Z.ai | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 224-228 |
 | Formatage de sortie | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 115-177 |

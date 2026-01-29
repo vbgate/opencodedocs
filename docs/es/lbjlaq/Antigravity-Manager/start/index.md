@@ -61,7 +61,7 @@ Sigue el siguiente orden para aprender para empezar a usar Antigravity Tools lo 
 ```
 
 | Paso | Lección | Tiempo estimado | Qué aprenderás |
-|------|---------|-----------------|----------------|
+|--- | --- | --- | ---|
 | 1 | [Comprensión de conceptos](./getting-started/) | 5 minutos | Qué es la puerta de enlace local, por qué necesitas un grupo de cuentas |
 | 2 | [Instalar software](./installation/) | 3 minutos | Instalación con brew o descarga manual, manejar bloqueos del sistema |
 | 3 | [Conocer directorio de datos](./first-run-data/) | 5 minutos | Dónde están los datos, cómo ver registros, operaciones de bandeja |

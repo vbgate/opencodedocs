@@ -34,7 +34,7 @@ Consultez toutes les API officielles appelées par le plugin :
 ## Scénarios d'utilisation
 
 | Scénario | Documentation recommandée |
-| -------- | ------------------------ |
+|--- | ---|
 | Comprendre le fonctionnement du plugin | [Modèles de données](./data-models/) |
 | Appeler manuellement les API | [Résumé des API](./api-endpoints/) |
 | Étendre le support de nouvelles plateformes | Les deux documents sont nécessaires |

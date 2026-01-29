@@ -43,7 +43,7 @@ opencode-supermemory ist sehr zurückhaltend und wird nur bei **der ersten Nachr
 Das Plugin ruft parallel drei Arten von Daten ab und kombiniert sie zu einem `[SUPERMEMORY]`-Prompt-Block:
 
 | Datendimension | Quelle | Funktion | Beispiel |
-| :--- | :--- | :--- | :--- |
+|--- | --- | --- | ---|
 | **1. Benutzerprofil** (Profile) | `getProfile` | Ihre langfristigen Präferenzen | "Benutzer bevorzugt funktionale Programmierung", "bevorzugt Pfeilfunktionen" |
 | **2. Projektwissen** (Project) | `listMemories` | Globales Wissen über das aktuelle Projekt | "Dieses Projekt verwendet Clean Architecture", "API befindet sich in src/api" |
 | **3. Relevante Speicher** (Relevant) | `searchMemories` | Frühere Erfahrungen, die mit Ihrem ersten Satz relevant sind | Sie fragen "Wie behebe ich diesen Bug", es sucht nach früheren ähnlichen Lösungsaufzeichnungen |
@@ -180,10 +180,10 @@ Nach Änderung der Konfiguration müssen Sie OpenCode neu starten oder das Plugi
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Injektionsauslösungslogik | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L125-L176) | 125-176 |
 | Schlüsselworterkennung | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L34-L37) | 34-37 |
-| Prompt-Formatierung | [`src/services/context.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/context.ts#L14-L64) | 14-64 |
+|--- | --- | ---|
 | Standardkonfiguration | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L44-L54) | 44-54 |
 
 **Wichtige Funktionen**:

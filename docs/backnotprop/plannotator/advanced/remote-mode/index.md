@@ -32,7 +32,7 @@ You're using Claude Code or OpenCode in a remote server, devcontainer, or WSL en
 Typical scenarios requiring Remote/Devcontainer mode:
 
 | Scenario | Description |
-| --- | --- |
+|--- | ---|
 | **SSH Connection** | You connect to a remote development server via SSH |
 | **Devcontainer** | You use devcontainer in VS Code for development |
 | **WSL** | You use WSL on Windows for Linux development |
@@ -70,7 +70,7 @@ Before starting this tutorial, ensure:
 Plannotator remote mode relies on three environment variables:
 
 | Environment Variable | Description | Default Value |
-| --- | --- | --- |
+|--- | --- | ---|
 | `PLANNOTATOR_REMOTE` | Enable remote mode | Not set (local mode) |
 | `PLANNOTATOR_PORT` | Fixed port number | Random (local) / 19432 (remote) |
 | `PLANNOTATOR_BROWSER` | Custom browser path | System default browser |
@@ -332,7 +332,7 @@ If Windows browser cannot access Plannotator in WSL:
 Core points of Remote/Devcontainer mode:
 
 | Point | Description |
-| --- | --- |
+|--- | ---|
 | **Environment Variables** | `PLANNOTATOR_REMOTE=1` enables remote mode |
 | **Fixed Port** | Use `PLANNOTATOR_PORT` to set fixed port (default 19432) |
 | **Port Forwarding** | SSH/Devcontainer require port forwarding configuration, WSL forwards automatically |
@@ -360,7 +360,7 @@ Core points of Remote/Devcontainer mode:
 > Updated: 2026-01-24
 
 | Feature | File Path | Line Number |
-| --- | --- | --- |
+|--- | --- | ---|
 | Remote session detection | [`packages/server/remote.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/remote.ts#L16-L29) | 16-29 |
 | Server port retrieval | [`packages/server/remote.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/remote.ts#L34-L49) | 34-49 |
 | Server startup logic | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts#L91-L97) | 91-97 |

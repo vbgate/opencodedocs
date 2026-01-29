@@ -103,7 +103,7 @@ Die Trennzeile ist die Zeile zwischen der Kopfzeile und den Datenzeilen, die die
 Jede Zelle muss dem regulären Ausdruck `/^\s*:?-+:?\s*$/` entsprechen, übersetzt in Klartext:
 
 | Bestandteil | Bedeutung | Beispiel |
-| --- | --- | --- |
+|--- | --- | ---|
 | `\s*` | Optionaler Leerraum | Erlaubt `| --- |` oder `|---|` |
 | `:?` | Optionaler Doppelpunkt | Zur Angabe der Ausrichtung |
 | `-+` | Mindestens ein Bindestrich | `-`, `---`, `------` sind alle möglich |
@@ -145,12 +145,12 @@ Wenn die erste Zeile 3 Spalten hat, muss jede folgende Zeile ebenfalls 3 Spalten
 ```markdown
 ✅ Korrekt (jede Zeile hat 3 Spalten)
 | A | B | C |
-| --- | --- | --- |
+|--- | --- | ---|
 | 1 | 2 | 3 |
 
 ❌ Falsch (dritte Zeile hat nur 2 Spalten)
 | A | B | C |
-| --- | --- | --- |
+|--- | --- | ---|
 | 1 | 2 |
 ```
 
@@ -181,7 +181,7 @@ Quellcode-Position: `index.ts:70-88`
 Die Trennzeile dient nicht nur zur Trennung, sondern auch zur Angabe der Ausrichtung:
 
 | Syntax | Ausrichtung | Effekt |
-| --- | --- | --- |
+|--- | --- | ---|
 | `---` oder `:---` | Linksbündig | Text links (Standard) |
 | `:---:` | Zentriert | Text zentriert |
 | `---:` | Rechtsbündig | Text rechts |
@@ -190,7 +190,7 @@ Die Trennzeile dient nicht nur zur Trennung, sondern auch zur Angabe der Ausrich
 
 ```markdown
 | Linksbündig | Zentriert | Rechtsbündig |
-| :--- | :---: | ---: |
+|--- | --- | ---|
 | Text | Text | Text |
 ```
 
@@ -198,7 +198,7 @@ Nach der Formatierung:
 
 ```markdown
 | Linksbündig |  Zentriert  | Rechtsbündig |
-| :---------- | :---------: | -----------: |
+|--- | --- | ---|
 | Text        |    Text     |        Text |
 ```
 
@@ -220,7 +220,7 @@ Quellcode-Position: `index.ts:141-149`
 ## Häufige Fehlerbehebung
 
 | Fehlererscheinung | Mögliche Ursache | Lösung |
-| --- | --- | --- |
+|--- | --- | ---|
 | `invalid structure` | Fehlende Trennzeile | Fügen Sie nach der Kopfzeile `\| --- \| --- \|` hinzu |
 | `invalid structure` | Unterschiedliche Spaltenanzahl | Überprüfen Sie, ob jede Zeile die gleiche Anzahl von `\|` hat |
 | `invalid structure` | Fehlendes `\|` am Zeilenanfang/ende | Ergänzen Sie das fehlende `\|` |
@@ -239,7 +239,7 @@ Nach Abschluss dieser Lektion sollten Sie folgende Fragen beantworten können:
 ## Zusammenfassung dieser Lektion
 
 | Bedingung | Anforderung |
-| --- | --- |
+|--- | ---|
 | Zeilenanfang und -ende | Muss mit `\|` beginnen und enden |
 | Anzahl der Trennzeichen | Mindestens 2 `\|` |
 | Trennzeile | Muss vorhanden sein, Format ist `:?-+:?` |
@@ -269,9 +269,9 @@ Nach Abschluss dieser Lektion sollten Sie folgende Fragen beantworten können:
 > Aktualisiert am: 2026-01-26
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
-| Tabellenzeilen-Erkennung | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61) | 58-61 |
-| Trennzeilen-Erkennung | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L63-L68) | 63-68 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Tabellenvalidierung | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88) | 70-88 |
 | Ausrichtungsanalyse | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L141-L149) | 141-149 |
 | Behandlung ungültiger Tabellen | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L44-L47) | 44-47 |

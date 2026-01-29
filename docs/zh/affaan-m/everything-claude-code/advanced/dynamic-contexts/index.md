@@ -50,7 +50,7 @@ order: 140
 Everything Claude Code 提供三种预定义的上下文：
 
 | 模式 | 文件 | 关注点 | 优先级 | 适用场景 |
-|------|------|--------|--------|---------|
+|--- | --- | --- | --- | ---|
 | **dev** | `contexts/dev.md` | 实现功能、快速迭代 | 先跑起来，再完善 | 日常开发、新功能实现 |
 | **review** | `contexts/review.md` | 代码质量、安全性、可维护性 | 先发现问题，再建议修复 | Code Review、PR 审查 |
 | **research** | `contexts/research.md` | 理解问题、探索方案 | 先理解，再动手 | 技术调研、Bug 分析、架构设计 |
@@ -472,7 +472,7 @@ Focus: Root cause analysis and fix
 > 更新时间：2026-01-25
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | dev 上下文定义 | [`contexts/dev.md`](https://github.com/affaan-m/everything-claude-code/blob/main/contexts/dev.md) | 1-21 |
 | review 上下文定义 | [`contexts/review.md`](https://github.com/affaan-m/everything-claude-code/blob/main/contexts/review.md) | 1-23 |
 | research 上下文定义 | [`contexts/research.md`](https://github.com/affaan-m/everything-claude-code/blob/main/contexts/research.md) | 1-27 |

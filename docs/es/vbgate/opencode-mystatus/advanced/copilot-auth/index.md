@@ -58,7 +58,7 @@ Cuando tú:
 mystatus soporta **dos métodos de autenticación de Copilot**:
 
 | Método de autenticación | Descripción | Ventajas | Desventajas |
-|---------|------|------|------|
+|--- | --- | --- | ---|
 | **OAuth Token** (predeterminado) | Token OAuth de GitHub obtenido al iniciar sesión en OpenCode | Sin configuración adicional, listo para usar | El token OAuth de la nueva versión de OpenCode puede no tener permiso de Copilot |
 | **Fine-grained PAT** (recomendado) | Fine-grained Personal Access Token creado manualmente por el usuario | Estable y confiable, no depende de permisos OAuth | Necesita crear manualmente una vez |
 
@@ -124,7 +124,7 @@ Haz clic en **Generate new token (classic)** o **Generate new token (beta)**, se
 **Configuración de parámetros**:
 
 | Campo | Valor |
-|------|-----|
+|--- | ---|
 | **Name** | `mystatus-copilot` (o cualquier nombre que te guste) |
 | **Expiration** | Selecciona el tiempo de expiración (como 90 days o No expiration) |
 | **Resource owner** | No necesitas seleccionar (por defecto) |
@@ -167,7 +167,7 @@ Registra este nombre de usuario, se necesitará en la configuración.
 Necesitas conocer tu tipo de suscripción de Copilot, porque diferentes tipos tienen diferentes límites mensuales:
 
 | Tipo de suscripción | Cuota mensual | Escenario de uso |
-|---------|---------|---------|
+|--- | --- | ---|
 | `free` | 50 | Copilot Free (usuarios gratuitos) |
 | `pro` | 300 | Copilot Pro (versión personal profesional) |
 | `pro+` | 1500 | Copilot Pro+ (versión personal mejorada) |
@@ -255,7 +255,7 @@ Period: 2026-01
 Verifica que has entendido:
 
 | Escenario | Lo que deberías ver/hacer |
-|------|--------------|
+|--- | ---|
 | Archivo de configuración ya existe | `ls ~/.config/opencode/copilot-quota-token.json` muestra el archivo |
 | PAT creado exitosamente | El Token comienza con `github_pat_` |
 | Tipo de suscripción correcto | El valor de `tier` en la configuración es free/pro/pro+/business/enterprise |
@@ -344,9 +344,9 @@ Después de completar la configuración, mystatus usará preferiblemente el PAT 
 > Fecha de actualización: 2026-01-23
 
 | Función | Ruta de archivo | Línea |
-| --------------------------- | ------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | Entrada de estrategia de autenticación de Copilot | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L481-L524) | 481-524 |
-| Leer configuración de Fine-grained PAT | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L122-L151) | 122-151 |
+|--- | --- | ---|
 | Llamada a API de Billing público | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L157-L177) | 157-177 |
 | Intercambio de Token OAuth | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L183-L208) | 183-208 |
 | Llamada a API interna (OAuth) | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L242-L304) | 242-304 |
@@ -372,7 +372,7 @@ Después de completar la configuración, mystatus usará preferiblemente el PAT 
 **Comparación de procesos de autenticación**:
 
 | Estrategia | Tipo de Token | Endpoint de API | Prioridad |
-|------|-----------|---------|--------|
+|--- | --- | --- | ---|
 | Fine-grained PAT | Fine-grained PAT | `/users/{username}/settings/billing/premium_request/usage` | 1 (prioridad) |
 | OAuth Token (caché) | Token de sesión de Copilot | `/copilot_internal/user` | 2 |
 | OAuth Token (directo) | Token OAuth de GitHub | `/copilot_internal/user` | 3 |

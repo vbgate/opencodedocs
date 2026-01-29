@@ -27,7 +27,7 @@ order: 999
 The local reverse proxy service of Antigravity Tools provides the following categories of endpoints:
 
 | Protocol Category | Purpose | Typical Clients |
-| --- | --- | --- |
+|--- | --- | ---|
 | **OpenAI Protocol** | General AI application compatibility | OpenAI SDK / Compatible clients |
 | **Anthropic Protocol** | Claude series calls | Claude Code / Anthropic SDK |
 | **Gemini Protocol** | Google official SDK | Google Gemini SDK |
@@ -41,7 +41,7 @@ The local reverse proxy service of Antigravity Tools provides the following cate
 These endpoints are compatible with OpenAI API format, suitable for most clients that support OpenAI SDK.
 
 | Method | Path | Route Entry (Rust handler) | Remarks |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | GET | `/v1/models` | `handlers::openai::handle_list_models` | OpenAI compatible: Model list |
 | POST | `/v1/chat/completions` | `handlers::openai::handle_chat_completions` | OpenAI compatible: Chat Completions |
 | POST | `/v1/completions` | `handlers::openai::handle_completions` | OpenAI compatible: Legacy Completions |
@@ -61,7 +61,7 @@ The `/v1/responses` endpoint is designed specifically for Codex CLI and actually
 These endpoints follow Anthropic API's path and request format for use by Claude Code / Anthropic SDK.
 
 | Method | Path | Route Entry (Rust handler) | Remarks |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | POST | `/v1/messages` | `handlers::claude::handle_messages` | Anthropic compatible: Messages |
 | POST | `/v1/messages/count_tokens` | `handlers::claude::handle_count_tokens` | Anthropic compatible: count_tokens |
 | GET | `/v1/models/claude` | `handlers::claude::handle_list_models` | Anthropic compatible: Model list |
@@ -73,7 +73,7 @@ These endpoints follow Anthropic API's path and request format for use by Claude
 These endpoints are compatible with Google Gemini API format and can be used directly with Google's official SDK.
 
 | Method | Path | Route Entry (Rust handler) | Remarks |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | GET | `/v1beta/models` | `handlers::gemini::handle_list_models` | Gemini native: Model list |
 | GET | `/v1beta/models/:model` | `handlers::gemini::handle_get_model` | Gemini native: GetModel |
 | POST | `/v1beta/models/:model` | `handlers::gemini::handle_generate` | Gemini native: generateContent / streamGenerateContent |
@@ -90,7 +90,7 @@ These endpoints are compatible with Google Gemini API format and can be used dir
 MCP (Model Context Protocol) endpoints expose "tool call" interfaces externally (handled by `handlers::mcp::*`). Whether they are enabled and their specific behavior depends on configuration; see [MCP Endpoints](../../platforms/mcp/) for details.
 
 | Method | Path | Route Entry (Rust handler) | Remarks |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | ANY | `/mcp/web_search_prime/mcp` | `handlers::mcp::handle_web_search_prime` | MCP: Web Search Prime |
 | ANY | `/mcp/web_reader/mcp` | `handlers::mcp::handle_web_reader` | MCP: Web Reader |
 | ANY | `/mcp/zai-mcp-server/mcp` | `handlers::mcp::handle_zai_mcp_server` | MCP: z.ai MCP Server |
@@ -106,7 +106,7 @@ For availability and boundary explanations of MCP, see [z.ai Integration Capabil
 These endpoints are used for internal system functions and external monitoring.
 
 | Method | Path | Route Entry (Rust handler) | Remarks |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | POST | `/internal/warmup` | `handlers::warmup::handle_warmup` | Internal warmup endpoint |
 | POST | `/v1/api/event_logging` | `silent_ok_handler` | Telemetry log interception: Returns 200 directly |
 | POST | `/v1/api/event_logging/batch` | `silent_ok_handler` | Telemetry log interception: Returns 200 directly |
@@ -128,7 +128,7 @@ Except that `GET /healthz` may be exempt, whether other routes require a key is 
 Access permissions for all endpoints are controlled by `proxy.auth_mode`:
 
 | Mode | Description | `/healthz` Requires Auth? | Other Endpoints Require Auth? |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `off` | Fully open | ❌ No | ❌ No |
 | `strict` | All require authentication | ✅ Yes | ✅ Yes |
 | `all_except_health` | Only health check is open | ❌ No | ✅ Yes |
@@ -204,7 +204,7 @@ Antigravity Tools provides a complete set of multi-protocol compatible endpoints
 > Last updated: 2026-01-23
 
 | Feature | File Path | Line Numbers |
-| --- | --- | --- |
+|--- | --- | ---|
 | Route registration (all endpoints) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | Authentication middleware (Header compatibility + `/healthz` exemption + OPTIONS passthrough) | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L14-L78) | 14-78 |
 | auth_mode modes and auto derivation rules | [`docs/proxy/auth.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy/auth.md#L9-L24) | 9-24 |

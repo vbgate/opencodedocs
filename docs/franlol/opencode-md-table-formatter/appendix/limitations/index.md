@@ -30,7 +30,7 @@ To achieve this, we intentionally limited some features to ensure reliability an
 ## Overview of Known Limitations
 
 | Limitation | Description | Planned Support |
-| --- | --- | --- |
+|--- | --- | ---|
 | **HTML Tables** | Only supports Markdown pipe tables (`\| ... \|`) | ❌ No |
 | **Multi-line Cells** | Cannot contain `<br>` or other line break tags in cells | ❌ No |
 | **Tables Without Separator Rows** | Must have `|---|` separator row | ❌ No |
@@ -67,7 +67,7 @@ The plugin only processes Markdown pipe tables, which use `|` as a separator:
 
 ```markdown
 | Column 1 | Column 2 |
-| --- | --- |
+|--- | ---|
 | Data 1 | Data 2 |
 ```
 
@@ -97,7 +97,7 @@ If you need to format HTML tables, consider:
 
 ```markdown
 | Column 1 | Column 2 |
-| --- | --- |
+|--- | ---|
 | Line 1<br>Line 2 | Single line |
 ```
 
@@ -166,7 +166,7 @@ return hasSeparator  // Returns false if no separator row
 
 ```markdown
 | Column 1 | Column 2 |
-| --- | --- |
+|--- | ---|
 | Merged two columns |  ← Expect to span column 1 and column 2
 | Data 1 | Data 2 |
 ```
@@ -187,7 +187,7 @@ Markdown standard does not support merged cell syntax, and the plugin does not i
 **Issue**
 
 ```markdown
-| :--- | :---: | ---: |
+|--- | --- | ---|
 | Left | Center | Right |
 | Data 1 | Data 2 | Data 3 |
 ```
@@ -305,7 +305,7 @@ The plugin has no maximum column width limit. If cell content is too long, the e
 ## Lesson Summary
 
 | Limitation | Reason | Workaround |
-| --- | --- | --- |
+|--- | --- | ---|
 | HTML tables not supported | Plugin focuses on Markdown pipe tables | Use HTML formatting tools |
 | Multi-line cells not supported | Line-by-line processing logic | Split into multiple rows or accept wider table |
 | Tables without separator not supported | Markdown specification requirement | Add `|---|` separator row |
@@ -330,7 +330,7 @@ The plugin has no maximum column width limit. If cell content is too long, the e
 > Last updated: 2026-01-26
 
 | Limitation | File Path | Line Number |
-| --- | --- | --- |
+|--- | --- | ---|
 | HTML table detection | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61) | 58-61 |
 | Separator row detection | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L63-L68) | 63-68 |
 | Table validation (must include separator row) | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88) | 70-88 |

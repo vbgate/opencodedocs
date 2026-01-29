@@ -182,7 +182,7 @@ After deployment is complete, confirm the following:
 The Vercel Deploy skill can automatically detect **40+ frameworks**:
 
 | Category | Frameworks (partial examples) |
-| ---- | --------------- |
+|--- | ---|
 | **React** | Next.js, Gatsby, Create React App, Remix |
 | **Vue** | Nuxt, Vitepress, Vuepress |
 | **Svelte** | SvelteKit, Svelte |
@@ -347,7 +347,7 @@ If you want to delve deeper into how the skill works, check out [React Performan
 > Last updated: 2026-01-25
 
 | Function              | File Path                                                                                             | Lines     |
-| ----------------- | ---------------------------------------------------------------------------------------------------- | -------- |
+|--- | --- | ---|
 | Deployment script entry      | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 1-250    |
 | Framework detection logic      | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 12-156   |
 | Package and upload to API  | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 208-222  |

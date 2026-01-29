@@ -190,7 +190,7 @@ explorer "$env:USERPROFILE\.antigravity_tools"
 ### 關鍵欄位說明
 
 | 欄位 | 型別 | 業務含義 | 觸發條件 |
-| ----- | ---- | -------- | -------- |
+|--- | --- | --- | ---|
 | `disabled` | bool | 帳號被徹底停用（如 refresh_token 失效） | `invalid_grant` 時自動設為 `true` |
 | `proxy_disabled` | bool | 僅停用代理功能，不影響 GUI 使用 | 手動停用或配額保護觸發 |
 | `protected_models` | string[] | 模型級配額保護的「受限模型清單」 | 由配額保護邏輯更新 |
@@ -220,7 +220,7 @@ Token 統計庫記錄了每次代理請求的 Token 消耗，用於成本監控�
 #### token_usage（原始使用記錄）
 
 | 欄位 | 型別 | 說明 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | id | INTEGER PRIMARY KEY AUTOINCREMENT | 自增主鍵 |
 | timestamp | INTEGER | 請求時間戳 |
 | account_email | TEXT | 帳號信箱 |
@@ -320,7 +320,7 @@ Proxy 日誌庫記錄了每次代理請求的詳細資訊，用於故障排查�
 ### 表結構：request_logs
 
 | 欄位 | 型別 | 說明 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | id | TEXT PRIMARY KEY | 請求唯一 ID（UUID） |
 | timestamp | INTEGER | 請求時間戳 |
 | method | TEXT | HTTP 方法（GET/POST） |
@@ -556,7 +556,7 @@ sqlite3 ~/.antigravity_tools/proxy_logs.db \
 > 更新時間：2026-01-23
 
 | 功能 | 檔案路徑 | 行號 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 資料目錄（.antigravity_tools） | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | 帳號目錄（accounts/） | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L35-L46) | 35-46 |
 | accounts.json 結構 | [`src-tauri/src/models/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/models/account.rs#L76-L92) | 76-92 |
@@ -572,7 +572,7 @@ sqlite3 ~/.antigravity_tools/proxy_logs.db \
 | logs/ 目錄與 app.log | [`src-tauri/src/modules/logger.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/logger.rs#L17-L45) | 17-45 |
 | bin/cloudflared 路徑 | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L92-L101) | 92-101 |
 | device_original.json | [`src-tauri/src/modules/device.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/device.rs#L11-L13) | 11-13 |
-| invalid_grant -> disabled 寫入 | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L869-L969) | 869-969 |
+|--- | --- | ---|
 
 **關鍵常數**：
 - `DATA_DIR = ".antigravity_tools"`：資料目錄名稱（`src-tauri/src/modules/account.rs:16-18`）

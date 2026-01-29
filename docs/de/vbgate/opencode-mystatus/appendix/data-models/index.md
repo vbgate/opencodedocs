@@ -154,7 +154,7 @@ export const REQUEST_TIMEOUT_MS = 10000;
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| ----------------- | --------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Authentifizierungsdatentypen | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L99-L104) | 99-104  |
 
 **Wichtige Typen**:

@@ -31,7 +31,7 @@ opencode-supermemory is not a black box; it interacts with the Agent via the sta
 The plugin registers a tool named `supermemory` to the Agent, which acts like a Swiss Army knife with 6 modes:
 
 | Mode | Function | Typical Scenario |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **add** | Add memory | "Remember, this project must run with Bun" |
 | **search** | Search memory | "Did I say how to handle authentication before?" |
 | **profile** | User profile | View the coding habits summarized by the Agent |
@@ -187,7 +187,7 @@ A: The plugin automatically masks content within `<private>` tags. However, for 
 > Last Updated: 2026-01-23
 
 | Feature | File Path | Line Number |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Tool Definition | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
 | Keyword Detection | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L34-L37) | 34-37 |
 | Trigger Prompts | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L20-L28) | 20-28 |

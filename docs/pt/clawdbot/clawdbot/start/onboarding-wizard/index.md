@@ -300,7 +300,7 @@ O assistente perguntará pelo diretório do espaço de trabalho:
 Ao definir a variável de ambiente `CLAWDBOT_PROFILE`, você pode usar configurações independentes para diferentes ambientes de trabalho:
 
 | Valor do Profile | Caminho do Espaço de Trabalho | Arquivo de Configuração |
-|----------|----------|----------|
+|--- | --- | ---|
 | `default` ou não definido | `~/clawd` | `~/.clawdbot/clawdbot.json` |
 | `work` | `~/clawd-work` | `~/.clawdbot/clawdbot.json` (work profile) |
 | `dev` | `~/clawd-dev` | `~/.clawdbot/clawdbot.json` (dev profile) |
@@ -677,7 +677,7 @@ A configuração assistida é a forma recomendada de configurar o Clawdbot, guia
 > Última atualização: 2026-01-27
 
 | Funcionalidade           | Caminho do Arquivo                                                                                                  | Número de Linha      |
-| -------------- | ------------------------------------------------------------------------------------------------- | --------- |
+|--- | --- | ---|
 | Fluxo principal do assistente     | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 87-452    |
 | Confirmação de aviso de segurança   | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 46-85     |
 | Configuração do Gateway   | [`src/wizard/onboarding.gateway-config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.gateway-config.ts) | 28-249    |

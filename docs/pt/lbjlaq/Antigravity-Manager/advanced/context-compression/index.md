@@ -62,7 +62,7 @@ Se você quer alinhar disparo de compressão com que tipo de solicitação/qual 
 Este design de estabilidade não é deletar todo o histórico diretamente, mas intervir camada por camada do custo mais baixo para o mais alto:
 
 | Camada | Ponto de disparo (configurável) | O que faz | Custo/efeito colateral |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | Camada 1 | `proxy.experimental.context_compression_threshold_l1` (padrão 0.4) | Identificar rodadas de ferramenta, só manter as últimas N rodadas (código é 5), deletar pares de tool_use/tool_result mais antigos | Não modifica conteúdo das mensagens restantes, mais amigável ao Prompt Cache |
 | Camada 2 | `proxy.experimental.context_compression_threshold_l2` (padrão 0.55) | Comprimir texto Thinking antigo em `"..."`, mas manter `signature`, proteger as últimas 4 mensagens不动 | Modificará conteúdo histórico, comentários explicitamente dizem que quebrará cache, mas pode manter cadeia de assinatura |
 | Camada 3 | `proxy.experimental.context_compression_threshold_l3` (padrão 0.7) | Chamar modelo de background para gerar resumo XML, depois Fork uma nova sequência de mensagens para continuar a conversa | Depende de chamada de modelo de background; se falhar retornará 400 (com prompt amigável) |
@@ -218,7 +218,7 @@ Foque em três pontos:
 ## Avisos sobre armadilhas
 
 | Fenômeno | Possível causa | O que você pode fazer |
-| --- | --- | --- |
+|--- | --- | ---|
 | Após disparar Camada 2, sente contexto não tão estável | Camada 2 modifica conteúdo histórico, comentários explicitamente dizem que quebrará cache | Se você depende da consistência do Prompt Cache, tente deixar L1 resolver primeiro, ou aumentar limite L2 |
 | Após disparar Camada 3 retorna diretamente 400 | Fork + resumo chamando modelo de background falhou (rede/conta/erro upstream etc) | Primeiro use `/compact` ou `/clear` conforme sugerido no JSON de erro; ao mesmo tempo verifique cadeia de chamada de modelo de background |
 | Imagens/conteúdo grande na saída de ferramenta desapareceram | tool_result removerá imagens base64, truncará saída muito longa | Coloque conteúdo importante em arquivo/links local e depois referencie; não espere colocar 100 mil linhas de texto diretamente na conversa |
@@ -244,9 +244,9 @@ Foque em três pontos:
 > Atualizado em: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Número da linha |
-| --- | --- | --- |
+|--- | --- | ---|
 | Configuração experimental: limites de compressão e interruptores padrão | `src-tauri/src/proxy/config.rs` | 119-168 |
-| Estimativa de contexto: estimativa de caracteres multi-idioma + margem 15% | `src-tauri/src/proxy/mappers/context_manager.rs` | 9-37 |
+|--- | --- | ---|
 | Estimativa de uso de Token: percorrer system/messages/tools/thinking | `src-tauri/src/proxy/mappers/context_manager.rs` | 103-198 |
 | Camada 1: identificar rodadas de ferramenta + cortar rodadas antigas | `src-tauri/src/proxy/mappers/context_manager.rs` | 311-439 |
 | Camada 2: compressão de Thinking mas manter assinatura (proteger últimas N) | `src-tauri/src/proxy/mappers/context_manager.rs` | 200-271 |
@@ -257,7 +257,7 @@ Foque em três pontos:
 | Cache de assinatura: TTL/estrutura de cache de três camadas (Tool/Family/Session) | `src-tauri/src/proxy/signature_cache.rs` | 5-88 |
 | Cache de assinatura: gravação/leitura de assinatura Session | `src-tauri/src/proxy/signature_cache.rs` | 141-223 |
 | Análise de streaming SSE: gravar signature de thinking/tool para Session/Tool cache | `src-tauri/src/proxy/mappers/claude/streaming.rs` | 766-776 |
-| Análise de streaming SSE: tool_use gravar tool_use_id -> signature | `src-tauri/src/proxy/mappers/claude/streaming.rs` | 958-975 |
+|--- | --- | ---|
 | Conversão de solicitação: tool_use priorizar preencher assinatura de Session/Tool cache | `src-tauri/src/proxy/mappers/claude/request.rs` | 1045-1142 |
 | Conversão de solicitação: tool_result disparar compressão de resultados de ferramenta | `src-tauri/src/proxy/mappers/claude/request.rs` | 1159-1225 |
 | Compressor de resultados de ferramenta: entrada `compact_tool_result_text()` | `src-tauri/src/proxy/mappers/tool_result_compressor.rs` | 28-69 |

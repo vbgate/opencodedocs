@@ -40,7 +40,7 @@ order: 210
 **浏览器工具适用场景**：
 
 | 场景 | Action | 示例 |
-| ---- | ------ | ---- |
+|--- | --- | ---|
 | 自动化表单 | `act` + `fill` | 填写注册表单、提交订单 |
 | 网页抓取 | `snapshot` | 提取网页结构、抓取数据 |
 | 截图保存 | `screenshot` | 保存网页截图、保存证据 |
@@ -77,7 +77,7 @@ order: 210
 **两种浏览器模式**：
 
 | 模式 | Profile | 驱动 | 说明 |
-| ---- | ------- | ---- | ---- |
+|--- | --- | --- | ---|
 | **独立浏览器** | `clawd`（默认） | clawd | Clawdbot 启动一个独立的 Chrome/Chromium 实例 |
 | **Chrome 中继** | `chrome` | extension | 接管你现有的 Chrome 标签页（需安装扩展） |
 
@@ -211,7 +211,7 @@ Page snapshot:
 ::: tip 快照格式选择
 
 | 格式 | 用途 | 特点 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | `ai` | 默认，AI 理解 | 可读性好，适合 AI 解析 |
 | `aria` | 结构化输出 | 适合需要精确结构的场景 |
 | `refs="aria"` | 跨调用稳定 | 推荐用于多步操作（snapshot → act） |
@@ -283,7 +283,7 @@ target: sandbox
 ::: tip 常用 UI 操作
 
 | 操作 | Kind | 参数 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | 点击 | `click` | `ref`, `doubleClick`, `button`, `modifiers` |
 | 输入文本 | `type` | `ref`, `text`, `submit`, `slowly` |
 | 按键 | `press` | `key`, `targetId` |
@@ -333,7 +333,7 @@ type: jpeg
 ::: tip 截图格式
 
 | 格式 | 用途 |
-| ---- | ---- |
+|--- | ---|
 | `png` | 默认，无损压缩，适合文档 |
 | `jpeg` | 有损压缩，文件更小，适合存储 |
 
@@ -535,7 +535,7 @@ Node browser proxy is disabled (gateway.nodes.browser.mode=off).
 **关键操作速查**：
 
 | 操作 | Action | 关键参数 |
-| ---- | ------ | -------- |
+|--- | --- | ---|
 | 启动浏览器 | `start` | `profile`（clawd/chrome） |
 | 打开网页 | `open` | `targetUrl` |
 | 获取快照 | `snapshot` | `targetId`, `snapshotFormat`, `refs` |
@@ -564,7 +564,7 @@ Node browser proxy is disabled (gateway.nodes.browser.mode=off).
 > 更新时间：2026-01-27
 
 | 功能 | 文件路径 | 行号 |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | Browser 工具定义 | [`src/agents/tools/browser-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/browser-tool.ts) | 269-791 |
 | Browser Schema | [`src/agents/tools/browser-tool.schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/browser-tool.schema.ts) | 1-115 |
 | Action 类型定义 | [`src/browser/client-actions-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/browser/client-actions-core.ts) | 18-86 |

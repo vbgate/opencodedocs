@@ -66,7 +66,7 @@ Un **endpoint MCP** es un conjunto de rutas HTTP expuestas por Antigravity Tools
 ### Clasificación de endpoints
 
 | Tipo de endpoint | Método de implementación | Ruta local | Objetivo upstream |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | **Web Search** | Proxy inverso remoto | `/mcp/web_search_prime/mcp` | `https://api.z.ai/api/mcp/web_search_prime/mcp` |
 | **Web Reader** | Proxy inverso remoto | `/mcp/web_reader/mcp` | `https://api.z.ai/api/mcp/web_reader/mcp` |
 | **Vision MCP** | Servidor integrado (JSON-RPC 2.0) | `/mcp/zai-mcp-server/mcp` | Invocación interna a la API PaaS de z.ai |
@@ -320,7 +320,7 @@ data: keepalive
 ## Referencia rápida de herramientas Vision MCP
 
 | Nombre de herramienta | Función | Parámetros requeridos | Escenario de ejemplo |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `ui_to_artifact` | Convertir captura de UI a código/prompt/especificación/descripción | `image_source`, `output_type`, `prompt` | Generar código frontend desde diseño |
 | `extract_text_from_screenshot` | Extraer texto/código de captura (similar a OCR) | `image_source`, `prompt` | Leer captura de registro de errores |
 | `diagnose_error_screenshot` | Diagnosticar captura de error (stack trace, logs) | `image_source`, `prompt` | Analizar error en tiempo de ejecución |
@@ -469,7 +469,7 @@ Puntos clave:
 > Fecha de actualización: 2026-01-23
 
 | Función | Ruta del archivo | Línea |
-| --- | --- | --- |
+|--- | --- | ---|
 | Endpoint Web Search | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L115-L135) | 115-135 |
 | Endpoint Web Reader | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L137-L157) | 137-157 |
 | Endpoint Vision MCP (entrada principal) | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L376-L397) | 376-397 |

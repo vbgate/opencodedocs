@@ -90,7 +90,7 @@ La app macOS de Clawdbot es un sistema de **doble rol**:
 **Dos modos de ejecución**:
 
 | Modo | Ubicación de Gateway | Servicio de nodo | Escenario aplicable |
-| ----- | -------------- | --------- | -------- |
+|--- | --- | --- | ---|
 | **Modo local** (predeterminado) | Máquina local (daemon launchd) | No iniciado | Gateway se ejecuta en este Mac |
 | **Modo remoto** | Máquina remota (a través de SSH/Tailscale) | Iniciado | Gateway se ejecuta en otra máquina |
 
@@ -321,7 +321,7 @@ Escuchar ──► IA procesa ──► TTS reproduce ──► Escuchar
 **Estados de interfaz de Talk Mode**:
 
 | Estado | Visualización | Descripción |
-| ----- | ---- | ---- |
+|--- | --- | ---|
 | **Listening** | Animación de pulso de nube + volumen del micrófono | Esperando que hables |
 | **Thinking** | Animación de hundimiento | La IA está pensando |
 | **Speaking** | Animación de anillo radiante + ondas | La IA está respondiendo (reproducción TTS en curso) |
@@ -362,7 +362,7 @@ El modo de nodo permite que la app macOS exponga capacidades locales al Gateway 
 **Comandos disponibles en modo de nodo**:
 
 | Categoría de comando | Ejemplo de comando | Descripción de función |
-| --------- | ---------- | -------- |
+|--- | --- | ---|
 | **Canvas** | `canvas.present`, `canvas.navigate`, `canvas.eval` | Renderizar interfaz visual en macOS |
 | **Camera** | `camera.snap`, `camera.clip` | Tomar foto o grabar video |
 | **Screen** | `screen.record` | Grabar pantalla |
@@ -428,7 +428,7 @@ La IA seleccionará automáticamente las herramientas disponibles según los per
 **Tipos de políticas de seguridad**:
 
 | Política | Comportamiento | Escenario aplicable |
-| ----- | ---- | -------- |
+|--- | --- | ---|
 | `deny` | Deniega todas las invocaciones `system.run` | Alta seguridad, deshabilita todos los comandos |
 | `allowlist` | Solo permite comandos en la lista blanca | Equilibra seguridad y conveniencia |
 | `ask` | Pide aprobación del usuario cuando no está en la lista blanca | Flexible pero requiere confirmación |
@@ -471,7 +471,7 @@ Activa una solicitud `agent` de Gateway, equivalente a ejecutar `clawdbot agent`
 **Parámetros**:
 
 | Parámetro | Descripción | Ejemplo |
-| ----- | ---- | ---- |
+|--- | --- | ---|
 | `message` (requerido) | Mensaje para enviar a la IA | `message=Hola%20desde%20deep%20link` |
 | `sessionKey` (opcional) | Clave de sesión de destino, predeterminado `main` | `sessionKey=main` |
 | `thinking` (opcional) | Nivel de pensamiento: off\|minimal\|low\|medium\|high\|xhigh | `thinking=high` |
@@ -574,7 +574,7 @@ Si el interruptor de permisos no se puede habilitar o se cierra inmediatamente:
 **Causas posibles y soluciones**:
 
 | Causa | Método de verificación | Solución |
-| ----- | -------- | -------- |
+|--- | --- | ---|
 | Gateway no iniciado | Ejecutar `clawdbot gateway status` | Iniciar el servicio Gateway |
 | Dirección incorrecta | Verificar la URL de WebSocket | Confirmar que `ws://127.0.0.1:18789` o la dirección remota es correcta |
 | Puerto ocupado | Ejecutar `lsof -i :18789` | Cerrar el proceso que ocupa el puerto |
@@ -669,7 +669,7 @@ En esta lección aprendiste:
 > Fecha de actualización: 2026-01-27
 
 | Función        | Ruta del archivo                                                                                    | Número de líneas    |
-| ----------- | --------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Punto de entrada de la aplicación     | [`apps/macos/Sources/Clawdbot/ClawdbotApp.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/ClawdbotApp.swift) | Archivo completo   |
 | Conexión a Gateway | [`apps/macos/Sources/Clawdbot/GatewayConnection.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/GatewayConnection.swift) | 1-500   |
 | Runtime de Voice Wake | [`apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift) | Archivo completo   |

@@ -300,7 +300,7 @@ Local 模式支援完整的配置流程，Remote 模式僅配置存取資訊。
 透過設定 `CLAWDBOT_PROFILE` 環境變數，可以為不同工作環境使用獨立配置：
 
 | Profile 值 | 工作區路徑 | 設定檔 |
-|----------|----------|----------|
+|--- | --- | ---|
 | `default` 或未設定 | `~/clawd` | `~/.clawdbot/clawdbot.json` |
 | `work` | `~/clawd-work` | `~/.clawdbot/clawdbot.json` (work profile) |
 | `dev` | `~/clawd-dev` | `~/.clawdbot/clawdbot.json` (dev profile) |
@@ -679,7 +679,7 @@ clawdbot onboard --mode reset
 > 更新時間：2026-01-27
 
 | 功能           | 檔案路徑                                                                                                  | 行號      |
-| -------------- | ------------------------------------------------------------------------------------------------- | --------- |
+|--- | --- | ---|
 | 精靈主流程     | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 87-452    |
 | 安全警告確認   | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 46-85     |
 | Gateway 配置   | [`src/wizard/onboarding.gateway-config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.gateway-config.ts) | 28-249    |

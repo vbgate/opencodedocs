@@ -198,16 +198,16 @@ Der Proxy hat eine Kompatibilitätsstrategie für `/v1/messages`: Wenn der Clien
 > Aktualisiert: 2026-01-23
 
 | Funktion | Dateipfad | Zeilen |
-| --- | --- | --- |
-| Proxy-Routen: `/v1/messages` / `count_tokens` / `models/claude` | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L193) | 120-193 |
-| Anthropic-Haupteinstieg: `handle_messages` (einschließlich Warmup-Interception und Wiederholungsschleife) | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L240-L1140) | 240-1140 |
-| Modell-Liste: `GET /v1/models/claude` | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L1163-L1183) | 1163-1183 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | `count_tokens` (gibt 0 zurück, wenn z.ai nicht aktiviert ist) | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L1186-L1210) | 1186-1210 |
-| Warmup-Erkennung und simulierte Antwort | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L1375-L1493) | 1375-1493 |
-| Authentifizierungsheader-Kompatibilität: `Authorization`/`x-api-key`/`x-goog-api-key` | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L14-L77) | 14-77 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Anfragebereinigung: Entfernen von `cache_control` | [`src-tauri/src/proxy/mappers/claude/request.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/claude/request.rs#L68-L148) | 68-148 |
 | Anfragebereinigung: Zusammenführen aufeinanderfolgender Nachrichten derselben Rolle | [`src-tauri/src/proxy/mappers/claude/request.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/claude/request.rs#L253-L296) | 253-296 |
-| Claude -> Gemini v1internal Konvertierungseinstieg: `transform_claude_request_in()` | [`src-tauri/src/proxy/mappers/claude/request.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/claude/request.rs#L332-L618) | 332-618 |
+|--- | --- | ---|
 
 **Wichtige Konstanten**:
 - `MAX_RETRY_ATTEMPTS = 3`: Maximale Anzahl von Wiederholungen für `/v1/messages`

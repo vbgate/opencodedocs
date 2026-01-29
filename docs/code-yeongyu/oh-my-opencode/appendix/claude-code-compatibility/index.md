@@ -34,7 +34,7 @@ Oh My OpenCode achieves compatibility with Claude Code configuration formats thr
 Compatibility covers the following features:
 
 | Feature | Compatibility Status | Description |
-|---------|---------------------|-------------|
+|--- | --- | ---|
 | **Commands** | ✅ Fully Supported | Load slash commands from `~/.claude/commands/` and `.claude/commands/` |
 | **Skills** | ✅ Fully Supported | Load professional skills from `~/.claude/skills/` and `.claude/skills/` |
 | **Agents** | ⚠️ Reserved | Interface reserved, currently only supports built-in Agents |
@@ -153,7 +153,7 @@ You can also disable specific features only:
 **Switch descriptions**:
 
 | Switch | Disabled Content | Retained Content |
-|--------|-----------------|------------------|
+|--- | --- | ---|
 | `mcp` | `.mcp.json` files | Built-in MCPs (websearch, context7, grep_app) |
 | `commands` | `~/.claude/commands/`, `.claude/commands/` | OpenCode native Commands |
 | `skills` | `~/.claude/skills/`, `.claude/skills/` | OpenCode native Skills |
@@ -210,7 +210,7 @@ The `hooks` field in Claude Code's `settings.json` defines custom scripts that e
 ### Hook Event Types
 
 | Event | Trigger Timing | Available Actions |
-|-------|---------------|-------------------|
+|--- | --- | ---|
 | **PreToolUse** | Before tool execution | Block tool calls, modify input parameters, inject context |
 | **PostToolUse** | After tool execution | Add warnings, modify output, inject messages |
 | **UserPromptSubmit** | When user submits prompt | Block prompt, inject messages, transform prompt |
@@ -386,7 +386,7 @@ If you're migrating from Claude Code, this compatibility layer lets you start us
 > Updated: 2026-01-26
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | Claude Code Hooks main entry | [`src/hooks/claude-code-hooks/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/claude-code-hooks/index.ts) | 1-402 |
 | Hooks configuration loading | [`src/hooks/claude-code-hooks/config.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/claude-code-hooks/config.ts) | 1-104 |
 | MCP configuration loader | [`src/features/claude-code-mcp-loader/loader.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/claude-code-mcp-loader/loader.ts) | 1-120 |

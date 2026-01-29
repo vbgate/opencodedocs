@@ -15,7 +15,7 @@ Dieses Kapitel zeichnet die Versionsentwicklung des Plugins opencode-md-table-fo
 ## 📚 Unterseitennavigation
 
 | Seite | Beschreibung | Lesezeit |
-|------|--------------|----------|
+|--- | --- | ---|
 | **[Änderungsprotokoll: Versionsverlauf und Änderungsaufzeichnung](./release-notes/)** | Detaillierte Änderungsaufzeichnungen aller Versionen anzeigen, einschließlich neuer Funktionen, technischer Details, bekannter Einschränkungen und zukünftiger Pläne | 5 Minuten |
 
 ---

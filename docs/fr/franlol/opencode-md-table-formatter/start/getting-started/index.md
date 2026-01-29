@@ -25,7 +25,7 @@ Les tableaux Markdown générés par l'IA ressemblent souvent à ceci :
 
 ```markdown
 | Nom | Description | Statut |
-|---|---|---|
+|--- | --- | ---|
 | Fonction A | Ceci est un texte de description très long | Terminé |
 | B | Court | En cours |
 ```
@@ -125,7 +125,7 @@ Génère un tableau comparatif des caractéristiques de trois frameworks : React
 
 ```markdown
 | Framework | Caractéristiques                | Courbe d'apprentissage |
-| --------- | ------------------------------- | ---------------------- |
+|--- | --- | ---|
 | React     | Composants, DOM virtuel         | Moyenne                |
 | Vue       | Progressif, liaison bidirectionnelle | Faible                 |
 | Angular   | Framework complet, TypeScript   | Élevée                 |
@@ -136,7 +136,7 @@ Génère un tableau comparatif des caractéristiques de trois frameworks : React
 Après avoir terminé les étapes ci-dessus, vérifiez les points suivants :
 
 | Élément de vérification | Résultat attendu |
-| ------------------------ | ------------------------------ |
+|--- | ---|
 | Syntaxe du fichier de configuration | Pas d'erreur |
 | Démarrage d'OpenCode | Démarrage normal, sans erreur de chargement de plugin |
 | Tableaux générés par l'IA | Largeurs de colonnes alignées automatiquement, format de ligne de séparation uniforme |
@@ -184,7 +184,7 @@ Voir la section [FAQ](../../faq/troubleshooting/) pour plus de détails.
 > Dernière mise à jour : 2026-01-26
 
 | Fonctionnalité | Chemin du fichier | Ligne |
-| -------------- | -------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Point d'entrée du plugin | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L9-L23) | 9-23    |
 | Enregistrement des hooks | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L11-L13) | 11-13   |
 | Configuration du package | [`package.json`](https://github.com/franlol/opencode-md-table-formatter/blob/main/package.json#L1-L41) | 1-41    |

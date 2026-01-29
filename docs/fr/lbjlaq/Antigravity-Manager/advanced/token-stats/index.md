@@ -143,7 +143,7 @@ Procédure : Entrez la zone Advanced de Settings, cliquez sur "Ouvrir le répert
 ## Mises en garde sur les pièges courants
 
 | Phénomène | Cause courante | Ce que vous pouvez faire |
-| --- | --- | --- |
+|--- | --- | ---|
 | Token Stats affiche "pas de données" | Vous n'avez vraiment pas généré de requêtes de modèle ; ou la réponse amont ne contient pas de champs token analysables | Réutilisez d'abord un client vérifié pour envoyer des requêtes ; puis vérifiez si la réponse contient `usage/usageMetadata` |
 | Les statistiques par "modèle" semblent incorrectes | Le critère de statistique utilise le `model` de la requête, et non le `X-Mapped-Model` | Considérez le routage de modèles comme "modèle de requête -> modèle mappé" ; les statistiques regardent le "modèle de requête" |
 | Dimension compte manquante | Écrit uniquement lorsque `X-Account-Email` est obtenu et la consommation de token est analysée | Confirmez que la requête a vraiment atteint le pool de comptes ; puis comparez avec les journaux de requêtes/les en-têtes de réponse |
@@ -175,8 +175,8 @@ Vous apprendrez :
 > Dernière mise à jour : 2026-01-23
 
 | Fonction | Chemin du fichier | Numéros de ligne |
-| --- | --- | --- |
-| Route de page Token Stats `/token-stats` | [`src/App.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/App.tsx#L19-L47) | 19-47 |
+|--- | --- | ---|
+|--- | --- | ---|
 | UI Token Stats : basculement de fenêtre de temps/vue et récupération de données | [`src/pages/TokenStats.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/TokenStats.tsx#L49-L166) | 49-166 |
 | UI Token Stats : indication de données vides ("pas de données") | [`src/pages/TokenStats.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/TokenStats.tsx#L458-L507) | 458-507 |
 | Extraction de consommation de token : analyse du model depuis la requête, analyse de usage/usageMetadata depuis la réponse | [`src-tauri/src/proxy/middleware/monitor.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/monitor.rs#L32-L120) | 32-120 |

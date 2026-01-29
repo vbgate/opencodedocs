@@ -61,7 +61,7 @@ Folgen Sie der folgenden Reihenfolge, um Antigravity Tools am schnellsten kennen
 ```
 
 | Schritt | Kurs | Geschätzte Zeit | Was Sie lernen |
-|---------|------|-----------------|----------------|
+|--- | --- | --- | ---|
 | 1 | [Konzeptverständnis](./getting-started/) | 5 Minuten | Was ist ein lokales Gateway und warum brauche ich einen Kontopool? |
 | 2 | [Software installieren](./installation/) | 3 Minuten | brew-Installation oder manueller Download, Behandlung von System-Blockierungen |
 | 3 | [Datenverzeichnis verstehen](./first-run-data/) | 5 Minuten | Wo werden Daten gespeichert, wie man Protokolle liest, Taskleisten-Operationen |

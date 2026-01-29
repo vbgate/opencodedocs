@@ -47,7 +47,7 @@ order: 320
 Clawdbot CLI 提供了 24 个主要命令组，涵盖系统管理的各个方面：
 
 | 命令组 | 说明 |
-| ------- | ---- |
+|--- | ---|
 | `gateway` / `daemon` | Gateway 服务控制（启动、停止、状态） |
 | `agent` / `agents` | Agent 交互与管理 |
 | `models` | AI 模型配置与认证 |
@@ -1321,7 +1321,7 @@ clawdbot models status --help # 显示 models status 子命令帮助
 > 更新时间：2026-01-27
 
 | 功能        | 文件路径                                                                                    | 行号    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | CLI 主程序 | [`src/cli/program.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program.ts) | 全文    |
 | 命令注册   | [`src/cli/program/register.subclis.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.subclis.ts) | 30-225  |
 | Agent 命令 | [`src/cli/program/register.agent.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.agent.ts) | 20-210  |

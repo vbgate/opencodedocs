@@ -163,7 +163,7 @@ URL 中某些字符有特殊含义（如 `+` 表示空格，`/` 是路径分隔�
 为压缩效率，Plannotator 使用精简的注释格式（`ShareableAnnotation`）：
 
 | 原始 Annotation | 精简格式 | 说明 |
-| --------------- | --------- | ---- |
+|--- | --- | ---|
 | `{type: 'DELETION', originalText: '...', text: undefined, ...}` | `['D', 'old text', null, images?]` | D = Deletion，null 表示无 text |
 | `{type: 'REPLACEMENT', originalText: '...', text: 'new...', ...}` | `['R', 'old text', 'new text', null, images?]` | R = Replacement |
 | `{type: 'COMMENT', originalText: '...', text: 'comment...', ...}` | `['C', 'old text', 'comment text', null, images?]` | C = Comment |
@@ -526,7 +526,7 @@ export PLANNOTATOR_SHARE=enabled
 > 更新时间：2026-01-24
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 压缩数据（deflate + Base64） | [`packages/ui/utils/sharing.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/utils/sharing.ts#L30-L48) | 30-48 |
 | 解压数据 | [`packages/ui/utils/sharing.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/utils/sharing.ts#L53-L71) | 53-71 |
 | 转换注释格式（精简） | [`packages/ui/utils/sharing.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/utils/sharing.ts#L76-L95) | 76-95 |

@@ -46,7 +46,7 @@ El Modo Ultrawork es un modo de trabajo especial activado por una palabra clave.
 El modo Ultrawork se basa en los siguientes principios centrales (del [Ultrawork Manifesto](https://github.com/code-yeongyu/oh-my-opencode/blob/main/docs/ultrawork-manifesto.md)):
 
 | Principio | Descripción |
-|-----------|-------------|
+|--- | ---|
 | **La intervención humana es una señal de fallo** | Si necesitas corregir constantemente la salida de la IA, significa que hay un problema con el diseño del sistema |
 | **Código indistinguible** | El código escrito por la IA no debería distinguirse del código escrito por ingenieros senior |
 | **Minimizar la carga cognitiva** | Solo necesitas decir "qué hacer", los agentes son responsables de "cómo hacerlo" |
@@ -143,7 +143,7 @@ Si algún elemento falla, verifica:
 ## Cuándo Usar Esta Técnica
 
 | Escenario | Usar Ultrawork | Modo Normal |
-|----------|--------------|-------------|
+|--- | --- | ---|
 | **Funciones nuevas complejas** | ✅ Recomendado (requiere colaboración multi-agente) | ❌ Puede no ser lo suficientemente eficiente |
 | **Correcciones urgentes** | ✅ Recomendado (necesita diagnóstico rápido y exploración) | ❌ Puede perder contexto |
 | **Modificaciones simples** | ❌ Excesivo (desperdicia recursos) | ✅ Más adecuado |
@@ -202,7 +202,7 @@ Recuerda: El modo Ultrawork está diseñado para hacer que los agentes trabajen 
 > Última actualización: 2026-01-26
 
 | Función | Ruta del Archivo | Números de Línea |
-|---------|-----------|--------------|
+|--- | --- | ---|
 | Filosofía de diseño Ultrawork | [`docs/ultrawork-manifesto.md`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/docs/ultrawork-manifesto.md) | 1-198 |
 | Hook detector de palabras clave | [`src/hooks/keyword-detector/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/keyword-detector/index.ts) | 12-100 |
 | Plantilla de instrucciones ULTRAWORK | [`src/hooks/keyword-detector/constants.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/keyword-detector/constants.ts) | 54-280 |
@@ -221,7 +221,7 @@ Recuerda: El modo Ultrawork está diseñado para hacer que los agentes trabajen 
 
 **Reglas de negocio**:
 | ID de Regla | Descripción de la Regla | Etiqueta |
-|---------|------------------|-----|
+|--- | --- | ---|
 | BR-4.8.4-1 | Activar modo Ultrawork cuando se detecta "ultrawork" o "ulw" | [Hecho] |
 | BR-4.8.4-2 | El modo Ultrawork establece `message.variant = "max"` | [Hecho] |
 | BR-4.8.4-3 | El modo Ultrawork muestra notificación Toast: "Ultrawork Mode Activated" | [Hecho] |

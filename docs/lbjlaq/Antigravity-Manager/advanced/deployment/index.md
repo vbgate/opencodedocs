@@ -62,7 +62,7 @@ If you're going to expose 8045 to your LAN or the public, first review **[Securi
 ## Quick Selection Guide: Docker vs Headless Xvfb
 
 | What matters most | Recommended choice | Why |
-| --- | --- | --- |
+|--- | --- | ---|
 | Need browser for OAuth/authorization | Docker (noVNC) | Container comes with Firefox ESR built-in, operate directly in browser (see `deploy/docker/README.md`) |
 | Want systemd management/log persistence | Headless Xvfb | install script installs systemd service and appends logs to `logs/app.log` (see `deploy/headless-xvfb/install.sh`) |
 | Want isolation and resource limits | Docker | Compose approach natively isolates and makes resource limits easier to configure (see `deploy/docker/README.md`) |
@@ -223,7 +223,7 @@ sudo ./upgrade.sh
 ## Pitfall Warnings
 
 | Scenario | Common Error (❌) | Recommended Practice (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Lost accounts/config | ❌ Only care about "getting program running" | ✓ First confirm `.antigravity_tools/` is persisted (volume or `/opt/antigravity`) |
 | noVNC port change doesn't take effect | ❌ Only change `NOVNC_PORT` | ✓ Keep default 6080; to change, also verify `websockify` port in `start.sh` |
 | Exposing 8045 to public | ❌ Don't set `api_key`/don't review auth_mode | ✓ First follow **[Security & Privacy](/lbjlaq/Antigravity-Manager/advanced/security/)** for baseline, then consider tunnel/reverse proxy |
@@ -250,11 +250,11 @@ sudo ./upgrade.sh
 > Last updated: 2026-01-23
 
 | Feature | File Path | Lines |
-| --- | --- | --- |
+|--- | --- | ---|
 | Docker deployment entry and noVNC URL | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L5-L13) | 5-13 |
 | Docker deployment environment variable description (VNC_PASSWORD/RESOLUTION/NOVNC_PORT) | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L32-L39) | 32-39 |
 | Docker compose port mapping and data volume (antigravity_data) | [`deploy/docker/docker-compose.yml`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/docker-compose.yml#L1-L21) | 1-21 |
-| Docker startup script: auto-update version (GitHub rate limit) | [`deploy/docker/start.sh`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/start.sh#L27-L58) | 27-58 |
+|--- | --- | ---|
 | Docker startup script: launch Xtigervnc/Openbox/noVNC/application | [`deploy/docker/start.sh`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/start.sh#L60-L78) | 60-78 |
 | Docker health check: confirm Xtigervnc/websockify/antigravity_tools processes exist | [`deploy/docker/Dockerfile`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/Dockerfile#L60-L79) | 60-79 |
 | Headless Xvfb: directory structure and operations commands (systemctl/healthz) | [`deploy/headless-xvfb/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/headless-xvfb/README.md#L19-L78) | 19-78 |

@@ -22,7 +22,7 @@ Esta página fornece referência completa de API e comandos do Agent Skills, inc
 O nível de impacto indica o grau de influência da regra sobre o desempenho, com 6 níveis:
 
 | Valor      | Descrição                     | Cenário Aplicável                                              |
-| ---------- | ----------------------------- | -------------------------------------------------------------- |
+|--- | --- | ---|
 | `CRITICAL` | Gargalo crítico              | Deve ser corrigido, afeta seriamente a experiência do usuário (ex: requisições em cachoeira, tamanho de empacotamento não otimizado) |
 | `HIGH`     | Melhoria importante            | Melhora significativa de desempenho (ex: cache no servidor, eliminação de props duplicados) |
 | `MEDIUM-HIGH` | Prioridade média-alta      | Melhoria clara de desempenho (ex: otimização de busca de dados) |
@@ -37,7 +37,7 @@ O nível de impacto indica o grau de influência da regra sobre o desempenho, co
 Estrutura de exemplos de código em regras:
 
 | Campo       | Tipo    | Obrigatório | Descrição                                                  |
-| ----------- | ------- | ---------- | ----------------------------------------------------------- |
+|--- | --- | --- | ---|
 | `label`     | string  | ✅         | Label do exemplo (como "Incorrect", "Correct")               |
 | `description` | string  | ❌         | Descrição do label (opcional)                               |
 | `code`      | string  | ✅         | Conteúdo do código                                          |
@@ -51,7 +51,7 @@ Estrutura de exemplos de código em regras:
 Estrutura completa de uma regra de otimização de desempenho:
 
 | Campo            | Tipo        | Obrigatório | Descrição                                                  |
-| --------------- | ----------- | ---------- | ----------------------------------------------------------- |
+|--- | --- | --- | ---|
 | `id`            | string      | ✅         | ID da regra (gerado automaticamente, como "1.1", "2.3")   |
 | `title`          | string      | ✅         | Título da regra                                            |
 | `section`        | number      | ✅         | Capítulo ao qual pertence (1-8)                             |
@@ -70,7 +70,7 @@ Estrutura completa de uma regra de otimização de desempenho:
 Estrutura de capítulo de regras:
 
 | Campo            | Tipo        | Obrigatório | Descrição                                                  |
-| --------------- | ----------- | ---------- | ----------------------------------------------------------- |
+|--- | --- | --- | ---|
 | `number`         | number      | ✅         | Número do capítulo (1-8)                                  |
 | `title`          | string      | ✅         | Título do capítulo                                          |
 | `impact`         | ImpactLevel  | ✅         | Nível de impacto geral                                       |
@@ -85,7 +85,7 @@ Estrutura de capítulo de regras:
 Estrutura completa do documento de diretrizes:
 
 | Campo        | Tipo      | Obrigatório | Descrição                               |
-| ----------- | --------- | ---------- | ---------------------------------------- |
+|--- | --- | --- | ---|
 | `version`    | string    | ✅         | Número de versão                        |
 | `organization` | string   | ✅         | Nome da organização                      |
 | `date`       | string    | ✅         | Data                                     |
@@ -100,7 +100,7 @@ Estrutura completa do documento de diretrizes:
 Caso de teste extraído de regras, para avaliação automática por LLM.
 
 | Campo       | Tipo               | Obrigatório | Descrição                                                  |
-| ----------- | ------------------ | ---------- | ----------------------------------------------------------- |
+|--- | --- | --- | ---|
 | `ruleId`    | string             | ✅         | ID da regra, como "1.1"                                  |
 | `ruleTitle`  | string             | ✅         | Título da regra                                            |
 | `type`       | 'bad' \| 'good'   | ✅         | Tipo de caso de teste                                        |
@@ -277,7 +277,7 @@ bash /mnt/skills/user/{skill-name}/scripts/{script}.sh [args]
 ### Descrição de Campos Obrigatórios
 
 | Campo       | Descrição                                                   | Exemplo                                                |
-| ----------- | ------------------------------------------------------------ | ------------------------------------------------------ |
+|--- | --- | ---|
 | `name`      | Nome da habilidade (nome do diretório)                           | `vercel-deploy`                                        |
 | `description` | Descrição de uma frase, inclui frases de acionamento             | `Deploy applications to Vercel when user requests "Deploy my app"` |
 | `title`     | Título da habilidade                                           | `Vercel Deploy`                                        |
@@ -293,7 +293,7 @@ bash /mnt/skills/user/{skill-name}/scripts/{script}.sh [args]
 ### Prefixo de Nome de Arquivo → Capítulo → Nível
 
 | Prefixo de Arquivo | Número do Capítulo | Título do Capítulo     | Nível Padrão |
-| ------------------- | ------------------- | ----------------------- | ------------- |
+|--- | --- | --- | ---|
 | `async-`           | 1                   | Eliminando Cachoeiras | CRITICAL      |
 | `bundle-`          | 2                   | Otimização de Empacotamento | CRITICAL   |
 | `server-`          | 3                   | Desempenho no Servidor | HIGH          |
@@ -306,7 +306,7 @@ bash /mnt/skills/user/{skill-name}/scripts/{script}.sh [args]
 ### Exemplo de Arquivos
 
 | Nome do Arquivo                | Capítulo Inferido Automaticamente | Nível Inferido Automaticamente |
-| ------------------------------ | ------------------------------ | --------------------------- |
+|--- | --- | ---|
 | `async-parallel.md`         | 1 (Eliminando Cachoeiras)    | CRITICAL                    |
 | `bundle-dynamic-imports.md`  | 2 (Otimização de Empacotamento) | CRITICAL                  |
 | `server-cache-react.md`       | 3 (Desempenho no Servidor)    | HIGH                        |
@@ -356,7 +356,7 @@ bash /mnt/skills/user/vercel-deploy/scripts/deploy.sh /path/to/project.tgz
 > Atualizado em: 2026-01-25
 
 | Funcionalidade            | Caminho do Arquivo                                                                                      | Número de Linha  |
-| ----------------------- | --------------------------------------------------------------------------------------------------------- | ---------------- |
+|--- | --- | ---|
 | Tipo ImpactLevel         | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts#L5) | 5                |
 | Interface CodeExample   | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts#L7-L13) | 7-13             |
 | Interface Rule          | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts#L15-L26) | 15-26            |

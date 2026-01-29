@@ -43,7 +43,7 @@ Aber bei paralleler Ausführung? Alle 3 Agents arbeiten gleichzeitig, Gesamtdaue
 Szenarien, in denen das Hintergrundaufgabensystem die Effizienz steigert:
 
 | Szenario | Beispiel | Wert |
-|-----|------|------|
+|--- | --- | ---|
 | **Parallele Recherche** | Explore sucht Implementierung + Librarian liest Dokumentation | 3-fache Geschwindigkeit bei der Recherche |
 | **Multi-Expert-Review** | Oracle prüft Architektur + Momus validiert Plan | Schnelles Feedback aus mehreren Perspektiven |
 | **Asynchrone Aufgaben** | Code-Review parallel zum Git-Commit | Blockiert nicht den Hauptprozess |
@@ -172,7 +172,7 @@ Wenn die Aufgabe noch läuft:
 ## Task Status
 
 | Field | Value |
-|-------|-------|
+|--- | ---|
 | Task ID | `bg_abc123` |
 | Description | Explore: 查找认证实现 |
 | Agent | explore |
@@ -266,7 +266,7 @@ Manchmal bleiben Aufgaben hängen oder werden nicht mehr benötigt, dann können
 Cancelled 3 background task(s):
 
 | Task ID | Description | Status | Session ID |
-|---------|-------------|--------|------------|
+|--- | --- | --- | ---|
 | `bg_abc123` | Explore: 查找认证实现 | running | `sess_xyz789` |
 | `bg_def456` | Librarian: 研究最佳实践 | running | `sess_uvwx012` |
 | `bg_ghi789` | Oracle: 审查架构设计 | pending | (not started) |
@@ -359,12 +359,12 @@ Das Hintergrundaufgabensystem ermöglicht es Ihnen, wie ein echtes Team zu arbei
 > Aktualisiert am: 2026-01-26
 
 | Funktion | Dateipfad | Zeilen |
-|------|---------|------|
-| Hintergrundaufgaben-Manager | [`src/features/background-agent/manager.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/background-agent/manager.ts) | 1-1378 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Parallelitätssteuerung | [`src/features/background-agent/concurrency.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/background-agent/concurrency.ts) | 1-138 |
-| delegate_task-Tool | [`src/tools/background-task/tools.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/background-task/tools.ts) | 51-119 |
-| background_output-Tool | [`src/tools/background-task/tools.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/background-task/tools.ts) | 320-384 |
-| background_cancel-Tool | [`src/tools/background-task/tools.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/background-task/tools.ts) | 386-514 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Konstanten**:
 - `TASK_TTL_MS = 30 * 60 * 1000`: Aufgaben-Timeout (30 Minuten)

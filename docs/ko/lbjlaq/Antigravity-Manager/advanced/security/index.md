@@ -206,7 +206,7 @@ curl -i "http://127.0.0.1:<PORT>/v1/messages" \
 ::: warning 잘못된 방법 vs 권장 방법
 
 | 시나리오 | ❌ 일반적인 오류 | ✓ 권장 방법 |
-| --- | --- | --- |
+|--- | --- | ---|
 | LAN 액세스 필요 | `allow_lan_access=true`만 켜고, `auth_mode=off` | `auth_mode=auto`를 사용하고 강력한 `api_key`를 설정 |
 | 인증을 켰는데 계속 401 | 클라이언트가 키를 가져오지만 헤더 이름이 호환되지 않음 | 프록시는 `Authorization`/`x-api-key`/`x-goog-api-key` 세 가지 헤더를 호환 |
 | 인증을 켰지만 키를 구성하지 않음 | `api_key`가 비어 있는데도 인증을 켬 | 백엔드가 직접 거부합니다(로그에 키가 비어 있다고 표시됨) |
@@ -259,12 +259,12 @@ last_error = Some(format!("Token refresh failed: {}", e));
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | auth_mode의 네 가지 모드와 auto 의미 설명 | [`docs/proxy/auth.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy/auth.md#L10-L24) | 10-24 |
 | ProxyAuthMode 열거형 및 기본값(기본값 off) | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L5-L18) | 5-18 |
 | ProxyConfig의 핵심 필드 및 기본값(allow_lan_access, api_key) | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L259) | 174-259 |
 | 수신 주소 유도(127.0.0.1 vs 0.0.0.0) | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L281-L292) | 281-292 |
-| auto -> effective_auth_mode 유도 로직 | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L10-L30) | 10-30 |
+|--- | --- | ---|
 | 인증 미들웨어(OPTIONS 통과, /healthz 면제, 세 가지 헤더 호환) | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L14-L78) | 14-78 |
 | UI: allow_lan_access 및 auth_mode 스위치/드롭다운 | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L943-L1046) | 943-1046 |
 | UI: api_key 편집/재설정/복사 | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L1048-L1120) | 1048-1120 |

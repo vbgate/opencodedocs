@@ -144,7 +144,7 @@ Token Stats 통계는 실제 요청에서 옵니다. 프록시만 시작하고 �
 ## 함정 경고
 
 | 현상 | 일반적인 원인 | 할 수 있는 것 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Token Stats가 "데이터 없음" 표시 | 실제 모델 요청이 없음; 또는 업스트림 응답에 파싱 가능한 토큰 필드가 없음 | 먼저 검증된 클라이언트로 요청 보내기; 응답에 `usage/usageMetadata`가 포함되어 있는지 확인 |
 | 통계가 "모델"별로 보이지 않음 | 통계 기준은 요청의 `model`을 사용하고, `X-Mapped-Model`이 아님 | 모델 라우팅을 "요청 모델 -> 매핑 모델"로 간주; 통계는 "요청 모델"을 봄 |
 | 계정 차원 누락 | `X-Account-Email`을 얻고 토큰 사용량을 파싱할 때만 기록됨 | 요청이 실제 계정 풀에 도달했는지 확인; 다음 요청 로그/응답 헤더와 대조 |
@@ -176,8 +176,8 @@ Token Stats 통계는 실제 요청에서 옵니다. 프록시만 시작하고 �
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
-| Token Stats 페이지 라우트 `/token-stats` | [`src/App.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/App.tsx#L19-L47) | 19-47 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Token Stats UI: 시간 창/뷰 전환 및 데이터 가져오기 | [`src/pages/TokenStats.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/TokenStats.tsx#L49-L166) | 49-166 |
 | Token Stats UI: 빈 데이터 프롬프트("데이터 없음") | [`src/pages/TokenStats.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/TokenStats.tsx#L458-L507) | 458-507 |
 | 토큰 사용량 추출: 요청에서 model 파싱, 응답에서 usage/usageMetadata 파싱 | [`src-tauri/src/proxy/middleware/monitor.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/monitor.rs#L32-L120) | 32-120 |

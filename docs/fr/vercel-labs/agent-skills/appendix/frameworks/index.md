@@ -43,7 +43,7 @@ La détection vérifie simultanément `dependencies` et `devDependencies`, donc 
 ### Écosystème React
 
 | Framework | Dépendance de détection | Valeur renvoyée |
-|------|---------|--------|
+|--- | --- | ---|
 | **Next.js** | `next` | `nextjs` |
 | **Gatsby** | `gatsby` | `gatsby` |
 | **Remix** | `@remix-run/` | `remix` |
@@ -56,7 +56,7 @@ La détection vérifie simultanément `dependencies` et `devDependencies`, donc 
 ### Écosystème Vue
 
 | Framework | Dépendance de détection | Valeur renvoyée |
-|------|---------|--------|
+|--- | --- | ---|
 | **Nuxt** | `nuxt` | `nuxtjs` |
 | **VitePress** | `vitepress` | `vitepress` |
 | **VuePress** | `vuepress` | `vuepress` |
@@ -65,7 +65,7 @@ La détection vérifie simultanément `dependencies` et `devDependencies`, donc 
 ### Écosystème Svelte
 
 | Framework | Dépendance de détection | Valeur renvoyée |
-|------|---------|--------|
+|--- | --- | ---|
 | **SvelteKit** | `@sveltejs/kit` | `sveltekit-1` |
 | **Svelte** | `svelte` | `svelte` |
 | **Sapper** (legacy) | `sapper` | `sapper` |
@@ -73,14 +73,14 @@ La détection vérifie simultanément `dependencies` et `devDependencies`, donc 
 ### Angular
 
 | Framework | Dépendance de détection | Valeur renvoyée |
-|------|---------|--------|
+|--- | --- | ---|
 | **Angular** | `@angular/core` | `angular` |
 | **Ionic Angular** | `@ionic/angular` | `ionic-angular` |
 
 ### Générateurs de sites statiques
 
 | Framework | Dépendance de détection | Valeur renvoyée |
-|------|---------|--------|
+|--- | --- | ---|
 | **Astro** | `astro` | `astro` |
 | **Docusaurus** | `@docusaurus/core` | `docusaurus-2` |
 | **Hexo** | `hexo` | `hexo` |
@@ -90,7 +90,7 @@ La détection vérifie simultanément `dependencies` et `devDependencies`, donc 
 ### Frameworks backend Node.js
 
 | Framework | Dépendance de détection | Valeur renvoyée |
-|------|---------|--------|
+|--- | --- | ---|
 | **Express** | `express` | `express` |
 | **NestJS** | `@nestjs/core` | `nestjs` |
 | **Hono** | `hono` | `hono` |
@@ -102,7 +102,7 @@ La détection vérifie simultanément `dependencies` et `devDependencies`, donc 
 ### Autres frameworks
 
 | Framework | Dépendance de détection | Valeur renvoyée |
-|------|---------|--------|
+|--- | --- | ---|
 | **SolidStart** | `@solidjs/start` | `solidstart-1` |
 | **Ember** | `ember-cli`, `ember-source` | `ember` |
 | **Dojo** | `@dojo/framework` | `dojo` |
@@ -118,7 +118,7 @@ La détection vérifie simultanément `dependencies` et `devDependencies`, donc 
 ### Outils de construction
 
 | Framework | Dépendance de détection | Valeur renvoyée |
-|------|---------|--------|
+|--- | --- | ---|
 | **Vite** | `vite` | `vite` |
 | **Parcel** | `parcel` | `parcel` |
 
@@ -201,7 +201,7 @@ Voir le tutoriel [Déploiement en un clic Vercel](../../platforms/vercel-deploy/
 > Dernière mise à jour :2026-01-25
 
 | Fonctionnalité | Chemin de fichier | Ligne |
-| ----------- | -------------------------------------------- | ----- |
+|--- | --- | ---|
 | Logique de détection de frameworks | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 11-156 |
 | Entrée du script de déploiement | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 1-250 |
 | Gestion HTML statique | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 192-205 |

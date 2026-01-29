@@ -93,7 +93,7 @@ async function detectTerminalInfo(config: NotifyConfig): Promise<TerminalInfo> {
 **Step-by-step breakdown**:
 
 | Step | Code | Description |
-|------|------|-------------|
+|--- | --- | ---|
 | 1 | `config.terminal \|\| detectTerminal()` | Use config override if provided, otherwise auto-detect |
 | 2 | `!terminalName ? return {...}` | Return empty object if detection fails |
 | 3 | `TERMINAL_PROCESS_NAMES[...]` | Lookup mapping table to get macOS process name |
@@ -326,7 +326,7 @@ If your terminal is correctly identified, manual override is **not recommended**
 ### macOS
 
 | Feature | Support | Implementation |
-|---------|---------|----------------|
+|--- | --- | ---|
 | Native notifications | ✅ | node-notifier (NSUserNotificationCenter) |
 | Terminal detection | ✅ | detect-terminal library |
 | Focus detection | ✅ | osascript query frontmost app |
@@ -352,7 +352,7 @@ graph LR
 ### Windows
 
 | Feature | Support | Implementation |
-|---------|---------|----------------|
+|--- | --- | ---|
 | Native notifications | ✅ | node-notifier (SnoreToast) |
 | Terminal detection | ✅ | detect-terminal library |
 | Focus detection | ❌ | System limitation |
@@ -375,7 +375,7 @@ graph LR
 ### Linux
 
 | Feature | Support | Implementation |
-|---------|---------|----------------|
+|--- | --- | ---|
 | Native notifications | ✅ | node-notifier (notify-send) |
 | Terminal detection | ✅ | detect-terminal library |
 | Focus detection | ❌ | System limitation |
@@ -400,7 +400,7 @@ if (!terminalName) {
 ### Impact on Notification Features
 
 | Feature | Behavior after detection failure |
-|---------|----------------------------------|
+|--- | ---|
 | Native notifications | ✅ **Works normally** (doesn't depend on terminal detection) |
 | Focus detection | ❌ **Disabled** (`isTerminalFocused()` directly returns false) |
 | Click-to-focus | ❌ **Disabled** (`bundleId` is null, doesn't set activate parameter) |
@@ -503,7 +503,7 @@ Note: For `question` type events, source code explicitly comments "no focus chec
 **Common lookup table**:
 
 | Your Terminal | Config Value | Detection Result (detect-terminal) |
-|--------------|--------------|-------------------------------------|
+|--- | --- | ---|
 | Ghostty | `"ghostty"` | ✅ |
 | iTerm2 | `"iterm2"` or `"iterm"` | ✅ |
 | Kitty | `"kitty"` | ✅ |
@@ -672,7 +672,7 @@ Terminal detection is the foundation of opencode-notify smart filtering feature:
 > Updated: 2026-01-27
 
 | Feature | File Path | Line |
-|---------|-----------|------|
+|--- | --- | ---|
 | Terminal detection main function | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L145-L164) | 145-164 |
 | macOS process name mapping table | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L71-L84) | 71-84 |
 | macOS Bundle ID retrieval | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L135-L137) | 135-137 |
@@ -683,7 +683,7 @@ Terminal detection is the foundation of opencode-notify smart filtering feature:
 | Focus detection in task completion handler | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L265) | 265 |
 | Focus detection in error notification handler | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L303) | 303 |
 | Focus detection in permission request handler | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L326) | 326 |
-| macOS click-to-focus setting | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L238-L240) | 238-240 |
+|--- | --- | ---|
 | Terminal detection at plugin startup | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L364) | 364 |
 
 **Key Constants**:

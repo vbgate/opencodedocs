@@ -55,7 +55,7 @@ Semantic matching is a technique that **understands user intent**, relying not o
 For example:
 
 | User Input                  | Skill Description                         | Keyword Match | Semantic Match |
-| --------------------------- | ---------------------------------------- | ------------- | -------------- |
+|--- | --- | --- | ---|
 | "Create a database connection pool" | "Database connection management and optimization tool" | ❌ | ✅ |
 | "Help me write API documentation" | "Automated API documentation generator" | ✅ | ✅ |
 | "Project initialization scaffold" | "Quick project structure setup tool" | ❌ | ✅ |
@@ -101,7 +101,7 @@ Where:
 **Result range**: `-1` to `1`
 
 | Similarity Range | Meaning                         | Recommended |
-| ---------------- | ------------------------------- | ---------- |
+|--- | --- | ---|
 | 0.7-1.0          | Very similar, almost identical | ✅ Strongly recommend |
 | 0.35-0.7         | Some relevance, worth considering | ✅ Recommend |
 | 0.0-0.35         | Low or no relevance             | ❌ Don't recommend |
@@ -216,7 +216,7 @@ Find the skill you want to optimize and note its current description.
 ### View Examples: Good vs Bad Descriptions
 
 | ❌ Bad Description                              | ✅ Good Description                                    |
-| --------------------------------------------- | ----------------------------------------------------- |
+|--- | ---|
 | "Tool"                                        | "Automated testing framework integration, supports Jest and Vitest" |
 | "Help"                                        | "Git operations assistant, providing common commands and workflow guidance" |
 | "Documentation"                               | "Generate API documentation from code comments"       |
@@ -413,7 +413,7 @@ export async function precomputeSkillEmbeddings(skills: SkillSummary[]): Promise
 Automatic skill recommendation improves experience through:
 
 | Technique          | Effect                          | User Experience Improvement          |
-| ----------------- | ------------------------------- | ------------------------------------ |
+|--- | --- | ---|
 | Embedding model   | Convert text to vectors         | Understand semantics, not just keywords |
 | Cosine similarity | Calculate vector similarity     | Accurately match relevant skills     |
 | Caching mechanism | Disk cache embeddings           | Faster response after first time     |
@@ -449,7 +449,7 @@ Automatic skill recommendation improves experience through:
 > Last updated: 2026-01-24
 
 | Function              | File Path                                                                                                | Line Range |
-| ------------------- | --------------------------------------------------------------------------------------------------- | ---------- |
+|--- | --- | ---|
 | Semantic matching core function      | [`src/embeddings.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/embeddings.ts#L108-L135)       | 108-135 |
 | Generate text embedding   | [`src/embeddings.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/embeddings.ts#L38-L66)         | 38-66   |
 | Calculate cosine similarity      | [`src/embeddings.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/embeddings.ts#L71-L90)         | 71-90   |
@@ -461,7 +461,7 @@ Automatic skill recommendation improves experience through:
 **Key Constants**:
 
 | Constant Name                  | Value                         | Description             | Source               |
-| ------------------- | ------------------------ | -------------- | ---------------- |
+|--- | --- | --- | ---|
 | MODEL_NAME          | Xenova/all-MiniLM-L6-v2  | Embedding model used | `embeddings.ts:8`   |
 | QUANTIZATION        | q8                       | Model quantization level        | `embeddings.ts:9`   |
 | SIMILARITY_THRESHOLD | 0.35                     | Similarity recommendation threshold      | `embeddings.ts:10`  |

@@ -24,7 +24,7 @@ We recommend learning in the following order:
 ## Chapter Content
 
 | Course | Description | Learning Time |
-|--------|-------------|---------------|
+|--- | --- | ---|
 | [Get Started in One Minute: Installation & Configuration](./getting-started/) | Learn how to install the plugin and configure OpenCode, see formatting effects immediately | 3 minutes |
 | [Feature Overview: The Magic of Automatic Formatting](./features/) | Understand the plugin's 8 core features, know what it can and cannot do | 5 minutes |
 

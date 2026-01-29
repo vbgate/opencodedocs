@@ -80,7 +80,7 @@ bash skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh .
 2. Распространенные типы ошибок:
 
 | Сообщение об ошибке | Возможная причина | Решение |
-| ----------- | -------------- | --------- |
+|--- | --- | ---|
 | "File too large" | Объем проекта превышает лимит | Исключите ненужные файлы (например, `*.log`, `*.test.ts`) |
 | "Invalid framework" | Сбой распознавания фреймворка | Добавьте `package.json` или укажите фреймворк вручную |
 | "Network timeout" | Тайм-аут сети | Проверьте сетевое подключение, повторите развертывание |
@@ -115,9 +115,9 @@ tar -czf "$TARBALL" -C "$PROJECT_PATH" \
 **Решение**:
 
 | Сценарий | Метод решения |
-| -------- | ------------ |
+|--- | ---|
 | `package.json` существует но распознавание не удается | Проверьте, находятся ли зависимости в `dependencies` или `devDependencies` |
-| Чистый статический HTML-проект | Убедитесь, что в корне есть `index.html`, скрипт автоматически переименует один HTML-файл (см. исходный код [`deploy.sh:198-205`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh#L198-L205)) |
+|--- | ---|
 | Фреймворк не в списке поддерживаемых | Разверните напрямую (framework = null), Vercel автоматически определит |
 
 **Ручная проверка распознавания фреймворка**:
@@ -208,7 +208,7 @@ curl -I https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/m
 ::: tip Примеры ошибок проверки и исправления
 
 | Сообщение об ошибке | Причина | Исправление |
-| --------------- | ------- | ----------- |
+|--- | --- | ---|
 | `Missing or empty title` | Frontmatter отсутствует поле `title` | В начало файла правила добавьте:<br>`---`<br>`title: "Заголовок правила"`<br>`---` |
 | `Missing or empty explanation` | Отсутствует описание правила | В Frontmatter добавьте поле `explanation` |
 | `Missing examples` | Нет примеров кода | Добавьте `**Incorrect:**` и `**Correct:**` блоки кода |
@@ -463,7 +463,7 @@ tar -czf "$TARBALL" -C "$PROJECT_PATH" \
 > Обновлено: 2026-01-25
 
 | Функция        | Путь к файлу                                                                                      | Строки   |
-| --------------- | ---------------------------------------------------------------------------------------------------- | -------- |
+|--- | --- | ---|
 | Обработка сетевых ошибок | [`skills/claude.ai/vercel-deploy-claimable/SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/SKILL.md#L100-L113) | 100-113   |
 | Логика проверки правил | [`packages/react-best-practices-build/src/validate.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/validate.ts) | 21-66     |
 | Логика распознавания фреймворка | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 12-156    |

@@ -217,7 +217,7 @@ Signal позволяет привязать до 4 устройств. Clawdbot
 **Описание полей**:
 
 | Поле | Значение | Описание |
-|------|---------|----------|
+|--- | --- | ---|
 | `enabled` | `true` | Включить канал Signal |
 | `account` | `"+15551234567"` | Ваш аккаунт Signal (формат E.164) |
 | `cliPath` | `"signal-cli"` | Путь к команде signal-cli |
@@ -567,7 +567,7 @@ which signal-cli
 > Обновлено: 2026-01-27
 
 | Функция | Путь к файлу | Строки |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | RPC клиент Signal | [`src/signal/client.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/client.ts)         | 1-186   |
 | Управление демоном Signal | [`src/signal/daemon.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/daemon.ts)         | 1-85    |
 | Поддержка нескольких аккаунтов | [`src/signal/accounts.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/accounts.ts)       | 1-84    |

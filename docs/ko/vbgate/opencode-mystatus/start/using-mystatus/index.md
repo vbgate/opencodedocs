@@ -134,7 +134,7 @@ Show my AI account status
 **핵심 설정 항목 설명**:
 
 | 설정 항목 | 값 | 역할 |
-| ------ | --- | ---- |
+|--- | --- | ---|
 | `description` | "Query quota usage for all AI accounts" | 명령어 목록에 표시되는 설명 |
 | `template` | "Use to mystatus tool..." | OpenCode가 이 명령어를 처리하는 방법 안내 |
 
@@ -146,7 +146,7 @@ template는 OpenCode에 대한 "지시"로, 사용자가 `/mystatus`를 입력�
 두 가지 사용 방법을 마스터했는지 확인하세요:
 
 | 기술 | 확인 방법 | 예상 결과 |
-| ---- | -------- | -------- |
+|--- | --- | ---|
 | 슬래시 명령어 조회 | `/mystatus` 입력 | 모든 플랫폼의 할당량 정보 표시 |
 | 자연어 조회 | "Check my OpenAI quota" 입력 | 할당량 정보 표시 |
 | 설정 이해 | opencode.json 확인 | mystatus 명령어 설정 찾기 |
@@ -212,7 +212,7 @@ mystatus 도구는 두 가지 사용 방법을 제공합니다:
 > 업데이트 날짜:2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | mystatus 도구 정의 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 29-33 |
 | 도구 설명 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 30-31 |
 | 슬래시 명령어 설정 | [`command/mystatus.md`](https://github.com/vbgate/opencode-mystatus/blob/main/command/mystatus.md) | 1-6 |

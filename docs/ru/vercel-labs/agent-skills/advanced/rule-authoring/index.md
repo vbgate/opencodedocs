@@ -127,7 +127,7 @@ tags: bundle, code-splitting, lazy-loading, performance
 **Описание полей**:
 
 | Поле               | Обязательно | Описание                     | Пример значения                                 |
-| ------------------- | ---------- | ---------------------------- | ---------------------------------------------- |
+|--- | --- | --- | ---|
 | `title`             | ✅          | Краткий заголовок правила     | `Promise.all() for Independent Operations`        |
 | `impact`            | ✅          | Уровень влияния (6 значений) | `CRITICAL` / `HIGH` / `MEDIUM` и т.д.         |
 | `impactDescription` | ⭕          | Описание величины влияния      | `2-10× improvement`                            |
@@ -193,7 +193,7 @@ function Dashboard() {
 **Спецификация написания примеров**:
 
 | Требование       | Описание                                                    |
-| --------------- | ----------------------------------------------------------- |
+|--- | ---|
 | **Формат ярлыка** | `**Incorrect:**` или `**Incorrect (description):**` (скобки необязательны) |
 | **Содержимое скобок** | Необязательно, краткое описание почему неправильно/правильно        |
 | **Блок кода**   | Используйте ````typescript` или ````tsx`                         |
@@ -253,7 +253,7 @@ Validating rule files...
 **Распространенные ошибки валидации**:
 
 | Сообщение об ошибке                                                        | Причина                                             | Исправление                                                        |
-| ------------------------------------------------------------------------- | --------------------------------------------------- | ----------------------------------------------------------------- |
+|--- | --- | ---|
 | `Missing or empty title`                                        | Frontmatter отсутствует поле `title`                | Добавьте `title: Your Title`                                       |
 | `Missing examples (need at least one bad and one good example)` | Массив examples пуст                               | Добавьте хотя бы один пример (с блоком кода)                     |
 | `Missing code examples`                                         | Есть метки примеров, но нет фактического кода       | Добавьте блок кода после метки (````typescript`)                   |
@@ -408,7 +408,7 @@ const bad = code
 ### Файлы
 
 | Функция                     | Путь к файлу                                                                                                                                                           | Строки    |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+|--- | --- | ---|
 | Файл шаблона правил             | [`skills/react-best-practices/rules/_template.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/_template.md)           | 1-29      |
 | Определение типов правил             | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts)       | 5-26      |
 | Логика валидации правил             | [`packages/react-best-practices-build/src/validate.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/validate.ts) | 21-66     |

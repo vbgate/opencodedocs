@@ -25,7 +25,7 @@ AI 生成的 Markdown 表格經常是這樣的：
 
 ```markdown
 | 名稱 | 描述 | 狀態 |
-|---|---|---|
+|--- | --- | ---|
 | 功能A | 這是一個很長的描述文字 | 已完成 |
 | B | 短 | 進行中 |
 ```
@@ -125,7 +125,7 @@ Get-ChildItem "$env:APPDATA\opencode\opencode.jsonc"
 
 ```markdown
 | 框架    | 特點                     | 學習曲線 |
-| ------- | ------------------------ | -------- |
+|--- | --- | ---|
 | React   | 元件化、虛擬 DOM         | 中等     |
 | Vue     | 漸進式、雙向綁定         | 較低     |
 | Angular | 全功能框架、TypeScript   | 較高     |
@@ -136,7 +136,7 @@ Get-ChildItem "$env:APPDATA\opencode\opencode.jsonc"
 完成上述步驟後，檢查以下幾點：
 
 | 檢查項                   | 預期結果                       |
-| ------------------------ | ------------------------------ |
+|--- | ---|
 | 設定檔語法               | 無報錯                         |
 | OpenCode 啟動            | 正常啟動，無外掛載入錯誤       |
 | AI 生成表格              | 列寬自動對齊，分隔列格式統一   |
@@ -184,7 +184,7 @@ Get-ChildItem "$env:APPDATA\opencode\opencode.jsonc"
 > 更新時間：2026-01-26
 
 | 功能           | 檔案路徑                                                                                     | 行號    |
-| -------------- | -------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 外掛入口       | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L9-L23) | 9-23    |
 | 鉤子註冊       | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L11-L13) | 11-13   |
 | 套件設定       | [`package.json`](https://github.com/franlol/opencode-md-table-formatter/blob/main/package.json#L1-L41) | 1-41    |

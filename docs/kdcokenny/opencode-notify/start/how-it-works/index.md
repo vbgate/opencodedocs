@@ -44,7 +44,7 @@ opencode-notify listens to four types of OpenCode events, each with clear trigge
 **Trigger timing**: When the AI session becomes idle (task completed)
 
 | Item | Description |
-|-----|------|
+|--- | ---|
 | Notification title | Ready for review |
 | Notification content | Session title (max 50 characters) |
 | Default sound | Glass (macOS) |
@@ -56,7 +56,7 @@ opencode-notify listens to four types of OpenCode events, each with clear trigge
 **Trigger timing**: When the AI session encounters an error
 
 | Item | Description |
-|-----|------|
+|--- | ---|
 | Notification title | Something went wrong |
 | Notification content | Error summary (max 100 characters) |
 | Default sound | Basso (macOS) |
@@ -68,7 +68,7 @@ opencode-notify listens to four types of OpenCode events, each with clear trigge
 **Trigger timing**: When AI needs your authorization to perform an operation (e.g., reading files, accessing network)
 
 | Item | Description |
-|-----|------|
+|--- | ---|
 | Notification title | Waiting for you |
 | Notification content | OpenCode needs your input |
 | Default sound | Submarine (macOS) |
@@ -80,7 +80,7 @@ opencode-notify listens to four types of OpenCode events, each with clear trigge
 **Trigger timing**: When the AI uses the `question` tool to ask you
 
 | Item | Description |
-|-----|------|
+|--- | ---|
 | Notification title | Question for you |
 | Notification content | OpenCode needs your input |
 | Default sound | Submarine (macOS) |
@@ -241,7 +241,7 @@ If multiple tasks complete simultaneously, the plugin won't send multiple notifi
 Through the configuration file, you can adjust each layer of the filtering mechanism:
 
 | Configuration | Affects Layer | Default | Description |
-|-------|---------|--------|------|
+|--- | --- | --- | ---|
 | `notifyChildSessions` | Parent session check | `false` | Set to `true` to enable child session notifications |
 | `quietHours.enabled` | Quiet hours check | `false` | Set to `true` to enable quiet hours |
 | `quietHours.start` | Quiet hours check | `"22:00"` | Quiet hours start time |
@@ -300,7 +300,7 @@ This design ensures notification timeliness and low interference—reminding you
 > Last updated: 2026-01-27
 
 | Function | File Path | Line |
-| --- | --- | --- |
+|--- | --- | ---|
 | Plugin main entry | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L357-L406) | 357-406 |
 | Configuration loading | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L90-L114) | 90-114 |
 | Default configuration | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L56-L68) | 56-68 |

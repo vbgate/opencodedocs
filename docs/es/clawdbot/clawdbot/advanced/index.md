@@ -53,14 +53,14 @@ Según tus necesidades, puedes elegir diferentes rutas de aprendizaje:
 ### Configuración central
 
 | Tema | Descripción | Tiempo estimado |
-|------|------|----------|
+|--- | --- | ---|
 | [Configuración de modelos de IA y autenticación](./models-auth/) | Configura múltiples proveedores de modelos de IA como Anthropic, OpenAI, OpenRouter, Ollama y métodos de autenticación | 15 minutos |
 | [Gestión de sesiones y múltiples agentes](./session-management/) | Aprende el modelo de sesión, aislamiento de sesión, colaboración de sub-agentes, compresión de contexto y otros conceptos centrales | 20 minutos |
 
 ### Sistema de herramientas
 
 | Tema | Descripción | Tiempo estimado |
-|------|------|----------|
+|--- | --- | ---|
 | [Herramientas de automatización del navegador](./tools-browser/) | Usa herramientas de navegador para automatización web, capturas de pantalla, operaciones de formularios, etc. | 25 minutos |
 | [Herramientas de ejecución de comandos y aprobación](./tools-exec/) | Configura y usa la herramienta exec, comprende el mecanismo de aprobación de seguridad y control de permisos | 15 minutos |
 | [Herramientas de búsqueda y scraping web](./tools-web/) | Usa las herramientas web_search y web_fetch para búsqueda web y scraping de contenido | 20 minutos |
@@ -68,28 +68,28 @@ Según tus necesidades, puedes elegir diferentes rutas de aprendizaje:
 ### Experiencia interactiva
 
 | Tema | Descripción | Tiempo estimado |
-|------|------|----------|
+|--- | --- | ---|
 | [Interfaz visual Canvas y A2UI](./canvas/) | Comprende el mecanismo de empuje Canvas A2UI, operaciones de interfaz visual e interfaz personalizada | 20 minutos |
 | [Activación por voz y texto a voz](./voice-tts/) | Configura Voice Wake, Talk Mode y proveedores TTS, implementa interacción por voz | 15 minutos |
 
 ### Extensiones inteligentes
 
 | Tema | Descripción | Tiempo estimado |
-|------|------|----------|
+|--- | --- | ---|
 | [Sistema de memoria y búsqueda vectorial](./memory-system/) | Configura y usa el sistema de memoria (SQLite-vec, FTS5, búsqueda híbrida) | 25 minutos |
 | [Plataforma de habilidades y ClawdHub](./skills-platform/) | Comprende el sistema de habilidades, habilidades Bundled/Managed/Workspace, integración ClawdHub | 20 minutos |
 
 ### Automatización y despliegue
 
 | Tema | Descripción | Tiempo estimado |
-|------|------|----------|
+|--- | --- | ---|
 | [Tareas programadas Cron y Webhook](./cron-automation/) | Configura tareas programadas, activación Webhook, Gmail Pub/Sub y otras funciones de automatización | 20 minutos |
 | [Gateway remoto y Tailscale](./remote-gateway/) | Acceso remoto a Gateway a través de Tailscale Serve/Funnel o túnel SSH | 15 minutos |
 
 ### Mecanismos de seguridad
 
 | Tema | Descripción | Tiempo estimado |
-|------|------|----------|
+|--- | --- | ---|
 | [Seguridad y aislamiento en sandbox](./security-sandbox/) | Comprende el modelo de seguridad, control de permisos de herramientas, aislamiento Sandbox, despliegue con Docker | 20 minutos |
 
 ## Siguientes pasos

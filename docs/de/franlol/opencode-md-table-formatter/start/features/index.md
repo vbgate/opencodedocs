@@ -31,7 +31,7 @@ KI-generierte Markdown-Tabellen sehen oft so aus:
 
 ```markdown
 | 名称 | 描述 | 状态 |
-|---|---|---|
+|--- | --- | ---|
 | **用户管理** | 管理系统用户 | ✅ 完成 |
 | API | 接口文档 | 🚧 进行中 |
 ```
@@ -64,7 +64,7 @@ Das Plugin erkennt automatisch Markdown-Tabellen im von der KI generierten Text,
 
 ```markdown
 | 名称 | 描述 | 状态 |
-|---|---|---|
+|--- | --- | ---|
 | **用户管理** | 管理系统用户 | ✅ 完成 |
 | API | 接口文档 | 🚧 进行中 |
 ```
@@ -73,7 +73,7 @@ Das Plugin erkennt automatisch Markdown-Tabellen im von der KI generierten Text,
 
 ```markdown
 | 名称         | 描述         | 状态       |
-| ------------ | ------------ | ---------- |
+|--- | --- | ---|
 | **用户管理** | 管理系统用户 | ✅ 完成    |
 | API          | 接口文档     | 🚧 进行中  |
 ```
@@ -111,7 +111,7 @@ Quellcode-Position: `index.ts:181-185`
 Unterstützt die drei Ausrichtungsarten von Markdown-Tabellen:
 
 | Syntax | Ausrichtung | Effekt |
-| --- | --- | --- |
+|--- | --- | ---|
 | `---` oder `:---` | Linksbündig | Text links (beide Syntaxen haben denselben Effekt) |
 | `:---:` | Zentriert | Text zentriert |
 | `---:` | Rechtsbündig | Text rechts |
@@ -120,7 +120,7 @@ Unterstützt die drei Ausrichtungsarten von Markdown-Tabellen:
 
 ```markdown
 | 左对齐 | 居中 | 右对齐 |
-| :--- | :---: | ---: |
+|--- | --- | ---|
 | 文本 | 文本 | 文本 |
 ```
 
@@ -171,7 +171,7 @@ Quellcode-Position: `index.ts:168-193`
 Das Plugin kann verschiedene Randfälle korrekt verarbeiten:
 
 | Szenario | Verarbeitungsweise |
-| --- | --- |
+|--- | ---|
 | Emoji-Ausdrücke | Verwenden Sie `Bun.stringWidth` zur korrekten Berechnung der Anzeigebreite |
 | Unicode-Zeichen | Chinesisch, Japanisch und andere Festbreitenzeichen werden korrekt ausgerichtet |
 | Leere Zellen | Mit Leerzeichen auf die Mindestbreite auffüllen (3 Zeichen) |
@@ -225,12 +225,12 @@ Nach Abschluss dieser Lektion sollten Sie folgende Fragen beantworten können:
 ## Zusammenfassung dieser Lektion
 
 | Funktion | Beschreibung |
-| --- | --- |
+|--- | ---|
 | Automatische Formatierung | Wird automatisch ausgelöst, nachdem die KI Text generiert hat, keine manuelle Bedienung erforderlich |
-| Versteckmodus-Kompatibilität | Korrekte Berechnung der Anzeigebreite nach dem Ausblenden von Markdown-Symbolen |
+|--- | ---|
 | Ausrichtungsunterstützung | Linksbündig, zentriert, rechtsbündig |
 | Verschachteltes Markdown | Mehrstufige Regex-Entfernung, unterstützt verschachtelte Syntax |
-| Codeblock-Schutz | Symbole in Inline-Code bleiben unverändert |
+|--- | ---|
 | Randfälle | Emoji, Unicode, leere Zellen, überlanger Inhalt |
 | Stiller Betrieb | Keine Protokolle, Fehler unterbrechen nicht |
 | Validierungsfeedback | Ungültige Tabellen erhalten Fehlerkommentar |
@@ -254,13 +254,13 @@ Nach Abschluss dieser Lektion sollten Sie folgende Fragen beantworten können:
 > Aktualisierungszeit: 2026-01-26
 
 | Funktion | Dateipfad | Zeilen |
-| --- | --- | --- |
-| Plugin-Einstieg | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L9-L23) | 9-23 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Tabellenerkennung | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61) | 58-61 |
 | Tabellenvalidierung | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88) | 70-88 |
 | Breitenberechnung (Versteckmodus) | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L161-L196) | 161-196 |
-| Ausrichtungsarten-Parsing | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L141-L149) | 141-149 |
-| Codeblock-Schutz | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L168-L173) | 168-173 |
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Konstanten**:
 - `colWidths[col] = 3`：Mindestspaltenbreite von 3 Zeichen (`index.ts:115`)

@@ -128,7 +128,7 @@ async function recurse(dir: string, depth: number, relPath: string) {
 **不同位置的递归深度**：
 
 | 位置                | Label           | 最大深度 | 说明                       |
-| ------------------- | --------------- | -------- | -------------------------- |
+|--- | --- | --- | ---|
 | `.opencode/skills/` | project         | 3        | 支持嵌套目录结构           |
 | `.claude/skills/`   | claude-project  | 1        | 只扫描第一层               |
 | `~/.config/opencode/skills/` | user   | 3        | 支持嵌套目录结构           |
@@ -222,7 +222,7 @@ const SkillFrontmatterSchema = z.object({
 - 不允许空格、大写字母、下划线
 
 | ❌ 错误的技能名称  | ✅ 正确的技能名称 |
-| ---------------- | ---------------- |
+|--- | ---|
 | `MySkill`        | `my-skill`       |
 | `git_helper`     | `git-helper`     |
 | `Git Helper`     | `git-helper`     |
@@ -272,7 +272,7 @@ async function recurse(dir: string, depth: number, relPath: string) {
 **脚本发现规则**：
 
 | 规则              | 说明                                    |
-| ----------------- | --------------------------------------- |
+|--- | ---|
 | 可执行位检查      | 文件必须有执行权限（`chmod +x`）       |
 | 跳过隐藏目录      | 不扫描 `.git`、`.venv` 等目录           |
 | 跳过依赖目录      | 不扫描 `node_modules`、`__pycache__` 等 |
@@ -420,7 +420,7 @@ OpenCode Agent Skills 从多个位置自动发现技能，按优先级顺序查�
 > 更新时间：2026-01-24
 
 | 功能           | 文件路径                                                                                      | 行号    |
-| -------------- | --------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 发现路径定义   | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L241-L246)     | 241-246 |
 | 发现所有技能   | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L240-L263)     | 240-263 |
 | 递归搜索技能   | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L176-L218)     | 176-218 |

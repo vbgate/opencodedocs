@@ -97,7 +97,7 @@ Si l'Agent vous dit "le mot de passe est [REDACTED]", cela signifie que le méca
 > Date de mise à jour : 2026-01-23
 
 | Fonctionnalité | Chemin du fichier | Lignes |
-| --- | --- | --- |
+|--- | --- | ---|
 | Logique de masquage de confidentialité | [`src/services/privacy.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/privacy.ts#L1-L13) | 1-13 |
 | Chargement de la clé API | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L90) | 90 |
 | Appel au masquage par le plugin | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L282) | 282 |

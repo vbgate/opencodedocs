@@ -66,7 +66,7 @@ sequenceDiagram
 **Conceptos clave**:
 
 | Concepto | Descripción |
-| ------ | ------ |
+|--- | ---|
 | **Service Account** | Método de autenticación de Google Cloud, usado para la identidad del bot |
 | **Webhook** | Endpoint HTTP donde Google Chat POSTea mensajes al Gateway |
 | **Audience** | Objetivo para verificar las solicitudes webhook (app-url o project-number) |
@@ -412,7 +412,7 @@ Si ves errores, ejecuta `clawdbot channels status --probe` para ver información
 ### Autenticación de Service Account
 
 | Configuración | Tipo | Predeterminado | Descripción |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `serviceAccountFile` | string | - | Ruta del archivo JSON de Service Account |
 | `serviceAccount` | string\|object | - | Credenciales JSON en línea (alternativa a la ruta del archivo) |
 | `audienceType` | "app-url"\|"project-number" | "app-url" | Tipo de verificación: URL o número de proyecto |
@@ -423,7 +423,7 @@ Si ves errores, ejecuta `clawdbot channels status --probe` para ver información
 Por defecto, remitentes desconocidos necesitan emparejamiento:
 
 | Configuración | Tipo | Predeterminado | Descripción |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `dm.enabled` | boolean | undefined | Si se habilita la recepción de DM |
 | `dm.policy` | "pairing"|"open" | "pairing" | Política de acceso: emparejamiento o abierto |
 | `dm.allowFrom` | array | [] | Lista de remitentes permitidos (IDs de usuarios o correos) |
@@ -437,7 +437,7 @@ clawdbot pairing approve googlechat <código-emparejamiento>
 ### Política de grupo
 
 | Configuración | Tipo | Predeterminado | Descripción |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `groupPolicy` | "allowlist"|"disabled" | "allowlist" | Política de grupo: lista de permitidos o deshabilitado |
 | `requireMention` | boolean | true | Si requiere @mención para activar |
 | `groups` | object | {} | Configuración por ID de espacio |
@@ -464,7 +464,7 @@ clawdbot pairing approve googlechat <código-emparejamiento>
 ### Otras configuraciones
 
 | Configuración | Tipo | Predeterminado | Descripción |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `webhookPath` | string | "/googlechat" | Ruta del Webhook |
 | `botUser` | string | - | Nombre de recurso del usuario bot (usado para detección de menciones) |
 | `typingIndicator` | "none"|"message"|"reaction" | "message" | Modo de indicador de escritura |
@@ -568,7 +568,7 @@ Agregar en `~/.clawdbot/clawdbot.json`:
 > Última actualización: 2026-01-27
 
 | Función | Ruta del archivo | Líneas |
-| ------ | --------- | ---- |
+|--- | --- | ---|
 | Definición de tipos de configuración de Google Chat | [`src/config/types.googlechat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.googlechat.ts) | 1-109 |
 | Zod Schema de Google Chat | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts) | 273-341 |
 | Registro de canales | [`src/channels/registry.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.ts) | 61-67 |

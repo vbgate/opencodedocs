@@ -241,7 +241,7 @@ Les commandes d'appareil photo exigent que l'application iOS soit au **premier p
 **Paramètres de l'appareil photo iOS** :
 
 | Paramètre | Type | Défaut | Description |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `facing` | `front\|back` | `front` | Orientation de la caméra |
 | `maxWidth` | number | `1600` | Largeur maximale (pixels) |
 | `quality` | `0..1` | `0.9` | Qualité JPEG (0-1) |
@@ -388,7 +388,7 @@ Dans cette leçon, vous avez appris :
 > Date de mise à jour : 2026-01-27
 
 | Fonctionnalité | Chemin du fichier | Ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Point d'entrée de l'application iOS | [`apps/ios/Sources/ClawdbotApp.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/ClawdbotApp.swift) | 1-30 |
 | Rendu Canvas | [`apps/ios/Sources/RootCanvas.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/RootCanvas.swift) | 1-250 |
 | Connexion Gateway | [`apps/ios/Sources/Gateway/`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/Gateway/) | - |

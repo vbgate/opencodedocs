@@ -66,7 +66,7 @@ Les journaux Proxy Monitor sont écrits dans SQLite dans le répertoire de donn�
 Dans un enregistrement Proxy Monitor (structure backend `ProxyRequestLog`), les plus utiles sont ces champs :
 
 | Champ | Question à laquelle vous répondez |
-| --- | --- |
+|--- | ---|
 | `status` | Cette requête a-t-elle réussi ou échoué (200-399 vs autres) |
 | `url` / `method` | Quel point de terminaison avez-vous touché (par exemple `/v1/messages`, `/v1/chat/completions`) |
 | `protocol` | C'est quel protocole OpenAI / Claude(Anthropic) / Gemini |
@@ -191,7 +191,7 @@ Effacer supprime tous les enregistrements dans `proxy_logs.db`.
 ## Attention aux pièges courants
 
 | Scénario | Ce que vous pourriez comprendre (❌) | Comportement réel (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | "En pause" = aucune surcharge de monitoring | Penser que après pause, les requêtes ne seront pas analysées | La pause affecte seulement "si écrire dans les journaux Proxy Monitor". Mais l'analyse requête/réponse (y compris l'analyse SSE des données streaming) se produira quand même, juste que les données analysées ne seront pas sauvegardées. Token Stats enregistrera quand même (que le monitoring soit activé ou non). |
 | Journaux vides pour binaire/gros payload | Penser que le monitoring est cassé | Les requêtes/réponses binaires afficheront `[Binary Request Data]` / `[Binary Response Data]`. Le corps de réponse dépassant 100MB sera marqué `[Response too large (>100MB)]` ; le corps de requête dépassant la limite ne sera pas enregistré. |
 | Utiliser Monitor pour trouver "qui a lancé la requête" | Penser pouvoir remonter au processus client | Monitor enregistre les informations HTTP (méthode/chemin/modèle/compte), ne contient pas "nom du processus appelant". Vous devez combiner les logs du client lui-même ou le sniffing réseau du système pour localiser la source. |
@@ -248,7 +248,7 @@ Parce que Proxy Monitor est essentiellement SQLite, vous pouvez aussi traiter `p
 > Date de mise à jour : 2026-01-23
 
 | Fonction | Chemin du fichier | Ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Entrée page Monitor (monte ProxyMonitor) | [`src/pages/Monitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Monitor.tsx#L1-L12) | 1-12 |
 | Interface Monitor : tableau/filtrage/popup détails | [`src/components/proxy/ProxyMonitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/proxy/ProxyMonitor.tsx#L13-L713) | 13-713 |
 | Interface : lire configuration et synchroniser enable_logging | [`src/components/proxy/ProxyMonitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/proxy/ProxyMonitor.tsx#L174-L243) | 174-243 |

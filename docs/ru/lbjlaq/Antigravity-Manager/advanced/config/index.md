@@ -120,7 +120,7 @@ Copy-Item (Join-Path $HOME ".antigravity_tools\gui_config.json") (Join-Path $bac
 Ниже приведены значения по умолчанию из `AppConfig::new()` и `ProxyConfig::default()` на стороне бэкенда:
 
 | Блок конфигурации | Поле | Значение по умолчанию (исходный код) | Что нужно запомнить |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | AppConfig | `language` | `"zh"` | По умолчанию китайский |
 | AppConfig | `theme` | `"system"` | Следовать за системой |
 | AppConfig | `auto_refresh` | `true` | По умолчанию будет автоматически обновлять квоты |
@@ -270,7 +270,7 @@ Invoke-WebRequest -UseBasicParsing "http://127.0.0.1:8050/healthz" | Select-Obje
 > Дата обновления: 2026-01-24
 
 | Тема | Путь к файлу | Номер строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Значения по умолчанию AppConfig (`AppConfig::new()`) | [`src-tauri/src/models/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/models/config.rs#L4-L158) | 4-158 |
 | Значения по умолчанию ProxyConfig (порт/аутентификация/адрес прослушивания) | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L74-L292) | 74-292 |
 | Значения по умолчанию StickySessionConfig (планирование) | [`src-tauri/src/proxy/sticky_config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/sticky_config.rs#L3-L36) | 3-36 |

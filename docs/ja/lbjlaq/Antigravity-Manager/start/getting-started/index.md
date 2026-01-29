@@ -126,7 +126,7 @@ LAN アクセスを有効にしたら（`allow_lan_access=true`、監視アド�
 ## トラブルシューティング
 
 | シナリオ | 間違ったやり方（❌） | 推奨されるやり方（✓） |
-| --- | --- | --- |
+|--- | --- | ---|
 | 携帯電話/別のコンピュータにアクセスさせたい | 直接 `allow_lan_access=true` を開くが認証を設定しない | 同時に認証を有効にし、まず LAN 内で `GET /healthz` を検証する |
 | クライアントが 404 を返す | host/port のみ変更し、クライアントが `/v1` をどう連結するかを気にしない | 最初にクライアントの base_url 連結戦略を確認し、`/v1` 接頭辞が必要かどうかを判断する |
 | 最初から Claude Code をトラブルシューティングする | 複雑なクライアントに直接接続し、失敗後どこから調べればいいかわからない | 最初に最小クローズを実行：Proxy 起動 -> `GET /healthz` -> その後クライアント接続 |
@@ -155,11 +155,11 @@ LAN アクセスを有効にしたら（`allow_lan_access=true`、監視アド�
 > 更新日時：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 製品ポジショニング（ローカル AI 中継局/プロトコル溝） | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L35-L77) | 35-77 |
 | Router エンドポイント概要（OpenAI/Claude/Gemini/healthz） | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | デフォルトポート/デフォルトローカルのみ/デフォルト key と bind address ロジック | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L291) | 174-291 |
-| `auth_mode=auto` の実際の決定（LAN -> all_except_health） | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L10-L29) | 10-29 |
+|--- | --- | ---|
 | GUI ページルーティング構造（Dashboard/Accounts/API Proxy/Monitor/Token Stats/Settings） | [`src/App.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/App.tsx#L19-L48) | 19-48 |
 
 **重要なデフォルト値**：

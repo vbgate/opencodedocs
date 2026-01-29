@@ -152,7 +152,7 @@ Le point de déclenchement de `invalid_grant` est le `refresh_token` utilisé lo
 > Heure de mise à jour : 2026-01-23
 
 | Fonction | Chemin du fichier | Ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Conception : problème invalid_grant et comportement de modification | [`docs/proxy-invalid-grant.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy-invalid-grant.md#L1-L52) | 1-52 |
 | Sauter `disabled=true` lors du chargement du pool de comptes | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L70-L158) | 70-158 |
 | Identifier `invalid_grant` et désactiver le compte lors de l'échec du rafraîchissement de token | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L840-L890) | 840-890 |

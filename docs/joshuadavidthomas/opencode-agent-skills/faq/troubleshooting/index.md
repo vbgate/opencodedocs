@@ -40,7 +40,7 @@ When calling `get_available_skills`, it returns `No skills found matching your q
 The plugin searches for skills in the following priority order (first match wins):
 
 | Priority | Path | Type |
-|----------|------|------|
+|--- | --- | ---|
 | 1 | `.opencode/skills/` | Project-level (OpenCode) |
 | 2 | `.claude/skills/` | Project-level (Claude) |
 | 3 | `~/.config/opencode/skills/` | User-level (OpenCode) |
@@ -343,7 +343,7 @@ Common errors:
 **Validate required fields**:
 
 | Field | Type | Required | Constraints |
-|-------|------|----------|-------------|
+|--- | --- | --- | ---|
 | name | string | ✅ | Lowercase alphanumeric hyphens, non-empty |
 | description | string | ✅ | Non-empty |
 
@@ -395,7 +395,7 @@ After sending relevant messages, AI doesn't receive skill recommendation prompts
 The more specific the skill description, the more accurate the semantic matching.
 
 | ❌ Poor description | ✅ Good description |
-|---------------------|---------------------|
+|--- | ---|
 | "Git tool" | "Help execute Git operations: create branches, commit code, merge PRs, resolve conflicts" |
 | "Test helper" | "Generate unit tests, run test suites, analyze test coverage, fix failing tests" |
 
@@ -501,7 +501,7 @@ After loading skill, plugin returns script list. If script is not in list, check
 This lesson covered 9 common issues when using the OpenCode Agent Skills plugin:
 
 | Issue Type | Key Check Points |
-|------------|------------------|
+|--- | ---|
 | Skill not found | Discovery paths, SKILL.md format, spelling |
 | Skill does not exist | Name correctness, priority override, file existence |
 | Script execution failed | Script path, executable permissions, script logic |
@@ -534,7 +534,7 @@ This lesson covered 9 common issues when using the OpenCode Agent Skills plugin:
 > Updated: 2026-01-24
 
 | Function | File Path | Line Numbers |
-|----------|-----------|--------------|
+|--- | --- | ---|
 | Skill query fuzzy match suggestions | [`src/tools.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/tools.ts#L49-L59) | 49-59 |
 | Skill not found error handling | [`src/tools.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/tools.ts#L89-L97) | 89-97 |
 | Script not found error handling | [`src/tools.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/tools.ts#L167-L177) | 167-177 |

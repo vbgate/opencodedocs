@@ -314,7 +314,7 @@ Plannotator 是一个本地运行的评审工具，通过可视化 UI 提升计�
 > 更新时间：2026-01-24
 
 | 功能              | 文件路径                                                                                              | 行号    |
-| ----------------- | ----------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | CLI 入口（计划评审） | [`apps/hook/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/hook/server/index.ts#L1-L50)         | 1-50    |
 | CLI 入口（代码评审） | [`apps/hook/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/hook/server/index.ts#L46-L84)         | 46-84   |
 | 计划评审服务器     | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts#L1-L200)            | 1-200   |

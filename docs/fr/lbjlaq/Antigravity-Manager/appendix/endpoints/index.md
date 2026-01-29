@@ -26,7 +26,7 @@ order: 1
 Le service de proxy inverse local d'Antigravity Tools fournit les catégories de points de terminaison suivantes :
 
 | Classification du protocole | Usage | Client typique |
-| --- | --- | --- |
+|--- | --- | ---|
 | **Protocole OpenAI** | Compatibilité applications IA génériques | OpenAI SDK / Clients compatibles |
 | **Protocole Anthropic** | Appels Claude série | Claude Code / Anthropic SDK |
 | **Protocole Gemini** | SDK Google officiel | Google Gemini SDK |
@@ -40,7 +40,7 @@ Le service de proxy inverse local d'Antigravity Tools fournit les catégories de
 Ces points de terminaison sont compatibles avec le format de l'API OpenAI, convenant pour la plupart des clients prenant en charge le SDK OpenAI.
 
 | Méthode | Chemin | Point d'entrée de routage (handler Rust) | Notes |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | GET | `/v1/models` | `handlers::openai::handle_list_models` | Compatibilité OpenAI : liste des modèles |
 | POST | `/v1/chat/completions` | `handlers::openai::handle_chat_completions` | Compatibilité OpenAI : Chat Completions |
 | POST | `/v1/completions` | `handlers::openai::handle_completions` | Compatibilité OpenAI : Completions hérité |
@@ -60,7 +60,7 @@ Le point de terminaison `/v1/responses` est conçu pour Codex CLI et utilise en 
 Ces points de terminaison sont organisés selon le format des chemins et des requêtes de l'API Anthropic, destinés aux appels de Claude Code / Anthropic SDK.
 
 | Méthode | Chemin | Point d'entrée de routage (handler Rust) | Notes |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | POST | `/v1/messages` | `handlers::claude::handle_messages` | Compatibilité Anthropic : Messages |
 | POST | `/v1/messages/count_tokens` | `handlers::claude::handle_count_tokens` | Compatibilité Anthropic : count_tokens |
 | GET | `/v1/models/claude` | `handlers::claude::handle_list_models` | Compatibilité Anthropic : liste des modèles |
@@ -72,7 +72,7 @@ Ces points de terminaison sont organisés selon le format des chemins et des req
 Ces points de terminaison sont compatibles avec le format de l'API Google Gemini et peuvent être utilisés directement avec le SDK officiel Google.
 
 | Méthode | Chemin | Point d'entrée de routage (handler Rust) | Notes |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | GET | `/v1beta/models` | `handlers::gemini::handle_list_models` | Gemini natif : liste des modèles |
 | GET | `/v1beta/models/:model` | `handlers::gemini::handle_get_model` | Gemini natif : GetModel |
 | POST | `/v1beta/models/:model` | `handlers::gemini::handle_generate` | Gemini natif : generateContent / streamGenerateContent |
@@ -89,7 +89,7 @@ Ces points de terminaison sont compatibles avec le format de l'API Google Gemini
 Les points de terminaison MCP (Model Context Protocol) servent à exposer l'interface « appel d'outils » (géré par `handlers::mcp::*`). S'ils sont activés et leur comportement spécifique dépendent de la configuration ; pour plus de détails, voir [Points de terminaison MCP](../../platforms/mcp/).
 
 | Méthode | Chemin | Point d'entrée de routage (handler Rust) | Notes |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | ANY | `/mcp/web_search_prime/mcp` | `handlers::mcp::handle_web_search_prime` | MCP : Web Search Prime |
 | ANY | `/mcp/web_reader/mcp` | `handlers::mcp::handle_web_reader` | MCP : Web Reader |
 | ANY | `/mcp/zai-mcp-server/mcp` | `handlers::mcp::handle_zai_mcp_server` | MCP : z.ai MCP Server |
@@ -105,7 +105,7 @@ Pour la portée et les limites de la disponibilité de MCP, voir [Limites des ca
 Ces points de terminaison sont utilisés pour les fonctions internes du système et la surveillance externe.
 
 | Méthode | Chemin | Point d'entrée de routage (handler Rust) | Notes |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | POST | `/internal/warmup` | `handlers::warmup::handle_warmup` | Point de terminaison de préchauffage interne |
 | POST | `/v1/api/event_logging` | `silent_ok_handler` | Interception des journaux de télémétrie : renvoie directement 200 |
 | POST | `/v1/api/event_logging/batch` | `silent_ok_handler` | Interception des journaux de télémétrie : renvoie directement 200 |
@@ -127,7 +127,7 @@ Les points de terminaison des journaux d'événements renvoient directement `200
 Les droits d'accès à tous les points de terminaison sont contrôlés par `proxy.auth_mode` :
 
 | Mode | Description | `/healthz` exige l'authentification ? | Autres points de terminaison exigent l'authentification ? |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `off` | Entièrement ouvert | ❌ Non | ❌ Non |
 | `strict` | Tous nécessitent l'authentification | ✅ Oui | ✅ Oui |
 | `all_except_health` | Seul le contrôle de santé est ouvert | ❌ Non | ✅ Oui |
@@ -203,7 +203,7 @@ Antigravity Tools fournit un ensemble complet de points de terminaison compatibl
 > Dernière mise à jour : 2026-01-23
 
 | Fonctionnalité | Chemin du fichier | Numéros de ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Enregistrement des routes (tous les points de terminaison) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | Middleware d'authentification (compatibilité Header + exemption `/healthz` + autorisation OPTIONS) | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L14-L78) | 14-78 |
 | Modes auth_mode et règles de dérivation auto | [`docs/proxy/auth.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy/auth.md#L9-L24) | 9-24 |

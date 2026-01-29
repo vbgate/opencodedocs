@@ -59,7 +59,7 @@ oh-my-opencode 会拦截所有 Google 模型请求，并使用自己的认证方
 **配置说明**：
 
 | 配置项 | 值 | 说明 |
-|--------|-----|------|
+|--- | --- | ---|
 | `google_auth` | `false` | 禁用 oh-my-opencode 的内置 Google 认证 |
 | `agents.<agent-name>.model` | `google/antigravity-*` | 覆盖 Agent 模型为 Antigravity 模型 |
 
@@ -174,7 +174,7 @@ PID（Process ID）偏移让每个并行代理使用不同的账户起始索引�
 **不需要的插件**：
 
 | 插件类型 | 示例 | 原因 |
-|---------|------|------|
+|--- | --- | ---|
 | **gemini-auth 插件** | `opencode-gemini-auth`、`@username/gemini-auth` | Antigravity Auth 已处理所有 Google OAuth |
 | **Claude 认证插件** | `opencode-claude-auth` | Antigravity Auth 不使用 Claude 认证 |
 
@@ -328,7 +328,7 @@ PID（Process ID）偏移让每个并行代理使用不同的账户起始索引�
 > 更新时间：2026-01-23
 
 | 功能        | 文件路径                                                                                    | 行号    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Thinking blocks 处理 | [`src/plugin/request-helpers.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request-helpers.ts#L898-L930)         | 898-930 |
 | 思考块签名缓存 | [`src/plugin/cache/signature-cache.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/cache/signature-cache.ts) | 全文件 |
 | PID 偏移配置 | [`src/plugin/config/schema.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/schema.ts#L69-L72)               | 69-72   |

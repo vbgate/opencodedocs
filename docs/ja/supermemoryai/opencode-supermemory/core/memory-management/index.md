@@ -27,7 +27,7 @@ opencode-supermemory は記憶を 2 つの分離された **スコープ (Scope)
 ### 1. 2 種類のスコープ
 
 | スコープ | 識別子 (Scope ID) | ライフサイクル | 典型的な用途 |
-| :--- | :--- | :--- | :--- |
+|--- | --- | --- | ---|
 | **User Scope**<br>(ユーザースコープ) | `user` | **常にあなたと共に**<br>すべてのプロジェクトで共有 | • コーディングスタイルの好み（例：「TypeScript を好む」）<br>• 個人的な習慣（例：「常にコメントを書く」）<br>• 一般的な知識 |
 | **Project Scope**<br>(プロジェクトスコープ) | `project` | **現在のプロジェクトのみ**<br>ディレクトリを切り替えると無効になる | • プロジェクトのアーキテクチャ設計<br>• ビジネスロジックの説明<br>• 特定の Bug の修正方案 |
 
@@ -191,7 +191,7 @@ Supermemory のベクトルインデックスは通常秒単位ですが、ネ�
 > 更新日：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Scope 生成ロジック | [`src/services/tags.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/tags.ts#L18-L36) | 18-36 |
 | 記憶ツールの定義 | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
 | 記憶タイプの定義 | [`src/types/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/types/index.ts) | - |

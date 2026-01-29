@@ -59,7 +59,7 @@ Les coûts de « mise à niveau / retour en arrière / dépannage » varient én
 **Recommandation** :
 
 | Scénario | Méthode d'installation recommandée |
-| --- | --- |
+|--- | ---|
 | Bureau macOS / Linux | Homebrew (option A) |
 | Bureau Windows | GitHub Releases (option B) |
 | Arch Linux | Script officiel (option Arch) |
@@ -217,7 +217,7 @@ Le prochain cours pousse « capable d'ouvrir » un cran plus loin : comprendre c
 > Date de mise à jour : 2026-01-23
 
 | Sujet | Chemin du fichier | Ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Installation Homebrew (tap + cask) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L112-L127) | 112-127 |
 | Téléchargement manuel Releases (paquets pour chaque plateforme) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L128-L133) | 128-133 |
 | Entrée du script d'installation en un clic Arch | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L134-L140) | 134-140 |
@@ -225,9 +225,9 @@ Le prochain cours pousse « capable d'ouvrir » un cran plus loin : comprendre c
 | Entrée d'installation Headless Xvfb (curl | sudo bash) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L141-L149) | 141-149 |
 | Commandes de déploiement/mise à niveau/entretien Headless Xvfb | [`deploy/headless-xvfb/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/headless-xvfb/README.md#L1-L99) | 1-99 |
 | Headless Xvfb install.sh (systemd + configuration par défaut 8045) | [`deploy/headless-xvfb/install.sh`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/headless-xvfb/install.sh#L1-L99) | 1-99 |
-| Entrée du déploiement Docker (docker compose up -d) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L150-L166) | 150-166 |
+|--- | --- | ---|
 | Explication du déploiement Docker (noVNC 6080 / proxy 8045) | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L1-L35) | 1-35 |
 | Configuration des ports/volumes de données Docker (8045 + antigravity_data) | [`deploy/docker/docker-compose.yml`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/docker-compose.yml#L1-L25) | 1-25 |
-| Dépannage macOS « corrompue, impossible à ouvrir » (xattr / --no-quarantine) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L171-L186) | 171-186 |
+|--- | --- | ---|
 
 </details>

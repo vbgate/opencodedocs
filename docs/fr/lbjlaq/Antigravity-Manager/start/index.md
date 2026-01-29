@@ -61,7 +61,7 @@ Suivez l'ordre ci-dessous pour apprendre le plus rapidement possible à utiliser
 ```
 
 | Étape | Cours | Temps estimé | Ce que vous apprendrez |
-|-------|-------|--------------|------------------------|
+|--- | --- | --- | ---|
 | 1 | [Comprendre les concepts](./getting-started/) | 5 minutes | Qu'est-ce qu'une passerelle locale, pourquoi avons-nous besoin d'un pool de comptes |
 | 2 | [Installer le logiciel](./installation/) | 3 minutes | Installer avec brew ou télécharger manuellement, gérer les blocages système |
 | 3 | [Comprendre le répertoire de données](./first-run-data/) | 5 minutes | Où sont les données, comment consulter les journaux, opérations de la barre des tâches |

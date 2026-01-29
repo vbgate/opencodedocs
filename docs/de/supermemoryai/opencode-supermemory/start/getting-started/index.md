@@ -203,9 +203,9 @@ Glückwunsch! Sie haben OpenCode erfolgreich mit einem "Hippocampus" ausgestatte
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
-| Installationsskript-Logik | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L327-L410) | 327-410 |
-| Plugin-Registrierungslogik | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L195-L248) | 195-248 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Konflikterkennungslogik | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L273-L320) | 273-320 |
 | Konfigurationsdatei laden | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts) | - |
 

@@ -43,7 +43,7 @@ Vercel Deploy 스킬은 프로젝트의 `package.json` 파일에서 `dependencie
 ### React 생태계
 
 | 프레임워크 | 감지 의존성 | 반환값 |
-|------|---------|--------|
+|--- | --- | ---|
 | **Next.js** | `next` | `nextjs` |
 | **Gatsby** | `gatsby` | `gatsby` |
 | **Remix** | `@remix-run/` | `remix` |
@@ -56,7 +56,7 @@ Vercel Deploy 스킬은 프로젝트의 `package.json` 파일에서 `dependencie
 ### Vue 생태계
 
 | 프레임워크 | 감지 의존성 | 반환값 |
-|------|---------|--------|
+|--- | --- | ---|
 | **Nuxt** | `nuxt` | `nuxtjs` |
 | **VitePress** | `vitepress` | `vitepress` |
 | **VuePress** | `vuepress` | `vuepress` |
@@ -65,7 +65,7 @@ Vercel Deploy 스킬은 프로젝트의 `package.json` 파일에서 `dependencie
 ### Svelte 생태계
 
 | 프레임워크 | 감지 의존성 | 반환값 |
-|------|---------|--------|
+|--- | --- | ---|
 | **SvelteKit** | `@sveltejs/kit` | `sveltekit-1` |
 | **Svelte** | `svelte` | `svelte` |
 | **Sapper** (legacy) | `sapper` | `sapper` |
@@ -73,14 +73,14 @@ Vercel Deploy 스킬은 프로젝트의 `package.json` 파일에서 `dependencie
 ### Angular
 
 | 프레임워크 | 감지 의존성 | 반환값 |
-|------|---------|--------|
+|--- | --- | ---|
 | **Angular** | `@angular/core` | `angular` |
 | **Ionic Angular** | `@ionic/angular` | `ionic-angular` |
 
 ### 정적 사이트 생성기
 
 | 프레임워크 | 감지 의존성 | 반환값 |
-|------|---------|--------|
+|--- | --- | ---|
 | **Astro** | `astro` | `astro` |
 | **Docusaurus** | `@docusaurus/core` | `docusaurus-2` |
 | **Hexo** | `hexo` | `hexo` |
@@ -90,7 +90,7 @@ Vercel Deploy 스킬은 프로젝트의 `package.json` 파일에서 `dependencie
 ### Node.js 백엔드 프레임워크
 
 | 프레임워크 | 감지 의존성 | 반환값 |
-|------|---------|--------|
+|--- | --- | ---|
 | **Express** | `express` | `express` |
 | **NestJS** | `@nestjs/core` | `nestjs` |
 | **Hono** | `hono` | `hono` |
@@ -102,7 +102,7 @@ Vercel Deploy 스킬은 프로젝트의 `package.json` 파일에서 `dependencie
 ### 기타 프레임워크
 
 | 프레임워크 | 감지 의존성 | 반환값 |
-|------|---------|--------|
+|--- | --- | ---|
 | **SolidStart** | `@solidjs/start` | `solidstart-1` |
 | **Ember** | `ember-cli`, `ember-source` | `ember` |
 | **Dojo** | `@dojo/framework` | `dojo` |
@@ -118,7 +118,7 @@ Vercel Deploy 스킬은 프로젝트의 `package.json` 파일에서 `dependencie
 ### 빌드 툴
 
 | 프레임워크 | 감지 의존성 | 반환값 |
-|------|---------|--------|
+|--- | --- | ---|
 | **Vite** | `vite` | `vite` |
 | **Parcel** | `parcel` | `parcel` |
 
@@ -315,7 +315,7 @@ Agent Skills Vercel Deploy 기능은 **45+ 개 프레임워크**를 지원하며
 > 업데이트 날짜: 2026-01-25
 
 | 기능        | 파일 경로                                                                                             | 행번호    |
-| ----------- | ---------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 프레임워크 감지 로직 | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 11-156  |
 | 배포 스크립트 진입점 | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 1-250   |
 | 정적 HTML 처리 | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 192-205 |

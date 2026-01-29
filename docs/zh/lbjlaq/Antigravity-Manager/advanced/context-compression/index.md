@@ -62,7 +62,7 @@ Claude 处理器会用 `ContextManager::estimate_token_usage()` 做一个轻量�
 这套稳定性设计不是直接把历史全删了，而是按代价从低到高逐层介入：
 
 | 层级 | 触发点（可配置） | 做了什么 | 代价/副作用 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | Layer 1 | `proxy.experimental.context_compression_threshold_l1`（默认 0.4） | 识别工具轮，只保留最近 N 轮（代码里是 5），把更早的 tool_use/tool_result 对删掉 | 不改剩余消息内容，对 Prompt Cache 更友好 |
 | Layer 2 | `proxy.experimental.context_compression_threshold_l2`（默认 0.55） | 把旧的 Thinking 文本压成 `"..."`，但保留 `signature`，并保护最近 4 条消息不动 | 会修改历史内容，注释里明确会 break cache，但能保住签名链 |
 | Layer 3 | `proxy.experimental.context_compression_threshold_l3`（默认 0.7） | 调用后台模型生成 XML 摘要，然后 Fork 一个新消息序列继续对话 | 依赖后台模型调用；若失败会返回 400（有友好提示） |
@@ -218,7 +218,7 @@ tail -f ~/Library/Application\ Support/com.antigravity.tools/logs/antigravity.lo
 ## 踩坑提醒
 
 | 现象 | 可能原因 | 你可以怎么做 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 触发了 Layer 2 之后感觉上下文没那么稳了 | Layer 2 会修改历史内容，注释里明确它会 break cache | 如果你依赖 Prompt Cache 的一致性，尽量让 L1 先解决问题，或提高 L2 阈值 |
 | Layer 3 触发后直接返回 400 | Fork + 摘要调用后台模型失败（网络/账号/上游错误等） | 先按错误 JSON 里的建议用 `/compact` 或 `/clear`；同时检查后台模型调用链路 |
 | 工具输出里图片/大段内容不见了 | tool_result 会移除 base64 图片、截断超长输出 | 把重要内容落到本地文件/链接里再引用；别指望把 10 万行文本直接塞回对话 |
@@ -244,7 +244,7 @@ tail -f ~/Library/Application\ Support/com.antigravity.tools/logs/antigravity.lo
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 实验性配置：压缩阈值与开关默认值 | `src-tauri/src/proxy/config.rs` | 119-168 |
 | 上下文估算：多语言字符估算 + 15% 余量 | `src-tauri/src/proxy/mappers/context_manager.rs` | 9-37 |
 | Token 用量估算：遍历 system/messages/tools/thinking | `src-tauri/src/proxy/mappers/context_manager.rs` | 103-198 |
@@ -257,7 +257,7 @@ tail -f ~/Library/Application\ Support/com.antigravity.tools/logs/antigravity.lo
 | 签名缓存：TTL/三层缓存结构（Tool/Family/Session） | `src-tauri/src/proxy/signature_cache.rs` | 5-88 |
 | 签名缓存：Session 签名写入/读取 | `src-tauri/src/proxy/signature_cache.rs` | 141-223 |
 | SSE 流式解析：缓存 thinking/tool 的 signature 到 Session/Tool cache | `src-tauri/src/proxy/mappers/claude/streaming.rs` | 766-776 |
-| SSE 流式解析：tool_use 缓存 tool_use_id -> signature | `src-tauri/src/proxy/mappers/claude/streaming.rs` | 958-975 |
+|--- | --- | ---|
 | 请求转换：tool_use 优先从 Session/Tool cache 补签名 | `src-tauri/src/proxy/mappers/claude/request.rs` | 1045-1142 |
 | 请求转换：tool_result 触发工具结果压缩 | `src-tauri/src/proxy/mappers/claude/request.rs` | 1159-1225 |
 | 工具结果压缩：入口 `compact_tool_result_text()` | `src-tauri/src/proxy/mappers/tool_result_compressor.rs` | 28-69 |

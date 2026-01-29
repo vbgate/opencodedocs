@@ -63,7 +63,7 @@ Evidência:
 `dispatch_mode` decide se `/v1/messages` vai para z.ai:
 
 | dispatch_mode | O que acontece | Evidência |
-| --- | --- | --- |
+|--- | --- | ---|
 | `off` | Nunca usar z.ai | `src-tauri/src/proxy/config.rs#L20-L37` + `src-tauri/src/proxy/handlers/claude.rs#L282-L314` |
 | `exclusive` | Todas as solicitações Claude vão para z.ai | `src-tauri/src/proxy/handlers/claude.rs#L285-L314` |
 | `fallback` | Só vai para z.ai quando pool Google indisponível (0 contas ou "nenhuma conta disponível") | `src-tauri/src/proxy/handlers/claude.rs#L288-L305` |
@@ -104,7 +104,7 @@ Evidência:
 Endpoint local e endereço upstream são codificados:
 
 | Endpoint local | Endereço upstream | Interruptor | Evidência |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `/mcp/web_search_prime/mcp` | `https://api.z.ai/api/mcp/web_search_prime/mcp` | `proxy.zai.mcp.web_search_enabled` | `src-tauri/src/proxy/handlers/mcp.rs#L115-L135` |
 | `/mcp/web_reader/mcp` | `https://api.z.ai/api/mcp/web_reader/mcp` | `proxy.zai.mcp.web_reader_enabled` | `src-tauri/src/proxy/handlers/mcp.rs#L137-L157` |
 
@@ -222,7 +222,7 @@ Evidência: [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigrav
 > Atualizado em: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Número da linha |
-| --- | --- | --- |
+|--- | --- | ---|
 | Escopo de integração z.ai (protocolo Claude + MCP + Vision MCP) | [`docs/zai/implementation.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/zai/implementation.md#L12-L17) | 12-17 |
 | Modo de escalonamento z.ai e valores padrão de modelo | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L20-L116) | 20-116 |
 | base_url z.ai padrão / modelo padrão | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L265-L279) | 265-279 |
@@ -232,7 +232,7 @@ Evidência: [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigrav
 | Regras de mapeamento de modelo z.ai (map_model_for_zai) | [`src-tauri/src/proxy/providers/zai_anthropic.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/providers/zai_anthropic.rs#L13-L37) | 13-37 |
 | Lista branca de Header + injetar auth z.ai | [`src-tauri/src/proxy/providers/zai_anthropic.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/providers/zai_anthropic.rs#L70-L110) | 70-110 |
 | Proxy MCP Search/Reader e interruptores | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L45-L157) | 45-157 |
-| Servidor integrado Vision MCP (GET/POST/DELETE + JSON-RPC) | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L190-L397) | 190-397 |
+|--- | --- | ---|
 | Posicionamento de implementação mínima do Vision MCP (não Servidor MCP completo) | [`docs/zai/vision-mcp.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/zai/vision-mcp.md#L17-L37) | 17-37 |
 | Lista de ferramentas Vision e limites (tool_specs + tamanho de arquivo + stream=false) | [`src-tauri/src/proxy/zai_vision_tools.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/zai_vision_tools.rs#L57-L270) | 57-270 |
 | Origem de lista de modelos `/v1/models/claude` (mapeamento local, não consulta upstream) | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L84-L132) | 84-132 |

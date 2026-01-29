@@ -66,7 +66,7 @@ Before starting, ensure you:
 Web Interface Design Guidelines cover **17 categories**, divided into three main blocks by priority:
 
 | Block | Focus | Typical Benefits |
-| ------ | ----- | ---------------- |
+|--- | --- | ---|
 | **Accessibility** | Ensure all users can use it (including screen readers, keyboard users) | Complies with WCAG standards, expands user base |
 | **Performance & UX** | Optimize load speed, animation smoothness, interaction experience | Improves user retention, reduces bounce rate |
 | **Completeness & Details** | Dark mode, responsive, form validation, error handling | Reduces user complaints, enhances brand image |
@@ -74,7 +74,7 @@ Web Interface Design Guidelines cover **17 categories**, divided into three main
 **17 Rule Categories**:
 
 | Category | Typical Rules | Priority |
-| -------- | ------------- | -------- |
+|--- | --- | ---|
 | Accessibility | aria-labels, semantic HTML, keyboard handling | ⭐⭐⭐ Highest |
 | Focus States | Visible focus, :focus-visible instead of :focus | ⭐⭐⭐ Highest |
 | Forms | autocomplete, validation, error handling | ⭐⭐⭐ Highest |
@@ -635,7 +635,7 @@ You'll learn:
 > Updated: 2026-01-25
 
 | Feature | File Path | Line |
-| ------- | --------- | ---- |
+|--- | --- | ---|
 | Web Design Guidelines skill definition | [`skills/web-design-guidelines/SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/web-design-guidelines/SKILL.md) | Full text |
 | Rules source (100 rules) | [`https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md`](https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md) | Full text |
 | README overview | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md) | 28-50 |
@@ -643,7 +643,7 @@ You'll learn:
 **17 Rule Categories**:
 
 | Category | Rules Covered | Typical Rules |
-| -------- | ------------- | ------------- |
+|--- | --- | ---|
 | Accessibility | 10 rules | aria-labels, semantic HTML, keyboard handling |
 | Focus States | 4 rules | Visible focus, :focus-visible |
 | Forms | 11 rules | autocomplete, validation, error handling |

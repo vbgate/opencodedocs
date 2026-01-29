@@ -190,7 +190,7 @@ Each account's complete data is stored independently in JSON format under the `a
 ### Key Field Explanations
 
 | Field | Type | Business Meaning | Trigger Condition |
-| ----- | ---- | ---------------- | ----------------- |
+|--- | --- | --- | ---|
 | `disabled` | bool | Account completely disabled (e.g., refresh_token invalid) | Automatically set to `true` on `invalid_grant` |
 | `proxy_disabled` | bool | Only disables proxy functionality, doesn't affect GUI use | Manual disable or triggered by quota protection |
 | `protected_models` | string[] | List of "restricted models" for model-level quota protection | Updated by quota protection logic |
@@ -220,7 +220,7 @@ The Token statistics database records Token consumption for each proxy request, 
 #### token_usage (Raw Usage Records)
 
 | Field | Type | Description |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | id | INTEGER PRIMARY KEY AUTOINCREMENT | Auto-increment primary key |
 | timestamp | INTEGER | Request timestamp |
 | account_email | TEXT | Account email |
@@ -320,7 +320,7 @@ The Proxy log database records detailed information for each proxy request, used
 ### Table Structure: request_logs
 
 | Field | Type | Description |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | id | TEXT PRIMARY KEY | Request unique ID (UUID) |
 | timestamp | INTEGER | Request timestamp |
 | method | TEXT | HTTP method (GET/POST) |
@@ -556,7 +556,7 @@ Whether "quota protection" is triggered is determined by `quota_protection.enabl
 > Updated: 2026-01-23
 
 | Function | File Path | Line Numbers |
-| --- | --- | --- |
+|--- | --- | ---|
 | Data directory (.antigravity_tools) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | Account directory (accounts/) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L35-L46) | 35-46 |
 | accounts.json structure | [`src-tauri/src/models/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/models/account.rs#L76-L92) | 76-92 |
@@ -572,7 +572,7 @@ Whether "quota protection" is triggered is determined by `quota_protection.enabl
 | logs/ directory & app.log | [`src-tauri/src/modules/logger.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/logger.rs#L17-L45) | 17-45 |
 | bin/cloudflared path | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L92-L101) | 92-101 |
 | device_original.json | [`src-tauri/src/modules/device.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/device.rs#L11-L13) | 11-13 |
-| invalid_grant -> disabled write to disk | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L869-L969) | 869-969 |
+|--- | --- | ---|
 
 **Key Constants**:
 - `DATA_DIR = ".antigravity_tools"`: Data directory name (`src-tauri/src/modules/account.rs:16-18`)

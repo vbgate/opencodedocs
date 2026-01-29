@@ -76,7 +76,7 @@ Agrega la fila separadora (segunda fila, en formato `|---|`):
 
 ```markdown
 | Name | Age |
-|------|-----|
+|--- | ---|
 | Alice | 25 |
 | Bob | 30 |
 ```
@@ -133,7 +133,7 @@ Solo tiene 1 fila, el formato está incompleto.
 
 ```markdown
 | Name |
-|------|
+|---|
 ```
 
 Se requieren al menos 2 filas (incluida la fila separadora).
@@ -144,7 +144,7 @@ Se requieren al menos 2 filas (incluida la fila separadora).
 
 ```markdown
 | Name | Age |
-|------|-----|
+|--- | ---|
 | Alice |
 ```
 
@@ -154,7 +154,7 @@ La primera fila tiene 2 columnas, la segunda fila tiene 1 columna, el número de
 
 ```markdown
 | Name | Age |
-|------|-----|
+|--- | ---|
 | Alice | 25 |
 ```
 
@@ -176,7 +176,7 @@ No hay una fila separadora como `|---|---|`.
 
 ```markdown
 | Name | Age |
-|------|-----|
+|--- | ---|
 | Alice | 25 |
 | Bob | 30 |
 ```
@@ -243,7 +243,7 @@ El complemento envuelve la lógica de formateo con try-catch, por lo que incluso
 
 ```markdown
 | Name | Description |
-|------|-------------|
+|--- | ---|
 | Alice | Line 1<br>Line 2 |
 ```
 
@@ -293,7 +293,7 @@ Los símbolos Markdown en código en línea (`` `**code**` ``) se calculan **seg
 
 ```
 | 符号 | 宽度 |
-|------|------|
+|--- | ---|
 | 普通文本 | 4 |
 | `**bold**` | 8 |
 ```
@@ -342,7 +342,7 @@ Si has verificado todos los problemas anteriores pero el problema persiste:
 > Fecha de actualización: 2026-01-26
 
 | Función            | Ruta del archivo                                                                                    | Línea    |
-| --------------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Lógica de validación de tabla    | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88)     | 70-88   |
 | Detección de filas de tabla      | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61)     | 58-61   |
 | Detección de fila separadora      | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L63-L68)     | 63-68   |

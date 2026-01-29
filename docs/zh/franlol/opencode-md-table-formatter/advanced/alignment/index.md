@@ -28,7 +28,7 @@ AI 生成了一个表格，但列对齐不太美观：
 
 ```markdown
 | 名称 | 类型 | 描述 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 用户 | string | 用户名 |
 | 年龄 | number | 年龄 |
 | is_active | boolean | 是否激活 |
@@ -50,7 +50,7 @@ Markdown 表格的对齐方式不是写在每一行的，而是通过**分隔行
 分隔行的语法是：`:?-+:?`（冒号 + 短横线 + 冒号）
 
 | 冒号位置 | 对齐方式 | 示例 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 左右都有 | 居中 | `:---:` |
 | 只有右边 | 右对齐 | `---:` |
 | 都没有 | 左对齐 | `---` 或 `:---` |
@@ -77,7 +77,7 @@ Markdown 表格的对齐方式不是写在每一行的，而是通过**分隔行
 
 ```markdown
 | 名称   | 描述   |
-| :----- | :----- |
+|--- | ---|
 | 用户   | 用户名 |
 ```
 
@@ -116,7 +116,7 @@ function getAlignment(delimiterCell: string): "left" | "center" | "right" {
 
 ```markdown
 | 名称 | 状态 | 描述 |
-| :--- | :---: | :--- |    ← 中间列用 :---: 表示居中
+|--- | --- | --- | ---|
 | 用户 | 激活 | 用户名 |
 ```
 
@@ -124,7 +124,7 @@ function getAlignment(delimiterCell: string): "left" | "center" | "right" {
 
 ```markdown
 | 名称   |  状态  | 描述   |
-| :----- | :----: | :----- |
+|--- | --- | ---|
 | 用户   |  激活  | 用户名 |
 ```
 
@@ -149,7 +149,7 @@ function formatSeparatorCell(width: number, align: "left" | "center" | "right"):
 居中的分隔行格式是：`:` + 短横线 + `:`
 
 | 目标宽度 | 计算公式 | 结果 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 3 | `:` + ` `-`*1 ` + `:` | `:-:` |
 | 5 | `:` + `-`*3 + `:` | `:---:` |
 | 10 | `:` + `-`*8 + `:` | `:--------:` |
@@ -174,7 +174,7 @@ function formatSeparatorCell(width: number, align: "left" | "center" | "right"):
 
 ```markdown
 | 名称   | 价格 | 数量 |
-| :----- | ----: | ---: |
+|--- | --- | ---|
 | 商品   |  99.9 |  100 |
 ```
 
@@ -185,7 +185,7 @@ function formatSeparatorCell(width: number, align: "left" | "center" | "right"):
 右对齐的分隔行格式是：短横线 + `:`
 
 | 目标宽度 | 计算公式 | 结果 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 3 | `-`*2 + `:` | `--:` |
 | 5 | `-`*4 + `:` | `----:` |
 | 10 | `-`*9 + `:` | `---------:` |
@@ -220,7 +220,7 @@ function padCell(text: string, width: number, align: "left" | "center" | "right"
 **填充规则**
 
 | 对齐方式 | 左填充 | 右填充 | 示例（目标宽度 10，文本 "abc"） |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | 左对齐 | 0 | totalPadding | `abc       ` |
 | 居中 | floor(total/2) | total - floor(total/2) | `   abc    ` |
 | 右对齐 | totalPadding | 0 | `       abc` |
@@ -230,7 +230,7 @@ function padCell(text: string, width: number, align: "left" | "center" | "right"
 `Math.floor(totalPadding / 2)` 确保左填充是整数，多余的空间加到右边。
 
 | 目标宽度 | 文本宽度 | totalPadding | 左填充 | 右填充 | 结果 |
-| --- | --- | --- | --- | --- | --- |
+|--- | --- | --- | --- | --- | ---|
 | 10 | 3 | 7 | 3 (7÷2=3.5→3) | 4 (7-3) | `   abc    ` |
 | 11 | 3 | 8 | 4 (8÷2=4) | 4 (8-4) | `    abc    ` |
 | 12 | 3 | 9 | 4 (9÷2=4.5→4) | 5 (9-4) | `    abc     ` |
@@ -241,7 +241,7 @@ function padCell(text: string, width: number, align: "left" | "center" | "right"
 
 ```markdown
 | 名称 | 状态 | 价格 | 描述 |
-| :--- | :---: | ---: | :--- |
+|--- | --- | --- | ---|
 | 商品A | 激活 | 99.9 | 这是一个商品 |
 | 商品B | 停用 | 199.0 | 这是另一个商品 |
 ```
@@ -250,7 +250,7 @@ function padCell(text: string, width: number, align: "left" | "center" | "right"
 
 ```markdown
 | 名称   |  状态  | 价格 | 描述         |
-| :----- | :----: | ----: | :----------- |
+|--- | --- | --- | ---|
 | 商品A  |  激活  |  99.9 | 这是一个商品 |
 | 商品B  |  停用  | 199.0 | 这是另一个商品 |
 ```
@@ -258,7 +258,7 @@ function padCell(text: string, width: number, align: "left" | "center" | "right"
 **每一列的对齐方式**：
 
 | 列名 | 分隔行语法 | 对齐方式 | 说明 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | 名称 | `:---` | 左对齐 | 文本靠左 |
 | 状态 | `:---:` | 居中 | 文本居中 |
 | 价格 | `---:` | 右对齐 | 数字靠右 |
@@ -288,7 +288,7 @@ function padCell(text: string, width: number, align: "left" | "center" | "right"
 分隔行的冒号位置**必须**与列对应。
 
 | 错误示例 | 问题 |
-| --- | --- |
+|--- | ---|
 | `| :--- | --- |` | 第一列居中，第二列左对齐（2 列） |
 | `| :--- | ---: | :--- |` | 第一列左对齐，第二列右对齐，第三列左对齐（3 列） |
 
@@ -298,7 +298,7 @@ function padCell(text: string, width: number, align: "left" | "center" | "right"
 ## 本课小结
 
 | 对齐方式 | 分隔行语法 | 适用场景 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 左对齐 | `---` 或 `:---` | 文本、描述类数据（默认） |
 | 居中 | `:---:` | 状态标签、短文本、标题 |
 | 右对齐 | `---:` | 数字、金额、日期 |
@@ -306,7 +306,7 @@ function padCell(text: string, width: number, align: "left" | "center" | "right"
 **关键函数**：
 
 | 函数 | 作用 | 源码位置 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `getAlignment()` | 解析分隔行单元格的对齐方式 | 141-149 |
 | `padCell()` | 填充单元格到指定宽度 | 198-211 |
 | `formatSeparatorCell()` | 格式化分隔行单元格 | 213-217 |
@@ -335,7 +335,7 @@ function padCell(text: string, width: number, align: "left" | "center" | "right"
 > 更新时间：2026-01-26
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 对齐方式解析 | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L141-L149) | 141-149 |
 | 单元格填充 | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L198-L211) | 198-211 |
 | 分隔行格式化 | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L213-L217) | 213-217 |

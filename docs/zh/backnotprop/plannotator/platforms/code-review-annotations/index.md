@@ -126,7 +126,7 @@ order: 5
 Plannotator 支持三种代码注释类型，每种都有不同的用途：
 
 | 注释类型 | 用途 | 典型场景 | 建议代码 |
-| --------- | ---- | -------- | -------- |
+|--- | --- | --- | ---|
 | **Comment** | 评论某段代码，提供一般性反馈 | "这段逻辑可以简化"、"变量命名不太清晰" | 可选 |
 | **Suggestion** | 提供具体的代码修改建议 | "建议用 map 替代 for 循环"、"用 await 替代 Promise.then" | 推荐 |
 | **Concern** | 标记潜在问题或风险点 | "这个 SQL 查询可能有性能问题"、"缺少错误处理" | 可选 |
@@ -140,7 +140,7 @@ Plannotator 支持三种代码注释类型，每种都有不同的用途：
 ### Comment vs Suggestion vs Concern
 
 | 场景 | 选择类型 | 示例文本 |
-| ---- | -------- | -------- |
+|--- | --- | ---|
 | 代码可以工作，但有优化空间 | Comment | "这段可以用 async/await 简化" |
 | 代码有明确的改进方案 | Suggestion | "建议用 `Array.from()` 替代展开运算符"（附代码） |
 | 发现 bug 或严重问题 | Concern | "这里缺少 null 检查，可能导致运行时错误" |
@@ -430,16 +430,16 @@ Concern: 这里缺少 null 检查，如果 user 为 null 会导致运行时错�
 
 > 更新时间：2026-01-24
 
-| 功能              | 文件路径                                                                                              | 行号    |
-| ----------------- | ----------------------------------------------------------------------------------------------------- | ------- |
-| CodeAnnotation 类型定义 | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L53-L56)             | 53-56   |
-| CodeAnnotation 接口 | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L55-L66)               | 55-66   |
-| DiffViewer 组件    | [`packages/review-editor/components/DiffViewer.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/review-editor/components/DiffViewer.tsx#L1-L349) | 1-349   |
-| ReviewPanel 组件   | [`packages/review-editor/components/ReviewPanel.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/review-editor/components/ReviewPanel.tsx#L1-L211) | 1-211   |
-| 导出反馈 Markdown  | [`packages/review-editor/App.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/review-editor/App.tsx#L86-L126)        | 86-126  |
-| Hover "+" 按钮     | [`packages/review-editor/components/DiffViewer.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/review-editor/components/DiffViewer.tsx#L180-L199) | 180-199 |
-| 注释工具栏        | [`packages/review-editor/components/DiffViewer.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/review-editor/components/DiffViewer.tsx#L267-L344) | 267-344 |
-| 注释渲染          | [`packages/review-editor/components/DiffViewer.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/review-editor/components/DiffViewer.tsx#L140-L177) | 140-177 |
+| 功能 | 文件路径 | 行号 |
+|--- | --- | ---|
+| CodeAnnotation 类型定义 | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L53-L56) | 53-56 |
+| CodeAnnotation 接口 | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L55-L66) | 55-66 |
+| DiffViewer 组件 | [`packages/review-editor/components/DiffViewer.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/review-editor/components/DiffViewer.tsx#L1-L349) | 1-349 |
+| ReviewPanel 组件 | [`packages/review-editor/components/ReviewPanel.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/review-editor/components/ReviewPanel.tsx#L1-L211) | 1-211 |
+| 导出反馈 Markdown | [`packages/review-editor/App.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/review-editor/App.tsx#L86-L126) | 86-126 |
+| Hover "+" 按钮 | [`packages/review-editor/components/DiffViewer.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/review-editor/components/DiffViewer.tsx#L180-L199) | 180-199 |
+| 注释工具栏 | [`packages/review-editor/components/DiffViewer.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/review-editor/components/DiffViewer.tsx#L267-L344) | 267-344 |
+| 注释渲染 | [`packages/review-editor/components/DiffViewer.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/review-editor/components/DiffViewer.tsx#L140-L177) | 140-177 |
 
 **关键类型**：
 - `CodeAnnotationType`：代码注释类型（'comment' | 'suggestion' | 'concern'）（`packages/ui/types.ts:53`）

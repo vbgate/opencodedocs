@@ -128,7 +128,7 @@ tags: bundle, code-splitting, lazy-loading, performance
 **字段说明**：
 
 | 字段                | 必填 | 说明                   | 示例值                                     |
-| ------------------- | ---- | ---------------------- | ------------------------------------------ |
+|--- | --- | --- | ---|
 | `title`             | ✅    | 规则的简短标题         | `Promise.all() for Independent Operations` |
 | `impact`            | ✅    | 影响级别（6 个枚举值） | `CRITICAL` / `HIGH` / `MEDIUM` 等          |
 | `impactDescription` | ⭕    | 影响幅度的描述         | `2-10× improvement`                        |
@@ -195,7 +195,7 @@ function Dashboard() {
 **示例编写规范**：
 
 | 要求         | 说明                                                           |
-| ------------ | -------------------------------------------------------------- |
+|--- | ---|
 | **标签格式** | `**Incorrect:**` 或 `**Incorrect (description):**`（括号可选） |
 | **括号内容** | 可选，简短描述为什么错/为什么对                                |
 | **代码块**   | 使用 `\`\`\`typescript` 或 `\`\`\`tsx`                         |
@@ -255,7 +255,7 @@ Validating rule files...
 **常见验证错误**：
 
 | 错误信息                                                        | 原因                                         | 修复方法                                                                |
-| --------------------------------------------------------------- | -------------------------------------------- | ----------------------------------------------------------------------- |
+|--- | --- | ---|
 | `Missing or empty title`                                        | frontmatter 缺少 `title` 字段                | 添加 `title: Your Title`                                                |
 | `Missing examples (need at least one bad and one good example)` | examples 数组为空                            | 添加至少一个示例（带代码块）                                            |
 | `Missing code examples`                                         | 有示例标签但无实际代码                       | 在标签后添加代码块（`\`\`\`typescript`）                                |
@@ -413,7 +413,7 @@ const bad = code
 > 更新时间：2026-01-25
 
 | 功能                     | 文件路径                                                                                                                                                           | 行号    |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | 规则模板文件             | [`skills/react-best-practices/rules/_template.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/_template.md)           | 1-29    |
 | 规则类型定义             | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts)       | 5-26    |
 | 规则验证逻辑             | [`packages/react-best-practices-build/src/validate.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/validate.ts) | 21-66   |

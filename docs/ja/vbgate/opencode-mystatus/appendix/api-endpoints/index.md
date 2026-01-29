@@ -21,7 +21,7 @@ order: 2
 **インターフェース情報**：
 
 | 項目 | 値 |
-| --- | --- |
+|--- | ---|
 | URL | `https://chatgpt.com/backend-api/wham/usage` |
 | メソッド | GET |
 | 認証方式 | Bearer Token (OAuth) |
@@ -62,7 +62,7 @@ ChatGPT-Account-Id: {team_account_id}  // オプション、チームアカウ�
 **インターフェース情報**：
 
 | 項目 | 値 |
-| --- | --- |
+|--- | ---|
 | URL | `https://bigmodel.cn/api/monitor/usage/quota/limit` |
 | メソッド | GET |
 | 認証方式 | API Key |
@@ -103,7 +103,7 @@ User-Agent: OpenCode-Status-Plugin/1.0
 **インターフェース情報**：
 
 | 項目 | 値 |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.github.com/users/{username}/settings/billing/premium_request/usage` |
 | メソッド | GET |
 | 認証方式 | Fine-grained PAT (Personal Access Token) |
@@ -146,7 +146,7 @@ X-GitHub-Api-Version: 2022-11-28
 **インターフェース情報**：
 
 | 項目 | 値 |
-| --- | --- |
+|--- | ---|
 | URL | `https://oauth2.googleapis.com/token` |
 | メソッド | POST |
 | 認証方式 | OAuth Refresh Token |
@@ -156,7 +156,7 @@ X-GitHub-Api-Version: 2022-11-28
 **インターフェース情報**：
 
 | 項目 | 値 |
-| --- | --- |
+|--- | ---|
 | URL | `https://cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels` |
 | メソッド | POST |
 | 認証方式 | Bearer Token (OAuth) |
@@ -194,7 +194,7 @@ X-GitHub-Api-Version: 2022-11-28
 > 更新日時：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAIクォータクエリAPI | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts) | 127-155 |
 | Zhipu AIクォータクエリAPI | [`plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 62-106 |
 

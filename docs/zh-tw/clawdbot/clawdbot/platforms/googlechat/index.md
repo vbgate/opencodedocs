@@ -66,7 +66,7 @@ sequenceDiagram
 **關鍵概念**：
 
 | 概念 | 說明 |
-| ------ | ------ |
+|--- | ---|
 | **Service Account** | Google Cloud 認證方式，用於機器人身份驗證 |
 | **Webhook** | Google Chat POST 訊息到 Gateway 的 HTTP 端點 |
 | **Audience** | 用於驗證 webhook 請求的目標（app-url 或 project-number） |
@@ -412,7 +412,7 @@ clawdbot channels status
 ### Service Account 認證
 
 | 配置項 | 類型 | 預設值 | 說明 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `serviceAccountFile` | string | - | Service Account JSON 檔案路徑 |
 | `serviceAccount` | string\|object | - | 內聯 JSON 憑證（替代檔案路徑） |
 | `audienceType` | "app-url"\|"project-number" | "app-url" | 驗證類型：URL 或專案編號 |
@@ -423,7 +423,7 @@ clawdbot channels status
 預設情況下，陌生發送者需要配對：
 
 | 配置項 | 類型 | 預設值 | 說明 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `dm.enabled` | boolean | 未定義 | 是否啟用 DM 接收 |
 | `dm.policy` | "pairing"|"open" | "pairing" | 存取策略：配對或開放 |
 | `dm.allowFrom` | array | [] | 允許的發送者清單（user IDs 或 emails） |
@@ -437,7 +437,7 @@ clawdbot pairing approve googlechat <配對碼>
 ### 群組策略
 
 | 配置項 | 類型 | 預設值 | 說明 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `groupPolicy` | "allowlist"|"disabled" | "allowlist" | 群組策略：允許清單或停用 |
 | `requireMention` | boolean | true | 是否需要 @提及觸發 |
 | `groups` | object | {} | 按空間 ID 的配置 |
@@ -464,7 +464,7 @@ clawdbot pairing approve googlechat <配對碼>
 ### 其他配置
 
 | 配置項 | 類型 | 預設值 | 說明 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `webhookPath` | string | "/googlechat" | Webhook 路徑 |
 | `botUser` | string | - | 機器人使用者資源名稱（用於提及檢測） |
 | `typingIndicator` | "none"|"message"|"reaction" | "message" | 打字指示器模式 |
@@ -568,7 +568,7 @@ clawdbot pairing approve googlechat <配對碼>
 > 更新時間：2026-01-27
 
 | 功能 | 檔案路徑 | 行號 |
-| ------ | --------- | ---- |
+|--- | --- | ---|
 | Google Chat 配置類型定義 | [`src/config/types.googlechat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.googlechat.ts) | 1-109 |
 | Google Chat Zod Schema | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts) | 273-341 |
 | 頻道註冊表 | [`src/channels/registry.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.ts) | 61-67 |

@@ -91,7 +91,7 @@ L'application Clawdbot pour macOS est un système à **double rôle** :
 **Deux modes de fonctionnement** :
 
 | Mode | Emplacement du Gateway | Service nœud | Scénario |
-| ----- | -------------- | --------- | -------- |
+|--- | --- | --- | ---|
 | **Mode local** (défaut) | Machine locale (démon launchd) | Non démarré | Gateway fonctionne sur ce Mac |
 | **Mode distant** | Machine distante (via SSH/Tailscale) | Démarré | Gateway fonctionne sur une autre machine |
 
@@ -324,7 +324,7 @@ Talk Mode offre une expérience de dialogue vocal continu comme Siri/Alexa, sans
 **États de l'interface Talk Mode** :
 
 | État | Affichage | Description |
-| ----- | ---- | ---- |
+|--- | --- | ---|
 | **Listening** | Animation pulsante nuage + volume micro | Attend que vous parliez |
 | **Thinking** | Animation d'enfoncement | L'IA réfléchit |
 | **Speaking** | Animation d'anneau radial + ondulations | L'IA répond (lecture TTS en cours) |
@@ -365,7 +365,7 @@ Le mode nœud permet à l'application macOS d'exposer des capacités locales à 
 **Commandes disponibles en mode nœud** :
 
 | Catégorie de commande | Exemple de commande | Description |
-| --------- | ---------- | -------- |
+|--- | --- | ---|
 | **Canvas** | `canvas.present`, `canvas.navigate`, `canvas.eval` | Rendre une interface visuelle sur macOS |
 | **Camera** | `camera.snap`, `camera.clip` | Prendre une photo ou une vidéo |
 | **Screen** | `screen.record` | Enregistrer l'écran |
@@ -431,7 +431,7 @@ L'IA choisira automatiquement les outils disponibles en fonction des permissions
 **Types de stratégies de sécurité** :
 
 | Stratégie | Comportement | Scénario d'utilisation |
-| ----- | ---- | -------- |
+|--- | --- | ---|
 | `deny` | Refuser tous les appels `system.run` | Haute sécurité, désactiver toutes les commandes |
 | `allowlist` | Autoriser uniquement les commandes de la liste blanche | Équilibre entre sécurité et commodité |
 | `ask` | Demander l'approbation de l'utilisateur si pas dans la liste blanche | Flexible mais nécessite confirmation |
@@ -474,7 +474,7 @@ Déclenche une requête `agent` Gateway, équivalent à exécuter `clawdbot agen
 **Paramètres** :
 
 | Paramètre | Description | Exemple |
-| ----- | ---- | ---- |
+|--- | --- | ---|
 | `message` (requis) | Message à envoyer à l'IA | `message=Hello%20from%20deep%20link` |
 | `sessionKey` (optionnel) | Clé de session cible, par défaut `main` | `sessionKey=main` |
 | `thinking` (optionnel) | Niveau de réflexion : off\|minimal\|low\|medium\|high\|xhigh | `thinking=high` |
@@ -577,7 +577,7 @@ Si le commutateur de permission ne peut pas être activé ou se ferme immédiate
 **Causes possibles et solutions** :
 
 | Cause | Méthode de vérification | Solution |
-| ----- | -------- | -------- |
+|--- | --- | ---|
 | Gateway non démarré | Exécuter `clawdbot gateway status` | Démarrer le service Gateway |
 | Adresse incorrecte | Vérifier l'URL WebSocket | Confirmer que `ws://127.0.0.1:18789` ou l'adresse distante est correcte |
 | Port occupé | Exécuter `lsof -i :18789` | Fermer le processus occupant le port |
@@ -672,7 +672,7 @@ Dans cette leçon, vous avez appris :
 > Dernière mise à jour : 2026-01-27
 
 | Fonctionnalité | Chemin du fichier                                                                                    | Ligne    |
-| ----------- | --------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Point d'entrée de l'application | [`apps/macos/Sources/Clawdbot/ClawdbotApp.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/ClawdbotApp.swift) | Tout le fichier   |
 | Connexion Gateway | [`apps/macos/Sources/Clawdbot/GatewayConnection.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/GatewayConnection.swift) | 1-500   |
 | Runtime Voice Wake | [`apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift) | Tout le fichier   |

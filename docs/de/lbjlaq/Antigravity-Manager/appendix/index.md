@@ -13,8 +13,8 @@ Dieses Kapitel sammelt technische Referenzmaterialien für Antigravity Tools, ei
 ## Kapitelinhalt
 
 | Dokument | Beschreibung | Geeignet für |
-| --- | --- | --- |
-| **[Endpunkte-Übersicht](./endpoints/)** | Übersicht der öffentlichen HTTP-Routen: OpenAI/Anthropic/Gemini/MCP-Endpunkte, Authentifizierungsmodi und Header-Formate | Neue Client-Integration, 404/401-Fehlerbehebung |
+|--- | --- | ---|
+|--- | --- | ---|
 | **[Daten & Modelle](./storage-models/)** | Kontodateistruktur, SQLite-Statistikdatenbankstruktur, Definitionen wichtiger Felder | Backup & Migration, direkte Datenbankabfragen, Fehlerbehebung |
 | **[z.ai Integrationsgrenzen](./zai-boundaries/)** | Liste der implementierten vs. explizit nicht implementierten Funktionen von z.ai | Bewertung von z.ai-Fähigkeiten, Vermeidung von Missbrauch |
 

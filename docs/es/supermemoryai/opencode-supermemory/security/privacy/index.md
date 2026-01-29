@@ -97,7 +97,7 @@ Si el Agent te dice "la contraseña es [REDACTED]", significa que el mecanismo d
 > Fecha de actualización: 2026-01-23
 
 | Función | Ruta del archivo | Número de línea |
-| --- | --- | --- |
+|--- | --- | ---|
 | Lógica de desensibilización de privacidad | [`src/services/privacy.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/privacy.ts#L1-L13) | 1-13 |
 | Carga de API Key | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L90) | 90 |
 | Llamada de plugin a desensibilización | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L282) | 282 |

@@ -128,7 +128,7 @@ Lorsque le contexte de la session est trop long, le plugin déclenche automatiqu
 En plus du fichier de configuration, vous pouvez utiliser des variables d'environnement pour gérer des informations sensibles ou remplacer le comportement par défaut.
 
 | Variable d'environnement | Description | Priorité |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | `SUPERMEMORY_API_KEY` | Clé API Supermemory | Inférieure au fichier de configuration |
 | `USER` ou `USERNAME` | Identifiant utilisé pour générer le hash de la portée utilisateur | Défaut système |
 
@@ -236,10 +236,10 @@ Mémoire sauvegardée : le chemin de base de l'API de ce projet est /api/v2
 > Date de mise à jour : 2026-01-23
 
 | Fonctionnalité | Chemin du fichier | Lignes |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Définition de l'interface de configuration | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L12-L23) | 12-23 |
 | Définition des valeurs par défaut | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L44-L54) | 44-54 |
-| Mots-clés par défaut | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L25-L42) | 25-42 |
+|--- | --- | ---|
 | Chargement du fichier de configuration | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L73-L86) | 73-86 |
 | Lecture des variables d'environnement | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L90) | 90 |
 

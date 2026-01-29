@@ -64,7 +64,7 @@ O proxy registra `GET /healthz` na rota (veja `src-tauri/src/proxy/server.rs`).
 `auto` não é uma "estratégia independente", ela calcula o modo que realmente será executado com base em `allow_lan_access`.
 
 | `proxy.auth_mode` | Condição Adicional | Valor Efetivo |
-| --- | --- | --- |
+|--- | --- | ---|
 | `off` | - | `off` |
 | `strict` | - | `strict` |
 | `all_except_health` | - | `all_except_health` |
@@ -119,7 +119,7 @@ curl -i http://127.0.0.1:8045/v1/models \
 ## Armadilhas Comuns (Ocorrem Realmente no Código-fonte)
 
 | Fenômeno | Causa Real | Como Você Deve Corrigir |
-| --- | --- | --- |
+|--- | --- | ---|
 | `auth_mode=auto`, mas chamadas locais ainda dão 401 | `allow_lan_access=true` faz `auto` se tornar `all_except_health` | Desligue `allow_lan_access`, ou faça o cliente carregar a key |
 | Você acha "eu claramente trouxe x-api-key", mas ainda 401 | Trouxe simultaneamente um `Authorization` incorreto, o middleware o usa por prioridade | Remova Headers extras, mantenha apenas aquele que você tem certeza que está correto |
 | `Authorization: Bearer<key>` ainda 401 | Faltou espaço após `Bearer`, impossível fazer strip pelo prefixo `Bearer ` | Mude para `Authorization: Bearer <key>` |
@@ -150,7 +150,7 @@ curl -i http://127.0.0.1:8045/v1/models \
 > Última Atualização: 2026-01-23
 
 | Função        | Caminho do Arquivo                                                                                             | Número da Linha    |
-| ----------- | ---------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Enumeração ProxyAuthMode | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L5-L18) | 5-18 |
 | ProxyConfig: allow_lan_access/auth_mode/api_key e Valores Padrão | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L258) | 174-258 |
 | Resolução do Modo Auto (effective_auth_mode) | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L1-L30) | 1-30 |

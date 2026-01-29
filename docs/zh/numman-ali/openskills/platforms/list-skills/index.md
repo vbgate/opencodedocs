@@ -36,7 +36,7 @@ order: 4
 ## 什么时候用这一招
 
 | 场景 | 动作 |
-|------|------|
+|--- | ---|
 | 安装技能后确认是否成功 | 执行 `openskills list` 查看技能是否出现 |
 | 切换到新项目，检查可用技能 | 执行 `openskills list` 看看有哪些 project 技能 |
 | 清理技能前先盘点 | 执行 `openskills list` 列出所有技能，再删除不需要的 |
@@ -115,7 +115,7 @@ Summary: 2 project, 1 global (3 total)
 输出格式说明：
 
 | 部分 | 说明 |
-|------|------|
+|--- | ---|
 | `pdf` | 技能名称（从 SKILL.md 的 name 字段提取） |
 | `(project)` | 位置标签：蓝色表示项目级技能，灰色表示全局技能 |
 | `Comprehensive PDF...` | 技能描述（从 SKILL.md 的 description 字段提取） |
@@ -241,7 +241,7 @@ description: Comprehensive PDF manipulation toolkit...
 > 更新时间：2026-01-24
 
 | 功能        | 文件路径                                                                                   | 行号    |
-| ----------- | ------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | list 命令实现 | [`src/commands/list.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/list.ts) | 7-43    |
 | 查找所有技能 | [`src/utils/skills.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skills.ts) | 30-64   |
 | 搜索目录配置 | [`src/utils/dirs.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/dirs.ts) | 18-25   |

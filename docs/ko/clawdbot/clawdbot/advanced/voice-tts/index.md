@@ -177,7 +177,7 @@ iOS/Android 앱에서 Talk 버튼 탭하여 활성화.
 > 업데이트: 2026-01-27
 
 | 기능 | 파일 경로 | 행 번호 |
-| ----- | --------- | ---- |
+|--- | --- | ---|
 | TTS 코어 로직 | [`src/tts/tts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/tts/tts.ts) | 1-1472 |
 | ElevenLabs TTS | [`src/tts/tts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/tts/tts.ts) | 916-991 |
 | OpenAI TTS | [`src/tts/tts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/tts/tts.ts) | 993-1037 |

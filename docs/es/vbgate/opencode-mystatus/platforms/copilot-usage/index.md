@@ -66,7 +66,7 @@ Entendido simplemente: cada vez que Copilot te "ayuda" (genera código, responde
 Diferentes tipos de suscripción tienen diferentes límites mensuales:
 
 | Tipo de suscripción | Límite mensual | Público objetivo |
-| ----------- | -------- | ---------------------- |
+|--- | --- | ---|
 | Free | 50 | Desarrollador personal en prueba |
 | Pro | 300 | Desarrollador personal oficial |
 | Pro+ | 1,500 | Desarrollador personal intenso |
@@ -307,7 +307,7 @@ Si el formato del archivo `~/.config/opencode/copilot-quota-token.json` es incor
 Si el `tier` que llenas no coincide con la suscripción real, el cálculo del límite será incorrecto.
 
 | Tu suscripción real | El campo tier debería llenar | Ejemplo de llenado incorrecto |
-| ------------ | ----------------------- | ------------ |
+|--- | --- | ---|
 | Free | `free` | `pro` ❌ |
 | Pro | `pro` | `free` ❌ |
 | Pro+ | `pro+` | `pro` ❌ |
@@ -375,9 +375,9 @@ Este curso explica cómo usar opencode-mystatus para consultar la cuota de GitHu
 > Fecha de actualización: 2026-01-23
 
 | Función | Ruta de archivo | Línea |
-| ---------------- | --------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Consulta de cuota de Copilot | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 481-524 |
-| Lectura de Fine-grained PAT | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 122-151 |
+|--- | --- | ---|
 | Consulta a API pública de Billing | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 157-177 |
 | Consulta a API interna | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 242-304 |
 | Lógica de intercambio de token | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 183-208 |

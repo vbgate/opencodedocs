@@ -133,7 +133,7 @@ Get-Content "$env:USERPROFILE\.config\opencode\dcp.jsonc"
 DCP 支持三个层级的配置文件：
 
 | 层级 | 路径 | 优先级 | 适用场景 |
-|------|------|--------|----------|
+|--- | --- | --- | ---|
 | **全局** | `~/.config/opencode/dcp.jsonc` 或 `dcp.json` | 2 | 所有项目的默认配置 |
 | **环境变量** | `$OPENCODE_CONFIG_DIR/dcp.jsonc` 或 `dcp.json` | 3 | 特定环境的配置 |
 | **项目** | `<project>/.opencode/dcp.jsonc` 或 `dcp.json` | 4 | 单个项目的配置覆盖 |
@@ -162,7 +162,7 @@ DCP 支持 `.json` 和 `.jsonc` 两种格式：
 **通知级别说明**：
 
 | 级别 | 行为 | 适用场景 |
-|------|------|----------|
+|--- | --- | ---|
 | **off** | 不显示修剪通知 | 专注开发，不需要反馈 |
 | **minimal** | 只显示简要统计（节省的 Token 数） | 需要简单反馈，不想被太多信息打扰 |
 | **detailed** | 显示修剪的详细信息（工具名、原因） | 了解修剪行为，调试配置 |
@@ -408,7 +408,7 @@ DCP 配置系统的核心要点：
 > 更新时间：2026-01-23
 
 | 功能        | 文件路径                                                                                                            | 行号      |
-| ----------- | ------------------------------------------------------------------------------------------------------------------- | --------- |
+|--- | --- | ---|
 | 配置管理核心 | [`lib/config.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/config.ts)         | 1-798     |
 | 配置 Schema  | [`dcp.schema.json`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/dcp.schema.json) | 1-232     |
 | 默认配置    | [`lib/config.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/config.ts#L423-L464) | 423-464   |

@@ -44,7 +44,7 @@ A saída do mystatus tem formato unificado, mas há diferenças entre plataforma
 
 **Diferenças de plataforma**:
 | Plataforma | Ciclo de limite | Características |
-| ---------- | --------------- | -------------- |
+|--- | --- | ---|
 | OpenAI | 3 horas / 24 horas | Pode exibir duas janelas |
 | Zhipu AI / Z.ai | 5 horas Token / Cota mensal de MCP | Dois tipos diferentes de limite |
 | GitHub Copilot | Mensal | Exibe valores específicos (229/300) |
@@ -209,7 +209,7 @@ Quota resets: 19d 0h (2026-02-01)
 
 **Diferenças de tipo de assinatura**:
 | Tipo de assinatura | Cota mensal | Descrição |
-| ----------------- | ----------- | --------- |
+|--- | --- | ---|
 | Free | N/A | Sem limite de cota, mas funcionalidades limitadas |
 | Pro | 300 | Versão pessoal padrão |
 | Pro+ | Mais alto | Versão atualizada |
@@ -236,7 +236,7 @@ G3 Image   4h 59m     ███████████████████�
 
 **Explicação dos 4 modelos**:
 | Nome do modelo | Chave de API correspondente | Uso |
-| ------------- | --------------------------- | ---- |
+|--- | --- | ---|
 | G3 Pro | `gemini-3-pro-high` / `gemini-3-pro-low` | Raciocínio avançado |
 | G3 Image | `gemini-3-pro-image` | Geração de imagem |
 | G3 Flash | `gemini-3-flash` | Geração rápida |
@@ -252,7 +252,7 @@ G3 Image   4h 59m     ███████████████████�
 ### Equívocos comuns
 
 | Equívoco | Fato |
-| -------- | ---- |
+|--- | ---|
 | Barra de progresso toda sólida = nunca usada | Bloco sólido mais cheio = **mais restante**, pode usar com segurança |
 | Tempo de redefinição curto = cota quase esgotada | Tempo de redefinição curto = vai redefinir em breve, pode continuar usando |
 | Porcentagem 100% = totalmente usado | Porcentagem 100% = **totalmente restante** |
@@ -296,7 +296,7 @@ O mystatus é uma **ferramenta only-read**, não consome sua cota, nem aciona ne
 > Data de atualização: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Número da linha |
-| ------------- | ----------------- | --------------- |
+|--- | --- | ---|
 | Geração de barra de progresso | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L40-L53) | 40-53 |
 | Formatação de tempo | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L18-L29) | 18-29 |
 | Cálculo de porcentagem restante | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L63-L65) | 63-65 |

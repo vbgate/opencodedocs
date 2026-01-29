@@ -26,7 +26,7 @@ order: 1
 Antigravity Tools 的本地反代服务提供以下几类端点：
 
 | 协议分类 | 用途 | 典型客户端 |
-| --- | --- | --- |
+|--- | --- | ---|
 | **OpenAI 协议** | 通用 AI 应用兼容 | OpenAI SDK / 兼容客户端 |
 | **Anthropic 协议** | Claude 系列调用 | Claude Code / Anthropic SDK |
 | **Gemini 协议** | Google 官方 SDK | Google Gemini SDK |
@@ -40,7 +40,7 @@ Antigravity Tools 的本地反代服务提供以下几类端点：
 这些端点兼容 OpenAI API 格式，适合大多数支持 OpenAI SDK 的客户端。
 
 | 方法 | 路径 | 路由入口（Rust handler） | 备注 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | GET | `/v1/models` | `handlers::openai::handle_list_models` | OpenAI 兼容：模型列表 |
 | POST | `/v1/chat/completions` | `handlers::openai::handle_chat_completions` | OpenAI 兼容：Chat Completions |
 | POST | `/v1/completions` | `handlers::openai::handle_completions` | OpenAI 兼容：Legacy Completions |
@@ -60,7 +60,7 @@ Antigravity Tools 的本地反代服务提供以下几类端点：
 这些端点按 Anthropic API 的路径与请求格式组织，供 Claude Code / Anthropic SDK 调用。
 
 | 方法 | 路径 | 路由入口（Rust handler） | 备注 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | POST | `/v1/messages` | `handlers::claude::handle_messages` | Anthropic 兼容：Messages |
 | POST | `/v1/messages/count_tokens` | `handlers::claude::handle_count_tokens` | Anthropic 兼容：count_tokens |
 | GET | `/v1/models/claude` | `handlers::claude::handle_list_models` | Anthropic 兼容：模型列表 |
@@ -72,7 +72,7 @@ Antigravity Tools 的本地反代服务提供以下几类端点：
 这些端点兼容 Google Gemini API 格式，可直接使用 Google 官方 SDK。
 
 | 方法 | 路径 | 路由入口（Rust handler） | 备注 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | GET | `/v1beta/models` | `handlers::gemini::handle_list_models` | Gemini 原生：模型列表 |
 | GET | `/v1beta/models/:model` | `handlers::gemini::handle_get_model` | Gemini 原生：GetModel |
 | POST | `/v1beta/models/:model` | `handlers::gemini::handle_generate` | Gemini 原生：generateContent / streamGenerateContent |
@@ -89,7 +89,7 @@ Antigravity Tools 的本地反代服务提供以下几类端点：
 MCP（Model Context Protocol）端点用于对外暴露“工具调用”接口（由 `handlers::mcp::*` 处理）。是否启用与具体行为以配置为准；细节见 [MCP 端点](../../platforms/mcp/)。
 
 | 方法 | 路径 | 路由入口（Rust handler） | 备注 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | ANY | `/mcp/web_search_prime/mcp` | `handlers::mcp::handle_web_search_prime` | MCP：Web Search Prime |
 | ANY | `/mcp/web_reader/mcp` | `handlers::mcp::handle_web_reader` | MCP：Web Reader |
 | ANY | `/mcp/zai-mcp-server/mcp` | `handlers::mcp::handle_zai_mcp_server` | MCP：z.ai MCP Server |
@@ -105,7 +105,7 @@ MCP 的可用范围与边界说明，参见 [z.ai 集成的能力边界（已实
 这些端点用于系统内部功能和外部监控。
 
 | 方法 | 路径 | 路由入口（Rust handler） | 备注 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | POST | `/internal/warmup` | `handlers::warmup::handle_warmup` | 内部预热端点 |
 | POST | `/v1/api/event_logging` | `silent_ok_handler` | 遥测日志拦截：直接返回 200 |
 | POST | `/v1/api/event_logging/batch` | `silent_ok_handler` | 遥测日志拦截：直接返回 200 |
@@ -127,7 +127,7 @@ MCP 的可用范围与边界说明，参见 [z.ai 集成的能力边界（已实
 所有端点的访问权限由 `proxy.auth_mode` 控制：
 
 | 模式 | 说明 | `/healthz` 要求鉴权？ | 其他端点要求鉴权？ |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `off` | 完全开放 | ❌ 否 | ❌ 否 |
 | `strict` | 全部需要鉴权 | ✅ 是 | ✅ 是 |
 | `all_except_health` | 仅健康检查开放 | ❌ 否 | ✅ 是 |
@@ -203,7 +203,7 @@ Antigravity Tools 提供了一套完整的多协议兼容端点，支持 OpenAI�
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 路由注册（全部端点） | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | 鉴权中间件（Header 兼容 + `/healthz` 豁免 + OPTIONS 放行） | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L14-L78) | 14-78 |
 | auth_mode 模式与 auto 派生规则 | [`docs/proxy/auth.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy/auth.md#L9-L24) | 9-24 |

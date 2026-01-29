@@ -32,7 +32,7 @@ opencode-supermemory はブラックボックスではなく、標準の OpenCod
 プラグインは `supermemory` という名前のツールを Agent に登録します。これはスイスアーミーナイフのように、6 つのモードを持っています：
 
 | モード | 役割 | 典型的なシナリオ |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **add** | 記憶を追加 | "このプロジェクトは Bun で実行する必要があることを覚えておいて" |
 | **search** | 記憶を検索 | "認証の処理方法について以前言いましたっけ？" |
 | **profile** | ユーザープロファイル | Agent がまとめたコーディング習慣を確認 |
@@ -188,7 +188,7 @@ A: プラグインは `<private>` タグ内の内容を自動的に検閲しま�
 > 更新日：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | ツール定義 | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
 | キーワード検出 | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L34-L37) | 34-37 |
 | トリガープロンプト | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L20-L28) | 20-28 |

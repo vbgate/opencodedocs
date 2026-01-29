@@ -108,7 +108,7 @@ supermemory(mode: "list", scope: "project")
 Agent перечисляет серию структурированной памяти, например:
 
 | Тип | Пример содержимого |
-| :--- | :--- |
+|--- | ---|
 | `project-config` | "Использует Bun runtime. Команда сборки: bun run build" |
 | `architecture` | "Маршруты API находятся в src/routes/, используется фреймворк Hono" |
 | `preference` | "Строгое использование TypeScript: тип 'any' не разрешен" |
@@ -162,7 +162,7 @@ Agent отвечает подтверждением и вызывает `superme
 > Время обновления: 2026-01-23
 
 | Функция | Путь к файлу | Номер строки |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Определение Prompt инициализации | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L13-L163) | 13-163 |
 | Реализация инструмента памяти | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
 

@@ -112,7 +112,7 @@ openskills sync -o .ruler/AGENTS.md →  .ruler/AGENTS.md (nested directory)
 Different AI tools may have different expected paths:
 
 | Tool        | Expected Path        | Default Path Usable |
-| ---------- | ------------------ | --------------- |
+|--- | --- | ---|
 | Claude Code | `AGENTS.md`        | ✅ Available          |
 | Cursor     | `AGENTS.md`        | ✅ Available          |
 | Windsurf   | `.ruler/AGENTS.md` | ❌ Not Available       |
@@ -543,11 +543,11 @@ In this lesson, you learned:
 **Core Commands**:
 
 | Command | Action |
-| ---- | ---- |
+|--- | ---|
 | `npx openskills sync -o custom.md` | Sync to `custom.md` in project root |
 | `npx openskills sync -o .ruler/AGENTS.md` | Sync to `.ruler/AGENTS.md` (automatically creates directory) |
 | `npx openskills sync -o path/to/file.md` | Sync to any path (automatically creates nested directories) |
-| `npx openskills sync -o custom.md -y` | Non-interactive sync to custom file |
+|--- | ---|
 
 **Key Points**:
 
@@ -581,12 +581,12 @@ Custom output paths allow you to flexibly control the location of skill lists, w
 > Updated: 2026-01-24
 
 | Function | File Path | Line |
-| ---- | --------- | ---- |
+|--- | --- | ---|
 | sync command entry | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts#L18-L109) | 18-109 |
 | CLI option definition | [`src/cli.ts`](https://github.com/numman-ali/openskills/blob/main/src/cli.ts#L66) | 66 |
 | Output path retrieval | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts#L19) | 19 |
 | Output file validation | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts#L22-L26) | 22-26 |
-| Create non-existent file | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts#L28-L36) | 28-36 |
+|--- | --- | ---|
 | Recursively create directory | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts#L31-L32) | 31-32 |
 | Auto-generate title | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts#L34) | 34 |
 | Interactive prompt uses output filename | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts#L70) | 70 |

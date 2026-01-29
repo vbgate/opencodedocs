@@ -97,7 +97,7 @@ Clawdbot 設定檔是一個分層物件，包含以下主要設定節：
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `lastTouchedVersion` | string | - | 最後修改此設定的 Clawdbot 版本 |
 | `lastTouchedAt` | string | - | 最後修改此設定的時間（ISO 8601） |
 
@@ -123,7 +123,7 @@ Clawdbot 設定檔是一個分層物件，包含以下主要設定節：
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `shellEnv.enabled` | boolean | `false` | 是否從登入 shell 匯入環境變數（僅匯入遺失的鍵） |
 | `shellEnv.timeoutMs` | number | `15000` | shell 環境匯入逾時（毫秒） |
 | `vars` | object | - | 內聯環境變數（鍵值對） |
@@ -150,7 +150,7 @@ Clawdbot 設定檔是一個分層物件，包含以下主要設定節：
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `lastRunAt` | string | - | 最後執行嚮導的時間 |
 | `lastRunVersion` | string | - | 最後執行嚮導時的 Clawdbot 版本 |
 | `lastRunCommit` | string | - | 最後執行嚮導時的 Git commit hash |
@@ -192,7 +192,7 @@ Clawdbot 設定檔是一個分層物件，包含以下主要設定節：
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `enabled` | boolean | `false` | 啟用診斷功能 |
 | `flags` | string[] | - | 診斷旗標列表 |
 | `otel.enabled` | boolean | `false` | 啟用 OpenTelemetry 遙測 |
@@ -232,7 +232,7 @@ Clawdbot 設定檔是一個分層物件，包含以下主要設定節：
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `level` | string | `info` | 日誌層級（`silent` \| `fatal` \| `error` \| `warn` \| `info` \| `debug` \| `trace`） |
 | `file` | string | - | 日誌檔案路徑（預設：`/tmp/clawdbot/clawdbot-YYYY-MM-DD.log`） |
 | `consoleLevel` | string | `info` | 主控台日誌層級（與 `level` 選項相同） |
@@ -257,7 +257,7 @@ Clawdbot 設定檔是一個分層物件，包含以下主要設定節：
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `channel` | string | `stable` | 更新通道（`stable` \| `beta` \| `dev`） |
 | `checkOnStart` | boolean | - | 啟動時檢查更新 |
 
@@ -296,7 +296,7 @@ Clawdbot 設定檔是一個分層物件，包含以下主要設定節：
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `enabled` | boolean | - | 啟用瀏覽器工具 |
 | `controlUrl` | string | - | 瀏覽器控制 WebSocket URL |
 | `controlToken` | string | - | 瀏覽器控制認證權杖 |
@@ -338,7 +338,7 @@ UI 自訂設定（Control UI、WebChat）。
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `seamColor` | string | - | Seam 顏色的十六進制值 |
 | `assistant.name` | string | - | 助手顯示名稱（最多 50 字元） |
 | `assistant.avatar` | string | - | 助手頭像路徑或 URL（最多 200 字元） |
@@ -389,7 +389,7 @@ UI 自訂設定（Control UI、WebChat）。
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `profiles` | object | - | 設定檔映射（鍵：設定檔 ID，值：設定） |
 | `profiles.<profileId>.provider` | string | - | 提供者名稱 |
 | `profiles.<profileId>.mode` | string | - | 認證模式（`api_key` \| `oauth` \| `token`） |
@@ -492,7 +492,7 @@ AI 模型提供者和設定。
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `mode` | string | - | 模型合併模式（`merge` \| `replace`） |
 | `providers` | object | - | 提供者映射（鍵：提供者 ID，值：提供者設定） |
 | `providers.<providerId>.baseUrl` | string | - | API 基礎 URL |
@@ -664,7 +664,7 @@ AI 模型提供者和設定。
 **預設設定**（`agents.defaults`）：
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `workspace` | string | `~/clawd` | 代理工作區目錄 |
 | `repoRoot` | string | - | Git 儲存庫根目錄（用於系統提示） |
 | `skipBootstrap` | boolean | `false` | 跳過工作區引導檔案建立 |
@@ -693,7 +693,7 @@ AI 模型提供者和設定。
 **代理列表**（`agents.list`）：
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `id` | string | 必填 | 代理 ID（穩定識別符） |
 | `default` | boolean | `false` | 是否為預設代理（多個時第一個獲勝） |
 | `name` | string | - | 代理顯示名稱 |
@@ -751,7 +751,7 @@ AI 模型提供者和設定。
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `agentId` | string | 必填 | 目標代理 ID（必須在 `agents.list` 中） |
 | `match.channel` | string | 必填 | 符合的管道 |
 | `match.accountId` | string | - | 符合的帳戶 ID（`*` = 任意帳戶；省略 = 預設帳戶） |
@@ -801,7 +801,7 @@ AI 模型提供者和設定。
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `exec.elevated.enabled` | boolean | `false` | 啟用提升 bash（`! <cmd>`） |
 | `exec.elevated.allowFrom` | object | - | 每個管道的提升 allowlist |
 | `browser.enabled` | boolean | - | 啟用瀏覽器工具 |
@@ -826,7 +826,7 @@ AI 模型提供者和設定。
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `strategy` | string | - | 廣播策略（`parallel` \| `sequential`） |
 | `<peerId>` | string[] | - | 將訊息發送到這些代理（動態鍵） |
 
@@ -898,7 +898,7 @@ AI 模型提供者和設定。
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `responsePrefix` | string | - | 所有出站回應的前綴（支援模板變數） |
 | `ackReaction` | string | - | 確認入站訊息的 emoji |
 | `ackReactionScope` | string | - | 何時發送確認（`group-mentions` \| `group-all` \| `direct` \| `all`） |
@@ -915,7 +915,7 @@ AI 模型提供者和設定。
 **模板變數**（用於 `responsePrefix`）：
 
 | 變數 | 說明 | 範例 |
-|--------|------|------|
+|--- | --- | ---|
 | `{model}` | 簡短模型名稱 | `claude-opus-4-5`，`gpt-4` |
 | `{modelFull}` | 完整模型識別符 | `anthropic/claude-opus-4-5` |
 | `{provider}` | 提供者名稱 | `anthropic`，`openai` |
@@ -947,7 +947,7 @@ AI 模型提供者和設定。
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `native` | string | `auto` | 原生命令（`auto` \| `true` \| `false`） |
 | `text` | boolean | `true` | 解析聊天訊息中的斜線命令 |
 | `bash` | boolean | `false` | 允許 `!`（`/bash` 的別名） |
@@ -984,7 +984,7 @@ AI 模型提供者和設定。
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `activation.defaultMode` | string | `auto` | 預設啟動模式（`auto` \| `always` \| `manual`） |
 | `activation.defaultDurationMs` | number | - | 預設啟動時長（毫秒） |
 | `activation.keepAlive` | boolean | - | 保持活動狀態 |
@@ -1012,7 +1012,7 @@ AI 模型提供者和設定。
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `enabled` | boolean | - | 啟用 Cron 引擎 |
 | `store` | string | - | Cron 儲存檔案路徑 |
 | `maxConcurrentRuns` | number | - | 最大並發執行數 |
@@ -1056,7 +1056,7 @@ Webhook 和事件轉發。
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `enabled` | boolean | - | 啟用 Hooks |
 | `path` | string | - | Hooks 目錄路徑 |
 | `token` | string | - | Webhook 認證權杖 |
@@ -1315,7 +1315,7 @@ Gateway WebSocket 伺服器和認證。
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `port` | number | `18789` | Gateway WebSocket 連接埠 |
 | `mode` | string | `local` | Gateway 模式（`local` \| `remote`） |
 | `bind` | string | - | 綁定位址（`auto` \| `lan` \| `loopback` \| `custom` \| `tailnet`） |
@@ -1382,7 +1382,7 @@ Gateway WebSocket 伺服器和認證。
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `allowBundled` | string[] | - | 允許的內建技能列表 |
 | `load.extraDirs` | string[] | - | 額外的技能目錄 |
 | `load.watch` | boolean | - | 監視技能檔案變更 |
@@ -1417,7 +1417,7 @@ Gateway WebSocket 伺服器和認證。
 ```
 
 | 欄位 | 類型 | 必填 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `enabled` | boolean | - | 啟用外掛系統 |
 | `allow` | string[] | - | 允許的外掛列表 |
 | `deny` | string[] | - | 拒絕的外掛列表 |
@@ -1526,7 +1526,7 @@ clawdbot doctor --yes
 ## 設定檔路徑
 
 | 檔案 | 路徑 | 說明 |
-|------|--------|------|
+|--- | --- | ---|
 | 主設定 | `~/.clawdbot/clawdbot.json` | 主設定檔 |
 | 環境變數 | `~/.clawdbot/.env` | 全域環境變數 |
 | 工作區環境 | `~/clawd/.env` | 工作區環境變數 |
@@ -1569,7 +1569,7 @@ clawdbot doctor --yes
 > 更新時間：2026-01-27
 
 | 設定節 | 檔案路徑 | 行號 |
-|---------|-----------|------|
+|--- | --- | ---|
 | 主 Schema | [`src/config/zod-schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.ts) | 1-556 |
 | 核心 Schema | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | 1-300 |
 | 代理 Schema | [`src/config/zod-schema.agents.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.agents.ts) | 1-54 |

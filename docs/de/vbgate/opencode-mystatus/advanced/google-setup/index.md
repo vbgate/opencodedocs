@@ -30,7 +30,7 @@ opencode-mystatus unterstützt gleichzeitige Abfrage mehrerer Google Cloud Antig
 Google Cloud Antigravity bietet mehrere Modelle, das Plugin zeigt davon die 4 am häufigsten verwendeten:
 
 | Anzeigename | Modell-Key (Haupt) | Modell-Key (Reserve) |
-| -------- | -------------- | --------------- |
+|--- | --- | ---|
 | G3 Pro | `gemini-3-pro-high` | `gemini-3-pro-low` |
 | G3 Image | `gemini-3-pro-image` | - |
 | G3 Flash | `gemini-3-flash` | - |
@@ -82,7 +82,7 @@ Stellen Sie sicher, dass die Konfiguration `projectId` oder `managedProjectId` e
 <summary><strong>Klicken Sie hier, um die Quellcodepositionen anzuzeigen</strong></summary>
 
 | Funktion | Dateipfad | Zeilennummer |
-| ---------- | ------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | Modellkonfiguration | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 69-78 |
 
 </details>

@@ -53,7 +53,7 @@ order: 6
 **CI/CD 集成的适用场景**：
 
 | 场景 | 是否需要非交互式模式 | 示例 |
-| ---- | ------------------- | ---- |
+|--- | --- | ---|
 | **GitHub Actions** | ✅ 是 | 每次 PR 或 push 时自动安装技能 |
 | **GitLab CI** | ✅ 是 | 合并请求时自动同步 AGENTS.md |
 | **Docker 构建** | ✅ 是 | 镜像构建时自动安装技能到容器 |
@@ -191,7 +191,7 @@ npx openskills install anthropics/skills -y
 **对比表格**：
 
 | 特性 | 交互式模式（默认） | 非交互式模式（-y） |
-| ---- | ----------------- | ------------------ |
+|--- | --- | ---|
 | **技能选择** | 弹出选择界面，手动勾选 | 自动安装所有找到的技能 |
 | **覆盖确认** | 询问是否覆盖已存在的技能 | 自动覆盖，显示提示信息 |
 | **TTY 要求** | 需要交互式终端 | 不需要，可在 CI 环境运行 |
@@ -720,7 +720,7 @@ COPY . .
 > 更新时间：2026-01-24
 
 | 功能              | 文件路径                                                                                                    | 行号    |
-| ----------------- | ----------------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 非交互式安装      | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L424-L455) | 424-455 |
 | 冲突检测与覆盖    | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L521-L550) | 521-550 |
 | 非交互式同步      | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts#L46-L93)   | 46-93   |

@@ -40,7 +40,7 @@ order: 260
 **記憶系統**適合這些場景：
 
 | 場景 | 示例 | 儲存位置 |
-|------|--------|----------|
+|--- | --- | ---|
 | 持久化知識 | "我喜歡素食，記住這個" | MEMORY.md |
 | 日常筆記 | "今天的工作進度和待辦" | memory/YYYY-MM-DD.md |
 | 會話檢索 | "上次討論的 API 端點是什麼" | 向量索引 |
@@ -55,7 +55,7 @@ order: 260
 Clawdbot 使用 **兩層資料** 來管理長期記憶：
 
 | 層級 | 檔案路徑 | 用途 | 載入時機 |
-|------|----------|------|----------|
+|--- | --- | --- | ---|
 | **長期記憶** | `MEMORY.md` | 精選的知識、偏好、重要事實 | 主會話啟動時載入 |
 | **每日日誌** | `memory/YYYY-MM-DD.md` | 日常筆記、運作上下文 | 載入今天 + 昨天的 |
 
@@ -86,7 +86,7 @@ graph LR
 向量搜尋擅長"語意匹配"，但弱於"精確匹配"：
 
 | 查詢類型 | 向量搜尋 | BM25 全文 | 混合搜尋 |
-|----------|----------|-----------|----------|
+|--- | --- | --- | ---|
 | "伺服器 IP 位址" | ❌ 弱 | ✅ 強 | ✅ 最佳 |
 | "如何部署 Gateway" | ✅ 強 | ⚠️ 中等 | ✅ 最佳 |
 | "API 端點 a828e60" | ❌ 弱 | ✅ 強 | ✅ 最佳 |
@@ -386,7 +386,7 @@ pnpm rebuild node-llama-cpp
 **參數說明**：
 
 | 參數 | 預設值 | 說明 | 調整建議 |
-|------|---------|------|----------|
+|--- | --- | --- | ---|
 | `vectorWeight` | 0.7 | 語意搜尋權重 | 提升到 0.8 用於"自然語言"查詢 |
 | `textWeight` | 0.3 | 關鍵詞搜尋權重 | 提升到 0.5 用於"程式碼/ID"查詢 |
 | `candidateMultiplier` | 4 | 候選倍數 | 增加到 6 提升召回率 |
@@ -452,7 +452,7 @@ clawdbot memory status --deep
 完成上述步驟後，驗證以下內容：
 
 | 檢查項 | 驗證方法 | 預期結果 |
-|---------|----------|----------|
+|--- | --- | ---|
 | 記憶檔案存在 | `ls ~/clawd/` | MEMORY.md 和 memory/ 目錄存在 |
 | 索引已建立 | `clawdbot memory status` | 顯示 Indexed > 0 chunks |
 | 搜尋正常 | `clawdbot memory search "..."` | 傳回相關結果 |
@@ -595,7 +595,7 @@ clawdbot memory status --verbose
 > 更新時間：2026-01-27
 
 | 功能 | 檔案路徑 | 行號 |
-|------|----------|------|
+|--- | --- | ---|
 | 記憶管理器 | [`src/memory/manager.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/memory/manager.ts) | 1-200 |
 | 混合搜尋 | [`src/memory/hybrid.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/memory/hybrid.ts) | 1-112 |
 | Embedding 提供商 | [`src/memory/embeddings.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/memory/embeddings.ts) | 1-80 |

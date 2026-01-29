@@ -43,7 +43,7 @@ Pero, ¿y si se ejecutan en paralelo? 3 agentes trabajando simultáneamente, tie
 Escenarios donde el sistema de tareas en segundo plano puede mejorar la eficiencia:
 
 | Escenario | Ejemplo | Valor |
-|-----------|---------|-------|
+|--- | --- | ---|
 | **Investigación Paralela** | Explore busca implementación + Librarian consulta documentación | Completar investigación 3 veces más rápido |
 | **Revisión Multi-experto** | Oracle revisa arquitectura + Momus valida plan | Obtener retroalimentación de múltiples perspectivas rápidamente |
 | **Tareas Asíncronas** | Realizar revisión de código mientras se hace commit de Git | No bloquear el flujo principal |
@@ -172,7 +172,7 @@ Si la tarea aún está en ejecución:
 ## Task Status
 
 | Field | Value |
-|-------|-------|
+|--- | ---|
 | Task ID | `bg_abc123` |
 | Description | Explore: 查找认证实现 |
 | Agent | explore |
@@ -266,7 +266,7 @@ A veces las tareas se bloquean o ya no son necesarias, puedes cancelarlas activa
 Cancelled 3 background task(s):
 
 | Task ID | Description | Status | Session ID |
-|---------|-------------|--------|------------|
+|--- | --- | --- | ---|
 | `bg_abc123` | Explore: 查找认证实现 | running | `sess_xyz789` |
 | `bg_def456` | Librarian: 研究最佳实践 | running | `sess_uvwx012` |
 | `bg_ghi789` | Oracle: 审查架构设计 | pending | (not started) |
@@ -359,7 +359,7 @@ El sistema de tareas en segundo plano te permite trabajar como un equipo real, c
 > Última actualización: 2026-01-26
 
 | Función | Ruta del Archivo | Líneas |
-|----------|------------------|--------|
+|--- | --- | ---|
 | Gestor de tareas en segundo plano | [`src/features/background-agent/manager.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/background-agent/manager.ts) | 1-1378 |
 | Control de concurrencia | [`src/features/background-agent/concurrency.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/background-agent/concurrency.ts) | 1-138 |
 | Herramienta delegate_task | [`src/tools/background-task/tools.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/background-task/tools.ts) | 51-119 |

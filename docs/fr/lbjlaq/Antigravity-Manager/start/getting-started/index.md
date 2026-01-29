@@ -126,7 +126,7 @@ Allez au chapitre « Démarrer le reverse proxy local et intégrer le premier cl
 ## Attention aux pièges courants
 
 | Scénario | Ce que vous pourriez faire (❌) | Approche recommandée (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Permettre à un téléphone/autre ordinateur d'accéder | Ouvrir directement `allow_lan_access=true` sans définir d'authentification | Activer simultanément l'authentification et d'abord vérifier `GET /healthz` dans le réseau local |
 | Le client renvoie 404 | Ne modifier que host/port, sans se soucier de la façon dont le client concatène `/v1` | D'abord confirmer la stratégie de concaténation base_url du client, puis décider si le préfixe `/v1` est nécessaire |
 | Commencer directement avec Claude Code | Intégrer directement un client complexe, ne pas savoir où chercher en cas d'échec | D'abord réussir la boucle minimale : démarrer le Proxy → `GET /healthz` → puis intégrer le client |
@@ -155,11 +155,11 @@ Allez au chapitre « Démarrer le reverse proxy local et intégrer le premier cl
 > Date de mise à jour : 2026-01-23
 
 | Fonction | Chemin du fichier | Ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Positionnement du produit (station de relais IA locale / fossé de protocoles) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L35-L77) | 35-77 |
 | Vue d'ensemble des points de terminaison du Routeur (OpenAI/Claude/Gemini/healthz) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | Logique de port par défaut / accès local uniquement par défaut / clé par défaut et bind address | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L291) | 174-291 |
-| Décision réelle de `auth_mode=auto` (LAN -> all_except_health) | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L10-L29) | 10-29 |
+|--- | --- | ---|
 | Structure du routage des pages GUI (Dashboard/Accounts/API Proxy/Monitor/Token Stats/Settings) | [`src/App.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/App.tsx#L19-L48) | 19-48 |
 
 **Valeurs par défaut clés** :

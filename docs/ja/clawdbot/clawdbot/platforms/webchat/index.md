@@ -57,7 +57,7 @@ WebChat を使用する前に、以下を確認してください：
 ### 必須条件
 
 | 条件                     | 確認方法                                        |
-| ---------------------- | ------------------------------------------- |
+|--- | ---|
 | **Gateway が起動している**   | `clawdbot gateway status` またはプロセスが実行中か確認 |
 | **ポートにアクセス可能**       | ポート 18789（またはカスタムポート）が使用されていないことを確認 |
 | **AI モデルが設定されている** | `clawdbot models list` で利用可能なモデルがあるか確認      |
@@ -123,7 +123,7 @@ clawdbot config set gateway.auth.token your-secure-token-here
 **他のチャンネルとの違い**：
 
 | 特性         | WebChat                          | WhatsApp/Telegram など                |
-| ------------ | -------------------------------- | ------------------------------ |
+|--- | --- | ---|
 | **アクセス方法** | ブラウザから直接 Gateway にアクセス    | サードパーティ APP とログインが必要         |
 | **設定要件** | 別途設定不要、Gateway ポートを共有   | チャンネル固有の API Key/Token が必要  |
 | **返信ルーティング** | WebChat に決定論的にルーティング   | 対応するチャンネルにルーティング        |
@@ -349,7 +349,7 @@ WebChat はスラッシュコマンドをサポートしており、特定の操
 **よく使われるコマンド**：
 
 | コマンド             | 機能                         |
-| ---------------- | ---------------------------- |
+|--- | ---|
 | `/new`          | 新しいセッションを作成                   |
 | `/reset`        | 現在のセッションの履歴をリセット           |
 | `/clear`        | 現在のセッションのすべてのメッセージをクリア       |
@@ -612,7 +612,7 @@ http://localhost:18789
 > 更新日時：2026-01-27
 
 | 機能                  | ファイルパス                                                                                    | 行番号    |
-| ------------------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | WebChat 原理説明     | [`docs/web/webchat.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/web/webchat.md) | 全ファイル   |
 | Gateway WebSocket API | [`src/gateway/protocol/`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/) | 全ディレクトリ   |
 | chat.send メソッド        | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 296-380  |

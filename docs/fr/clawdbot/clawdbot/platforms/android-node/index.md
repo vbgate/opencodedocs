@@ -74,7 +74,7 @@ Appareil Android (application nœud)
 Le nœud Android prend en charge les opérations locales suivantes :
 
 | Fonctionnalité | Commande | Description |
-| ---- | ------ | ---- |
+|--- | --- | ---|
 | **Canvas** | `canvas.*` | Afficher des interfaces de visualisation en temps réel (A2UI) |
 | **Camera** | `camera.*` | Prendre des photos (JPG) et enregistrer des vidéos (MP4) |
 | **Screen** | `screen.*` | Enregistrement d'écran |
@@ -454,7 +454,7 @@ Ce cours a présenté comment configurer le nœud Android pour exécuter des op�
 > Dernière mise à jour : 2026-01-27
 
 | Fonctionnalité        | Chemin du fichier                                                                                    | Lignes    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Stratégie de commandes nœud | [`src/gateway/node-command-policy.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/node-command-policy.ts) | 1-112   |
 | Schéma de protocole nœud | [`src/gateway/protocol/schema/nodes.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/schema/nodes.ts) | 1-103   |
 | Documentation Android  | [`docs/platforms/android.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/android.md) | 1-142   |

@@ -39,7 +39,7 @@ order: 3
 Proxy tentará analisar `error.details[0].reason` ou `error.message` do corpo de resposta, classificar 429 em algumas categorias (efetivamente baseado no retorno):
 
 | Tipo identificado pelo proxy | Razão comum / Busca | Característica típica |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **Cota esgotada** | `QUOTA_EXHAUSTED` / texto contém `exhausted`, `quota` | Pode precisar esperar cota atualizar |
 | **Limitação de taxa** | `RATE_LIMIT_EXCEEDED` / texto contém `per minute`, `rate limit`, `too many requests` | Geralmente resfriamento de nível de dezenas de segundos |
 | **Capacidade de modelo insuficiente** | `MODEL_CAPACITY_EXHAUSTED` / texto contém `model_capacity` | Geralmente sobrecarga breve, pode recuperar depois |
@@ -134,14 +134,14 @@ No Proxy Monitor veja corpo de resposta de erro 429, foque em duas categorias de
 Entre na página **API Proxy**, verifique estratégia de agendamento:
 
 | Item de configuração | Descrição | Padrão/Sugestão |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **Scheduling Mode** | Modo de agendamento | `Balance` (padrão) |
 | **Preferred Account** | Modo de conta fixa | Não selecionado (padrão) |
 
 **Comparação de modos de agendamento**:
 
 | Modo | Estratégia de reuso de conta | Tratamento de limitação | Cenário aplicável |
-| :--- | :--- | :--- | :--- |
+|--- | --- | --- | ---|
 | **CacheFirst** | Habilitar sessão aderente e reuso de 60s de janela | **Priorizar espera**, melhora muito taxa de acerto de Prompt Caching | Conversacional/necessita alta taxa de acerto de cache |
 | **Balance** | Habilitar sessão aderente e reuso de 60s de janela | **Trocar imediatamente** para conta alternativa, equilibra sucesso e desempenho | Cenário geral, padrão |
 | **PerformanceFirst** | Pular sessão aderente e reuso de 60s de janela, modo puro de polling | Trocar imediatamente, carga de conta mais equilibrada | Alta concorrência, solicitações sem estado |
@@ -295,7 +295,7 @@ All accounts are currently limited. Please wait 30s.
 A: Não são.
 
 | Característica | Proteção de cota | Rastreamento de limitação |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **Condição de disparo** | Cota de modelo abaixo do limite | Recebeu erro 429 |
 | **Escopo de ação** | Modelo específico | Conta inteira |
 | **Duração** | Até cota recuperar | Decidido por upstream (geralmente poucos segundos a minutos) |
@@ -337,7 +337,7 @@ Dentro de uma única solicitação, proxy também forçará rotação ao retry (
 > Atualizado em: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Linha |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Análise de delay de retry 429 (RetryInfo / quotaResetDelay) | [`src-tauri/src/proxy/upstream/retry.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/upstream/retry.rs#L38-L67) | 38-67 |
 | Ferramenta de análise de Duration | [`src-tauri/src/proxy/upstream/retry.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/upstream/retry.rs#L11-L35) | 11-35 |
 | Enumeração de modo de agendamento (CacheFirst/Balance/PerformanceFirst) | [`src-tauri/src/proxy/sticky_config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/sticky_config.rs#L3-L12) | 3-12 |

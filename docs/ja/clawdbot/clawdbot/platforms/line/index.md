@@ -76,7 +76,7 @@ LINEユーザー
 **重要な概念**：
 
 | 概念 | 役割 |
-|------|------|
+|--- | ---|
 | **Channel Access Token** | メッセージ送信用の認証トークン |
 | **Channel Secret** | Webhook署名検証用の秘密鍵 |
 | **Webhook URL** | ClawdbotがLINEイベントを受信するエンドポイント（HTTPS必須） |
@@ -88,7 +88,7 @@ LINEユーザー
 ### 必要なアカウントとツール
 
 | 項目 | 要件 | 取得方法 |
-|------|------|----------|
+|--- | --- | ---|
 | **LINE Developersアカウント** | 無料登録 | https://developers.line.biz/console/ |
 | **LINE Provider** | ProviderとMessaging APIチャンネルの作成 | LINE Console |
 | **HTTPSサーバー** | WebhookはHTTPS必須 | ngrok、Cloudflare Tunnel、Tailscale Serve/Funnel |
@@ -155,7 +155,7 @@ clawdbot plugins install ./extensions/line
 3. 以下の情報をコピー：
 
 | 項目 | 場所 | 例 |
-|------|------|------|
+|--- | --- | ---|
 | **Channel Access Token** | Basic settings → Channel access token (long-lived) | `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...` |
 | **Channel Secret** | Basic settings → Channel secret | `1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7` |
 
@@ -260,7 +260,7 @@ ngrok http 18789
 Webhook settingsで以下のイベントにチェックを入れます：
 
 | イベント | 用途 |
-|------|------|
+|--- | ---|
 | **Message event** | ユーザーが送信したメッセージを受信 |
 | **Follow event** | ユーザーがBotを友だち追加 |
 | **Unfollow event** | ユーザーがBotを削除 |
@@ -346,7 +346,7 @@ clawdbot pairing approve line ABC123
 設定が正しいか検証します：
 
 | チェック項目 | 検証方法 | 期待される結果 |
-|--------|----------|----------|
+|--- | --- | ---|
 | **プラグインがインストール済み** | `clawdbot plugins list` | `@clawdbot/line` が表示される |
 | **設定が有効** | `clawdbot doctor` | LINE関連のエラーがない |
 | **Webhookが到達可能** | LINE Consoleでの検証 | `✓ Verification succeeded` |
@@ -529,7 +529,7 @@ clawdbot line rich-menu set-default --rich-menu-id <MENU_ID>
 ClawdbotはMarkdownフォーマットをLINEがサポートするフォーマットに自動変換します：
 
 | Markdown | LINE変換結果 |
-|----------|---------------|
+|--- | ---|
 | コードブロック | Flexカード |
 | 表 | Flexカード |
 | リンク | 自動検出してFlexカードに変換 |
@@ -574,7 +574,7 @@ LINEチャンネルは豊富なメッセージタイプとインタラクショ�
 > 更新日：2026-01-27
 
 | 機能 | ファイルパス | 行番号 |
-|------|---------|------|
+|--- | --- | ---|
 | LINE Botコア実装 | [`src/line/bot.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/bot.ts) | 27-83 |
 | 設定スキーマ定義 | [`src/line/config-schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/config-schema.ts) | 1-54 |
 | Webhookイベントハンドラー | [`src/line/bot-handlers.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/bot-handlers.ts) | 1-100 |

@@ -89,7 +89,7 @@ flowchart TD
 Each agent has its own preferred Provider order, which depends on the agent's task type and required capabilities:
 
 | Agent | Recommended Model (no prefix) | Provider Fallback Chain | Variant |
-|------|-------------------------------|-------------------------|---------|
+|--- | --- | --- | ---|
 | **Sisyphus** | `claude-opus-4-5` | anthropic → github-copilot → opencode → zai-coding-plan | max |
 | **Oracle** | `gpt-5.2` | openai → anthropic → google | high |
 | **Librarian** | `big-pickle` | zai-coding-plan → opencode → anthropic | - |
@@ -109,7 +109,7 @@ Sisyphus is the main orchestrator and needs powerful reasoning capabilities. Cla
 Categories follow the same resolution logic:
 
 | Category | Recommended Model (no prefix) | Provider Fallback Chain | Variant |
-|----------|-------------------------------|-------------------------|---------|
+|--- | --- | --- | ---|
 | **visual-engineering** | `gemini-3-pro` | google → anthropic → openai | - |
 | **ultrabrain** | `gpt-5.2-codex` | openai → anthropic → google | xhigh |
 | **artistry** | `gemini-3-pro` | google → anthropic → openai | max |
@@ -313,7 +313,7 @@ If any item fails, check:
 ## When to Use This
 
 | Scenario | Manually Override Model | Use Provider Fallback |
-|----------|-------------------------|-----------------------|
+|--- | --- | ---|
 | **Cost-sensitive tasks** | ✅ Specify cheap model | ❌ Might choose expensive model |
 | **Performance-sensitive tasks** | ✅ Specify strongest model | ❌ Might fall back to weak model |
 | **Testing new models** | ✅ Specify experimental model | ❌ Won't auto-select |
@@ -445,7 +445,7 @@ Remember:
 > Last updated: 2026-01-26
 
 | Feature | File Path | Line Numbers |
-|---------|-----------|--------------|
+|--- | --- | ---|
 | Model resolution core function | [`src/shared/model-resolver.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/shared/model-resolver.ts) | 43-98 |
 | Agent model requirements definition | [`src/shared/model-requirements.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/shared/model-requirements.ts) | 12-79 |
 | Category model requirements definition | [`src/shared/model-requirements.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/shared/model-requirements.ts) | 81-133 |
@@ -473,7 +473,7 @@ Remember:
 
 **Business Rules**:
 | Rule ID | Rule Description | Tag |
-|---------|------------------|-----|
+|--- | --- | ---|
 | BR-4.1-7 | Model resolution priority: user override > Provider fallback > system default | [Fact] |
 | BR-4.1-7-1 | Return directly on user override, skip Provider fallback chain | [Fact] |
 | BR-4.1-7-2 | Try each Provider in order during Provider fallback | [Fact] |

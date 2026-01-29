@@ -22,7 +22,7 @@ The OpenSkills file structure is divided into three categories: **skill installa
 OpenSkills supports 4 skill installation locations, listed in order of priority from high to low:
 
 | Priority | Location | Description | When to Use |
-| -------- | -------- | ----------- | ----------- |
+|--- | --- | --- | ---|
 | 1 | `./.agent/skills/` | Project-local Universal mode | Multi-agent environments, avoid conflicts with Claude Code |
 | 2 | `~/.agent/skills/` | Global Universal mode | Multi-agent environments + global installation |
 | 3 | `./.claude/skills/` | Project-local (default) | Standard installation, project-specific skills |
@@ -184,7 +184,7 @@ Usage notes:
 ### Component Descriptions
 
 | Component | Description |
-| --------- | ----------- |
+|--- | ---|
 | `<skills_system>` | XML tag marking the skill system section |
 | `<usage>` | Skill usage instructions (tells AI how to invoke skills) |
 | `<available_skills>` | List of available skills (one `<skill>` tag per skill) |
@@ -250,7 +250,7 @@ my-project/
 ### 1. Directory Selection
 
 | Scenario | Recommended Directory | Command |
-| -------- | --------------------- | ------- |
+|--- | --- | ---|
 | Project-specific skills | `.claude/skills/` | `openskills install repo` |
 | Multi-agent sharing | `.agent/skills/` | `openskills install repo --universal` |
 | Cross-project general skills | `~/.claude/skills/` | `openskills install repo --global` |
@@ -296,7 +296,7 @@ Understanding these structures helps you manage and use skills more efficiently.
 > Updated: 2026-01-24
 
 | Feature | File Path | Line Numbers |
-| ------- | ----------------------------------------------- | ---- |
+|--- | --- | ---|
 | Directory path utilities | [`src/utils/dirs.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/dirs.ts) | 1-25 |
 | Skill lookup | [`src/utils/skills.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skills.ts) | 30-84 |
 | Metadata management | [`src/utils/skill-metadata.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skill-metadata.ts) | 1-36 |

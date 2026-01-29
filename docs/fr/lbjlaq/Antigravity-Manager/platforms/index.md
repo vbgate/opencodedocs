@@ -13,7 +13,7 @@ La capacité principale d'Antigravity Tools est de convertir les protocoles de p
 ## Ce chapitre contient
 
 | Tutoriel | Description |
-|---------|-------------|
+|--- | ---|
 | [API compatible OpenAI](./openai/) | Stratégies pour `/v1/chat/completions` et `/v1/responses`, intégration transparente du SDK OpenAI |
 | [API compatible Anthropic](./anthropic/) | Contrats clés pour `/v1/messages` et Claude Code, supportant les chaînes de pensée, prompts système et autres fonctionnalités principales |
 | [API native Gemini](./gemini/) | `/v1beta/models` et intégration des points de terminaison du SDK Google, support compatible avec `x-goog-api-key` |
@@ -34,7 +34,7 @@ La capacité principale d'Antigravity Tools est de convertir les protocoles de p
 **Sélection rapide** :
 
 | Votre scénario | Commencez par |
-|---------------|---------------|
+|--- | ---|
 | Utilisation du CLI Claude Code | [API compatible Anthropic](./anthropic/) |
 | Utilisation du SDK Python OpenAI | [API compatible OpenAI](./openai/) |
 | Utilisation du SDK officiel Google | [API native Gemini](./gemini/) |

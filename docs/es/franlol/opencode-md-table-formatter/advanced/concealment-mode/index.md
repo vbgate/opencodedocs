@@ -28,7 +28,7 @@ Escribes código con OpenCode y la IA genera una tabla hermosa:
 
 ```markdown
 | Campo | Tipo | Descripción |
-| --- | --- | --- |
+|--- | --- | ---|
 | **name** | string | Nombre de usuario |
 | age | number | Edad |
 ```
@@ -37,7 +37,7 @@ En la vista de código fuente se ve bastante ordenada. Pero al cambiar al modo d
 
 ```
 | Campo     | Tipo   | Descripción   |
-| -------- | ------ | ------ |
+|--- | --- | ---|
 | name | string | Nombre de usuario |    ← ¿Por qué se acortó?
 | age      | number | Edad   |
 ```
@@ -49,7 +49,7 @@ En la vista de código fuente se ve bastante ordenada. Pero al cambiar al modo d
 OpenCode habilita por defecto el **Modo de Ocultación (Concealment Mode)**, que oculta los símbolos de sintaxis Markdown al renderizar:
 
 | Código Fuente | Visualización en Modo de Ocultación |
-| --- | --- |
+|--- | ---|
 | `**negrita**` | negrita（4 caracteres） |
 | `*cursiva*` | cursiva（4 caracteres） |
 | `~~tachado~~` | tachado（6 caracteres） |
@@ -107,7 +107,7 @@ let textWithPlaceholders = text.replace(/`(.+?)`/g, (match, content) => {
 **Cómo Funciona**
 
 | Entrada | Después del Procesamiento | Array codeBlocks |
-| --- | --- | --- |
+|--- | --- | ---|
 | `` `**bold**` `` | `\x00CODE0\x00` | `["**bold**"]` |
 | `` `a` and `b` `` | `\x00CODE0\x00 and \x00CODE1\x00` | `["a", "b"]` |
 
@@ -176,7 +176,7 @@ return Bun.stringWidth(visualText)
 `Bun.stringWidth` puede calcular correctamente:
 
 | Tipo de Carácter | Ejemplo | Número de Caracteres | Ancho de Visualización |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | ASCII | `abc` | 3 | 3 |
 | Chino | `你好` | 2 | 4（cada uno ocupa 2 espacios） |
 | Emoji | `😀` | 1 | 2（ocupa 2 espacios） |
@@ -234,7 +234,7 @@ Por lo tanto, el ancho de `` `**bold**` `` es 8（`**bold**`），no 4（`bold`�
 ## Resumen de Esta Lección
 
 | Paso | Función | Código Clave |
-| --- | --- | --- |
+|--- | --- | ---|
 | Proteger bloques de código | Evitar que los símbolos dentro de los bloques de código se eliminen por error | `text.replace(/\`(.+?)\`/g, ...)` |
 | Eliminar Markdown | Calcular el contenido de visualización real en modo de ocultación | Múltiples reemplazos con regex |
 | Calcular ancho | Manejar caracteres especiales como chino, emoji, etc. | `Bun.stringWidth()` |
@@ -258,7 +258,7 @@ Por lo tanto, el ancho de `` `**bold**` `` es 8（`**bold**`），no 4（`bold`�
 > Última actualización: 2026-01-26
 
 | Función | Ruta del Archivo | Número de Línea |
-| --- | --- | --- |
+|--- | --- | ---|
 | Entrada de cálculo de ancho de visualización | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L151-L159) | 151-159 |
 | Protección de bloques de código | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L168-L173) | 168-173 |
 | Eliminación de símbolos Markdown | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L175-L188) | 175-188 |

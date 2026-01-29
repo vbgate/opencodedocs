@@ -80,7 +80,7 @@ graph LR
 ### 项目结构要点
 
 | 目录 | 作用 |
-|------|------|
+|--- | ---|
 | `src/` | 所有源代码（2475 个 TypeScript 文件）|
 | `src/gateway/` | Gateway WebSocket 服务器 |
 | `src/channels/` | 渠道插件系统 |
@@ -334,7 +334,7 @@ git push origin feature/my-feature
 ### 常见错误
 
 | 错误 | 原因 | 解决方法 |
-|-------|-------|---------|
+|--- | --- | ---|
 | `Cannot find module 'xxx'` | 依赖未安装 | 运行 `pnpm install` |
 | `Port 18789 already in use` | Gateway 已运行 | 检查并关闭旧实例 |
 | TypeScript 编译错误 | 类型定义问题 | 运行 `pnpm lint` 检查 |
@@ -361,7 +361,7 @@ git push origin feature/my-feature
 关键命令速查：
 
 | 任务 | 命令 |
-|------|-------|
+|--- | ---|
 | 安装依赖 | `pnpm install` |
 | 构建 | `pnpm build` |
 | 开发模式 | `pnpm gateway:watch` |
@@ -395,7 +395,7 @@ git push origin feature/my-feature
 > 更新时间：2026-01-27
 
 | 功能 | 文件路径 | 行号 |
-|------|----------|------|
+|--- | --- | ---|
 | 构建脚本 | [`package.json`](https://github.com/clawdbot/clawdbot/blob/main/package.json) | 77-44 |
 | 从源码安装 | [`README.md`](https://github.com/clawdbot/clawdbot/blob/main/README.md) | 83-99 |
 | 插件文档 | [`docs/plugin.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/plugin.md) | 1-639 |

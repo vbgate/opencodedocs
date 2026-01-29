@@ -74,7 +74,7 @@ Android-Gerät (Knoten-App)
 Der Android-Knoten unterstützt die folgenden lokalen Geräteaktionen:
 
 | Funktion | Befehl | Beschreibung |
-| ---- | ------ | ---- |
+|--- | --- | ---|
 | **Canvas** | `canvas.*` | Echtzeit-Visualisierungsbenutzeroberfläche (A2UI) anzeigen |
 | **Camera** | `camera.*` | Fotos (JPG) und Videos (MP4) aufnehmen |
 | **Screen** | `screen.*` | Bildschirmaufzeichnung |
@@ -454,7 +454,7 @@ In dieser Lerneinheit haben Sie erfahren, wie Sie einen Android-Knoten für die 
 > Aktualisiert am: 2026-01-27
 
 | Funktion        | Dateipfad                                                                                    | Zeile    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Knotenbefehlsrichtlinie | [`src/gateway/node-command-policy.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/node-command-policy.ts) | 1-112   |
 | Knotenprotokoll-Schema | [`src/gateway/protocol/schema/nodes.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/schema/nodes.ts) | 1-103   |
 | Android-Dokumentation  | [`docs/platforms/android.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/android.md) | 1-142   |

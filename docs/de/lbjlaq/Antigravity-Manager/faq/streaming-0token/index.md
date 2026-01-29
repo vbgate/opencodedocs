@@ -142,7 +142,7 @@ Sie können an zwei Signalen erkennen, ob es in die Reparaturlogik eingetreten i
 ## Häufige Fehler vermeiden
 
 | Szenario | Was Sie vielleicht tun (❌) | Empfohlene Vorgehensweise (✓) |
-|---------|----------------------------|----------------------------|
+|--- | --- | ---|
 | Bei 0 Token sofort viele manuelle Wiederholungen durchführen | Immer den Wiederholungsbutton im Client drücken, ohne überhaupt die Protokolle anzusehen | Erst einmal den Proxy Monitor + app.log prüfen und bestätigen, ob es ein vorzeitiges Abbrechen in der Peek-Phase ist (wird automatisch wiederholt/rotiert) |
 | Bei `Invalid \`signature\}` das Datenverzeichnis sofort leeren | `.antigravity_tools` komplett löschen, Konten/Statistiken sind weg | Zuerst den Proxy einmal eine „Signaturreparatur-Wiederholung“ ausführen lassen; Nur wenn das Protokoll explizit angibt, dass es nicht wiederherstellbar ist, manuell eingreifen |
 | „Server-Schwankungen“ als „Konto kaputt“ betrachten | Bei 400/503/529 immer Konten rotieren | Ob Rotation wirksam ist, hängt vom Statuscode ab; Der Proxy selbst hat `should_rotate_account(...)` Regeln (`src-tauri/src/proxy/handlers/claude.rs#L226-L236`) |
@@ -167,15 +167,15 @@ Sie können an zwei Signalen erkennen, ob es in die Reparaturlogik eingetreten i
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-|---------|-----------|--------------|
-| Claude handler: Backoff-Wiederholungsstrategie + Rotationsregeln | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L117-L236) | 117-236 |
-| Claude handler: Interne Umwandlung von nicht-streaming zu streaming (better quota) | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L665-L776) | 665-776 |
-| Claude handler: Peek-Vorlesen (Herzschlag/Kommentare überspringen, leere Streams vermeiden) | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L812-L926) | 812-926 |
-| Claude handler: Reparaturwiederholung bei 400 Signatur-/Blockreihenfolge-Fehlern | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L999-L1102) | 999-1102 |
-| Gemini handler: Peek-Vorlesen (verhindert leere Streams 200 OK) | [`src-tauri/src/proxy/handlers/gemini.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/gemini.rs#L117-L149) | 117-149 |
-| Gemini handler: Reparatur-Prompt-Injektion bei 400 Signaturfehlern | [`src-tauri/src/proxy/handlers/gemini.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/gemini.rs#L300-L325) | 300-325 |
-| Signatur-Cache (drei Ebenen: tool/family/session, mit TTL/Mindestlänge) | [`src-tauri/src/proxy/signature_cache.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/signature_cache.rs#L5-L207) | 5-207 |
-| Claude SSE-Konvertierung: Signatur erfassen und in Signatur-Cache schreiben | [`src-tauri/src/proxy/mappers/claude/streaming.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/claude/streaming.rs#L639-L787) | 639-787 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Konstanten**:
 - `MAX_RETRY_ATTEMPTS = 3`: Maximale Anzahl Wiederholungsversuche (`src-tauri/src/proxy/handlers/claude.rs#L27`)

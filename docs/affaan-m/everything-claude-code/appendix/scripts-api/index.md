@@ -76,7 +76,7 @@ const {
 ```
 
 | Function | Type | Return Value | Description |
-|----------|------|-------------|-------------|
+|--- | --- | --- | ---|
 | `isWindows` | boolean | `true/false` | Whether current platform is Windows |
 | `isMacOS` | boolean | `true/false` | Whether current platform is macOS |
 | `isLinux` | boolean | `true/false` | Whether current platform is Linux |
@@ -532,7 +532,7 @@ const { PACKAGE_MANAGERS } = require('./lib/package-manager');
 ```
 
 | Package Manager | Lock File | install Command | run Command | exec Command |
-|-----------------|-----------|-----------------|-------------|--------------|
+|--- | --- | --- | --- | ---|
 | `npm` | package-lock.json | `npm install` | `npm run` | `npx` |
 | `pnpm` | pnpm-lock.yaml | `pnpm install` | `pnpm` | `pnpm dlx` |
 | `yarn` | yarn.lock | `yarn` | `yarn` | `yarn dlx` |
@@ -727,10 +727,10 @@ node scripts/setup-package-manager.js --help
 ### Command Line Arguments
 
 | Argument | Description |
-|----------|-------------|
+|--- | ---|
 | `--detect` | Detect and display current package manager |
-| `--global <pm>` | Set global preference (saved to `~/.claude/package-manager.json`) |
-| `--project <pm>` | Set project preference (saved to `.claude/package-manager.json`) |
+|--- | ---|
+|--- | ---|
 | `--list` | List all available package managers |
 | `--help` | Display help information |
 
@@ -1159,7 +1159,7 @@ This lesson systematically covered Everything Claude Code's Scripts API:
 > Last updated: 2026-01-25
 
 | Feature Module | File Path | Line Numbers |
-|----------------|-----------|--------------|
+|--- | --- | ---|
 | Common Utility Functions | [`scripts/lib/utils.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/lib/utils.js) | 1-384 |
 | Package Manager API | [`scripts/lib/package-manager.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/lib/package-manager.js) | 1-391 |
 | Package Manager Setup Script | [`scripts/setup-package-manager.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/setup-package-manager.js) | 1-207 |

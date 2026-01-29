@@ -242,7 +242,7 @@ OpenSkills is a purely local tool with no network communication (except for clon
 ### No Data Upload
 
 | Operation | Data Flow |
-| --------- | --------- |
+|--- | ---|
 | Install skill | Git repository → Local |
 | Read skill | Local → Standard output |
 | Sync AGENTS.md | Local → Local file |
@@ -262,7 +262,7 @@ OpenSkills doesn't depend on Anthropic Marketplace; it runs entirely locally.
 OpenSkills's three-layer security protection:
 
 | Security Layer | Protection Measure | Source Location |
-| ------------- | ---------------- | --------------- |
+|--- | --- | ---|
 | **Path Traversal Protection** | `isPathInside()` verifies path is within target directory | `install.ts:71-78` |
 | **Symlink Security** | `dereference: true` dereferences symlinks | `install.ts:262` |
 | **YAML Parsing Security** | Non-greedy regex `+?` prevents ReDoS | `yaml.ts:4` |
@@ -293,7 +293,7 @@ OpenSkills's three-layer security protection:
 > Updated: 2026-01-24
 
 | Feature          | File Path                                                                                     | Line Numbers |
-| ---------------- | --------------------------------------------------------------------------------------------- | ------------ |
+|--- | --- | ---|
 | Path traversal protection   | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L71-L78) | 71-78    |
 | Installation path check   | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L257-L260) | 257-260  |
 | Symlink dereferencing | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L262) | 262      |

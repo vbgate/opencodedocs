@@ -42,7 +42,7 @@ Category 是针对特定领域优化的**代理配置预设**。它回答了一�
 ### 7 个内置 Categories
 
 | Category | 默认模型 | Temperature | 适用场景 |
-|-----------|-----------|-------------|----------|
+|--- | --- | --- | ---|
 | `visual-engineering` | `google/gemini-3-pro` | 0.7 | 前端、UI/UX、设计、样式、动画 |
 | `ultrabrain` | `openai/gpt-5.2-codex` (xhigh) | 0.1 | 深度逻辑推理、需要大量分析的复杂架构决策 |
 | `artistry` | `google/gemini-3-pro` (max) | 0.7 | 高创意/艺术任务、新颖想法 |
@@ -229,7 +229,7 @@ mcp:
 你可以在 `oh-my-opencode.json` 中微调 Categories。
 
 | 字段 | 类型 | 描述 |
-|------|------|------|
+|--- | --- | ---|
 | `description` | string | Category 目的的可读描述。显示在 delegate_task 提示中。 |
 | `model` | string | 使用的 AI 模型 ID（如 `anthropic/claude-opus-4-5`） |
 | `variant` | string | 模型变体（如 `max`、`xhigh`） |

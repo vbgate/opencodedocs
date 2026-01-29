@@ -46,7 +46,7 @@ Ultrawork 모드는 키워드로 트리거되는 특수 작업 모드입니다. 
 Ultrawork 모드는 다음 핵심 원칙을 기반으로 합니다 ([Ultrawork 선언문](https://github.com/code-yeongyu/oh-my-opencode/blob/main/docs/ultrawork-manifesto.md) 참조):
 
 | 원칙 | 설명 |
-|-----------|-------------|
+|--- | ---|
 | **사람 개입은 실패 신호** | AI 출력을 지속적으로 수정해야 한다면 시스템 설계에 문제가 있다는 의미 |
 | **구별할 수 없는 코드** | AI가 작성한 코드는 시니어 엔지니어가 작성한 코드와 구별할 수 없어야 함 |
 | **인지 부하 최소화** | "무엇을 할지"만 말하면 에이전트가 "어떻게 할지"를 담당 |
@@ -143,7 +143,7 @@ Ultrawork 모드 활성화 후 에이전트는 다음을 수행합니다:
 ## 언제 이 기법을 사용할까
 
 | 시나리오 | Ultrawork 사용 | 일반 모드 |
-|----------|--------------|-------------|
+|--- | --- | ---|
 | **복잡한 새 기능** | ✅ 권장 (다중 에이전트 협업 필요) | ❌ 효율성 부족 |
 | **긴급 수정** | ✅ 권장 (빠른 진단과 탐색 필요) | ❌ 컨텍스트 누락 가능 |
 | **간단한 수정** | ❌ 과도함 (자원 낭비) | ✅ 더 적합 |
@@ -202,7 +202,7 @@ Ultrawork 모드는 키워드 트리거를 통해 "하나의 명령으로 모든
 > 마지막 업데이트: 2026-01-26
 
 | 기능 | 파일 경로 | 줄 번호 |
-|---------|-----------|--------------|
+|--- | --- | ---|
 | Ultrawork 설계 철학 | [`docs/ultrawork-manifesto.md`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/docs/ultrawork-manifesto.md) | 1-198 |
 | 키워드 감지기 Hook | [`src/hooks/keyword-detector/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/keyword-detector/index.ts) | 12-100 |
 | ULTRAWORK 지침 템플릿 | [`src/hooks/keyword-detector/constants.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/keyword-detector/constants.ts) | 54-280 |
@@ -221,7 +221,7 @@ Ultrawork 모드는 키워드 트리거를 통해 "하나의 명령으로 모든
 
 **비즈니스 규칙**:
 | 규칙 ID | 규칙 설명 | 태그 |
-|---------|------------------|-----|
+|--- | --- | ---|
 | BR-4.8.4-1 | "ultrawork" 또는 "ulw" 감지 시 Ultrawork 모드 활성화 | [Fact] |
 | BR-4.8.4-2 | Ultrawork 모드는 `message.variant = "max"` 설정 | [Fact] |
 | BR-4.8.4-3 | Ultrawork 모드는 Toast 알림 표시: "Ultrawork Mode Activated" | [Fact] |

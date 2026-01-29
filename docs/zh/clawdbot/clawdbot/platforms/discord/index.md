@@ -90,7 +90,7 @@ Discord 用户（看到回复）
 ### DM 与服务器频道的区别
 
 | 类型 | 会话隔离 | 默认行为 | 适用场景 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | **私聊（DM）** | 所有 DM 共享 `agent:main:main` 会话 | 需配对（pairing）保护 | 个人对话，延续上下文 |
 | **服务器频道** | 每个频道独立会话 `agent:<agentId>:discord:channel:<channelId>` | 需 @提及才回复 | 服务器智能助手，多频道并行 |
 
@@ -148,7 +148,7 @@ Discord 默认不会让 Bot 读取消息内容，需要手动启用。
 在 **Bot → Privileged Gateway Intents**（特权网关意图）中启用：
 
 | Intent | 是否必需 | 说明 |
-| --- | --- | --- |
+|--- | --- | ---|
 | **Message Content Intent** | ✅ **必需** | 读取消息文本内容（没有它，Bot 无法看到消息） |
 | **Server Members Intent** | ⚠️ **推荐** | 用于成员查找和用户名解析 |
 
@@ -173,7 +173,7 @@ Bot 需要权限才能在服务器中读取和发送消息。
 3. 在 **Bot Permissions**（Bot 权限）中至少选择：
 
 | 权限 | 说明 |
-| --- | --- |
+|--- | ---|
 | **View Channels** | 查看频道 |
 | **Send Messages** | 发送消息 |
 | **Read Message History** | 读取历史消息 |
@@ -209,7 +209,7 @@ Clawdbot 的配置首选使用 ID（数字），因为 ID 不会改变。
 #### 3.2 复制 ID
 
 | 类型 | 操作 |
-| --- | --- |
+|--- | ---|
 | **服务器 ID** | 右键服务器名称 → **Copy Server ID** |
 | **频道 ID** | 右键频道（如 `#general`）→ **Copy Channel ID** |
 | **用户 ID** | 右键用户头像 → **Copy User ID** |
@@ -307,7 +307,7 @@ clawdbot gateway --port 18789 --verbose
 默认策略是 `pairing`（配对模式），适合个人使用。你可以根据需要调整：
 
 | 策略 | 说明 | 配置示例 |
-| --- | --- | --- |
+|--- | --- | ---|
 | **pairing**（默认） | 陌生人收到配对码，需手动批准 | `"dm": { "policy": "pairing" }` |
 | **allowlist** | 仅允许列表中的用户 | `"dm": { "policy": "allowlist", "allowFrom": ["123456", "alice"] }` |
 | **open** | 允许所有人（需 `allowFrom` 包含 `"*"`） | `"dm": { "policy": "open", "allowFrom": ["*"] }` |
@@ -399,7 +399,7 @@ clawdbot pairing approve discord <配对码>
 AI Agent 可以调用 `discord` 工具执行 Discord 特定操作。通过 `channels.discord.actions` 控制权限：
 
 | 操作类别 | 默认状态 | 说明 |
-| --- | --- | --- |
+|--- | --- | ---|
 | **reactions** | ✅ 启用 | 添加/读取表情反应 |
 | **messages** | ✅ 启用 | 读取/发送/编辑/删除消息 |
 | **threads** | ✅ 启用 | 创建/回复线程 |
@@ -434,7 +434,7 @@ AI Agent 可以调用 `discord` 工具执行 Discord 特定操作。通过 `chan
 ### 其他配置选项
 
 | 配置项 | 说明 | 默认值 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `historyLimit` | 服务器频道上下文包含的历史消息数 | 20 |
 | `dmHistoryLimit` | DM 会话历史消息数 | 无限制 |
 | `textChunkLimit` | 单条消息最大字符数 | 2000 |
@@ -560,7 +560,7 @@ clawdbot gateway --port 18789 --verbose
 > 更新时间：2026-01-27
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Discord Bot 配置 Schema | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts#L320-L427) | 320-427 |
 | Discord Onboarding 向导 | [`src/channels/plugins/onboarding/discord.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/discord.ts) | 1-485 |
 | Discord 工具操作 | [`src/agents/tools/discord-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/discord-actions.ts) | 1-72 |

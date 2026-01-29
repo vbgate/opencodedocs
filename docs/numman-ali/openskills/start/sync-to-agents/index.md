@@ -283,7 +283,7 @@ Usage notes:
 **Key Elements Explanation**:
 
 | Element | Purpose |
-| ---- | ---- |
+|--- | ---|
 | `<skills_system>` | XML tag, tells AI this is a skill system definition |
 | `<usage>` | Usage instructions, tells AI how to invoke skills |
 | `<available_skills>` | Available skills list |
@@ -517,9 +517,9 @@ In this lesson, you learned:
 **Core Commands**:
 
 | Command | Purpose |
-| ---- | ---- |
+|--- | ---|
 | `npx openskills sync` | Interactively sync skills to AGENTS.md |
-| `npx openskills sync -y` | Non-interactively sync all skills |
+|--- | ---|
 | `npx openskills sync -o custom.md` | Sync to custom file |
 | `cat AGENTS.md` | View generated AGENTS.md content |
 
@@ -554,10 +554,10 @@ Syncing skills just lets AI know which tools are available. When actually using 
 > Updated: 2026-01-24
 
 | Function | File Path | Line Numbers |
-| ---- | --------- | ---- |
+|--- | --- | ---|
 | sync command entry point | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts#L18-L109) | 18-109 |
 | Output file validation | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts#L19-L26) | 19-26 |
-| Create non-existent file | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts#L28-L36) | 28-36 |
+|--- | --- | ---|
 | Interactive selection interface | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts#L46-L93) | 46-93 |
 | Parse existing AGENTS.md | [`src/utils/agents-md.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/agents-md.ts#L6-L18) | 6-18 |
 | Generate skills XML | [`src/utils/agents-md.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/agents-md.ts#L23-L62) | 23-62 |

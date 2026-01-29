@@ -90,7 +90,7 @@ Usuário Discord (vê a resposta)
 ### Diferença entre DM e Canais do Servidor
 
 | Tipo | Isolamento da Sessão | Comportamento Padrão | Cenários Aplicáveis |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | **DM (Mensagem Direta)** | Todos os DMs compartilham a sessão `agent:main:main` | Requer proteção de pareamento | Conversas pessoais, contexto continuado |
 | **Canal do Servidor** | Cada canal tem uma sessão independente `agent:<agentId>:discord:channel:<channelId>` | Requer @menção para responder | Assistente inteligente do servidor, múltiplos canais em paralelo |
 
@@ -148,7 +148,7 @@ O Discord não permite que o Bot leia o conteúdo das mensagens por padrão, é 
 Em **Bot → Privileged Gateway Intents** (Intenções de Gateway Privilegiados), habilite:
 
 | Intent | Obrigatório | Descrição |
-| --- | --- | --- |
+|--- | --- | ---|
 | **Message Content Intent** | ✅ **Obrigatório** | Ler o conteúdo de texto da mensagem (sem isso, o Bot não consegue ver mensagens) |
 | **Server Members Intent** | ⚠️ **Recomendado** | Usado para pesquisa de membros e resolução de nomes de usuário |
 
@@ -173,7 +173,7 @@ O Bot precisa de permissões para ler e enviar mensagens no servidor.
 3. Em **Bot Permissions** (Permissões do Bot), selecione no mínimo:
 
 | Permissão | Descrição |
-| --- | --- |
+|--- | ---|
 | **View Channels** | Ver canais |
 | **Send Messages** | Enviar mensagens |
 | **Read Message History** | Ler histórico de mensagens |
@@ -209,7 +209,7 @@ A configuração do Clawdbot prefere usar IDs (números), pois IDs não mudam.
 #### 3.2 Copiar ID
 
 | Tipo | Operação |
-| --- | --- |
+|--- | ---|
 | **ID do Servidor** | Clique com o botão direito no nome do servidor → **Copy Server ID** |
 | **ID do Canal** | Clique com o botão direito no canal (como `#general`) → **Copy Channel ID** |
 | **ID do Usuário** | Clique com o botão direito no avatar do usuário → **Copy User ID** |
@@ -307,7 +307,7 @@ Antes de continuar, confirme o seguinte:
 A estratégia padrão é `pairing` (modo de pareamento), adequado para uso pessoal. Você pode ajustar conforme necessário:
 
 | Estratégia | Descrição | Exemplo de Configuração |
-| --- | --- | --- |
+|--- | --- | ---|
 | **pairing** (padrão) | Desconhecidos recebem código de pareamento, aprovação manual necessária | `"dm": { "policy": "pairing" }` |
 | **allowlist** | Permite apenas usuários na lista | `"dm": { "policy": "allowlist", "allowFrom": ["123456", "alice"] }` |
 | **open** | Permite todos (requer `allowFrom` contendo `"*"`) | `"dm": { "policy": "open", "allowFrom": ["*"] }` |
@@ -399,7 +399,7 @@ clawdbot pairing approve discord <código_de_pareamento>
 O AI Agent pode chamar ferramentas `discord` para executar operações específicas do Discord. Controle permissões através de `channels.discord.actions`:
 
 | Categoria de Operação | Estado Padrão | Descrição |
-| --- | --- | --- |
+|--- | --- | ---|
 | **reactions** | ✅ Habilitado | Adicionar/ler reações de emoji |
 | **messages** | ✅ Habilitado | Ler/enviar/editar/excluir mensagens |
 | **threads** | ✅ Habilitado | Criar/responder threads |
@@ -434,7 +434,7 @@ Ao habilitar operações de `moderation` e `roles`, certifique-se de que a AI te
 ### Outras Opções de Configuração
 
 | Item de Configuração | Descrição | Valor Padrão |
-| --- | --- | --- |
+|--- | --- | ---|
 | `historyLimit` | Número de mensagens históricas no contexto do canal do servidor | 20 |
 | `dmHistoryLimit` | Número de mensagens históricas na sessão DM | Sem limite |
 | `textChunkLimit` | Número máximo de caracteres por mensagem | 2000 |
@@ -560,7 +560,7 @@ clawdbot gateway --port 18789 --verbose
 > Última atualização: 2026-01-27
 
 | Funcionalidade | Caminho do Arquivo | Número da Linha |
-| --- | --- | --- |
+|--- | --- | ---|
 | Schema de Configuração do Discord Bot | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts#L320-L427) | 320-427 |
 | Assistente de Onboarding do Discord | [`src/channels/plugins/onboarding/discord.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/discord.ts) | 1-485 |
 | Operações de Ferramentas do Discord | [`src/agents/tools/discord-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/discord-actions.ts) | 1-72 |

@@ -108,7 +108,7 @@ Get-ChildItem -Force $dataDir
 次のファイル名はプロジェクトソースコードから来ており、すべて固定です：
 
 | 表示される内容 | 用途 | 関心を持つべきこと |
-| --- | --- | --- |
+|--- | --- | ---|
 | `accounts.json` | アカウントインデックス（アカウントリスト/現在のアカウントを含む） | アカウント移行時、一緒にバックアップすることを推奨 |
 | `accounts/` | 各アカウントごとに 1 つの `*.json` ファイル | これがアカウントデータの本体 |
 | `logs/` | アプリケーションログディレクトリ | トラブルシューティングはまずここを見る |
@@ -188,7 +188,7 @@ Settings -> General で「Auto Launch on Startup」を見つけ、有効にし�
 
 ::: info 2 種類の「自動起動」、混同しないでください
 | 名称 | 指すもの | 証拠 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 起動時自動起動 | コンピュータ起動後、Antigravity Tools を自動起動（デスクトップアプリ自体） | 起動パラメータに `--minimized` が含まれ、`toggle_auto_launch` コマンドを提供 |
 | リバースプロキシ自動起動 | Antigravity Tools 起動後、`proxy.auto_start=true` を設定すると、自動的にローカルリバースプロキシサービスを起動しようとする | アプリ起動時に設定を読み取り、`start_proxy_service(...)` |
 :::
@@ -204,7 +204,7 @@ Settings -> General で「Auto Launch on Startup」を見つけ、有効にし�
 ## トラブルシューティング
 
 | シナリオ | 間違ったやり方（❌） | 推奨されるやり方（✓） |
-| --- | --- | --- |
+|--- | --- | ---|
 | データディレクトリが見つからない | システム内で App のインストールディレクトリを無秩序に検索する | 直接 Settings -> Advanced で「データディレクトリ」を確認し、ワンクリックで開く |
 | ウィンドウを閉じて終了したと思った | ウィンドウを閉じた後、設定を変更/ポートを変更する | 最初にトレイアイコンがまだ存在するか確認する。終了するにはトレイの Quit を使用する |
 | ログが多すぎてトラブルシューティングできない | 問題を再現しながら古いログをめくる | 最初に「Clear Logs」を実行し、再び 1 回再現し、最後に今回のログファイルのみを見る |
@@ -233,7 +233,7 @@ Settings -> General で「Auto Launch on Startup」を見つけ、有効にし�
 > 更新日時：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | データディレクトリの位置（`~/.antigravity_tools`） | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | アカウントインデックスとアカウントファイルディレクトリ（`accounts.json` / `accounts/`） | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L46) | 16-46 |
 | ログディレクトリと日次ローテーション（`logs/` + `app.log`） | [`src-tauri/src/modules/logger.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/logger.rs#L17-L83) | 17-83 |
@@ -242,8 +242,8 @@ Settings -> General で「Auto Launch on Startup」を見つけ、有効にし�
 | 設定ページでワンクリックログクリア（ボタン + ダイアログロジック） | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L127-L135) | 127-135 |
 | 設定ページでワンクリックログクリア（Advanced タブボタン） | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L732-L747) | 732-747 |
 | トレイメニューとクリックイベント（アカウント切り替え/更新/表示/終了） | [`src-tauri/src/modules/tray.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/tray.rs#L9-L158) | 9-158 |
-| ウィンドウを閉じる -> 隠す（トレイに最小化） | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L150-L160) | 150-160 |
-| 起動時自動起動プラグイン初期化（`--minimized` を含む） | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L58-L66) | 58-66 |
+|--- | --- | ---|
+|--- | --- | ---|
 | 起動時自動起動スイッチ（`toggle_auto_launch` / `is_auto_launch_enabled`） | [`src-tauri/src/commands/autostart.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/autostart.rs#L4-L39) | 4-39 |
 | データディレクトリをワンクリックで開く / パスを取得 / ログクリアコマンド | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L578-L621) | 578-621 |
 | Token Stats データベースファイル名（`token_stats.db`） | [`src-tauri/src/modules/token_stats.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/token_stats.rs#L58-L61) | 58-61 |

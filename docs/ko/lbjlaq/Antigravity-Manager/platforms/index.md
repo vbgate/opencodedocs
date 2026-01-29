@@ -13,7 +13,7 @@ Antigravity Tools의 핵심 능력은 여러 AI 플랫폼의 프로토콜을 통
 ## 이 장에 포함된 내용
 
 | 튜토리얼 | 설명 |
-|-----|------|
+|--- | ---|
 | [OpenAI 호환 API](./openai/) | `/v1/chat/completions` 및 `/v1/responses`의 구현 전략으로 OpenAI SDK 무감각 연결 |
 | [Anthropic 호환 API](./anthropic/) | `/v1/messages` 및 Claude Code의 핵심 계약으로 사고 체인, 시스템 프롬프트 등 핵심 능력 지원 |
 | [Gemini 네이티브 API](./gemini/) | `/v1beta/models` 및 Google SDK 엔드포인트 연결로 `x-goog-api-key` 호환 지원 |
@@ -34,7 +34,7 @@ Antigravity Tools의 핵심 능력은 여러 AI 플랫폼의 프로토콜을 통
 **빠른 선택**:
 
 | 시나리오 | 먼저 볼 것 |
-|---------|---------|
+|--- | ---|
 | Claude Code CLI 사용 | [Anthropic 호환 API](./anthropic/) |
 | OpenAI Python SDK 사용 | [OpenAI 호환 API](./openai/) |
 | Google 공식 SDK 사용 | [Gemini 네이티브 API](./gemini/) |

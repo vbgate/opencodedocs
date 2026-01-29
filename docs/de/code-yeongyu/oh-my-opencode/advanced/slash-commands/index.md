@@ -36,8 +36,8 @@ Solche langen Befehle verschwenden Zeit und es passiert leicht, dass Schritte ve
 **Slash-Befehle** sind voreingestellte Workflow-Vorlagen, die mit einem Klick ausgelöst werden. Diese Befehle decken häufige Entwicklungsszenarien ab:
 
 | Szenario | Befehl |
-|----------|--------|
-| Projekt-Wissensdatenbank initialisieren | `/init-deep` |
+|--- | ---|
+|--- | ---|
 | AI kontinuierlich arbeiten lassen | `/ralph-loop` |
 | Intelligentes Refactoring | `/refactor` |
 | Ab einem Plan arbeiten | `/start-work` |
@@ -64,7 +64,7 @@ graph LR
 oh-my-opencode verfügt über 6 integrierte Slash-Befehle:
 
 | Befehl | Funktion | Komplexität |
-|--------|----------|-------------|
+|--- | --- | ---|
 | `/init-deep` | Erstellt hierarchische AGENTS.md-Dateien | Mittel |
 | `/ralph-loop` | Selbstreferenzielle Entwicklungsschleife | Hoch |
 | `/ulw-loop` | Ultrawork-Version von ralph-loop | Hoch |
@@ -305,7 +305,7 @@ Which plan would you like to work on? (Enter number or plan name)
 ## Zusammenfassung
 
 | Befehl | Kernfunktion | Verwendungshäufigkeit |
-|--------|--------------|----------------------|
+|--- | --- | ---|
 | `/init-deep` | Projekt-Wissensdatenbank automatisch erstellen | Ersteinrichtung |
 | `/ralph-loop` | Kontinuierliche Arbeitsschleife | Hoch |
 | `/ulw-loop` | Ultrawork-Version der Schleife | Mittel |
@@ -339,7 +339,7 @@ Sie werden lernen:
 > Aktualisiert am: 2026-01-26
 
 | Funktion | Dateipfad | Zeilennummer |
-|----------|-----------|--------------|
+|--- | --- | ---|
 | Befehlsdefinitionen | [`src/features/builtin-commands/commands.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/commands.ts) | 8-73 |
 | Befehlslader | [`src/features/builtin-commands/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/index.ts) | 75-89 |
 | init-deep Vorlage | [`src/features/builtin-commands/templates/init-deep.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/templates/init-deep.ts) | Ganze Datei |

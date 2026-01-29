@@ -214,7 +214,7 @@ If any item fails, see the "Common Pitfalls" section below.
 ### Skill not found?
 
 | Symptom | Possible Cause | Solution |
-| -------- | -------- | -------- |
+|--- | --- | ---|
 | Plugin can't find the skill | Incorrect directory or file name | Confirm the filename is `SKILL.md` (all uppercase) |
 | Plugin can't find the skill | Frontmatter format error | Check if `---` exists and if there are blank lines before/after |
 | Plugin can't find the skill | name field doesn't meet specifications | name must be lowercase letters, numbers, hyphens |
@@ -222,7 +222,7 @@ If any item fails, see the "Common Pitfalls" section below.
 ### Parsing failed?
 
 | Symptom | Possible Cause | Solution |
-| -------- | -------- | -------- |
+|--- | --- | ---|
 | YAML parsing failed | Incorrect Frontmatter format | Ensure correct YAML format, wrap strings in quotes |
 | Validation failed | name contains uppercase or special characters | name field can only be lowercase letters, numbers, hyphens |
 | Validation failed | description is empty | description must have a value |
@@ -258,7 +258,7 @@ description: A skill for demonstration
 ### Frontmatter field requirements
 
 | Field | Required | Constraints | Example |
-| ---- | -------- | ---- | ---- |
+|--- | --- | --- | ---|
 | name | ✅ Yes | Lowercase letters, numbers, hyphens | `my-skill` |
 | description | ✅ Yes | Non-empty string | `A skill for git management` |
 | license | ❌ No | Open source license name | `MIT` |
@@ -296,7 +296,7 @@ You now have mastered the basics of creating skills. Next, you will learn about 
 > Updated: 2026-01-24
 
 | Feature | File Path | Line |
-| --- | --- | --- |
+|--- | --- | ---|
 | Frontmatter Schema definition | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L105-L114) | 105-114 |
 | Parse SKILL.md file | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L122-L167) | 122-167 |
 | Find skill scripts | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L59-L99) | 59-99 |

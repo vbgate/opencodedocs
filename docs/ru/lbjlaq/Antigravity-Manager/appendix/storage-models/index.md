@@ -190,7 +190,7 @@ explorer "$env:USERPROFILE\.antigravity_tools"
 ### Пояснение ключевых полей
 
 | Поле | Тип | Бизнес-значение | Условие срабатывания |
-| ----- | ---- | -------- | -------- |
+|--- | --- | --- | ---|
 | `disabled` | bool | Аккаунт полностью отключен (например, refresh_token недействителен) | При `invalid_grant` автоматически устанавливается в `true` |
 | `proxy_disabled` | bool | Отключена только функция прокси, не влияет на использование GUI | Ручное отключение или срабатывание защиты квоты |
 | `protected_models` | string[] | Список "ограниченных моделей" защиты квоты на уровне модели | Обновляется логикой защиты квоты |
@@ -220,7 +220,7 @@ explorer "$env:USERPROFILE\.antigravity_tools"
 #### token_usage (оригинальные записи использования)
 
 | Поле | Тип | Описание |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | id | INTEGER PRIMARY KEY AUTOINCREMENT | Автоинкрементный первичный ключ |
 | timestamp | INTEGER | Timestamp запроса |
 | account_email | TEXT | Почта аккаунта |
@@ -320,7 +320,7 @@ sqlite3 ~/.antigravity_tools/token_stats.db \
 ### Структура таблицы: request_logs
 
 | Поле | Тип | Описание |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | id | TEXT PRIMARY KEY | Уникальный ID запроса (UUID) |
 | timestamp | INTEGER | Timestamp запроса |
 | method | TEXT | HTTP метод (GET/POST) |
@@ -556,7 +556,7 @@ sqlite3 ~/.antigravity_tools/proxy_logs.db \
 > Обновлено: 2026-01-23
 
 | Функция | Путь к файлу | Строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Каталог данных (.antigravity_tools) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | Каталог аккаунтов (accounts/) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L35-L46) | 35-46 |
 | Структура accounts.json | [`src-tauri/src/models/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/models/account.rs#L76-L92) | 76-92 |
@@ -572,7 +572,7 @@ sqlite3 ~/.antigravity_tools/proxy_logs.db \
 | каталог logs/ и app.log | [`src-tauri/src/modules/logger.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/logger.rs#L17-L45) | 17-45 |
 | Путь bin/cloudflared | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L92-L101) | 92-101 |
 | device_original.json | [`src-tauri/src/modules/device.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/device.rs#L11-L13) | 11-13 |
-| invalid_grant -> disabled запись на диск | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L869-L969) | 869-969 |
+|--- | --- | ---|
 
 **Ключевые константы**:
 - `DATA_DIR = ".antigravity_tools"`: имя каталога данных (`src-tauri/src/modules/account.rs:16-18`)

@@ -128,7 +128,7 @@ opencode-supermemory последовательно ищет следующие 
 Помимо файла конфигурации, вы также можете использовать переменные среды для управления конфиденциальной информацией или перезаписи поведения по умолчанию.
 
 | Переменная среды | Описание | Приоритет |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | `SUPERMEMORY_API_KEY` | Ключ Supermemory API | Ниже файла конфигурации |
 | `USER` или `USERNAME` | Идентификатор для генерации хеша области пользователя | Системное по умолчанию |
 
@@ -236,7 +236,7 @@ touch ~/.config/opencode/supermemory.jsonc
 > Время обновления: 2026-01-23
 
 | Функция | Путь к файлу | Номер строки |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Определение интерфейса конфигурации | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L12-L23) | 12-23 |
 | Определение значений по умолчанию | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L44-L54) | 44-54 |
 | Триггерные слова по умолчанию | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L25-L42) | 25-42 |

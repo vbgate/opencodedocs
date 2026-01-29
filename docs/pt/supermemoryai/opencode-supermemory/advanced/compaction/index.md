@@ -93,7 +93,7 @@ Para evitar acionamento contínuo levando a loop infinito, pelo menos **30 segun
 Quando a compactação é ativada, o Supermemory injeta um System Prompt especial (`[COMPACTION CONTEXT INJECTION]`) no Agent, exigindo que o resumo inclua obrigatoriamente as seguintes 5 partes:
 
 | Seção | Descrição do Conteúdo | Objetivo |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **1. User Requests** | Requisições originais do usuário (mantidas como estão) | Prevenir derivação de requisitos |
 | **2. Final Goal** | Objetivo final a ser alcançado | Esclarecer estado final |
 | **3. Work Completed** | Trabalho concluído, arquivos modificados | Evitar trabalho duplicado |
@@ -228,7 +228,7 @@ A compactação preemptiva é o "segredo de longa distância" do Supermemory. At
 > Última atualização: 2026-01-23
 
 | Funcionalidade | Caminho do Arquivo | Linha |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Definição de constantes de limiar | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L11-L14) | 11-14 |
 | Geração de Prompt de orientação | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L58-L98) | 58-98 |
 | Lógica de detecção de ativação | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L317-L358) | 317-358 |

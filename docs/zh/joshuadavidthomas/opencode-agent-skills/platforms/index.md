@@ -22,7 +22,7 @@ order: 2
 ## 本章内容
 
 | 课程 | 说明 | 核心工具 |
-|-----|------|---------|
+|--- | --- | ---|
 | [技能发现机制详解](./skill-discovery-mechanism/) | 理解插件从哪些位置自动发现技能，掌握优先级规则 | - |
 | [查询和列出可用技能](./listing-available-skills/) | 使用 `get_available_skills` 工具查找和过滤技能 | `get_available_skills` |
 | [加载技能到会话上下文](./loading-skills-into-context/) | 使用 `use_skill` 工具加载技能，理解 XML 注入机制 | `use_skill` |

@@ -393,7 +393,7 @@ Le système de compétences est le mécanisme central pour étendre les capacit�
 > Date de mise à jour : 2026-01-27
 
 | Fonctionnalité | Chemin du fichier | Numéro de ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Définition du type de configuration des compétences | [`src/config/types.skills.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.skills.ts) | 1-32 |
 | Documentation du système de compétences | [`docs/tools/skills.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/skills.md) | 1-260 |
 | Référence de configuration des compétences | [`docs/tools/skills-config.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/skills-config.md) | 1-76 |

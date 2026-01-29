@@ -61,7 +61,7 @@ Everything Claude Code is a **community resource**, not a single person's projec
 Specialized sub-agents that handle complex tasks in specific domains:
 
 | Type | Examples |
-|-----|----------|
+|--- | ---|
 | Language Experts | Python, Go, Rust code review |
 | Framework Experts | Django, Rails, Laravel, Spring |
 | DevOps Experts | Kubernetes, Terraform, CI/CD |
@@ -72,7 +72,7 @@ Specialized sub-agents that handle complex tasks in specific domains:
 Workflow definitions and domain knowledge bases:
 
 | Type | Examples |
-|-----|----------|
+|--- | ---|
 | Language Best Practices | Python, Go, Rust coding standards |
 | Framework Patterns | Django, Rails, Laravel architecture patterns |
 | Testing Strategies | Unit testing, integration testing, E2E testing |
@@ -84,7 +84,7 @@ Workflow definitions and domain knowledge bases:
 Slash commands that provide quick workflow entry points:
 
 | Type | Examples |
-|-----|----------|
+|--- | ---|
 | Deployment Commands | Deploy to Vercel, Railway, AWS |
 | Testing Commands | Run unit tests, E2E tests, coverage analysis |
 | Documentation Commands | Generate API docs, update README |
@@ -95,7 +95,7 @@ Slash commands that provide quick workflow entry points:
 Automation hooks that trigger on specific events:
 
 | Type | Examples |
-|-----|----------|
+|--- | ---|
 | Linting/Formatting | Code formatting, lint checks |
 | Security Checks | Sensitive data detection, vulnerability scanning |
 | Validation Hooks | Git commit validation, PR checks |
@@ -106,7 +106,7 @@ Automation hooks that trigger on specific events:
 Mandatory rules that ensure code quality and security standards:
 
 | Type | Examples |
-|-----|----------|
+|--- | ---|
 | Security Rules | No hardcoded keys, OWASP checks |
 | Code Style | Immutability patterns, file size limits |
 | Testing Requirements | 80%+ coverage, TDD workflow |
@@ -117,7 +117,7 @@ Mandatory rules that ensure code quality and security standards:
 MCP server configurations that extend external service integrations:
 
 | Type | Examples |
-|-----|----------|
+|--- | ---|
 | Database Integrations | PostgreSQL, MongoDB, ClickHouse |
 | Cloud Providers | AWS, GCP, Azure |
 | Monitoring Tools | Datadog, New Relic, Sentry |
@@ -448,7 +448,7 @@ git push origin add-python-reviewer
 ### Naming Rules
 
 | Rule | Example |
-|-----|---------|
+|--- | ---|
 | Use lowercase | `python-reviewer.md` |
 | Use hyphens as separators | `tdd-workflow.md` |
 | Descriptive naming | `django-pattern-skill.md` |
@@ -644,7 +644,7 @@ This lesson systematically covered the contribution workflow and standards for E
 > Last Updated: 2026-01-25
 
 | Feature          | File Path                                                                                     | Lines |
-| ------------- | -------------------------------------------------------------------------------------------- | ----- |
+|--- | --- | ---|
 | Contribution Guide | [`CONTRIBUTING.md`](https://github.com/affaan-m/everything-claude-code/blob/main/CONTRIBUTING.md)           | 1-192 |
 | Agent Example    | [`agents/code-reviewer.md`](https://github.com/affaan-m/everything-claude-code/blob/main/agents/code-reviewer.md) | -     |
 | Skill Example    | [`skills/coding-standards/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/coding-standards/SKILL.md) | -     |

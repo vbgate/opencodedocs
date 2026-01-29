@@ -19,7 +19,7 @@ Before studying this chapter, ensure you have completed:
 ## Chapter Contents
 
 | Course | Description | Suitable For |
-|--------|-------------|--------------|
+|--- | --- | ---|
 | [URL Sharing](./url-sharing/) | Share plans and comments via URL for backend-less team collaboration | Need to share review results with team members |
 | [Obsidian Integration](./obsidian-integration/) | Automatically save approved plans to Obsidian vault | Use Obsidian to manage knowledge base |
 | [Bear Integration](./bear-integration/) | Save plans to Bear via x-callback-url | macOS/iOS users using Bear notes |

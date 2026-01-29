@@ -45,7 +45,7 @@ tests/
 **测试覆盖范围**:
 
 | 模块 | 测试数量 | 覆盖内容 |
-|-----|---------|---------|
+|--- | --- | ---|
 | `utils.js` | 21 | 平台检测、目录操作、文件操作、日期时间、系统命令 |
 | `package-manager.js` | 21 | 包管理器检测、命令生成、优先级逻辑 |
 | Hook 脚本 | 14 | session 生命周期、压缩建议、会话评估、hooks.json 验证 |
@@ -218,7 +218,7 @@ assert.ok(regex.test(string), 'message');
 **测试类别**:
 
 | 类别 | 测试数量 | 覆盖功能 |
-|-----|---------|---------|
+|--- | --- | ---|
 | 平台检测 | 2 | `isWindows`, `isMacOS`, `isLinux` |
 | 目录函数 | 5 | `getHomeDir`, `getClaudeDir`, `getSessionsDir`, `getTempDir`, `ensureDir` |
 | 日期/时间 | 3 | `getDateString`, `getTimeString`, `getDateTimeString` |
@@ -249,7 +249,7 @@ test('writeFile and readFile work together', () => {
 **测试类别**:
 
 | 类别 | 测试数量 | 覆盖功能 |
-|-----|---------|---------|
+|--- | --- | ---|
 | 包管理器常量 | 2 | `PACKAGE_MANAGERS`, 属性完整性 |
 | Lock file 检测 | 5 | npm, pnpm, yarn, bun 的 lock file 识别 |
 | package.json 检测 | 4 | `packageManager` 字段解析 |
@@ -285,7 +285,7 @@ test('respects environment variable', () => {
 **测试类别**:
 
 | 类别 | 测试数量 | 覆盖功能 |
-|-----|---------|---------|
+|--- | --- | ---|
 | session-start.js | 2 | 执行成功、输出格式 |
 | session-end.js | 2 | 执行成功、文件创建 |
 | pre-compact.js | 3 | 执行成功、输出格式、日志创建 |
@@ -534,13 +534,13 @@ Total:  Z
 > 更新时间:2026-01-25
 
 | 功能 | 文件路径 | 行号 |
-| ----- | ------- | ---- |
+|--- | --- | ---|
 | 测试运行器 | [`tests/run-all.js`](https://github.com/affaan-m/everything-claude-code/blob/main/tests/run-all.js) | 1-77 |
 | utils 测试 | [`tests/lib/utils.test.js`](https://github.com/affaan-m/everything-claude-code/blob/main/tests/lib/utils.test.js) | 1-237 |
-| package-manager 测试 | [`tests/lib/package-manager.test.js`](https://github.com/affaan-m/everything-claude-code/blob/main/tests/lib/package-manager.test.js) | 1-353 |
+|--- | --- | ---|
 | hooks 测试 | [`tests/hooks/hooks.test.js`](https://github.com/affaan-m/everything-claude-code/blob/main/tests/hooks/hooks.test.js) | 1-317 |
 | utils 模块 | [`scripts/lib/utils.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/lib/utils.js) | 1-384 |
-| package-manager 模块 | [`scripts/lib/package-manager.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/lib/package-manager.js) | 1-391 |
+|--- | --- | ---|
 
 **关键函数**:
 

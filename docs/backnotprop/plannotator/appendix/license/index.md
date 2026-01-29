@@ -29,7 +29,7 @@ Plannotator uses the **Business Source License 1.1 (BSL)** as its open source li
 ### License Type
 
 | Item | Content |
-| ---- | ---- |
+|--- | ---|
 | **License Name** | Business Source License 1.1 (BSL) |
 | **Copyright Holder** | backnotprop (2025) |
 | **Licensed Project** | plannotator |
@@ -86,7 +86,7 @@ If you plan to use Plannotator as part of a commercial service provided to third
 ## License Change Timeline
 
 | Time Node | License Type | Description |
-| --------- | ------------ | ----------- |
+|--- | --- | ---|
 | **Current - 2030-01-01** | BSL 1.1 | Restricted open source license |
 | **From 2030-01-01** | Apache 2.0 | Fully open source, no commercial restrictions |
 
@@ -162,7 +162,7 @@ For commercial licensing or other questions, please contact:
 > Updated: 2026-01-24
 
 | Feature      | File Path                                                                 | Line Number |
-| ------------ | ------------------------------------------------------------------------ | ----------- |
+|--- | --- | ---|
 | License notice   | [`README.md`](https://github.com/backnotprop/plannotator/blob/main/README.md#L100-L104) | 100-104 |
 | Full license text | [`LICENSE`](https://github.com/backnotprop/plannotator/blob/main/LICENSE)         | 1-115   |
 

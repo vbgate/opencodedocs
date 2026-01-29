@@ -87,7 +87,7 @@ Clawdbot macOS 應用程式是一個**雙重角色**的系統：
 **兩種執行模式**：
 
 | 模式 | Gateway 位置 | 節點服務 | 適用場景 |
-| ----- | -------------- | --------- | -------- |
+|--- | --- | --- | ---|
 | **本機模式**（預設） | 本機（launchd 守護程序） | 不啟動 | Gateway 在這台 Mac 上執行 |
 | **遠端模式** | 遠端機器（透過 SSH/Tailscale） | 啟動 | Gateway 在其他機器上執行 |
 
@@ -318,7 +318,7 @@ Talk Mode 提供了類似 Siri/Alexa 的連續語音對話體驗，無需每次�
 **Talk Mode 介面狀態**：
 
 | 狀態 | 顯示 | 說明 |
-| ----- | ---- | ---- |
+|--- | --- | ---|
 | **Listening** | 雲朵脈衝動畫 + 麥克風音量 | 等待你說話 |
 | **Thinking** | 下沉動畫 | AI 正在思考 |
 | **Speaking** | 輻射環動畫 + 漣漪 | AI 正在回覆（TTS 播放中） |
@@ -359,7 +359,7 @@ talk:
 **節點模式下的可用指令**：
 
 | 指令類別 | 指令範例 | 功能說明 |
-| --------- | ---------- | -------- |
+|--- | --- | ---|
 | **Canvas** | `canvas.present`、`canvas.navigate`、`canvas.eval` | 在 macOS 上渲染視覺化介面 |
 | **Camera** | `camera.snap`、`camera.clip` | 拍照或錄影 |
 | **Screen** | `screen.record` | 螢幕錄製 |
@@ -425,7 +425,7 @@ AI 會根據權限自動選擇可用的工具。
 **安全策略類型**：
 
 | 策略 | 行為 | 適用場景 |
-| ----- | ---- | -------- |
+|--- | --- | ---|
 | `deny` | 拒絕所有 `system.run` 呼叫 | 高度安全，停用所有指令 |
 | `allowlist` | 僅允許白名單中的指令 | 平衡安全性和便利性 |
 | `ask` | 不在白名單時提示使用者批准 | 靈活但需要確認 |
@@ -468,7 +468,7 @@ Exec Approvals 儲存在 macOS 本機：
 **參數**：
 
 | 參數 | 說明 | 範例 |
-| ----- | ---- | ---- |
+|--- | --- | ---|
 | `message`（必需） | 發送給 AI 的訊息 | `message=Hello%20from%20deep%20link` |
 | `sessionKey`（可選） | 目標會話鍵，預設 `main` | `sessionKey=main` |
 | `thinking`（可選） | 思考層級：off\|minimal\|low\|medium\|high\|xhigh | `thinking=high` |
@@ -571,7 +571,7 @@ open 'clawdbot://agent?message=Automated%20task&key=secure-random-string'
 **可能原因和解決方案**：
 
 | 原因 | 檢查方法 | 解決方案 |
-| ----- | -------- | -------- |
+|--- | --- | ---|
 | Gateway 未啟動 | 執行 `clawdbot gateway status` | 啟動 Gateway 服務 |
 | 位址錯誤 | 檢查 WebSocket URL | 確認 `ws://127.0.0.1:18789` 或遠端位址正確 |
 | 連接埠被佔用 | 執行 `lsof -i :18789` | 關閉佔用連接埠的程序 |
@@ -666,7 +666,7 @@ open 'clawdbot://agent?message=Automated%20task&key=secure-random-string'
 > 更新時間：2026-01-27
 
 | 功能        | 檔案路徑                                                                                    | 行號    |
-| ----------- | --------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 應用程式入口     | [`apps/macos/Sources/Clawdbot/ClawdbotApp.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/ClawdbotApp.swift) | 全檔案   |
 | Gateway 連接 | [`apps/macos/Sources/Clawdbot/GatewayConnection.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/GatewayConnection.swift) | 1-500   |
 | Voice Wake 運行時 | [`apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift) | 全檔案   |

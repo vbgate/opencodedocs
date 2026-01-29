@@ -130,7 +130,7 @@ graph LR
 Лучшие моменты для использования Agent Skills:
 
 | Сценарий | Используемый навык | Пример промпта |
-| -------- | ----------------- | --------------- |
+|--- | --- | ---|
 | Написание React-компонентов | react-best-practices | "Review this React component for performance issues" |
 | Оптимизация страниц Next.js | react-best-practices | "Help me optimize this Next.js page" |
 | Проверка качества UI | web-design-guidelines | "Check accessibility of my site" |
@@ -189,7 +189,7 @@ Agent Skills — это система наборов навыков, разра
 > Обновлено: 2026-01-25
 
 | Функция        | Путь к файлу                                                              | Строки    |
-| -------------- | ------------------------------------------------------------------------- | --------- |
+|--- | --- | ---|
 | Список наборов навыков   | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L7-L80) | 7-80    |
 | Описание структуры навыков | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L103-L110) | 103-110 |
 | Спецификация AGENTS.md | [`AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md) | Весь текст    |

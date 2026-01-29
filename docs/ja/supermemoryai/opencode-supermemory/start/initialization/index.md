@@ -108,7 +108,7 @@ supermemory(mode: "list", scope: "project")
 Agent は一連の構造化された記憶をリストアップします。例：
 
 | タイプ | 内容の例 |
-| :--- | :--- |
+|--- | ---|
 | `project-config` | "Uses Bun runtime. Build command: bun run build" |
 | `architecture` | "API routes are located in src/routes/, using Hono framework" |
 | `preference` | "Strict TypeScript usage: no 'any' type allowed" |
@@ -162,7 +162,7 @@ Agent が確認を返信し、この新しいルールを保存するために `
 > 更新日：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | 初期化プロンプトの定義 | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L13-L163) | 13-163 |
 | 記憶ツールの実装 | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
 

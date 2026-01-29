@@ -59,7 +59,7 @@ Different installation methods have vastly different "upgrade/rollback/troublesh
 **Recommendations**:
 
 | Scenario | Recommended Installation Method |
-| --- | --- |
+|--- | ---|
 | macOS / Linux Desktop | Homebrew (Option A) |
 | Windows Desktop | GitHub Releases (Option B) |
 | Arch Linux | Official Script (Arch Option) |
@@ -217,17 +217,17 @@ In the next lesson, we take "able to launch" one step further: understand **[dat
 > Last updated: 2026-01-23
 
 | Topic | File Path | Lines |
-| --- | --- | --- |
+|--- | --- | ---|
 | Homebrew installation (tap + cask) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L112-L127) | 112-127 |
 | Releases manual download (all platform packages) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L128-L133) | 128-133 |
-| Arch one-click installation script entry | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L134-L140) | 134-140 |
+|--- | --- | ---|
 | Arch installation script implementation (GitHub API + makepkg) | [`deploy/arch/install.sh`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/arch/install.sh#L1-L56) | 1-56 |
 | Headless Xvfb installation entry (curl \| sudo bash) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L141-L149) | 141-149 |
 | Headless Xvfb deployment/upgrade/ops commands | [`deploy/headless-xvfb/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/headless-xvfb/README.md#L1-L99) | 1-99 |
 | Headless Xvfb install.sh (systemd + 8045 default config) | [`deploy/headless-xvfb/install.sh`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/headless-xvfb/install.sh#L1-L99) | 1-99 |
-| Docker deployment entry (docker compose up -d) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L150-L166) | 150-166 |
+|--- | --- | ---|
 | Docker deployment notes (noVNC 6080 / proxy 8045) | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L1-L35) | 1-35 |
 | Docker port/data volume config (8045 + antigravity_data) | [`deploy/docker/docker-compose.yml`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/docker-compose.yml#L1-L25) | 1-25 |
-| macOS "damaged, cannot open" troubleshooting (xattr / --no-quarantine) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L171-L186) | 171-186 |
+|--- | --- | ---|
 
 </details>

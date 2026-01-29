@@ -31,7 +31,7 @@ Les tableaux Markdown générés par l'IA ressemblent souvent à ceci :
 
 ```markdown
 | 名称 | 描述 | 状态 |
-|---|---|---|
+|--- | --- | ---|
 | **用户管理** | 管理系统用户 | ✅ 完成 |
 | API | 接口文档 | 🚧 进行中 |
 ```
@@ -64,7 +64,7 @@ Le plugin détecte automatiquement les tableaux Markdown dans le texte généré
 
 ```markdown
 | 名称 | 描述 | 状态 |
-|---|---|---|
+|--- | --- | ---|
 | **用户管理** | 管理系统用户 | ✅ 完成 |
 | API | 接口文档 | 🚧 进行中 |
 ```
@@ -73,7 +73,7 @@ Le plugin détecte automatiquement les tableaux Markdown dans le texte généré
 
 ```markdown
 | 名称         | 描述         | 状态       |
-| ------------ | ------------ | ---------- |
+|--- | --- | ---|
 | **用户管理** | 管理系统用户 | ✅ 完成    |
 | API          | 接口文档     | 🚧 进行中  |
 ```
@@ -111,7 +111,7 @@ Emplacement du code source : `index.ts:181-185`
 Prend en charge les trois modes d'alignement des tableaux Markdown :
 
 | Syntaxe | Mode d'alignement | Effet |
-| --- | --- | --- |
+|--- | --- | ---|
 | `---` ou `:---` | Aligné à gauche | Texte aligné à gauche (les deux syntaxes ont le même effet) |
 | `:---:` | Centré | Texte centré |
 | `---:` | Aligné à droite | Texte aligné à droite |
@@ -120,7 +120,7 @@ Prend en charge les trois modes d'alignement des tableaux Markdown :
 
 ```markdown
 | 左对齐 | 居中 | 右对齐 |
-| :--- | :---: | ---: |
+|--- | --- | ---|
 | 文本 | 文本 | 文本 |
 ```
 
@@ -171,7 +171,7 @@ Emplacement du code source : `index.ts:168-193`
 Le plugin peut gérer correctement divers cas limites :
 
 | Scénario | Méthode de traitement |
-| --- | --- |
+|--- | ---|
 | Emoji | Utiliser `Bun.stringWidth` pour calculer correctement la largeur d'affichage |
 | Caractères Unicode | Caractères à chasse fixe comme le chinois, le japonais sont correctement alignés |
 | Cellules vides | Remplir avec des espaces jusqu'à la largeur minimale (3 caractères) |
@@ -225,7 +225,7 @@ Après avoir terminé cette leçon, vous devriez pouvoir répondre :
 ## Résumé de la leçon
 
 | Fonctionnalité | Description |
-| --- | --- |
+|--- | ---|
 | Formatage automatique | Se déclenche automatiquement après la génération de texte par l'IA, sans intervention manuelle |
 | Compatibilité avec le mode de masquage | Calcule correctement la largeur d'affichage après masquage des symboles Markdown |
 | Support de l'alignement | Aligné à gauche, centré, aligné à droite |
@@ -254,7 +254,7 @@ Après avoir terminé cette leçon, vous devriez pouvoir répondre :
 > Date de mise à jour : 2026-01-26
 
 | Fonctionnalité | Chemin du fichier | Numéros de ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Point d'entrée du plugin | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L9-L23) | 9-23 |
 | Détection des tableaux | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61) | 58-61 |
 | Validation des tableaux | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88) | 70-88 |

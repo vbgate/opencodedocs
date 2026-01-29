@@ -227,7 +227,7 @@ No additional configuration needed. Plannotator automatically detects Obsidian i
 ## Version Compatibility
 
 | Plannotator Version | Claude Code | OpenCode | Minimum Bun Version |
-| ------------------- | ----------- | -------- | ------------------- |
+|--- | --- | --- | ---|
 | v0.6.x              | 2.1.7+      | 1.0+     | 1.0+                |
 | v0.5.x              | 2.1.0+      | 0.9+     | 0.7+                |
 

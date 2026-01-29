@@ -142,7 +142,7 @@ macOS 提供了 14 种内置音效，你可以为不同事件分配不同的声�
 配置文件中 `sounds` 字段有四个选项：
 
 | 字段 | 作用 | 默认值 | 推荐设置 |
-| ---- | ---- | ------ | -------- |
+|--- | --- | --- | ---|
 | `idle` | 任务完成音效 | Glass | Glass（清脆） |
 | `error` | 错误通知音效 | Basso | Basso（低沉） |
 | `permission` | 权限请求音效 | Submarine | Submarine（提醒） |
@@ -163,7 +163,7 @@ macOS 有 14 种内置音效，你可以随意组合。
 **可用音效**
 
 | 音效名 | 听感特点 | 适用场景 |
-| ------- | -------- | -------- |
+|--- | --- | ---|
 | Glass | 轻快、清脆 | 任务完成 |
 | Basso | 低沉、警告 | 错误通知 |
 | Submarine | 提醒、柔和 | 权限请求 |
@@ -319,7 +319,7 @@ macOS 有 14 种内置音效，你可以随意组合。
 macOS 平台提供了完整的通知体验：
 
 | 功能 | 作用 | 平台支持 |
-| ---- | ---- | -------- |
+|--- | --- | ---|
 | 原生通知 | 显示系统级通知 | ✅ macOS<br>✅ Windows<br>✅ Linux |
 | 自定义音效 | 不同事件不同声音 | ✅ macOS |
 | 焦点检测 | 避免重复通知 | ✅ macOS |
@@ -360,7 +360,7 @@ macOS 平台提供了完整的通知体验：
 > 更新时间：2026-01-27
 
 | 功能 | 文件路径 | 行号 |
-| ---- | --------- | ---- |
+|--- | --- | ---|
 | 焦点检测 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L166-L175) | 166-175 |
 | 点击聚焦 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L238-L240) | 238-240 |
 | Bundle ID 获取 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L135-L137) | 135-137 |

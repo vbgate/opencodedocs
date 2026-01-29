@@ -220,7 +220,7 @@ Bearbeiten Sie `~/.clawdbot/clawdbot.json`:
 **Konfigurationserklärung**:
 
 | Feld | Wert | Beschreibung |
-|------|-----|-------------|
+|--- | --- | ---|
 | `enabled` | `true` | Signal-Kanal aktivieren |
 | `account` | `"+15551234567"` | Ihre Signal-Nummer (E.164-Format) |
 | `cliPath` | `"signal-cli"` | Pfad zum signal-cli-Befehl |
@@ -576,14 +576,14 @@ Entdecken Sie weiter die leistungsstarken Funktionen von Clawdbot! 🚀
 > Aktualisiert: 2026-01-27
 
 | Funktion        | Dateipfad                                                                                    | Zeilen  |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Signal-RPC-Client | [`src/signal/client.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/client.ts)         | 1-186   |
 | Signal-Daemon-Verwaltung | [`src/signal/daemon.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/daemon.ts)         | 1-85    |
 | Multi-Account-Unterstützung | [`src/signal/accounts.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/accounts.ts)       | 1-84    |
 | Signal-Monitoring und Ereignisverarbeitung | [`src/signal/monitor.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/monitor.ts)       | -       |
 | Nachrichtensendung | [`src/signal/send.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/send.ts)             | -       |
 | Reactions senden | [`src/signal/send-reactions.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/send-reactions.ts) | -       |
-| Reaction-Level-Konfiguration | [`src/signal/reaction-level.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/reaction-level.ts) | -       |
+|--- | --- | ---|
 
 **Konfigurationstypdefinitionen**:
 - `SignalAccountConfig`: [`src/config/types.signal.ts:13-87`](https://github.com/clawd/clawdbot/blob/main/src/config/types.signal.ts#L13-L87)

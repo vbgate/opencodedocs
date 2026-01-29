@@ -40,7 +40,7 @@ Es posible que te encuentres en estas situaciones:
 **Tareas programadas Cron** son adecuadas para estos escenarios:
 
 | Escenario | Ejemplo | Método de programación |
-|-----------|---------|----------------------|
+|--- | --- | ---|
 | Recordatorio único | "Recuérdame la reunión mañana a las 9 de la mañana" | at |
 | Comprobación periódica | "Comprobar el estado del sistema cada 30 minutos" | every |
 | Ejecución programada | "Generar informe diario cada tarde a las 5" | cron |
@@ -80,7 +80,7 @@ graph LR
 ### Comparación de tres métodos de programación
 
 | Método | Escenario de uso | Ejemplo | Precisión |
-|--------|------------------|---------|-----------|
+|--- | --- | --- | ---|
 | `at` | Tarea única | 2026-01-27 09:00:00 | Nivel de milisegundos |
 | `every` | Intervalo fijo | Cada 30 minutos | Nivel de milisegundos |
 | `cron` | Ciclo complejo | Todos los días a las 9 de la mañana | Nivel de minutos |
@@ -88,7 +88,7 @@ graph LR
 ### Dos objetivos de sesión
 
 | Objetivo de sesión | Tipo de Payload | Descripción |
-|-------------------|----------------|-------------|
+|--- | --- | ---|
 | `main` | `systemEvent` | Inyectar eventos del sistema en la sesión principal |
 | `isolated` | `agentTurn` | Ejecutar Agent en sesión aislada |
 
@@ -282,7 +282,7 @@ Crear una tarea que se ejecute todos los días a las 9 de la mañana:
 **Expresiones comunes**:
 
 | Expresión | Descripción |
-|-----------|-------------|
+|--- | ---|
 | `0 9 * * *` | Todos los días a las 9 de la mañana |
 | `0 9 * * 1-5` | Lunes a viernes a las 9 de la mañana |
 | `0 */6 * * *` | Cada 6 horas |
@@ -336,7 +336,7 @@ Crear una tarea que se ejecute en una sesión aislada:
 **Parámetros del Payload `agentTurn`**:
 
 | Parámetro | Tipo | Descripción |
-|-----------|------|-------------|
+|--- | --- | ---|
 | `message` | string | Prompt enviado al Agent |
 | `model` | string | Anular el modelo a usar (opcional) |
 | `thinking` | string | Nivel de pensamiento: "off" \| "minimal" \| "low" \| "medium" \| "high" |
@@ -359,7 +359,7 @@ Crear una tarea que se ejecute en una sesión aislada:
 ```
 
 | Parámetro | Descripción |
-|-----------|-------------|
+|--- | ---|
 | `postToMainPrefix` | Prefijo al reenviar resultados a la sesión principal |
 | `postToMainMode` | "summary" (resumen) o "full" (texto completo) |
 | `postToMainMaxChars` | Máximo de caracteres cuando `postToMainMode="full"` |
@@ -564,7 +564,7 @@ Los Webhooks permiten que servicios externos activen eventos internos de Clawdbo
 **Parámetros de configuración de mapeo**:
 
 | Parámetro | Descripción |
-|-----------|-------------|
+|--- | ---|
 | `match.path` | Ruta URL a coincidir |
 | `match.source` | Cabecera de origen de solicitud a coincidir |
 | `action` | `"wake"` o `"agent"` |
@@ -611,7 +611,7 @@ Gmail Pub/Sub te permite activar Clawdbot en tiempo real cuando recibes nuevos c
 **Descripción de parámetros de configuración**:
 
 | Parámetro | Descripción | Valor predeterminado |
-|-----------|-------------|---------------------|
+|--- | --- | ---|
 | `account` | Dirección de cuenta Gmail | - |
 | `label` | Etiqueta Gmail a monitorear | `INBOX` |
 | `topic` | Ruta del tema Pub/Sub de Google Cloud | - |
@@ -656,7 +656,7 @@ Gmail Pub/Sub te permite activar Clawdbot en tiempo real cuando recibes nuevos c
 ```
 
 | Modo | Descripción |
-|------|-------------|
+|--- | ---|
 | `off` | No usar Tailscale |
 | `serve` | Exponer servicio local a través de Tailscale Serve |
 | `funnel` | Acceso desde internet a través de Tailscale Funnel |
@@ -708,7 +708,7 @@ clawdbot hooks gmail-watch
 **Posibles causas**:
 
 | Causa | Solución |
-|-------|----------|
+|--- | ---|
 | Servicio Cron no habilitado | Verificar configuración `cron.enabled` |
 | Hora no alcanzada | Verificar próxima ejecución con `clawdbot cron list` |
 | Zona horaria incorrecta | Verificar que el campo `tz` sea correcto |
@@ -721,7 +721,7 @@ clawdbot hooks gmail-watch
 **Errores comunes**:
 
 | Error | Correcto | Descripción |
-|-------|----------|-------------|
+|--- | --- | ---|
 | `9 * * *` | `0 9 * * *` | Falta campo de minuto |
 | `0 9 * * * *` | `0 9 * * *` | Hay un campo extra |
 | `0 9 1-5 * *` | `0 9 * * 1-5` | Posición de campo de día de la semana incorrecta |
@@ -803,7 +803,7 @@ Al configurar estas funciones adecuadamente, puedes construir un asistente de IA
 > Fecha de actualización: 2026-01-27
 
 | Función | Ruta del archivo | Número de líneas |
-|---------|-----------------|------------------|
+|--- | --- | ---|
 | Definición de tipos de configuración Cron | [`src/config/types.cron.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.cron.ts#L1-L6) | 1-6 |
 | Definición de tipos centrales Cron | [`src/cron/types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/types.ts#L1-L95) | 1-95 |
 | Cron Service | [`src/cron/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/service.ts#L1-L49) | 1-49 |

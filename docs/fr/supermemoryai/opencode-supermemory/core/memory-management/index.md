@@ -27,7 +27,7 @@ opencode-supermemory divise la mémoire en deux **portées (Scope)** isolées, s
 ### 1. Les deux portées
 
 | Portée | Identifiant (Scope ID) | Cycle de vie | Usage typique |
-| :--- | :--- | :--- | :--- |
+|--- | --- | --- | ---|
 | **User Scope**<br>(Portée utilisateur) | `user` | **Vous suit de façon permanente**<br>Partagé entre tous les projets | • Préférences de style de codage (comme "préfère TypeScript")<br>• Habitudes personnelles (comme "toujours écrire des commentaires")<br>• Connaissances générales |
 | **Project Scope**<br>(Portée projet) | `project` | **Limité au projet actuel**<br>Devient invalide en changeant de répertoire | • Conception de l'architecture du projet<br><br>• Explication de la logique métier<br><br>• Solution de correction d'un bug spécifique |
 
@@ -186,7 +186,7 @@ L'index vectoriel de Supermemory est généralement de l'ordre de quelques secon
 ## Annexe : Référence du code source
 
 | Fonctionnalité | Chemin du fichier | Lignes |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Logique de génération de Scope | [`src/services/tags.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/tags.ts#L18-L36) | 18-36 |
 | Définition de l'outil de mémoire | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
 | Définition des types de mémoire | [`src/types/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/types/index.ts) | - |

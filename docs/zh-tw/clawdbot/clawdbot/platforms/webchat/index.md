@@ -57,7 +57,7 @@ order: 150
 ### 必要條件
 
 | 條件                     | 如何檢查                                        |
-| ---------------------- | ------------------------------------------- |
+|--- | ---|
 | **Gateway 已啟動**   | `clawdbot gateway status` 或檢視行程是否在執行 |
 | **埠可存取**       | 確認 18789 埠（或自訂埠）未被佔用 |
 | **AI 模型已設定** | `clawdbot models list` 檢視是否有可用模型      |
@@ -123,7 +123,7 @@ clawdbot config set gateway.auth.token your-secure-token-here
 **與其他管道的差別**：
 
 | 特性         | WebChat                          | WhatsApp/Telegram 等                |
-| ------------ | -------------------------------- | ------------------------------ |
+|--- | --- | ---|
 | **存取方式** | 瀏覽器直接存取 Gateway           | 需要第三方 APP 和登入         |
 | **設定需求** | 無需單獨設定，複用 Gateway 埠   | 需要管道特定的 API Key/Token  |
 | **回覆路由** | 確定性路由回 WebChat          | 路由到對應的管道              |
@@ -349,7 +349,7 @@ WebChat 支援斜線指令，快速執行特定操作。
 **常用指令**：
 
 | 指令             | 功能                         |
-| ---------------- | ---------------------------- |
+|--- | ---|
 | `/new`          | 建立新對話                   |
 | `/reset`        | 重設目前對話的歷史           |
 | `/clear`        | 清空目前對話的所有訊息       |
@@ -612,7 +612,7 @@ http://localhost:18789
 > 更新時間：2026-01-27
 
 | 功能                  | 檔案路徑                                                                                    | 行號    |
-| ------------------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | WebChat 原理說明     | [`docs/web/webchat.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/web/webchat.md) | 全檔案   |
 | Gateway WebSocket API | [`src/gateway/protocol/`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/) | 全目錄   |
 | chat.send 方法        | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 296-380  |

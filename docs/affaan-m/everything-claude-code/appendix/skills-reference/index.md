@@ -42,7 +42,7 @@ This reference document helps you fully understand each skill's content, use cas
 Everything Claude Code includes 11 skill libraries, each with clear goals and application scenarios:
 
 | Skill Library | Goal | Priority | Use Cases |
-| ------------- | ---- | -------- | --------- |
+|--- | --- | --- | ---|
 | **coding-standards** | Unified coding standards, best practices | P0 | General coding, TypeScript/JavaScript/React |
 | **backend-patterns** | Backend architecture patterns, API design | P0 | Node.js, Express, Next.js API route development |
 | **frontend-patterns** | Frontend development patterns, performance optimization | P0 | React, Next.js, state management |
@@ -2643,7 +2643,7 @@ Edit `config.json` to customize:
 ### Pattern Types
 
 | Pattern | Description |
-| ------- | ----------- |
+|--- | ---|
 | `error_resolution` | How to resolve specific errors |
 | `user_corrections` | Patterns from user corrections |
 | `workarounds` | Solutions for framework/library quirks |
@@ -3570,18 +3570,18 @@ Remember, these skill libraries are your compass for code quality. Properly appl
 > Updated: 2026-01-25
 
 | Skill Library | File Path | Lines |
-| ------------ | --------- | ----- |
-| coding-standards | [`skills/coding-standards/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/coding-standards/SKILL.md) | 1-521 |
-| backend-patterns | [`skills/backend-patterns/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/backend-patterns/SKILL.md) | 1-583 |
-| frontend-patterns | [`skills/frontend-patterns/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/frontend-patterns/SKILL.md) | 1-632 |
-| continuous-learning | [`skills/continuous-learning/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/continuous-learning/SKILL.md) | 1-81 |
-| strategic-compact | [`skills/strategic-compact/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/strategic-compact/SKILL.md) | 1-64 |
-| tdd-workflow | [`skills/tdd-workflow/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/tdd-workflow/SKILL.md) | 1-410 |
-| security-review | [`skills/security-review/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/security-review/SKILL.md) | 1-495 |
-| eval-harness | [`skills/eval-harness/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/eval-harness/SKILL.md) | 1-222 |
-| verification-loop | [`skills/verification-loop/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/verification-loop/SKILL.md) | 1-121 |
-| project-guidelines-example | [`skills/project-guidelines-example/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/project-guidelines-example/SKILL.md) | 1-346 |
-| clickhouse-io | [`skills/clickhouse-io/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/clickhouse-io/SKILL.md) | 1-430 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Key Principles**:
 - **coding-standards**: Immutable patterns, files < 800 lines, functions < 50 lines, 80%+ test coverage

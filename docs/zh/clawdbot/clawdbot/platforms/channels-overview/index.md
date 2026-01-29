@@ -73,7 +73,7 @@ Clawdbot 的渠道系统采用 **插件化架构**：
 **关键概念**：
 
 | 概念         | 作用                         |
-| ------------ | ---------------------------- |
+|--- | ---|
 | **渠道插件** | 每个渠道都是一个独立的插件    |
 | **统一接口** | 所有渠道使用相同的 API        |
 | **DM 保护**   | 默认启用配对机制，拒绝未知发送者 |
@@ -88,7 +88,7 @@ Clawdbot 支持 **13+ 种通信渠道**，分为两类：
 ### 核心渠道（内置）
 
 | 渠道           | 认证方式             | 难度 | 特点                              |
-| -------------- | -------------------- | ---- | --------------------------------- |
+|--- | --- | --- | ---|
 | **Telegram**   | Bot Token            | ⭐   | 最简单快速，推荐新手                |
 | **WhatsApp**   | QR Code / Phone Link | ⭐⭐  | 使用真实号码，推荐单独手机 + eSIM |
 | **Slack**      | Bot Token + App Token | ⭐⭐ | 工作场所首选，Socket Mode         |
@@ -100,7 +100,7 @@ Clawdbot 支持 **13+ 种通信渠道**，分为两类：
 ### 扩展渠道（外部插件）
 
 | 渠道             | 认证方式             | 类型       | 特点                              |
-| ---------------- | -------------------- | ---------- | --------------------------------- |
+|--- | --- | --- | ---|
 | **WebChat**       | Gateway WebSocket     | 内置       | 无需第三方认证，最简单            |
 | **LINE**          | Messaging API        | 外部插件   | 亚洲用户常用                       |
 | **BlueBubbles**   | Private API         | 扩展插件   | iMessage 扩展，支持远程设备       |
@@ -606,7 +606,7 @@ channels:
 > 更新时间：2026-01-27
 
 | 功能            | 文件路径                                                                                               | 行号    |
-| --------------- | ------------------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | 渠道注册表       | [`src/channels/registry.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.ts) | 7-100   |
 | 渠道插件目录   | [`src/channels/plugins/`](https://github.com/clawdbot/clawdbot/tree/main/src/channels/plugins/) | 全目录  |
 | 渠道元数据类型   | [`src/channels/plugins/types.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/types.core.ts) | 74-93   |

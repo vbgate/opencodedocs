@@ -192,7 +192,7 @@ TokenManager の `target_model` 正規化は「ホワイトリスト式」です
 > 更新日時：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Quota Protection UI（閾値、モデルチェック、少なくとも 1 つ残す） | [`src/components/settings/QuotaProtection.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/settings/QuotaProtection.tsx#L13-L168) | 13-168 |
 | Smart Warmup UI（有効化後デフォルトチェック、少なくとも 1 つ残す） | [`src/components/settings/SmartWarmup.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/settings/SmartWarmup.tsx#L14-L120) | 14-120 |
 | クォータガバナンス設定フィールド（`quota_protection` / `scheduled_warmup`） | [`src/types/config.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/types/config.ts#L54-L94) | 54-94 |

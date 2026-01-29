@@ -36,7 +36,7 @@ order: 110
 ## 什么时候用这一招
 
 | 场景 | 推荐的 Skill | 为什么 |
-|--------|--------------|--------|
+|--- | --- | ---|
 | 前端 UI 界面需要美观的设计 | `frontend-ui-ux` | 设计师视角，关注排版、色彩、动效 |
 | 浏览器测试、截图、爬取数据 | `playwright` 或 `agent-browser` | 完整的浏览器自动化能力 |
 | Git 提交、历史搜索、分支管理 | `git-master` | 自动检测提交风格，生成原子提交 |
@@ -328,7 +328,7 @@ git commit -m "feat: add API endpoint"
 `git-master` 的强制规则是：
 
 | 文件数量 | 最少提交数 |
-|---------|-----------|
+|--- | ---|
 | 3+ 文件 | 2+ 提交 |
 | 5+ 文件 | 3+ 提交 |
 | 10+ 文件 | 5+ 提交 |
@@ -473,7 +473,7 @@ EOF
 ::: tip playwright vs dev-browser 的区别
 
 | 特性 | playwright | dev-browser |
-|------|-----------|-------------|
+|--- | --- | ---|
 | **会话持久化** | ❌ 每次新会话 | ✅ 跨脚本保存 |
 | **ARIA Snapshot** | ❌ 使用 Playwright API | ✅ 自动生成引用 |
 | **Extension 模式** | ❌ 不支持 | ✅ 连接用户浏览器 |
@@ -489,7 +489,7 @@ EOF
 根据任务类型选择 Skill：
 
 | 任务类型 | 推荐组合 |
-|---------|-----------|
+|--- | ---|
 | 快速 Git 提交 | `delegate_task(category='quick', load_skills=['git-master'])` |
 | UI 界面设计 | `delegate_task(category='visual-engineering', load_skills=['frontend-ui-ux'])` |
 | 浏览器验证 | `delegate_task(category='quick', load_skills=['playwright'])` |
@@ -528,7 +528,7 @@ delegate_task(
 本课介绍了 4 个内置 Skills：
 
 | Skill | 核心价值 | 典型场景 |
-|-------|-----------|---------|
+|--- | --- | ---|
 | **playwright** | 完整的浏览器自动化 | UI 测试、截图、爬虫 |
 | **frontend-ui-ux** | 设计师视角，美观优先 | UI 组件设计、界面美化 |
 | **git-master** | 自动化 Git 操作，原子提交 | 代码提交、历史搜索 |
@@ -561,12 +561,12 @@ delegate_task(
 > 更新时间：2026-01-26
 
 | 功能 | 文件路径 | 行号 |
-|------|----------|------|
+|--- | --- | ---|
 | playwright Skill 定义 | [`src/features/builtin-skills/skills.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-skills/skills.ts) | 4-16 |
-| agent-browser Skill 定义 | [`src/features/builtin-skills/skills.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-skills/skills.ts) | 18-313 |
-| frontend-ui-ux Skill 定义 | [`src/features/builtin-skills/skills.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-skills/skills.ts) | 315-391 |
-| git-master Skill 定义 | [`src/features/builtin-skills/skills.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-skills/skills.ts) | 393-1497 |
-| dev-browser Skill 定义 | [`src/features/builtin-skills/skills.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-skills/skills.ts) | 1499-1717 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | createBuiltinSkills 函数 | [`src/features/builtin-skills/skills.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-skills/skills.ts) | 1723-1729 |
 | BuiltinSkill 类型定义 | [`src/features/builtin-skills/types.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-skills/types.ts) | 3-16 |
 | 内置 Skills 加载逻辑 | [`src/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/index.ts) | 51, 311-319 |

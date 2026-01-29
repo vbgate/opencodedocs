@@ -63,7 +63,7 @@ z.ai 的 Anthropic 上游转发只在 Claude handler 的 z.ai 分支发生：
 `dispatch_mode` 决定 `/v1/messages` 是否走 z.ai：
 
 | dispatch_mode | 会发生什么 | 证据 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `off` | 永不使用 z.ai | `src-tauri/src/proxy/config.rs#L20-L37` + `src-tauri/src/proxy/handlers/claude.rs#L282-L314` |
 | `exclusive` | 所有 Claude 请求都走 z.ai | `src-tauri/src/proxy/handlers/claude.rs#L285-L314` |
 | `fallback` | Google 池不可用（0 账号或“没有可用账号”）才走 z.ai | `src-tauri/src/proxy/handlers/claude.rs#L288-L305` |
@@ -104,7 +104,7 @@ z.ai 上游转发不会“原样带所有 Header”，而是做了两层防线�
 本地端点与上游地址是写死的：
 
 | 本地端点 | 上游地址 | 开关 | 证据 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `/mcp/web_search_prime/mcp` | `https://api.z.ai/api/mcp/web_search_prime/mcp` | `proxy.zai.mcp.web_search_enabled` | `src-tauri/src/proxy/handlers/mcp.rs#L115-L135` |
 | `/mcp/web_reader/mcp` | `https://api.z.ai/api/mcp/web_reader/mcp` | `proxy.zai.mcp.web_reader_enabled` | `src-tauri/src/proxy/handlers/mcp.rs#L137-L157` |
 
@@ -222,7 +222,7 @@ z.ai 配置在 `ProxyConfig.zai` 下，包含这些字段：
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | z.ai 集成范围（Claude 协议 + MCP + Vision MCP） | [`docs/zai/implementation.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/zai/implementation.md#L12-L17) | 12-17 |
 | z.ai 调度模式与模型默认值 | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L20-L116) | 20-116 |
 | z.ai 默认 base_url / 默认模型 | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L265-L279) | 265-279 |
@@ -232,7 +232,7 @@ z.ai 配置在 `ProxyConfig.zai` 下，包含这些字段：
 | z.ai 模型映射规则（map_model_for_zai） | [`src-tauri/src/proxy/providers/zai_anthropic.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/providers/zai_anthropic.rs#L13-L37) | 13-37 |
 | Header 白名单 + 注入 z.ai auth | [`src-tauri/src/proxy/providers/zai_anthropic.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/providers/zai_anthropic.rs#L70-L110) | 70-110 |
 | MCP Search/Reader 反代与开关 | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L45-L157) | 45-157 |
-| Vision MCP 内置服务器（GET/POST/DELETE + JSON-RPC） | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L190-L397) | 190-397 |
+|--- | --- | ---|
 | Vision MCP 最小实现定位（非完整 MCP Server） | [`docs/zai/vision-mcp.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/zai/vision-mcp.md#L17-L37) | 17-37 |
 | Vision 工具列表与限制（tool_specs + 文件大小 + stream=false） | [`src-tauri/src/proxy/zai_vision_tools.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/zai_vision_tools.rs#L57-L270) | 57-270 |
 | `/v1/models/claude` 模型列表来源（本地映射，不查上游） | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L84-L132) | 84-132 |

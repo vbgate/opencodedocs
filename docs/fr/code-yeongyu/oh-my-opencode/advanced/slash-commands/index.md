@@ -36,7 +36,7 @@ De telles longues instructions gaspillent du temps et sont sujettes à l'oubli d
 Les **commandes slash** sont des modèles de workflow prédéfinis qui déclenchent des tâches complexes en un clic. Ces commandes couvrent des scénarios de développement courants :
 
 | Scénario | Commande à utiliser |
-|----------|---------------------|
+|--- | ---|
 | Initialiser la base de connaissances du projet | `/init-deep` |
 | Faire travailler l'IA en continu | `/ralph-loop` |
 | Refactoriser intelligemment le code | `/refactor` |
@@ -64,7 +64,7 @@ graph LR
 oh-my-opencode inclut 6 commandes slash intégrées :
 
 | Commande | Fonction | Complexité |
-|---------|----------|------------|
+|--- | --- | ---|
 | `/init-deep` | Générer des fichiers AGENTS.md hiérarchiques | Moyenne |
 | `/ralph-loop` | Boucle de développement auto-référentielle | Élevée |
 | `/ulw-loop` | Version Ultrawork de ralph-loop | Élevée |
@@ -305,7 +305,7 @@ Sur quel plan souhaitez-vous travailler ? (Entrez le numéro ou le nom du plan)
 ## Résumé
 
 | Commande | Fonction principale | Fréquence d'utilisation |
-|---------|-------------------|------------------------|
+|--- | --- | ---|
 | `/init-deep` | Générer automatiquement la base de connaissances du projet | Configuration initiale |
 | `/ralph-loop` | Boucle de travail continu | Élevée |
 | `/ulw-loop` | Version Ultrawork de la boucle | Moyenne |
@@ -339,7 +339,7 @@ Sur quel plan souhaitez-vous travailler ? (Entrez le numéro ou le nom du plan)
 > Mis à jour : 2026-01-26
 
 | Fonctionnalité | Chemin du fichier | Numéros de ligne |
-|---------|-----------|--------------|
+|--- | --- | ---|
 | Définitions des commandes | [`src/features/builtin-commands/commands.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/commands.ts) | 8-73 |
 | Chargeur de commandes | [`src/features/builtin-commands/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/index.ts) | 75-89 |
 | Modèle init-deep | [`src/features/builtin-commands/templates/init-deep.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/templates/init-deep.ts) | Texte complet |

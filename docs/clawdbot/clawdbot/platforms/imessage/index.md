@@ -71,7 +71,7 @@ sequenceDiagram
 **Key concepts**:
 
 | Concept | Description |
-| ------- | ----------- |
+|--- | ---|
 | **imsg CLI** | Third-party tool, interacts with Messages via JSON-RPC over stdio |
 | **Full Disk Access** | macOS permission, allows Clawdbot to read Messages chat.db |
 | **Automation permission** | macOS permission, allows imsg to send messages via Automation API |
@@ -409,7 +409,7 @@ exec ssh -T bot@mac-mini.tailnet-1234.ts.net imsg "$@"
 ### Basic Configuration
 
 | Setting | Type | Default | Description |
-| ------- | ---- | ------- | ----------- |
+|--- | --- | --- | ---|
 | `enabled` | boolean | false | Whether to enable iMessage channel |
 | `cliPath` | string | "imsg" | imsg CLI path (can be SSH wrapper) |
 | `dbPath` | string | - | Messages chat.db path |
@@ -418,7 +418,7 @@ exec ssh -T bot@mac-mini.tailnet-1234.ts.net imsg "$@"
 ### DM Policy
 
 | Setting | Type | Default | Description |
-| ------- | ---- | ------- | ----------- |
+|--- | --- | --- | ---|
 | `dmPolicy` | "pairing"|"allowlist"|"open"|"disabled" | "pairing" | DM access policy |
 | `allowFrom` | array | [] | Allowed sender list (handles, emails, E.164, `chat_id:*`) |
 
@@ -439,7 +439,7 @@ iMessage has no username concept, using handles (phone numbers or email addresse
 ### Group Policy
 
 | Setting | Type | Default | Description |
-| ------- | ---- | ------- | ----------- |
+|--- | --- | --- | ---|
 | `groupPolicy` | "allowlist"|"open"|"disabled" | "allowlist" | Group access policy |
 | `groupAllowFrom` | array | [] | Allowed senders who can trigger AI in groups |
 | `groups` | object | {} | Group configuration by chat_id |
@@ -466,7 +466,7 @@ iMessage has no username concept, using handles (phone numbers or email addresse
 ### Media and Text Limits
 
 | Setting | Type | Default | Description |
-| ------- | ---- | ------- | ----------- |
+|--- | --- | --- | ---|
 | `includeAttachments` | boolean | false | Whether to include attachments in context |
 | `mediaMaxMb` | number | 16 | Maximum media file size (MB) |
 | `textChunkLimit` | number | 4000 | Outbound text chunk size (characters) |
@@ -475,7 +475,7 @@ iMessage has no username concept, using handles (phone numbers or email addresse
 ### History
 
 | Setting | Type | Default | Description |
-| ------- | ---- | ------- | ----------- |
+|--- | --- | --- | ---|
 | `historyLimit` | number | - | Maximum history messages for groups (0 to disable) |
 | `dmHistoryLimit` | number | - | DM history message limit (user rounds) |
 | `dms["<handle>"].historyLimit` | number | - | Override DM history limit by handle |
@@ -569,7 +569,7 @@ iMessage has no username concept, using handles (phone numbers or email addresse
 > Last updated: 2026-01-27
 
 | Feature | File Path | Lines |
-| ------- | --------- | ----- |
+|--- | --- | ---|
 | iMessage configuration type definition | [`src/config/types.imessage.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.imessage.ts) | 1-80 |
 | iMessage account resolution | [`src/imessage/accounts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/imessage/accounts.ts) | 1-83 |
 | iMessage probing | [`src/imessage/probe.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/imessage/probe.ts) | 1-92 |

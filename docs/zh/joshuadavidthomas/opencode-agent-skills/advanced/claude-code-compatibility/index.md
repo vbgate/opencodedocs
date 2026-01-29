@@ -47,7 +47,7 @@ OpenCode Agent Skills 插件通过**三层兼容机制**，让你无需修改即
 当插件检测到加载的是 Claude Code 编写的技能时，会自动注入工具映射指南：
 
 | Claude Code 工具 | OpenCode 工具 | 映射规则 |
-| ---------------- | ------------- | -------- |
+|--- | --- | ---|
 | `TodoWrite/TodoRead` | `todowrite/todoread` | 小写 |
 | `Task` (子代理) | `task` (带 subagent_type 参数) | 改用参数 |
 | `Skill` | `use_skill` | 替换工具名 |
@@ -224,7 +224,7 @@ OpenCode Agent Skills 插件通过三层兼容机制，让你无缝复用 Claude
 > 更新时间：2026-01-24
 
 | 功能                | 文件路径                                                                                               | 行号    |
-| ------------------- | ------------------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | 工具映射定义        | [`src/claude.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/claude.ts#L19-L25)       | 19-25   |
 | v1/v2 格式类型定义  | [`src/claude.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/claude.ts#L35-L61)       | 35-61   |
 | 插件安装路径提取    | [`src/claude.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/claude.ts#L68-L77)       | 68-77   |

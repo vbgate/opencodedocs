@@ -103,7 +103,7 @@ function isTableRow(line: string): boolean {
 각 셀은 정규식 `/^\s*:?-+:?\s*$/`와 일치해야 합니다. 쉽게 말하면:
 
 | 구성 요소 | 의미 | 예시 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `\s*` | 선택적 공백 | `| --- |` 또는 `|---|` 허용 |
 | `:?` | 선택적 콜론 | 정렬 방식 지정에 사용 |
 | `-+` | 최소 하나의 대시 | `-`, `---`, `------` 모두 가능 |
@@ -145,12 +145,12 @@ function isSeparatorRow(line: string): boolean {
 ```markdown
 ✅ 올바름 (모든 행이 3개 열)
 | A | B | C |
-| --- | --- | --- |
+|--- | --- | ---|
 | 1 | 2 | 3 |
 
 ❌ 잘못됨 (세 번째 행은 2개 열만 있음)
 | A | B | C |
-| --- | --- | --- |
+|--- | --- | ---|
 | 1 | 2 |
 ```
 
@@ -181,7 +181,7 @@ function isValidTable(lines: string[]): boolean {
 구분 행은 구분뿐만 아니라 정렬 방식 지정에도 사용됩니다:
 
 | 구문 | 정렬 방식 | 효과 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `---` 또는 `:---` | 왼쪽 정렬 | 텍스트 왼쪽 (기본값) |
 | `:---:` | 중앙 정렬 | 텍스트 중앙 |
 | `---:` | 오른쪽 정렬 | 텍스트 오른쪽 |
@@ -190,7 +190,7 @@ function isValidTable(lines: string[]): boolean {
 
 ```markdown
 | 왼쪽 정렬 | 중앙 정렬 | 오른쪽 정렬 |
-| :--- | :---: | ---: |
+|--- | --- | ---|
 | 텍스트 | 텍스트 | 텍스트 |
 ```
 
@@ -198,7 +198,7 @@ function isValidTable(lines: string[]): boolean {
 
 ```markdown
 | 왼쪽 정렬 |  중앙 정렬  | 오른쪽 정렬 |
-| :------- | :-------: | ---------: |
+|--- | --- | ---|
 | 텍스트   |  텍스트   |     텍스트 |
 ```
 
@@ -220,7 +220,7 @@ function getAlignment(delimiterCell: string): "left" | "center" | "right" {
 ## 일반적인 오류 문제 해결
 
 | 오류 현상 | 가능한 원인 | 해결 방법 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `invalid structure` | 구분 행 누락 | 헤더 뒤에 `\| --- \| --- \|` 추가 |
 | `invalid structure` | 열 수 불일치 | 각 행의 `\|` 수가 같은지 확인 |
 | `invalid structure` | 행 시작/끝에 `\|` 누락 | 누락된 `\|` 추가 |
@@ -239,7 +239,7 @@ function getAlignment(delimiterCell: string): "left" | "center" | "right" {
 ## 이 과정 요약
 
 | 조건 | 요구사항 |
-| --- | --- |
+|--- | ---|
 | 행 시작/끝 | `\|`로 시작하고 끝나야 함 |
 | 구분자 수 | 최소 2개의 `\|` |
 | 구분 행 | 필수, 형식은 `:?-+:?` |
@@ -268,7 +268,7 @@ function getAlignment(delimiterCell: string): "left" | "center" | "right" {
 > 업데이트 시간: 2026-01-26
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 표 행 판정 | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61) | 58-61 |
 | 구분 행 판정 | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L63-L68) | 63-68 |
 | 표 검증 | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88) | 70-88 |

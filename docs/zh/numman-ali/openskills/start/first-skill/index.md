@@ -250,7 +250,7 @@ ls -la .claude/skills/
 **关键文件说明**：
 
 | 文件 | 用途 |
-| ---- | ---- |
+|--- | ---|
 | `SKILL.md` | 技能的主要内容和指令 |
 | `.openskills.json` | 安装元数据（记录来源，用于更新） |
 | `references/` | 参考文档和详细说明 |
@@ -376,7 +376,7 @@ Error: No SKILL.md files found in repository
 **核心命令**：
 
 | 命令 | 作用 |
-| ---- | ---- |
+|--- | ---|
 | `npx openskills install anthropics/skills` | 从官方仓库安装技能 |
 | `ls .claude/skills/` | 查看已安装技能 |
 | `cat .claude/skills/<name>/.openskills.json` | 查看技能元数据 |
@@ -404,7 +404,7 @@ Error: No SKILL.md files found in repository
 > 更新时间：2026-01-24
 
 | 功能 | 文件路径 | 行号 |
-| ---- | --------- | ---- |
+|--- | --- | ---|
 | 安装命令入口 | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L83-L183) | 83-183 |
 | 安装位置判断（project vs global） | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L84-L92) | 84-92 |
 | GitHub shorthand 解析 | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L131-L143) | 131-143 |

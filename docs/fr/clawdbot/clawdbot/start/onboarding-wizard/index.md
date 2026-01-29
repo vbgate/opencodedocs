@@ -300,7 +300,7 @@ L'assistant demandera le répertoire de l'espace de travail :
 En définissant la variable d'environnement `CLAWDBOT_PROFILE`, vous pouvez utiliser des configurations indépendantes pour différents environnements de travail :
 
 | Valeur Profile | Chemin Espace de Travail | Fichier de Configuration |
-|----------|----------|----------|
+|--- | --- | ---|
 | `default` ou non défini | `~/clawd` | `~/.clawdbot/clawdbot.json` |
 | `work` | `~/clawd-work` | `~/.clawdbot/clawdbot.json` (profil work) |
 | `dev` | `~/clawd-dev` | `~/.clawdbot/clawdbot.json` (profil dev) |
@@ -679,7 +679,7 @@ L'assistant de configuration est la méthode recommandée pour configurer Clawdb
 > Dernière mise à jour : 2026-01-27
 
 | Fonctionnalité           | Chemin du Fichier                                                                                                  | Lignes      |
-| -------------- | ------------------------------------------------------------------------------------------------- | --------- |
+|--- | --- | ---|
 | Flux principal de l'assistant     | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 87-452    |
 | Confirmation de l'avertissement de sécurité   | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 46-85     |
 | Configuration Gateway   | [`src/wizard/onboarding.gateway-config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.gateway-config.ts) | 28-249    |

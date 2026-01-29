@@ -13,9 +13,9 @@ Die Kernfunktion von Antigravity Tools ist die Konvertierung mehrerer KI-Plattfo
 ## Inhalt dieses Kapitels
 
 | Tutorial | Beschreibung |
-|-----|------|
+|--- | ---|
 | [OpenAI-kompatible API](./openai/) | Implementierungsstrategien für `/v1/chat/completions` und `/v1/responses`, nahtlose Integration mit OpenAI SDK |
-| [Anthropic-kompatible API](./anthropic/) | `/v1/messages` und Claude Code Schlüsselkontrakte, unterstützen Kernfunktionen wie Chain-of-Thought und System-Prompts |
+|--- | ---|
 | [Gemini Native API](./gemini/) | `/v1beta/models` und Google SDK Endpunkte, unterstützt `x-goog-api-key` Kompatibilität |
 | [Imagen 3 Bildgenerierung](./imagen/) | Automatische Abbildung von OpenAI Images-Parametern `size`/`quality`, unterstützt beliebige Seitenverhältnisse |
 | [Audio-Transkription](./audio/) | Einschränkungen von `/v1/audio/transcriptions` und Verarbeitung großer Datenvolumen |
@@ -34,12 +34,12 @@ Die Kernfunktion von Antigravity Tools ist die Konvertierung mehrerer KI-Plattfo
 **Schnellauswahl**:
 
 | Dein Szenario | Empfohlen, zuerst zu lesen |
-|---------|---------|
+|--- | ---|
 | Verwendung von Claude Code CLI | [Anthropic-kompatible API](./anthropic/) |
 | Verwendung von OpenAI Python SDK | [OpenAI-kompatible API](./openai/) |
 | Verwendung von Google offiziellem SDK | [Gemini Native API](./gemini/) |
 | Benötigst du KI-Bilderzeugung | [Imagen 3 Bildgenerierung](./imagen/) |
-| Benötigst du Sprach-in-Text | [Audio-Transkription](./audio/) |
+|--- | ---|
 | Benötigst du Internetsuche/Weblesen | [MCP Endpunkte](./mcp/) |
 | Benötigst du Remote-Zugriff | [Cloudflared Tunnel](./cloudflared/) |
 

@@ -70,7 +70,7 @@ AIアシスタントを保護するために、Clawdbotは**ペアリングメ�
 **すべてのチャネルでデフォルトで `dmPolicy="pairing"` が使用されます**。これは以下を意味します：
 
 | ポリシー | 動作 |
-| ------ | ---- |
+|--- | ---|
 | `pairing` | 不明な送信者はペアリングコードを受け取り、メッセージは処理されない（デフォルト） |
 | `allowlist` | `allowFrom` リスト内の送信者のみ許可 |
 | `open` | すべての送信者を許可（明示的に `"*"` を設定する必要あり） |
@@ -296,7 +296,7 @@ Failed to notify requester: <error details>
 > 更新日時：2026-01-27
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | ペアリングコード生成（8文字、紛らわしい文字を除外） | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L173-L181) | 173-181 |
 | ペアリング要求の保存とTTL（1時間） | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L11-L14) | 11-14 |
 | ペアリング承認コマンド | [`src/cli/pairing-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/pairing-cli.ts#L107-L143) | 107-143 |

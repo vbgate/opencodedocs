@@ -433,7 +433,7 @@ trap cleanup EXIT
 > Atualizado em: 2026-01-25
 
 | Funcionalidade            | Caminho do Arquivo                                                                                       | Número de Linha |
-| ------------------------- | ------------------------------------------------------------------------------------------------------ | -------------- |
+|--- | --- | ---|
 | Especificação de desenvolvimento de habilidades | [`AGENTS.md:9-69`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L9-L69)     | 9-69          |
 | Definição de estrutura de diretório   | [`AGENTS.md:11-20`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L11-L20)   | 11-20         |
 | Convenções de nomenclatura           | [`AGENTS.md:22-27`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L22-L27)   | 22-27         |

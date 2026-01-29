@@ -55,7 +55,7 @@ Bevor Sie Ihre erste Nachricht senden, bestätigen Sie bitte:
 ### Erforderliche Voraussetzungen
 
 | Voraussetzung                   | Überprüfung                                          |
-| ------------------------------ | --------------------------------------------------- |
+|--- | ---|
 | **Gateway ist gestartet**      | `clawdbot gateway status` oder prüfen, ob der Prozess läuft |
 | **AI-Modell ist konfiguriert** | `clawdbot models list` prüfen, ob Modelle verfügbar sind |
 | **Port ist erreichbar**        | Bestätigen, dass Port 18789 (oder benutzerdefinierter Port) nicht belegt ist |
@@ -119,7 +119,7 @@ Clawdbot unterstützt drei Hauptmethoden zum Senden von Nachrichten:
 **Wichtige Unterschiede**:
 
 | Methode                       | Durchläuft AI? | Zweck                              |
-| ---------------------------- | -------------- | --------------------------------- |
+|--- | --- | ---|
 | `clawdbot agent`             | ✅ Ja           | Mit AI chatten, Antworten und Denkprozess erhalten |
 | `clawdbot message send`      | ❌ Nein         | Nachrichten direkt an Kanal senden, ohne AI   |
 | WebChat / Kanäle             | ✅ Ja           | Mit AI über grafische Oberfläche chatten      |
@@ -193,7 +193,7 @@ Let me think about what needs to be checked for shipping:
 **Denkstufen-Optionen**:
 
 | Stufe   | Beschreibung                              | Anwendungsfall      |
-| ------ | ----------------------------------------- | ------------------ |
+|--- | --- | ---|
 | `off`    | Kein Denkprozess anzeigen                | Einfache Fragen, schnelle Antworten |
 | `minimal` | Minimale Denkausgabe                     | Debugging, Prozessüberprüfung |
 | `low`     | Geringe Detailgenauigkeit                 | Alltagsgespräche |
@@ -263,7 +263,7 @@ WebChat verwendet denselben Port wie der Gateway (Standard 18789). Wenn Sie den 
 **WebChat-Funktionen**:
 
 | Funktion   | Beschreibung                              |
-| --------- | ----------------------------------------- |
+|--- | ---|
 | Rich Text   | Markdown-Format unterstützt                |
 | Anhänge     | Hochladen von Bildern, Audio, Videos    |
 | Verlauf     | Sitzungsverlauf automatisch gespeichert |
@@ -543,12 +543,12 @@ In dieser Lektion haben Sie gelernt:
 > Aktualisiert am: 2026-01-27
 
 | Funktion                  | Dateipfad                                                                                             | Zeilennummer    |
-| ------------------- | ---------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | CLI-Agent-Befehlsregistrierung  | [`src/cli/program/register.agent.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.agent.ts) | 20-82    |
-| Agent-CLI-Ausführung        | [`src/commands/agent-via-gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/agent-via-gateway.ts) | 82-184   |
+|--- | --- | ---|
 | CLI message send-Registrierung | [`src/cli/program/message/register.send.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/message/register.send.ts) | 1-30     |
-| Gateway chat.send-Methode | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 296-380   |
-| WebChat-interne Nachrichtenverarbeitung | [`src/gateway/server-chat.gateway-server-chat.e2e.test.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-chat.gateway-server-chat.e2e.test.ts) | 50-290    |
+|--- | --- | ---|
+|--- | --- | ---|
 | Nachrichtenkanaltypendefinition   | [`src/gateway/protocol/client-info.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/client-info.ts) | 2-23     |
 | Kanalregistrierung         | [`src/channels/registry.js`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.js) | Gesamte Datei   |
 

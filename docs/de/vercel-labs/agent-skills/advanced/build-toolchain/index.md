@@ -72,7 +72,7 @@ rules/*.md (57 Dateien)
 **Vier Kernbefehle**:
 
 | Befehl | Funktion | Geeignete Szenarien |
-|------|------|----------|
+|--- | --- | ---|
 | `pnpm validate` | Validierung des Formats und der Vollständigkeit aller Regeldateien | Vor Commit-Prüfung, CI-Validierung |
 | `pnpm build` | Generierung von AGENTS.md und test-cases.json | Nach Regeldateien-Modifikation, vor Veröffentlichung |
 | `pnpm dev` | Ausführung von build + validate (Entwicklungsablauf) | Schnelle Iteration, Entwicklung neuer Regeln |
@@ -105,11 +105,11 @@ rules/*.md (57 Dateien)
 > Aktualisierungszeit: 2026-01-25
 
 | Funktion | Dateipfad | Zeilen |
-| --- | --- | --- |
+|--- | --- | ---|
 | package.json Skriptdefinition | [`packages/react-best-practices-build/package.json`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/package.json) | 6-12 |
-| Build-Einstiegsfunktion | [`packages/react-best-practices-build/src/build.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/build.ts) | 131-290 |
+|--- | --- | ---|
 | Regelparser | [`packages/react-best-practices-build/src/parser.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/parser.ts) | Ganze Datei |
 | Regelvalidierungsfunktion | [`packages/react-best-practices-build/src/validate.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/validate.ts) | 21-66 |
-| Testfall-Extraktion | [`packages/react-best-practices-build/src/extract-tests.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/extract-tests.ts) | 15-38 |
+|--- | --- | ---|
 
 </details>

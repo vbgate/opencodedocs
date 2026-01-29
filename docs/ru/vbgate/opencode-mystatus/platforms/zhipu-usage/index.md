@@ -46,7 +46,7 @@ order: 2
 Квотная система **智谱 AI** и **Z.ai** разделена на два типа:
 
 | Тип квоты | Значение | Период сброса |
-| -------- | ---- | -------- |
+|--- | --- | ---|
 | **Лимит Token за 5 часов** | Лимит использования Token для вызовов API | Автоматический сброс каждые 5 часов |
 | **Ежемесячная квота MCP** | Ежемесячный лимит количества поиска MCP | Сброс ежемесячно |
 
@@ -143,7 +143,7 @@ Account:        9c89****AQVM (Z.ai)
 Проверьте свой вывод по следующему описанию:
 
 | Поле вывода | Значение | Пример |
-| -------- | ---- | ---- |
+|--- | --- | ---|
 | **Account** | Маскированный API Key и тип учётной записи | `9c89****AQVM (Coding Plan)` |
 | **5 小时 Token 限额** | Использование Token в текущем 5-часовом периоде | Индикатор прогресса + процент |
 | **已用: X / Y** | Использованное количество / Общая квота | `0.5M / 10.0M` |
@@ -249,7 +249,7 @@ Account:        9c89****AQVM (Z.ai)
 > Время обновления: 2026-01-23
 
 | Функция | Путь к файлу | Номер строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Запрос квоты 智谱 AI | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 213-217 |
 | Запрос квоты Z.ai | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 224-228 |
 | Форматирование вывода | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 115-177 |

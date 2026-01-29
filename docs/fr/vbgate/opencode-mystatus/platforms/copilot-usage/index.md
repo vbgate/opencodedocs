@@ -66,7 +66,7 @@ Pour faire simple : chaque fois que Copilot vous « aide » (générer du code, 
 Différents types d'abonnement ont des limites mensuelles différentes :
 
 | Type d'abonnement | Limite mensuelle | Public cible |
-| ----------------- | ---------------- | ------------ |
+|--- | --- | ---|
 | Free              | 50 fois         | Développeurs personnels en essai |
 | Pro               | 300 fois        | Développeurs personnels en version officielle |
 | Pro+              | 1,500 fois      | Développeurs personnels intensifs |
@@ -307,7 +307,7 @@ Si le fichier de configuration `~/.config/opencode/copilot-quota-token.json` a u
 Si le `tier` que vous remplissez ne correspond pas à votre abonnement réel, le calcul de la limite sera incorrect.
 
 | Votre abonnement réel | Le champ tier doit contenir | Exemple de remplissage incorrect |
-| -------------------- | --------------------------- | ------------------------------ |
+|--- | --- | ---|
 | Free                 | `free`                      | `pro` ❌                       |
 | Pro                  | `pro`                       | `free` ❌                      |
 | Pro+                 | `pro+`                      | `pro` ❌                       |
@@ -375,9 +375,9 @@ Ce cours explique comment utiliser opencode-mystatus pour interroger le quota de
 > Date de mise à jour :2026-01-23
 
 | Fonction             | Chemin du fichier                                                                                      | Ligne    |
-| ---------------- | --------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Interrogation de quota Copilot | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 481-524 |
-| Lecture PAT Fine-grained  | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 122-151 |
+|--- | --- | ---|
 | Interrogation API Billing publique | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 157-177 |
 | Interrogation API interne | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 242-304 |
 | Logique d'échange de jeton   | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 183-208 |

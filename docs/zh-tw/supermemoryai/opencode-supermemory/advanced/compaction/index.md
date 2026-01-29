@@ -93,7 +93,7 @@ Supermemory 會即時監控每個會話的 Token 使用情況。壓縮流程由�
 當壓縮觸發時，Supermemory 會向 Agent 注入一個特殊的 System Prompt（`[COMPACTION CONTEXT INJECTION]`），強制要求總結包含以下 5 個部分：
 
 | 章節 | 內容說明 | 目的 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **1. User Requests** | 使用者原始需求（原樣保留） | 防止需求漂移 |
 | **2. Final Goal** | 最終要達成的目標 | 明確終局狀態 |
 | **3. Work Completed** | 已完成的工作、修改的檔案 | 避免重複勞動 |
@@ -228,7 +228,7 @@ opencode run supermemory list --scope project --limit 1
 > 更新時間：2026-01-23
 
 | 功能 | 檔案路徑 | 行號 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | 閾值常數定義 | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L11-L14) | 11-14 |
 | 引導 Prompt 產生 | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L58-L98) | 58-98 |
 | 觸發偵測邏輯 | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L317-L358) | 317-358 |

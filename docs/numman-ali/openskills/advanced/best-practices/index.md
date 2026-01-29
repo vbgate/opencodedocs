@@ -190,7 +190,7 @@ openskills sync -y
 **Example comparison**:
 
 | Scenario | ❌ Incorrect (Second Person) | ✅ Correct (Third Person) |
-| -------- | ---------------------------- | -------------------------- |
+|--- | --- | ---|
 | PDF skill | You can use this to extract text from PDFs. | Extract text from PDFs with this skill. |
 | Git skill | When you need to manage branches, use this. | Manage Git branches with this skill. |
 | API skill | If you want to call the API, load this skill. | Call external APIs with this skill. |
@@ -213,7 +213,7 @@ openskills sync -y
 **Example comparison**:
 
 | ❌ Incorrect Writing | ✅ Correct Writing |
-| ------------------- | ------------------ |
+|--- | ---|
 | "You should create a file" | "Create a file" |
 | "When you want to load this skill" | "Load this skill when" |
 | "If you need to see the docs" | "See references/guide.md" |
@@ -257,7 +257,7 @@ For detailed API documentation, see:
 **File size comparison**:
 
 | File | Size Limit | Loaded into Context? |
-| ---- | ---------- | ------------------- |
+|--- | --- | ---|
 | `SKILL.md` | < 5,000 words | ✅ Yes |
 | `references/` | Unlimited | ❌ No (loaded on demand) |
 | `scripts/` | Unlimited | ❌ No (executable) |
@@ -370,7 +370,7 @@ git submodule update --init --recursive
 **Recommended selection**:
 
 | Method | Use Case | Advantages | Disadvantages |
-| ------ | -------- | ---------- | ------------- |
+|--- | --- | --- | ---|
 | Global installation | All projects share unified skills | Centralized management, easy updates | Cannot customize per project |
 | Symbolic link | Local development and testing | Modifications take effect immediately | Need to create links manually |
 | Git Submodule | Team collaboration, version control | Version controlled with project | Submodule management is complex |
@@ -421,11 +421,11 @@ npx openskills update pdf-editor,api-client
 **Unified team naming conventions**:
 
 | Skill Type | Naming Pattern | Examples |
-| ---------- | --------------- | -------- |
+|--- | --- | ---|
 | General tools | `<tool-name>` | `pdf`, `git`, `docker` |
-| Framework-related | `<framework>-<purpose>` | `react-component`, `django-model` |
+|--- | --- | ---|
 | Workflows | `<workflow>` | `ci-cd`, `code-review` |
-| Team-specific | `<team>-<purpose>` | `team-api`, `company-deploy` |
+|--- | --- | ---|
 
 **Examples**:
 
@@ -718,7 +718,7 @@ OpenSkills best practices core points:
 > Updated: 2026-01-24
 
 | Feature | File Path | Line Numbers |
-| ------- | -------- | ------------ |
+|--- | --- | ---|
 | Skill search priority | [`src/utils/dirs.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/dirs.ts) | 14-25 |
 | Skill deduplication mechanism | [`src/utils/skills.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skills.ts) | 42-43, 57 |
 | Symbolic link handling | [`src/utils/skills.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skills.ts) | 10-25 |

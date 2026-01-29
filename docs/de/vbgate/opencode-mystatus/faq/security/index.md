@@ -46,7 +46,7 @@ Diese drei Prinzipien werden übereinander gestapelt, um sicherzustellen, dass I
 Das Plugin liest nur zwei lokale Konfigurationsdateien, und zwar **nur schreibgeschützt**:
 
 | Dateipfad | Zweck | Quellcodeposition |
-| -------- | ---- | -------- |
+|--- | --- | ---|
 | `~/.local/share/opencode/auth.json` | Offizieller Authentifizierungsspeicher von OpenCode | `mystatus.ts:35` |
 | `~/.config/opencode/antigravity-accounts.json` | Antigravity-Plugin-Kontospeicher | `google.ts` (Leselogik) |
 
@@ -61,7 +61,7 @@ Im Quellcode wird nur die Funktion `readFile` zum Lesen von Dateien verwendet, o
 Das Plugin ruft nur die **offiziellen APIs** der einzelnen Plattformen auf, ohne Drittanbieterserver:
 
 | Plattform | API-Endpunkt | Zweck |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | OpenAI | `https://chatgpt.com/backend-api/wham/usage` | Kreditabfrage |
 | Zhipu AI | `https://bigmodel.cn/api/monitor/usage/quota/limit` | Token-Kreditabfrage |
 
@@ -74,7 +74,7 @@ Diese API-Endpunkte sind die offiziellen Schnittstellen der jeweiligen Plattform
 ### Was das Plugin nicht tut
 
 | Operation | Pluginkonfiguration |
-| ---- | -------- |
+|--- | ---|
 | Daten speichern | ❌ Speichert keine Benutzerdaten |
 | Daten hochladen | ❌ Lädt keine Daten an Drittanbieterserver hoch |
 | Ergebnisse zwischenspeichern | ❌ Speichert keine Abfrageergebnisse |
@@ -84,11 +84,11 @@ Diese API-Endpunkte sind die offiziellen Schnittstellen der jeweiligen Plattform
 ### Was das Plugin tut
 
 | Operation | Pluginkonfiguration |
-| ---- | -------- |
+|--- | ---|
 | Dateien lesen | ✅ Nur schreibgeschütztes Lesen lokaler Authentifizierungsdateien |
 | APIs aufrufen | ✅ Nur Aufruf offizieller API-Endpunkte |
 | Maskierte Anzeige | ✅ Automatisches Ausblenden von API-Keys und anderen sensiblen Informationen |
-| Open-Source-Überprüfung | ✅ Vollständig open-source Quellcode, selbst auditierbar |
+|--- | ---|
 
 ## Zusammenfassung
 
@@ -107,9 +107,9 @@ Diese API-Endpunkte sind die offiziellen Schnittstellen der jeweiligen Plattform
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
+|--- | --- | ---|
 | Authentifizierungsdateilesung | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts#L38-L40) | 38-40 |
-| API-Maskierungsfunktion | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L130-L135) | 130-135 |
+|--- | --- | ---|
 
 **Wichtige Funktionen**:
 - `maskString(str, showChars = 4)`: Maskierte Anzeige sensibler Zeichenketten, zeigt erste und letzte `showChars` Zeichen an, ersetzt den Mittelteil mit `****`

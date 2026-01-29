@@ -199,7 +199,7 @@ Most users use this plugin without issues. Risk depends on:
 **A: Fundamentally different, with different recovery methods.**
 
 | Feature | Shadow Ban | Rate Limiting (429) |
-|---------|------------|---------------------|
+|--- | --- | ---|
 | Trigger Cause | Abuse detection, flagged as suspicious | Request frequency exceeds quota |
 | Error Code | 403 or silent failure | 429 Too Many Requests |
 | Duration | Days to weeks | Hours to a day |
@@ -268,7 +268,7 @@ Before using this plugin, carefully evaluate the risk. If you cannot accept the 
 This lesson content is based on the risk warning section of the project README documentation (README.md:23-40), and does not involve specific code implementation.
 
 | Feature | File Path | Lines |
-| -------- | ------------------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | ToS Warning Statement | [`README.md`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/README.md#L23-L40) | 23-40   |
 
 </details>

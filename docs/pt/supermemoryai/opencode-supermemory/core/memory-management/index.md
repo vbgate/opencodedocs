@@ -27,7 +27,7 @@ opencode-supermemory divide memórias em dois **escopos (Scope)** isolados, seme
 ### 1. Dois Escopos
 
 | Escopo | Identificador (Scope ID) | Ciclo de Vida | Uso Típico |
-| :--- | :--- | :--- | :--- |
+|--- | --- | --- | ---|
 | **User Scope**<br>(Escopo do Usuário) | `user` | **Segue você permanentemente**<br>Compartilhado entre todos os projetos | • Preferências de estilo de codificação (ex: "gosta de TypeScript")<br>• Hábitos pessoais (ex: "sempre escreve comentários")<br>• Conhecimento geral |
 | **Project Scope**<br>(Escopo do Projeto) | `project` | **Limitado ao projeto atual**<br>Expira ao mudar de diretório | • Design de arquitetura do projeto<br>• Explicações de lógica de negócios<br>• Soluções para Bugs específicos |
 
@@ -191,7 +191,7 @@ O índice vetorial do Supermemory geralmente é em nível de segundos, mas pode 
 > Última atualização: 2026-01-23
 
 | Funcionalidade | Caminho do Arquivo | Linha |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Lógica de geração de Scope | [`src/services/tags.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/tags.ts#L18-L36) | 18-36 |
 | Definição da ferramenta de memória | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
 | Definição de tipos de memória | [`src/types/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/types/index.ts) | - |

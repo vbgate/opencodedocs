@@ -40,7 +40,7 @@ Vielleicht befinden Sie sich in diesen Situationen:
 Das **Speichersystem** ist für diese Szenarien geeignet:
 
 | Szenario | Beispiel | Speicherort |
-|------|--------|----------|
+|--- | --- | ---|
 | Persistentes Wissen | "Ich bin Vegetarier, denk daran" | MEMORY.md |
 | Tägliches Journaling | "Fortschritt der heutigen Arbeit und Aufgaben" | memory/YYYY-MM-DD.md |
 | Sitzungsrückgewinnung | "Was war der API-Endpunkt, über den wir das letzte Mal gesprochen haben?" | Vektorindex |
@@ -55,7 +55,7 @@ Das **Speichersystem** ist für diese Szenarien geeignet:
 Clawdbot verwendet **zwei Datenschichten** zur Verwaltung des Langzeitgedächtnisses:
 
 | Ebene | Dateipfad | Zweck | Ladezeitpunkt |
-|------|----------|------|----------|
+|--- | --- | --- | ---|
 | **Langzeitgedächtnis** | `MEMORY.md` | Ausgewähltes Wissen, Vorlieben, wichtige Fakten | Wird beim Starten der Hauptsitzung geladen |
 | **Tägliches Protokoll** | `memory/YYYY-MM-DD.md` | Tägliches Journaling, Ausführungskontext | Heutige + gestrige werden geladen |
 
@@ -86,7 +86,7 @@ graph LR
 Die Vektorsuche ist gut in "semantischer Übereinstimmung", aber schwach in "exakter Übereinstimmung":
 
 | Abfragetyp | Vektorsuche | BM25 Volltext | Hybridsuche |
-|----------|----------|-----------|----------|
+|--- | --- | --- | ---|
 | "Server-IP-Adresse" | ❌ Schwach | ✅ Stark | ✅ Optimal |
 | "Wie man Gateway bereitstellt" | ✅ Stark | ⚠️ Mittel | ✅ Optimal |
 | "API-Endpunkt a828e60" | ❌ Schwach | ✅ Stark | ✅ Optimal |
@@ -386,7 +386,7 @@ Konfiguration bearbeiten:
 **Parameterbeschreibung**:
 
 | Parameter | Standardwert | Beschreibung | Anpassungsvorschlag |
-|------|---------|------|----------|
+|--- | --- | --- | ---|
 | `vectorWeight` | 0,7 | Semantische Suchgewichtung | Auf 0,8 erhöhen für "natürliche Sprache"-Abfragen |
 | `textWeight` | 0,3 | Schlüsselwort-Suchgewichtung | Auf 0,5 erhöhen für "Code/ID"-Abfragen |
 | `candidateMultiplier` | 4 | Kandidaten-Multiplikator | Auf 6 erhöhen zur Verbesserung des Recalls |
@@ -452,7 +452,7 @@ clawdbot memory status --deep
 Nach Abschluss der obigen Schritte überprüfen Sie Folgendes:
 
 | Prüfpunkt | Überprüfungsmethode | Erwartetes Ergebnis |
-|---------|----------|----------|
+|--- | --- | ---|
 | Speicherdateien vorhanden | `ls ~/clawd/` | MEMORY.md und Verzeichnis memory/ vorhanden |
 | Index erstellt | `clawdbot memory status` | Zeigt Indexed > 0 chunks |
 | Suche funktioniert | `clawdbot memory search "..."` | Gibt relevante Ergebnisse zurück |
@@ -595,7 +595,7 @@ In dieser Lektion haben wir gelernt:
 > Aktualisiert: 2026-01-27
 
 | Funktion | Dateipfad | Zeilennummer |
-|------|----------|------|
+|--- | --- | ---|
 | Speicher-Manager | [`src/memory/manager.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/memory/manager.ts) | 1-200 |
 | Hybridsuche | [`src/memory/hybrid.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/memory/hybrid.ts) | 1-112 |
 | Embedding-Anbieter | [`src/memory/embeddings.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/memory/embeddings.ts) | 1-80 |

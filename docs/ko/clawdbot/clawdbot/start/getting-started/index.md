@@ -54,7 +54,7 @@ Gateway는 Clawdbot의 제어 평면입니다:
 ### 시스템 요구사항
 
 | 컴포넌트 | 요구사항 |
-| ------------- | ------------------- |
+|--- | ---|
 | **Node.js** | ≥ 22.12.0 |
 | **운영 체제** | macOS / Linux / Windows (WSL2) |
 | **패키지 관리자** | npm / pnpm / bun |
@@ -70,7 +70,7 @@ Windows에서는 **WSL2** 사용을 강력히 권장합니다. 그 이유는:
 모든 모델이 지원되지만, 다음을 강력히 추천합니다:
 
 | 제공자 | 추천 모델 | 이유 |
-| ---------- | ---------------- | ------------------------------ |
+|--- | --- | ---|
 | Anthropic | Claude Opus 4.5 | 긴 컨텍스트 이점, 더 강력한 프롬프트 인젝션 저항력 |
 | OpenAI | GPT-5.2 + Codex | 프로그래밍 능력, 멀티모달 지원 |
 
@@ -98,7 +98,7 @@ WhatsApp / Telegram / Slack / Discord / Signal / iMessage / WebChat
 **핵심 개념**:
 
 | 개념 | 역할 |
-| -------- | ----------------------- |
+|--- | ---|
 | **Gateway** | 데몬, 세션 관리, 채널 연결, 도구 호출 담당 |
 | **Channel** | 메시지 채널 (WhatsApp, Telegram, Slack 등) |
 | **Agent** | AI 런타임 (pi-mono 기반 RPC 모드) |
@@ -156,7 +156,7 @@ clawdbot onboard --install-daemon
 **마법사가 묻는 내용**:
 
 | 단계 | 질문 | 설명 |
-| --------- | --------------------------------- | ------------------ |
+|--- | --- | ---|
 | 1 | AI 모델 인증 방식 선택 | OAuth / API Key |
 | 2 | Gateway 구성 (포트, 인증) | 기본값: 127.0.0.1:18789 |
 | 3 | 채널 구성 (WhatsApp, Telegram 등) | 걱너뛸 수 있음, 나중에 구성 |
@@ -341,7 +341,7 @@ node --version
 Clawdbot 기본 구성 파일 위치:
 
 | 운영 체제 | 구성 경로 |
-| -------- | --------------------------- |
+|--- | ---|
 | macOS/Linux | `~/.clawdbot/clawdbot.json` |
 | Windows (WSL2) | `~/.clawdbot/clawdbot.json` |
 
@@ -434,7 +434,7 @@ pnpm gateway:watch  # TS 파일 변경 시 자동 리로드
 > 업데이트 날짜: 2026-01-27
 
 | 기능 | 파일 경로 | 라인 번호 |
-| --------------- | -------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | CLI 진입점 | [`src/cli/run-main.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/run-main.ts) | 26-60 |
 | Onboarding 명령 | [`src/cli/program/register.onboard.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.onboard.ts) | 34-100 |
 | Daemon 설치 | [`src/cli/daemon-cli/install.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/daemon-cli/install.ts) | 15-100 |

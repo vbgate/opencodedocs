@@ -144,7 +144,7 @@ Before killing the process, confirm it's not another important application. Plan
 **Cause Analysis**:
 
 | Scenario                            | Cause                                                            |
-| ----------------------------------- | ---------------------------------------------------------------- |
+|--- | ---|
 | Remote Environment                  | Plannotator detected remote mode, skipped automatic browser open |
 | `PLANNOTATOR_BROWSER` Misconfigured | Browser path or name incorrect                                   |
 | Browser Not Installed               | System default browser doesn't exist                             |
@@ -230,7 +230,7 @@ set PLANNOTATOR_BROWSER="C:\Program Files\Google\Chrome\Application\chrome.exe"
 **Possible Causes**:
 
 | Cause                  | Plan Review | Code Review |
-| ---------------------- | ----------- | ----------- |
+|--- | --- | ---|
 | Plan Parameter Empty   | ✅ Common    | ❌ N/A       |
 | Git Repository Issues  | ❌ N/A       | ✅ Common    |
 | No Diff to Display     | ❌ N/A       | ✅ Common    |
@@ -370,7 +370,7 @@ git diff HEAD
 **Possible Causes**:
 
 | Cause                                 | Solution                                     |
-| ------------------------------------- | -------------------------------------------- |
+|--- | ---|
 | No File Selected                      | Click upload button and select image         |
 | Unsupported File Format               | Use png/jpeg/webp format                     |
 | File Too Large                        | Compress image before uploading              |
@@ -431,7 +431,7 @@ dir %TEMP%\plannotator
 **Possible Causes**:
 
 | Cause                    | Obsidian | Bear |
-| ------------------------ | -------- | ---- |
+|--- | --- | ---|
 | Integration Not Enabled  | ✅        | ✅    |
 | Vault/App Not Detected   | ✅        | N/A  |
 | Path Configuration Error | ✅        | ✅    |
@@ -650,7 +650,7 @@ http://localhost:9999
 **Possible Causes**:
 
 | Cause                    | Solution                                                        |
-| ------------------------ | --------------------------------------------------------------- |
+|--- | ---|
 | Plan Save Disabled       | Check "Plan Save" option in settings                            |
 | Invalid Custom Path      | Verify path is writable                                         |
 | Empty Annotation Content | This is normal behavior (only saves when there are annotations) |
@@ -748,7 +748,7 @@ If you encounter problems not covered in this lesson, check:
 > Updated: 2026-01-24
 
 | Feature                                    | File Path                                                                                                                 | Line Number |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- | ----------- |
+|--- | --- | ---|
 | Server startup and retry logic             | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts#L79-L335)      | 79-335      |
 | Port conflict error handling (plan review) | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts#L319-L334)     | 319-334     |
 | Port conflict error handling (code review) | [`packages/server/review.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/review.ts#L252-L267)   | 252-267     |
@@ -763,7 +763,7 @@ If you encounter problems not covered in this lesson, check:
 **Key Constants**:
 
 | Constant         | Value | Description                    |
-| ---------------- | ----- | ------------------------------ |
+|--- | --- | ---|
 | `MAX_RETRIES`    | 5     | Server startup max retry count |
 | `RETRY_DELAY_MS` | 500   | Retry delay (milliseconds)     |
 

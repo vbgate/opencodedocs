@@ -206,7 +206,7 @@ curl -i http://127.0.0.1:<PORT>/v1/models \
 :::warning Неправильный против рекомендуемого подхода
 
 | Сценарий | ❌ Частая ошибка | ✓ Рекомендуемый подход |
-| --- | --- | --- |
+|--- | --- | ---|
 | Нужен доступ из локальной сети | Только открыть `allow_lan_access=true`, но `auth_mode=off` | Использовать `auth_mode=auto`, и установить сильный `api_key` |
 | Включена аутентификация, но постоянно 401 | Клиент несёт ключ, но имя заголовка несовместимо | Прокси совместим с тремя видами заголовков: `Authorization`/`x-api-key`/`x-goog-api-key` |
 | Включена аутентификация, но key не настроен | `api_key` пустой, аутентификация включена | Бэкенд напрямую откажет (в журналах будет подсказка, что key пуст) |
@@ -259,7 +259,7 @@ last_error = Some(format!("Token refresh failed: {}", e));
 > Дата обновления: 2026-01-23
 
 | Функция | Путь к файлу | Номер строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | 4 режима auth_mode и значение auto | [`docs/proxy/auth.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy/auth.md#L10-L24) | 10-24 |
 | Перечисление ProxyAuthMode и значение по умолчанию (по умолчанию off) | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L5-L18) | 5-18 |
 | Ключевые поля ProxyConfig: allow_lan_access/auth_mode/api_key и значения по умолчанию | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L258) | 174-258 |

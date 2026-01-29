@@ -189,7 +189,7 @@ openskills sync -y
 **示例对比**：
 
 | 场景 | ❌ 错误（第二人称） | ✅ 正确（第三人称） |
-| ---- | ------------------ | ------------------ |
+|--- | --- | ---|
 | PDF 技能 | You can use this to extract text from PDFs. | Extract text from PDFs with this skill. |
 | Git 技能 | When you need to manage branches, use this. | Manage Git branches with this skill. |
 | API 技能 | If you want to call the API, load this skill. | Call external APIs with this skill. |
@@ -212,7 +212,7 @@ openskills sync -y
 **示例对比**：
 
 | ❌ 错误写法 | ✅ 正确写法 |
-| ---------- | ---------- |
+|--- | ---|
 | "You should create a file" | "Create a file" |
 | "When you want to load this skill" | "Load this skill when" |
 | "If you need to see the docs" | "See references/guide.md" |
@@ -256,7 +256,7 @@ For detailed API documentation, see:
 **文件大小对比**：
 
 | 文件 | 大小限制 | 是否加载到上下文 |
-| ---- | -------- | -------------- |
+|--- | --- | ---|
 | `SKILL.md` | < 5000 词 | ✅ 是 |
 | `references/` | 无限制 | ❌ 否（按需加载） |
 | `scripts/` | 无限制 | ❌ 否（可执行） |
@@ -369,7 +369,7 @@ git submodule update --init --recursive
 **推荐选择**：
 
 | 方法 | 适用场景 | 优势 | 劣势 |
-| ---- | -------- | ---- | ---- |
+|--- | --- | --- | ---|
 | 全局安装 | 所有项目共享统一技能 | 集中管理，更新方便 | 无法按项目定制 |
 | 符号链接 | 本地开发和测试 | 修改立即生效 | 需要手动创建链接 |
 | Git Submodule | 团队协作，版本控制 | 随项目版本控制 | 子模块管理复杂 |
@@ -420,7 +420,7 @@ npx openskills update pdf-editor,api-client
 **团队统一命名规范**：
 
 | 技能类型 | 命名模式 | 示例 |
-| -------- | -------- | ---- |
+|--- | --- | ---|
 | 通用工具 | `<tool-name>` | `pdf`、`git`、`docker` |
 | 框架相关 | `<framework>-<purpose>` | `react-component`、`django-model` |
 | 工作流程 | `<workflow>` | `ci-cd`、`code-review` |
@@ -717,7 +717,7 @@ OpenSkills 最佳实践核心要点：
 > 更新时间：2026-01-24
 
 | 功能 | 文件路径 | 行号 |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | 技能查找优先级 | [`src/utils/dirs.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/dirs.ts) | 14-25 |
 | 技能去重机制 | [`src/utils/skills.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skills.ts) | 42-43, 57 |
 | 符号链接处理 | [`src/utils/skills.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skills.ts) | 10-25 |

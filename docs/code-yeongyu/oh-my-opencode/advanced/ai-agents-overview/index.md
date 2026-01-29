@@ -354,7 +354,7 @@ oh-my-opencode transforms these roles into 10 specialized AI agents that you can
 ## Agent Invocation Quick Reference
 
 | Agent | Invocation Method | Trigger Conditions |
-|------|-----------------|-------------------|
+|--- | --- | ---|
 | **Sisyphus** | Default main agent | Daily development tasks |
 | **Atlas** | `/start-work` command | Start project execution |
 | **Oracle** | `@oracle` or `delegate_task(agent="oracle")` | Complex architecture decisions, 2+ failed fix attempts |
@@ -455,7 +455,7 @@ User: Use Prometheus to plan this project
 ## Agent Permissions and Restrictions
 
 | Agent | write | edit | bash | delegate_task | webfetch | read | LSP | AST-Grep |
-|------|-------|------|------|--------------|----------|------|-----|----------|
+|--- | --- | --- | --- | --- | --- | --- | --- | ---|
 | **Sisyphus** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | **Atlas** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | **Oracle** | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ |
@@ -507,7 +507,7 @@ oh-my-opencode's 10 AI agents cover all stages of the development workflow:
 > Last Updated: 2026-01-26
 
 | Agent | File Path | Line Number |
-|------|-----------|-------------|
+|--- | --- | ---|
 | Sisyphus Chief Orchestrator | [`src/agents/sisyphus.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/sisyphus.ts) | - |
 | Atlas Chief Orchestrator | [`src/agents/atlas.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/atlas.ts) | - |
 | Oracle Advisor | [`src/agents/oracle.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/oracle.ts) | 1-123 |
@@ -515,7 +515,7 @@ oh-my-opencode's 10 AI agents cover all stages of the development workflow:
 | Explore Search Expert | [`src/agents/explore.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/explore.ts) | 1-123 |
 | Multimodal Looker | [`src/agents/multimodal-looker.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/multimodal-looker.ts) | 1-57 |
 | Prometheus Planner | [`src/agents/prometheus-prompt.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/prometheus-prompt.ts) | 1-1196 |
-| Metis Pre-planning Analysis | [`src/agents/metis.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/metis.ts) | 1-316 |
+|--- | --- | ---|
 | Momus Plan Reviewer | [`src/agents/momus.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/momus.ts) | 1-445 |
 | Sisyphus Junior | [`src/agents/sisyphus-junior.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/sisyphus-junior.ts) | - |
 | Agent Metadata Definition | [`src/agents/types.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/types.ts) | - |

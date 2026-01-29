@@ -36,7 +36,7 @@ Pero estas funciones deben implementarse manualmente, lo que aumenta la compleji
 Cuando necesites ampliar las capacidades del agente de IA:
 
 | Escenario | MCP recomendado |
-|-----------|------------------|
+|--- | ---|
 | Necesitas obtener información técnica reciente, noticias, tendencias de la industria | **websearch** (Exa) |
 | Consultar documentación oficial de API de bibliotecas o frameworks | **context7** |
 | Buscar ejemplos de implementación en repositorios de GitHub | **grep_app** (Grep.app) |
@@ -182,7 +182,7 @@ Deshabilitar MCP innecesarios puede:
 Prioridad de configuración de deshabilitación de MCP integrados:
 
 | Ubicación de configuración | Prioridad |
-|----------------------------|-----------|
+|--- | ---|
 | Configuración de usuario `~/.config/opencode/oh-my-opencode.json` | Alta (sobrescribe configuración del proyecto) |
 | Configuración del proyecto `.opencode/oh-my-opencode.json` | Media |
 | Valor predeterminado del código | Baja (todos habilitados) |
@@ -211,7 +211,7 @@ export const websearch = {
 **Explicación de campos de configuración**:
 
 | Campo | Tipo | Descripción |
-|-------|------|-------------|
+|--- | --- | ---|
 | `type` | `"remote"` | Valor fijo, indica MCP remoto |
 | `url` | `string` | Dirección HTTP del servidor MCP |
 | `enabled` | `boolean` | Si está habilitado (fijo en `true` en el código, controlado por `disabled_mcps`) |
@@ -288,7 +288,7 @@ oh-my-opencode doctor --verbose
 Esta lección presentó los 3 servidores MCP integrados de Oh-My-OpenCode:
 
 | MCP | Función | Requisitos de configuración | Uso principal |
-|-----|---------|------------------------------|---------------|
+|--- | --- | --- | ---|
 | **websearch** | Búsqueda web en tiempo real | EXA_API_KEY | Obtener información reciente |
 | **context7** | Consulta de documentación oficial | Ninguno | Consultar documentación de API |
 | **grep_app** | Búsqueda de código en GitHub | Ninguno | Encontrar ejemplos de implementación |
@@ -312,7 +312,7 @@ Estos servidores MCP amplían significativamente las capacidades de los agentes 
 > Última actualización: 2026-01-26
 
 | Función | Ruta del archivo | Líneas |
-|---------|------------------|--------|
+|--- | --- | ---|
 | Función de fábrica de MCP | [`src/mcp/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/mcp/index.ts) | 22-32 |
 | Configuración de websearch | [`src/mcp/websearch.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/mcp/websearch.ts) | 1-11 |
 | Configuración de context7 | [`src/mcp/context7.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/mcp/context7.ts) | 1-7 |

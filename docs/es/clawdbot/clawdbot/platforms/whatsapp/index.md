@@ -102,14 +102,14 @@ Edita `~/.clawdbot/clawdbot.json`, agrega la configuración de WhatsApp:
 **Descripción de Campos**:
 
 | Campo | Tipo | Valor por Defecto | Descripción |
-|-------|------|-------------------|-------------|
+|--- | --- | --- | ---|
 | `dmPolicy` | string | `"pairing"` | Política de acceso DM: `pairing` (emparejamiento), `allowlist` (lista blanca), `open` (público), `disabled` (deshabilitado) |
 | `allowFrom` | string[] | `[]` | Lista de números de teléfono de remitentes permitidos (formato E.164, por ejemplo `+15551234567`) |
 
 **Comparación de Políticas DM**:
 
 | Política | Comportamiento | Caso de Uso |
-|----------|----------------|-------------|
+|--- | --- | ---|
 | `pairing` | Remitentes desconocidos reciben código de emparejamiento, requieren aprobación manual | **Recomendado**, equilibra seguridad y conveniencia |
 | `allowlist` | Solo permite números de la lista `allowFrom` | Control estricto, usuarios conocidos |
 | `open` | Cualquiera puede enviar (requiere que `allowFrom` contenga `"*"`) | Pruebas públicas o servicios comunitarios |
@@ -230,7 +230,7 @@ En `clawdbot.json`, agrega:
 **Descripción de Campos**:
 
 | Campo | Tipo | Valor por Defecto | Descripción |
-|-------|------|-------------------|-------------|
+|--- | --- | --- | ---|
 | `emoji` | string | - | Emoji de confirmación (por ejemplo `"👀"`, `"✅"`), cadena vacía para deshabilitar |
 | `direct` | boolean | `true` | Si se envía confirmación en chats privados |
 | `group` | string | `"mentions"` | Comportamiento en grupos: `"always"` (todos los mensajes), `"mentions"` (solo @ menciones), `"never"` (nunca) |
@@ -264,7 +264,7 @@ Por defecto, Clawdbot marcará automáticamente los mensajes como leídos (doble
 ```
 
 | Campo | Valor por Defecto | Descripción |
-|-------|-------------------|-------------|
+|--- | --- | ---|
 | `textChunkLimit` | 4000 | Número máximo de caracteres por mensaje de texto |
 | `mediaMaxMb` | 50 | Tamaño máximo de archivos multimedia recibidos (MB) |
 | `chunkMode` | `"length"` | Modo de división: `"length"` (por longitud), `"newline"` (por párrafos) |
@@ -378,7 +378,7 @@ Puntos clave de la configuración del canal de WhatsApp:
 > Última actualización: 2026-01-27
 
 | Función | Ruta del Archivo | Líneas |
-|----------|-----------------|--------|
+|--- | --- | ---|
 | Definición de tipos de configuración de WhatsApp | [`src/config/types.whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.whatsapp.ts) | 1-160 |
 | Esquema de configuración de WhatsApp | [`src/config/zod-schema.providers-whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-whatsapp.ts) | 13-100 |
 | Configuración de incorporación de WhatsApp | [`src/channels/plugins/onboarding/whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/whatsapp.ts) | 1-341 |

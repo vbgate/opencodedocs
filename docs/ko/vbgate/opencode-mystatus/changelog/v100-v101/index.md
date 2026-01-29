@@ -52,7 +52,7 @@ npm update @vbgate/opencode-mystatus
 다음 플랫폼의 할당량 사용 현황을 한 번에 조회할 수 있습니다:
 
 | 플랫폼 | 지원되는 구독 유형 | 할당량 유형 |
-| ---- | -------------- | -------- |
+|--- | --- | ---|
 | OpenAI | Plus/Team/Pro | 3시간 한도, 24시간 한도 |
 | Zhipu AI | Coding Plan | 5시간 토큰 한도, MCP 월별 할당량 |
 | Google Cloud | Antigravity | G3 Pro, G3 Image, G3 Flash, Claude |

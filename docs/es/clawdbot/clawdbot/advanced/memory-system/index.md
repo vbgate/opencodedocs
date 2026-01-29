@@ -40,7 +40,7 @@ Es posible que te encuentres en estas situaciones:
 El **sistema de memoria** es adecuado para estos escenarios:
 
 | Escenario | Ejemplo | Ubicación de almacenamiento |
-|------|--------|----------|
+|--- | --- | ---|
 | Conocimiento persistente | "Soy vegetariano, recuerda esto" | MEMORY.md |
 | Notas diarias | "Progreso de trabajo y tareas pendientes de hoy" | memory/YYYY-MM-DD.md |
 | Recuperación de sesiones | "¿Cuál fue el endpoint de API discutido la última vez?" | Índice vectorial |
@@ -55,7 +55,7 @@ El **sistema de memoria** es adecuado para estos escenarios:
 Clawdbot utiliza **dos capas de datos** para gestionar la memoria a largo plazo:
 
 | Capa | Ruta del archivo | Propósito | Momento de carga |
-|------|----------|------|----------|
+|--- | --- | --- | ---|
 | **Memoria a largo plazo** | `MEMORY.md` | Conocimientos seleccionados, preferencias, hechos importantes | Se carga al iniciar la sesión principal |
 | **Registro diario** | `memory/YYYY-MM-DD.md` | Notas diarias, contexto de ejecución | Se carga el de hoy + el de ayer |
 
@@ -86,7 +86,7 @@ graph LR
 La búsqueda vectorial es buena en "coincidencia semántica", pero débil en "coincidencia exacta":
 
 | Tipo de consulta | Búsqueda vectorial | BM25 texto completo | Búsqueda híbrida |
-|----------|----------|-----------|----------|
+|--- | --- | --- | ---|
 | "Dirección IP del servidor" | ❌ Débil | ✅ Fuerte | ✅ Óptimo |
 | "Cómo desplegar Gateway" | ✅ Fuerte | ⚠️ Medio | ✅ Óptimo |
 | "Endpoint de API a828e60" | ❌ Débil | ✅ Fuerte | ✅ Óptimo |
@@ -386,7 +386,7 @@ Edita la configuración:
 **Descripción de parámetros**:
 
 | Parámetro | Valor predeterminado | Descripción | Sugerencia de ajuste |
-|------|---------|------|----------|
+|--- | --- | --- | ---|
 | `vectorWeight` | 0.7 | Peso de búsqueda semántica | Aumentar a 0.8 para consultas de "lenguaje natural" |
 | `textWeight` | 0.3 | Peso de búsqueda de palabras clave | Aumentar a 0.5 para consultas de "código/ID" |
 | `candidateMultiplier` | 4 | Multiplicador de candidatos | Aumentar a 6 para mejorar el recall |
@@ -452,7 +452,7 @@ clawdbot memory status --deep
 Después de completar los pasos anteriores, verifica lo siguiente:
 
 | Elemento a verificar | Método de verificación | Resultado esperado |
-|---------|----------|----------|
+|--- | --- | ---|
 | Archivos de memoria existen | `ls ~/clawd/` | MEMORY.md y el directorio memory/ existen |
 | Índice creado | `clawdbot memory status` | Muestra Indexed > 0 chunks |
 | Búsqueda funciona | `clawdbot memory search "..."` | Devuelve resultados relevantes |
@@ -595,7 +595,7 @@ En esta lección aprendimos:
 > Actualizado: 2026-01-27
 
 | Función | Ruta del archivo | Número de línea |
-|------|----------|------|
+|--- | --- | ---|
 | Gestor de memoria | [`src/memory/manager.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/memory/manager.ts) | 1-200 |
 | Búsqueda híbrida | [`src/memory/hybrid.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/memory/hybrid.ts) | 1-112 |
 | Proveedor de Embedding | [`src/memory/embeddings.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/memory/embeddings.ts) | 1-80 |

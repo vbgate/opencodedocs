@@ -20,7 +20,7 @@ Before studying this chapter, ensure you have completed:
 ## Chapter Contents
 
 | Course | Description | Suitable For |
-|--------|-------------|--------------|
+|--- | --- | ---|
 | [Protection Mechanisms](./protection/) | Turn protection, protected tools, and protected file patterns | Avoid mistakenly pruning critical content |
 | [State Persistence](./state-persistence/) | How DCP preserves pruning state and statistics across sessions | Understand data storage mechanisms |
 | [Prompt Caching Impact](./prompt-caching/) | Impact of DCP pruning on Prompt Caching | Optimize cache hit rates |

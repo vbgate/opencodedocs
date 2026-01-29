@@ -606,7 +606,7 @@ const finalConfig = {
 ## 模块依赖关系
 
 | 模块        | 职责               | 依赖模块                              | 被依赖模块                  |
-| ----------- | ------------------ | ------------------------------------- | -------------------------- |
+|--- | --- | --- | ---|
 | config      | 配置管理           | -                                     | index, hooks, strategies, commands |
 | hooks       | 钩子适配           | config, state, logger, messages, strategies, commands | index |
 | state       | 状态管理           | logger                                | index, hooks, strategies    |
@@ -722,7 +722,7 @@ DCP 的架构设计围绕"消息变换"这一核心展开，通过 OpenCode 的�
 > 更新时间：2026-01-23
 
 | 功能        | 文件路径                                                                                    | 行号    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 插件入口和钩子注册 | [`index.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/index.ts) | 12-102 |
 | 系统提示词注入钩子 | [`lib/hooks.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/hooks.ts) | 20-53 |
 | 消息变换钩子 | [`lib/hooks.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/hooks.ts) | 55-82 |

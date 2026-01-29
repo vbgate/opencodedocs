@@ -61,7 +61,7 @@ Because language detection is based on the system environment. The plugin automa
 
 **Supported Languages**:
 | Language | Code | Detection Condition |
-| --- | --- | --- |
+|--- | --- | ---|
 | Chinese | `zh` | locale starts with `zh` (e.g., `zh-CN`, `zh-TW`) |
 | English | `en` | Other cases |
 
@@ -195,7 +195,7 @@ source ~/.bashrc
 Verify language detection is working correctly:
 
 | Test Item | Action | Expected Result |
-| --- | --- | --- |
+|--- | --- | ---|
 | Chinese system | Run `/mystatus` | Output in Chinese (e.g., `3小时限额`) |
 | English system | Run `/mystatus` | Output in English (e.g., `3-hour limit`) |
 | Temporary switch | Run command after modifying `LANG` env var | Output language changes accordingly |
@@ -205,7 +205,7 @@ Verify language detection is working correctly:
 ### Common Issues
 
 | Issue | Cause | Solution |
-| --- | --- | --- |
+|--- | --- | ---|
 | Output language doesn't match expectations | System language setting incorrect | Check `LANG` environment variable or system language settings |
 | Intl API unavailable | Node.js version too low or environment doesn't support it | Plugin automatically falls back to environment variable detection |
 | Chinese system showing English | Environment variable `LANG` not set to `zh_*` | Set correct `LANG` value (e.g., `zh_CN.UTF-8`) |
@@ -255,7 +255,7 @@ The plugin detects language **only once** when the module loads. After modifying
 > Last updated: 2026-01-23
 
 | Function | File Path | Line Numbers |
-| --- | --- | --- |
+|--- | --- | ---|
 | Language detection function | [`plugin/lib/i18n.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/i18n.ts#L24-L40) | 24-40 |
 | Chinese translation definitions | [`plugin/lib/i18n.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/i18n.ts#L46-L124) | 46-124 |
 | English translation definitions | [`plugin/lib/i18n.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/i18n.ts#L125-L203) | 125-203 |

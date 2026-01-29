@@ -82,12 +82,12 @@ Typendefinitionen in `types.ts` (Quellcode-Position: `types.ts:1-54`).
 Der Impact-Level identifiziert den Performance-Einflussgrad der Regel, mit 6 Levels:
 
 | Wert | Beschreibung | Anwendbare Szenarien |
-| --- | --- | --- |
+|--- | --- | ---|
 | `CRITICAL` | Kritische Engpässe | müssen behoben werden, beeinträchtigt erheblich die User Experience (wie Wasserfälle, unoptimierte Bundle-Größen) |
 | `HIGH` | Wichtige Verbesserungen | signifikante Performance-Steigerung (wie Server-Side-Caching, Beseitigung doppelter Props) |
-| `MEDIUM-HIGH` | Mittel-hohe Priorität | deutliche Performance-Verbesserung (wie Data-Fetching-Optimierung) |
+|--- | --- | ---|
 | `MEDIUM` | Mittlere Verbesserungen | messbare Performance-Verbesserung (wie Memo-Optimierung, Reduzierung von Re-renders) |
-| `LOW-MEDIUM` | Niedrig-mittlere Priorität | leichte Performance-Verbesserung (wie Rendering-Optimierung) |
+|--- | --- | ---|
 | `LOW` | Inkrementelle Verbesserungen | Mikro-Optimierungen (wie Code-Stil, erweiterte Muster) |
 
 ### Rule-Interface
@@ -95,7 +95,7 @@ Der Impact-Level identifiziert den Performance-Einflussgrad der Regel, mit 6 Lev
 Vollständige Struktur einer einzelnen Performance-Optimierungsregel:
 
 | Feld | Typ | Pflicht | Beschreibung |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `id` | string | ✅ | Regel-ID (automatisch generiert, wie "1.1", "2.3") |
 | `title` | string | ✅ | Regeltitel |
 | `section` | number | ✅ | Zugehöriges Kapitel (1-8) |
@@ -132,11 +132,11 @@ Vollständige Struktur einer einzelnen Performance-Optimierungsregel:
 > Aktualisierungszeit: 2026-01-25
 
 | Funktion                  | Dateipfad                                                                 | Zeilen       |
-| --------------------- | ------------------------------------------------------------------------ | ---------- |
+|--- | --- | ---|
 | Typensystem              | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts) | 1-54       |
-| Pfad-Konfiguration              | [`packages/react-best-practices-build/src/config.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/config.ts) | 1-18       |
+|--- | --- | ---|
 | Regelparser            | [`packages/react-best-practices-build/src/parser.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/parser.ts) | 18-238     |
-| Build-Skript              | [`packages/react-best-practices-build/src/build.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/build.ts) | 131-287    |
+|--- | --- | ---|
 
 **Wichtige Konstanten**:
 - `ImpactLevel`-Enum-Werte: CRITICAL, HIGH, MEDIUM-HIGH, MEDIUM, LOW-MEDIUM, LOW (`types.ts:5`)

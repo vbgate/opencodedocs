@@ -54,7 +54,7 @@ Le Gateway est le plan de contrôle de Clawdbot, il permet de :
 ### Configuration requise
 
 | Composant | Prérequis |
-| -------------- | ------------------- |
+|--- | ---|
 | **Node.js** | ≥ 22.12.0 |
 | **Système d'exploitation** | macOS / Linux / Windows (WSL2) |
 | **Gestionnaire de paquets** | npm / pnpm / bun |
@@ -70,7 +70,7 @@ Il est fortement recommandé d'utiliser **WSL2** sur Windows car :
 Bien que tous les modèles soient pris en charge, nous recommandons fortement :
 
 | Fournisseur | Modèle recommandé | Raison |
-| ---------- | ---------------- | ------------------------------ |
+|--- | --- | ---|
 | Anthropic | Claude Opus 4.5 | Avantage de contexte long, meilleure résistance aux injections de prompts |
 | OpenAI | GPT-5.2 + Codex | Capacités de programmation, support multimodal |
 
@@ -98,7 +98,7 @@ WhatsApp / Telegram / Slack / Discord / Signal / iMessage / WebChat
 **Concepts clés** :
 
 | Concept | Rôle |
-| -------- | ----------------------- |
+|--- | ---|
 | **Gateway** | Démon responsable de la gestion des sessions, connexions aux canaux, invocation des outils |
 | **Channel** | Canaux de messagerie (WhatsApp, Telegram, Slack, etc.) |
 | **Agent** | Runtime IA (mode RPC basé sur pi-mono) |
@@ -156,7 +156,7 @@ clawdbot onboard --install-daemon
 **Ce que l'assistant vous demandera** :
 
 | Étape | Question | Description |
-| --------- | --------------------------------- | ------------------ |
+|--- | --- | ---|
 | 1 | Choisir la méthode d'authentification du modèle IA | OAuth / API Key |
 | 2 | Configurer le Gateway (port, authentification) | Par défaut : 127.0.0.1:18789 |
 | 3 | Configurer les canaux (WhatsApp, Telegram, etc.) | Peut être ignoré, configuration ultérieure possible |
@@ -341,7 +341,7 @@ node --version
 Emplacement par défaut du fichier de configuration de Clawdbot :
 
 | Système d'exploitation | Chemin de configuration |
-| -------- | --------------------------- |
+|--- | ---|
 | macOS/Linux | `~/.clawdbot/clawdbot.json` |
 | Windows (WSL2) | `~/.clawdbot/clawdbot.json` |
 
@@ -433,7 +433,7 @@ pnpm gateway:watch  # Rechargement automatique lors des modifications des fichie
 > Dernière mise à jour : 2026-01-27
 
 | Fonctionnalité | Chemin du fichier | Lignes |
-| --------------- | --------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Entrée CLI | [`src/cli/run-main.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/run-main.ts) | 26-60 |
 | Commande Onboarding | [`src/cli/program/register.onboard.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.onboard.ts) | 34-100 |
 | Installation du Daemon | [`src/cli/daemon-cli/install.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/daemon-cli/install.ts) | 15-100 |

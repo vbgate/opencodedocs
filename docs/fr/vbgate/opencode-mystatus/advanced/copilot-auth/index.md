@@ -58,7 +58,7 @@ Lorsque vous :
 mystatus prend en charge **deux méthodes d'authentification Copilot** :
 
 | Méthode d'authentification | Description | Avantages | Inconvénients |
-|---------------------------|-------------|-----------|---------------|
+|--- | --- | --- | ---|
 | **Jeton OAuth** (par défaut) | Utilise le jeton OAuth GitHub obtenu lors de la connexion à OpenCode | Aucune configuration supplémentaire, prêt à l'emploi | Le nouveau jeton OAuth d'OpenCode peut ne pas avoir les autorisations Copilot |
 | **Fine-grained PAT** (recommandé) | Jeton d'accès personnel Fine-grained créé manuellement par l'utilisateur | Stable et fiable, ne dépend pas des autorisations OAuth | Nécessite une création manuelle une fois |
 
@@ -124,7 +124,7 @@ Cliquez sur **Generate new token (classic)** ou **Generate new token (beta)**, i
 **Paramètres de configuration** :
 
 | Champ | Valeur |
-|-------|--------|
+|--- | ---|
 | **Name** | `mystatus-copilot` (ou tout autre nom de votre choix) |
 | **Expiration** | Choisissez la date d'expiration (comme 90 jours ou No expiration) |
 | **Resource owner** | Non nécessaire (par défaut) |
@@ -167,7 +167,7 @@ Notez ce nom d'utilisateur, vous en aurez besoin pour la configuration.
 Vous devez connaître votre type d'abonnement Copilot, car différents types ont des quotas mensuels différents :
 
 | Type d'abonnement | Quota mensuel | Scénario applicable |
-|-------------------|---------------|---------------------|
+|--- | --- | ---|
 | `free` | 50 | Copilot Free (utilisateurs gratuits) |
 | `pro` | 300 | Copilot Pro (professionnel personnel) |
 | `pro+` | 1500 | Copilot Pro+ (personnel amélioré) |
@@ -255,7 +255,7 @@ Period: 2026-01
 Vérifiez votre compréhension :
 
 | Scénario | Ce que vous devriez voir/faire |
-|----------|--------------------------------|
+|--- | ---|
 | Le fichier de configuration existe | `ls ~/.config/opencode/copilot-quota-token.json` affiche le fichier |
 | PAT créé avec succès | Le jeton commence par `github_pat_` |
 | Type d'abonnement correct | La valeur `tier` dans la configuration est l'une de free/pro/pro+/business/enterprise |
@@ -344,9 +344,9 @@ Une fois la configuration terminée, mystatus utilisera en priorité le PAT pour
 > Date de mise à jour : 2026-01-23
 
 | Fonction | Chemin du fichier | Ligne |
-|-------------------|------------------------------------------------------------------------------------------|-------|
+|--- | --- | ---|
 | Point d'entrée de la stratégie d'authentification Copilot | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L481-L524) | 481-524 |
-| Lecture de la configuration PAT Fine-grained | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L122-L151) | 122-151 |
+|--- | --- | ---|
 | Appel de l'API Billing publique | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L157-L177) | 157-177 |
 | Échange de jeton OAuth | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L183-L208) | 183-208 |
 | Appel de l'API interne (OAuth) | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L242-L304) | 242-304 |
@@ -372,7 +372,7 @@ Une fois la configuration terminée, mystatus utilisera en priorité le PAT pour
 **Comparaison du flux d'authentification** :
 
 | Stratégie | Type de jeton | Point de terminaison API | Priorité |
-|-----------|--------------|------------------------|----------|
+|--- | --- | --- | ---|
 | Fine-grained PAT | PAT Fine-grained | `/users/{username}/settings/billing/premium_request/usage` | 1 (prioritaire) |
 | Jeton OAuth (mis en cache) | Jeton de session Copilot | `/copilot_internal/user` | 2 |
 | Jeton OAuth (direct) | Jeton OAuth GitHub | `/copilot_internal/user` | 3 |

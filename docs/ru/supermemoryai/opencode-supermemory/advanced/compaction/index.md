@@ -96,7 +96,7 @@ Supermemory в реальном времени отслеживает испол
 Когда сжатие триггерируется, Supermemory внедрит в Agent специальный System Prompt (`[COMPACTION CONTEXT INJECTION]`), принудительно требуя, чтобы сводка содержала следующие 5 частей:
 
 | Раздел | Описание содержимого | Цель |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **1. User Requests** | Исходные запросы пользователя (сохранить как есть) | Предотвращение дрейфа требований |
 | **2. Final Goal** | Конечная цель | Определение конечного состояния |
 | **3. Work Completed** | Выполненная работа, измененные файлы | Предотвращение повторной работы |
@@ -231,7 +231,7 @@ opencode run supermemory list --scope project --limit 1
 > Время обновления: 2026-01-23
 
 | Функция | Путь к файлу | Номер строки |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Определение констант порога | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L11-L14) | 11-14 |
 | Генерация руководящего Prompt | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L58-L98) | 58-98 |
 | Логика обнаружения триггера | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L317-L358) | 317-358 |

@@ -69,7 +69,7 @@ This design allows you to flexibly switch between multiple providers and account
 Clawdbot supports three authentication methods for different scenarios:
 
 | Auth Method | Storage Format | Typical Use Case | Supported Providers |
-|------------|----------------|------------------|---------------------|
+|--- | --- | --- | ---|
 | **API Key** | `{ type: "api_key", key: "sk-..." }` | Quick start, testing | Anthropic, OpenAI, OpenRouter, DeepSeek, etc. |
 | **OAuth** | `{ type: "oauth", access: "...", refresh: "..." }` | Long-running, auto-refresh | Anthropic (Claude Code CLI), OpenAI (Codex), Qwen Portal |
 | **Token** | `{ type: "token", token: "..." }` | Static Bearer token | GitHub Copilot, certain custom proxies |
@@ -80,7 +80,7 @@ Clawdbot has built-in support for the following model providers:
 
 ::: details Built-in Providers List
 | Provider | Authentication Method | Recommended Model | Notes |
-|----------|----------------------|-------------------|-------|
+|--- | --- | --- | ---|
 | **Anthropic** | API Key / OAuth (Claude Code CLI) | `anthropic/claude-opus-4-5` | Recommend Claude Pro/Max + Opus 4.5 |
 | **OpenAI** | API Key / OAuth (Codex) | `openai/gpt-5.2` | Supports standard OpenAI and Codex versions |
 | **OpenRouter** | API Key | `openrouter/anthropic/claude-sonnet-4-5` | Aggregates hundreds of models |
@@ -462,7 +462,7 @@ auth:
 Clawdbot supports auto-refresh for the following OAuth providers:
 
 | Provider | OAuth Flow | Refresh Mechanism |
-|----------|------------|-------------------|
+|--- | --- | ---|
 | **Anthropic** (Claude Code CLI) | Standard authorization code | pi-mono RPC refresh |
 | **OpenAI** (Codex) | Standard authorization code | pi-mono RPC refresh |
 | **Qwen Portal** | Custom OAuth | `refreshQwenPortalCredentials` |
@@ -524,7 +524,7 @@ Aliases are just shortcuts for model IDs, they don't affect authentication selec
 Some providers don't need explicit configuration, Clawdbot auto-detects:
 
 | Provider | Detection Method | Configuration File |
-|----------|-----------------|-------------------|
+|--- | --- | ---|
 | **GitHub Copilot** | `~/.copilot/credentials.json` | No configuration needed |
 | **AWS Bedrock** | Environment variables or AWS SDK credentials | `~/.aws/credentials` |
 | **Codex CLI** | `~/.codex/auth.json` | No configuration needed |
@@ -634,7 +634,7 @@ clawdbot gateway restart
 > Updated: 2026-01-27
 
 | Feature | File Path | Line Numbers |
-|---------|-----------|--------------|
+|--- | --- | ---|
 | Authentication credential type definitions | [`src/agents/auth-profiles/types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/types.ts) | 1-74 |
 | OAuth token parsing and refresh | [`src/agents/auth-profiles/oauth.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/oauth.ts) | 1-220 |
 | Authentication profile management | [`src/agents/auth-profiles/profiles.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/profiles.ts) | 1-85 |

@@ -281,7 +281,7 @@ Une fois l'installation terminée, vous pouvez laisser Claude utiliser automatiq
 > Dernière mise à jour :2026-01-25
 
 | Fonctionnalité | Chemin de fichier | Ligne |
-| ------------- | ------------------------------------------ | ----- |
+|--- | --- | ---|
 | Méthode d'installation npx | [`README.md:83-86`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L83-L86) | 83-86 |
 | Installation manuelle Claude Code | [`AGENTS.md:98-105`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L98-L105) | 98-105 |
 | Méthode d'installation claude.ai | [`AGENTS.md:106-109`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L106-L109) | 106-109 |

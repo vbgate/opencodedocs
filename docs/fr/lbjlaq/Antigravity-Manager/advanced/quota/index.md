@@ -192,7 +192,7 @@ La gouvernance de quota résout "comment dépenser plus stable". Le prochain cou
 > Date de mise à jour : 2026-01-23
 
 | Fonction | Chemin du fichier | Ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Interface Quota Protection (seuil, cocher modèles, au moins 1) | [`src/components/settings/QuotaProtection.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/settings/QuotaProtection.tsx#L13-L168) | 13-168 |
 | Interface Smart Warmup (activé par défaut coché, au moins 1) | [`src/components/settings/SmartWarmup.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/settings/SmartWarmup.tsx#L14-L120) | 14-120 |
 | Champs configuration gouvernance quota (`quota_protection` / `scheduled_warmup`) | [`src/types/config.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/types/config.ts#L54-L94) | 54-94 |

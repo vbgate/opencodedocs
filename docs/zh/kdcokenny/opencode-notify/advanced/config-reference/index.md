@@ -82,7 +82,7 @@ order: 70
 #### notifyChildSessions
 
 | 配置项 | 类型 | 默认值 | 说明 |
-| ------ | ---- | ------ | ---- |
+|--- | --- | --- | ---|
 | `notifyChildSessions` | boolean | `false` | 是否通知子会话 |
 
 **作用**：控制是否为子会话（sub-session）发送通知。
@@ -120,7 +120,7 @@ order: 70
 #### sounds
 
 | 配置项 | 类型 | 默认值 | 平台支持 | 说明 |
-| ------ | ---- | ------ | -------- | ---- |
+|--- | --- | --- | --- | ---|
 | `sounds.idle` | string | `"Glass"` | ✅ macOS | 任务完成音效 |
 | `sounds.error` | string | `"Basso"` | ✅ macOS | 错误通知音效 |
 | `sounds.permission` | string | `"Submarine"` | ✅ macOS | 权限请求音效 |
@@ -131,7 +131,7 @@ order: 70
 **可用音效列表**：
 
 | 音效名 | 听感特点 | 推荐场景 |
-| ------ | -------- | -------- |
+|--- | --- | ---|
 | Glass | 轻快、清脆 | 任务完成（默认） |
 | Basso | 低沉、警告 | 错误通知（默认） |
 | Submarine | 提醒、柔和 | 权限请求（默认） |
@@ -164,7 +164,7 @@ order: 70
 #### quietHours
 
 | 配置项 | 类型 | 默认值 | 说明 |
-| ------ | ---- | ------ | ---- |
+|--- | --- | --- | ---|
 | `quietHours.enabled` | boolean | `false` | 是否启用静音时段 |
 | `quietHours.start` | string | `"22:00"` | 静音开始时间（HH:MM 格式） |
 | `quietHours.end` | string | `"08:00"` | 静音结束时间（HH:MM 格式） |
@@ -194,7 +194,7 @@ order: 70
 #### terminal
 
 | 配置项 | 类型 | 默认值 | 说明 |
-| ------ | ---- | ------ | ---- |
+|--- | --- | --- | ---|
 | `terminal` | string | 未设置 | 手动指定终端类型（覆盖自动检测） |
 
 **作用**：手动指定你使用的终端模拟器类型，覆盖插件的自动检测。
@@ -210,7 +210,7 @@ order: 70
 **常用终端值**：
 
 | 终端应用 | 配置值 |
-| -------- | ------ |
+|--- | ---|
 | Ghostty | `"ghostty"` |
 | Kitty | `"kitty"` |
 | iTerm2 | `"iterm2"` |
@@ -232,7 +232,7 @@ order: 70
 不同平台对配置项的支持程度不同：
 
 | 配置项 | macOS | Windows | Linux |
-| ------ | ----- | ------- | ----- |
+|--- | --- | --- | ---|
 | `notifyChildSessions` | ✅ | ✅ | ✅ |
 | 焦点检测（硬编码） | ✅ | ❌ | ❌ |
 | `sounds.*` | ✅ | ❌ | ❌ |
@@ -408,7 +408,7 @@ Get-Content "$env:APPDATA\opencode\kdco-notify.json"
 **常见 JSON 错误**：
 
 | 错误类型 | 示例 | 修正方法 |
-| ------ | ---- | ------ |
+|--- | --- | ---|
 | 缺少逗号 | `"key1": "value1" "key2": "value2"` | 添加逗号：`"key1": "value1",` |
 | 多余逗号 | `"key1": "value1",}` | 删除最后一个逗号：`"key1": "value1"}` |
 | 引号未闭合 | `"key": value` | 添加引号：`"key": "value"` |
@@ -426,7 +426,7 @@ Get-Content "$env:APPDATA\opencode\kdco-notify.json"
 **核心配置项**：
 
 | 配置项 | 作用 | 默认值 | 平台支持 |
-| ------ | ---- | ------ | -------- |
+|--- | --- | --- | ---|
 | `notifyChildSessions` | 子会话通知开关 | `false` | 全平台 |
 | 焦点检测 | 终端聚焦抑制（硬编码） | 无配置 | 仅 macOS |
 | `sounds.*` | 自定义音效 | 见各字段 | 仅 macOS |
@@ -462,7 +462,7 @@ Get-Content "$env:APPDATA\opencode\kdco-notify.json"
 > 更新时间：2026-01-27
 
 | 功能 | 文件路径 | 行号 |
-| ---- | --------- | ---- |
+|--- | --- | ---|
 | 配置接口定义 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L30-L48) | 30-48 |
 | 默认配置 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L56-L68) | 56-68 |
 | 配置文件加载 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L91-L114) | 91-114 |

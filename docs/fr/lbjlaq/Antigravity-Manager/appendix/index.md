@@ -13,7 +13,7 @@ Ce chapitre rassemble les références techniques d'Antigravity Tools, incluant 
 ## Contenu de ce chapitre
 
 | Document | Description | Scénario approprié |
-| --- | --- | --- |
+|--- | --- | ---|
 | **[Tableau de référence rapide des points de terminaison](./endpoints/)** | Vue d'ensemble des routes HTTP externes : points de terminaison OpenAI/Anthropic/Gemini/MCP, modes d'authentification et format d'en-tête | Intégration de nouveaux clients, dépannage 404/401 |
 | **[Données et modèles](./storage-models/)** | Structure de fichier de compte, structure de table de base de données statistiques SQLite, définitions de champs clés | Sauvegarde/migration, requête directe de base de données, dépannage |
 | **[Limites d'intégration z.ai](./zai-boundaries/)** | Liste des fonctionnalités implémentées vs explicitement non implémentées de z.ai | Évaluer les capacités de z.ai, éviter la mauvaise utilisation |

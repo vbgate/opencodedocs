@@ -172,7 +172,7 @@ Click "Reset Mapping."
 ## Pitfall Alerts
 
 | Scenario | What you might do (❌) | Recommended practice (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Wildcard not working | Write `GPT-4*` expecting to match `gpt-4-turbo` | Use lowercase `gpt-4*`; backend wildcard matching is case-sensitive |
 | Two wildcards both match | Write both `gpt-*` and `gpt-4*`, unsure which will be used | Make the more specific rule "longer," ensuring it has more non-`*` characters |
 | Rule looks right but nothing changed | Only look at response body, not response header | Use `curl -i` to confirm `X-Mapped-Model` (this is explicitly returned by the backend) |
@@ -198,16 +198,16 @@ Click "Reset Mapping."
 > Last updated: 2026-01-23
 
 | Feature | File Path | Lines |
-| --- | --- | --- |
+|--- | --- | ---|
 | Config field: `proxy.custom_mapping` (frontend type) | [`src/types/config.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/types/config.ts#L6-L20) | 6-20 |
 | UI: write/reset/presets (calls `update_model_mapping`) | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L371-L475) | 371-475 |
 | UI: Model Routing card (apply preset mapping / reset mapping / list and add form) | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L1762-L1931) | 1762-1931 |
 | Backend command: hot reload and persist `custom_mapping` | [`src-tauri/src/commands/proxy.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/proxy.rs#L344-L365) | 344-365 |
 | Server state: `custom_mapping` saved with `RwLock<HashMap<..>>` | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L16-L53) | 16-53 |
 | Routing algorithm: exact > wildcard (more specific takes priority) > default mapping | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L180-L228) | 180-228 |
-| Wildcard matching: supports multiple `*`, case-sensitive | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L134-L178) | 134-178 |
+|--- | --- | ---|
 | Calculate `mapped_model` during request (example: OpenAI handler) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L154-L159) | 154-159 |
-| Response header returns `X-Mapped-Model` (example: OpenAI handler) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L310-L334) | 310-334 |
+|--- | --- | ---|
 
 **Key functions**:
 - `resolve_model_route(original_model, custom_mapping)`: main entry point for model routing (see `src-tauri/src/proxy/common/model_mapping.rs`)

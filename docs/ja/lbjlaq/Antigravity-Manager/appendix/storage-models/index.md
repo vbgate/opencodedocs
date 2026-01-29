@@ -191,7 +191,7 @@ explorer "$env:USERPROFILE\.antigravity_tools"
 ### 主要フィールドの説明
 
 | フィールド | 型 | ビジネスの意味 | トリガー条件 |
-| ----- | ---- | -------- | -------- |
+|--- | --- | --- | ---|
 | `disabled` | bool | アカウントが完全に無効化されている（例：refresh_token が失効した） | `invalid_grant` の時に自動的に `true` に設定 |
 | `proxy_disabled` | bool | プロキシ機能のみを無効化し、GUI の使用には影響しない | 手動無効化またはクォータ保護のトリガー |
 | `protected_models` | string[] | モデルレベルクォータ保護の「制限付きモデルリスト」 | クォータ保護ロジックによって更新 |
@@ -221,7 +221,7 @@ Token 統計データベースは、各プロキシリクエストの Token 消�
 #### token_usage（元の使用記録）
 
 | フィールド | 型 | 説明 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | id | INTEGER PRIMARY KEY AUTOINCREMENT | 自動増分主キー |
 | timestamp | INTEGER | リクエストタイムスタンプ |
 | account_email | TEXT | アカウントのメールアドレス |
@@ -321,7 +321,7 @@ Proxy ログデータベースは、各プロキシリクエストの詳細情�
 ### テーブル構造：request_logs
 
 | フィールド | 型 | 説明 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | id | TEXT PRIMARY KEY | リクエストの一意 ID（UUID） |
 | timestamp | INTEGER | リクエストタイムスタンプ |
 | method | TEXT | HTTP メソッド（GET/POST） |
@@ -557,7 +557,7 @@ sqlite3 ~/.antigravity_tools/proxy_logs.db \
 > 更新時間：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | データディレクトリ（.antigravity_tools） | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | アカウントディレクトリ（accounts/） | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L35-L46) | 35-46 |
 | accounts.json 構造 | [`src-tauri/src/models/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/models/account.rs#L76-L92) | 76-92 |
@@ -573,7 +573,7 @@ sqlite3 ~/.antigravity_tools/proxy_logs.db \
 | logs/ ディレクトリと app.log | [`src-tauri/src/modules/logger.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/logger.rs#L17-L45) | 17-45 |
 | bin/cloudflared パス | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L92-L101) | 92-101 |
 | device_original.json | [`src-tauri/src/modules/device.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/device.rs#L11-L13) | 11-13 |
-| invalid_grant -> disabled 書き込み | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L869-L969) | 869-969 |
+|--- | --- | ---|
 
 **重要な定数**：
 - `DATA_DIR = ".antigravity_tools"`：データディレクトリ名（`src-tauri/src/modules/account.rs:16-18`）

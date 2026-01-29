@@ -37,7 +37,7 @@ These issues cause token bills to grow larger and may "pollute" the context, aff
 DCP provides three **auto-pruning strategies** that execute silently before each request, with **zero LLM cost**:
 
 | Strategy | Default Status | Function |
-| -------- | -------------- | -------- |
+|--- | --- | ---|
 | Deduplication | ✅ Enabled | Detects duplicate tool calls, keeps only the latest one |
 | Write Superseding | ❌ Disabled | Cleans up write operation inputs that have been overwritten by subsequent reads |
 | Error Purging | ✅ Enabled | Clears error tool inputs after N turns |
@@ -269,7 +269,7 @@ Each strategy operates on the result of the previous strategy, avoiding duplicat
 ## When to Use This
 
 | Scenario | Recommended Strategy Combination |
-| -------- | -------------------------------- |
+|--- | ---|
 | Daily development (read-heavy, write-light) | Deduplication + Error Purging (default config) |
 | Frequent write verification | Enable all (manually enable write superseding) |
 | Debugging tool failures | Deduplication only (disable error purging) |
@@ -306,7 +306,7 @@ Each strategy operates on the result of the previous strategy, avoiding duplicat
 > Last updated: 2026-01-23
 
 | Feature | File Path | Line Numbers |
-| --- | --- | --- |
+|--- | --- | ---|
 | Deduplication strategy implementation | [`lib/strategies/deduplication.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/deduplication.ts) | 13-83 |
 | Write superseding strategy implementation | [`lib/strategies/supersede-writes.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/supersede-writes.ts) | 16-105 |
 | Error purging strategy implementation | [`lib/strategies/purge-errors.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/purge-errors.ts) | 16-80 |

@@ -59,7 +59,7 @@ Slackはチーム協力の中核ツールですが、以下のような問題に
 ClawdbotのSlackチャンネルは [Bolt](https://slack.dev/bolt-js) フレームワークに基づいて実装されており、2つの接続モードをサポートしています：
 
 | モード | 使用シナリオ | 優位性 | 劣位性 |
-| ------ | -------- | ------ | ------ |
+|--- | --- | --- | ---|
 | **Socket Mode** | ローカルGateway、個人使用 | 設定が簡単（Tokenのみ） | 常時WebSocket接続が必要 |
 | **HTTP Mode** | サーバーデプロイ、リモートアクセス | ファイアウォール通過、負荷分散対応 | パブリックIPが必要、設定が複雑 |
 
@@ -425,7 +425,7 @@ Botが正常にメッセージに応答します。
 現在のバージョンでは必須ではありませんが、将来サポートが追加される可能性のある権限：
 
 | 権限 | 用途 |
-| ------ | ------ |
+|--- | ---|
 | `groups:write` | プライベートチャンネル管理（作成、名前変更、招待、アーカイブ） |
 | `mpim:write` | グループDMセッション管理 |
 | `chat:write.public` | Botが参加していないチャンネルにメッセージを公開 |
@@ -531,7 +531,7 @@ Botがチャンネルで返信する方法を制御：
 ```
 
 | モード | 動作 |
-| ----- | ------ |
+|--- | ---|
 | `off` | デフォルト、メインチャンネルで返信 |
 | `first` | 最初の返信がスレッドに入り、以降の返信はメインチャンネル |
 | `all` | すべての返信がスレッド |
@@ -598,7 +598,7 @@ AgentがSlack固有の操作を呼び出せるようにします：
 > 更新日：2026-01-27
 
 | 機能            | ファイルパス                                                                                               | 行番号       |
-| --------------- | ------------------------------------------------------------------------------------------------ | ---------- |
+|--- | --- | ---|
 | Slack設定タイプ | [`src/config/types.slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.slack.ts) | 1-150      |
 | Slack onboardingロジック | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/slack.ts) | 1-539      |
 | Slack Actionsツール | [`src/agents/tools/slack-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/slack-actions.ts) | 1-301      |

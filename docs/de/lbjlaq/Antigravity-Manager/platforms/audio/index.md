@@ -47,11 +47,11 @@ Der **Audio-Transkriptionsendpunkt** ist eine von Antigravity Tools bereitgestel
 ## Endpunkt und Einschränkungen im Überblick
 
 | Projekt | Ergebnis | Code-Nachweis |
-| --- | --- | --- |
+|--- | --- | ---|
 | Eingangsroute | `POST /v1/audio/transcriptions` | `src-tauri/src/proxy/server.rs` registriert Route zu `handlers::audio::handle_audio_transcription` |
 | Unterstützte Formate | Erkennung über Dateierweiterung: `mp3/wav/m4a/ogg/flac/aiff(aif)` | `src-tauri/src/proxy/audio/mod.rs` `detect_mime_type()` |
 | Dateigröße | **15 MB-Hartbegrenzung** (bei Überschreitung wird 413 + Textfehlermeldung zurückgegeben) | `src-tauri/src/proxy/audio/mod.rs` `exceeds_size_limit()`；`src-tauri/src/proxy/handlers/audio.rs` |
-| Gesamter body-Limit des Reverse-Proxys | Axum-Ebene erlaubt bis zu 100 MB | `src-tauri/src/proxy/server.rs` `DefaultBodyLimit::max(100 * 1024 * 1024)` |
+|--- | --- | ---|
 | Standardparameter | `model="gemini-2.0-flash-exp"`；`prompt="Generate a transcript of the speech."` | `src-tauri/src/proxy/handlers/audio.rs` |
 
 ## Los geht's
@@ -140,7 +140,7 @@ print(transcript.text)
 Antigravity Tools bestimmt den MIME-Typ über die Dateierweiterung (nicht durch Sniffing des Dateiinhalts).
 
 | Format | MIME-Typ | Erweiterung |
-| --- | --- | --- |
+|--- | --- | ---|
 | MP3 | `audio/mp3` | `.mp3` |
 | WAV | `audio/wav` | `.wav` |
 | AAC (M4A) | `audio/aac` | `.m4a` |
@@ -217,7 +217,7 @@ Das Audio selbst ist im Protokoll nicht sichtbar, aber Sie können immer noch mi
 Dieser Endpunkt liest explizit nur 3 Formularfelder:
 
 | Feld | Erforderlich | Standardwert | Verarbeitungsweise |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `file` | ✅ | Keiner | Muss bereitgestellt werden; bei Fehlen wird `400` + Text `Audiodatei fehlt` zurückgegeben |
 | `model` | ❌ | `gemini-2.0-flash-exp` | Wird als Zeichenkette durchgereicht und nimmt an der Token-Ermittlung teil (konkrete Upstream-Regeln richten sich nach der tatsächlichen Antwort) |
 | `prompt` | ❌ | `Generate a transcript of the speech.` | Wird als erster `text` an den Upstream gesendet, um die Transkription zu leiten |
@@ -279,11 +279,11 @@ Richtige Vorgehensweise: Laden Sie nur Audiodateien hoch (`.mp3`, `.wav` usw.).
 > Aktualisiert: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
+|--- | --- | ---|
 | Routenregistrierung (/v1/audio/transcriptions + body limit) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
-| Audio-Transkriptionsprozessor (multipart/15MB/inlineData) | [`src-tauri/src/proxy/handlers/audio.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/audio.rs#L16-L162) | 16-162 |
-| Unterstützte Formate (Erweiterung -> MIME + 15MB) | [`src-tauri/src/proxy/audio/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/audio/mod.rs#L6-L35) | 6-35 |
-| Monitor-Middleware (Binary Request Data) | [`src-tauri/src/proxy/middleware/monitor.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/monitor.rs#L13-L337) | 13-337 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Konstanten**:
 - `MAX_SIZE = 15 * 1024 * 1024`: Begrenzung der Audiodateigröße (15 MB)

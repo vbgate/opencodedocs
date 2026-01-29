@@ -76,7 +76,7 @@ LINE User
 **Key Concepts**:
 
 | Concept | Purpose |
-|---------|---------|
+|--- | ---|
 | **Channel Access Token** | Authentication token for sending messages |
 | **Channel Secret** | Secret key for verifying Webhook signatures |
 | **Webhook URL** | Endpoint where Clawdbot receives LINE events (must be HTTPS) |
@@ -88,7 +88,7 @@ LINE User
 ### Required Accounts and Tools
 
 | Item | Requirements | How to Obtain |
-|------|--------------|---------------|
+|--- | --- | ---|
 | **LINE Developers Account** | Free registration | https://developers.line.biz/console/ |
 | **LINE Provider** | Create Provider and Messaging API channel | LINE Console |
 | **HTTPS Server** | Webhook must be HTTPS | ngrok, Cloudflare Tunnel, Tailscale Serve/Funnel |
@@ -155,7 +155,7 @@ Visit: https://developers.line.biz/console/
 3. Copy the following information:
 
 | Item | Location | Example |
-|------|----------|---------|
+|--- | --- | ---|
 | **Channel Access Token** | Basic settings → Channel access token (long-lived) | `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...` |
 | **Channel Secret** | Basic settings → Channel secret | `1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7` |
 
@@ -261,7 +261,7 @@ ngrok http 18789
 In Webhook settings, check the following events:
 
 | Event | Purpose |
-|-------|---------|
+|--- | ---|
 | **Message event** | Receive messages sent by users |
 | **Follow event** | User adds Bot as friend |
 | **Unfollow event** | User removes Bot |
@@ -348,7 +348,7 @@ clawdbot pairing approve line ABC123
 Verify your configuration is correct:
 
 | Check Item | Verification Method | Expected Result |
-|------------|---------------------|-----------------|
+|--- | --- | ---|
 | **Plugin Installed** | `clawdbot plugins list` | See `@clawdbot/line` |
 | **Configuration Valid** | `clawdbot doctor` | No LINE-related errors |
 | **Webhook Reachable** | LINE Console verification | `✓ Verification succeeded` |
@@ -531,7 +531,7 @@ clawdbot line rich-menu set-default --rich-menu-id <MENU_ID>
 Clawdbot automatically converts Markdown format to LINE-supported format:
 
 | Markdown | LINE Conversion Result |
-|----------|-----------------------|
+|--- | ---|
 | Code blocks | Flex cards |
 | Tables | Flex cards |
 | Links | Auto-detected and converted to Flex cards |
@@ -577,7 +577,7 @@ The LINE channel provides rich message types and interaction methods, making it 
 > Updated: 2026-01-27
 
 | Feature | File Path | Line |
-|---------|-----------|------|
+|--- | --- | ---|
 | LINE Bot Core Implementation | [`src/line/bot.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/bot.ts) | 27-83 |
 | Config Schema Definition | [`src/line/config-schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/config-schema.ts) | 1-54 |
 | Webhook Event Handlers | [`src/line/bot-handlers.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/bot-handlers.ts) | 1-100 |

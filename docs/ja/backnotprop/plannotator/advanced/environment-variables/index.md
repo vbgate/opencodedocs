@@ -256,7 +256,7 @@ set PLANNOTATOR_BROWSER=C:\Program Files\Google\Chrome\Application\chrome.exe
 **よく使うブラウザのパス**：
 
 | OS | ブラウザ | パス/コマンド |
-| -------- | ------ | --------- |
+|--- | --- | ---|
 | macOS | Chrome | `Google Chrome` または `/Applications/Google Chrome.app` |
 | macOS | Firefox | `Firefox` または `/Applications/Firefox.app` |
 | macOS | Safari | `Safari` |
@@ -424,7 +424,7 @@ export PLANNOTATOR_REMOTE=enabled
 この章では、Plannotatorの4つの主要な環境変数を学びました：
 
 | 環境変数 | 用途 | デフォルト値 | 使用シナリオ |
-| --------- | ---- | ------ | -------- |
+|--- | --- | --- | ---|
 | `PLANNOTATOR_REMOTE` | リモートモードのオン/オフ | 未設定（ローカルモード） | SSH、Devcontainer、WSL |
 | `PLANNOTATOR_PORT` | 固定ポート | リモートモード19432、ローカルモードはランダム | ポートフォワーディングやポート競合の回避が必要な場合 |
 | `PLANNOTATOR_BROWSER` | カスタムブラウザ | システムデフォルトブラウザ | 特定のブラウザを使用したい場合 |
@@ -456,7 +456,7 @@ export PLANNOTATOR_REMOTE=enabled
 > 更新日：2026-01-24
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | リモートモード検出 | [`packages/server/remote.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/remote.ts) | 16-29 |
 | ポート取得ロジック | [`packages/server/remote.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/remote.ts) | 34-49 |
 | ブラウザ起動ロジック | [`packages/server/browser.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/browser.ts) | 45-74 |

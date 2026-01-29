@@ -67,7 +67,7 @@ Antigravity Tools bietet drei MCP-Endpunkte:
 ### Endpunkt-Typen
 
 | Endpunkt-Typ | Implementierungsart | Lokaler Pfad | Upstream-Ziel |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | **Web Search** | Remote-Reverse-Proxy | `/mcp/web_search_prime/mcp` | `https://api.z.ai/api/mcp/web_search_prime/mcp` |
 | **Web Reader** | Remote-Reverse-Proxy | `/mcp/web_reader/mcp` | `https://api.z.ai/api/mcp/web_reader/mcp` |
 | **Vision MCP** | Integrierter Server (JSON-RPC 2.0) | `/mcp/zai-mcp-server/mcp` | Interner Aufruf der z.ai PaaS API |
@@ -321,7 +321,7 @@ data: keepalive
 ## Vision MCP-Tools Schnellreferenz
 
 | Tool-Name | Funktion | Erforderliche Parameter | Beispielszenario |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `ui_to_artifact` | UI-Screenshot in Code/Prompt/Spec/Beschreibung konvertieren | `image_source`, `output_type`, `prompt` | Frontend-Code aus Designvorlage generieren |
 | `extract_text_from_screenshot` | Text/Code aus Screenshot extrahieren (ähnlich OCR) | `image_source`, `prompt` | Fehlerlog-Screenshot lesen |
 | `diagnose_error_screenshot` | Fehler-Screenshot diagnostizieren (Stack-Trace, Logs) | `image_source`, `prompt` | Laufzeitfehler analysieren |
@@ -470,19 +470,19 @@ Wichtige Punkte:
 > Aktualisiert am: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
-| Web Search-Endpunkt | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L115-L135) | 115-135 |
-| Web Reader-Endpunkt | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L137-L157) | 137-157 |
-| Vision MCP-Endpunkt (Haupteingang) | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L376-L397) | 376-397 |
-| Vision MCP initialize-Behandlung | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L271-L293) | 271-293 |
-| Vision MCP tools/list-Behandlung | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L311-L314) | 311-314 |
-| Vision MCP tools/call-Behandlung | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L315-L363) | 315-363 |
-| Vision MCP-Sitzungszustandsverwaltung | [`src-tauri/src/proxy/zai_vision_mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/zai_vision_mcp.rs#L1-L42) | 1-42 |
-| Vision MCP-Tool-Definitionen | [`src-tauri/src/proxy/zai_vision_tools.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/zai_vision_tools.rs#L166-L271) | 166-271 |
-| Vision MCP-Tool-Aufruf-Implementierung | [`src-tauri/src/proxy/zai_vision_tools.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/zai_vision_tools.rs#L273-L400) | 273-400 |
-| Routen-Registrierung | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L157-L169) | 157-169 |
-| Authentifizierungs-Middleware | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L1-L78) | 1-78 |
-| MCP-Konfigurations-UI | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L1304-L1357) | 1304-1357 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Dokumentation im Repository | [`docs/zai/mcp.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/zai/mcp.md#L1-L57) | 1-57 |
 
 **Wichtige Konstanten**:

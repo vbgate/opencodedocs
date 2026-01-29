@@ -47,7 +47,7 @@ order: 5
 ## Обзор конечных точек и ограничений
 
 | Элемент | Вывод | Доказательство кода |
-| --- | --- | --- |
+|--- | --- | ---|
 | Входной маршрут | `POST /v1/audio/transcriptions` | Регистрация маршрута в `src-tauri/src/proxy/server.rs` в `handlers::audio::handle_audio_transcription` |
 | Поддерживаемые форматы | Распознаются по расширению файла: `mp3/wav/m4a/ogg/flac/aiff(aif)` | `src-tauri/src/proxy/audio/mod.rs` `detect_mime_type()` |
 | Размер файла | **Жёсткое ограничение 15MB** (превышение возвращает 413 + текстовая информация об ошибке) | `src-tauri/src/proxy/audio/mod.rs` `exceeds_size_limit()`; `src-tauri/src/proxy/handlers/audio.rs` |
@@ -140,7 +140,7 @@ print(transcript.text)
 Antigravity Tools определяет тип MIME по расширению файла (а не сниффинг содержимого файла).
 
 | Формат | Тип MIME | Расширение |
-| --- | --- | --- |
+|--- | --- | ---|
 | MP3 | `audio/mp3` | `.mp3` |
 | WAV | `audio/wav` | `.wav` |
 | AAC (M4A) | `audio/aac` | `.m4a` |
@@ -217,7 +217,7 @@ Response Body: {"text":"..."}
 Эта конечная точка явно читает только 3 поля формы:
 
 | Поле | Обязательно? | По умолчанию | Способ обработки |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `file` | ✅ | Нет | Должен быть предоставлен; отсутствие вернёт `400` + текст `缺少音频文件` |
 | `model` | ❌ | `gemini-2.0-flash-exp` | Передаётся как строка, участвует в получении токена (конкретные правила вышестоящего уровня ориентируются на фактический ответ) |
 | `prompt` | ❌ | `Generate a transcript of speech.` | Отправляется как первый абзац `text` вышестоящему уровню, используется для направления транскрипции |
@@ -279,10 +279,10 @@ curl -sS -X POST http://127.0.0.1:8045/v1/audio/transcriptions \
 > Обновлено: 2026-01-23
 
 | Функция | Путь к файлу | Строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Регистрация маршрута (/v1/audio/transcriptions + body limit) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | Обработчик транскрипции аудио (multipart/15MB/inlineData) | [`src-tauri/src/proxy/handlers/audio.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/audio.rs#L16-L162) | 16-162 |
-| Поддерживаемые форматы (расширение -> MIME + 15MB) | [`src-tauri/src/proxy/audio/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/audio/mod.rs#L6-L35) | 6-35 |
+|--- | --- | ---|
 | Промежуточное ПО Monitor (Binary Request Data) | [`src-tauri/src/proxy/middleware/monitor.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/monitor.rs#L13-L337) | 13-337 |
 
 **Ключевые константы**:

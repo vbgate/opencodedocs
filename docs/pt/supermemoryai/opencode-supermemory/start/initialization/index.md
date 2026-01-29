@@ -108,7 +108,7 @@ supermemory(mode: "list", scope: "project")
 O Agent lista uma série de memórias estruturadas, por exemplo:
 
 | Tipo | Exemplo de Conteúdo |
-| :--- | :--- |
+|--- | ---|
 | `project-config` | "Uses Bun runtime. Build command: bun run build" |
 | `architecture` | "API routes are located in src/routes/, using Hono framework" |
 | `preference` | "Strict TypeScript usage: no 'any' type allowed" |
@@ -162,7 +162,7 @@ Com `/supermemory-init`, completamos a transição de "estranho" para "experient
 > Última atualização: 2026-01-23
 
 | Funcionalidade | Caminho do Arquivo | Linhas |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Definição do Prompt de Inicialização | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L13-L163) | 13-163 |
 | Implementação da Ferramenta de Memória | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
 

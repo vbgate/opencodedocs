@@ -96,7 +96,7 @@ Um kontinuierliche Auslösungen zu verhindern, die zu einer Endlosschleife führ
 Wenn die Komprimierung ausgelöst wird, injiziert Supermemory einen speziellen System-Prompt (`[COMPACTION CONTEXT INJECTION]`) in den Agenten und fordert zwingend, dass die Zusammenfassung die folgenden 5 Teile enthält:
 
 | Abschnitt | Inhaltsbeschreibung | Zweck |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **1. User Requests** | Ursprüngliche Benutzeranforderungen (unverändert) | Verhindert Zielabweichungen |
 | **2. Final Goal** | Das letztendlich zu erreichende Ziel | Klart den Endzustand |
 | **3. Work Completed** | Abgeschlossene Arbeit, geänderte Dateien | Vermeidet Wiederholung |
@@ -231,9 +231,9 @@ Präemptive Komprimierung ist das "Langlaufgeheimnis" von Supermemory. Durch **v
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Schwellenwertkonstantendefinition | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L11-L14) | 11-14 |
-| Führungs-Prompt-Generierung | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L58-L98) | 58-98 |
+|--- | --- | ---|
 | Auslöseerkennungslogik | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L317-L358) | 317-358 |
 | Zusammenfassungsspeicherungslogik | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L294-L315) | 294-315 |
 | Konfigurationselementdefinition | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L22) | 22 |

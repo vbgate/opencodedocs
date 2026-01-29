@@ -282,7 +282,7 @@ After installation, you can have Claude automatically use these skills for code 
 > Last updated: 2026-01-25
 
 | Feature          | File Path                                                                                      | Line #  |
-| ------------- | --------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | npx installation method  | [`README.md:83-86`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L83-L86)  | 83-86   |
 | Claude Code manual installation | [`AGENTS.md:98-105`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L98-L105) | 98-105  |
 | claude.ai installation method | [`AGENTS.md:106-109`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L106-L109) | 106-109  |

@@ -97,7 +97,7 @@ Metadatos del archivo de configuración (escrito automáticamente por el asisten
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `lastTouchedVersion` | string | - | Versión de Clawdbot que modificó por última vez esta configuración |
 | `lastTouchedAt` | string | - | Hora de la última modificación de esta configuración (ISO 8601) |
 
@@ -123,7 +123,7 @@ Configuración de variables de entorno e importación de entorno de shell.
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `shellEnv.enabled` | boolean | `false` | Importar variables de entorno desde el shell de inicio de sesión (solo importa claves faltantes) |
 | `shellEnv.timeoutMs` | number | `15000` | Tiempo de espera de importación de entorno de shell (milisegundos) |
 | `vars` | object | - | Variables de entorno en línea (pares clave-valor) |
@@ -150,7 +150,7 @@ Metadatos escritos por el asistente CLI (`onboard`, `configure`, `doctor`).
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `lastRunAt` | string | - | Hora de la última ejecución del asistente |
 | `lastRunVersion` | string | - | Versión de Clawdbot cuando se ejecutó por última vez el asistente |
 | `lastRunCommit` | string | - | Hash del commit Git cuando se ejecutó por última vez el asistente |
@@ -192,7 +192,7 @@ Configuración de telemetría de diagnóstico y OpenTelemetry.
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | `false` | Habilitar funciones de diagnóstico |
 | `flags` | string[] | - | Lista de indicadores de diagnóstico |
 | `otel.enabled` | boolean | `false` | Habilitar telemetría OpenTelemetry |
@@ -232,7 +232,7 @@ Configuración de registro.
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `level` | string | `info` | Nivel de registro (`silent` \| `fatal` \| `error` \| `warn` \| `info` \| `debug` \| `trace`) |
 | `file` | string | - | Ruta del archivo de registro (predeterminado: `/tmp/clawdbot/clawdbot-YYYY-MM-DD.log`) |
 | `consoleLevel` | string | `info` | Nivel de registro de consola (mismo que la opción `level`) |
@@ -257,7 +257,7 @@ Configuración de canal de actualización y verificación automática.
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `channel` | string | `stable` | Canal de actualización (`stable` \| `beta` \| `dev`) |
 | `checkOnStart` | boolean | - | Verificar actualizaciones al iniciar |
 
@@ -296,7 +296,7 @@ Configuración de automatización del navegador (basado en Playwright).
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | - | Habilitar herramienta del navegador |
 | `controlUrl` | string | - | URL de WebSocket de control del navegador |
 | `controlToken` | string | - | Token de autenticación de control del navegador |
@@ -338,7 +338,7 @@ Configuración de personalización de UI (Control UI, WebChat).
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `seamColor` | string | - | Valor hexadecimal del color Seam |
 | `assistant.name` | string | - | Nombre para mostrar del asistente (máximo 50 caracteres) |
 | `assistant.avatar` | string | - | Ruta o URL del avatar del asistente (máximo 200 caracteres) |
@@ -389,7 +389,7 @@ Metadatos del perfil de autenticación (no almacena claves, solo mapea perfiles 
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `profiles` | object | - | Mapeo de perfiles (clave: ID de perfil, valor: configuración) |
 | `profiles.<profileId>.provider` | string | - | Nombre del proveedor |
 | `profiles.<profileId>.mode` | string | - | Modo de autenticación (`api_key` \| `oauth` \| `token`) |
@@ -492,7 +492,7 @@ Proveedores de modelos de IA y configuración.
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `mode` | string | - | Modo de fusión de modelos (`merge` \| `replace`) |
 | `providers` | object | - | Mapeo de proveedores (clave: ID de proveedor, valor: configuración del proveedor) |
 | `providers.<providerId>.baseUrl` | string | - | URL base de API |
@@ -664,7 +664,7 @@ Lista de agentes y configuración predeterminada.
 **Configuración predeterminada** (`agents.defaults`):
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `workspace` | string | `~/clawd` | Directorio del espacio de trabajo del agente |
 | `repoRoot` | string | - | Directorio raíz del repositorio Git (para solicitud del sistema) |
 | `skipBootstrap` | boolean | `false` | Omitir creación de archivos de arranque del espacio de trabajo |
@@ -693,7 +693,7 @@ Lista de agentes y configuración predeterminada.
 **Lista de agentes** (`agents.list`):
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `id` | string | Obligatorio | ID del agente (identificador estable) |
 | `default` | boolean | `false` | Si es el agente predeterminado (primero gana si hay varios) |
 | `name` | string | - | Nombre para mostrar del agente |
@@ -751,7 +751,7 @@ Enruta mensajes entrantes a agentes específicos.
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `agentId` | string | Obligatorio | ID del agente de destino (debe estar en `agents.list`) |
 | `match.channel` | string | Obligatorio | Canal coincidente |
 | `match.accountId` | string | - | ID de cuenta coincidente (`*` = cualquier cuenta; omitido = cuenta predeterminada) |
@@ -801,7 +801,7 @@ Ejecución de herramientas y políticas de seguridad.
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `exec.elevated.enabled` | boolean | `false` | Habilitar bash elevado (`! <cmd>`) |
 | `exec.elevated.allowFrom` | object | - | Lista de permitidos elevados por canal |
 | `browser.enabled` | boolean | - | Habilitar herramienta del navegador |
@@ -826,7 +826,7 @@ Envía mensajes a múltiples canales/agentes.
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `strategy` | string | - | Estrategia de transmisión (`parallel` \| `sequential`) |
 | `<peerId>` | string[] | - | Enviar mensajes a estos agentes (clave dinámica) |
 
@@ -898,7 +898,7 @@ Prefijos de mensajes, confirmaciones y comportamiento de cola.
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `responsePrefix` | string | - | Prefijo para todas las respuestas salientes (soporta variables de plantilla) |
 | `ackReaction` | string | - | Emoji para confirmar mensajes entrantes |
 | `ackReactionScope` | string | - | Cuándo enviar confirmación (`group-mentions` \| `group-all` \| `direct` \| `all`) |
@@ -915,7 +915,7 @@ Prefijos de mensajes, confirmaciones y comportamiento de cola.
 **Variables de plantilla** (para `responsePrefix`):
 
 | Variable | Descripción | Ejemplo |
-|----------|-------------|--------|
+|--- | --- | ---|
 | `{model}` | Nombre corto del modelo | `claude-opus-4-5`, `gpt-4` |
 | `{modelFull}` | Identificador completo del modelo | `anthropic/claude-opus-4-5` |
 | `{provider}` | Nombre del proveedor | `anthropic`, `openai` |
@@ -947,7 +947,7 @@ Configuración de procesamiento de comandos de chat.
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `native` | string | `auto` | Comandos nativos (`auto` \| `true` \| `false`) |
 | `text` | boolean | `true` | Analizar comandos de barra en mensajes de chat |
 | `bash` | boolean | `false` | Permitir `!` (alias para `/bash`) |
@@ -984,7 +984,7 @@ Persistencia y comportamiento de la sesión.
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `activation.defaultMode` | string | `auto` | Modo de activación predeterminado (`auto` \| `always` \| `manual`) |
 | `activation.defaultDurationMs` | number | - | Duración de activación predeterminada (milisegundos) |
 | `activation.keepAlive` | boolean | - | Mantener vivo |
@@ -1012,7 +1012,7 @@ Programación de tareas programadas.
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | - | Habilitar motor Cron |
 | `store` | string | - | Ruta del archivo de almacenamiento de Cron |
 | `maxConcurrentRuns` | number | - | Número máximo de ejecuciones simultáneas |
@@ -1056,7 +1056,7 @@ Webhooks y reenvío de eventos.
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | - | Habilitar Hooks |
 | `path` | string | - | Ruta del directorio de Hooks |
 | `token` | string | - | Token de autenticación de Webhook |
@@ -1315,7 +1315,7 @@ Servidor WebSocket del Gateway y autenticación.
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `port` | number | `18789` | Puerto WebSocket del Gateway |
 | `mode` | string | `local` | Modo del Gateway (`local` \| `remote`) |
 | `bind` | string | - | Dirección de enlace (`auto` \| `lan` \| `loopback` \| `custom` \| `tailnet`) |
@@ -1382,7 +1382,7 @@ Plataforma de habilidades e instalación.
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `allowBundled` | string[] | - | Lista de habilidades integradas permitidas |
 | `load.extraDirs` | string[] | - | Directorios de habilidades adicionales |
 | `load.watch` | boolean | - | Vigilar cambios en archivos de habilidades |
@@ -1417,7 +1417,7 @@ Configuración del sistema de complementos.
 ```
 
 | Campo | Tipo | Obligatorio | Predeterminado | Descripción |
-|------|------|-------------|---------------|-------------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | - | Habilitar sistema de complementos |
 | `allow` | string[] | - | Lista de complementos permitidos |
 | `deny` | string[] | - | Lista de complementos denegados |
@@ -1526,7 +1526,7 @@ clawdbot doctor --yes
 ## Rutas de archivos de configuración
 
 | Archivo | Ruta | Descripción |
-|---------|------|-------------|
+|--- | --- | ---|
 | Configuración principal | `~/.clawdbot/clawdbot.json` | Archivo de configuración principal |
 | Variables de entorno | `~/.clawdbot/.env` | Variables de entorno globales |
 | Entorno de espacio de trabajo | `~/clawd/.env` | Variables de entorno del espacio de trabajo |
@@ -1569,7 +1569,7 @@ Este tutorial explica en detalle el sistema completo de configuración de Clawdb
 > Fecha de actualización: 2026-01-27
 
 | Sección de configuración | Ruta del archivo | Número de línea |
-|-------------------------|------------------|-----------------|
+|--- | --- | ---|
 | Schema principal | [`src/config/zod-schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.ts) | 1-556 |
 | Schema central | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | 1-300 |
 | Schema de agentes | [`src/config/zod-schema.agents.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.agents.ts) | 1-54 |

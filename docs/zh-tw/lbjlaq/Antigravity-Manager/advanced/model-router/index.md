@@ -172,7 +172,7 @@ $resp.Headers["X-Mapped-Model"]
 ## 踩坑提醒
 
 | 場景 | 你可能會怎么做（❌） | 推薦做法（✓） |
-| --- | --- | --- |
+|--- | --- | ---|
 | 通配符沒生效 | 寫了 `GPT-4*` 期待匹配 `gpt-4-turbo` | 用小寫 `gpt-4*`；後端通配符匹配是區分大小寫的 |
 | 兩條通配符都能命中 | 同時寫 `gpt-*` 和 `gpt-4*`，不確定會走哪條 | 讓更具體的規則更「長」，確保它的非 `*` 字元更多 |
 | 規則看起來對，但還是沒變 | 只看回應 body，不看回應標頭 | 用 `curl -i` 確認 `X-Mapped-Model`（這是後端顯式回傳的結果） |
@@ -198,7 +198,7 @@ $resp.Headers["X-Mapped-Model"]
 > 更新時間：2026-01-23
 
 | 功能 | 檔案路徑 | 行號 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 設定欄位：`proxy.custom_mapping`（前端類型） | [`src/types/config.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/types/config.ts#L6-L20) | 6-20 |
 | UI：寫入/重置/預設（呼叫 `update_model_mapping`） | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L371-L475) | 371-475 |
 | UI：模型路由卡片（套用預設對應 / 重置對應 / 列表與新增表單） | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L1762-L1931) | 1762-1931 |
@@ -207,7 +207,7 @@ $resp.Headers["X-Mapped-Model"]
 | 路由演算法：精確 > 通配符（更具體優先）> 預設對應 | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L180-L228) | 180-228 |
 | 通配符匹配：支援多 `*`，且區分大小寫 | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L134-L178) | 134-178 |
 | 請求中計算 `mapped_model`（範例：OpenAI handler） | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L154-L159) | 154-159 |
-| 回應標頭回傳 `X-Mapped-Model`（範例：OpenAI handler） | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L310-L334) | 310-334 |
+|--- | --- | ---|
 
 **關鍵函式**：
 - `resolve_model_route(original_model, custom_mapping)`：模型路由主入口（見 `src-tauri/src/proxy/common/model_mapping.rs`）

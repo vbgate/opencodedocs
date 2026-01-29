@@ -70,7 +70,7 @@ Single-layer protection is easy to bypass or misconfigure. Multi-layer protectio
 ### Comparison of Three Execution Modes
 
 | Execution Mode | Running Location | Security Level | Typical Scenarios | Approval Required |
-|----------------|-------------------|-----------------|-------------------|-------------------|
+|--- | --- | --- | --- | ---|
 | **sandbox** | Container (e.g., Docker) | High | Isolated environment, testing | No |
 | **gateway** | Gateway daemon host | Medium | Local development, integration | Yes (allowlist + approval) |
 | **node** | Paired device node (macOS/iOS/Android) | Medium | Local device operations | Yes (allowlist + approval) |
@@ -107,7 +107,7 @@ The exec tool supports the following parameters:
 **Parameter Description**:
 
 | Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
+|--- | --- | --- | ---|
 | `command` | string | Required | Shell command to execute |
 | `workdir` | string | Current working directory | Execution directory |
 | `env` | object | Inherit environment | Environment variable overrides |
@@ -148,7 +148,7 @@ Edit `~/.clawdbot/clawdbot.json`:
 **Configuration Item Description**:
 
 | Configuration Item | Type | Default | Description |
-|-------------------|------|---------|-------------|
+|--- | --- | --- | ---|
 | `host` | string | sandbox | Default execution host |
 | `security` | string | deny (sandbox) / allowlist (gateway, node) | Default security policy |
 | `ask` | string | on-miss | Default approval policy |
@@ -245,7 +245,7 @@ Edit `~/.clawdbot/exec-approvals.json`:
 Allowlist uses **glob pattern matching** (case-insensitive):
 
 | Pattern | Matches | Description |
-|---------|---------|-------------|
+|--- | --- | ---|
 | `~/Projects/**/bin/*` | `/Users/user/Projects/any/bin/rg` | Match all subdirectories |
 | `~/.local/bin/*` | `/Users/user/.local/bin/jq` | Match local bin |
 | `/opt/homebrew/bin/rg` | `/opt/homebrew/bin/rg` | Absolute path match |
@@ -314,7 +314,7 @@ Edit `~/.clawdbot/clawdbot.json`:
 **Configuration Item Description**:
 
 | Configuration Item | Description |
-|-------------------|-------------|
+|--- | ---|
 | `enabled` | Whether to enable exec approval forwarding |
 | `mode` | `"session"` \| `"targets"` \| `"both"` - Approval target mode |
 | `agentFilter` | Only process approval requests for specific agents |
@@ -359,7 +359,7 @@ Security: allowlist
 ### Common Errors
 
 | Error | Cause | Solution |
-|-------|-------|----------|
+|--- | --- | ---|
 | `Command not allowed by exec policy` | `security=deny` or allowlist doesn't match | Check `tools.exec.security` and allowlist configuration |
 | `Approval timeout` | UI unavailable, `askFallback=deny` | Set `askFallback=allowlist` or enable UI |
 | `Pattern does not resolve to binary` | allowlist mode uses basename | Use full path (e.g., `/opt/homebrew/bin/rg`) |
@@ -386,7 +386,7 @@ In `security=allowlist` mode, the following Shell features are **not supported**
 Different execution modes handle PATH differently:
 
 | Execution Mode | PATH Handling | Description |
-|---------------|---------------|-------------|
+|--- | --- | ---|
 | `sandbox` | Inherits shell login, may be reset by `/etc/profile` | `pathPrepend` applies after profile |
 | `gateway` | Merges login shell PATH to exec environment | daemon keeps minimal PATH, but exec inherits user PATH |
 | `node` | Only uses passed environment variable overrides | macOS nodes discard `PATH` overrides, headless nodes support prepend |
@@ -423,7 +423,7 @@ The exec tool enables AI assistants to safely execute Shell commands through a t
 > Last updated: 2026-01-27
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | exec tool definition | [`src/agents/bash-tools.exec.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/bash-tools.exec.ts) | 1-500+ |
 | exec approval logic | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 1-1268 |
 | Shell command analysis | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 500-1100 |

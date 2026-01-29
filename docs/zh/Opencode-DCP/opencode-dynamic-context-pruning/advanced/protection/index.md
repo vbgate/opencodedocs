@@ -118,7 +118,7 @@ state.currentTurn - turnCounter < turnProtectionTurns
 ### 推荐配置
 
 | 场景                     | 推荐回合数 | 说明                             |
-| ------------------------ | ---------- | -------------------------------- |
+|--- | --- | ---|
 | 长对话（10+ 回合）      | 4-6        | 给 AI 足够时间引用历史内容       |
 | 短对话（< 5 回合）      | 2-3        | 不需要太长的保护期               |
 | 高度依赖上下文的任务     | 6-8        | 如代码重构、长篇文档分析         |
@@ -137,7 +137,7 @@ state.currentTurn - turnCounter < turnProtectionTurns
 DCP 默认保护以下工具，它们**永远不会**被修剪：
 
 | 工具名       | 说明                             |
-| ------------ | -------------------------------- |
+|--- | ---|
 | `task`       | 任务管理工具                       |
 | `todowrite`  | 写入待办事项                     |
 | `todoread`   | 读取待办事项                     |
@@ -256,7 +256,7 @@ DCP 默认保护以下工具，它们**永远不会**被修剪：
 DCP 支持标准的 Glob 模式：
 
 | 模式       | 说明                       | 示例匹配路径                           |
-| ---------- | -------------------------- | -------------------------------------- |
+|--- | --- | ---|
 | `**`       | 匹配任意层级的目录         | `src/`、`src/components/`、`a/b/c/`   |
 | `*`        | 匹配单层目录下的任意文件   | `src/*.ts` 匹配 `src/index.ts`        |
 | `?`        | 匹配单个字符             | `file?.txt` 匹配 `file1.txt`、`file2.txt` |
@@ -530,7 +530,7 @@ DCP 的保护机制包含三层：
 > 更新时间：2026-01-23
 
 | 功能             | 文件路径                                                                                              | 行号     |
-| ---------------- | --------------------------------------------------------------------------------------------------- | -------- |
+|--- | --- | ---|
 | 回合保护逻辑     | [`lib/state/tool-cache.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/state/tool-cache.ts#L39-L44) | 39-44    |
 | 默认受保护工具   | [`lib/config.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/config.ts#L68-L79)         | 68-79    |
 | 受保护文件匹配   | [`lib/protected-file-patterns.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/protected-file-patterns.ts#L77-L82) | 77-82    |

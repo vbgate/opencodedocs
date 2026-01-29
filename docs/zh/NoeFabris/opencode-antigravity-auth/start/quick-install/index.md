@@ -288,7 +288,7 @@ Claude: 你好！我是 Claude Sonnet 4.5 Thinking。
 **解决方案**：所有系统统一使用 `~/.config/opencode/opencode.json`，包括 Windows（`~` 自动解析为用户目录）。
 
 | 系统 | 正确路径 | 错误路径 |
-| ---- | ------------------------ | --------------------- |
+|--- | --- | ---|
 | macOS/Linux | `~/.config/opencode/opencode.json` | `/usr/local/etc/...` |
 | Windows | `C:\Users\YourName\.config\opencode\opencode.json` | `%APPDATA%\opencode\...` |
 
@@ -326,7 +326,7 @@ Claude: 你好！我是 Claude Sonnet 4.5 Thinking。
 > 更新时间：2026-01-23
 
 | 功能                | 文件路径                                                                                       | 行号    |
-| ------------------- | ---------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | OAuth 授权 URL 生成 | [`src/antigravity/oauth.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/antigravity/oauth.ts#L91-L113) | 91-113  |
 | PKCE 密钥对生成    | [`src/antigravity/oauth.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/antigravity/oauth.ts#L1-L2)   | 1-2     |
 | 令牌交换            | [`src/antigravity/oauth.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/antigravity/oauth.ts#L201-L270) | 201-270 |

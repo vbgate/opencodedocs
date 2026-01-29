@@ -41,9 +41,9 @@ Erfahren Sie über den automatischen Spracherkennungsmechanismus:
 ## Anwendungsszenarien
 
 | Szenario | Empfohlenes Tutorial |
-|------|---------|
-| Verwendung mehrerer Google-Konten | [Google Cloud-Konfiguration](./google-setup/) |
-| Copilot-Kreditabfrage fehlgeschlagen | [Copilot-Authentifizierungskonfiguration](./copilot-auth/) |
+|--- | ---|
+|--- | ---|
+|--- | ---|
 | Ausgabesprache wechseln | [Mehrsprachige Unterstützung](./i18n-setup/) |
 
 ## Voraussetzungen

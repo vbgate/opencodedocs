@@ -172,7 +172,7 @@ curl.exe -i http://127.0.0.1:PORT/v1/images/generations `
 Imagen 3 업스트림은 표준화된 `aspectRatio`를 수신합니다. `size`를 일반적인 가로세로로 작성하면 표준 비율로 안정적으로 매핑할 수 있습니다.
 
 | 전송한 size | 프록시가 계산한 aspectRatio |
-| --- | --- |
+|--- | ---|
 | `"1024x1024"` | `1:1` |
 | `"1920x1080"` / `"1280x720"` | `16:9` |
 | `"1080x1920"` / `"720x1280"` | `9:16` |
@@ -188,7 +188,7 @@ Imagen 3 업스트림은 표준화된 `aspectRatio`를 수신합니다. `size`�
 Imagen 3의 내부 필드를 기억할 필요가 없습니다. OpenAI Images의 `quality`만으로 해상도 레벨을 전환할 수 있습니다.
 
 | 전송한 quality | 프록시가 쓴 imageSize |
-| --- | --- |
+|--- | ---|
 | `"standard"` | 설정하지 않음(업스트림 기본값 사용) |
 | `"medium"` | `"2K"` |
 | `"hd"` | `"4K"` |
@@ -201,7 +201,7 @@ Imagen 3의 내부 필드를 기억할 필요가 없습니다. OpenAI Images의 
 이 구현에서 `response_format: "url"`은 공개 네트워크에서 액세스할 수 있는 URL을 제공하지 않고 `data:<mime>;base64,...` Data URI를 반환합니다. 많은 도구는 `b64_json`을 직접 사용하는 것이 더 적합합니다.
 
 | response_format | data[] 필드 |
-| --- | --- |
+|--- | ---|
 | `"b64_json"`(기본값) | `{ "b64_json": "..." }` |
 | `"url"` | `{ "url": "data:image/png;base64,..." }` |
 
@@ -219,7 +219,7 @@ Imagen 3의 내부 필드를 기억할 필요가 없습니다. OpenAI Images의 
 여기서 `size` 파싱 로직은 `WIDTHxHEIGHT`로 분리합니다. `size`가 이 형식이 아니면 직접 `1:1`로 돌아갑니다.
 
 | 작성법 | 결과 |
-| --- | --- |
+|--- | ---|
 | ✓ `"1920x1080"` | 16:9 |
 | ❌ `"16:9"` | 돌아감 1:1 |
 
@@ -254,12 +254,12 @@ Imagen 3의 내부 필드를 기억할 필요가 없습니다. OpenAI Images의 
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI Images 라우팅 노출 | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L123-L146) | 123-146 |
 | Images 생성 엔드포인트: prompt/size/quality 파싱 + OpenAI 응답 조립 | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L1104-L1333) | 1104-1333 |
-| size/quality 파싱 및 매핑(size->aspectRatio, quality->imageSize) | [`src-tauri/src/proxy/mappers/common_utils.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/common_utils.rs#L19-L222) | 19-222 |
+|--- | --- | ---|
 | OpenAIRequest 선언 size/quality(프로토콜 레벨 호환용) | [`src-tauri/src/proxy/mappers/openai/models.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/models.rs#L6-L38) | 6-38 |
-| OpenAI->Gemini 요청 변환: size/quality를 통합 파싱 함수에 전달 | [`src-tauri/src/proxy/mappers/openai/request.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/request.rs#L19-L27) | 19-27 |
+|--- | --- | ---|
 
 **핵심 필드(소스코드에서)**:
 - `size`: `WIDTHxHEIGHT`로 파싱하여 `aspectRatio`로

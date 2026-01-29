@@ -73,7 +73,7 @@ sequenceDiagram
 **Conceptos clave**:
 
 | Concepto | Descripción |
-| ------ | ------ |
+|--- | ---|
 | **imsg CLI** | Herramienta de terceros, interactúa con Messages a través de JSON-RPC over stdio |
 | **Full Disk Access** | Permiso de macOS, permite que Clawdbot lea chat.db de Messages |
 | **Permiso de Automation** | Permiso de macOS, permite que imsg envíe mensajes a través de la API de Automation |
@@ -411,7 +411,7 @@ exec ssh -T bot@mac-mini.tailnet-1234.ts.net imsg "$@"
 ### Configuración básica
 
 | Configuración | Tipo | Predeterminado | Descripción |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `enabled` | boolean | false | Si habilitar el canal iMessage |
 | `cliPath` | string | "imsg" | Ruta del CLI imsg (puede ser un wrapper SSH) |
 | `dbPath` | string | - | Ruta de chat.db de Messages |
@@ -420,7 +420,7 @@ exec ssh -T bot@mac-mini.tailnet-1234.ts.net imsg "$@"
 ### Política de DM
 
 | Configuración | Tipo | Predeterminado | Descripción |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `dmPolicy` | "pairing"|"allowlist"|"open"|"disabled" | "pairing" | Política de acceso DM |
 | `allowFrom` | array | [] | Lista de remitentes permitidos (handles, correos, E.164, `chat_id:*`) |
 
@@ -441,7 +441,7 @@ iMessage no tiene concepto de nombre de usuario, usa handles (números de teléf
 ### Política de grupo
 
 | Configuración | Tipo | Predeterminado | Descripción |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `groupPolicy` | "allowlist"|"open"|"disabled" | "allowlist" | Política de acceso de grupos |
 | `groupAllowFrom` | array | [] | Remitentes permitidos para activar AI en grupos |
 | `groups` | object | {} | Configuración de grupos por chat_id |
@@ -468,7 +468,7 @@ iMessage no tiene concepto de nombre de usuario, usa handles (números de teléf
 ### Límites de medios y texto
 
 | Configuración | Tipo | Predeterminado | Descripción |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `includeAttachments` | boolean | false | Si incluir adjuntos en el contexto |
 | `mediaMaxMb` | number | 16 | Tamaño máximo de archivo multimedia (MB) |
 | `textChunkLimit` | number | 4000 | Tamaño de fragmentación de texto de salida (caracteres) |
@@ -477,7 +477,7 @@ iMessage no tiene concepto de nombre de usuario, usa handles (números de teléf
 ### Historial
 
 | Configuración | Tipo | Predeterminado | Descripción |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `historyLimit` | number | - | Número máximo de mensajes históricos en grupos (0 para deshabilitar) |
 | `dmHistoryLimit` | number | - | Límite de mensajes históricos DM (vueltas de usuario) |
 | `dms["<handle>"].historyLimit` | number | - | Anular límite de historial DM por handle |
@@ -573,7 +573,7 @@ En esta lección aprendiste:
 > Fecha de actualización: 2026-01-27
 
 | Función | Ruta del archivo | Número de línea |
-| ------ | --------- | ---- |
+|--- | --- | ---|
 | Definición de tipos de configuración iMessage | [`src/config/types.imessage.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.imessage.ts) | 1-80 |
 | Análisis de cuentas iMessage | [`src/imessage/accounts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/imessage/accounts.ts) | 1-83 |
 | Sondaje iMessage | [`src/imessage/probe.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/imessage/probe.ts) | 1-92 |

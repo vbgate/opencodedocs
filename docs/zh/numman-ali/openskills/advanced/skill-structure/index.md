@@ -73,7 +73,7 @@ graph LR
 ### Bundled Resources 的分类
 
 | 目录      | 是否加载到上下文 | 使用场景              | 示例类型                |
-| --------- | ---------------- | --------------------- | ----------------------- |
+|--- | --- | --- | ---|
 | `references/` | ✅ 按需加载      | 详细文档、API 说明      | API docs、数据库 schema  |
 | `scripts/`  | ❌ 不加载        | 可执行代码            | Python/Bash 脚本        |
 | `assets/`   | ❌ 不加载        | 模板、输出文件、图片  | JSON 模板、样板代码     |
@@ -96,14 +96,14 @@ description: Use this skill when you need to demonstrate proper format.
 **必需字段**：
 
 | 字段       | 类型     | 格式要求                          | 示例                    |
-| ---------- | -------- | --------------------------------- | ----------------------- |
+|--- | --- | --- | ---|
 | `name`     | string   | 连字符格式（kebab-case），不能有空格 | `pdf-editor`、`api-client` |
 | `description` | string | 1-2 句话，第三人称                | `Use this skill to edit PDF files` |
 
 ::: danger 常见错误
 
 | 错误示例 | 问题 | 修正方法 |
-| -------- | ---- | -------- |
+|--- | --- | ---|
 | `name: My Skill` | 包含空格 | 改为 `name: my-skill` |
 | `name: my_skill` | 下划线格式 | 改为 `name: my-skill` |
 | `description: You should use this when...` | 第二人称 | 改为 `description: Use this skill when...` |
@@ -159,7 +159,7 @@ You should execute this task by:
 **对比表**：
 
 | ✅ 正确（Imperative/Infinitive） | ❌ 错误（Second Person） |
-| ------------------------------ | ---------------------- |
+|--- | ---|
 | "Load this skill when X"       | "If you need Y"        |
 | "To accomplish Z, execute A"   | "You should do Z"      |
 | "See references/guide.md"     | "When you want to Z"   |
@@ -326,7 +326,7 @@ if __name__ == "__main__":
 相比在 SKILL.md 中内联代码：
 
 | 特性       | 内联代码        | scripts/            |
-| ---------- | --------------- | ------------------ |
+|--- | --- | ---|
 | Token 消耗 | ✅ 高           | ❌ 低              |
 | 可复用性   | ❌ 差           | ✅ 好              |
 | 可测试性   | ❌ 难           | ✅ 易              |
@@ -416,7 +416,7 @@ def generate_output(data, template_path):
 **文件大小指南**（官方推荐）：
 
 | 目录      | 大小限制        | 加载行为          |
-| --------- | --------------- | ----------------- |
+|--- | --- | ---|
 | SKILL.md  | < 5,000 词     | 始终加载（需要时） |
 | references/ | 无严格限制      | 按需加载         |
 | scripts/  | 不计入 token    | 不加载，只执行     |
@@ -486,7 +486,7 @@ Base directory: /path/to/project/.claude/skills/my-skill
 **相对路径解析规则**：
 
 | 引用路径              | 解析结果                                                  |
-| --------------------- | --------------------------------------------------------- |
+|--- | ---|
 | `references/api.md`   | `/base/directory/references/api.md`                          |
 | `scripts/process.py`  | `/base/directory/scripts/process.py`                         |
 | `assets/template.json` | `/base/directory/assets/template.json`                       |
@@ -508,7 +508,7 @@ export function readSkill(skillNames: string[] | string): void {
 ::: danger 路径错误示例
 
 | ❌ 错误写法                      | 问题                | ✅ 正确写法              |
-| ------------------------------- | ------------------- | --------------------- |
+|--- | --- | ---|
 | `/absolute/path/to/api.md`      | 使用绝对路径         | `references/api.md`     |
 | `../other-skill/references/api.md` | 跨技能引用           | `references/api.md`     |
 | `~/references/api.md`           | 使用波浪号扩展      | `references/api.md`     |
@@ -701,7 +701,7 @@ description: "Use this skill: for testing"
 **对照表**：
 
 | 第二人称（❌ 避免）     | 命令式（✅ 推荐）         |
-| ---------------------- | ------------------------ |
+|--- | ---|
 | "You should execute..." | "To execute X, run..."   |
 | "When you want to..."  | "Load this skill when..."  |
 | "If you need..."       | "Use X to accomplish Y"    |
@@ -738,7 +738,7 @@ description: "Use this skill: for testing"
 > 更新时间：2026-01-24
 
 | 功能           | 文件路径                                                                 | 行号    |
-| -------------- | ------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | YAML frontmatter 验证 | [`src/utils/yaml.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/yaml.ts) | 12-14   |
 | YAML 字段提取  | [`src/utils/yaml.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/yaml.ts) | 4-7     |
 | 技能读取命令  | [`src/commands/read.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/read.ts) | 1-49    |

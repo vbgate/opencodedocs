@@ -36,7 +36,7 @@ Vous avez terminé la configuration de l'assistant, les paramètres de base du G
 **Méthodes de démarrage recommandées** :
 
 | Scénario | Commande | Explication |
-| ----------------------- | -------------------------------------- | -------------------------------------- |
+|--- | --- | ---|
 | Usage quotidien | `clawdbot gateway install` + `clawdbot gateway start` | Démarrage automatique en tant que service en arrière-plan |
 | Débogage de développement | `clawdbot gateway --dev` | Créer une configuration de développement, rechargement automatique |
 | Test temporaire | `clawdbot gateway` | Exécution en premier plan, les journaux sont affichés directement dans le terminal |
@@ -482,7 +482,7 @@ Dans ce cours, vous avez appris :
 **Référence rapide des commandes clés** :
 
 | Scénario | Commande |
-| ---------------------- | ------------------------------------------- |
+|--- | ---|
 | Usage quotidien (service) | `clawdbot gateway install && clawdbot gateway start` |
 | Débogage de développement | `clawdbot gateway --dev` |
 | Test temporaire | `clawdbot gateway` |
@@ -511,7 +511,7 @@ Dans ce cours, vous avez appris :
 > Dernière mise à jour : 2026-01-27
 
 | Fonction | Chemin du fichier | Ligne |
-| --------------------------- | -------------------------------------------------------------------------------------- | -------- |
+|--- | --- | ---|
 | Point d'entrée de démarrage du Gateway | [`src/cli/gateway-cli/run.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/gateway-cli/run.ts) | 55-310 |
 | Abstraction du service de démon | [`src/daemon/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/service.ts) | 66-155 |
 | Démarrage du serveur de la barre latérale | [`src/gateway/server-startup.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup.ts) | 26-160 |

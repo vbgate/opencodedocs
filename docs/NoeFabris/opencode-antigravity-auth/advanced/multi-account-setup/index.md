@@ -37,7 +37,7 @@ When using a single account, you may encounter these pain points:
 Multi-account configuration is suitable for the following scenarios:
 
 | Scenario | Recommended Accounts | Reason |
-| -------- | ------------------- | ------ |
+|--- | --- | ---|
 | Personal Development | 2-3 accounts | Backup accounts to avoid interruptions |
 | Team Collaboration | 3-5 accounts | Distribute requests, reduce competition |
 | High-Frequency API Calls | 5+ accounts | Load balancing for maximum throughput |
@@ -68,7 +68,7 @@ The core mechanism of multi-account configuration:
 Assuming each account's Claude quota is 1000 requests/minute:
 
 | Accounts | Theoretical Total Quota | Practical Available (considering caching) |
-| -------- | ---------------------- | ---------------------------------------- |
+|--- | --- | ---|
 | 1        | 1000/min               | 1000/min                                 |
 | 3        | 3000/min               | ~2500/min (sticky strategy)             |
 | 5        | 5000/min               | ~4000/min (round-robin)                 |
@@ -264,7 +264,7 @@ Configure the strategy in `antigravity.json`:
 Choose based on your account count:
 
 | Accounts | Recommended Strategy | Configuration Value | Reason |
-| -------- | -------------------- | ------------------- | ------ |
+|--- | --- | --- | ---|
 | 1        | sticky               | `"sticky"`          | Maintain prompt cache |
 | 2-5      | hybrid               | `"hybrid"`          | Balance throughput and cache |
 | 5+       | round-robin          | `"round-robin"`     | Maximize throughput |
@@ -418,7 +418,7 @@ opencode auth login
 > Last updated: 2026-01-23
 
 | Feature | File Path | Lines |
-| ------- | --------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | AccountManager class | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L174-L250) | 174-250 |
 | Load Balancing Strategy | [`src/plugin/rotation.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/rotation.ts) | Full file |
 | Configuration Schema | [`src/plugin/config/schema.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/schema.ts) | Full file |
@@ -427,7 +427,7 @@ opencode auth login
 **Key Constants**:
 
 | Constant Name | Value | Description |
-| ------------- | ----- | ----------- |
+|--- | --- | ---|
 | `QUOTA_EXHAUSTED_BACKOFFS` | `[60000, 300000, 1800000, 7200000]` | Quota exhausted backoff times (1min→5min→30min→2hrs) |
 | `RATE_LIMIT_EXCEEDED_BACKOFF` | `30000` | Rate limit backoff time (30 seconds) |
 | `MIN_BACKOFF_MS` | `2000` | Minimum backoff time (2 seconds) |
@@ -442,7 +442,7 @@ opencode auth login
 **Configuration Items** (from schema.ts):
 
 | Configuration Item | Type | Default Value | Description |
-| ----------------- | ---- | ------------- | ----------- |
+|--- | --- | --- | ---|
 | `account_selection_strategy` | enum | `"hybrid"` | Account selection strategy |
 | `quota_fallback` | boolean | `false` | Enable Gemini dual quota fallback |
 | `pid_offset_enabled` | boolean | `false` | Enable PID offset |

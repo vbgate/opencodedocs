@@ -97,7 +97,7 @@ Metadata for the configuration file (automatically written by the CLI wizard).
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `lastTouchedVersion` | string | - | Last Clawdbot version to modify this configuration |
 | `lastTouchedAt` | string | - | Last time this configuration was modified (ISO 8601) |
 
@@ -123,7 +123,7 @@ Environment variable configuration and shell environment import.
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `shellEnv.enabled` | boolean | `false` | Whether to import environment variables from login shell (only imports missing keys) |
 | `shellEnv.timeoutMs` | number | `15000` | Shell environment import timeout (milliseconds) |
 | `vars` | object | - | Inline environment variables (key-value pairs) |
@@ -150,7 +150,7 @@ Metadata written by CLI wizard (`onboard`, `configure`, `doctor`).
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `lastRunAt` | string | - | Last time wizard was run |
 | `lastRunVersion` | string | - | Clawdbot version when wizard was last run |
 | `lastRunCommit` | string | - | Git commit hash when wizard was last run |
@@ -192,7 +192,7 @@ Diagnostic telemetry and OpenTelemetry configuration.
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | `false` | Enable diagnostic features |
 | `flags` | string[] | - | List of diagnostic flags |
 | `otel.enabled` | boolean | `false` | Enable OpenTelemetry telemetry |
@@ -232,7 +232,7 @@ Logging configuration.
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `level` | string | `info` | Log level (`silent` \| `fatal` \| `error` \| `warn` \| `info` \| `debug` \| `trace`) |
 | `file` | string | - | Log file path (default: `/tmp/clawdbot/clawdbot-YYYY-MM-DD.log`) |
 | `consoleLevel` | string | `info` | Console log level (same as `level` option) |
@@ -257,7 +257,7 @@ Update channel and auto-check configuration.
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `channel` | string | `stable` | Update channel (`stable` \| `beta` \| `dev`) |
 | `checkOnStart` | boolean | - | Check for updates on startup |
 
@@ -296,7 +296,7 @@ Browser automation configuration (based on Playwright).
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | - | Enable browser tools |
 | `controlUrl` | string | - | Browser control WebSocket URL |
 | `controlToken` | string | - | Browser control authentication token |
@@ -338,7 +338,7 @@ UI customization configuration (Control UI, WebChat).
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `seamColor` | string | - | Seam color hex value |
 | `assistant.name` | string | - | Assistant display name (max 50 characters) |
 | `assistant.avatar` | string | - | Assistant avatar path or URL (max 200 characters) |
@@ -389,7 +389,7 @@ Authentication profile metadata (does not store keys, only maps profiles to prov
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `profiles` | object | - | Profile map (key: profile ID, value: configuration) |
 | `profiles.<profileId>.provider` | string | - | Provider name |
 | `profiles.<profileId>.mode` | string | - | Authentication mode (`api_key` \| `oauth` \| `token`) |
@@ -492,7 +492,7 @@ AI model providers and configuration.
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `mode` | string | - | Model merge mode (`merge` \| `replace`) |
 | `providers` | object | - | Provider map (key: provider ID, value: provider configuration) |
 | `providers.<providerId>.baseUrl` | string | - | API base URL |
@@ -664,7 +664,7 @@ Agent list and default configuration.
 **Default Configuration** (`agents.defaults`):
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `workspace` | string | `~/clawd` | Agent workspace directory |
 | `repoRoot` | string | - | Git repository root (used for system prompts) |
 | `skipBootstrap` | boolean | `false` | Skip workspace bootstrap file creation |
@@ -693,7 +693,7 @@ Agent list and default configuration.
 **Agent List** (`agents.list`):
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `id` | string | Required | Agent ID (stable identifier) |
 | `default` | boolean | `false` | Whether it's the default agent (first wins if multiple) |
 | `name` | string | - | Agent display name |
@@ -751,7 +751,7 @@ Route inbound messages to specific agents.
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `agentId` | string | Required | Target agent ID (must be in `agents.list`) |
 | `match.channel` | string | Required | Matching channel |
 | `match.accountId` | string | - | Matching account ID (`*` = any account; omit = default account) |
@@ -801,7 +801,7 @@ Tool execution and security policies.
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `exec.elevated.enabled` | boolean | `false` | Enable elevated bash (`! <cmd>`) |
 | `exec.elevated.allowFrom` | object | - | Per-channel elevated allowlist |
 | `browser.enabled` | boolean | - | Enable browser tools |
@@ -826,7 +826,7 @@ Send messages to multiple channels/agents.
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `strategy` | string | - | Broadcast strategy (`parallel` \| `sequential`) |
 | `<peerId>` | string[] | - | Send messages to these agents (dynamic keys) |
 
@@ -898,7 +898,7 @@ Message prefixes, acknowledgments, and queue behavior.
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `responsePrefix` | string | - | Prefix for all outbound replies (supports template variables) |
 | `ackReaction` | string | - | Emoji to acknowledge inbound messages |
 | `ackReactionScope` | string | - | When to send acknowledgment (`group-mentions` \| `group-all` \| `direct` \| `all`) |
@@ -915,7 +915,7 @@ Message prefixes, acknowledgments, and queue behavior.
 **Template Variables** (for `responsePrefix`):
 
 | Variable | Description | Examples |
-|----------|-------------|----------|
+|--- | --- | ---|
 | `{model}` | Short model name | `claude-opus-4-5`, `gpt-4` |
 | `{modelFull}` | Full model identifier | `anthropic/claude-opus-4-5` |
 | `{provider}` | Provider name | `anthropic`, `openai` |
@@ -947,7 +947,7 @@ Chat command processing configuration.
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `native` | string | `auto` | Native commands (`auto` \| `true` \| `false`) |
 | `text` | boolean | `true` | Parse slash commands in chat messages |
 | `bash` | boolean | `false` | Allow `!` (alias for `/bash`) |
@@ -984,7 +984,7 @@ Session persistence and behavior.
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `activation.defaultMode` | string | `auto` | Default activation mode (`auto` \| `always` \| `manual`) |
 | `activation.defaultDurationMs` | number | - | Default activation duration (milliseconds) |
 | `activation.keepAlive` | boolean | - | Keep alive |
@@ -1012,7 +1012,7 @@ Scheduled task scheduling.
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | - | Enable Cron engine |
 | `store` | string | - | Cron storage file path |
 | `maxConcurrentRuns` | number | - | Max concurrent runs |
@@ -1056,7 +1056,7 @@ Webhooks and event forwarding.
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | - | Enable Hooks |
 | `path` | string | - | Hooks directory path |
 | `token` | string | - | Webhook authentication token |
@@ -1315,7 +1315,7 @@ Gateway WebSocket server and authentication.
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `port` | number | `18789` | Gateway WebSocket port |
 | `mode` | string | `local` | Gateway mode (`local` \| `remote`) |
 | `bind` | string | - | Bind address (`auto` \| `lan` \| `loopback` \| `custom` \| `tailnet`) |
@@ -1382,7 +1382,7 @@ Skill platform and installation.
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `allowBundled` | string[] | - | Allowed built-in skills list |
 | `load.extraDirs` | string[] | - | Additional skill directories |
 | `load.watch` | boolean | - | Watch for skill file changes |
@@ -1417,7 +1417,7 @@ Plugin system configuration.
 ```
 
 | Field | Type | Required | Default | Description |
-|-------|------|----------|---------|-------------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | - | Enable plugin system |
 | `allow` | string[] | - | Allowed plugin list |
 | `deny` | string[] | - | Denied plugin list |
@@ -1526,7 +1526,7 @@ clawdbot doctor --yes
 ## Configuration File Paths
 
 | File | Path | Description |
-|------|------|-------------|
+|--- | --- | ---|
 | Main Config | `~/.clawdbot/clawdbot.json` | Main configuration file |
 | Environment Variables | `~/.clawdbot/.env` | Global environment variables |
 | Workspace Environment | `~/clawd/.env` | Workspace environment variables |
@@ -1569,7 +1569,7 @@ This tutorial covered the complete Clawdbot configuration system in detail, incl
 > Updated: 2026-01-27
 
 | Configuration Section | File Path | Line Numbers |
-|---------------------|-----------|--------------|
+|--- | --- | ---|
 | Main Schema | [`src/config/zod-schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.ts) | 1-556 |
 | Core Schema | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | 1-300 |
 | Agents Schema | [`src/config/zod-schema.agents.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.agents.ts) | 1-54 |

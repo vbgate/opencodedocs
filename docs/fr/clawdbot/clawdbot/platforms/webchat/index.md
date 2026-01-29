@@ -57,7 +57,7 @@ Avant d'utiliser WebChat, vérifiez les éléments suivants :
 ### Conditions obligatoires
 
 | Condition | Comment vérifier |
-| --------- | --------------- |
+|--- | ---|
 | **Gateway démarré** | `clawdbot gateway status` ou vérifiez si le processus est en cours d'exécution |
 | **Port accessible** | Vérifiez que le port 18789 (ou le port personnalisé) n'est pas utilisé |
 | **Modèle IA configuré** | `clawdbot models list` pour vérifier qu'un modèle est disponible |
@@ -123,7 +123,7 @@ Explications détaillées : [Configuration de l'authentification du Gateway](../
 **Différences avec les autres canaux** :
 
 | Caractéristique | WebChat                          | WhatsApp/Telegram, etc.                |
-| -------------- | -------------------------------- | ------------------------------ |
+|--- | --- | ---|
 | **Mode d'accès** | Accès direct au Gateway via navigateur | Nécessite une application tierce et une connexion |
 | **Configuration requise** | Aucune configuration séparée, réutilise le port du Gateway | Nécessite une clé API/Token spécifique au canal |
 | **Routage des réponses** | Renvoi déterministe vers WebChat          | Renvoi vers le canal correspondant              |
@@ -349,7 +349,7 @@ WebChat prend en charge les commandes avec slash, pour exécuter rapidement des 
 **Commandes courantes** :
 
 | Commande             | Fonction                         |
-| ---------------- | ---------------------------- |
+|--- | ---|
 | `/new`          | Créer une nouvelle session                   |
 | `/reset`        | Réinitialiser l'historique de la session actuelle           |
 | `/clear`        | Effacer tous les messages de la session actuelle       |
@@ -612,7 +612,7 @@ Dans cette leçon, vous avez appris :
 > Dernière mise à jour : 2026-01-27
 
 | Fonctionnalité                  | Chemin du fichier                                                                                    | Numéro de ligne    |
-| ------------------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Explication du principe WebChat     | [`docs/web/webchat.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/web/webchat.md) | Fichier complet   |
 | API WebSocket Gateway | [`src/gateway/protocol/`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/) | Répertoire complet   |
 | Méthode chat.send        | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 296-380  |

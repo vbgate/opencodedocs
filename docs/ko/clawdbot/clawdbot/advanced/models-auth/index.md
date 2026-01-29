@@ -67,7 +67,7 @@ Clawdbot에서 **모델 선택**과 **인증 자격 증명**은 두 가지 독�
 Clawdbot은 다양한 시나리오에 맞는 세 가지 인증 방식을 지원합니다:
 
 | 인증 방식 | 저장 형식 | 일반적인 시나리오 | 지원하는 제공업체 |
-|---------|---------|-----------|------------|
+|--- | --- | --- | ---|
 | **API Key** | `{ type: "api_key", key: "sk-..." }` | 빠른 시작, 테스트 | Anthropic, OpenAI, OpenRouter, DeepSeek 등 |
 | **OAuth** | `{ type: "oauth", access: "...", refresh: "..." }` | 장기 실행, 자동 갱신 | Anthropic (Claude Code CLI), OpenAI (Codex), Qwen Portal |
 | **Token** | `{ type: "token", token: "..." }` | 정적 Bearer token | GitHub Copilot, 일부 사용자 지정 프록시 |
@@ -78,7 +78,7 @@ Clawdbot은 기본적으로 다음 모델 제공업체를 지원합니다:
 
 ::: details 기본 제공업체 목록
 | 제공업체 | 인증 방식 | 권장 모델 | 비고 |
-|---------|----------|----------|------|
+|--- | --- | --- | ---|
 | **Anthropic** | API Key / OAuth (Claude Code CLI) | `anthropic/claude-opus-4-5` | Claude Pro/Max + Opus 4.5 권장 |
 | **OpenAI** | API Key / OAuth (Codex) | `openai/gpt-5.2` | 표준 OpenAI 및 Codex 버전 지원 |
 | **OpenRouter** | API Key | `openrouter/anthropic/claude-sonnet-4-5` | 수백 개의 모델 집계 |
@@ -460,7 +460,7 @@ auth:
 Clawdbot은 다음 OAuth 제공업체의 자동 갱신을 지원합니다:
 
 | 제공업체 | OAuth 흐름 | 갱신 메커니즘 |
-|---------|-----------|----------|
+|--- | --- | ---|
 | **Anthropic** (Claude Code CLI) | 표준 권한 부여 코드 | pi-mono RPC 갱신 |
 | **OpenAI** (Codex) | 표준 권한 부여 코드 | pi-mono RPC 갱신 |
 | **Qwen Portal** | 사용자 지정 OAuth | `refreshQwenPortalCredentials` |
@@ -522,7 +522,7 @@ agents:
 일부 제공업체는 명시적으로 구성할 필요가 없으며 Clawdbot이 자동으로 감지합니다:
 
 | 제공업체 | 감지 방식 | 구성 파일 |
-|---------|----------|----------|
+|--- | --- | ---|
 | **GitHub Copilot** | `~/.copilot/credentials.json` | 구성 불필요 |
 | **AWS Bedrock** | 환경 변수 또는 AWS SDK 자격 증명 | `~/.aws/credentials` |
 | **Codex CLI** | `~/.codex/auth.json` | 구성 불필요 |
@@ -632,7 +632,7 @@ clawdbot gateway restart
 > 업데이트 날짜: 2026-01-27
 
 | 기능 | 파일 경로 | 행 번호 |
-| ----- | --------- | ---- |
+|--- | --- | ---|
 | 인증 자격 증명 유형 정의 | [`src/agents/auth-profiles/types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/types.ts) | 1-74 |
 | OAuth Token 구문 분석 및 갱신 | [`src/agents/auth-profiles/oauth.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/oauth.ts) | 1-220 |
 | 인증 구성 파일 관리 | [`src/agents/auth-profiles/profiles.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/profiles.ts) | 1-85 |

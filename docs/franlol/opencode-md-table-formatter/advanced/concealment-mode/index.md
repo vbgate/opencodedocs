@@ -28,7 +28,7 @@ You're writing code in OpenCode, and AI generates a beautiful table:
 
 ```markdown
 | 字段 | 类型 | 说明 |
-| --- | --- | --- |
+|--- | --- | ---|
 | **name** | string | 用户名 |
 | age | number | 年龄 |
 ```
@@ -37,7 +37,7 @@ It looks neat in the source view. But when you switch to preview mode, the table
 
 ```
 | 字段     | 类型   | 说明   |
-| -------- | ------ | ------ |
+|--- | --- | ---|
 | name | string | 用户名 |    ← Why is it shorter?
 | age      | number | 年龄   |
 ```
@@ -49,7 +49,7 @@ Where's the problem? **Concealment mode**.
 OpenCode enables **concealment mode** by default, which hides Markdown syntax symbols during rendering:
 
 | Source | Displayed in Concealment Mode |
-| --- | --- |
+|--- | ---|
 | `**bold**` | bold（4 characters） |
 | `*italic*` | italic（4 characters） |
 | `~~strikethrough~~` | strikethrough（6 characters） |
@@ -107,7 +107,7 @@ let textWithPlaceholders = text.replace(/`(.+?)`/g, (match, content) => {
 **How It Works**
 
 | Input | After Processing | codeBlocks Array |
-| --- | --- | --- |
+|--- | --- | ---|
 | `` `**bold**` `` | `\x00CODE0\x00` | `["**bold**"]` |
 | `` `a` and `b` `` | `\x00CODE0\x00 and \x00CODE1\x00` | `["a", "b"]` |
 
@@ -176,7 +176,7 @@ return Bun.stringWidth(visualText)
 `Bun.stringWidth` correctly calculates:
 
 | Character Type | Example | Character Count | Display Width |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | ASCII | `abc` | 3 | 3 |
 | Chinese | `你好` | 2 | 4（each occupies 2 cells） |
 | Emoji | `😀` | 1 | 2（occupies 2 cells） |
@@ -234,7 +234,7 @@ So the width of `` `**bold**` `` is 8（`**bold**`）, not 4（`bold`）。
 ## Lesson Summary
 
 | Step | Purpose | Key Code |
-| --- | --- | --- |
+|--- | --- | ---|
 | Protect Code Blocks | Prevent symbols inside code blocks from being accidentally stripped | `text.replace(/\`(.+?)\`/g, ...)` |
 | Strip Markdown | Calculate actual displayed content in concealment mode | Multiple rounds of regex replacement |
 | Calculate Width | Handle Chinese, emoji, and other special characters | `Bun.stringWidth()` |
@@ -258,7 +258,7 @@ So the width of `` `**bold**` `` is 8（`**bold**`）, not 4（`bold`）。
 > Updated: 2026-01-26
 
 | Function | File Path | Line Numbers |
-| --- | --- | --- |
+|--- | --- | ---|
 | Display width calculation entry | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L151-L159) | 151-159 |
 | Code block protection | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L168-L173) | 168-173 |
 | Markdown symbol stripping | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L175-L188) | 175-188 |

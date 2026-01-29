@@ -114,7 +114,7 @@ type CopilotTier = "free" | "pro" | "pro+" | "business" | "enterprise";
 **各订阅类型的额度上限**：
 
 | tier      | 每月额度（Premium Requests） |
-| --------- | --------------------------- |
+|--- | ---|
 | `free`    | 50                          |
 | `pro`     | 300                         |
 | `pro+`    | 1,500                       |
@@ -263,7 +263,7 @@ interface UsageLimitItem {
 **限额类型说明**：
 
 | type          | 说明               | 重置周期  |
-| ------------- | ------------------ | --------- |
+|--- | --- | ---|
 | `TOKENS_LIMIT` | 5 小时 Token 限额  | 5 小时   |
 | `TIME_LIMIT`   | MCP 月度配额      | 1 个月   |
 
@@ -522,7 +522,7 @@ interface GoogleQuotaResponse {
 **显示的 4 个模型**：
 
 | 显示名称     | 模型 Key                                  | 备选 Key              |
-| ------------ | ----------------------------------------- | --------------------- |
+|--- | --- | ---|
 | G3 Pro       | `gemini-3-pro-high`                        | `gemini-3-pro-low`    |
 | G3 Image     | `gemini-3-pro-image`                      | -                     |
 | G3 Flash     | `gemini-3-flash`                          | -                     |
@@ -569,7 +569,7 @@ export const REQUEST_TIMEOUT_MS = 10000;
 > 更新时间：2026-01-23
 
 | 功能              | 文件路径                                                                                              | 行号    |
-| ----------------- | --------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 认证数据类型      | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L99-L104)        | 99-104  |
 | OpenAI 认证       | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L28-L33)         | 28-33   |
 | 智谱 AI 认证      | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L38-L41)         | 38-41   |

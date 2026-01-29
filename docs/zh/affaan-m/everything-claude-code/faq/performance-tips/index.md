@@ -196,7 +196,7 @@ MCP 服务器是扩展 Claude Code 能力的重要方式，但每个 MCP 都会�
 根据项目类型选择相关 MCP：
 
 | 项目类型 | 推荐启用 | 可选 |
-|---------|---------|------|
+|--- | --- | ---|
 | 前端项目 | Vercel, Magic | Filesystem, GitHub |
 | 后端项目 | Supabase, ClickHouse | GitHub, Railway |
 | 全栈项目 | 全部 | - |
@@ -343,7 +343,7 @@ export COMPACT_THRESHOLD=40
 > 更新时间：2026-01-25
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | 性能优化规则 | [`rules/performance.md`](https://github.com/affaan-m/everything-claude-code/blob/main/rules/performance.md) | 1-48 |
 | 策略性压缩 Skill | [`skills/strategic-compact/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/strategic-compact/SKILL.md) | 1-64 |
 | Hooks 配置 | [`hooks/hooks.json`](https://github.com/affaan-m/everything-claude-code/blob/main/hooks/hooks.json) | 1-158 |

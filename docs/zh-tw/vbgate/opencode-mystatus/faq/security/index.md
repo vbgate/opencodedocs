@@ -47,7 +47,7 @@ opencode-mystatus 遵循「唯讀本地檔案 + 官方 API 直接查詢」的原
 外掛只讀取兩個本地設定檔，並且都是**唯讀模式**：
 
 | 檔案路徑 | 用途 | 原始碼位置 |
-| -------- | ---- | -------- |
+|--- | --- | ---|
 | `~/.local/share/opencode/auth.json` | OpenCode 官方認證儲存 | `mystatus.ts:35` |
 | `~/.config/opencode/antigravity-accounts.json` | Antigravity 外掛帳號儲存 | `google.ts`（讀取邏輯） |
 
@@ -130,7 +130,7 @@ Account:        9c89****AQVM (Coding Plan)
 外掛僅呼叫各平台的**官方 API**，不經過任何第三方伺服器：
 
 | 平台 | API 端點 | 用途 |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | OpenAI | `https://chatgpt.com/backend-api/wham/usage` | 額度查詢 |
 | 智證 AI | `https://bigmodel.cn/api/monitor/usage/quota/limit` | Token 限額查詢 |
 | Z.ai | `https://api.z.ai/api/monitor/usage/quota/limit` | Token 限額查詢 |
@@ -189,7 +189,7 @@ export async function fetchWithTimeout(
 ### 外掛不會做的事情
 
 | 操作 | 外掛行為 |
-| ---- | -------- |
+|--- | ---|
 | 儲存資料 | ❌ 不儲存任何使用者資料 |
 | 上傳資料 | ❌ 不上傳任何資料到第三方伺服器 |
 | 快取結果 | ❌ 不快取查詢結果 |
@@ -199,7 +199,7 @@ export async function fetchWithTimeout(
 ### 外掛會做的事情
 
 | 操作 | 外掛行為 |
-| ---- | -------- |
+|--- | ---|
 | 讀取檔案 | ✅ 唯讀本地認證檔 |
 | 呼叫 API | ✅ 僅呼叫官方 API 端點 |
 | 脫敏顯示 | ✅ 自動隱藏 API Key 等敏感資訊 |
@@ -265,7 +265,7 @@ export async function fetchWithTimeout(
 > 更新時間：2026-01-23
 
 | 功能 | 檔案路徑 | 行號 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 認證檔案讀取 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts#L38-L40) | 38-40 |
 | API 脫敏函數 | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L130-L135) | 130-135 |
 | 請求逾時設定 | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L114) | 114 |

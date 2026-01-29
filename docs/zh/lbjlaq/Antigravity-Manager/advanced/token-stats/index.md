@@ -143,7 +143,7 @@ Token Stats 统计来自真实请求。只启动代理但没发过一次模型�
 ## 踩坑提醒
 
 | 现象 | 常见原因 | 你可以怎么做 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Token Stats 显示"暂无数据" | 你确实没产生模型请求；或上游响应没带可解析的 token 字段 | 先复用已验证可用的客户端发请求；再看响应里是否包含 `usage/usageMetadata` |
 | 统计按"模型"看起来不对 | 统计口径使用请求里的 `model`，不是 `X-Mapped-Model` | 把模型路由当成"请求模型 -> 映射模型"；统计看的是"请求模型" |
 | 账号维度缺失 | 只有拿到 `X-Account-Email` 且解析到 token 用量时才会写入 | 确认请求确实走到了账号池；再对照请求日志/响应头 |
@@ -175,8 +175,8 @@ Token Stats 统计来自真实请求。只启动代理但没发过一次模型�
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
-| Token Stats 页面路由 `/token-stats` | [`src/App.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/App.tsx#L19-L47) | 19-47 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Token Stats UI：时间窗口/视图切换与取数 | [`src/pages/TokenStats.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/TokenStats.tsx#L49-L166) | 49-166 |
 | Token Stats UI：空数据提示（"暂无数据"） | [`src/pages/TokenStats.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/TokenStats.tsx#L458-L507) | 458-507 |
 | Token 用量提取：从请求解析 model、从响应解析 usage/usageMetadata | [`src-tauri/src/proxy/middleware/monitor.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/monitor.rs#L32-L120) | 32-120 |

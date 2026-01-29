@@ -41,7 +41,7 @@ GitHub Copilot 인증 문제를 해결합니다:
 ## 적용 시나리오
 
 | 시나리오 | 권장 튜토리얼 |
-|------|---------|
+|--- | ---|
 | 여러 Google 계정 사용 | [Google Cloud 설정](./google-setup/) |
 | Copilot 할당량 조회 실패 | [Copilot 인증 설정](./copilot-auth/) |
 | 출력 언어 전환 | [다국어 지원](./i18n-setup/) |

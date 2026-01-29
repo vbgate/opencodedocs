@@ -36,7 +36,7 @@ order: 30
 **推奨される起動方法**：
 
 | シナリオ                  | 使用コマンド                               | 説明                                   |
-| ----------------------- | -------------------------------------- | -------------------------------------- |
+|--- | --- | ---|
 | 日常使用                | `clawdbot gateway install` + `clawdbot gateway start` | バックグラウンドサービスとして自動起動                  |
 | 開発デバッグ                | `clawdbot gateway --dev`                     | 開発設定を作成し、自動再ロード                  |
 | 一時テスト                | `clawdbot gateway`                           | フォアグラウンド実行、ログを端末に直接出力            |
@@ -487,7 +487,7 @@ clawdbot gateway --port 19001  # 別のポートを使用
 **主要コマンド早見表**：
 
 | シナリオ                   | コマンド                                        |
-| ---------------------- | ------------------------------------------- |
+|--- | ---|
 | 日常使用（サービス）       | `clawdbot gateway install && clawdbot gateway start` |
 | 開発デバッグ              | `clawdbot gateway --dev`                     |
 | 一時テスト              | `clawdbot gateway`                           |
@@ -516,7 +516,7 @@ clawdbot gateway --port 19001  # 別のポートを使用
 > 更新日：2026-01-27
 
 | 機能                        | ファイルパス                                                                                   | 行号     |
-| --------------------------- | -------------------------------------------------------------------------------------- | -------- |
+|--- | --- | ---|
 | Gateway 起動エントリー            | [`src/cli/gateway-cli/run.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/gateway-cli/run.ts) | 55-310   |
 | デーモンプロセスサービス抽象化         | [`src/daemon/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/service.ts) | 66-155    |
 | サーバー起動サイドバー           | [`src/gateway/server-startup.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup.ts) | 26-160    |

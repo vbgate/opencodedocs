@@ -47,7 +47,7 @@ order: 5
 ## 端點與限制速覽
 
 | 專案 | 結論 | 程式碼證據 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 入口路由 | `POST /v1/audio/transcriptions` | `src-tauri/src/proxy/server.rs` 註冊路由到 `handlers::audio::handle_audio_transcription` |
 | 支援格式 | 透過檔案副檔名識別：`mp3/wav/m4a/ogg/flac/aiff(aif)` | `src-tauri/src/proxy/audio/mod.rs` `detect_mime_type()` |
 | 檔案大小 | **15MB 硬限制**（超過返回 413 + 文字錯誤資訊） | `src-tauri/src/proxy/audio/mod.rs` `exceeds_size_limit()`；`src-tauri/src/proxy/handlers/audio.rs` |
@@ -140,7 +140,7 @@ print(transcript.text)
 Antigravity Tools 透過檔案副檔名決定 MIME 類型（不是透過檔案內容嗅探）。
 
 | 格式 | MIME 類型 | 副檔名 |
-| --- | --- | --- |
+|--- | --- | ---|
 | MP3 | `audio/mp3` | `.mp3` |
 | WAV | `audio/wav` | `.wav` |
 | AAC (M4A) | `audio/aac` | `.m4a` |
@@ -217,7 +217,7 @@ Response Body: {"text":"..."}
 這個端點只顯式讀取 3 個表單欄位：
 
 | 欄位 | 是否必需 | 預設值 | 處理方式 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `file` | ✅ | 無 | 必須提供；缺失會返回 `400` + 文字 `缺少音訊檔案` |
 | `model` | ❌ | `gemini-2.0-flash-exp` | 作為字串透傳，並參與 token 獲取（具體上游規則以實際響應為準） |
 | `prompt` | ❌ | `Generate a transcript of the speech.` | 作為第一段 `text` 發送給上游，用來引導轉錄 |
@@ -279,10 +279,10 @@ curl -sS -X POST http://127.0.0.1:8045/v1/audio/transcriptions \
 > 更新時間：2026-01-23
 
 | 功能 | 檔案路徑 | 行號 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 路由註冊（/v1/audio/transcriptions + body limit） | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | 音訊轉錄處理器（multipart/15MB/inlineData） | [`src-tauri/src/proxy/handlers/audio.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/audio.rs#L16-L162) | 16-162 |
-| 支援格式（副檔名 -> MIME + 15MB） | [`src-tauri/src/proxy/audio/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/audio/mod.rs#L6-L35) | 6-35 |
+|--- | --- | ---|
 | Monitor 中介軟體（Binary Request Data） | [`src-tauri/src/proxy/middleware/monitor.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/monitor.rs#L13-L337) | 13-337 |
 
 **關鍵常量**：

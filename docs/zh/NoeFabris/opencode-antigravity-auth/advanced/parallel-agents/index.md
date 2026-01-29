@@ -41,7 +41,7 @@ order: 5
 PID 偏移功能适合以下场景:
 
 | 场景 | 是否需要 PID 偏移 | 原因 |
-| ---- | --------------- | ---- |
+|--- | --- | ---|
 | 单个 OpenCode 实例 | ❌ 不需要 | 单进程,不会账户冲突 |
 | 手动切换多个账户 | ❌ 不需要 | 非并发,sticky 策略即可 |
 | oh-my-opencode 多 Agent | ✅ 推荐 | 多进程并发,需要分散账户 |
@@ -105,7 +105,7 @@ T3: 进程 C 启动 → PID 偏移 → 使用账户 2  ← 分散!
 PID 偏移只在 sticky 策略的 fallback 阶段生效(round-robin 和 hybrid 策略有自己的分配逻辑):
 
 | 策略 | PID 偏移是否生效 | 推荐场景 |
-| ---- | --------------- | -------- |
+|--- | --- | ---|
 | `sticky` | ✅ 生效 | 单进程 + prompt cache 优先 |
 | `round-robin` | ❌ 不生效 | 多进程/并行代理,最大吞吐 |
 | `hybrid` | ❌ 不生效 | 智能分配,健康评分优先 |
@@ -370,7 +370,7 @@ PID 偏移功能通过进程 ID (PID) 来优化多进程场景下的账户分配
 配置多账户后,根据你的使用场景选择合适的策略:
 
 | 场景 | 推荐策略 | PID 偏移 |
-| ---- | -------- | -------- |
+|--- | --- | ---|
 | 单进程, prompt cache 优先 | sticky | 否 |
 | 多进程/并行代理 | round-robin | 否 |
 | hybrid 策略 + 分散启动 | hybrid | 可选 |
@@ -395,7 +395,7 @@ PID 偏移功能通过进程 ID (PID) 来优化多进程场景下的账户分配
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | PID 偏移实现 | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L388-L393) | 388-393 |
 | 配置 Schema 定义 | [`src/plugin/config/schema.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/schema.ts#L244-L255) | 244-255 |
 | 环境变量支持 | [`src/plugin/config/loader.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/loader.ts#L163-L168) | 163-168 |

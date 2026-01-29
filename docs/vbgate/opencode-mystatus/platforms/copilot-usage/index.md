@@ -66,7 +66,7 @@ Simply put: Every time Copilot "does work" for you (generating code, answering q
 Different subscription types have different monthly limits:
 
 | Subscription Type | Monthly Limit | Target Audience |
-| ----------------- | ------------ | -------------- |
+|--- | --- | ---|
 | Free              | 50 requests  | Individual developer trial |
 | Pro               | 300 requests | Individual developer full version |
 | Pro+              | 1,500 requests | Heavy individual users |
@@ -307,7 +307,7 @@ If the configuration file `~/.config/opencode/copilot-quota-token.json` has inco
 If the `tier` you fill in doesn't match your actual subscription, the limit calculation will be incorrect.
 
 | Your Actual Subscription | tier Field Should Be | Incorrect Example |
-| ----------------------- | -------------------- | ---------------- |
+|--- | --- | ---|
 | Free                    | `free`               | `pro` ❌         |
 | Pro                     | `pro`                | `free` ❌        |
 | Pro+                    | `pro+`               | `pro` ❌         |
@@ -375,9 +375,9 @@ This lesson taught you how to use opencode-mystatus to query GitHub Copilot quot
 > Last updated: 2026-01-23
 
 | Function | File Path | Lines |
-| ------------------ | --------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Copilot quota query | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 481-524 |
-| Fine-grained PAT reading | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 122-151 |
+|--- | --- | ---|
 | Public Billing API query | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 157-177 |
 | Internal API query | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 242-304 |
 | Token exchange logic | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 183-208 |

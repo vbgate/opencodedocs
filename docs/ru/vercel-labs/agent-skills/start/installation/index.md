@@ -281,7 +281,7 @@ npm -v
 > Обновлено: 2026-01-25
 
 | Функция          | Путь к файлу                                                                                      | Строки    |
-| ---------------- | ------------------------------------------------------------------------------------------------- | --------- |
+|--- | --- | ---|
 | Метод установки через npx  | [`README.md:83-86`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L83-L86)  | 83-86   |
 | Ручная установка в Claude Code | [`AGENTS.md:98-105`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L98-L105) | 98-105  |
 | Метод установки в claude.ai | [`AGENTS.md:106-109`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L106-L109) | 106-109  |

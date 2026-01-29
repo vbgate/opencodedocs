@@ -181,7 +181,7 @@ To transfer this deployment to your Vercel account, visit the Claim URL.
 Навык Vercel Deploy может автоматически определять **40+ фреймворков**:
 
 | Категория | Фреймворки (частичные примеры) |
-| --------- | ---------------------------- |
+|--- | ---|
 | **React** | Next.js, Gatsby, Create React App, Remix |
 | **Vue** | Nuxt, Vitepress, Vuepress |
 | **Svelte** | SvelteKit, Svelte |
@@ -346,7 +346,7 @@ Deploy /path/to/project.tgz to Vercel
 > Обновлено: 2026-01-25
 
 | Функция              | Путь к файлу                                                                                             | Строки     |
-| -------------------- | -------------------------------------------------------------------------------------------------------- | ---------- |
+|--- | --- | ---|
 | Вход скрипта развертывания      | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 1-250    |
 | Логика определения фреймворка      | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 12-156   |
 | Упаковка и загрузка в API  | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 208-222  |

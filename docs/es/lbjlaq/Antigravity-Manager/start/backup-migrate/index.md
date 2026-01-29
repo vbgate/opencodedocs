@@ -178,7 +178,7 @@ Acción: Entra en `Settings`, habilita `auto_sync` y establece `sync_interval` (
 ## Advertencias de problemas comunes
 
 | Escenario | Lo que podrías hacer (❌) | Práctica recomendada (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Seguridad del archivo de copia de seguridad | Enviar el JSON exportado como un archivo de configuración normal | Tratar el JSON como una contraseña, minimizar el alcance de difusión, evitar exposición en la red pública |
 | Fallo en la importación JSON | El JSON no es un array, o el refresh_token no tiene prefijo `1//` | Usa el JSON exportado por este proyecto como plantilla, mantén los nombres de campos y la estructura consistentes |
 | Importación desde DB no encuentra datos | Antigravity nunca ha iniciado sesión, o la DB falta `jetskiStateSync.agentManagerInitState` | Confirma primero que Antigravity/IDE ha iniciado sesión, luego intenta importar; si es necesario, usa Custom DB para seleccionar el archivo correcto |
@@ -210,14 +210,14 @@ Acción: Entra en `Settings`, habilita `auto_sync` y establece `sync_interval` (
 > Fecha de actualización: 2026-01-23
 
 | Función | Ruta del archivo | Número de línea |
-| --- | --- | --- |
+|--- | --- | ---|
 | Accounts exportar/importar JSON (`save_text_file` / `read_text_file`) | [`src/pages/Accounts.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Accounts.tsx#L458-L578) | 458-578 |
 | Dashboard exportar cuentas JSON | [`src/pages/Dashboard.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Dashboard.tsx#L113-L148) | 113-148 |
 | Pestaña Import: botones Importar DB / Custom DB / Importar V1 | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L491-L539) | 491-539 |
 | Añadir cuenta: ignorar email del frontend, usar refresh_token para obtener email real, actualizar cuota automáticamente, recarga en caliente de Proxy | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L19-L60) | 19-60 |
-| Importación V1: escanear `~/.antigravity-agent` y compatibilidad con múltiples formatos | [`src-tauri/src/modules/migration.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/migration.rs#L9-L190) | 9-190 |
+|--- | --- | ---|
 | Importación desde DB: extraer refresh_token desde `state.vscdb` (ItemTable + base64 + protobuf) | [`src-tauri/src/modules/migration.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/migration.rs#L192-L267) | 192-267 |
-| Derivación de ruta DB predeterminada (`--user-data-dir` / portable / ruta estándar) | [`src-tauri/src/modules/db.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/db.rs#L18-L63) | 18-63 |
+|--- | --- | ---|
 | Después de importar desde DB, establecer automáticamente como "cuenta actual" y actualizar cuota | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L495-L511) | 495-511 |
 | auto_sync: comparar refresh_token, omitir si es el mismo; si cambia, activar importación desde DB | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L532-L564) | 532-564 |
 | Tarea en segundo plano del frontend: llamar periódicamente `syncAccountFromDb()` según `sync_interval` | [`src/components/common/BackgroundTaskRunner.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/common/BackgroundTaskRunner.tsx#L43-L72) | 43-72 |

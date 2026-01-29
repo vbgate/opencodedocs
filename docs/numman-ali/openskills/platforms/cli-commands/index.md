@@ -26,7 +26,7 @@ order: 1
 OpenSkills provides the following 7 commands:
 
 | Command | Purpose | Use Cases |
-|---------|---------|-----------|
+|--- | --- | ---|
 | `install` | Install skills | Install new skills from GitHub, local path, or private repository |
 | `list` | List skills | View all installed skills and their locations |
 | `read` | Read skills | Load skill content for AI agents (usually called automatically by agents) |
@@ -44,7 +44,7 @@ Use `npx openskills --help` to view a brief description of all commands.
 Certain commands support the following global options:
 
 | Option | Short | Purpose | Applicable Commands |
-|--------|-------|---------|---------------------|
+|--- | --- | --- | ---|
 | `--global` | `-g` | Install to global directory `~/.claude/skills/` | `install` |
 | `--universal` | `-u` | Install to universal directory `.agent/skills/` (multi-agent environment) | `install` |
 | `--yes` | `-y` | Skip interactive prompts, use default behavior | `install`, `sync` |
@@ -63,13 +63,13 @@ openskills install <source> [options]
 **Parameters**:
 
 | Parameter | Required | Description |
-|-----------|----------|-------------|
+|--- | --- | ---|
 | `<source>` | ✅ | Skill source (GitHub shorthand, git URL, or local path) |
 
 **Options**:
 
 | Option | Short | Default | Description |
-|--------|-------|---------|-------------|
+|--- | --- | --- | ---|
 | `--global` | `-g` | `false` | Install to global directory `~/.claude/skills/` |
 | `--universal` | `-u` | `false` | Install to universal directory `.agent/skills/` |
 | `--yes` | `-y` | `false` | Skip interactive selection, install all found skills |
@@ -139,7 +139,7 @@ openskills read <skill-names...>
 **Parameters**:
 
 | Parameter | Required | Description |
-|-----------|----------|-------------|
+|--- | --- | ---|
 | `<skill-names...>` | ✅ | List of skill names (supports multiple, separated by space or comma) |
 
 **Options**: None
@@ -187,7 +187,7 @@ openskills update [skill-names...]
 **Parameters**:
 
 | Parameter | Required | Description |
-|-----------|----------|-------------|
+|--- | --- | ---|
 | `[skill-names...]` | ❌ | List of skill names to update (defaults to all) |
 
 **Options**: None
@@ -225,7 +225,7 @@ openskills sync [options]
 **Options**:
 
 | Option | Short | Default | Description |
-|--------|-------|---------|-------------|
+|--- | --- | --- | ---|
 | `--output <path>` | `-o <path>` | `AGENTS.md` | Output file path |
 | `--yes` | `-y` | `false` | Skip interactive selection, sync all skills |
 
@@ -280,7 +280,7 @@ openskills remove <skill-name>
 **Parameters**:
 
 | Parameter | Required | Description |
-|-----------|----------|-------------|
+|--- | --- | ---|
 | `<skill-name>` | ✅ | Name of skill to delete |
 
 **Options**: None
@@ -303,7 +303,7 @@ openskills rm pdf
 ## Quick Reference Cheat Sheet
 
 | Task | Command |
-|------|---------|
+|--- | ---|
 | View all installed skills | `openskills list` |
 | Install official skills | `openskills install anthropics/skills` |
 | Install from local path | `openskills install ./my-skill` |

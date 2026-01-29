@@ -142,7 +142,7 @@ Você pode usar 2 sinais para determinar se entrou na lógica de reparo:
 ## Lembrete de Armadilhas
 
 | Cenário | O Que Você Pode Fazer (❌) | Recomendado (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Ver 0 Token e imediatamente tentar manualmente muitas vezes | Continuar pressionando o botão de retry do cliente, sem olhar o log | Primeiro olhe uma vez o Proxy Monitor + app.log, confirme se é morte prematura na fase peek (retry/rotação automática) |
 | Encontrar `Invalid \`signature\`` e diretamente limpar diretório de dados | Deletar todo `.antigravity_tools`, contas/estatísticas tudo vai | Primeiro deixe o proxy executar uma vez "retry de reparo de assinatura"; só quando o log explicitamente dizer irreparável, considere intervenção manual |
 | Tratar "flutuação de servidor" como "conta quebrada" | Rolar conta para todos 400/503/529 | Se rotação é efetiva depende do código de status; o próprio proxy tem regras `should_rotate_account(...)` (`src-tauri/src/proxy/handlers/claude.rs#L226-L236`) |
@@ -167,12 +167,12 @@ Você pode usar 2 sinais para determinar se entrou na lógica de reparo:
 > Última Atualização: 2026-01-23
 
 | Função | Caminho do Arquivo | Número da Linha |
-| --- | --- | --- |
+|--- | --- | ---|
 | Claude handler: estratégia de backoff retry + regras de rotação | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L117-L236) | 117-236 |
 | Claude handler: internamente converter não streaming em streaming (better quota) | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L665-L776) | 665-776 |
-| Claude handler: peek pré-leitura (pular heartbeat/comentário, evitar fluxo vazio) | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L812-L926) | 812-926 |
+|--- | --- | ---|
 | Claude handler: retry de reparo de erro de assinatura/ordem de bloco 400 | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L999-L1102) | 999-1102 |
-| Gemini handler: peek pré-leitura (evitar fluxo vazio 200 OK) | [`src-tauri/src/proxy/handlers/gemini.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/gemini.rs#L117-L149) | 117-149 |
+|--- | --- | ---|
 | Gemini handler: injeção de prompt de reparo de erro de assinatura 400 | [`src-tauri/src/proxy/handlers/gemini.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/gemini.rs#L300-L325) | 300-325 |
 | Cache de assinatura (três camadas: tool/family/session, com TTL/comprimento mínimo) | [`src-tauri/src/proxy/signature_cache.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/signature_cache.rs#L5-L207) | 5-207 |
 | Conversão de SSE Claude: capturar assinatura e escrever no cache de assinatura | [`src-tauri/src/proxy/mappers/claude/streaming.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/claude/streaming.rs#L639-L787) | 639-787 |

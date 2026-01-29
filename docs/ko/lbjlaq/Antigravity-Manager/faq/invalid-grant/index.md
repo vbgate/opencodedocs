@@ -152,7 +152,7 @@ UI에서 "계정은 있는" 것만 보면 쉽게 "시스템이 일시적으로 �
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 설계 문서: invalid_grant의 문제와 변경 동작 | [`docs/proxy-invalid-grant.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy-invalid-grant.md#L1-L52) | 1-52 |
 | 계정 풀 로드 시 `disabled=true` 건너뜀 | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L70-L158) | 70-158 |
 | 토큰 새로고침 실패 시 `invalid_grant` 식별 및 계정 비활성화 | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L840-L890) | 840-890 |

@@ -66,7 +66,7 @@ This determines that the technology selection for the skill system must be compa
 ## MCP vs OpenSkills: Positioning Comparison
 
 | Comparison Dimension | MCP (Model Context Protocol) | OpenSkills (CLI) |
-| ------------------- | --------------------------- | ---------------- |
+|--- | --- | ---|
 | **Use Case** | Dynamic tools, real-time API calls | Static instructions, documentation, scripts |
 | **Runtime Requirements** | Requires MCP server | No server needed (pure files) |
 | **Agent Support** | Only MCP-supporting agents | All agents that can read `AGENTS.md` |
@@ -181,7 +181,7 @@ Whereas CLI naturally supports progressive loading.
 The problems MCP solves are **different** from the skill system:
 
 | Problems MCP Solves | Examples |
-| ------------------ | -------- |
+|--- | ---|
 | **Real-time API calls** | Calling OpenAI API, database queries |
 | **Dynamic tools** | Calculators, data transformation services |
 | **Remote service integration** | Git operations, CI/CD systems |
@@ -333,7 +333,7 @@ OpenSkills's core reasons for choosing CLI over MCP:
 ### MCP vs Skill System
 
 | MCP | Skill System (CLI) |
-| --- | ------------------ |
+|--- | ---|
 | Dynamic tools | Static instructions |
 | Requires server | Pure file system |
 | Real-time API | Documentation and scripts |
@@ -363,7 +363,7 @@ OpenSkills's core reasons for choosing CLI over MCP:
 > Last updated: 2026-01-24
 
 | Function | File Path | Line Numbers |
-| -------- | --------- | ------------ |
+|--- | --- | ---|
 | CLI entry | [`src/cli.ts`](https://github.com/numman-ali/openskills/blob/main/src/cli.ts) | 39-80 |
 | Read command | [`src/commands/read.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/read.ts) | 1-50 |
 | AGENTS.md generation | [`src/utils/agents-md.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/agents-md.ts) | 23-93 |

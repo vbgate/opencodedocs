@@ -61,7 +61,7 @@ Resets in: 2h 30m
 
 **지원 언어**:
 | 언어 | 코드 | 감지 조건 |
-| ---- | ---- | -------- |
+|--- | --- | ---|
 | 중국어 | `zh` | locale이 `zh`로 시작(예: `zh-CN`, `zh-TW`) |
 | 영어 | `en` | 기타 경우 |
 
@@ -195,7 +195,7 @@ source ~/.bashrc
 언어 감지가 올바른지 확인하세요:
 
 | 테스트 항목 | 작업 | 예상 결과 |
-| ------ | ---- | -------- |
+|--- | --- | ---|
 | 중국어 시스템 | `/mystatus` 실행 | 중국어로 출력됨(예: `3시간 한도`) |
 | 영어 시스템 | `/mystatus` 실행 | 영어로 출력됨(예: `3-hour limit`) |
 | 임시 전환 | `LANG` 환경 변수 수정 후 명령 실행 | 출력 언어가随之 변경됨 |
@@ -205,7 +205,7 @@ source ~/.bashrc
 ### 일반적인 문제
 
 | 문제 | 원인 | 해결 방법 |
-| ---- | ---- | -------- |
+|--- | --- | ---|
 | 출력 언어이 예상과 다름 | 시스템 언어 설정 오류 | `LANG` 환경 변수 또는 시스템 언어 설정 확인 |
 | Intl API 사용 불가 | Node.js 버전이 너무 낮거나 환경이 지원하지 않음 | 플러그인은 자동으로 환경 변수 감지로 폴백합니다 |
 | 중국어 시스템에서 영어 표시됨 | 환경 변수 `LANG`이 `zh_*`로 설정되지 않음 | 올바른 `LANG` 값 설정(예: `zh_CN.UTF-8`) |
@@ -255,7 +255,7 @@ source ~/.bashrc
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 언어 감지 함수 | [`plugin/lib/i18n.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/i18n.ts#L24-L40) | 24-40 |
 | 중국어 번역 정의 | [`plugin/lib/i18n.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/i18n.ts#L46-L124) | 46-124 |
 | 영어 번역 정의 | [`plugin/lib/i18n.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/i18n.ts#L125-L203) | 125-203 |

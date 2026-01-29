@@ -215,7 +215,7 @@ ls -la ~/.claude/agents/ | grep -i plan
 **常见不匹配示例**：
 
 | Command invokes | 实际 Agent 文件名 | 问题 |
-|----------------|-------------------|------|
+|--- | --- | ---|
 | `planner` | `planner.md` | ✅ 正确 |
 | `planner` | `Planner.md` | ❌ 大小写不匹配（Unix 系统区分大小写） |
 | `planner` | `planner.md.backup` | ❌ 文件扩展名错误 |
@@ -319,7 +319,7 @@ grep "^tools:" ~/.claude/agents/*.md
 **常见错误**：
 
 | 错误写法 | 正确写法 | 问题 |
-|---------|---------|------|
+|--- | --- | ---|
 | `tools: read, grep, glob` | `tools: Read, Grep, Glob` | ❌ 大小写错误 |
 | `tools: Read, Grep, Glob,` | `tools: Read, Grep, Glob` | ❌ 尾部逗号（YAML 语法错误） |
 | `tools: "Read, Grep, Glob"` | `tools: Read, Grep, Glob` | ❌ 不需要引号包裹 |
@@ -525,7 +525,7 @@ Agent 被调用并执行，但输出不符合预期或质量不高。
 **根据任务类型选择正确的 Agent**：
 
 | 任务类型 | 推荐使用 | Command |
-|---------|---------|---------|
+|--- | --- | ---|
 | 实现新功能 | `tdd-guide` | `/tdd` |
 | 复杂功能规划 | `planner` | `/plan` |
 | 代码审查 | `code-reviewer` | `/code-review` |
@@ -588,7 +588,7 @@ model: opus
 **验证工具名称拼写**（区分大小写）：
 
 | ✅ 正确 | ❌ 错误 |
-|---------|---------|
+|--- | ---|
 | `Read` | `read`、`READ` |
 | `Write` | `write`、`WRITE` |
 | `Edit` | `edit`、`EDIT` |
@@ -765,7 +765,7 @@ chmod +x validate-agents.sh
 Agent 调用失败通常有以下几类原因：
 
 | 问题类型 | 常见原因 | 快速排查 |
-|---------|---------|---------|
+|--- | --- | ---|
 | **完全不被调用** | Agent/Command 文件路径错误、插件未加载 | 检查文件位置、验证插件配置 |
 | **Agent not found** | 名称不匹配（Command invokes vs 文件名） | 验证文件名和 invokes 字段 |
 | **格式错误** | Front Matter 缺少字段、YAML 语法错误 | 检查必需字段、验证 YAML 格式 |
@@ -796,7 +796,7 @@ Agent 调用失败通常有以下几类原因：
 > 更新时间：2026-01-25
 
 | 功能             | 文件路径                                                                                    | 行号    |
-| ---------------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 插件清单配置     | [`.claude-plugin/plugin.json`](https://github.com/affaan-m/everything-claude-code/blob/main/.claude-plugin/plugin.json) | 1-28    |
 | Planner Agent    | [`agents/planner.md`](https://github.com/affaan-m/everything-claude-code/blob/main/agents/planner.md) | 1-120   |
 | TDD Guide Agent  | [`agents/tdd-guide.md`](https://github.com/affaan-m/everything-claude-code/blob/main/agents/tdd-guide.md) | 1-281   |

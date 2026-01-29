@@ -648,13 +648,13 @@ TDD 开发流程的核心要点：
 > 更新时间：2026-01-25
 
 | 功能              | 文件路径                                                                                     | 行号      |
-| ----------------- | -------------------------------------------------------------------------------------------- | --------- |
+|--- | --- | ---|
 | /plan 命令        | [`commands/plan.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/plan.md)            | 1-114     |
 | /tdd 命令        | [`commands/tdd.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/tdd.md)              | 1-327     |
 | /verify 命令      | [`commands/verify.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/verify.md)          | 1-60      |
-| /code-review 命令  | [`commands/code-review.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/code-review.md) | 1-41      |
-| tdd-guide agent   | [`agents/tdd-guide.md`](https://github.com/affaan-m/everything-claude-code/blob/main/agents/tdd-guide.md)       | 1-281     |
-| tdd-workflow skill | [`skills/tdd-workflow/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/tdd-workflow/SKILL.md) | 1-410     |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **关键函数**：
 - `plan` 调用 planner agent，创建实现计划

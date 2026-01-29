@@ -172,7 +172,7 @@ curl.exe -i http://127.0.0.1:PORT/v1/images/generations `
 Der Upstream von Imagen 3 erwartet ein standardisiertes `aspectRatio`. Wenn Sie `size` als gängige Breite-Höhe-Kombination angeben, wird es stabil einem Standardverhältnis zugeordnet.
 
 | Von Ihnen übergebener size | Vom Proxy berechnetes aspectRatio |
-| --- | --- |
+|--- | ---|
 | `"1024x1024"` | `1:1` |
 | `"1920x1080"` / `"1280x720"` | `16:9` |
 | `"1080x1920"` / `"720x1280"` | `9:16` |
@@ -188,7 +188,7 @@ Der Upstream von Imagen 3 erwartet ein standardisiertes `aspectRatio`. Wenn Sie 
 Sie müssen die internen Felder von Imagen 3 nicht auswendig lernen – mit dem `quality`-Parameter von OpenAI Images können Sie zwischen den Auflösungsstufen wechseln.
 
 | Von Ihnen übergebener quality | Vom Proxy geschriebener imageSize |
-| --- | --- |
+|--- | ---|
 | `"standard"` | Nicht gesetzt (Upstream-Standard) |
 | `"medium"` | `"2K"` |
 | `"hd"` | `"4K"` |
@@ -201,7 +201,7 @@ Sie müssen die internen Felder von Imagen 3 nicht auswendig lernen – mit dem 
 In dieser Implementierung gibt `response_format: "url"` Ihnen keine öffentlich zugängliche URL, sondern einen Data URI im Format `data:<mime>;base64,...`. Viele Tools eignen sich besser für die direkte Verwendung von `b64_json`.
 
 | response_format | Feld in data[] |
-| --- | --- |
+|--- | ---|
 | `"b64_json"` (Standard) | `{ "b64_json": "..." }` |
 | `"url"` | `{ "url": "data:image/png;base64,..." }` |
 
@@ -219,7 +219,7 @@ In dieser Implementierung gibt `response_format: "url"` Ihnen keine öffentlich 
 Die Analyse-Logik für `size` hier trennt nach `BREITExHÖHE`. Wenn `size` nicht in diesem Format vorliegt, wird direkt auf `1:1` zurückgefallen.
 
 | Schreibweise | Ergebnis |
-| --- | --- |
+|--- | ---|
 | ✓ `"1920x1080"` | 16:9 |
 | ❌ `"16:9"` | Rückfall auf 1:1 |
 
@@ -254,12 +254,12 @@ Die Implementierung führt gleichzeitige Anforderungen durch und fasst die Ergeb
 > Aktualisiert: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
-| OpenAI Images-Route offenlegen | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L123-L146) | 123-146 |
-| Images-Generierungsendpunkt: Analysieren von prompt/size/quality + Zusammenstellen der OpenAI-Antwort | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L1104-L1333) | 1104-1333 |
-| Analyse und Zuordnung von size/quality (size->aspectRatio, quality->imageSize) | [`src-tauri/src/proxy/mappers/common_utils.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/common_utils.rs#L19-L222) | 19-222 |
-| OpenAIRequest-Deklaration size/quality (für Protokollschichtkompatibilität) | [`src-tauri/src/proxy/mappers/openai/models.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/models.rs#L6-L38) | 6-38 |
-| OpenAI->Gemini-Anforderungsumwandlung: Übergeben von size/quality an die einheitliche Analysefunktion | [`src-tauri/src/proxy/mappers/openai/request.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/request.rs#L19-L27) | 19-27 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Felder (aus dem Quellcode)**:
 - `size`: Analysiert als `aspectRatio` nach `BREITExHÖHE`

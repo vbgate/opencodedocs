@@ -32,7 +32,7 @@ order: 4
 需要使用遠端/Devcontainer 模式的典型情境：
 
 | 情境 | 說明 |
-| --- | --- |
+|--- | ---|
 | **SSH 連線** | 你透過 SSH 連線到遠端開發伺服器 |
 | **Devcontainer** | 你在 VS Code 中使用 devcontainer 進行開發 |
 | **WSL** | 你在 Windows 上使用 WSL 進行 Linux 開發 |
@@ -70,7 +70,7 @@ Plannotator 透過偵測 `PLANNOTATOR_REMOTE` 環境變數自動進入「遠端�
 Plannotator 遠端模式依賴三個環境變數：
 
 | 環境變數 | 說明 | 預設值 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `PLANNOTATOR_REMOTE` | 啟用遠端模式 | 未設定（本機模式） |
 | `PLANNOTATOR_PORT` | 固定連接埠號 | 隨機（本機）/ 19432（遠端） |
 | `PLANNOTATOR_BROWSER` | 自訂瀏覽器路徑 | 系統預設瀏覽器 |
@@ -333,7 +333,7 @@ Error: bind: EADDRINUSE: address already in use :::9999
 遠端/Devcontainer 模式的核心要點：
 
 | 要點 | 說明 |
-| --- | --- |
+|--- | ---|
 | **環境變數** | `PLANNOTATOR_REMOTE=1` 啟用遠端模式 |
 | **固定連接埠** | 使用 `PLANNOTATOR_PORT` 設定固定連接埠（預設 19432） |
 | **連接埠轉發** | SSH/Devcontainer 需要設定連接埠轉發，WSL 自動轉發 |
@@ -361,7 +361,7 @@ Error: bind: EADDRINUSE: address already in use :::9999
 > 更新時間：2026-01-24
 
 | 功能 | 檔案路徑 | 行號 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 遠端會話偵測 | [`packages/server/remote.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/remote.ts#L16-L29) | 16-29 |
 | 伺服器連接埠取得 | [`packages/server/remote.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/remote.ts#L34-L49) | 34-49 |
 | 伺服器啟動邏輯 | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts#L91-L97) | 91-97 |

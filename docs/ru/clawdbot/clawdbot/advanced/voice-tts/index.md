@@ -177,7 +177,7 @@ clawdbot gateway rpc voicewake.set '{"triggers":["助手","小助"]}'
 > Обновлено: 2026-01-27
 
 | Функция | Путь к файлу | Номер строки |
-| ----- | --------- | ---- |
+|--- | --- | ---|
 | Основная логика TTS | [`src/tts/tts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/tts/tts.ts) | 1-1472 |
 | ElevenLabs TTS | [`src/tts/tts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/tts/tts.ts) | 916-991 |
 | OpenAI TTS | [`src/tts/tts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/tts/tts.ts) | 993-1037 |

@@ -88,7 +88,7 @@ Este design em camadas garante que, mesmo se o modelo for manipulado, o escopo d
 O Clawdbot oferece três camadas de controle de acesso:
 
 | Camada | Conteúdo de Proteção | Local de Configuração |
-| ------ | ------------------- | ---------------------- |
+|--- | --- | ---|
 | **Autenticação do Gateway** | Conexões WebSocket | `gateway.auth` |
 | **Política de DM** | Mensagens de chat privado | `channels.*.dmPolicy` |
 | **Política de Grupo** | Mensagens de grupo | `channels.*.groupPolicy` / `channels.*.groups` |
@@ -119,7 +119,7 @@ clawdbot security audit --fix
 A ferramenta de auditoria verificará os seguintes aspectos:
 
 | Categoria | Itens Específicos | Nível de Risco |
-| --------- | ----------------- | -------------- |
+|--- | --- | ---|
 | **Acesso de Entrada** | Autenticação do Gateway, política de DM, política de Grupo | Crítico / Aviso |
 | **Acesso a Ferramentas** | Lista de permissão de execução elevada, allow/deny de ferramentas | Crítico / Aviso |
 | **Exposição de Rede** | Modo de bind do Gateway, Tailscale Serve/Funnel | Crítico / Info |
@@ -173,7 +173,7 @@ Por padrão, o Gateway requer autenticação para aceitar conexões WebSocket.
 **Modos de Autenticação**:
 
 | Modo | Uso | Cenário Recomendado |
-| ---- | --- | ------------------- |
+|--- | --- | ---|
 | `token` | Token bearer compartilhado | Maioria dos casos, recomendado |
 | `password` | Autenticação por senha | Desenvolvimento local, conveniente para testes rápidos |
 | Tailscale Identity | Tailscale Serve | Acesso remoto via Tailscale |
@@ -187,7 +187,7 @@ Por padrão, o Gateway requer autenticação para aceitar conexões WebSocket.
 A política de DM controla se usuários desconhecidos podem conversar diretamente com seu assistente de IA.
 
 | Política | Comportamento | Cenário Recomendado |
-| -------- | ------------- | ------------------- |
+|--- | --- | ---|
 | `pairing` (padrão) | Remetentes desconhecidos recebem código de emparelhamento, não processa antes do emparelhamento | Uso pessoal, recomendado |
 | `allowlist` | Remetentes desconhecidos são rejeitados | Ambiente confiável com múltiplas pessoas |
 | `open` | Permite qualquer pessoa | Serviço público (requer `allowFrom` contendo `"*"`) |
@@ -228,7 +228,7 @@ clawdbot pairing approve whatsapp <código-de-emparelhamento>
 A política de Grupo determina como o assistente de IA responde a mensagens em grupos.
 
 | Política | Comportamento | Local de Configuração |
-| -------- | ------------- | --------------------- |
+|--- | --- | ---|
 | `allowlist` | Apenas aceita grupos na lista de permissão | `channels.whatsapp.groups` |
 | `disabled` | Ignora todas as mensagens de grupo | `channels.telegram.groups` |
 | `requireMention` | Apenas responde quando mencionado com @ ou comando acionado | `channels.*.groups.*` |
@@ -307,7 +307,7 @@ Você pode configurar listas de permissão (allow) e denegação (deny) de ferra
 ### Categorias Comuns de Ferramentas
 
 | Categoria de Ferramenta | Ferramentas Específicas | Nível de Risco |
-| ---------------------- | ----------------------- | -------------- |
+|--- | --- | ---|
 | **Operações de Arquivo** | `read`, `write`, `edit`, `apply_patch` | Médio |
 | **Execução de Shell** | `exec`, `process` | Alto |
 | **Controle de Navegador** | `browser` | Alto |
@@ -353,7 +353,7 @@ O isolamento em sandbox faz com que as ferramentas sejam executadas em contêine
 ### Modos de Sandbox
 
 | Modo | Comportamento | Cenário Recomendado |
-| ---- | ------------- | ------------------- |
+|--- | --- | ---|
 | `off` | Todas as ferramentas executam no host | Ambiente confiável pessoal |
 | `non-main` (recomendado) | Sessão principal no host, outras sessões no sandbox | Equilíbrio entre performance e segurança |
 | `all` | Todas as sessões no sandbox | Ambiente com múltiplas pessoas, serviço público |
@@ -375,7 +375,7 @@ O isolamento em sandbox faz com que as ferramentas sejam executadas em contêine
 O acesso ao workspace determina quais diretórios do host os contêineres de sandbox podem ver.
 
 | Nível de Acesso | Comportamento | Cenário Recomendado |
-| --------------- | ------------- | ------------------- |
+|--- | --- | ---|
 | `none` (padrão) | Workspace do sandbox `~/.clawdbot/sandboxes` | Isolamento máximo |
 | `ro` | Workspace do agente montado como somente leitura em `/agent` | Lê mas não escreve arquivos |
 | `rw` | Workspace do agente montado como leitura/escrita em `/workspace` | Agentes que precisam escrever arquivos |
@@ -397,7 +397,7 @@ O acesso ao workspace determina quais diretórios do host os contêineres de san
 O escopo do sandbox determina a granularidade de isolamento do contêiner.
 
 | Escopo | Comportamento | Número de Contêineres |
-| ------ | ------------- | --------------------- |
+|--- | --- | ---|
 | `session` (padrão) | Um contêiner por sessão | Mais contêineres, melhor isolamento |
 | `agent` | Um contêiner por Agente | Equilíbrio entre isolamento e recursos |
 | `shared` | Todas as sessões compartilham um contêiner | Economiza recursos, menor isolamento |
@@ -698,7 +698,7 @@ Para instruções detalhadas de instalação do Docker, consulte: [Opções de I
 ### Resumo de Melhores Práticas
 
 | Prática | Motivo |
-| ------- | ------ |
+|--- | ---|
 | Use o modo `pairing` por padrão | Equilíbrio entre experiência do usuário e segurança |
 | Use `requireMention` para mensagens de grupo | Evita manipulação |
 | Use lista de permissão de ferramentas em vez de lista de denegação | Princípio de menor privilégio |
@@ -748,7 +748,7 @@ Este módulo apresentou o modelo de segurança e funcionalidade de isolamento em
 > Data de atualização: 2026-01-27
 
 | Funcionalidade | Caminho do Arquivo | Linha |
-| -------------- | ------------------ | ----- |
+|--- | --- | ---|
 | Auditoria de Segurança | [`src/security/audit.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/audit.ts#L1-L910) | 1-910 |
 | Correção de Segurança | [`src/security/fix.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/fix.ts#L1-L385) | 1-385 |
 | Verificação de Permissões de Arquivos | [`src/security/audit-fs.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/audit-fs.ts) | Arquivo inteiro |

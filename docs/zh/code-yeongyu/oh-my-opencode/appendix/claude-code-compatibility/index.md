@@ -34,7 +34,7 @@ Oh My OpenCode 通过**自动加载机制**兼容 Claude Code 的配置格式。
 兼容性涵盖以下功能：
 
 | 功能 | 兼容状态 | 说明 |
-|-----|-----------|------|
+|--- | --- | ---|
 | **Commands** | ✅ 完全支持 | 从 `~/.claude/commands/` 和 `.claude/commands/` 加载斜杠命令 |
 | **Skills** | ✅ 完全支持 | 从 `~/.claude/skills/` 和 `.claude/skills/` 加载专业技能 |
 | **Agents** | ⚠️ 预留 | 预留接口，当前仅支持内置 Agents |
@@ -153,7 +153,7 @@ Hooks 从 `settings.json` 的 `hooks` 字段加载，支持以下路径（按优
 **开关说明**:
 
 | 开关 | 禁用的内容 | 保留的内容 |
-|-----|-----------|-----------|
+|--- | --- | ---|
 | `mcp` | `.mcp.json` 文件 | 内置 MCPs（websearch、context7、grep_app） |
 | `commands` | `~/.claude/commands/`、`.claude/commands/` | OpenCode 原生 Commands |
 | `skills` | `~/.claude/skills/`、`.claude/skills/` | OpenCode 原生 Skills |
@@ -210,7 +210,7 @@ Claude Code 的 `settings.json` 中的 `hooks` 字段定义了在特定事件点
 ### Hook 事件类型
 
 | 事件 | 触发时机 | 可执行的操作 |
-|-----|-----------|------------|
+|--- | --- | ---|
 | **PreToolUse** | 工具执行前 | 阻止工具调用、修改输入参数、注入上下文 |
 | **PostToolUse** | 工具执行后 | 添加警告、修改输出、注入消息 |
 | **UserPromptSubmit** | 用户提交提示词时 | 阻止提示词、注入消息、转换提示词 |
@@ -386,7 +386,7 @@ Oh My OpenCode 提供了完整的 Claude Code 兼容层，让你可以无缝迁�
 > 更新时间：2026-01-26
 
 | 功能 | 文件路径 | 行号 |
-|-----|-----------|------|
+|--- | --- | ---|
 | Claude Code Hooks 主入口 | [`src/hooks/claude-code-hooks/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/claude-code-hooks/index.ts) | 1-402 |
 | Hooks 配置加载 | [`src/hooks/claude-code-hooks/config.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/claude-code-hooks/config.ts) | 1-104 |
 | MCP 配置加载器 | [`src/features/claude-code-mcp-loader/loader.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/claude-code-mcp-loader/loader.ts) | 1-120 |

@@ -58,7 +58,7 @@ order: 7
 프로젝트 내장의 "자동 다운로드 + 설치" 로직은 다음 OS/아키텍처 조합만 포함합니다(다른 플랫폼은 `Unsupported platform`을 보고함).
 
 | 운영체제 | 아키텍처 | 지원 상태 |
-| --- | --- | --- |
+|--- | --- | ---|
 | macOS | Apple Silicon (arm64) | ✅ |
 | macOS | Intel (x86_64) | ✅ |
 | Linux | x86_64 | ✅ |
@@ -68,7 +68,7 @@ order: 7
 ### 두 가지 모드 비교
 
 | 특성 | Quick 모드 | Auth 모드 |
-| --- | --- | --- |
+|--- | --- | ---|
 | **URL 유형** | `https://xxx.trycloudflare.com`(로그에서 추출한 임시 URL) | 애플리케이션이 자동으로 URL을 추출하지 않을 수 있음(cloudflared 로그에 따라 다름). 진입 도메인은 Cloudflare 측 구성을 기준으로 함 |
 | **토큰 필요** | ❌ 필요 없음 | ✅ 필요(Cloudflare 콘솔에서 획득) |
 | **안정성** | 프로세스 재시작 시 URL이 변경될 수 있음 | Cloudflare 측 구성 방법에 따라 다름(애플리케이션은 프로세스 시작만 담당) |
@@ -138,7 +138,7 @@ Get-ChildItem "$HOME\.antigravity_tools\bin\"
 2. 클릭하여 선택:
 
 | 모드 | 설명 | 선택 시기 |
-| --- | --- | --- |
+|--- | --- | ---|
 | **Quick Tunnel** | 자동으로 임시 URL 생성(`*.trycloudflare.com`) | 빠른 테스트, 임시 액세스 |
 | **Named Tunnel** | Cloudflare 계정 및 사용자 정의 도메인 사용 | 프로덕션 환경, 고정 도메인 필요 |
 
@@ -378,12 +378,12 @@ Cloudflared 터널은 로컬 서비스를 빠르게 노출하는 강력한 도�
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 데이터 디렉토리 이름(`.antigravity_tools`) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | 구성 구조 및 기본값(`CloudflaredConfig`, `TunnelMode`) | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L16-L59) | 16-59 |
 | 자동 다운로드 URL 규칙(지원되는 OS/아키텍처) | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L70-L88) | 70-88 |
 | 설치 로직(다운로드/쓰기/압축 해제/권한) | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L147-L211) | 147-211 |
-| Quick/Auth 시작 매개변수(`tunnel --url` vs `tunnel run --token`) | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L233-L266) | 233-266 |
+|--- | --- | ---|
 | URL 추출 규칙(`*.trycloudflare.com`만 인식) | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L390-L413) | 390-413 |
 | Tauri 명령 인터페이스(check/install/start/stop/get_status) | [`src-tauri/src/commands/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/cloudflared.rs#L6-L118) | 6-118 |
 | UI 카드(모드/Token/HTTP2/URL 표시 및 복사) | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L1597-L1753) | 1597-1753 |

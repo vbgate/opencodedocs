@@ -93,7 +93,7 @@ async function detectTerminalInfo(config: NotifyConfig): Promise<TerminalInfo> {
 **步骤拆解**：
 
 | 步骤 | 代码 | 说明 |
-|------|------|------|
+|--- | --- | ---|
 | 1 | `config.terminal \|\| detectTerminal()` | 优先使用配置覆盖，否则自动检测 |
 | 2 | `!terminalName ? return {...}` | 检测失败时返回空对象 |
 | 3 | `TERMINAL_PROCESS_NAMES[...]` | 查找映射表获取 macOS 进程名 |
@@ -326,7 +326,7 @@ const terminalName = config.terminal || detectTerminal() || null
 ### macOS
 
 | 功能 | 支持情况 | 实现方式 |
-|------|---------|---------|
+|--- | --- | ---|
 | 原生通知 | ✅ | node-notifier (NSUserNotificationCenter) |
 | 终端检测 | ✅ | detect-terminal 库 |
 | 焦点检测 | ✅ | osascript 查询前台应用 |
@@ -352,7 +352,7 @@ graph LR
 ### Windows
 
 | 功能 | 支持情况 | 实现方式 |
-|------|---------|---------|
+|--- | --- | ---|
 | 原生通知 | ✅ | node-notifier (SnoreToast) |
 | 终端检测 | ✅ | detect-terminal 库 |
 | 焦点检测 | ❌ | 系统限制 |
@@ -375,7 +375,7 @@ graph LR
 ### Linux
 
 | 功能 | 支持情况 | 实现方式 |
-|------|---------|---------|
+|--- | --- | ---|
 | 原生通知 | ✅ | node-notifier (notify-send) |
 | 终端检测 | ✅ | detect-terminal 库 |
 | 焦点检测 | ❌ | 系统限制 |
@@ -400,7 +400,7 @@ if (!terminalName) {
 ### 对通知功能的影响
 
 | 功能 | 检测失败后的行为 |
-|------|-----------------|
+|--- | ---|
 | 原生通知 | ✅ **正常工作**（不依赖终端检测） |
 | 焦点检测 | ❌ **失效**（`isTerminalFocused()` 直接返回 false） |
 | 点击聚焦 | ❌ **失效**（`bundleId` 为 null，不设置 activate 参数） |
@@ -503,7 +503,7 @@ if (isQuietHours(config)) return
 **常用对照表**：
 
 | 你的终端 | 配置值 | 检测结果（detect-terminal） |
-|---------|-------|--------------------------|
+|--- | --- | ---|
 | Ghostty | `"ghostty"` | ✅ |
 | iTerm2 | `"iterm2"` 或 `"iterm"` | ✅ |
 | Kitty | `"kitty"` | ✅ |
@@ -672,7 +672,7 @@ Windows/Linux 的终端检测依赖 detect-terminal 库，配置覆盖功能在�
 > 更新时间：2026-01-27
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 终端检测主函数 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L145-L164) | 145-164 |
 | macOS 进程名映射表 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L71-L84) | 71-84 |
 | macOS Bundle ID 获取 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L135-L137) | 135-137 |

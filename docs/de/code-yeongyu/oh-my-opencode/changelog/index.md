@@ -21,7 +21,7 @@ Dieses Kapitel zeichnet die Versionsgeschichte von oh-my-opencode auf, einschlie
 ## Unterseitennavigation
 
 | Version | Titel | Beschreibung | Veröffentlichungsstatus |
-|---------|-------|-------------|----------------|
+|--- | --- | --- | ---|
 | **v3.0** | [v3.0-Funktionen](./v3.0-features/) | Führt die brandneuen Kategorien- und Fähigkeiten-Systeme ein, 7 integrierte Aufgabenkategorien, 3 professionelle Fähigkeitspakete, Sisyphus-Junior-Ausführer und dynamische Agentenzusammensetzungsfunktionen | ✅ Stabil |
 
 ---
@@ -66,7 +66,7 @@ Nach dem Lesen des Änderungsprotokolls können Sie mit dem Lernen fortfahren:
 Derzeit in diesem Abschnitt enthaltene Versionen:
 
 | Version | Veröffentlichungsdatum | Wichtige Aktualisierungen | Wichtigkeit |
-|---------|--------------|---------------|------------|
+|--- | --- | --- | ---|
 | v3.0.0 | 2026-01 | Kategorien- und Fähigkeiten-Systeme, Sisyphus-Junior | 🔥 Wichtige Aktualisierung |
 
 ---

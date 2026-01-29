@@ -143,10 +143,10 @@ Vorgehensweise: Gehen Sie in den Advanced-Bereich von Settings, klicken Sie auf 
 ## Häufige Fehler
 
 | Phänomen | Häufige Ursache | Was Sie tun können |
-| --- | --- | --- |
+|--- | --- | ---|
 | Token-Stats zeigt "keine Daten" an | Sie haben tatsächlich keine Modell-Anforderungen generiert; oder die Upstream-Antwort enthält keine analysierbaren Token-Felder | Verwenden Sie zuerst einen bereits validierten Client, um Anforderungen zu senden; prüfen Sie dann, ob die Antwort `usage/usageMetadata` enthält |
 | Statistik nach "Modell" sieht falsch aus | Statistikstandard verwendet `model` in der Anfrage, nicht `X-Mapped-Model` | Betrachten Sie Modell-Routing als "Anforderungsmodell -> Mapping-Modell"; Statistik zeigt "Anforderungsmodell" |
-| Konto-Dimension fehlt | Wird nur geschrieben, wenn `X-Account-Email` verfügbar ist und Token-Verbrauch analysiert wurde | Bestätigen Sie, dass Anforderungen tatsächlich zum Kontenpool gelangt sind; vergleichen Sie dann mit Request-Logs/Antwortheadern |
+|--- | --- | ---|
 | Statistiken zu groß nach Aktivierung von Proxy Monitor | Wenn Proxy Monitor aktiviert ist, werden die Token jeder Anforderung zweimal aufgezeichnet | Dies ist ein bekanntes Implementierungsdetail, beeinflusst aber die relative Trendanalyse nicht; wenn Sie genaue Werte benötigen, können Sie Monitor vorübergehend deaktivieren und erneut testen |
 
 ## Zusammenfassung dieses Lektions
@@ -175,18 +175,18 @@ Sie werden lernen:
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
-| Token-Stats-Seitenroute `/token-stats` | [`src/App.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/App.tsx#L19-L47) | 19-47 |
-| Token-Stats-UI: Zeitfenster/Ansichtswechsel und Datenabruf | [`src/pages/TokenStats.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/TokenStats.tsx#L49-L166) | 49-166 |
-| Token-Stats-UI: Keine-Daten-Hinweis ("keine Daten") | [`src/pages/TokenStats.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/TokenStats.tsx#L458-L507) | 458-507 |
-| Token-Verbrauchsextraktion: model aus Anfrage parsen, usage/usageMetadata aus Antwort parsen | [`src-tauri/src/proxy/middleware/monitor.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/monitor.rs#L32-L120) | 32-120 |
-| Token-Verbrauchsextraktion: Streaming und JSON-Antwort parsen usage-Felder | [`src-tauri/src/proxy/middleware/monitor.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/monitor.rs#L122-L336) | 122-336 |
-| Token-Stats-Schreibpunkt: nach Erhalt von Konto+token in SQLite schreiben | [`src-tauri/src/proxy/monitor.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/monitor.rs#L79-L136) | 79-136 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Datenbankdateiname und Tabellenstruktur: `token_stats.db` / `token_usage` / `token_stats_hourly` | [`src-tauri/src/modules/token_stats.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/token_stats.rs#L58-L126) | 58-126 |
 | Schreiblogik: `record_usage(account_email, model, input, output)` | [`src-tauri/src/modules/token_stats.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/token_stats.rs#L128-L159) | 128-159 |
 | Abfragelogik: Stunde/Tag/Woche, nach Konto/nach Modell, Trend und Übersicht | [`src-tauri/src/modules/token_stats.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/token_stats.rs#L161-L555) | 161-555 |
-| Tauri-Befehle: `get_token_stats_*` für Frontend verfügbar machen | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L791-L847) | 791-847 |
-| Initialisierung der Token-Stats-Datenbank beim App-Start | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L50-L56) | 50-56 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Einstellungsseite: Abrufen/Öffnen des Datenverzeichnisses (um `token_stats.db` zu finden) | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L76-L143) | 76-143 |
 
 </details>

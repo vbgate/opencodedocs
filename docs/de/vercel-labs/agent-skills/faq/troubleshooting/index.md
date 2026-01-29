@@ -80,7 +80,7 @@ bash skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh .
 2. Häufige Fehlertypen:
 
 | Fehlermeldung | Mögliche Ursache | Lösung |
-| -------- | -------- | -------- |
+|--- | --- | ---|
 | "File too large" | Projektgröße überschreitet Limit | Unötige Dateien ausschließen (wie `*.log`, `*.test.ts`) |
 | "Invalid framework" | Framework-Erkennung fehlgeschlagen | `package.json` hinzufügen oder Framework manuell spezifizieren |
 | "Network timeout" | Netzwerk-Timeout | Netzwerkverbindung prüfen, erneut versuchen |
@@ -99,9 +99,9 @@ Gemäß Quellcode [`deploy.sh:12-156`](https://github.com/vercel-labs/agent-skil
 **Lösung**:
 
 | Szenario | Lösung |
-| ---- | -------- |
+|--- | ---|
 | `package.json` vorhanden, aber Erkennung fehlgeschlagen | Prüfen Sie, ob die Abhängigkeiten in `dependencies` oder `devDependencies` liegen |
-| Reine statische HTML-Projekte | Stellen Sie sicher, dass `index.html` im Stammverzeichnis liegt, das Skript benennt einzelne HTML-Dateien automatisch um (siehe Quellcode [`deploy.sh:198-205`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh#L198-L205)) |
+|--- | ---|
 | Framework nicht in der Unterstützungsliste | Direktes Deployment (framework ist null), Vercel erkennt automatisch |
 
 **Manuelle Prüfung der Framework-Erkennung**:
@@ -190,7 +190,7 @@ Gemäß Quellcode [`validate.ts:21-66`](https://github.com/vercel-labs/agent-ski
 ::: tip Validierungsfehlerbeispiele und Lösungen
 
 | Fehlermeldung | Ursache | Lösung |
-| -------- | ---- | -------- |
+|--- | --- | ---|
 | `Missing or empty title` | Frontmatter fehlt das Feld `title` | Fügen Sie am Anfang der Regeldatei hinzu:<br>`---`<br>`title: "Regeltitel"`<br>`---` |
 | `Missing or empty explanation` | Regelerklärung fehlt | Fügen Sie das Feld `explanation` im Frontmatter hinzu |
 | `Missing examples` | Keine Codebeispiele | Fügen Sie `**Incorrect:**`- und `**Correct:**`-Codeblöcke hinzu |
@@ -290,11 +290,11 @@ Wenn die oben genannten Methoden das Problem nicht lösen:
 > Aktualisierungszeit:2026-01-25
 
 | Funktion        | Dateipfad                                                                                      | Zeilen    |
-| ----------- | --------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Netzwerkfehlerbehandlung | [`skills/claude.ai/vercel-deploy-claimable/SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/SKILL.md#L100-L113) | 100-113 |
 | Regelnvalidierungslogik | [`packages/react-best-practices-build/src/validate.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/validate.ts) | 21-66   |
-| Framework-Erkennungslogik | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 12-156  |
-| Deployment-Fehlerbehandlung | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 224-239 |
-| Statisches HTML-Handling | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 192-205  |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 </details>

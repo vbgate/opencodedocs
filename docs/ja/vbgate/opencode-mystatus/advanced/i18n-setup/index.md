@@ -33,7 +33,7 @@ order: 3
 
 **サポートされる言語**：
 | 言語 | コード | 検出条件 |
-| ---- | ---- | -------- |
+|--- | --- | ---|
 | 日本語 | `ja` | localeが `ja` で始まる（`ja-JP` など） |
 | 英語 | `en` | その他の場合 |
 
@@ -80,7 +80,7 @@ LANG=en_US.UTF-8 /mystatus
 <summary><strong>クリックしてソースコードの場所を展開</strong></summary>
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 言語検出関数 | [`plugin/lib/i18n.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/i18n.ts#L24-L40) | 24-40 |
 
 </details>

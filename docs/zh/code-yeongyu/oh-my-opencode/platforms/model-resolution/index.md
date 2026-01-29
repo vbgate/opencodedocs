@@ -89,7 +89,7 @@ flowchart TD
 每个代理都有自己偏好的 Provider 顺序，这取决于代理的任务类型和所需能力：
 
 | 代理 | 推荐模型（无前缀） | Provider 优先级链 | 变体 |
-|------|-------------------|-------------------|------|
+|--- | --- | --- | ---|
 | **Sisyphus** | `claude-opus-4-5` | anthropic → github-copilot → opencode → zai-coding-plan | max |
 | **Oracle** | `gpt-5.2` | openai → anthropic → google | high |
 | **Librarian** | `big-pickle` | zai-coding-plan → opencode → anthropic | - |
@@ -109,7 +109,7 @@ Sisyphus 是主编排器，需要强大的推理能力。Claude Opus 是最适�
 Categories 也遵循相同的解析逻辑：
 
 | Category | 推荐模型（无前缀） | Provider 优先级链 | 变体 |
-|----------|-------------------|-------------------|------|
+|--- | --- | --- | ---|
 | **visual-engineering** | `gemini-3-pro` | google → anthropic → openai | - |
 | **ultrabrain** | `gpt-5.2-codex` | openai → anthropic → google | xhigh |
 | **artistry** | `gemini-3-pro` | google → anthropic → openai | max |
@@ -312,7 +312,7 @@ Agent: sisyphus
 ## 什么时候用这一招
 
 | 场景 | 手动覆盖模型 | 使用 Provider 降级 |
-|------|-------------|------------------|
+|--- | --- | ---|
 | **成本敏感任务** | ✅ 指定廉价模型 | ❌ 可能选择昂贵模型 |
 | **性能敏感任务** | ✅ 指定最强模型 | ❌ 可能降级到弱模型 |
 | **测试新模型** | ✅ 指定实验性模型 | ❌ 不会自动选择 |
@@ -444,7 +444,7 @@ Agent: sisyphus
 > 更新时间：2026-01-26
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | 模型解析核心函数 | [`src/shared/model-resolver.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/shared/model-resolver.ts) | 43-98 |
 | 代理模型需求定义 | [`src/shared/model-requirements.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/shared/model-requirements.ts) | 12-79 |
 | Category 模型需求定义 | [`src/shared/model-requirements.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/shared/model-requirements.ts) | 81-133 |
@@ -472,7 +472,7 @@ Agent: sisyphus
 
 **业务规则**：
 | 规则ID | 规则描述 | 标记 |
-|---------|----------|------|
+|--- | --- | ---|
 | BR-4.1-7 | 模型解析优先级：用户覆盖 > Provider 降级 > 系统默认 | 【事实】 |
 | BR-4.1-7-1 | 用户覆盖时直接返回，跳过 Provider 降级链 | 【事实】 |
 | BR-4.1-7-2 | Provider 降级时按 fallbackChain 顺序尝试每个 Provider | 【事实】 |

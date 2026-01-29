@@ -126,7 +126,7 @@ Gehen Sie zum Kapitel "Lokalen Reverse-Proxy starten und ersten Client einbinden
 ## Hinweise zu Fallstricken
 
 | Szenario | Was Sie vielleicht tun (❌) | Empfohlene Vorgehensweise (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Möchten, dass Telefon/anderer Computer zugreift | Direkt `allow_lan_access=true` öffnen, aber keine Authentifizierung setzen | Aktivieren Sie gleichzeitig Authentifizierung und validieren Sie zuerst `GET /healthz` im LAN |
 | Client meldet 404 | Nur host/port ändern, ohne zu berücksichtigen, wie Client `/v1` zusammensetzt | Bestätigen Sie zuerst die Base-URL-Zusammensetzungsstrategie des Clients, bevor Sie entscheiden, ob Sie das `/v1`-Präfix benötigen |
 | Fangen sofort mit Claude Code an | Verbinden Sie direkt komplexen Client, bei Fehler wissen Sie nicht, wo zu suchen | Führen Sie zuerst den minimalen Kreis aus: Proxy starten -> `GET /healthz` -> dann Client einbinden |
@@ -155,12 +155,12 @@ Gehen Sie zum Kapitel "Lokalen Reverse-Proxy starten und ersten Client einbinden
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
-| Produkt-Position (lokaler AI-Umleitungsdienst/Protokoll-Lücke) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L35-L77) | 35-77 |
-| Router-Endpunkte-Übersicht (OpenAI/Claude/Gemini/healthz) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
-| Standard-Port/Standard-nur-lokal/Standard-Key und Bind-Adresse-Logik | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L291) | 174-291 |
-| Tatsächliche Entscheidung von `auth_mode=auto` (LAN -> all_except_health) | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L10-L29) | 10-29 |
-| GUI-Seiten-Routing-Struktur (Dashboard/Konten/API Proxy/Überwachung/Token-Statistiken/Einstellungen) | [`src/App.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/App.tsx#L19-L48) | 19-48 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Standardwerte**:
 - `ProxyConfig.port = 8045`: Standard-Port des Reverse-Proxy-Dienstes

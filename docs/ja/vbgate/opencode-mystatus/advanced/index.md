@@ -41,7 +41,7 @@ GitHub Copilot認証の問題を解決します：
 ## 適用シナリオ
 
 | シナリオ | 推奨チュートリアル |
-|------|---------|
+|--- | ---|
 | 複数のGoogleアカウントを使用 | [Google Cloud設定](./google-setup/) |
 | Copilotクォータクエリが失敗 | [Copilot認証設定](./copilot-auth/) |
 | 出力言語を切り替えたい | [多言語サポート](./i18n-setup/) |

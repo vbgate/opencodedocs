@@ -300,7 +300,7 @@ Der Assistent fragt nach dem Arbeitsbereich-Verzeichnis:
 Durch die Umgebungsvariable `CLAWDBOT_PROFILE` können unabhängige Konfigurationen für verschiedene Arbeitsumgebungen verwendet werden:
 
 | Profile-Wert | Arbeitsbereich-Pfad | Konfigurationsdatei |
-|----------|----------|----------|
+|--- | --- | ---|
 | `default` oder nicht gesetzt | `~/clawd` | `~/.clawdbot/clawdbot.json` |
 | `work` | `~/clawd-work` | `~/.clawdbot/clawdbot.json` (work profile) |
 | `dev` | `~/clawd-dev` | `~/.clawdbot/clawdbot.json` (dev profile) |
@@ -673,13 +673,13 @@ Die assistentenbasierte Konfiguration ist die empfohlene Methode zur Konfigurati
 > Aktualisiert am: 2026-01-27
 
 | Funktion           | Dateipfad                                                                                                  | Zeilennummer      |
-| -------------- | ------------------------------------------------------------------------------------------------- | --------- |
+|--- | --- | ---|
 | Hauptassistentenablauf     | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 87-452    |
 | Sicherheitswarnungsbestätigung   | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 46-85     |
-| Gateway-Konfiguration   | [`src/wizard/onboarding.gateway-config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.gateway-config.ts) | 28-249    |
+|--- | --- | ---|
 | Assistenten-Schnittstellendefinition   | [`src/wizard/prompts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/prompts.ts) | 36-52     |
 | Kanalkonfiguration     | [`src/commands/onboard-channels.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/onboard-channels.ts) | -         |
-| Skill-Konfiguration     | [`src/commands/onboard-skills.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/onboard-skills.ts) | -         |
+|--- | --- | ---|
 | Assistenten-Typdefinition   | [`src/wizard/onboarding.types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.types.ts) | 1-26      |
 | Konfigurationsdatei Schema | [`src/config/zod-schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.ts) | -         |
 

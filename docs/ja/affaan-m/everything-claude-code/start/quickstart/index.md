@@ -348,13 +348,13 @@ Everything Claude Code は Windows を完全にサポートしています。す
 > 更新日時：2026-01-25
 
 | 機能          | ファイルパス                                                                                    | 行番号  |
-| ------------- | ------------------------------------------------------------------------------------------- | ----- |
+|--- | --- | ---|
 | プラグインマニフェスト       | [`.claude-plugin/plugin.json`](https://github.com/affaan-m/everything-claude-code/blob/main/.claude-plugin/plugin.json) | 1-28  |
 | Marketplace 設定 | [`.claude-plugin/marketplace.json`](https://github.com/affaan-m/everything-claude-code/blob/main/.claude-plugin/marketplace.json) | 1-45  |
 | インストール手順       | [`README.md`](https://github.com/affaan-m/everything-claude-code/blob/main/README.md)                        | 175-242 |
 | /plan コマンド      | [`commands/plan.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/plan.md)            | 1-114 |
 | /tdd コマンド      | [`commands/tdd.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/tdd.md)            | 1-327 |
-| /code-review コマンド | [`commands/code-review.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/code-review.md) | 1-200 |
+|--- | --- | ---|
 
 **重要な定数**：
 - プラグイン名: `everything-claude-code`

@@ -394,7 +394,7 @@ Z.ai API 请求失败 (200): {"code": 400, "msg": "Bad request"}
 确认你能独立解决常见问题：
 
 | 技能 | 检查方法 | 预期结果 |
-| ---- | -------- | -------- |
+|--- | --- | ---|
 | 排查认证文件问题 | 检查 auth.json 是否存在且格式正确 | 文件存在，JSON 格式正确 |
 | 刷新 OpenAI Token | 在 OpenCode 中使用一次 OpenAI 模型 | Token 已更新，能正常查询额度 |
 | 配置 Copilot PAT | 创建 copilot-quota-token.json | 能正常查询 Copilot 额度 |
@@ -433,7 +433,7 @@ mystatus 的错误处理分为三层：认证文件读取、平台查询、API �
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 错误处理主逻辑 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 41-87 |
 | 认证文件读取 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 38-46 |
 | 未找到账号提示 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 78-80 |

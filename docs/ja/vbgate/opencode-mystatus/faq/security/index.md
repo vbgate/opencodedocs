@@ -32,7 +32,7 @@ opencode-mystatusは「読み取り専用ローカルファイル + 公式API直
 プラグインは2つのローカル設定ファイルのみを読み取り、すべて**読み取り専用**です：
 
 | ファイルパス | 用途 | ソースコードの場所 |
-| -------- | ---- | -------- |
+|--- | --- | ---|
 | `~/.local/share/opencode/auth.json` | OpenCode公式認証ストレージ | `mystatus.ts:35` |
 | `~/.config/opencode/antigravity-accounts.json` | Antigravityプラグインアカウントストレージ | `google.ts` |
 
@@ -71,7 +71,7 @@ sk-9c8****fAQVM
 プラグインは各プラットフォームの**公式API**のみを呼び出し、第三者サーバーを経由しません：
 
 | プラットフォーム | APIエンドポイント | 用途 |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | OpenAI | `https://chatgpt.com/backend-api/wham/usage` | クォータクエリ |
 | Zhipu AI | `https://bigmodel.cn/api/monitor/usage/quota/limit` | Tokenクォータクエリ |
 | GitHub Copilot | `https://api.github.com/copilot_internal/user` | クォータクエリ |
@@ -109,7 +109,7 @@ sk-9c8****fAQVM
 <summary><strong>クリックしてソースコードの場所を展開</strong></summary>
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 認証ファイル読み取り | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts#L38-L40) | 38-40 |
 | APIマスキング関数 | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L130-L135) | 130-135 |
 

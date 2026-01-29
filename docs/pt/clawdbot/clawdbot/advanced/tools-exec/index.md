@@ -68,7 +68,7 @@ A proteção de uma única camada é fácil de contornar ou configurar incorreta
 ### Comparação dos Três Modos de Execução
 
 | Modo de Execução | Local de Execução | Nível de Segurança | Cenários Típicos | Requer Aprovação |
-|-----------------|------------------|-------------------|-------------------|-----------------|
+|--- | --- | --- | --- | ---|
 | **sandbox** | Dentro de contêineres (ex. Docker) | Alto | Ambiente isolado, testes | Não |
 | **gateway** | A máquina onde o daemon do Gateway está em execução | Médio | Desenvolvimento local, integração | Sim (allowlist + aprovação) |
 | **node** | Nó do dispositivo emparelhado (macOS/iOS/Android) | Médio | Operações locais do dispositivo | Sim (allowlist + aprovação) |
@@ -106,7 +106,7 @@ A ferramenta exec suporta os seguintes parâmetros：
 **Descrição dos Parâmetros**：
 
 | Parâmetro | Tipo | Valor Padrão | Descrição |
-|-----------|------|-------------|-----------|
+|--- | --- | --- | ---|
 | `command` | string | Obrigatório | Comando de Shell a ser executado |
 | `workdir` | string | Diretório de trabalho atual | Diretório de execução |
 | `env` | object | Herdar ambiente | Sobrescrita de variáveis de ambiente |
@@ -148,7 +148,7 @@ Edite `~/.clawdbot/clawdbot.json`：
 **Descrição dos Elementos de Configuração**：
 
 | Elemento de Configuração | Tipo | Valor Padrão | Descrição |
-|-------------------------|------|-------------|-----------|
+|--- | --- | --- | ---|
 | `host` | string | sandbox | Host de execução padrão |
 | `security` | string | deny (sandbox) / allowlist (gateway, node) | Política de segurança padrão |
 | `ask` | string | on-miss | Política de aprovação padrão |
@@ -247,7 +247,7 @@ Edite `~/.clawdbot/exec-approvals.json`：
 allowlist usa **correspondência de padrões glob** (insensível a maiúsculas/minúsculas)：
 
 | Padrão | Correspondência | Descrição |
-|--------|----------------|-----------|
+|--- | --- | ---|
 | `~/Projects/**/bin/*` | `/Users/user/Projects/any/bin/rg` | Corresponde a todos os subdiretórios |
 | `~/.local/bin/*` | `/Users/user/.local/bin/jq` | Corresponde ao bin local |
 | `/opt/homebrew/bin/rg` | `/opt/homebrew/bin/rg` | Correspondência de caminho absoluto |
@@ -318,7 +318,7 @@ Edite `~/.clawdbot/clawdbot.json`：
 **Descrição dos Elementos de Configuração**：
 
 | Elemento de Configuração | Descrição |
-|-------------------------|-----------|
+|--- | ---|
 | `enabled` | Se deve habilitar o encaminhamento de aprovações exec |
 | `mode` | `"session"` \| `"targets"` \| `"both"` - modo de alvos de aprovação |
 | `agentFilter` | Processar apenas solicitações de aprovação de agentes específicos |
@@ -363,7 +363,7 @@ Security: allowlist
 ### Erros Comuns
 
 | Erro | Causa | Solução |
-|------|-------|---------|
+|--- | --- | ---|
 | `Command not allowed by exec policy` | `security=deny` ou allowlist não corresponde | Verifique `tools.exec.security` e configuração allowlist |
 | `Approval timeout` | UI não disponível, `askFallback=deny` | Defina `askFallback=allowlist` ou habilite a UI |
 | `Pattern does not resolve to binary` | Uso de nome base no modo allowlist | Use o caminho completo (ex. `/opt/homebrew/bin/rg`) |
@@ -390,7 +390,7 @@ No modo `security=allowlist`, os seguintes recursos do Shell **não são suporta
 Os diferentes modos de execução processam PATH de maneiras diferentes：
 
 | Modo de Execução | Processamento de PATH | Descrição |
-|-----------------|---------------------|-----------|
+|--- | --- | ---|
 | `sandbox` | Herda shell login, pode ser redefinido por `/etc/profile` | `pathPrepend` é aplicado após o profile |
 | `gateway` | Mescla login shell PATH ao ambiente exec | O daemon mantém PATH mínimo, mas exec herda PATH do usuário |
 | `node` | Usa apenas sobrescritas de variáveis de ambiente passadas | Nós macOS descartam sobrescritas de `PATH`, nós headless suportam prepend |
@@ -427,7 +427,7 @@ A ferramenta exec permite que assistentes de IA executem comandos de Shell com s
 > Última atualização：2026-01-27
 
 | Funcionalidade | Caminho do Arquivo | Número da Linha |
-|---------------|-------------------|-----------------|
+|--- | --- | ---|
 | Definição da ferramenta exec | [`src/agents/bash-tools.exec.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/bash-tools.exec.ts) | 1-500+ |
 | Lógica de aprovação exec | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 1-1268 |
 | Análise de comandos Shell | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 500-1100 |

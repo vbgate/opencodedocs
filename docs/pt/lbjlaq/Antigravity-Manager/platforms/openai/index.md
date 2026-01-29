@@ -56,7 +56,7 @@ Middleware do Antigravity Tools lerá prioridade `Authorization`, também compat
 ### Visão rápida de endpoints compatíveis (relacionados a esta lição)
 
 | Endpoint | Finalidade | Evidência de código |
-|----------|-----------|---------------------|
+|--- | --- | ---|
 | `POST /v1/chat/completions` | Chat Completions (incluindo fluxo) | Registro de rota em `src-tauri/src/proxy/server.rs`; `src-tauri/src/proxy/handlers/openai.rs` |
 | `POST /v1/completions` | Legacy Completions (reusa mesmo processador) | Registro de rota em `src-tauri/src/proxy/server.rs` |
 | `POST /v1/responses` | Compatibilidade Responses/Codex CLI (reusa mesmo processador) | Registro de rota em `src-tauri/src/proxy/server.rs` (comentário: compatibilidade Codex CLI) |
@@ -203,16 +203,16 @@ Processador OpenAI embutido no máximo 3 tentativas (e limitado por tamanho de p
 > Atualizado em: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Linha |
-|---------------|---------------------|-------|
+|--- | --- | ---|
 | Registro de rota OpenAI (incluindo /v1/responses) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | Processador Chat Completions (incluindo detecção de formato Responses) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L70-L462) | 70-462 |
 | Processador /v1/completions e /v1/responses (normalização Codex/Responses + retry/rotação) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L464-L1080) | 464-1080 |
 | Retorno de /v1/models (lista de modelos dinâmica) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L1082-L1102) | 1082-1102 |
 | Estrutura de dados de solicitação OpenAI (messages/instructions/input/size/quality) | [`src-tauri/src/proxy/mappers/openai/models.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/models.rs#L7-L38) | 7-38 |
-| Conversão de solicitação OpenAI -> Gemini (systemInstruction/thinkingConfig/tools) | [`src-tauri/src/proxy/mappers/openai/request.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/request.rs#L6-L553) | 6-553 |
-| Conversão de resposta Gemini -> OpenAI (choices/usageMetadata) | [`src-tauri/src/proxy/mappers/openai/response.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/response.rs#L5-L214) | 5-214 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Mapeamento de modelo e prioridade de curinga (exato > curinga > padrão) | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L180-L228) | 180-228 |
-| Middleware de autenticação (Authorization/x-api-key/x-goog-api-key) | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L15-L77) | 15-77 |
+|--- | --- | ---|
 
 **Constantes principais**:
 - `MAX_RETRY_ATTEMPTS = 3`: número máximo de tentativas de protocolo OpenAI (incluindo rotação) (veja `src-tauri/src/proxy/handlers/openai.rs`)

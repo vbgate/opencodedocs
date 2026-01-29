@@ -127,7 +127,7 @@ tags: bundle, code-splitting, lazy-loading, performance
 **Descrição dos Campos**:
 
 | Campo                | Obrigatório | Descrição                                              | Exemplo de Valor                                              |
-| ------------------- | ---------- | ------------------------------------------------------- | ------------------------------------------------------------ |
+|--- | --- | --- | ---|
 | `title`             | ✅         | Título breve da regra                                    | `Promise.all() for Independent Operations`                       |
 | `impact`            | ✅         | Nível de impacto (6 valores enumerados)                    | `CRITICAL` / `HIGH` / `MEDIUM` etc.                          |
 | `impactDescription` | ⭕         | Descrição da magnitude do impacto                         | `2-10× improvement`                                         |
@@ -194,7 +194,7 @@ function Dashboard() {
 **Padrões de Escrita de Exemplos**:
 
 | Requisito            | Descrição                                                                                     |
-| -------------------- | ---------------------------------------------------------------------------------------------- |
+|--- | ---|
 | **Formato de label**  | `**Incorrect:**` ou `**Incorrect (description):**` (parênteses opcionais)          |
 | **Conteúdo dos parênteses** | Opcional, breve descrição por que está errado/certo                                  |
 | **Blocos de código** | Use `\`\`\`typescript` ou `\`\`\`tsx`                                                    |
@@ -254,7 +254,7 @@ Se a validação falhar, você verá mensagens de erro detalhadas:
 **Erros Comuns de Validação**:
 
 | Mensagem de Erro                                                | Causa                                          | Método de Correção                                           |
-| --------------------------------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------- |
+|--- | --- | ---|
 | `Missing or empty title`                                        | Frontmatter sem campo `title`                    | Adicione `title: Seu Título`                                |
 | `Missing examples (need at least one bad and one good example)`   | Array examples vazio                             | Adicione pelo menos um exemplo (com bloco de código)         |
 | `Missing code examples`                                         | Tem labels de exemplo mas sem código real         | Adicione bloco de código após as labels (`\`\`\`typescript`) |
@@ -412,7 +412,7 @@ Lembre-se destes 5 pontos:
 > Atualizado em: 2026-01-25
 
 | Funcionalidade            | Caminho do Arquivo                                                                                                                                                           | Número de Linha    |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
+|--- | --- | ---|
 | Arquivo de Modelo de Regra | [`skills/react-best-practices/rules/_template.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/_template.md)           | 1-29              |
 | Definição de Tipos de Regra | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts)       | 5-26              |
 | Lógica de Validação de Regras | [`packages/react-best-practices-build/src/validate.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/validate.ts) | 21-66             |

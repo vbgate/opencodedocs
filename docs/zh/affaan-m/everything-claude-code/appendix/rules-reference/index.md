@@ -42,7 +42,7 @@ order: 200
 Everything Claude Code 包含 8 套强制性规则集，每套规则都有明确的目标和应用场景：
 
 | 规则集 | 目标 | 优先级 | 对应 Agent |
-| ------ | ---- | ------ | ---------- |
+|--- | --- | --- | ---|
 | **Security** | 防止安全漏洞、敏感数据泄露 | P0 | security-reviewer |
 | **Coding Style** | 代码可读、不可变模式、小文件 | P0 | code-reviewer |
 | **Testing** | 80%+ 测试覆盖率、TDD 流程 | P0 | tdd-guide |
@@ -293,7 +293,7 @@ const validated = schema.parse(input)
 位于 `~/.claude/agents/`：
 
 | Agent | 用途 | 何时使用 |
-| ------- | ---- | ---- | ---- |
+|--- | --- | --- | ---|
 | planner | 实现规划 | 复杂功能、重构 |
 | architect | 系统设计 | 架构决策 |
 | tdd-guide | 测试驱动开发 | 新功能、Bug 修复 |
@@ -318,7 +318,7 @@ const validated = schema.parse(input)
 **始终对独立操作使用并行任务执行**：
 
 | 方式 | 说明 |
-| --- | --- |
+|--- | ---|
 | ✅ 好：并行执行 | 启动 3 个 agents 并行：Agent 1 (auth.ts 安全分析)、Agent 2 (缓存系统性能审查)、Agent 3 (utils.ts 类型检查) |
 | ❌ 坏：顺序执行 | 先执行 agent 1，然后 agent 2，然后 agent 3 |
 
@@ -541,7 +541,7 @@ Everything Claude Code 的 8 套规则集为开发过程提供了全面的指导
 > 更新时间：2026-01-25
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Security 规则 | [`rules/security.md`](https://github.com/affaan-m/everything-claude-code/blob/main/rules/security.md) | 1-37 |
 | Coding Style 规则 | [`rules/coding-style.md`](https://github.com/affaan-m/everything-claude-code/blob/main/rules/coding-style.md) | 1-71 |
 | Testing 规则 | [`rules/testing.md`](https://github.com/affaan-m/everything-claude-code/blob/main/rules/testing.md) | 1-31 |

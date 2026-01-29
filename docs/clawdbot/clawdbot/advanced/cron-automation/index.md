@@ -40,7 +40,7 @@ You might encounter these situations:
 **Cron Scheduled Tasks** are suitable for these scenarios:
 
 | Scenario | Example | Scheduling Method |
-|----------|---------|-------------------|
+|--- | --- | ---|
 | One-time reminder | "Remind me tomorrow at 9 AM to attend the meeting" | at |
 | Periodic check | "Check system status every 30 minutes" | every |
 | Scheduled execution | "Generate daily report every day at 5 PM" | cron |
@@ -80,7 +80,7 @@ graph LR
 ### Comparison of Three Scheduling Methods
 
 | Method | Use Case | Example | Precision |
-|--------|----------|---------|-----------|
+|--- | --- | --- | ---|
 | `at` | One-time task | 2026-01-27 09:00:00 | Millisecond |
 | `every` | Fixed interval | Every 30 minutes | Millisecond |
 | `cron` | Complex schedule | Every day at 9 AM | Minute-level |
@@ -88,7 +88,7 @@ graph LR
 ### Two Session Targets
 
 | Session Target | Payload Type | Description |
-|---------------|--------------|-------------|
+|--- | --- | ---|
 | `main` | `systemEvent` | Inject system events into main session |
 | `isolated` | `agentTurn` | Run Agent in isolated session |
 
@@ -282,7 +282,7 @@ Create a task that executes every day at 9 AM:
 **Common Expressions**:
 
 | Expression | Description |
-|------------|-------------|
+|--- | ---|
 | `0 9 * * *` | Every day at 9 AM |
 | `0 9 * * 1-5` | Monday to Friday at 9 AM |
 | `0 */6 * * *` | Every 6 hours |
@@ -336,7 +336,7 @@ Create a task that runs in an isolated session:
 **`agentTurn` Payload Parameters**:
 
 | Parameter | Type | Description |
-|-----------|------|-------------|
+|--- | --- | ---|
 | `message` | string | Prompt sent to the Agent |
 | `model` | string | Override the model to use (optional) |
 | `thinking` | string | Thinking level: "off" \| "minimal" \| "low" \| "medium" \| "high" |
@@ -359,7 +359,7 @@ Create a task that runs in an isolated session:
 ```
 
 | Parameter | Description |
-|-----------|-------------|
+|--- | ---|
 | `postToMainPrefix` | Prefix when posting results back to main session |
 | `postToMainMode` | "summary" (summary) or "full" (full text) |
 | `postToMainMaxChars` | Maximum character count when `postToMainMode="full"` |
@@ -564,7 +564,7 @@ Webhooks allow external services to trigger Clawdbot's internal events via HTTP 
 **Mapping Configuration Parameters**:
 
 | Parameter | Description |
-|-----------|-------------|
+|--- | ---|
 | `match.path` | Matching URL path |
 | `match.source` | Matching request source header |
 | `action` | `"wake"` or `"agent"` |
@@ -611,7 +611,7 @@ Gmail Pub/Sub allows you to trigger Clawdbot in real-time when receiving new ema
 **Configuration Parameters Explanation**:
 
 | Parameter | Description | Default |
-|-----------|-------------|---------|
+|--- | --- | ---|
 | `account` | Gmail account address | - |
 | `label` | Gmail label to monitor | `INBOX` |
 | `topic` | Google Cloud Pub/Sub topic path | - |
@@ -656,7 +656,7 @@ Gmail Pub/Sub allows you to trigger Clawdbot in real-time when receiving new ema
 ```
 
 | Mode | Description |
-|------|-------------|
+|--- | ---|
 | `off` | Don't use Tailscale |
 | `serve` | Expose local service via Tailscale Serve |
 | `funnel` | Access from public internet via Tailscale Funnel |
@@ -708,7 +708,7 @@ clawdbot hooks gmail-watch
 **Possible Causes**:
 
 | Cause | Solution |
-|-------|----------|
+|--- | ---|
 | Cron service not enabled | Check `cron.enabled` configuration |
 | Time not reached | Use `clawdbot cron list` to check next run time |
 | Wrong timezone | Check if `tz` field is correct |
@@ -721,7 +721,7 @@ clawdbot hooks gmail-watch
 **Common Errors**:
 
 | Wrong | Correct | Description |
-|-------|---------|-------------|
+|--- | --- | ---|
 | `9 * * *` | `0 9 * * *` | Missing minute field |
 | `0 9 * * * *` | `0 9 * * *` | Extra field |
 | `0 9 1-5 * *` | `0 9 * * 1-5` | Wrong day of week field position |
@@ -803,7 +803,7 @@ By properly configuring these features, you can build a fully automated AI assis
 > Last updated: 2026-01-27
 
 | Function | File Path | Line Numbers |
-|----------|-----------|--------------|
+|--- | --- | ---|
 | Cron configuration type definitions | [`src/config/types.cron.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.cron.ts#L1-L6) | 1-6 |
 | Cron core type definitions | [`src/cron/types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/types.ts#L1-L95) | 1-95 |
 | Cron Service | [`src/cron/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/service.ts#L1-L49) | 1-49 |

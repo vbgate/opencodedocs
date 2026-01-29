@@ -34,7 +34,7 @@ order: 4
 账户存储文件位于：
 
 | 操作系统   | 路径                                                       |
-| ---------- | ---------------------------------------------------------- |
+|--- | ---|
 | macOS/Linux | `~/.config/opencode/antigravity-accounts.json`             |
 | Windows    | `%APPDATA%\opencode\antigravity-accounts.json`                |
 
@@ -80,7 +80,7 @@ order: 4
 **字段说明**：
 
 | 字段                  | 类型    | 必填 | 说明 |
-| --------------------- | ------- | ---- | ---- |
+|--- | --- | --- | ---|
 | `version`             | number  | Y    | 存储格式版本（固定为 3） |
 | `accounts`            | array   | Y    | 账户列表 |
 | `activeIndex`         | number  | Y    | 当前活动账户索引（从 0 开始） |
@@ -89,7 +89,7 @@ order: 4
 **账户对象字段**：
 
 | 字段                  | 类型    | 必填 | 说明 |
-| --------------------- | ------- | ---- | ---- |
+|--- | --- | --- | ---|
 | `email`               | string  | N    | Google 账户邮箱 |
 | `refreshToken`        | string  | Y    | OAuth refresh 令牌（唯一标识） |
 | `projectId`           | string  | N    | GCP 项目 ID（Gemini CLI 模型需要） |
@@ -354,7 +354,7 @@ Failed to persist migrated storage: { error: "..." }
 > 更新时间：2026-01-23
 
 | 功能           | 文件路径                                                                                                      | 行号    |
-| -------------- | ------------------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 存储格式定义   | [`src/plugin/storage.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/storage.ts)      | 128-198 |
 | v1 → v2 迁移  | [`src/plugin/storage.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/storage.ts)      | 366-395 |
 | v2 → v3 迁移  | [`src/plugin/storage.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/storage.ts)      | 397-431 |

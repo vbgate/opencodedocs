@@ -579,7 +579,7 @@ If the above methods don't solve the problem:
 Hooks not working usually falls into these categories:
 
 | Issue Type | Common Causes | Quick Diagnosis |
-|-----------|---------------|-----------------|
+|--- | --- | ---|
 | **Not Triggering At All** | hooks.json path error, JSON syntax errors | Check file location, validate JSON format |
 | **Specific Hook Not Triggering** | Matcher expression errors, command execution failures | Check regex syntax, run scripts manually |
 | **Permission Issues** | Scripts missing execute permissions (Linux/macOS) | `chmod +x scripts/hooks/*.js` |
@@ -609,13 +609,13 @@ Remember: Most issues can be resolved by checking file paths, validating JSON fo
 > Updated: 2026-01-25
 
 | Function                    | File Path                                                                                    | Line Numbers |
-| --------------------------- | ------------------------------------------------------------------------------------------- | ----------- |
+|--- | --- | ---|
 | Hooks main config           | [`hooks/hooks.json`](https://github.com/affaan-m/everything-claude-code/blob/main/hooks/hooks.json) | 1-158       |
 | SessionStart Hook           | [`scripts/hooks/session-start.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/hooks/session-start.js) | 1-62        |
 | SessionEnd Hook             | [`scripts/hooks/session-end.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/hooks/session-end.js) | 1-83        |
 | PreCompact Hook             | [`scripts/hooks/pre-compact.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/hooks/pre-compact.js) | 1-49        |
 | Suggest Compact Hook        | [`scripts/hooks/suggest-compact.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/hooks/suggest-compact.js) | 1-61        |
-| Cross-platform utility functions | [`scripts/lib/utils.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/lib/utils.js) | 1-384       |
+|--- | --- | ---|
 
 **Key Functions**:
 - `getHomeDir()` / `getClaudeDir()` / `getSessionsDir()`: Get configuration directory paths (utils.js 19-34)

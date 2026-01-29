@@ -252,7 +252,7 @@ ls -la .claude/skills/
 **Key Files Explanation**:
 
 | File | Purpose |
-| ---- | ---- |
+|--- | ---|
 | `SKILL.md` | Main content and instructions for the skill |
 | `.openskills.json` | Installation metadata (records source, used for updates) |
 | `references/` | Reference documents and detailed explanations |
@@ -378,7 +378,7 @@ In this lesson, you learned:
 **Core Commands**:
 
 | Command | Purpose |
-| ---- | ---- |
+|--- | ---|
 | `npx openskills install anthropics/skills` | Install skills from official repository |
 | `ls .claude/skills/` | View installed skills |
 | `cat .claude/skills/<name>/.openskills.json` | View skill metadata |
@@ -406,7 +406,7 @@ Installing skills is just the first step. Next, you need to understand how AI ag
 > Updated: 2026-01-24
 
 | Function | File Path | Line Numbers |
-| ---- | --------- | ---- |
+|--- | --- | ---|
 | Install command entry point | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L83-L183) | 83-183 |
 | Installation location detection (project vs global) | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L84-L92) | 84-92 |
 | GitHub shorthand parsing | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L131-L143) | 131-143 |

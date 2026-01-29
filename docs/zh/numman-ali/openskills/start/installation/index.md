@@ -67,7 +67,7 @@ OpenSkills 对系统有最低要求，不满足这些要求会导致安装失败
 OpenSkills 是一个 Node.js CLI 工具，有两种使用方式：
 
 | 方式 | 命令 | 优点 | 缺点 | 适用场景 |
-| ---- | ---- | ---- | ---- | -------- |
+|--- | --- | --- | --- | ---|
 | **npx** | `npx openskills` | 无需安装，自动使用最新版本 | 每次运行需要下载（有缓存） | 偶尔使用、测试新版本 |
 | **全局安装** | `openskills` | 命令更短，响应更快 | 需要手动更新 | 频繁使用、固定版本 |
 
@@ -492,7 +492,7 @@ git config --global http.proxy http://proxy.example.com:8080
 ### 核心配置
 
 | 配置项         | 文件路径                                                                                       | 行号      |
-| -------------- | ---------------------------------------------------------------------------------------------- | --------- |
+|--- | --- | ---|
 | Node.js 版本要求 | [`package.json`](https://github.com/numman-ali/openskills/blob/main/package.json) | 45-47     |
 | 包信息         | [`package.json`](https://github.com/numman-ali/openskills/blob/main/package.json) | 1-9       |
 | CLI 入口       | [`src/cli.ts`](https://github.com/numman-ali/openskills/blob/main/src/cli.ts)             | 39-80     |

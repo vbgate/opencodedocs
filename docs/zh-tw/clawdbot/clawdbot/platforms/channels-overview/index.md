@@ -73,7 +73,7 @@ Clawdbot 的管道系統採用 **外掛架構**：
 **關鍵概念**：
 
 | 概念         | 作用                         |
-| ------------ | ---------------------------- |
+|--- | ---|
 | **管道外掛** | 每個管道都是一個獨立的外掛    |
 | **統一介面** | 所有管道使用相同的 API        |
 | **DM 保護**   | 預設啟用配對機制，拒絕未知發送者 |
@@ -88,7 +88,7 @@ Clawdbot 支援 **13+ 種通訊管道**，分為兩類：
 ### 核心管道（內建）
 
 | 管道           | 驗證方式             | 難度 | 特點                              |
-| -------------- | -------------------- | ---- | --------------------------------- |
+|--- | --- | --- | ---|
 | **Telegram**   | Bot Token            | ⭐   | 最簡單快速，推薦新手                |
 | **WhatsApp**   | QR Code / Phone Link | ⭐⭐  | 使用真實號碼，推薦單獨手機 + eSIM |
 | **Slack**      | Bot Token + App Token | ⭐⭐ | 工作場所首選，Socket Mode         |
@@ -100,7 +100,7 @@ Clawdbot 支援 **13+ 種通訊管道**，分為兩類：
 ### 擴展管道（外部外掛）
 
 | 管道             | 驗證方式             | 類型       | 特點                              |
-| ---------------- | -------------------- | ---------- | --------------------------------- |
+|--- | --- | --- | ---|
 | **WebChat**       | Gateway WebSocket     | 內建       | 無需第三方驗證，最簡單            |
 | **LINE**          | Messaging API        | 外部外掛   | 亞洲使用者常用                       |
 | **BlueBubbles**   | Private API         | 擴展外掛   | iMessage 擴展，支援遠端裝置       |
@@ -606,7 +606,7 @@ channels:
 > 更新時間：2026-01-27
 
 | 功能            | 檔案路徑                                                                                               | 行號    |
-| --------------- | ------------------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | 管道註冊表       | [`src/channels/registry.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.ts) | 7-100   |
 | 管道外掛目錄   | [`src/channels/plugins/`](https://github.com/clawdbot/clawdbot/tree/main/src/channels/plugins/) | 全目錄  |
 | 管道元資料類型   | [`src/channels/plugins/types.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/types.core.ts) | 74-93   |

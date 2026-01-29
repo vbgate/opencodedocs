@@ -128,7 +128,7 @@ Wenn der Sitzungskontext zu lang ist, löst das Plugin automatisch den Komprimie
 Zusätzlich zur Konfigurationsdatei können Sie auch Umgebungsvariablen verwenden, um sensible Informationen zu verwalten oder das Standardverhalten zu überschreiben.
 
 | Umgebungsvariable | Beschreibung | Priorität |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | `SUPERMEMORY_API_KEY` | Supermemory API-Schlüssel | Niedriger als Konfigurationsdatei |
 | `USER` oder `USERNAME` | Bezeichner, der zur Generierung des User-Scope-Hash verwendet wird | Systemstandard |
 
@@ -231,7 +231,7 @@ Speicher gespeichert: Die API-Basis-URL dieses Projekts ist /api/v2
 ## Anhang: Quellcode-Referenz
 
 | Funktion | Dateipfad | Zeilennummer |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Konfigurationsschnittstellendefinition | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L12-L23) | 12-23 |
 | Standardwertdefinition | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L44-L54) | 44-54 |
 | Standardauslösewörter | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L25-L42) | 25-42 |

@@ -84,7 +84,7 @@ Replace `YOUR_GITHUB_PAT_HERE` with your actual API key:
 **Step 3: Getting Keys for Common MCP Servers**
 
 | MCP Server | Environment Variable Name      | Get From                                                      |
-| ---------- | ------------------------------ | ------------------------------------------------------------- |
+|--- | --- | ---|
 | GitHub     | `GITHUB_PERSONAL_ACCESS_TOKEN` | GitHub Settings → Developer Settings → Personal access tokens |
 | Firecrawl  | `FIRECRAWL_API_KEY`            | Firecrawl Dashboard → API Keys                                |
 | Supabase   | Project reference              | Supabase Dashboard → Settings → API                           |
@@ -203,7 +203,7 @@ Check `mcp-configs/mcp-servers.json`, distinguish between two types:
 **Step 2: Correct Configuration**
 
 | MCP Server      | Correct Type | Correct Configuration                                                   |
-| --------------- | ------------ | ----------------------------------------------------------------------- |
+|--- | --- | ---|
 | GitHub          | npx          | `command: "npx"`, `args: ["-y", "@modelcontextprotocol/server-github"]` |
 | Vercel          | http         | `type: "http"`, `url: "https://mcp.vercel.com"`                         |
 | Cloudflare Docs | http         | `type: "http"`, `url: "https://docs.mcp.cloudflare.com/mcp"`            |
@@ -396,7 +396,7 @@ If the problem persists, check for conflicts between `~/.claude/settings.json` a
 > Updated: 2026-01-25
 
 | Feature                | File Path                                                                                                                   | Lines |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------- | ----- |
+|--- | --- | ---|
 | MCP configuration file | [`mcp-configs/mcp-servers.json`](https://github.com/affaan-m/everything-claude-code/blob/main/mcp-configs/mcp-servers.json) | 1-91  |
 | Context window warning | [`README.md`](https://github.com/affaan-m/everything-claude-code/blob/main/README.md)                                       | 67-75 |
 

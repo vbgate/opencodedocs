@@ -104,7 +104,7 @@ Cuando no puedes obtener `refresh_token` (o prefieres "activo portable"), agrega
 Formas de entrada admitidas (el frontend analizará y agregará por lotes):
 
 | Tipo de entrada | Ejemplo | Lógica de análisis |
-| --- | --- | --- |
+|--- | --- | ---|
 | Texto de token puro | `1//abc...` | Extracción por expresión regular: `/1\/\/[a-zA-Z0-9_\-]+/g` (ver `AddAccountDialog.tsx:213-220`) |
 | Insertado en un texto grande | texto de registro/exportación contiene múltiples `1//...` | Extracción por lotes por regex y desduplicación (ver `AddAccountDialog.tsx:213-224`) |
 | Array JSON | `[{"refresh_token":"1//..."}]` | Analizar el array y tomar `item.refresh_token` (ver `AddAccountDialog.tsx:198-207`) |
@@ -165,7 +165,7 @@ Si estás en medio de la autorización, no te apresures a cambiar de pestaña.
 ### 4) Ejemplos correctos/incorrectos de Refresh Token
 
 | Ejemplo | ¿Se reconoce? | Razón |
-| --- | --- | --- |
+|--- | --- | ---|
 | `1//0gAbC...` | ✓ | Cumple la regla de prefijo `1//` (ver `AddAccountDialog.tsx:215-219`) |
 | `ya29.a0...` | ✗ | No cumple la regla de extracción del frontend, se considerará entrada no válida |
 
@@ -191,7 +191,7 @@ En el próximo capítulo haremos algo más práctico: convertir el pool de cuent
 > Fecha de actualización: 2026-01-23
 
 | Función | Ruta del archivo | Línea |
-| --- | --- | --- |
+|--- | --- | ---|
 | Página Accounts monta el diálogo de adición | [`src/pages/Accounts.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Accounts.tsx#L267-L731) | 267-731 |
 | Pregeneración de URL OAuth + finalización automática de eventos de callback | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L49-L125) | 49-125 |
 | Evento de callback OAuth activa `completeOAuthLogin()` | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L67-L109) | 67-109 |
@@ -200,7 +200,7 @@ En el próximo capítulo haremos algo más práctico: convertir el pool de cuent
 | Backend add_account: ignora email, usa refresh_token para obtener correo real y guardar | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L19-L60) | 19-60 |
 | Backend OAuth: verifica ausencia de refresh_token y proporciona solución de revocación | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L38-L79) | 38-79 |
 | Server de callback OAuth: escucha IPv4/IPv6 simultáneamente y selecciona redirect_uri | [`src-tauri/src/modules/oauth_server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/oauth_server.rs#L43-L113) | 43-113 |
-| Callback OAuth analiza `code` y emite `oauth-callback-received` | [`src-tauri/src/modules/oauth_server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/oauth_server.rs#L140-L180) | 140-180 |
+|--- | --- | ---|
 
 **Nombres de eventos clave**:
 - `oauth-url-generated`: backend envía la URL OAuth al frontend después de generarla (ver `oauth_server.rs:250-252`)

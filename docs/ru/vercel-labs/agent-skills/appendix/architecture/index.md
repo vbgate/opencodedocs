@@ -106,7 +106,7 @@ graph LR
 **Проверяемые элементы**:
 
 | Проверяемый элемент        | Описание                                                   | Вывод при неудаче |
-| -------------------------- | ---------------------------------------------------------- | ------------------ |
+|--- | --- | ---|
 | Title не пустой             | Должен быть заголовок (Frontmatter или заголовок `##`)              | `Missing or empty title` |
 | Хотя бы один пример         | Массив `examples` не пуст                                       | `At least one code example required` |
 | Impact легален            | Должен быть допустимым перечислимым значением `ImpactLevel`                    | `Invalid impact level` |
@@ -255,21 +255,21 @@ Reference: [React документация](https://react.dev), [Next.js рук�
 export type ImpactLevel =
   | 'CRITICAL'
   | 'HIGH'
-  | 'MEDIUM-HIGH'
+|---|
   | 'MEDIUM'
-  | 'LOW-MEDIUM'
+|---|
   | 'LOW'
 ```
 
 **Описание уровней**:
 
 | Уровень       | Влияние                     | Пример правила                 |
-| -------------- | --------------------------- | ----------------------------- |
+|--- | --- | ---|
 | CRITICAL      | Критические узкие места, должны быть исправлены      | async-parallel            |
 | HIGH          | Важные улучшения, рекомендуются приоритетно      | server-cache-react       |
-| MEDIUM-HIGH   | Средне-высокий приоритет              | client-data-fetch        |
+|--- | --- | ---|
 | MEDIUM        | Средние улучшения                | rerender-memo           |
-| LOW-MEDIUM    | Низко-средний приоритет              | js-use-memo             |
+|--- | --- | ---|
 | LOW           | Инкрементные улучшения, необязательно          | advanced-suspense-boundaries |
 
 ### Интерфейс Rule
@@ -441,7 +441,7 @@ detect_framework() {
 ### Поддерживаемые фреймворки
 
 | Категория          | Список фреймворков                                                                 | Ключевые слова обнаружения                    |
-| ---------------- | ------------------------------------------------------------------------ | ----------------------------------------- |
+|--- | --- | ---|
 | React             | Next.js, Gatsby, Create React App, Remix, React Router, Blitz            | `next`, `gatsby`, `remix-run`  |
 | Vue               | Nuxt, Vitepress, Vuepress, Gridsome                                      | `nuxt`, `vitepress`            |
 | Svelte            | SvelteKit, Svelte, Sapper                                                | `@sveltejs/kit`, `svelte`      |
@@ -533,7 +533,7 @@ fi
 > Обновлено: 2026-01-25
 
 | Функция                  | Путь к файлу                                                                 | Строки       |
-| ------------------------- | --------------------------------------------------------------------------- | ------------ |
+|--- | --- | ---|
 | Типовая система              | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts) | 1-54         |
 | Конфигурация путей              | [`packages/react-best-practices-build/src/config.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/config.ts) | 1-18         |
 | Парсер правил            | [`packages/react-best-practices-build/src/parser.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/parser.ts) | 18-238       |

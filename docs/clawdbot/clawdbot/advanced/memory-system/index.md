@@ -40,7 +40,7 @@ You may be facing these situations:
 **Memory System** is suitable for these scenarios:
 
 | Scenario | Example | Storage Location |
-|----------|---------|------------------|
+|--- | --- | ---|
 | Persistent Knowledge | "I'm vegetarian, remember this" | MEMORY.md |
 | Daily Notes | "Today's work progress and todos" | memory/YYYY-MM-DD.md |
 | Session Retrieval | "What was the API endpoint we discussed last time" | Vector Index |
@@ -55,7 +55,7 @@ You may be facing these situations:
 Clawdbot uses **two layers of data** to manage long-term memory:
 
 | Layer | File Path | Purpose | Loading Time |
-|-------|-----------|---------|--------------|
+|--- | --- | --- | ---|
 | **Long-term Memory** | `MEMORY.md` | Selected knowledge, preferences, important facts | Loaded when main session starts |
 | **Daily Logs** | `memory/YYYY-MM-DD.md` | Daily notes, runtime context | Loads today + yesterday |
 
@@ -86,7 +86,7 @@ graph LR
 Vector search excels at "semantic matching" but is weak at "exact matching":
 
 | Query Type | Vector Search | BM25 Full-Text | Hybrid Search |
-|------------|--------------|----------------|---------------|
+|--- | --- | --- | ---|
 | "Server IP address" | ❌ Weak | ✅ Strong | ✅ Best |
 | "How to deploy Gateway" | ✅ Strong | ⚠️ Moderate | ✅ Best |
 | "API endpoint a828e60" | ❌ Weak | ✅ Strong | ✅ Best |
@@ -386,7 +386,7 @@ Edit configuration:
 **Parameter Explanation**:
 
 | Parameter | Default | Description | Adjustment Suggestion |
-|-----------|---------|-------------|----------------------|
+|--- | --- | --- | ---|
 | `vectorWeight` | 0.7 | Semantic search weight | Increase to 0.8 for "natural language" queries |
 | `textWeight` | 0.3 | Keyword search weight | Increase to 0.5 for "code/ID" queries |
 | `candidateMultiplier` | 4 | Candidate multiplier | Increase to 6 to improve recall |
@@ -452,7 +452,7 @@ clawdbot memory status --deep
 After completing the above steps, verify the following:
 
 | Check Item | Verification Method | Expected Result |
-|------------|---------------------|-----------------|
+|--- | --- | ---|
 | Memory files exist | `ls ~/clawd/` | MEMORY.md and memory/ directory exist |
 | Index created | `clawdbot memory status` | Shows Indexed > 0 chunks |
 | Search works | `clawdbot memory search "..."` | Returns relevant results |
@@ -595,7 +595,7 @@ In this lesson, we learned:
 > Last updated: 2026-01-27
 
 | Function | File Path | Lines |
-|----------|-----------|-------|
+|--- | --- | ---|
 | Memory Manager | [`src/memory/manager.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/memory/manager.ts) | 1-200 |
 | Hybrid Search | [`src/memory/hybrid.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/memory/hybrid.ts) | 1-112 |
 | Embedding Provider | [`src/memory/embeddings.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/memory/embeddings.ts) | 1-80 |

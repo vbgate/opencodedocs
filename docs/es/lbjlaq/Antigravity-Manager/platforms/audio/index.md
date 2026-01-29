@@ -47,7 +47,7 @@ El **endpoint de transcripción de audio** es una ruta compatible con Whisper de
 ## Resumen de endpoint y restricciones
 
 | Elemento | Conclusión | Evidencia en código |
-| --- | --- | --- |
+|--- | --- | ---|
 | Ruta de entrada | `POST /v1/audio/transcriptions` | `src-tauri/src/proxy/server.rs` registra la ruta en `handlers::audio::handle_audio_transcription` |
 | Formatos compatibles | Identificados por extensión de archivo: `mp3/wav/m4a/ogg/flac/aiff(aif)` | `src-tauri/src/proxy/audio/mod.rs` `detect_mime_type()` |
 | Tamaño de archivo | **Límite estricto de 15MB** (si excede, devuelve 413 + mensaje de error de texto) | `src-tauri/src/proxy/audio/mod.rs` `exceeds_size_limit()`;`src-tauri/src/proxy/handlers/audio.rs` |
@@ -140,7 +140,7 @@ print(transcript.text)
 Antigravity Tools determina el tipo MIME por extensión de archivo (no mediante detección de contenido de archivo).
 
 | Formato | Tipo MIME | Extensión |
-| --- | --- | --- |
+|--- | --- | ---|
 | MP3 | `audio/mp3` | `.mp3` |
 | WAV | `audio/wav` | `.wav` |
 | AAC (M4A) | `audio/aac` | `.m4a` |
@@ -217,7 +217,7 @@ No puedes ver el audio en sí en el registro, pero aún puedes usar `status/dura
 Este endpoint lee explícitamente solo 3 campos de formulario:
 
 | Campo | ¿Obligatorio? | Valor predeterminado | Método de procesamiento |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `file` | ✅ | Ninguno | Debe proporcionarse; si falta, devuelve `400` + texto `缺少音频文件` |
 | `model` | ❌ | `gemini-2.0-flash-exp` | Se transmite como cadena y participa en la obtención de tokens (las reglas upstream específicas se basan en la respuesta real) |
 | `prompt` | ❌ | `Generate a transcript of the speech.` | Se envía como primer `text` al upstream para guiar la transcripción |
@@ -279,10 +279,10 @@ Forma correcta: solo carga archivos de audio (`.mp3`, `.wav`, etc.).
 > Última actualización: 2026-01-23
 
 | Función | Ruta del archivo | Número de línea |
-| --- | --- | --- |
+|--- | --- | ---|
 | Registro de ruta (/v1/audio/transcriptions + límite de body) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | Procesador de transcripción de audio (multipart/15MB/inlineData) | [`src-tauri/src/proxy/handlers/audio.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/audio.rs#L16-L162) | 16-162 |
-| Formatos compatibles (extensión -> MIME + 15MB) | [`src-tauri/src/proxy/audio/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/audio/mod.rs#L6-L35) | 6-35 |
+|--- | --- | ---|
 | Middleware Monitor (Binary Request Data) | [`src-tauri/src/proxy/middleware/monitor.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/monitor.rs#L13-L337) | 13-337 |
 
 **Constantes clave**:

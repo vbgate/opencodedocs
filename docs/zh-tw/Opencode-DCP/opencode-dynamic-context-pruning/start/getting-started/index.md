@@ -275,7 +275,7 @@ DCP 外掛安裝非常簡單：
 > 更新時間：2026-01-23
 
 | 功能        | 檔案路徑                                                                                    | 行號    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 外掛入口    | [`index.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/index.ts) | 12-102  |
 | 配置管理    | [`lib/config.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/config.ts) | 669-794 |
 | 指令處理    | [`lib/commands/help.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/commands/help.ts) | 1-40    |

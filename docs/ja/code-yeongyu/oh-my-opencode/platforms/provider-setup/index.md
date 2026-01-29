@@ -68,7 +68,7 @@ oh-my-opencodeの知性は、**各タスクに最適なモデルを使用する�
 oh-my-opencodeは2つのレベルの設定をサポートしています：
 
 | 場所 | パス | 優先度 | 使用ケース |
-|----------|------|----------|----------|
+|--- | --- | --- | ---|
 | **プロジェクト設定** | `.opencode/oh-my-opencode.json` | 低 | プロジェクト固有の設定（コードベースと共にコミット） |
 | **ユーザー設定** | `~/.config/opencode/oh-my-opencode.json` | 高 | グローバル設定（すべてのプロジェクトで共有） |
 
@@ -131,7 +131,7 @@ oh-my-opencodeは6つの主要なプロバイダーをサポートしていま�
 **モデルマッピング**（Sisyphusデフォルト設定）：
 
 | エージェント | デフォルトモデル | 目的 |
-|-------|---------------|---------|
+|--- | --- | ---|
 | Sisyphus | `anthropic/claude-opus-4-5` | メインオーケストレーター、複雑な推論 |
 | Prometheus | `anthropic/claude-opus-4-5` | プロジェクト計画 |
 | Metis | `anthropic/claude-sonnet-4-5` | 事前計画分析 |
@@ -162,7 +162,7 @@ oh-my-opencodeは6つの主要なプロバイダーをサポートしていま�
 **モデルマッピング**（Oracleデフォルト設定）：
 
 | エージェント | デフォルトモデル | 目的 |
-|-------|---------------|---------|
+|--- | --- | ---|
 | Oracle | `openai/gpt-5.2` | アーキテクチャレビュー、デバッグ |
 
 **手動上書き例**：
@@ -246,7 +246,7 @@ Gemini認証には、[`opencode-antigravity-auth`](https://github.com/NoeFabris/
 **モデルマッピング**（デフォルト設定）：
 
 | エージェント | デフォルトモデル | 目的 |
-|-------|---------------|---------|
+|--- | --- | ---|
 | Multimodal Looker | `google/antigravity-gemini-3-flash` | PDF、画像分析 |
 
 ### GitHub Copilot（バックアッププロバイダー）
@@ -278,7 +278,7 @@ GitHub Copilotはプロキシプロバイダーとして機能し、リクエス
 **モデルマッピング**（GitHub Copilotが最適な利用可能なプロバイダーである場合）：
 
 | エージェント | モデル | 目的 |
-|-------|-------|---------|
+|--- | --- | ---|
 | Sisyphus | `github-copilot/claude-opus-4.5` | メインオーケストレーター |
 | Oracle | `github-copilot/gpt-5.2` | アーキテクチャレビュー |
 | Explore | `opencode/gpt-5-nano` | クイック探索 |
@@ -305,7 +305,7 @@ bunx oh-my-opencode install
 **モデルマッピング**（Z.aiが唯一の利用可能なプロバイダーである場合）：
 
 | エージェント | モデル | 目的 |
-|-------|-------|---------|
+|--- | --- | ---|
 | Sisyphus | `zai-coding-plan/glm-4.7` | メインオーケストレーター |
 | Oracle | `zai-coding-plan/glm-4.7` | アーキテクチャレビュー |
 | Explore | `zai-coding-plan/glm-4.7-flash` | クイック探索 |
@@ -325,7 +325,7 @@ bunx oh-my-opencode install
 **モデルマッピング**（OpenCode Zenが最適な利用可能なプロバイダーである場合）：
 
 | エージェント | モデル | 目的 |
-|-------|-------|---------|
+|--- | --- | ---|
 | Sisyphus | `opencode/claude-opus-4-5` | メインオーケストレーター |
 | Oracle | `opencode/gpt-5.2` | アーキテクチャレビュー |
 | Explore | `opencode/gpt-5-nano` | クイック探索 |
@@ -380,7 +380,7 @@ anthropic → github-copilot → opencode → antigravity → google
 **すべてのエージェントのプロバイダー優先度チェーン**：
 
 | エージェント | モデル（プレフィックスなし） | プロバイダー優先度チェーン |
-|-------|-------------------|-------------------------|
+|--- | --- | ---|
 | **Sisyphus** | `claude-opus-4-5` | anthropic → github-copilot → opencode → antigravity → google |
 | **Oracle** | `gpt-5.2` | openai → anthropic → google → github-copilot → opencode |
 | **Librarian** | `big-pickle` | opencode → github-copilot → anthropic |
@@ -394,13 +394,13 @@ anthropic → github-copilot → opencode → antigravity → google
 **カテゴリのプロバイダー優先度チェーン**：
 
 | カテゴリ | モデル（プレフィックスなし） | プロバイダー優先度チェーン |
-|----------|-------------------|-------------------------|
-| **visual-engineering** | `gemini-3-pro` | google → openai → anthropic → github-copilot → opencode |
+|--- | --- | ---|
+|--- | --- | ---|
 | **ultrabrain** | `gpt-5.2-codex` | openai → anthropic → google → github-copilot → opencode |
 | **artistry** | `gemini-3-pro` | google → openai → anthropic → github-copilot → opencode |
 | **quick** | `claude-haiku-4-5` | anthropic → github-copilot → opencode → antigravity → google |
-| **unspecified-low** | `claude-sonnet-4-5` | anthropic → github-copilot → opencode → antigravity → google |
-| **unspecified-high** | `claude-opus-4-5` | anthropic → github-copilot → opencode → antigravity → google |
+|--- | --- | ---|
+|--- | --- | ---|
 | **writing** | `gemini-3-flash` | google → openai → anthropic → github-copilot → opencode |
 
 ### ステップ3：システムデフォルト
@@ -745,7 +745,7 @@ bunx oh-my-opencode install --no-tui --zai-coding-plan=no
 > 最終更新日：2026-01-26
 
 | 機能 | ファイルパス | 行 |
-|---------|-----------|-------|
+|--- | --- | ---|
 | 設定スキーマ定義 | [`src/config/schema.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/config/schema.ts) | 1-378 |
 | インストールガイド（プロバイダー設定） | [`docs/guide/installation.md`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/docs/guide/installation.md) | 1-299 |
 | 設定リファレンス（モデル解決） | [`docs/configurations.md`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/docs/configurations.md) | 391-512 |

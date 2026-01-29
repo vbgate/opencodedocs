@@ -108,7 +108,7 @@ Nicht alle Dateien sind Backups wert. Unterscheiden Sie zuerst "was sind Kontend
 Die folgenden Dateinamen stammen aus dem Projektquellcode und sind fest:
 
 | Was Sie sehen | Zweck | Was Sie beachten sollten |
-| --- | --- | --- |
+|--- | --- | ---|
 | `accounts.json` | Kontenindex (enthält Kontenliste/aktuelles Konto) | Es wird empfohlen, dies beim Migrieren von Konten gemeinsam zu sichern |
 | `accounts/` | Ein `*.json`-Pro-Datei für jedes Konto | Dies ist der Hauptteil der Kontendaten |
 | `logs/` | Verzeichnis für Anwendungsprotokolle | Für Fehlerbehebung zuerst hier nachsehen |
@@ -189,7 +189,7 @@ Gehen Sie in Settings -> General, finden Sie "Automatisch beim Systemstart" und 
 
 ::: info Zwei Arten von "automatischem Start", verwechseln Sie sie nicht
 | Name | Was bedeutet das | Beweis |
-| --- | --- | --- |
+|--- | --- | ---|
 | Automatischer Systemstart | Automatischer Start von Antigravity Tools nach dem Start des Computers (die Desktop-Anwendung selbst) | Startparameter enthalten `--minimized` und bieten den Befehl `toggle_auto_launch` |
 | Automatischer Start des Reverse-Proxys | Wenn Antigravity Tools startet und `proxy.auto_start=true` konfiguriert ist, versucht es, den lokalen Reverse-Proxy-Dienst automatisch zu starten | Liest die Konfiguration beim Anwendungsstart und führt `start_proxy_service(...)` aus |
 :::
@@ -205,7 +205,7 @@ Gehen Sie in Settings -> General, finden Sie "Automatisch beim Systemstart" und 
 ## Hinweise zu Fallstricken
 
 | Szenario | Was Sie vielleicht tun (❌) | Empfohlene Vorgehensweise (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Datenverzeichnis nicht gefunden | Installationsverzeichnis der App im System wild durchsuchen | Gehen Sie direkt zu Settings -> Advanced, sehen Sie "Datenverzeichnis" und öffnen Sie es mit einem Klick |
 | Fenster geschlossen, aber nicht beendet | Nach dem Schließen des Fensters sofort Konfiguration ändern/Port ändern | Überprüfen Sie zuerst, ob das Taskleistensymbol noch existiert; zum Beenden verwenden Sie Quit in der Taskleiste |
 | Zu viele Protokolle, schwer zu untersuchen | Während Sie das Problem reproduzieren, alte Protokolle durchsuchen | Bereinigen Sie zuerst "Protokolle", reproduzieren Sie dann einmal, und sehen Sie zuletzt nur die Protokolldatei dieses Mal |
@@ -234,24 +234,24 @@ Gehen Sie in Settings -> General, finden Sie "Automatisch beim Systemstart" und 
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
+|--- | --- | ---|
 | Speicherort des Datenverzeichnisses (`~/.antigravity_tools`) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | Kontenindex und Kontendateiverzeichnis (`accounts.json` / `accounts/`) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L46) | 16-46 |
 | Protokollverzeichnis und tägliche Rotation (`logs/` + `app.log`) | [`src-tauri/src/modules/logger.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/logger.rs#L17-L83) | 17-83 |
 | Protokolle bereinigen (Datei abschneiden) | [`src-tauri/src/modules/logger.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/logger.rs#L149-L169) | 149-169 |
-| Einstellungsseite zeigt Datenverzeichnis + Ein-Klick-Öffnen | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L525-L576) | 525-576 |
-| Einstellungsseite Ein-Klick-Protokollbereinigung (Button + Dialoglogik) | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L127-L135) | 127-135 |
-| Einstellungsseite Ein-Klick-Protokollbereinigung (Advanced tab Button) | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L732-L747) | 732-747 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Taskleistenmenü und Klickereignisse (Konto wechseln/aktualisieren/anzeigen/beenden) | [`src-tauri/src/modules/tray.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/tray.rs#L9-L158) | 9-158 |
-| Fenster schließen -> Ausblenden (minimieren zur Taskleiste) | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L150-L160) | 150-160 |
-| Initialisierung des Plugins für automatischen Systemstart (inklusive `--minimized`) | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L58-L66) | 58-66 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Schalter für automatischen Systemstart (`toggle_auto_launch` / `is_auto_launch_enabled`) | [`src-tauri/src/commands/autostart.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/autostart.rs#L4-L39) | 4-39 |
 | Befehle: Datenverzeichnis öffnen / Pfad abrufen / Protokolle bereinigen | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L578-L621) | 578-621 |
 | Datenbankdateiname von Token Stats (`token_stats.db`) | [`src-tauri/src/modules/token_stats.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/token_stats.rs#L58-L61) | 58-61 |
 | Datenbankdateiname von Proxy Monitor (`proxy_logs.db`) | [`src-tauri/src/modules/proxy_db.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/proxy_db.rs#L5-L8) | 5-8 |
-| Warmup-Verlaufsdateiname (`warmup_history.json`) | [`src-tauri/src/modules/scheduler.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/scheduler.rs#L14-L17) | 14-17 |
+|--- | --- | ---|
 | Aktualisierungseinstellungsdateiname (`update_settings.json`) | [`src-tauri/src/modules/update_checker.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/update_checker.rs#L150-L177) | 150-177 |
-| Automatischer Start des Reverse-Proxys (Startet Dienst bei `proxy.auto_start=true`) | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L107-L126) | 107-126 |
+|--- | --- | ---|
 
 </details>
 

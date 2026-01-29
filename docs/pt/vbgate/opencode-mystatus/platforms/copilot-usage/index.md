@@ -66,7 +66,7 @@ Em termos simples: cada vez que o Copilot "trabalha" para você (gerar código, 
 Diferentes tipos de assinatura têm diferentes limites mensais:
 
 | Tipo de assinatura | Limite mensal | Público-alvo |
-| ------------------ | ------------- | ------------ |
+|--- | --- | ---|
 | Free | 50 vezes | Desenvolvedor individual em teste |
 | Pro | 300 vezes | Desenvolvedor individual versão completa |
 | Pro+ | 1.500 vezes | Desenvolvedor individual intenso |
@@ -307,7 +307,7 @@ Se o arquivo de configuração `~/.config/opencode/copilot-quota-token.json` est
 Se você preencher `tier` diferente da assinatura real, o cálculo do limite estará incorreto.
 
 | Sua assinatura real | Campo tier deve ser | Exemplo de preenchimento incorreto |
-| ------------------ | ------------------- | ---------------------------------- |
+|--- | --- | ---|
 | Free | `free` | `pro` ❌ |
 | Pro | `pro` | `free` ❌ |
 | Pro+ | `pro+` | `pro` ❌ |
@@ -375,9 +375,9 @@ Esta lição ensinou como usar o opencode-mystatus para consultar a cota do GitH
 > Data de atualização: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Número da linha |
-| -------------- | ----------------- | --------------- |
+|--- | --- | ---|
 | Consulta de cota Copilot | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 481-524 |
-| Leitura de Fine-grained PAT | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 122-151 |
+|--- | --- | ---|
 | Consulta de API de cobrança pública | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 157-177 |
 | Consulta de API interna | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 242-304 |
 | Lógica de troca de token | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 183-208 |

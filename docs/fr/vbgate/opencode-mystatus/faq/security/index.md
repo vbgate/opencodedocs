@@ -47,7 +47,7 @@ Ces trois principes se superposent pour garantir que vos données sont sécuris�
 Le plugin lit uniquement deux fichiers de configuration locaux, et tous sont en **mode lecture seule** :
 
 | Chemin du fichier | Utilisation | Emplacement du code source |
-| ------------------ | ---------- | -------------------------- |
+|--- | --- | ---|
 | `~/.local/share/opencode/auth.json` | Stockage d'authentification officielle OpenCode | `mystatus.ts:35` |
 | `~/.config/opencode/antigravity-accounts.json` | Stockage des comptes du plugin Antigravity | `google.ts` (logique de lecture) |
 
@@ -130,7 +130,7 @@ Même si vous partagez une capture d'écran des résultats de l'interrogation av
 Le plugin appelle uniquement les **API officielles** de chaque plateforme, sans passer par aucun serveur tiers :
 
 | Plateforme | Point de terminaison API | Utilisation |
-| ---------- | ----------------------- | ----------- |
+|--- | --- | ---|
 | OpenAI | `https://chatgpt.com/backend-api/wham/usage` | Interrogation de quota |
 | Zhipu AI | `https://bigmodel.cn/api/monitor/usage/quota/limit` | Interrogation de la limite de token |
 | Z.ai | `https://api.z.ai/api/monitor/usage/quota/limit` | Interrogation de la limite de token |
@@ -189,7 +189,7 @@ export async function fetchWithTimeout(
 ### Ce que le plugin ne fera pas
 
 | Opération | Comportement du plugin |
-| --------- | ---------------------- |
+|--- | ---|
 | Stocker des données | ❌ Ne stocke aucune donnée utilisateur |
 | Télécharger des données | ❌ Ne télécharge aucune donnée vers des serveurs tiers |
 | Mettre en cache les résultats | ❌ Ne met en cache aucun résultat de requête |
@@ -199,7 +199,7 @@ export async function fetchWithTimeout(
 ### Ce que le plugin fera
 
 | Opération | Comportement du plugin |
-| --------- | ---------------------- |
+|--- | ---|
 | Lire des fichiers | ✅ Lit uniquement les fichiers d'authentification locaux |
 | Appeler des API | ✅ Appelle uniquement les points de terminaison API officiels |
 | Affichage masqué | ✅ Masque automatiquement les informations sensibles telles que les clés API |
@@ -265,7 +265,7 @@ Non. Le plugin n'a aucune fonction de suivi ou de collecte de données, ne traqu
 > Date de mise à jour : 2026-01-23
 
 | Fonction | Chemin du fichier | Ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Lecture des fichiers d'authentification | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts#L38-L40) | 38-40 |
 | Fonction de masquage de l'API | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L130-L135) | 130-135 |
 | Configuration du délai de demande | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L114) | 114 |

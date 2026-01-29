@@ -300,7 +300,7 @@ Loopback または Tailnet の使用をおすすめします。LAN への直接�
 `CLAWDBOT_PROFILE` 環境変数を設定することで、異なる作業環境で独立した設定を使用できます：
 
 | Profile 値 | ワークスペースパス | 設定ファイル |
-|----------|----------|----------|
+|--- | --- | ---|
 | `default` または未設定 | `~/clawd` | `~/.clawdbot/clawdbot.json` |
 | `work` | `~/clawd-work` | `~/.clawdbot/clawdbot.json` (work profile) |
 | `dev` | `~/clawd-dev` | `~/.clawdbot/clawdbot.json` (dev profile) |
@@ -673,7 +673,7 @@ clawdbot onboard --mode reset
 > 更新日：2026-01-27
 
 | 機能           | ファイルパス                                                                                                  | 行号      |
-| -------------- | ------------------------------------------------------------------------------------------------- | --------- |
+|--- | --- | ---|
 | ウィザードメインフロー     | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 87-452    |
 | セキュリティ警告確認   | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 46-85     |
 | Gateway 設定   | [`src/wizard/onboarding.gateway-config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.gateway-config.ts) | 28-249    |

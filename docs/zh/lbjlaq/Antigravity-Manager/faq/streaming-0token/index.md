@@ -142,7 +142,7 @@ Get-ChildItem -Force (Join-Path $HOME ".antigravity_tools\logs") | Sort-Object L
 ## 踩坑提醒
 
 | 场景 | 你可能会怎么做（❌） | 推荐做法（✓） |
-| --- | --- | --- |
+|--- | --- | ---|
 | 看到 0 Token 就立刻手动重试很多次 | 一直按客户端重试按钮，完全不看日志 | 先看一次 Proxy Monitor + app.log，确认是否是 peek 阶段早夭（会自动重试/轮换） |
 | 遇到 `Invalid \`signature\`` 就直接清空数据目录 | 把 `.antigravity_tools` 整个删掉，账号/统计全没了 | 先让代理执行一次“签名修复重试”；只有在日志明确提示不可恢复时，再考虑手动介入 |
 | 把“服务端波动”当成“账号坏了” | 400/503/529 一律轮换账号 | 轮换是否有效取决于状态码；代理本身有 `should_rotate_account(...)` 规则（`src-tauri/src/proxy/handlers/claude.rs#L226-L236`） |
@@ -167,7 +167,7 @@ Get-ChildItem -Force (Join-Path $HOME ".antigravity_tools\logs") | Sort-Object L
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Claude handler：退避重试策略 + 轮换规则 | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L117-L236) | 117-236 |
 | Claude handler：内部把非流式转换为流式（better quota） | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L665-L776) | 665-776 |
 | Claude handler：peek 预读（跳过心跳/注释，避免空流） | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L812-L926) | 812-926 |

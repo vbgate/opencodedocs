@@ -37,7 +37,7 @@ order: 8
 会话恢复适合以下场景：
 
 | 场景 | 错误类型 | 恢复方式 |
-| ---- | -------- | ------ |
+|--- | --- | ---|
 | 按 ESC 中断工具 | `tool_result_missing` | 自动注入 synthetic tool_result |
 | 思考块顺序错误 | `thinking_block_order` | 自动预置空思考块 |
 | 非思考模型用思考 | `thinking_disabled_violation` | 自动剥离所有思考块 |
@@ -335,7 +335,7 @@ ls -la ~/.local/share/opencode/storage/part/
 > 更新时间：2026-01-23
 
 | 功能        | 文件路径                                                                                    | 行号    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 会话恢复主逻辑 | [`src/plugin/recovery.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/recovery.ts) | 全文   |
 | 错误类型检测   | [`src/plugin/recovery.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/recovery.ts#L85-L110) | 85-110  |
 | tool_result_missing 恢复 | [`src/plugin/recovery.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/recovery.ts#L143-L183) | 143-183 |
@@ -351,7 +351,7 @@ ls -la ~/.local/share/opencode/storage/part/
 **关键常量**：
 
 | 常量名 | 值 | 说明 |
-| -------- | --- | ---- |
+|--- | --- | ---|
 | `RECOVERY_RESUME_TEXT` | `"[session recovered - continuing previous task]"` | Auto Resume 时发送的恢复文本 |
 | `THINKING_TYPES` | `Set(["thinking", "redacted_thinking", "reasoning"])` | 思考块类型集合 |
 | `META_TYPES` | `Set(["step-start", "step-finish"])` | 元数据类型集合 |
@@ -373,7 +373,7 @@ ls -la ~/.local/share/opencode/storage/part/
 **配置项**（来自 schema.ts）：
 
 | 配置项 | 类型 | 默认值 | 说明 |
-| -------- | ---- | ------ | ---- |
+|--- | --- | --- | ---|
 | `session_recovery` | boolean | `true` | 启用会话恢复功能 |
 | `auto_resume` | boolean | `false` | 自动发送 "continue" 消息 |
 | `quiet_mode` | boolean | `false` | 隐藏 toast 通知 |

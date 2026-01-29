@@ -256,7 +256,7 @@ set PLANNOTATOR_BROWSER=C:\Program Files\Google\Chrome\Application\chrome.exe
 **常见浏览器路径**：
 
 | 操作系统 | 浏览器 | 路径/命令 |
-| -------- | ------ | --------- |
+|--- | --- | ---|
 | macOS | Chrome | `Google Chrome` 或 `/Applications/Google Chrome.app` |
 | macOS | Firefox | `Firefox` 或 `/Applications/Firefox.app` |
 | macOS | Safari | `Safari` |
@@ -424,7 +424,7 @@ export PLANNOTATOR_REMOTE=enabled
 本课学习了 Plannotator 的 4 个核心环境变量：
 
 | 环境变量 | 用途 | 默认值 | 适用场景 |
-| --------- | ---- | ------ | -------- |
+|--- | --- | --- | ---|
 | `PLANNOTATOR_REMOTE` | 远程模式开关 | 未设置（本地模式） | SSH、Devcontainer、WSL |
 | `PLANNOTATOR_PORT` | 固定端口 | 远程模式 19432，本地模式随机 | 需要端口转发或避免端口冲突 |
 | `PLANNOTATOR_BROWSER` | 自定义浏览器 | 系统默认浏览器 | 希望使用特定浏览器 |
@@ -456,7 +456,7 @@ export PLANNOTATOR_REMOTE=enabled
 > 更新时间：2026-01-24
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 远程模式检测 | [`packages/server/remote.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/remote.ts) | 16-29 |
 | 端口获取逻辑 | [`packages/server/remote.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/remote.ts) | 34-49 |
 | 浏览器打开逻辑 | [`packages/server/browser.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/browser.ts) | 45-74 |

@@ -209,7 +209,7 @@ Create configuration file `~/.claude/skills/continuous-learning/config.json`:
 **Configuration explanation**:
 
 | Field | Description | Recommended value |
-|------|------------|-------------------|
+|--- | --- | ---|
 | `min_session_length` | Minimum session length (user message count) | 10 |
 | `extraction_threshold` | Extraction threshold | medium |
 | `auto_approve` | Whether to auto-save (recommend false) | false |
@@ -253,7 +253,7 @@ Edit `~/.claude/settings.json`, add Stop hook:
 **Script path explanation**:
 
 | Platform | Script Path |
-|----------|-------------|
+|--- | ---|
 | macOS/Linux | `~/.claude/skills/continuous-learning/evaluate-session.sh` |
 | Windows | `C:\Users\YourName\.claude\skills\continuous-learning\evaluate-session.cmd` |
 
@@ -529,7 +529,7 @@ The continuous learning mechanism works through three core components:
 > Last updated: 2026-01-25
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | /learn command definition | [`commands/learn.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/learn.md) | 1-71 |
 | Continuous Learning Skill | [`skills/continuous-learning/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/continuous-learning/SKILL.md) | 1-81 |
 | Stop Hook script | [`scripts/hooks/evaluate-session.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/hooks/evaluate-session.js) | 1-79 |
@@ -547,7 +547,7 @@ The continuous learning mechanism works through three core components:
 
 **Configuration Items**:
 | Config Item | Type | Default | Description |
-|-------------|------|---------|-------------|
+|--- | --- | --- | ---|
 | `min_session_length` | number | 10 | Minimum session length (user message count) |
 | `extraction_threshold` | string | "medium" | Extraction threshold |
 | `auto_approve` | boolean | false | Whether to auto-save (recommend false) |

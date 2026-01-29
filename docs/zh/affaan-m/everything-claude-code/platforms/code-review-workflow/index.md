@@ -102,7 +102,7 @@ Everything Claude Code 提供两个专业的审查 agent：
 ### 问题严重程度分级
 
 | 级别 | 含义 | 是否阻止提交 | 示例 |
-|------|------|-------------|------|
+|--- | --- | --- | ---|
 | **CRITICAL** | 严重安全漏洞或重大质量问题 | ❌ 必须阻止 | 硬编码 API key、SQL 注入 |
 | **HIGH** | 重要安全问题或代码质量问题 | ❌ 必须阻止 | 缺少错误处理、XSS 漏洞 |
 | **MEDIUM** | 中等优先级问题 | ⚠️ 可以小心提交 | Emoji 使用、缺少 JSDoc |
@@ -437,7 +437,7 @@ security-reviewer 会进行更深入的 OWASP Top 10 分析，检查更多安全
 **代码审查流程**是 Everything Claude Code 的核心功能之一：
 
 | 功能 | agent | 检查内容 | 严重程度 |
-|------|-------|---------|---------|
+|--- | --- | --- | ---|
 | **代码质量审查** | code-reviewer | 函数大小、错误处理、最佳实践 | HIGH/MEDIUM/LOW |
 | **安全审查** | security-reviewer | OWASP Top 10、密钥泄露、注入漏洞 | CRITICAL/HIGH/MEDIUM |
 
@@ -471,11 +471,11 @@ security-reviewer 会进行更深入的 OWASP Top 10 分析，检查更多安全
 > 更新时间：2026-01-25
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
-| /code-review 命令定义 | [`commands/code-review.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/code-review.md) | 1-41 |
-| code-reviewer agent | [`agents/code-reviewer.md`](https://github.com/affaan-m/everything-claude-code/blob/main/agents/code-reviewer.md) | 1-105 |
-| security-reviewer agent | [`agents/security-reviewer.md`](https://github.com/affaan-m/everything-claude-code/blob/main/agents/security-reviewer.md) | 1-546 |
-| security-review skill | [`skills/security-review/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/security-review/SKILL.md) | 1-495 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **关键常量**：
 - 函数大小限制：50 行（code-reviewer.md:47）

@@ -86,7 +86,7 @@ This project does not use traditional semantic versioning. Instead, it uses **da
 ### Version Types
 
 | Type | Description | Example |
-|-----|-------------|---------|
+|--- | --- | ---|
 | **New Feature** | Add new features or major improvements | `feat: add new agent` |
 | **Fix** | Fix bugs or issues | `fix: resolve hook loading issue` |
 | **Docs** | Documentation updates | `docs: update README` |

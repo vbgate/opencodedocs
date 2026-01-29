@@ -62,7 +62,7 @@ const widthCache = new Map<string, number>()
 **示例**：
 
 | 原始文本（Key） | 显示宽度（Value） | 说明 |
-| --------------- | ---------------- | ---- |
+|--- | --- | ---|
 | `**姓名**` | 4 | 剥离 `**` 后宽度为 4 |
 | `*年龄*` | 4 | 剥离 `*` 后宽度为 4 |
 | `` `status` `` | 8 | 代码块符号也被计入宽度 |
@@ -120,7 +120,7 @@ graph TD
 **步骤解析**：
 
 | 步骤 | 操作 | 时间复杂度 |
-| ---- | ---- | ---------- |
+|--- | --- | ---|
 | 1 | 检查 `widthCache.has(text)` | O(1) |
 | 2 | 缓存命中 → 直接返回 | O(1) |
 | 3 | 缓存未命中 → 计算宽度 | O(n) |
@@ -166,7 +166,7 @@ function cleanupCache() {
 **触发条件**（满足任意一个即触发）：
 
 | 条件 | 阈值 | 说明 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | 操作次数 | > 100 次格式化操作 | 避免频繁触发清理 |
 | 缓存条目 | > 1000 个单元格 | 防止内存占用过大 |
 
@@ -192,7 +192,7 @@ function cleanupCache() {
 **缓存效果**：
 
 | 场景 | 不使用缓存 | 使用缓存 | 性能提升 |
-| ---- | ---------- | -------- | -------- |
+|--- | --- | --- | ---|
 | 5 列 × 10 行（无重复） | 50 次计算 | 50 次计算 | 无 |
 | 5 列 × 10 行（表头重复） | 50 次计算 | 10 次计算 + 40 次缓存命中 | ~80% |
 
@@ -207,7 +207,7 @@ function cleanupCache() {
 **示例场景**：
 
 | 场景 | 缓存效果 |
-| ---- | -------- |
+|--- | ---|
 | AI 生成对比表格 | ✅ 效果显著（多列重复内容） |
 | 简单单行表格 | ⚪ 效果一般（内容唯一） |
 | 表格嵌套 Markdown | ✅ 效果显著（符号剥离开销大） |
@@ -254,7 +254,7 @@ function cleanupCache() {
 > 更新时间：2026-01-26
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | widthCache 定义 | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L6) | 6 |
 | cacheOperationCount 定义 | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L7) | 7 |
 | calculateDisplayWidth 函数 | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L151-L159) | 151-159 |

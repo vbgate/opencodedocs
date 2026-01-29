@@ -58,7 +58,7 @@ Usar la habilidad de mejores prácticas de React en escenarios típicos:
 La optimización de rendimiento de React no se trata solo de usar algunos Hooks, sino resolver problemas desde el nivel de **arquitectura**. Las 57 reglas de Vercel se dividen en 8 categorías por prioridad:
 
 | Prioridad | Categoría | Enfoque | Beneficio típico |
-| ------ | ---- | ---- | ---- |
+|--- | --- | --- | ---|
 | **CRITICAL** | Eliminar cascadas | Evitar operaciones async seriales | 2-10× mejora |
 | **CRITICAL** | Optimizar paquetes | Reducir tamaño del paquete inicial | Mejora significativa de TTI/LCP |
 | **HIGH** | Rendimiento del servidor | Optimizar obtención de datos y caché | Reducir carga del servidor |

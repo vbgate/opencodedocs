@@ -35,7 +35,7 @@ Wenn Sie:
 mystatus unterstützt **zwei Copilot-Authentifizierungsmethoden**:
 
 | Authentifizierungsmethode | Beschreibung | Vorteile | Nachteile |
-|---------|------|------|------|
+|--- | --- | --- | ---|
 | **OAuth-Token** (Standard) | GitHub-OAuth-Token bei Anmeldung in OpenCode | Keine zusätzliche Konfiguration, sofort einsatzbereit | Neue OpenCode-OAuth-Token haben möglicherweise keine Copilot-Berechtigung |
 | **Fine-grained PAT** (empfohlen) | Vom Benutzer manuell erstellter Fine-grained Personal Access Token | Stabil, zuverlässig, keine Abhängigkeit von OAuth-Berechtigungen | Muss einmal manuell erstellt werden |
 
@@ -61,7 +61,7 @@ mystatus unterstützt **zwei Copilot-Authentifizierungsmethoden**:
 Wählen Sie Ihren Abonnementstyp aus:
 
 | Abonnementstyp | Monatliche Kredit | Beschreibung |
-|---------|---------|---------|
+|--- | --- | ---|
 | `free` | 50 | Copilot Free (Kostenlose Benutzer) |
 | `pro` | 300 | Copilot Pro (Standardpersonalversion) |
 | `pro+` | 1500 | Copilot Pro+ (Erweiterte Personalversion) |
@@ -85,7 +85,7 @@ Führen Sie `/mystatus` aus. Sie sollten die Copilot-Kreditinformationen sehen.
 <summary><strong>Klicken Sie hier, um die Quellcodepositionen anzuzeigen</strong></summary>
 
 | Funktion | Dateipfad | Zeilennummer |
-| --------------------------- | ------------------------------------------------------------------------------------------ | ------- |
-| Copilot-Authentifizierungsstrategie-Einstieg | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 481-524 |
+|--- | --- | ---|
+|--- | --- | ---|
 
 </details>

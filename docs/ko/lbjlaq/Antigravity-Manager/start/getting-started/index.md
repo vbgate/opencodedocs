@@ -126,7 +126,7 @@ LAN 액세스를 활성화(`allow_lan_access=true`, 수신 주소가 `0.0.0.0`�
 ## 흔한 오류
 
 | 시나리오 | 잘못된 방법 (❌) | 권장 방법 (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | 휴대폰/다른 컴퓨터가 액세스하게 하고 싶음 | `allow_lan_access=true`를 열지만 인증 설정하지 않음 | 동시에 인증을 활성화하고 LAN에서 먼저 `GET /healthz` 검증 |
 | 클라이언트가 404 보고 | host/port만 변경, 클라이언트가 `/v1`을 어떻게 연결하는지 고려하지 않음 | 먼저 클라이언트의 base_url 연결 전략 확인 후 `/v1` 접두사 필요 여부 결정 |
 | 처음부터 Claude Code 문제 해결 | 복잡한 클라이언트 직접 연결, 실패 후 어디서 확인할지 모름 | 먼저 최소 완성 루프 실행: Proxy 시작 -> `GET /healthz` -> 클라이언트 연결 |
@@ -155,11 +155,11 @@ LAN 액세스를 활성화(`allow_lan_access=true`, 수신 주소가 `0.0.0.0`�
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 제품 포지셔닝(로컬 AI 중계소/프로토콜 간극) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L35-L77) | 35-77 |
 | Router 엔드포인트 개요(OpenAI/Claude/Gemini/healthz) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | 기본 포트/기본 로컬만/기본 key 및 바인드 주소 로직 | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L291) | 174-291 |
-| `auth_mode=auto`의 실제 결정(LAN -> all_except_health) | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L10-L29) | 10-29 |
+|--- | --- | ---|
 | GUI 페이지 라우터 구조(Dashboard/Accounts/API Proxy/Monitor/Token Stats/Settings) | [`src/App.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/App.tsx#L19-L48) | 19-48 |
 
 **핵심 기본값**:

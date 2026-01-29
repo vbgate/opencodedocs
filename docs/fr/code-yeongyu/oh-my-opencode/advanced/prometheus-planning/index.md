@@ -75,7 +75,7 @@ Ensure the following configurations are complete:
 What's Prometheus's most important feature? **It never writes code**.
 
 | Function | Prometheus | Sisyphus | Atlas |
-|------|-----------|-----------|-------|
+|--- | --- | --- | ---|
 | Requirements gathering | ✅ | ❌ | ❌ |
 | Work plan generation | ✅ | ❌ | ❌ |
 | Code implementation | ❌ | ✅ | ✅ (delegated) |
@@ -504,7 +504,7 @@ User: YES (TDD)
 > Last Updated: 2026-01-26
 
 | Function | File Path | Line Number |
-|------|-----------|-------------|
+|--- | --- | ---|
 | Prometheus system prompt | [`src/agents/prometheus-prompt.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/prometheus-prompt.ts) | 19-1184 |
 | Prometheus permission config | [`src/agents/prometheus-prompt.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/prometheus-prompt.ts) | 1187-1197 |
 | Metis agent | [`src/agents/metis.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/metis.ts) | - |

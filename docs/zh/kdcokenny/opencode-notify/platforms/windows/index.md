@@ -49,7 +49,7 @@ Windows 和 Linux 的系统通知 API 相对基础，opencode-notify 在这些�
 ## Windows 平台功能一览
 
 | 功能 | Windows | 说明 |
-| ---- | ------- | ---- |
+|--- | --- | ---|
 | **原生通知** | ✅ 支持 | 通过 Windows Toast 发送通知 |
 | **终端检测** | ✅ 支持 | 自动识别 37+ 终端模拟器 |
 | **焦点检测** | ❌ 不支持 | 无法检测终端是否为前台窗口 |
@@ -126,7 +126,7 @@ async function detectTerminalInfo(config: NotifyConfig): Promise<TerminalInfo> {
 ## 平台功能对比
 
 | 功能 | macOS | Windows | Linux |
-| ---- | ----- | ------- | ----- |
+|--- | --- | --- | ---|
 | **原生通知** | ✅ Notification Center | ✅ Toast | ✅ notify-send |
 | **自定义音效** | ✅ 系统音效列表 | ❌ 系统默认 | ❌ 系统默认 |
 | **焦点检测** | ✅ AppleScript API | ❌ 不支持 | ❌ 不支持 |
@@ -196,7 +196,7 @@ if (process.platform === "darwin" && terminalInfo.bundleId) {
 以下配置项在 Windows 上无效：
 
 | 配置项 | macOS 效果 | Windows 效果 |
-| ------ | ---------- | ------------ |
+|--- | --- | ---|
 | `sounds.idle` | 播放 Glass 音效 | 使用系统默认声音 |
 | `sounds.error` | 播放 Basso 音效 | 使用系统默认声音 |
 | `sounds.permission` | 播放 Submarine 音效 | 使用系统默认声音 |
@@ -381,7 +381,7 @@ notepad $env:USERPROFILE\.config\opencode\kdco-notify.json
 > 更新时间：2026-01-27
 
 | 功能 | 文件路径 | 行号 |
-| ---- | --------- | ---- |
+|--- | --- | ---|
 | Windows 平台限制检查（osascript） | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L121-L133) | 121-133 |
 | Windows 平台限制检查（焦点检测） | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L166-L175) | 166-175 |
 | macOS 特定：点击聚焦 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L238-L240) | 238-240 |

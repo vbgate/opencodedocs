@@ -58,7 +58,7 @@ OpenCode 的新 OAuth 集成不支持访问配额 API。
 mystatus поддерживает **два метода аутентификации Copilot**:
 
 | Метод аутентификации | Описание | Преимущества | Недостатки |
-|---------|------|------|------|
+|--- | --- | --- | ---|
 | **OAuth Token** (по умолчанию) | Использует GitHub OAuth Token, полученный при входе в OpenCode | Дополнительная настройка не требуется, работает сразу | Новый OAuth Token OpenCode может не иметь прав Copilot |
 | **Fine-grained PAT** (рекомендуется) | Fine-grained Personal Access Token, созданный вручную пользователем | Стабилен и надёжен, не зависит от прав OAuth | Требует однократного ручного создания |
 
@@ -124,7 +124,7 @@ https://github.com/settings/tokens?type=beta
 **Параметры настройки**:
 
 | Поле | Значение |
-|------|-----|
+|--- | ---|
 | **Name** | `mystatus-copilot` (или любое имя по вашему выбору) |
 | **Expiration** | Выберите время истечения (например, 90 days или No expiration) |
 | **Resource owner** | Не нужно выбирать (по умолчанию) |
@@ -167,7 +167,7 @@ https://github.com/
 Вам нужно знать свой тип подписки Copilot, так как разные типы имеют разные ежемесячные квоты:
 
 | Тип подписки | Ежемесячная квота | Применимые сценарии |
-|---------|---------|---------|
+|--- | --- | ---|
 | `free` | 50 | Copilot Free (бесплатные пользователи) |
 | `pro` | 300 | Copilot Pro (личная профессиональная версия) |
 | `pro+` | 1500 | Copilot Pro+ (личная расширенная версия) |
@@ -255,7 +255,7 @@ Period: 2026-01
 Проверьте, что вы понимаете:
 
 | Сценарий | Что вы должны увидеть/сделать |
-|------|--------------|
+|--- | ---|
 | Конфигурационный файл существует | `ls ~/.config/opencode/copilot-quota-token.json` отображает файл |
 | PAT создан успешно | Token начинается с `github_pat_` |
 | Тип подписки правильный | Значение `tier` в конфигурации — это free/pro/pro+/business/enterprise |
@@ -344,9 +344,9 @@ mystatus поддерживает два метода аутентификаци
 > Время обновления: 2026-01-23
 
 | Функция                        | Путь к файлу                                                                                   | Номер строки    |
-| --------------------------- | ------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | Точка входа в стратегию аутентификации Copilot        | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L481-L524) | 481-524 |
-| Чтение конфигурации Fine-grained PAT  | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L122-L151) | 122-151 |
+|--- | --- | ---|
 | Вызов публичного Billing API       | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L157-L177) | 157-177 |
 | Обмен OAuth Token           | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L183-L208) | 183-208 |
 | Вызов внутреннего API (OAuth)     | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L242-L304) | 242-304 |
@@ -372,7 +372,7 @@ mystatus поддерживает два метода аутентификаци
 **Сравнение процессов аутентификации**:
 
 | Стратегия | Тип Token | Конечная точка API | Приоритет |
-|------|-----------|---------|--------|
+|--- | --- | --- | ---|
 | Fine-grained PAT | Fine-grained PAT | `/users/{username}/settings/billing/premium_request/usage` | 1 (приоритет) |
 | OAuth Token (кэш) | Copilot Session Token | `/copilot_internal/user` | 2 |
 | OAuth Token (прямой) | GitHub OAuth Token | `/copilot_internal/user` | 3 |

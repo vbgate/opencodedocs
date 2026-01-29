@@ -44,7 +44,7 @@ Die mystatus-Ausgabe hat ein einheitliches Format, aber es gibt Unterschiede zwi
 
 **Plattformunterschiede**:
 | Plattform | Kreditzyklus | Merkmale |
-| -------------- | --------------------------- | ----------------------- |
+|--- | --- | ---|
 | OpenAI | 3 Stunden / 24 Stunden | Möglicherweise zwei Fenster |
 | Zhipu AI / Z.ai | 5-Stunden-Token / MCP-monatliche Quote | Zwei verschiedene Kreditarten |
 | GitHub Copilot | Monatlich | Zeigt konkrete Werte (229/300) |
@@ -209,7 +209,7 @@ Quota resets: 19d 0h (2026-02-01)
 
 **Unterschiede zwischen Abonnementtypen**:
 | Abonnementtyp | Monatlicher Kredit | Beschreibung |
-| ---------- | -------- | ---------------------- |
+|--- | --- | ---|
 | Free | N/A | Keine Kreditbeschränkung, aber Funktionen eingeschränkt |
 | Pro | 300 | Standard-Personalversion |
 | Pro+ | Höher | Upgrade-Version |
@@ -236,7 +236,7 @@ G3 Image   4h 59m     ███████████████████�
 
 **Erklärung der 4 Modelle**:
 | Modellname | API-Key (Haupt/Reserve) | Zweck |
-| -------- | ---------------------------------------------- | ----------- |
+|--- | --- | ---|
 | G3 Pro | `gemini-3-pro-high` / `gemini-3-pro-low` | Hochwertige Inferenz |
 | G3 Image | `gemini-3-pro-image` | Bildgenerierung |
 | G3 Flash | `gemini-3-flash` | Schnelle Generierung |
@@ -252,7 +252,7 @@ G3 Image   4h 59m     ███████████████████�
 ### Häufige Missverständnisse
 
 | Missverständnis | Tatsache |
-| ------------------------- | -------------------------------------- |
+|--- | ---|
 | Fortschrittsbalken vollständig ausgefüllt = Nicht verwendet | Viele ausgefüllte Blöcke = **Viel verbleibend**, können Sie weiterhin sorgenfrei verwenden |
 | Kurze Rücksetzzeit = Kredit fast aufgebraucht | Kurze Rücksetzzeit = Wird bald zurückgesetzt, können Sie weiterhin verwenden |
 | Prozent 100% = Aufgebraucht | Prozent 100% = **Alles verbleibend** |
@@ -296,15 +296,15 @@ mystatus ist ein **schreibgeschütztes Tool**, es verbraucht Ihren Kredit nicht 
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Fortschrittsbalkenerzeugung | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L40-L53) | 40-53 |
 | Zeitformatierung | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L18-L29) | 18-29 |
 | Berechnung verbleibender Prozentsatz | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L63-L65) | 63-65 |
-| Token-Anzahlformatierung | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L70-L72) | 70-72 |
-| OpenAI-Ausgabeformatierung | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L164-L194) | 164-194 |
-| Zhipu AI-Ausgabeformatierung | [`plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts#L115-L177) | 115-177 |
-| Copilot-Ausgabeformatierung | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L395-L447) | 395-447 |
-| Google Cloud-Ausgabeformatierung | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts#L265-L294) | 265-294 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Funktionen**:
 - `createProgressBar(percent, width)`: Erzeugt Fortschrittsbalken, ausgefüllte Blöcke bedeuten verbleibend

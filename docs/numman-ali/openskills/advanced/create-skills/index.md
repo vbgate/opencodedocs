@@ -127,10 +127,10 @@ Detailed description of the skill.
 ::: danger Common Errors
 
 | Error Example | Fix |
-| -------- | -------- |
+|--- | ---|
 | `name: My Skill` (spaces) | Change to `name: my-skill` (hyphens) |
 | `description: You should use this for...` (second person) | Change to `description: Use this skill for...` (third person) |
-| Missing ending `---` | Add `---` after YAML ends |
+|--- | ---|
 | `description` too long (over 100 words) | Condense to 1-2 sentence summary |
 
 :::
@@ -172,7 +172,7 @@ For detailed information, see references/guide.md
 **Writing guidelines**:
 
 | ✅ Correct (imperative/infinitive) | ❌ Incorrect (second person) |
-| ---------------------------------- | -------------------------- |
+|--- | ---|
 | "To accomplish X, execute Y"        | "You should do X"          |
 | "Load this skill when Z"            | "If you need Y"            |
 | "See references/guide.md"           | "When you want Z"           |
@@ -481,7 +481,7 @@ Core steps to create custom skills:
 > Updated: 2026-01-24
 
 | Function           | File Path                                                                 | Line Numbers |
-| -------------- | ------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | YAML frontmatter validation | [`src/utils/yaml.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/yaml.ts) | 12-14   |
 | YAML field extraction  | [`src/utils/yaml.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/yaml.ts) | 4-7     |
 | Format validation during installation  | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts) | 242, 291, 340 |

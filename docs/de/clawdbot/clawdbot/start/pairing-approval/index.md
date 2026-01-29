@@ -70,7 +70,7 @@ Um Ihren AI-Assistenten zu schützen, bietet Clawdbot einen **Pairing-Mechanismu
 **Alle Kanäle verwenden standardmäßig `dmPolicy="pairing"`**, das bedeutet:
 
 | Policy | Verhalten |
-| ------ | --------- |
+|--- | ---|
 | `pairing` | Unbekannte Absender erhalten einen Pairing-Code, Nachricht wird nicht verarbeitet (Standard) |
 | `allowlist` | Nur Absender aus der `allowFrom`-Liste sind zulässig |
 | `open` | Alle Absender sind zulässig (erfordert explizite Konfiguration von `"*"`) |
@@ -296,13 +296,13 @@ Denken Sie daran: **Der Pairing-Mechanismus ist das Sicherheitsfundament von Cla
 > Aktualisiert am: 2026-01-27
 
 | Funktion | Dateipfad | Zeilen |
-| --- | --- | --- |
-| Pairing-Code-Generierung (8 Zeichen, ohne leicht zu verwechselnde Zeichen) | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L173-L181) | 173-181 |
-| Pairing-Anfrage-Speicherung und TTL (1 Stunde) | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L11-L14) | 11-14 |
-| Pairing-Genehmigungsbefehl | [`src/cli/pairing-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/pairing-cli.ts#L107-L143) | 107-143 |
-| Pairing-Code-Nachrichtengenerierung | [`src/pairing/pairing-messages.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-messages.ts#L4-L20) | 4-20 |
-| Allowlist-Speicherung | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L457-L461) | 457-461 |
-| Liste der `pairing`-unterstützten Kanäle | [`src/channels/plugins/pairing.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/pairing.ts#L11-L16) | 11-16 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Standard-DM-Policy (pairing) | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts#L93) | 93 |
 
 **Wichtige Konstanten**:

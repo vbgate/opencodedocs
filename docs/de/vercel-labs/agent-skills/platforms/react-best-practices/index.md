@@ -64,14 +64,14 @@ Vergewissern Sie sich vor dem Start, dass Sie bereits:
 React-Performance-Optimierung ist nicht nur die Verwendung einiger Hooks, sondern erfordert die Lösung von Problemen auf **Architekturebene**. Die 57 Regeln von Vercel sind nach Priorität in 8 Kategorien unterteilt:
 
 | Priorität | Kategorie | Fokus | Typische Gewinne |
-| ------ | ---- | ---- | ---- |
+|--- | --- | --- | ---|
 | **KRITISCH** | Waterfall-Beseitigung | Vermeidung von seriellen async-Operationen | 2-10× Steigerung |
 | **KRITISCH** | Bundle-Optimierung | Reduzierung der initialen Bundle-Größe | TTI/LCP signifikant verbessert |
 | **HOCH** | Server-Side Performance | Optimierung von Data-Fetching und Caching | Reduzierung der Serverlast |
 | **MITTEL-HOCH** | Client-Side Data-Fetching | Vermeidung von doppelten Anfragen | Reduzierung des Netzwerkverkehrs |
 | **MITTEL** | Re-render-Optimierung | Reduzierung unnötiger Re-renders | Erhöhung der Interaktionsreaktionsgeschwindigkeit |
 | **MITTEL** | Rendering-Performance | Optimierung von CSS und JS-Ausführung | Erhöhung der Framerate |
-| **NIEDRIG-MITTEL** | JavaScript-Performance | Mikro-Optimierung der Codeausführung | 5-20% Steigerung |
+|--- | --- | --- | ---|
 | **NIEDRIG** | Erweiterte Muster | Spezielle Szenario-Optimierungen | Randfälle |
 
 **Kernprinzipien**:
@@ -379,18 +379,18 @@ Sie werden lernen:
 > Aktualisierungszeit: 2026-01-25
 
 | Funktion | Dateipfad | Zeilen |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | React-Best-Practices-Skilldefinition | [`skills/react-best-practices/SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/SKILL.md) | Ganze Datei |
 | Vollständige Regeldokumentation | [`skills/react-best-practices/AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/AGENTS.md) | Ganze Datei |
 | 57 Regeldateien | [`skills/react-best-practices/rules/*.md`](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices/rules) | - |
 | Regelvorlage | [`skills/react-best-practices/rules/_template.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/_template.md) | Ganze Datei |
 | Metadaten | [`skills/react-best-practices/metadata.json`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/metadata.json) | Ganze Datei |
-| README-Übersicht | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md) | 9-27 |
+|--- | --- | ---|
 
 **Wichtige Dateien (Beispiele für KRITISCHE-Regeln)**:
 
 | Regel | Dateipfad | Beschreibung |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | Promise.all() parallele Anfragen | [`async-parallel.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/async-parallel.md) | Beseitigung von Waterfalls |
 | Dynamischer Import großer Komponenten | [`bundle-dynamic-imports.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/bundle-dynamic-imports.md) | Reduzierung der Bundle-Größe |
 | Defer await | [`async-defer-await.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/async-defer-await.md) | Verzögerte Ausführung von asynchronen Operationen |

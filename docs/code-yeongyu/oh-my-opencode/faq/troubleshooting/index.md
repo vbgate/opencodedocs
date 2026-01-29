@@ -143,7 +143,7 @@ bunx oh-my-opencode doctor --verbose
 2. Common error types (from `src/config/schema.ts`):
 
 | Error Message | Cause | Fix |
-|--------------|-------|-----|
+|--- | --- | ---|
 | `agents.sisyphus.mode: Invalid enum value` | `mode` can only be `subagent`/`primary`/`all` | Change to `primary` |
 | `categories.quick.model: Expected string` | `model` must be a string | Add quotes: `"anthropic/claude-haiku-4-5"` |
 | `background_task.defaultConcurrency: Expected number` | Concurrency must be a number | Change to number: `3` |
@@ -222,7 +222,7 @@ Details:
 **Common Issues**:
 
 | Issue | Cause | Solution |
-|-------|-------|----------|
+|--- | --- | ---|
 | `unknown` model | Provider fallback chain is empty | Ensure at least one Provider is available |
 | Model not used | Provider not connected | Run `opencode` to connect Provider |
 | Want to override model | Using default model | Set `agents.<name>.model` in `oh-my-opencode.json` |
@@ -324,7 +324,7 @@ opencode models --refresh
 The Doctor command is oh-my-opencode's Swiss Army knife, helping you quickly locate problems:
 
 | Command | Purpose | When to Use |
-|---------|---------|-------------|
+|--- | --- | ---|
 | `bunx oh-my-opencode doctor` | Complete diagnosis | After initial installation, when encountering problems |
 | `--verbose` | Detailed information | Need to view error details |
 | `--json` | JSON output | CI/CD, script automation |
@@ -351,7 +351,7 @@ The Doctor command is oh-my-opencode's Swiss Army knife, helping you quickly loc
 > Updated: 2026-01-26
 
 | Feature | File Path | Line Numbers |
-|---------|-----------|-------------|
+|--- | --- | ---|
 | Doctor command entry | [`src/cli/doctor/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/cli/doctor/index.ts#L1-L11) | 1-11 |
 | All checks registration | [`src/cli/doctor/checks/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/cli/doctor/checks/index.ts#L24-L37) | 24-37 |
 | Plugin registration check | [`src/cli/doctor/checks/plugin.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/cli/doctor/checks/plugin.ts#L79-L117) | 79-117 |

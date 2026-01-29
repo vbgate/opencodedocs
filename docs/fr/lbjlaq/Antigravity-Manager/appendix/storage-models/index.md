@@ -190,7 +190,7 @@ Les données complètes de chaque compte sont stockées indépendamment au forma
 ### Explication des champs clés
 
 | Champ | Type | Signification métier | Condition de déclenchement |
-| ----- | ---- | -------- | -------- |
+|--- | --- | --- | ---|
 | `disabled` | bool | Le compte est complètement désactivé (ex: refresh_token invalide) | Défini automatiquement sur `true` lors de `invalid_grant` |
 | `proxy_disabled` | bool | Désactive uniquement la fonction proxy, n'affecte pas l'utilisation du GUI | Désactivation manuelle ou déclenché par la protection de quota |
 | `protected_models` | string[] | « Liste de modèles restreints » pour la protection de quota au niveau du modèle | Mis à jour par la logique de protection de quota |
@@ -220,7 +220,7 @@ La base de statistiques de tokens enregistre la consommation de tokens de chaque
 #### token_usage (enregistrements d'utilisation bruts)
 
 | Champ | Type | Description |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | id | INTEGER PRIMARY KEY AUTOINCREMENT | Clé primaire auto-incrémentée |
 | timestamp | INTEGER | Horodatage de la demande |
 | account_email | TEXT | Email du compte |
@@ -320,7 +320,7 @@ La base de journaux Proxy enregistre les détails de chaque demande de proxy, ut
 ### Structure de la table : request_logs
 
 | Champ | Type | Description |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | id | TEXT PRIMARY KEY | ID unique de la demande (UUID) |
 | timestamp | INTEGER | Horodatage de la demande |
 | method | TEXT | Méthode HTTP (GET/POST) |
@@ -556,7 +556,7 @@ Si la « protection de quota » est déclenchée dépend de `quota_protection.en
 > Dernière mise à jour : 2026-01-23
 
 | Fonctionnalité | Chemin du fichier | Numéros de ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Répertoire de données (.antigravity_tools) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | Répertoire des comptes (accounts/) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L35-L46) | 35-46 |
 | Structure accounts.json | [`src-tauri/src/models/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/models/account.rs#L76-L92) | 76-92 |
@@ -572,7 +572,7 @@ Si la « protection de quota » est déclenchée dépend de `quota_protection.en
 | Répertoire logs/ et app.log | [`src-tauri/src/modules/logger.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/logger.rs#L17-L45) | 17-45 |
 | Chemin bin/cloudflared | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L92-L101) | 92-101 |
 | device_original.json | [`src-tauri/src/modules/device.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/device.rs#L11-L13) | 11-13 |
-| invalid_grunt -> disabled écriture disque | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L869-L969) | 869-969 |
+|--- | --- | ---|
 
 **Constantes clés** :
 - `DATA_DIR = ".antigravity_tools"` : nom du répertoire de données (`src-tauri/src/modules/account.rs:16-18`)

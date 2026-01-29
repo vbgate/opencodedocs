@@ -120,7 +120,7 @@ Viele "egal wie ich konfiguriere, es klappt nicht"-Probleme liegen daran, dass d
 Die folgenden Standardwerte stammen aus `AppConfig::new()` und `ProxyConfig::default()` im Backend:
 
 | Konfigurationsblock | Feld | Standardwert (Quellcode) | Wichtiger Punkt |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | AppConfig | `language` | `"zh"` | Standard ist Chinesisch |
 | AppConfig | `theme` | `"system"` | Folgt dem System |
 | AppConfig | `auto_refresh` | `true` | Kontingente werden standardmäßig automatisch aktualisiert |
@@ -270,18 +270,18 @@ Du kannst diese Regel zur Selbstprüfung verwenden:
 > Aktualisiert: 2026-01-24
 
 | Thema | Dateipfad | Zeilennummern |
-| --- | --- | --- |
-| AppConfig-Standardwerte (`AppConfig::new()`) | [`src-tauri/src/models/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/models/config.rs#L4-L158) | 4-158 |
-| ProxyConfig-Standardwerte (Port/Authentifizierung/Listenadresse) | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L74-L292) | 74-292 |
-| StickySessionConfig-Standardwerte (Scheduling) | [`src-tauri/src/proxy/sticky_config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/sticky_config.rs#L3-L36) | 3-36 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Konfigurationsdateiname + Migrationslogik (`gui_config.json`) | [`src-tauri/src/modules/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/config.rs#L7-L88) | 7-88 |
 | Datenverzeichnis (`$HOME/.antigravity_tools`) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
-| `save_config`: Konfiguration speichern + welche Felder per Hot-Reload | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L296-L334) | 296-334 |
+|--- | --- | ---|
 | AxumServer: `update_mapping/update_proxy/update_security/...` | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L45-L117) | 45-117 |
 | Auswahl der Listenadresse bei `allow_lan_access` | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L81-L92) | 81-92 |
-| Bind-Adresse und Port beim Proxy-Start (ändert sich nur nach Neustart) | [`src-tauri/src/commands/proxy.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/proxy.rs#L42-L134) | 42-134 |
+|--- | --- | ---|
 | Tatsächliche Regeln bei `auth_mode=auto` | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L3-L31) | 3-31 |
-| Frontend speichert Scheduling-Konfiguration (nur speichern, nicht an Backend-Runtime senden) | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L476-L501) | 476-501 |
-| Monitor-Seite schaltet Logging-Erfassung dynamisch ein/aus | [`src/components/proxy/ProxyMonitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/proxy/ProxyMonitor.tsx#L174-L263) | 174-263 |
+|--- | --- | ---|
+|--- | --- | ---|
 
 </details>

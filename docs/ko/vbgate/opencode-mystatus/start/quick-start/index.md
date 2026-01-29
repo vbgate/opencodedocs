@@ -115,7 +115,7 @@ code %APPDATA%\opencode\opencode.json
 **이렇게 설정하는 이유**:
 
 | 설정 항목 | 값 | 역할 |
-| ------------- | --------------------------------------- | ------------------------------------ |
+|--- | --- | ---|
 | `plugin` 배열 | `["opencode-mystatus"]` | OpenCode에 이 플러그인을 로드하도록 알림 |
 | `description` | "Query quota usage for all AI accounts" | 명령어 목록에 표시되는 설명 |
 | `template` | "Use the mystatus tool..." | OpenCode가 mystatus 도구를 호출하는 방법 안내 |
@@ -234,7 +234,7 @@ Supported account types:
 #### 5.2 출력 의미 이해
 
 | 요소(한국어 버전) | 요소(영어 버전) | 의미 |
-| ------------------------- | ------------------------- | ---------------------- |
+|--- | --- | ---|
 | `## OpenAI 계정 할당량` | `## OpenAI Account Quota` | 플랫폼 제목 |
 | `user@example.com (team)` | `user@example.com (team)` | 계정 정보(이메일 또는 팀) |
 | `3시간 할당량` | `3-hour limit` | 할당량 유형(3시간 할당량) |
@@ -248,7 +248,7 @@ Supported account types:
 다음 단계를 완료했는지 확인하세요:
 
 | 단계 | 확인 방법 | 예상 결과 |
-| ------------- | --------------------------------------- | --------------------------------------- |
+|--- | --- | ---|
 | 플러그인 설치 | `~/.config/opencode/opencode.json` 확인 | `plugin` 배열에 `"opencode-mystatus"` 포함 |
 | 슬래시 명령어 설정 | 동일 파일 확인 | `command` 객체에 `mystatus` 설정 포함 |
 | OpenCode 재시작 | OpenCode 프로세스 확인 | 재시작됨 |
@@ -364,7 +364,7 @@ Google 계정 인증을 완료하려면 먼저 [opencode-antigravity-auth](https
 > 업데이트 날짜: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| ----------------- | -------------------------------------------------------------------------------------------------- | ----- |
+|--- | --- | ---|
 | 플러그인 엔트리 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 26-94 |
 | mystatus 도구 정의 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 29-33 |
 | 인증 파일 읽기 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 35-46 |

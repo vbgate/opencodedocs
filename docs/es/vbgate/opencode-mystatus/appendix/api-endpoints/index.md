@@ -39,7 +39,7 @@ Conocer estos endpoints te permite:
 **Información del endpoint**:
 
 | Artículo | Valor |
-| --- | --- |
+|--- | ---|
 | URL | `https://chatgpt.com/backend-api/wham/usage` |
 | Método | GET |
 | Método de autenticación | Bearer Token (OAuth) |
@@ -91,7 +91,7 @@ ChatGPT-Account-Id: {team_account_id}  // Opcional, necesario para cuentas de eq
 **Información del endpoint**:
 
 | Artículo | Valor |
-| --- | --- |
+|--- | ---|
 | URL | `https://bigmodel.cn/api/monitor/usage/quota/limit` |
 | Método | GET |
 | Método de autenticación | API Key |
@@ -151,7 +151,7 @@ User-Agent: OpenCode-Status-Plugin/1.0
 **Información del endpoint**:
 
 | Artículo | Valor |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.z.ai/api/monitor/usage/quota/limit` |
 | Método | GET |
 | Método de autenticación | API Key |
@@ -176,7 +176,7 @@ User-Agent: OpenCode-Status-Plugin/1.0
 **Información del endpoint**:
 
 | Artículo | Valor |
-| --- | --- |
+|--- | ---|
 | URL | `https://oauth2.googleapis.com/token` |
 | Método | POST |
 | Método de autenticación | OAuth Refresh Token |
@@ -218,7 +218,7 @@ client_id={client_id}
 **Información del endpoint**:
 
 | Artículo | Valor |
-| --- | --- |
+|--- | ---|
 | URL | `https://cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels` |
 | Método | POST |
 | Método de autenticación | Bearer Token (OAuth) |
@@ -282,7 +282,7 @@ User-Agent: antigravity/1.11.9 windows/amd64
 **Información del endpoint**:
 
 | Artículo | Valor |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.github.com/users/{username}/settings/billing/premium_request/usage` |
 | Método | GET |
 | Método de autenticación | Fine-grained PAT (Personal Access Token) |
@@ -350,7 +350,7 @@ Un Fine-grained PAT (Fine-grained Personal Access Token) es el nuevo tipo de tok
 **Información del endpoint**:
 
 | Artículo | Valor |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.github.com/copilot_internal/user` |
 | Método | GET |
 | Método de autenticación | Copilot Session Token |
@@ -416,7 +416,7 @@ Copilot-Integration-Id: vscode-chat
 **Información del endpoint**:
 
 | Artículo | Valor |
-| --- | --- |
+|--- | ---|
 | URL | `https://api.github.com/copilot_internal/v2/token` |
 | Método | POST |
 | Método de autenticación | OAuth Token (obtenido de OpenCode) |
@@ -461,7 +461,7 @@ Este endpoint solo es aplicable al flujo de autenticación OAuth antiguo de GitH
 ## Comparación de métodos de autenticación
 
 | Plataforma | Método de autenticación | Fuente de credencial | Archivo de credenciales |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | **OpenAI** | OAuth Bearer Token | OAuth de OpenCode | `~/.local/share/opencode/auth.json` |
 | **Zhipu AI** | API Key | Configuración manual del usuario | `~/.local/share/opencode/auth.json` |
 | **Z.ai** | API Key | Configuración manual del usuario | `~/.local/share/opencode/auth.json` |
@@ -475,7 +475,7 @@ Este endpoint solo es aplicable al flujo de autenticación OAuth antiguo de GitH
 Todas las solicitudes de API establecen un límite de tiempo de espera de 10 segundos para evitar esperas prolongadas:
 
 | Configuración | Valor | Ubicación en código fuente |
-| --- | --- | --- |
+|--- | --- | ---|
 | Tiempo de espera | 10 segundos | `plugin/lib/types.ts:114` |
 | Implementación de tiempo de espera | Función `fetchWithTimeout` | `plugin/lib/utils.ts:84-100` |
 
@@ -511,7 +511,7 @@ maskString("sk-1234567890abcdef")  // "sk-1****cdef"
 Esta lección presentó todos los endpoints de API oficiales llamados por el plugin opencode-mystatus:
 
 | Plataforma | Número de API | Método de autenticación |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI | 1 | OAuth Bearer Token |
 | Zhipu AI | 1 | API Key |
 | Z.ai | 1 | API Key |
@@ -530,7 +530,7 @@ Todos los endpoints son interfaces oficiales de cada plataforma, asegurando que 
 > Fecha de actualización: 2026-01-23
 
 | Función | Ruta de archivo | Línea |
-| --- | --- | --- |
+|--- | --- | ---|
 | API de consulta de cuota de OpenAI | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L127-L155) | 127-155 |
 | API de consulta de cuota de Zhipu AI | [`plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts#L62-L106) | 62-106 |
 | API de consulta de cuota de Z.ai | [`plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts#L64) | 64 (compartido) |

@@ -13,7 +13,7 @@ En este capítulo se explican en profundidad las funciones avanzadas de Antigrav
 ## Contenido de este capítulo
 
 | Tutorial | Descripción |
-|---------|-------------|
+|--- | ---|
 | [Configuración completa](./config/) | Campos completos de AppConfig/ProxyConfig, ubicación de persistencia y semántica de actualización en caliente |
 | [Seguridad y privacidad](./security/) | `auth_mode`, `allow_lan_access` y diseño de línea base de seguridad |
 | [Programación de alta disponibilidad](./scheduling/) | Rotación, cuentas fijas, sesiones pegajosas y mecanismo de reintento en caso de fallo |
@@ -70,7 +70,7 @@ Resuelve problemas latentes en sesiones largas, haz que el cliente sea más como
 **Selección rápida**:
 
 | Tu escenario | Empieza con |
-|-------------|-------------|
+|--- | ---|
 | La rotación de múltiples cuentas es inestable | [Programación de alta disponibilidad](./scheduling/) |
 | Quieres fijar un nombre de modelo específico | [Enrutamiento de modelos](./model-router/) |
 | Las cuotas siempre se agotan | [Gestión de cuotas](./quota/) |

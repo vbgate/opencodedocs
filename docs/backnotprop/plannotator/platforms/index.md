@@ -26,8 +26,8 @@ Before studying this chapter, ensure you have completed the following preparatio
 Learn how to review AI-generated execution plans, add modification suggestions, and let AI execute according to your intent.
 
 | Tutorial | Description |
-|----------|-------------|
-| [Plan Review Basics](./plan-review-basics/) | Learn to use Plannotator to visually review AI-generated plans, including approving or rejecting plans |
+|--- | ---|
+|--- | ---|
 | [Add Plan Annotations](./plan-review-annotations/) | Master adding different types of annotations in plans (delete, replace, insert, comment) |
 | [Add Image Annotations](./plan-review-images/) | Learn to attach images in plan review and use pen, arrow, circle tools for annotation |
 
@@ -36,9 +36,9 @@ Learn how to review AI-generated execution plans, add modification suggestions, 
 Learn how to review code changes, add line-level comments, and discover issues before committing.
 
 | Tutorial | Description |
-|----------|-------------|
-| [Code Review Basics](./code-review-basics/) | Learn to use `/plannotator-review` command to review git diff, supporting side-by-side and unified views |
-| [Add Code Comments](./code-review-annotations/) | Master adding line-level comments in code review (comment/suggestion/concern) |
+|--- | ---|
+|--- | ---|
+|--- | ---|
 | [Switch Diff Views](./code-review-diff-types/) | Learn to switch between different diff types in code review (uncommitted/staged/last commit/branch) |
 
 ## Learning Path

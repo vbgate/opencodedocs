@@ -84,7 +84,7 @@ Seguindo fluxo de **[Iniciar proxy reverso local e conectar primeiro cliente (/h
 ## Resumo de versões recentes (do README)
 
 | Versão | Data | Pontos que você deve prestar atenção |
-| --- | --- | --- |
+|--- | --- | ---|
 | `v3.3.49` | 2026-01-22 | Defesa de interrupção Thinking e 0 Token; remover `gemini-2.5-flash-lite` e avisar você substituir manualmente mapeamento personalizado; configuração de idioma/tema entra em vigor imediatamente; aprimoramento de painel de monitoramento; melhoria de compatibilidade OAuth |
 | `v3.3.48` | 2026-01-21 | Processo de segundo plano em modo silencioso no Windows (corrigiu cintilação de console) |
 | `v3.3.47` | 2026-01-21 | Aprimoramento de mapeamento de parâmetros de geração de imagem (`size`/`quality`); suporte a túnel Cloudflared; correção de falha de início causada por conflito de merge; compressão de contexto progressiva de três camadas |
@@ -106,7 +106,7 @@ Priorize encontrar estes dois tipos de frases:
 > Atualizado em: 2026-01-23
 
 | Conteúdo | Caminho do arquivo | Número da linha |
-| --- | --- | --- |
+|--- | --- | ---|
 | Changelog embutido no README (versões) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L324-L455) | 324-455 |
 | Página About exibe número de versão e botão "verificar atualizações" | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L821-L954) | 821-954 |
 | Página About "verificar atualizações" retorna estrutura de comando | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L187-L215) | 187-215 |

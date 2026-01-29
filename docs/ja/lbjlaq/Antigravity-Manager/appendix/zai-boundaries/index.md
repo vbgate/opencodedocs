@@ -63,7 +63,7 @@ z.ai の Anthropic アップストリーム転送は、Claude ハンドラーの
 `dispatch_mode` は `/v1/messages` が z.ai を経由するかどうかを決定します：
 
 | dispatch_mode | 何が起こるか | 証拠 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `off` | z.ai を使用しない | `src-tauri/src/proxy/config.rs#L20-L37` + `src-tauri/src/proxy/handlers/claude.rs#L282-L314` |
 | `exclusive` | すべての Claude リクエストが z.ai を経由する | `src-tauri/src/proxy/handlers/claude.rs#L285-L314` |
 | `fallback` | Google プールが使用不可（0 アカウントまたは「使用可能なアカウントなし」）の場合のみ z.ai を経由する | `src-tauri/src/proxy/handlers/claude.rs#L288-L305` |
@@ -104,7 +104,7 @@ z.ai アップストリーム転送は「すべての Header をそのまま渡�
 ローカルエンドポイントとアップストリームアドレスは固定されています：
 
 | ローカルエンドポイント | アップストリームアドレス | スイッチ | 証拠 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `/mcp/web_search_prime/mcp` | `https://api.z.ai/api/mcp/web_search_prime/mcp` | `proxy.zai.mcp.web_search_enabled` | `src-tauri/src/proxy/handlers/mcp.rs#L115-L135` |
 | `/mcp/web_reader/mcp` | `https://api.z.ai/api/mcp/web_reader/mcp` | `proxy.zai.mcp.web_reader_enabled` | `src-tauri/src/proxy/handlers/mcp.rs#L137-L157` |
 
@@ -222,7 +222,7 @@ z.ai 設定は `ProxyConfig.zai` の下にあり、以下のフィールドが�
 > 更新時間：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | z.ai 統合範囲（Claude プロトコル + MCP + Vision MCP） | [`docs/zai/implementation.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/zai/implementation.md#L12-L17) | 12-17 |
 | z.ai スケジューリングモードとモデルのデフォルト値 | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L20-L116) | 20-116 |
 | z.ai デフォルト base_url / デフォルトモデル | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L265-L279) | 265-279 |
@@ -232,7 +232,7 @@ z.ai 設定は `ProxyConfig.zai` の下にあり、以下のフィールドが�
 | z.ai モデルマッピングルール（map_model_for_zai） | [`src-tauri/src/proxy/providers/zai_anthropic.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/providers/zai_anthropic.rs#L13-L37) | 13-37 |
 | Header ホワイトリスト + z.ai auth の注入 | [`src-tauri/src/proxy/providers/zai_anthropic.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/providers/zai_anthropic.rs#L70-L110) | 70-110 |
 | MCP Search/Reader リバースプロキシとスイッチ | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L45-L157) | 45-157 |
-| Vision MCP 内蔵サーバー（GET/POST/DELETE + JSON-RPC） | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L190-L397) | 190-397 |
+|--- | --- | ---|
 | Vision MCP 最小実装の位置付け（完全な MCP Server ではない） | [`docs/zai/vision-mcp.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/zai/vision-mcp.md#L17-L37) | 17-37 |
 | Vision ツールリストと制限（tool_specs + ファイルサイズ + stream=false） | [`src-tauri/src/proxy/zai_vision_tools.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/zai_vision_tools.rs#L57-L270) | 57-270 |
 | `/v1/models/claude` モデルリストのソース（ローカルマッピング、アップストリームを照会しない） | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L84-L132) | 84-132 |

@@ -74,7 +74,7 @@ Android 기기(노드 앱)
 Android 노드는 다음 기기 로컬 작업을 지원합니다:
 
 | 기능 | 명령 | 설명 |
-| ---- | ------ | ---- |
+|--- | --- | ---|
 | **Canvas** | `canvas.*` | 실시간 시각화 인터페이스 표시(A2UI) |
 | **Camera** | `camera.*` | 사진 촬영(JPG) 및 비디오 녹화(MP4) |
 | **Screen** | `screen.*` | 화면 녹화 |
@@ -454,7 +454,7 @@ clawdbot nodes invoke --node "android-node" --command location.get
 > 업데이트 날짜: 2026-01-27
 
 | 기능        | 파일路径                                                                                    | 행번    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 노드 명령 정책 | [`src/gateway/node-command-policy.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/node-command-policy.ts) | 1-112   |
 | 노드 프로토콜 스키마 | [`src/gateway/protocol/schema/nodes.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/schema/nodes.ts) | 1-103   |
 | Android 문서  | [`docs/platforms/android.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/android.md) | 1-142   |

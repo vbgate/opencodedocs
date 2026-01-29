@@ -67,7 +67,7 @@ order: 80
 與其他即時通訊平台不同,Telegram 使用**Bot API** 架構:
 
 | 特性 | Telegram | WhatsApp | Slack |
-| ------ | --------- | --------- | ------ |
+|--- | --- | --- | ---|
 | 連線方式 | Bot API(HTTP) | Web Client | Bot API + WebSocket |
 | 訊息模式 | 推送(Bot 主動發送) | 拉取(監聽 Web Client) | 拉取(監聽 WebSocket) |
 | 隱私模式 | **支援**(Bot 可選擇) | N/A | N/A |
@@ -187,7 +187,7 @@ to control your bot.
 **設定欄位說明**:
 
 | 欄位 | 類型 | 預設值 | 說明 |
-| ----- | ---- | ------- | ---- |
+|--- | --- | --- | ---|
 | `enabled` | boolean | `true` | 是否啟動 Telegram 頻道 |
 | `botToken` | string | - | Bot Token(必需) |
 | `dmPolicy` | string | `"pairing"` | DM 存取策略 |
@@ -277,7 +277,7 @@ clawdbot pairing approve telegram CLAW-ABC123
 **如果 Bot 沒有回應**:
 
 | 問題 | 可能原因 | 解決方法 |
-| ---- | --------- | -------- |
+|--- | --- | ---|
 | Bot 無回應 | Bot Token 錯誤 | 檢查 `clawdbot.json` 中的 `botToken` 值 |
 | Bot 無回應 | Gateway 未啟動 | 執行 `clawdbot gateway --verbose` 查看錯誤 |
 | Bot 無回應 | 網路問題 | 檢查伺服器是否能存取 `api.telegram.org` |
@@ -444,7 +444,7 @@ clawdbot logs --follow
 **Webhook vs Long-polling**:
 
 | 特性 | Long-polling | Webhook |
-| ----- | ------------- | -------- |
+|--- | --- | ---|
 | 網路要求 | 需要主動存取 `api.telegram.org` | 需要公開 HTTPS 端點 |
 | 延遲 | ~1-3 秒輪詢間隔 | 近乎即時推送 |
 | 伺服器資源 | 較高(持續輪詢) | 較低(被動接收) |
@@ -607,7 +607,7 @@ Telegram 支援互動式按鈕(Inline Buttons)。
 ### 常見設定錯誤
 
 | 錯誤 | 症狀 | 原因 | 解決方法 |
-| ----- | ---- | ---- | -------- |
+|--- | --- | --- | ---|
 | Token 格式錯誤 | "Invalid token" 錯誤 | 複製了不完整的 Token | 檢查 Token 是否完整(包含冒號) |
 | 環境變數衝突 | Bot 使用不同的 Token | 環境變數覆蓋了設定檔 | 優先使用 `channels.telegram.botToken` |
 | 群組無回應 | Bot 不處理群組訊息 | 隱私模式未關閉 | 在 @BotFather 中執行 `/setprivacy` |
@@ -669,7 +669,7 @@ dig +short api.telegram.org AAAA # IPv6
 **關鍵設定欄位回顧**:
 
 | 欄位 | 推薦值 | 說明 |
-| ----- | --------- | ---- |
+|--- | --- | ---|
 | `dmPolicy` | `"pairing"` | 最安全的預設 DM 策略 |
 | `groups.*.requireMention` | `true` | 群組預設要求提及 |
 | `reactionNotifications` | `"own"` | 只回應 Bot 訊息的反應 |
@@ -695,7 +695,7 @@ dig +short api.telegram.org AAAA # IPv6
 > 更新時間:2026-01-27
 
 | 功能 | 檔案路徑 | 行號 |
-| ----- | --------- | ---- |
+|--- | --- | ---|
 | Telegram Bot 建立 | [`src/telegram/bot.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/telegram/bot.ts) | 106-452 |
 | 設定類型定義 | [`src/config/types.telegram.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.telegram.ts) | 14-157 |
 | Telegram 文件 | [`docs/channels/telegram.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/telegram.md) | 1-547 |

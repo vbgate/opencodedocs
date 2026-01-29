@@ -59,7 +59,7 @@ Antigravity Tools가 해결하는 문제가 확실하지 않다면, 먼저 **[An
 **권장**:
 
 | 시나리오 | 권장 설치 방법 |
-| --- | --- |
+|--- | ---|
 | macOS / Linux 데스크톱 | Homebrew (옵션 A) |
 | Windows 데스크톱 | GitHub Releases (옵션 B) |
 | Arch Linux | 공식 스크립트 (Arch 옵션) |
@@ -217,7 +217,7 @@ docker compose up -d
 > 업데이트 시간: 2026-01-23
 
 | 주제 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Homebrew 설치 (tap + cask) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L112-L127) | 112-127 |
 | Releases 수동 다운로드 (각 플랫폼 설치 패키지) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L128-L133) | 128-133 |
 | Arch 원 클릭 설치 스크립트 진입점 | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L134-L140) | 134-140 |
@@ -225,9 +225,9 @@ docker compose up -d
 | Headless Xvfb 설치 진입점 (curl \| sudo bash) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L141-L149) | 141-149 |
 | Headless Xvfb 배포/업그레이드/운영 명령 | [`deploy/headless-xvfb/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/headless-xvfb/README.md#L1-L99) | 1-99 |
 | Headless Xvfb install.sh (systemd + 8045 기본 구성) | [`deploy/headless-xvfb/install.sh`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/headless-xvfb/install.sh#L1-L99) | 1-99 |
-| Docker 배포 진입점 (docker compose up -d) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L150-L166) | 150-166 |
+|--- | --- | ---|
 | Docker 배포 설명 (noVNC 6080 / 프록시 8045) | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L1-L35) | 1-35 |
 | Docker 포트/데이터 볼륨 구성 (8045 + antigravity_data) | [`deploy/docker/docker-compose.yml`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/docker-compose.yml#L1-L25) | 1-25 |
-| macOS "손상됨, 열 수 없음" 문제 해결 (xattr / --no-quarantine) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L171-L186) | 171-186 |
+|--- | --- | ---|
 
 </details>

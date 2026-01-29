@@ -221,19 +221,19 @@ Invoke-RestMethod "http://127.0.0.1:19527/logs?limit=50&offset=0&filter=&errors_
 > Aktualisiert: 2026-01-23
 
 | Thema | Dateipfad | Zeilen |
-| --- | --- | --- |
-| i18n-Initialisierung & Fallback | [`src/i18n.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/i18n.ts#L1-L67) | 1-67 |
-| Settings: Sprache/Theme/Autostart/Update-Einstellungen/HTTP-API-Einstellungen | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L16-L730) | 16-730 |
-| App: Sprache synchronisieren + Update-Prüfung beim Start auslösen | [`src/App.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/App.tsx#L52-L124) | 52-124 |
-| ThemeManager: Theme anwenden, System-Theme überwachen, in localStorage schreiben | [`src/components/common/ThemeManager.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/common/ThemeManager.tsx#L1-L82) | 1-82 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | UpdateNotification: Update prüfen, automatisch herunterladen, installieren und relaunch | [`src/components/UpdateNotification.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/UpdateNotification.tsx#L1-L217) | 1-217 |
-| Update-Prüfung: GitHub Releases + check interval | [`src-tauri/src/modules/update_checker.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/update_checker.rs#L1-L187) | 1-187 |
+|--- | --- | ---|
 | Taskleiste: Menü nach Sprache generieren + `config://updated` überwachen zum Aktualisieren | [`src-tauri/src/modules/tray.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/tray.rs#L1-L255) | 1-255 |
-| Konfiguration speichern: `config://updated` senden + laufenden Reverse-Proxy hot-update | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L296-L334) | 296-334 |
-| Autostart-Befehle: toggle/is_enabled (Windows disable Kompatibilität) | [`src-tauri/src/commands/autostart.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/autostart.rs#L1-L39) | 1-39 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Tauri: autostart/updater initialisieren + Fenster schließen zu hide konvertieren + HTTP API starten | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L50-L160) | 50-160 |
 | HTTP API: Einstellungen speichern + Routen (health/accounts/switch/refresh/logs) + nur an 127.0.0.1 gebunden | [`src-tauri/src/modules/http_api.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/http_api.rs#L1-L95) | 1-95 |
-| HTTP API: Server bind & Routen-Registrierung | [`src-tauri/src/modules/http_api.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/http_api.rs#L51-L94) | 51-94 |
-| HTTP API-Einstellungsbefehle: get/save | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L773-L789) | 773-789 |
+|--- | --- | ---|
+|--- | --- | ---|
 
 </details>

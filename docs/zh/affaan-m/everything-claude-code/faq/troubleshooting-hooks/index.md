@@ -579,7 +579,7 @@ node -e "console.log('CLAUDE_PLUGIN_ROOT:', process.env.CLAUDE_PLUGIN_ROOT); con
 Hooks 不工作通常有以下几类原因：
 
 | 问题类型 | 常见原因 | 快速排查 |
-|---------|---------|---------|
+|--- | --- | ---|
 | **完全不触发** | hooks.json 路径错误、JSON 语法错误 | 检查文件位置、验证 JSON 格式 |
 | **特定 Hook 不触发** | Matcher 表达式错误、命令执行失败 | 检查正则语法、手动运行脚本 |
 | **权限问题** | 脚本缺少执行权限（Linux/macOS） | `chmod +x scripts/hooks/*.js` |
@@ -609,7 +609,7 @@ Hooks 不工作通常有以下几类原因：
 > 更新时间：2026-01-25
 
 | 功能                    | 文件路径                                                                                    | 行号    |
-| ----------------------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Hooks 主配置            | [`hooks/hooks.json`](https://github.com/affaan-m/everything-claude-code/blob/main/hooks/hooks.json) | 1-158   |
 | SessionStart Hook       | [`scripts/hooks/session-start.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/hooks/session-start.js) | 1-62    |
 | SessionEnd Hook         | [`scripts/hooks/session-end.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/hooks/session-end.js) | 1-83    |

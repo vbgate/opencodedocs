@@ -281,7 +281,7 @@ Após a instalação, você pode deixar o Claude usar automaticamente essas habi
 > Atualizado em: 2026-01-25
 
 | Funcionalidade        | Caminho do Arquivo                                                                                      | Número de Linha    |
-| ------------------- | ----------------------------------------------------------------------------------------------------- | ------------------ |
+|--- | --- | ---|
 | Método de instalação npx | [`README.md:83-86`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L83-L86)  | 83-86              |
 | Instalação manual no Claude Code | [`AGENTS.md:98-105`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L98-L105) | 98-105             |
 | Método de instalação no claude.ai | [`AGENTS.md:106-109`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L106-L109) | 106-109            |

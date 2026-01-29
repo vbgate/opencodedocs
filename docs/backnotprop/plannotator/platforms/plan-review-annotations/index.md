@@ -73,7 +73,7 @@ order: 2
 Plannotator supports four plan annotation types (plus one global comment type):
 
 | Annotation Type | Icon | Purpose | Requires Input |
-|----------------|------|---------|----------------|
+|--- | --- | --- | ---|
 | **Delete (DELETION)** | 🗑️ | Mark this content for removal from the plan | ❌ No |
 | **Comment (COMMENT)** | 💬 | Ask questions or make suggestions about selected content | ✅ Yes |
 | **Replace (REPLACEMENT)** | Implemented via comment | Replace selected content with new content | ✅ Yes |
@@ -374,11 +374,11 @@ After completing the above steps, you should:
 > Updated: 2026-01-24
 
 | Feature | File Path | Line Numbers |
-| --------------- | ------------------------------------------------------------------------------------------------------------------- | ------------ |
+|--- | --- | ---|
 | Annotation type enum definition | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L1-L7) | 1-7 |
 | Annotation interface | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L11-L33) | 11-33 |
 | Annotation toolbar component | [`packages/ui/components/AnnotationToolbar.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/components/AnnotationToolbar.tsx#L29-L272) | 29-272 |
-| type-to-comment implementation | [`packages/ui/components/AnnotationToolbar.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/components/AnnotationToolbar.tsx#L127-L147) | 127-147 |
+|--- | --- | ---|
 | Annotation export formatting | [`packages/ui/utils/parser.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/utils/parser.ts#L246-L323) | 246-323 |
 | Markdown parsing to Blocks | [`packages/ui/utils/parser.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/utils/parser.ts#L70-L244) | 70-244 |
 | Viewer component (text selection handling) | [`packages/ui/components/Viewer.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/components/Viewer.tsx#L66-L350) | 66-350 |

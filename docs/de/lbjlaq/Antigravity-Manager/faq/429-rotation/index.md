@@ -38,7 +38,7 @@ order: 3
 Der Proxy versucht, `error.details[0].reason` oder `error.message` aus dem Antwortkörper zu parsen und 429 grob in mehrere Kategorien einzuteilen (tatsächlich basierend auf der Rückgabe):
 
 | Vom Proxy identifizierter Typ | Häufiger reason / Hinweis | Typisches Merkmal |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **Kontingent erschöpft** | `QUOTA_EXHAUSTED` / Text enthält `exhausted`, `quota` | Möglicherweise muss warten, bis das Kontingent aufgefrischt wird |
 | **Ratenbegrenzung** | `RATE_LIMIT_EXCEEDED` / Text enthält `per minute`, `rate limit`, `too many requests` | Meist Abkühlung auf Sekunden-Ebene |
 | **Modellkapazität unzureichend** | `MODEL_CAPACITY_EXHAUSTED` / Text enthält `model_capacity` | Meist kurzfristige Überlastung, kann später wiederhergestellt werden |
@@ -133,14 +133,14 @@ Im Proxy Monitor den Antwortkörper von 429-Fehlern ansehen, besonders auf zwei 
 Gehe auf die Seite **API Proxy** und sieh dir die Scheduling-Strategie an:
 
 | Konfigurationselement | Beschreibung | Standardwert/Empfehlung |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **Scheduling Mode** | Scheduling-Modus | `Balance` (Standard) |
 | **Preferred Account** | Fixe-Konto-Modus | Nicht ausgewählt (Standard) |
 
 **Scheduling-Modus-Vergleich**:
 
 | Modus | Konto-Wiederverwendungsstrategie | Rate-Limit-Verarbeitung | Anwendungsfall |
-| :--- | :--- | :--- | :--- |
+|--- | --- | --- | ---|
 | **CacheFirst** | Sticky Sessions und 60s-Fenster-Wiederverwendung aktiviert | **Bevorzugt warten**, verbessert erheblich Prompt Caching-Trefferquote | Konversationsartig / hohe Cache-Trefferquote erforderlich |
 | **Balance** | Sticky Sessions und 60s-Fenster-Wiederverwendung aktiviert | **Sofort wechseln** zu Ersatzkonto, Ausgewogenheit zwischen Erfolgsquote und Leistung | Allgemeiner Fall, Standard |
 | **PerformanceFirst** | Überspringt Sticky Sessions und 60s-Fenster-Wiederverwendung, reiner Round-Robin-Modus | Sofort wechseln, Konto-Last am besten verteilt | Hohe Parallelität, zustandslose Anfragen |
@@ -294,7 +294,7 @@ All accounts are currently limited. Please wait 30s.
 A: Nein.
 
 | Merkmal | Kontingentschutz | Rate-Limit-Tracking |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **Auslösebedingung** | Modellkontingent unter Schwellenwert | 429-Fehler erhalten |
 | **Geltungsbereich** | Spezifisches Modell | Ganzes Konto |
 | **Dauer** | Bis Kontingent wiederhergestellt | Durch Upstream entschieden (normalerweise Sekunden bis Minuten) |
@@ -336,18 +336,18 @@ Innerhalb einer einzelnen Anfrage erzwingt der Proxy beim Retry auch eine Rotati
 > Aktualisiert: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummern |
-| :--- | :--- | :--- |
-| 429 Retry-Verzögerung parsen (RetryInfo / quotaResetDelay) | [`src-tauri/src/proxy/upstream/retry.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/upstream/retry.rs#L38-L67) | 38-67 |
-| Duration-Parsing-Tool | [`src-tauri/src/proxy/upstream/retry.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/upstream/retry.rs#L11-L35) | 11-35 |
-| Scheduling-Modus-Enum (CacheFirst/Balance/PerformanceFirst) | [`src-tauri/src/proxy/sticky_config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/sticky_config.rs#L3-L12) | 3-12 |
-| Rate-Limit-Grund-Parsing und Standard-Abkühlungsstrategie | [`src-tauri/src/proxy/rate_limit.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/rate_limit.rs#L5-L258) | 5-258 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | MAX_RETRY_ATTEMPTS Konstantendefinition (OpenAI handler) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L14) | 14 |
 | Wiederholungsversuche-Berechnung (max_attempts = min(MAX_RETRY_ATTEMPTS, pool_size)) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L830) | 830 |
 | OpenAI handler: Rate Limiting markieren bei 429/5xx und retry/rotieren | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L349-L389) | 349-389 |
-| Konto-Sortierungspriorität (ULTRA > PRO > FREE + remaining_quota) | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L504-L538) | 504-538 |
-| 60s-Fenster-Wiederverwendung + Rate-Limit/Kontingentschutz überspringen | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L624-L739) | 624-739 |
-| Rate-Limit-Aufzeichnungseingang (mark_rate_limited) | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L1089-L1113) | 1089-1113 |
-| 429 präzise Sperrung/Realzeit-Kontingent-Aktualisierung/Fallback-Strategie (mark_rate_limited_async) | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L1258-L1417) | 1258-1417 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Konstanten**:
 - `MAX_RETRY_ATTEMPTS = 3`：Maximale Wiederholungsversuche innerhalb einer einzelnen Anfrage (OpenAI/Gemini handler)

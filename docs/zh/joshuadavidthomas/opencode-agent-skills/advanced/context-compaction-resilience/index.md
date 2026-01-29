@@ -74,7 +74,7 @@ graph TD
 插件使用 **Synthetic Message Injection** 机制注入内容：
 
 | 属性 | 值 | 含义 |
-|------|-----|------|
+|--- | --- | ---|
 | `noReply` | `true` | AI 不会对注入内容本身进行回复 |
 | `synthetic` | `true` | 标记为系统生成内容，不计入用户输入，不在 UI 显示 |
 
@@ -252,7 +252,7 @@ graph TD
 > 更新时间：2026-01-24
 
 | 功能        | 文件路径                                                                                    | 行号    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 压缩事件监听 | [`src/plugin.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/plugin.ts#L144-L157) | 144-157 |
 | 首次消息初始化 | [`src/plugin.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/plugin.ts#L70-L105) | 70-105 |
 | 技能列表注入 | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L345-L370) | 345-370 |

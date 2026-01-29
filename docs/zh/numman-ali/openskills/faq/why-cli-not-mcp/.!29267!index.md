@@ -66,7 +66,7 @@ Anthropic 的技能系统本身就是基于**文件系统**设计的：
 ## MCP vs OpenSkills：定位对比
 
 | 对比维度 | MCP（Model Context Protocol） | OpenSkills（CLI） |
-| -------- | --------------------------- | ----------------- |
+|--- | --- | ---|
 | **适用场景** | 动态工具、实时 API 调用 | 静态指令、文档、脚本 |
 | **运行要求** | 需要 MCP 服务器 | 无需服务器（纯文件） |
 | **代理支持** | 仅支持 MCP 的代理 | 所有能读 `AGENTS.md` 的代理 |
@@ -181,7 +181,7 @@ npx openskills read pdf
 MCP 解决的问题与技能系统**不同**：
 
 | MCP 解决的问题 | 示例 |
-| -------------- | ---- |
+|--- | ---|
 | **实时 API 调用** | 调用 OpenAI API、数据库查询 |
 | **动态工具** | 计算器、数据转换服务 |
 | **远程服务集成** | Git 操作、CI/CD 系统 |
@@ -333,7 +333,7 @@ OpenSkills 选择 CLI 而非 MCP 的核心理由：
 ### MCP vs 技能系统
 
 | MCP | 技能系统（CLI） |
-| --- | --------------- |
+|--- | ---|
 | 动态工具 | 静态指令 |
 | 需要服务器 | 纯文件系统 |
 | 实时 API | 文档和脚本 |
@@ -363,7 +363,7 @@ OpenSkills 选择 CLI 而非 MCP 的核心理由：
 > 更新时间：2026-01-24
 
 | 功能        | 文件路径                                                                                      | 行号    |
-| ----------- | --------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | CLI 入口    | [`src/cli.ts`](https://github.com/numman-ali/openskills/blob/main/src/cli.ts)                     | 39-80   |
 | 读取命令    | [`src/commands/read.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/read.ts) | 1-50    |
 | AGENTS.md 生成 | [`src/utils/agents-md.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/agents-md.ts) | 23-93   |

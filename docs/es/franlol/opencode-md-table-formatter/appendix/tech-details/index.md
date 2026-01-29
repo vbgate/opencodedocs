@@ -62,7 +62,7 @@ const widthCache = new Map<string, number>()
 **Ejemplo**:
 
 | Texto Original (Key) | Ancho de Visualización (Value) | Descripción |
-| -------------------- | ------------------------------ | ----------- |
+|--- | --- | ---|
 | `**姓名**` | 4 | Ancho de 4 después de eliminar `**` |
 | `*年龄*` | 4 | Ancho de 4 después de eliminar `*` |
 | `` `status` `` | 8 | Los símbolos de bloque de código también se cuentan en el ancho |
@@ -120,7 +120,7 @@ graph TD
 **Análisis de pasos**:
 
 | Paso | Operación | Complejidad Temporal |
-| ---- | --------- | ------------------- |
+|--- | --- | ---|
 | 1 | Verificar `widthCache.has(text)` | O(1) |
 | 2 | Caché alcanzado → retornar directamente | O(1) |
 | 3 | Caché no alcanzado → calcular ancho | O(n) |
@@ -166,7 +166,7 @@ function cleanupCache() {
 **Condiciones de activación** (se activa al cumplir cualquiera):
 
 | Condición | Umbral | Descripción |
-| --------- | ------ | ----------- |
+|--- | --- | ---|
 | Número de operaciones | > 100 operaciones de formateo | Evitar activación frecuente de limpieza |
 | Entradas de caché | > 1000 celdas | Evitar uso excesivo de memoria |
 
@@ -192,7 +192,7 @@ Supongamos una tabla de 5 columnas × 10 filas, donde:
 **Efecto de caché**:
 
 | Escenario | Sin Caché | Con Caché | Mejora de Rendimiento |
-| --------- | --------- | --------- | --------------------- |
+|--- | --- | --- | ---|
 | 5 columnas × 10 filas (sin repetición) | 50 cálculos | 50 cálculos | Ninguna |
 | 5 columnas × 10 filas (encabezado repetido) | 50 cálculos | 10 cálculos + 40 aciertos de caché | ~80% |
 
@@ -207,7 +207,7 @@ Supongamos una tabla de 5 columnas × 10 filas, donde:
 **Escenarios de ejemplo**:
 
 | Escenario | Efecto de Caché |
-| --------- | --------------- |
+|--- | ---|
 | Tablas de comparación generadas por IA | ✅ Efecto significativo (contenido repetido en múltiples columnas) |
 | Tablas simples de una sola fila | ⚪ Efecto moderado (contenido único) |
 | Tablas anidadas con Markdown | ✅ Efecto significativo (gran sobrecarga de eliminación de símbolos) |
@@ -254,7 +254,7 @@ Este mecanismo permite que el complemento mantenga fluidez al procesar tablas co
 > Última actualización: 2026-01-26
 
 | Función | Ruta de Archivo | Número de Línea |
-| ------- | --------------- | --------------- |
+|--- | --- | ---|
 | Definición de widthCache | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L6) | 6 |
 | Definición de cacheOperationCount | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L7) | 7 |
 | Función calculateDisplayWidth | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L151-L159) | 151-159 |

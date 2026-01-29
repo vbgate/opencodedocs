@@ -32,7 +32,7 @@ opencode-mystatus는 여러 Google Cloud Antigravity 계정을 동시에 조회�
 Google Cloud Antigravity는 여러 모델을 제공하며, 플러그인은 가장 자주 사용되는 4개를 표시합니다:
 
 | 표시 이름 | 모델 키(주) | 모델 키(대체) |
-| -------- | -------------- | --------------- |
+|--- | --- | ---|
 | G3 Pro | `gemini-3-pro-high` | `gemini-3-pro-low` |
 | G3 Image | `gemini-3-pro-image` | - |
 | G3 Flash | `gemini-3-flash` | - |
@@ -230,7 +230,7 @@ Claude     1d 5h      ████████░░░░░░░░░░░ 
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 모델 구성 매핑 | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 69-78 |
 | 다중 계정 병렬 조회 | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 327-334 |
 | 계정 필터링(이메일 필수) | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 318 |

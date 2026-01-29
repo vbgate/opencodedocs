@@ -68,7 +68,7 @@ execツールは、粗粒度から細粒度までの3層のセキュリティ仕
 ### 3つの実行モードの比較
 
 | 実行モード | 実行場所 | セキュリティレベル | 典型的なユースケース | 承認が必要 |
-|---------|---------|-----------------|-------------------|------------|
+|--- | --- | --- | --- | ---|
 | **sandbox** | コンテナ内（Dockerなど） | 高 | 分離環境、テスト | いいえ |
 | **gateway** | Gatewayデーモンが動作するマシン | 中 | ローカル開発、統合 | はい（allowlist + 承認） |
 | **node** | ペアリングされたデバイスノード（macOS/iOS/Android） | 中 | デバイスローカル操作 | はい（allowlist + 承認） |
@@ -106,7 +106,7 @@ execツールは以下のパラメータをサポートします：
 **パラメータ説明**：
 
 | パラメータ | タイプ | デフォルト値 | 説明 |
-|-----------|--------|------------|------|
+|--- | --- | --- | ---|
 | `command` | string | 必須 | 実行するシェルコマンド |
 | `workdir` | string | 現在の作業ディレクトリ | 実行ディレクトリ |
 | `env` | object | 環境を継承 | 環境変数の上書き |
@@ -148,7 +148,7 @@ execツールは以下のパラメータをサポートします：
 **設定項目の説明**：
 
 | 設定項目 | タイプ | デフォルト値 | 説明 |
-|---------|--------|------------|------|
+|--- | --- | --- | ---|
 | `host` | string | sandbox | デフォルトの実行ホスト |
 | `security` | string | deny (sandbox) / allowlist (gateway, node) | デフォルトのセキュリティポリシー |
 | `ask` | string | on-miss | デフォルトの承認ポリシー |
@@ -247,7 +247,7 @@ clawdbot approvals
 allowlistは**globパターンマッチング**（大文字小文字を区別しない）を使用します：
 
 | パターン | マッチ | 説明 |
-|---------|--------|------|
+|--- | --- | ---|
 | `~/Projects/**/bin/*` | `/Users/user/Projects/any/bin/rg` | すべてのサブディレクトリにマッチ |
 | `~/.local/bin/*` | `/Users/user/.local/bin/jq` | ローカルbinにマッチ |
 | `/opt/homebrew/bin/rg` | `/opt/homebrew/bin/rg` | 絶対パスにマッチ |
@@ -318,7 +318,7 @@ UIが利用できない場合、任意のチャットチャネル（WhatsApp、T
 **設定項目の説明**：
 
 | 設定項目 | 説明 |
-|---------|------|
+|--- | ---|
 | `enabled` | exec承認転送を有効にするかどうか |
 | `mode` | `"session"` \| `"targets"` \| `"both"` - 承認ターゲットモード |
 | `agentFilter` | 特定のエージェントの承認リクエストのみ処理 |
@@ -363,7 +363,7 @@ Security: allowlist
 ### 一般的なエラー
 
 | エラー | 原因 | 解決方法 |
-|-------|------|---------|
+|--- | --- | ---|
 | `Command not allowed by exec policy` | `security=deny`またはallowlistが一致しない | `tools.exec.security`とallowlist設定を確認 |
 | `Approval timeout` | UIが利用不可、`askFallback=deny` | `askFallback=allowlist`を設定またはUIを有効化 |
 | `Pattern does not resolve to binary` | allowlistモードでbasenameを使用 | 完全パスを使用（例：`/opt/homebrew/bin/rg`） |
@@ -390,7 +390,7 @@ Security: allowlist
 実行モードによってPATHの処理方法が異なります：
 
 | 実行モード | PATH処理 | 説明 |
-|---------|----------|------|
+|--- | --- | ---|
 | `sandbox` | シェルログインを継承、`/etc/profile`でリセットされる可能性 | `pathPrepend`はprofileの後に適用 |
 | `gateway` | ログインシェルPATHをexec環境にマージ | デーモンは最小PATHを保持、execはユーザーPATHを継承 |
 | `node` | 渡された環境変数オーバーライドのみ使用 | macOSノードは`PATH`オーバーライドを破棄、headlessノードはprependをサポート |
@@ -427,7 +427,7 @@ execツールは3層の保護仕組み（ツールポリシー、実行ホスト
 > 更新日：2026-01-27
 
 | 機能 | ファイルパス | 行番号 |
-|------|-----------|------|
+|--- | --- | ---|
 | execツール定義 | [`src/agents/bash-tools.exec.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/bash-tools.exec.ts) | 1-500+ |
 | exec承認ロジック | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 1-1268 |
 | シェルコマンド分析 | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 500-1100 |

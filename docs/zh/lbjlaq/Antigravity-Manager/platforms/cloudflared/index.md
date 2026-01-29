@@ -58,7 +58,7 @@ order: 7
 项目内置的“自动下载 + 安装”逻辑只覆盖下面这些 OS/架构组合（其他平台会报 `Unsupported platform`）。
 
 | 操作系统 | 架构 | 支持状态 |
-| --- | --- | --- |
+|--- | --- | ---|
 | macOS | Apple Silicon (arm64) | ✅ |
 | macOS | Intel (x86_64) | ✅ |
 | Linux | x86_64 | ✅ |
@@ -68,7 +68,7 @@ order: 7
 ### 两种模式对比
 
 | 特性 | Quick 模式 | Auth 模式 |
-| --- | --- | --- |
+|--- | --- | ---|
 | **URL 类型** | `https://xxx.trycloudflare.com`（从日志里提取的临时 URL） | 应用不一定能自动提取 URL（取决于 cloudflared 日志）；入口域名以你在 Cloudflare 侧配置为准 |
 | **需要 Token** | ❌ 不需要 | ✅ 需要（从 Cloudflare 控制台获取） |
 | **稳定性** | URL 可能随进程重启变化 | 取决于你在 Cloudflare 侧怎么配置（应用仅负责启动进程） |
@@ -138,7 +138,7 @@ Get-ChildItem "$HOME\.antigravity_tools\bin\"
 2. 点击选择：
 
 | 模式 | 描述 | 何时选择 |
-| --- | --- | --- |
+|--- | --- | ---|
 | **Quick Tunnel** | 自动生成临时 URL（`*.trycloudflare.com`） | 快速测试、临时访问 |
 | **Named Tunnel** | 使用 Cloudflare 账号和自定义域名 | 生产环境、固定域名需求 |
 
@@ -378,12 +378,12 @@ Cloudflared 隧道是快速暴露本地服务的利器。通过本课，你学�
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 数据目录名（`.antigravity_tools`） | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | 配置结构与默认值（`CloudflaredConfig`、`TunnelMode`） | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L16-L59) | 16-59 |
 | 自动下载 URL 规则（支持的 OS/架构） | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L70-L88) | 70-88 |
 | 安装逻辑（下载/写入/解压/权限） | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L147-L211) | 147-211 |
-| Quick/Auth 启动参数（`tunnel --url` vs `tunnel run --token`） | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L233-L266) | 233-266 |
+|--- | --- | ---|
 | URL 提取规则（仅识别 `*.trycloudflare.com`） | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L390-L413) | 390-413 |
 | Tauri 命令接口（check/install/start/stop/get_status） | [`src-tauri/src/commands/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/cloudflared.rs#L6-L118) | 6-118 |
 | UI 卡片（模式/Token/HTTP2/URL 展示与复制） | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L1597-L1753) | 1597-1753 |

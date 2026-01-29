@@ -61,7 +61,7 @@ Follow this order to get started with Antigravity Tools quickly:
 ```
 
 | Step | Lesson | Estimated Time | What You'll Learn |
-|------|--------|----------------|-------------------|
+|--- | --- | --- | ---|
 | 1 | [Concepts](./getting-started/) | 5 min | What is a local gateway, why you need an account pool |
 | 2 | [Installation](./installation/) | 3 min | brew install or manual download, handling system interception |
 | 3 | [Data Directory](./first-run-data/) | 5 min | Where data is stored, how to read logs, tray operations |

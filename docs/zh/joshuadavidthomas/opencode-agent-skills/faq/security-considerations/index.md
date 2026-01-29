@@ -97,7 +97,7 @@ export function parseYamlFrontmatter(text: string): Record<string, unknown> {
 **关键安全设置**：
 
 | 设置          | 作用                                 |
-| ------------- | ------------------------------------ |
+|--- | ---|
 | `schema: "core"` | 仅支持基本 JSON 类型（字符串、数字、布尔、数组、对象），禁用自定义标签 |
 | `maxAliasCount: 100` | 限制 YAML 别名递归深度，防止 DoS 攻击 |
 
@@ -152,7 +152,7 @@ const SkillFrontmatterSchema = z.object({
 **验证规则**：
 
 | 字段        | 规则                                                              | 拒绝示例                         |
-| ----------- | ----------------------------------------------------------------- | -------------------------------- |
+|--- | --- | ---|
 | `name`      | 小写字母、数字、连字符，不能为空                                   | `MySkill`（大写）、`my skill`（空格） |
 | `description` | 不能为空                                                         | `""`（空字符串）                    |
 | `license`   | 可选的字符串                                                      | -                                |
@@ -217,7 +217,7 @@ async function findScripts(skillPath: string, maxDepth: number = 10): Promise<Sc
 **安全特性**：
 
 | 检查机制         | 作用                                                              |
-| ---------------- | ----------------------------------------------------------------- |
+|--- | ---|
 | **可执行位检查** (`stats.mode & 0o111`) | 只执行用户明确标记为可执行的文件，防止误执行文档或配置          |
 | **跳过隐藏目录** (`entry.name.startsWith('.')`) | 不扫描 `.git`、`.vscode` 等隐藏目录，避免扫描过多文件          |
 | **跳过依赖目录** (`skipDirs.has(entry.name)`) | 跳过 `node_modules`、`__pycache__` 等，避免扫描第三方依赖      |
@@ -308,7 +308,7 @@ chmod +x .opencode/skills/my-skill/tools/deploy.sh
 OpenCode Agent Skills 插件内置了多层安全防护：
 
 | 安全机制         | 防护目标                           | 代码位置               |
-| ---------------- | ---------------------------------- | ---------------------- |
+|--- | --- | ---|
 | 路径安全检查     | 防止目录穿越，限制文件访问范围       | `utils.ts:130-133`     |
 | YAML 安全解析     | 防止恶意 YAML 执行代码              | `utils.ts:41-49`       |
 | Zod Schema 验证 | 确保技能 frontmatter 符合规范        | `skills.ts:105-114`    |
@@ -335,7 +335,7 @@ OpenCode Agent Skills 插件内置了多层安全防护：
 > 更新时间：2026-01-24
 
 | 安全机制         | 文件路径                                                                 | 行号    |
-| ---------------- | ------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 路径安全检查     | [`src/utils.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/utils.ts#L130-L133)         | 130-133 |
 | YAML 安全解析     | [`src/utils.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/utils.ts#L41-L56)           | 41-56   |
 | Zod Schema 验证 | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L105-L114)         | 105-114 |

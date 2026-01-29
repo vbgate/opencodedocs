@@ -220,7 +220,7 @@ Signal 允许最多关联 4 个设备。Clawdbot 会作为其中一个设备运�
 **配置说明**：
 
 | 字段 | 值 | 说明 |
-|------|-----|------|
+|--- | --- | ---|
 | `enabled` | `true` | 启用 Signal 渠道 |
 | `account` | `"+15551234567"` | 你的 Signal 账号（E.164 格式） |
 | `cliPath` | `"signal-cli"` | signal-cli 命令路径 |
@@ -576,7 +576,7 @@ which signal-cli
 > 更新时间：2026-01-27
 
 | 功能        | 文件路径                                                                                    | 行号    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Signal RPC 客户端 | [`src/signal/client.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/client.ts)         | 1-186   |
 | Signal 守护进程管理 | [`src/signal/daemon.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/daemon.ts)         | 1-85    |
 | 多账户支持 | [`src/signal/accounts.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/accounts.ts)       | 1-84    |

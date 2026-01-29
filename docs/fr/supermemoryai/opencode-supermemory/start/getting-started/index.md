@@ -203,7 +203,7 @@ Félicitations ! Vous avez équipé OpenCode d'un "hippocampe". Maintenant, votr
 > Date de mise à jour : 2026-01-23
 
 | Fonctionnalité | Chemin du fichier | Lignes |
-| --- | --- | --- |
+|--- | --- | ---|
 | Logique du script d'installation | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L327-L410) | 327-410 |
 | Logique d'enregistrement du plugin | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L195-L248) | 195-248 |
 | Logique de détection des conflits | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L273-L320) | 273-320 |

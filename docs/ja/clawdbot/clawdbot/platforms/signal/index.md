@@ -220,7 +220,7 @@ Signalは最大4つのデバイスの連携を許可しています。Clawdbot�
 **設定フィールドの説明**：
 
 | フィールド | 値 | 説明 |
-|------|-----|------|
+|--- | --- | ---|
 | `enabled` | `true` | Signalチャンネルを有効にする |
 | `account` | `"+15551234567"` | Signalアカウント（E.164形式） |
 | `cliPath` | `"signal-cli"` | signal-cliコマンドパス |
@@ -576,7 +576,7 @@ Clawdbotの強力な機能を引き続き探索しましょう！🚀
 > 更新日時：2026-01-27
 
 | 機能        | ファイルパス                                                                                    | 行番号    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Signal RPCクライアント | [`src/signal/client.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/client.ts)         | 1-186   |
 | Signalデーモン管理 | [`src/signal/daemon.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/daemon.ts)         | 1-85    |
 | マルチアカウントサポート | [`src/signal/accounts.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/accounts.ts)       | 1-84    |

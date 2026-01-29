@@ -103,7 +103,7 @@ A linha separadora é a linha entre o cabeçalho e as linhas de dados, usada par
 Cada célula deve corresponder à regex `/^\s*:?-+:?\s*$/`, traduzindo para português:
 
 | Componente | Significado | Exemplo |
-| --- | --- | --- |
+|--- | --- | ---|
 | `\s*` | Espaços opcionais | Permite `| --- |` ou `|---|` |
 | `:?` | Dois pontos opcionais | Usado para especificar o método de alinhamento |
 | `-+` | Pelo menos um hífen | `-`, `---`, `------` todos são válidos |
@@ -145,12 +145,12 @@ Se a primeira linha tiver 3 colunas, cada linha subsequente também deve ter 3 c
 ```markdown
 ✅ Correto（cada linha tem 3 colunas）
 | A | B | C |
-| --- | --- | --- |
+|--- | --- | ---|
 | 1 | 2 | 3 |
 
 ❌ Errado（a terceira linha tem apenas 2 colunas）
 | A | B | C |
-| --- | --- | --- |
+|--- | --- | ---|
 | 1 | 2 |
 ```
 
@@ -181,7 +181,7 @@ Localização no código-fonte: `index.ts:70-88`
 A linha separadora não serve apenas para separar, mas também para especificar o método de alinhamento:
 
 | Sintaxe | Método de alinhamento | Efeito |
-| --- | --- | --- |
+|--- | --- | ---|
 | `---` ou `:---` | Alinhamento à esquerda | Texto alinhado à esquerda (padrão) |
 | `:---:` | Centralizado | Texto centralizado |
 | `---:` | Alinhamento à direita | Texto alinhado à direita |
@@ -190,7 +190,7 @@ A linha separadora não serve apenas para separar, mas também para especificar 
 
 ```markdown
 | 左对齐 | 居中 | 右对齐 |
-| :--- | :---: | ---: |
+|--- | --- | ---|
 | 文本 | 文本 | 文本 |
 ```
 
@@ -198,7 +198,7 @@ Após a formatação:
 
 ```markdown
 | 左对齐 |  居中  | 右对齐 |
-| :----- | :----: | -----: |
+|--- | --- | ---|
 | 文本   |  文本  |   文本 |
 ```
 
@@ -220,7 +220,7 @@ Localização no código-fonte: `index.ts:141-149`
 ## Solução de problemas comuns
 
 | Fenômeno de erro | Possível causa | Solução |
-| --- | --- | --- |
+|--- | --- | ---|
 | `invalid structure` | Falta linha separadora | Adicione `\| --- \| --- \|` após o cabeçalho |
 | `invalid structure` | Número de colunas inconsistente | Verifique se o número de `\|` em cada linha é o mesmo |
 | `invalid structure` | Falta `\|` no início/fim da linha | Adicione o `\|` que está faltando |
@@ -239,7 +239,7 @@ Após concluir esta aula, você deve ser capaz de responder:
 ## Resumo da aula
 
 | Condição | Requisito |
-| --- | --- |
+|--- | ---|
 | Início e fim da linha | Deve começar e terminar com `\|` |
 | Número de separadores | Pelo menos 2 `\|` |
 | Linha separadora | Deve existir, no formato `:?-+:?` |
@@ -268,7 +268,7 @@ Após concluir esta aula, você deve ser capaz de responder:
 > Atualizado em: 2026-01-26
 
 | Função | Caminho do arquivo | Número da linha |
-| --- | --- | --- |
+|--- | --- | ---|
 | Determinação de linha de tabela | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61) | 58-61 |
 | Determinação de linha separadora | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L63-L68) | 63-68 |
 | Validação de tabela | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88) | 70-88 |

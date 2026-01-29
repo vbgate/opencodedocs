@@ -52,7 +52,7 @@ npm update @vbgate/opencode-mystatus
 以下のプラットフォームのクォータ使用状況を一括クエリサポート：
 
 | プラットフォーム | サポートされるサブスクリプションタイプ | クォータタイプ |
-| ---- | -------------- | -------- |
+|--- | --- | ---|
 | OpenAI | Plus/Team/Pro | 3時間クォータ、24時間クォータ |
 | Zhipu AI | Coding Plan | 5時間Tokenクォータ、MCP月次クォータ |
 | Google Cloud | Antigravity | G3 Pro、G3 Image、G3 Flash、Claude |

@@ -126,7 +126,7 @@ Go to the "Start Local Reverse Proxy and Connect Your First Client" chapter to c
 ## Common Pitfalls
 
 | Scenario | What you might do (❌) | Recommended approach (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Want phone/another computer to access | Enable `allow_lan_access=true` directly without setting up authentication | Enable authentication simultaneously, and verify `GET /healthz` on LAN first |
 | Client reports 404 | Only change host/port, ignore how client concatenates `/v1` | Confirm client's base_url concatenation strategy first, then decide if `/v1` prefix is needed |
 | Start with Claude Code immediately | Connect complex client directly, don't know where to look when it fails | First get the minimal loop working: start Proxy -> `GET /healthz` -> then connect client |
@@ -155,11 +155,11 @@ Go to the "Start Local Reverse Proxy and Connect Your First Client" chapter to c
 > Last updated: 2026-01-23
 
 | Function | File Path | Lines |
-| --- | --- | --- |
+|--- | --- | ---|
 | Product positioning (local AI relay/protocol gap) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L35-L77) | 35-77 |
 | Router endpoint overview (OpenAI/Claude/Gemini/healthz) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | Default port/default localhost/default key and bind address logic | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L291) | 174-291 |
-| Actual decision for `auth_mode=auto` (LAN -> all_except_health) | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L10-L29) | 10-29 |
+|--- | --- | ---|
 | GUI page routing structure (Dashboard/Accounts/API Proxy/Monitor/Token Stats/Settings) | [`src/App.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/App.tsx#L19-L48) | 19-48 |
 
 **Key defaults**:

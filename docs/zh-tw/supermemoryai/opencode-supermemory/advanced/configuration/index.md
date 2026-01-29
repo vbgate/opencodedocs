@@ -128,7 +128,7 @@ opencode-supermemory 會按順序查找以下配置檔案，**找到即止**：
 除了配置檔案，你也可以使用環境變數來管理敏感資訊或覆蓋預設行為。
 
 | 環境變數 | 描述 | 優先級 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | `SUPERMEMORY_API_KEY` | Supermemory API 金鑰 | 低於配置檔案 |
 | `USER` 或 `USERNAME` | 用於產生使用者作用域 Hash 的識別符 | 系統預設 |
 
@@ -236,7 +236,7 @@ touch ~/.config/opencode/supermemory.jsonc
 > 更新時間：2026-01-23
 
 | 功能 | 檔案路徑 | 行號 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | 配置介面定義 | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L12-L23) | 12-23 |
 | 預設值定義 | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L44-L54) | 44-54 |
 | 預設觸發詞 | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L25-L42) | 25-42 |

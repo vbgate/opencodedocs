@@ -46,7 +46,7 @@ order: 2
 Antigravity Auth 插件为每个 Google 账户维护 **两个独立的 Gemini 配额池**：
 
 | 配额池 | 类型 | 优先级 | 重置规则 |
-| ------ | ---- | ---- | -------- |
+|--- | --- | --- | ---|
 | **Antigravity** | 主要配额池 | 优先使用 | 根据服务端返回的重置时间动态计算 |
 | **Gemini CLI** | 备用配额池 | fallback 使用 | 根据服务端返回的重置时间动态计算 |
 
@@ -273,7 +273,7 @@ flowchart TD
 插件使用以下配额键来追踪速率限制（源码：`accounts.ts:77`）：
 
 | 配额键 | 含义 |
-| ------ | ---- |
+|--- | ---|
 | `claude` | Claude 模型配额 |
 | `gemini-antigravity` | Gemini Antigravity 配额池 |
 | `gemini-cli` | Gemini CLI 配额池 |
@@ -305,7 +305,7 @@ flowchart TD
 自动 fallback 会在以下条件满足时触发：
 
 | 条件 | 说明 | 源码位置 |
-| ---- | ---- | -------- |
+|--- | --- | ---|
 | `quota_fallback = true` | 配置已启用自动 fallback | `config/schema.ts:234` |
 | 当前账户的 Antigravity 配额池限速 | 收到 429 响应 | `plugin.ts:1149` |
 | 模型未显式指定配额池 | 模型名不包含 `:antigravity` 或 `:gemini-cli` 后缀 | `plugin.ts:1151` |
@@ -348,7 +348,7 @@ flowchart TD
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 配额键定义（BaseQuotaKey） | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L77-L78) | 77-78 |
 | 获取配额键（getQuotaKey） | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L107-L116) | 107-116 |
 | 检查配额池限速状态 | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L134-L152) | 134-152 |

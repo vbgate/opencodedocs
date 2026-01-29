@@ -61,7 +61,7 @@ Siga esta ordem para começar a usar o Antigravity Tools o mais rápido possíve
 ```
 
 | Passo | Curso | Tempo Estimado | Você Aprenderá |
-|-------|-------|-----------------|----------------|
+|--- | --- | --- | ---|
 | 1 | [Compreensão de Conceitos](./getting-started/) | 5 minutos | O que é um gateway local, por que precisa de um pool de contas |
 | 2 | [Instalar Software](./installation/) | 3 minutos | Instalação via brew ou download manual, lidar com bloqueios do sistema |
 | 3 | [Entender Diretório de Dados](./first-run-data/) | 5 minutos | Onde os dados ficam, como ver logs, operações da bandeja |

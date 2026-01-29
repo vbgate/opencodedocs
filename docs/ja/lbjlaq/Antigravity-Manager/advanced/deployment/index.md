@@ -61,7 +61,7 @@ Antigravity Tools をサーバーデプロイメントして NAS/サーバー上
 ## 選定早見表：Docker vs Headless Xvfb
 
 | 最も重視する点 | 推奨 | なぜ |
-| --- | --- | --- |
+|--- | --- | ---|
 | ブラウザで OAuth/認証が必要 | Docker（noVNC） | コンテナ内に Firefox ESR が同梱され、ブラウザ内で直接操作可能（`deploy/docker/README.md` 参照） |
 | systemd 管理/ログ保存を希望 | Headless Xvfb | install スクリプトが systemd service をインストールし、ログを `logs/app.log` に append（`deploy/headless-xvfb/install.sh` 参照） |
 | 分離とリソース制限を希望 | Docker | compose 方式で自然に分離、リソース制限も簡単に設定可能（`deploy/docker/README.md` 参照） |
@@ -222,7 +222,7 @@ sudo ./upgrade.sh
 ## よくある落とし穴
 
 | シナリオ | よくある間違い（❌） | 推奨される方法（✓） |
-| --- | --- | --- |
+|--- | --- | ---|
 | アカウント/設定が消失 | ❌ 「プログラムが動けばいい」としか考えない | ✓ まず `.antigravity_tools/` が永続化されているか確認（volume または `/opt/antigravity`） |
 | noVNC ポート変更が反映されない | ❌ `NOVNC_PORT` しか変更しない | ✓ デフォルト 6080 を維持；変更するなら `start.sh` 内の `websockify` ポートも同時に確認 |
 | 8045 をインターネットに公開 | ❌ `api_key` を設定しない / auth_mode を確認しない | ✓ まず **[セキュリティとプライバシー](/ja/lbjlaq/Antigravity-Manager/advanced/security/)** でベースラインを作り、その後トンネル/リバースプロキシを検討 |
@@ -249,7 +249,7 @@ sudo ./upgrade.sh
 > 更新日時：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Docker デプロイメントエントリと noVNC URL | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L5-L13) | 5-13 |
 | Docker デプロイ環境変数説明（VNC_PASSWORD/RESOLUTION/NOVNC_PORT） | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L32-L39) | 32-39 |
 | Docker compose ポートマッピングとデータボリューム（antigravity_data） | [`deploy/docker/docker-compose.yml`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/docker-compose.yml#L1-L21) | 1-21 |

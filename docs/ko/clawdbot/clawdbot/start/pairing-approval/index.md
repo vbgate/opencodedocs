@@ -70,7 +70,7 @@ AI 어시스턴트를 보호하기 위해 Clawdbot은 **페어링 메커니즘**
 **모든 채널은 기본적으로 `dmPolicy="pairing"`을 사용**합니다. 이는 다음을 의미합니다:
 
 | 정책 | 동작 |
-| ------ | ---- |
+|--- | ---|
 | `pairing` | 알 수 없는 발신자가 페어링 코드를 받고 메시지가 처리되지 않음 (기본값) |
 | `allowlist` | `allowFrom` 목록의 발신자만 허용 |
 | `open` | 모든 발신자 허용 (명시적으로 `"*"` 구성 필요) |
@@ -296,7 +296,7 @@ Failed to notify requester: <error details>
 > 업데이트 시간: 2026-01-27
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 페어링 코드 생성 (8자, 혼동 문자 제외) | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L173-L181) | 173-181 |
 | 페어링 요청 저장 및 TTL (1시간) | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L11-L14) | 11-14 |
 | 페어링 승인 명령 | [`src/cli/pairing-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/pairing-cli.ts#L107-L143) | 107-143 |

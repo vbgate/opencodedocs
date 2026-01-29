@@ -141,7 +141,7 @@ Get-ChildItem -Force (Join-Path $HOME ".antigravity_tools\logs") | Sort-Object L
 ## 일반적인 문제
 
 | 시나리오 | 할 수 있는 방법(❌) | 권장 방법(✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | 0 Token을 보면 즉시 수동으로 여러 번 재시도 | 클라이언트 재시도 버튼을 계속 누르고 로그를 전혀 보지 않음 | 먼저 Proxy Monitor + app.log를 한 번 보고 peek 단계 조기 종료인지 확인(자동 재시도/로테이션됨) |
 | `Invalid \`signature\``를 만나면 즉시 데이터 디렉토리를 비움 | `.antigravity_tools` 전체를 삭제하여 계정/통계 모두 사라짐 | 먼저 프록시가 "서명 수정 재시도"를 수행하게 하세요. 로그가 명확하게 복구 불가능하다고 표시할 때만 수동 개입 고려 |
 | "서버 측 변동"을 "계정 고장"으로 취급 | 400/503/529는 무조건 계정 로테이션 | 로테이션 효과 여부는 상태 코드에 따라 다름. 프록시 자체에 `should_rotate_account(...)` 규칙이 있음(`src-tauri/src/proxy/handlers/claude.rs#L226-L236`) |
@@ -166,7 +166,7 @@ Get-ChildItem -Force (Join-Path $HOME ".antigravity_tools\logs") | Sort-Object L
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Claude handler: 백오프 재시도 전략 + 로테이션 규칙 | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L117-L236) | 117-236 |
 | Claude handler: 내부에서 비스트리밍을 스트리밍으로 변환(better quota) | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L665-L776) | 665-776 |
 | Claude handler: peek 사전 읽기(하트비트/주석 건너뜀, 빈 스트림 방지) | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L812-L926) | 812-926 |

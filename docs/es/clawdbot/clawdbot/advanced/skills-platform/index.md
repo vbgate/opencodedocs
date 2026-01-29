@@ -393,7 +393,7 @@ El sistema de habilidades es el mecanismo fundamental para extender las capacida
 > Fecha de actualización: 2026-01-27
 
 | Funcionalidad | Ruta del archivo | Número de línea |
-| --- | --- | --- |
+|--- | --- | ---|
 | Definición de tipo de configuración de habilidades | [`src/config/types.skills.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.skills.ts) | 1-32 |
 | Documentación del sistema de habilidades | [`docs/tools/skills.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/skills.md) | 1-260 |
 | Referencia de configuración de habilidades | [`docs/tools/skills-config.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/skills-config.md) | 1-76 |

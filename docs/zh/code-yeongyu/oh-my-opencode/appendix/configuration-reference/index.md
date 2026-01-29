@@ -36,7 +36,7 @@ order: 180
 ## 根级字段
 
 | 字段 | 类型 | 必填 | 默认值 | 描述 |
-|-----|------|------|---------|------|
+|--- | --- | --- | --- | ---|
 | `$schema` | string | 否 | - | JSON Schema 链接，用于自动补全 |
 | `disabled_mcps` | string[] | 否 | [] | 禁用的 MCP 列表 |
 | `disabled_agents` | string[] | 否 | [] | 禁用的代理列表 |
@@ -65,7 +65,7 @@ order: 180
 ### 通用代理字段
 
 | 字段 | 类型 | 必填 | 描述 |
-|-----|------|------|------|
+|--- | --- | --- | ---|
 | `model` | string | 否 | 覆盖代理使用的模型（已弃用，推荐使用 category） |
 | `variant` | string | 否 | 模型变体 |
 | `category` | string | 否 | 从 Category 继承模型和配置 |
@@ -84,7 +84,7 @@ order: 180
 ### permission - 代理权限
 
 | 字段 | 类型 | 必填 | 值 | 描述 |
-|-----|------|------|-----|------|
+|--- | --- | --- | --- | ---|
 | `edit` | string | 否 | `ask`/`allow`/`deny` | 文件编辑权限 |
 | `bash` | string/object | 否 | `ask`/`allow`/`deny` 或 per-command | Bash 执行权限 |
 | `webfetch` | string | 否 | `ask`/`allow`/`deny` | Web 请求权限 |
@@ -94,7 +94,7 @@ order: 180
 ### 可配置的代理列表
 
 | 代理名 | 说明 |
-|--------|------|
+|--- | ---|
 | `sisyphus` | 主编排器代理 |
 | `prometheus` | 战略规划师代理 |
 | `oracle` | 战略顾问代理 |
@@ -137,7 +137,7 @@ order: 180
 ### Category 字段
 
 | 字段 | 类型 | 必填 | 描述 |
-|-----|------|------|------|
+|--- | --- | --- | ---|
 | `description` | string | 否 | Category 的目的描述（显示在 delegate_task 提示中） |
 | `model` | string | 否 | 覆盖 Category 使用的模型 |
 | `variant` | string | 否 | 模型变体 |
@@ -154,14 +154,14 @@ order: 180
 ### thinking 配置
 
 | 字段 | 类型 | 必填 | 值 | 描述 |
-|-----|------|------|-----|------|
+|--- | --- | --- | --- | ---|
 | `type` | string | 是 | `enabled`/`disabled` | 是否启用 Thinking |
 | `budgetTokens` | number | 否 | - | Thinking budget token 数 |
 
 ### 内置 Categories
 
 | Category | 默认模型 | Temperature | 描述 |
-|-----------|-----------|-------------|------|
+|--- | --- | --- | ---|
 | `visual-engineering` | `google/gemini-3-pro` | 0.7 | 前端、UI/UX、设计任务 |
 | `ultrabrain` | `openai/gpt-5.2-codex` | 0.1 | 高智商推理任务 |
 | `artistry` | `google/gemini-3-pro` | 0.7 | 创意和艺术任务 |
@@ -196,7 +196,7 @@ order: 180
 ### 字段
 
 | 字段 | 类型 | 必填 | 默认值 | 描述 |
-|-----|------|------|---------|------|
+|--- | --- | --- | --- | ---|
 | `mcp` | boolean | 否 | - | 是否加载 `.mcp.json` 文件 |
 | `commands` | boolean | 否 | - | 是否加载 Commands |
 | `skills` | boolean | 否 | - | 是否加载 Skills |
@@ -229,7 +229,7 @@ order: 180
 ### 字段
 
 | 字段 | 类型 | 必填 | 默认值 | 描述 |
-|-----|------|------|---------|------|
+|--- | --- | --- | --- | ---|
 | `disabled` | boolean | 否 | false | 禁用 Sisyphus 编排系统 |
 | `default_builder_enabled` | boolean | 否 | false | 启用 OpenCode-Builder 代理 |
 | `planner_enabled` | boolean | 否 | true | 启用 Prometheus（Planner）代理 |
@@ -255,7 +255,7 @@ order: 180
 ### 字段
 
 | 字段 | 类型 | 必填 | 默认值 | 描述 |
-|-----|------|------|---------|------|
+|--- | --- | --- | --- | ---|
 | `defaultConcurrency` | number | 否 | - | 默认最大并发数 |
 | `providerConcurrency` | object | 否 | - | Provider 级并发限制（`{providerName: number}`） |
 | `modelConcurrency` | object | 否 | - | Model 级并发限制（`{modelName: number}`） |
@@ -292,7 +292,7 @@ order: 180
 ### 字段
 
 | 字段 | 类型 | 必填 | 默认值 | 描述 |
-|-----|------|------|---------|------|
+|--- | --- | --- | --- | ---|
 | `commit_footer` | boolean | 否 | true | 在提交消息中添加 "Ultraworked with Sisyphus" footer |
 | `include_co_authored_by` | boolean | 否 | true | 在提交消息中添加 "Co-authored-by: Sisyphus" trailer |
 
@@ -314,15 +314,15 @@ order: 180
 ### 字段
 
 | 字段 | 类型 | 必填 | 默认值 | 描述 |
-|-----|------|------|---------|------|
+|--- | --- | --- | --- | ---|
 | `provider` | enum | 否 | `playwright` | 浏览器自动化提供程序 |
 
 ### provider 可选值
 
 | 值 | 描述 | 安装要求 |
-|-----|------|---------|
+|--- | --- | ---|
 | `playwright` | 使用 Playwright MCP 服务器 | 自动安装 |
-| `agent-browser` | 使用 Vercel 的 agent-browser CLI | `bun add -g agent-browser` |
+|--- | --- | ---|
 
 ### 配置示例
 
@@ -341,7 +341,7 @@ order: 180
 ### 字段
 
 | 字段 | 类型 | 必填 | 默认值 | 描述 |
-|-----|------|------|---------|------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | 否 | false | 是否启用 Tmux 会话管理 |
 | `layout` | enum | 否 | `main-vertical` | Tmux 布局 |
 | `main_pane_size` | number | 否 | 60 | 主窗格大小（20-80） |
@@ -351,7 +351,7 @@ order: 180
 ### layout 可选值
 
 | 值 | 描述 |
-|-----|------|
+|--- | ---|
 | `main-horizontal` | 主窗格在顶部，代理窗格在底部堆叠 |
 | `main-vertical` | 主窗格在左侧，代理窗格在右侧堆叠（默认） |
 | `tiled` | 所有窗格相同大小的网格 |
@@ -379,7 +379,7 @@ order: 180
 ### 字段
 
 | 字段 | 类型 | 必填 | 默认值 | 描述 |
-|-----|------|------|---------|------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | 否 | false | 是否启用 Ralph Loop 功能 |
 | `default_max_iterations` | number | 否 | 100 | 默认最大迭代次数（1-1000） |
 | `state_dir` | string | 否 | - | 自定义状态文件目录（相对于项目根目录） |
@@ -403,7 +403,7 @@ order: 180
 ### 字段
 
 | 字段 | 类型 | 必填 | 默认值 | 描述 |
-|-----|------|------|---------|------|
+|--- | --- | --- | --- | ---|
 | `force_enable` | boolean | 否 | false | 强制启用 session-notification，即使检测到外部通知插件 |
 
 ### 配置示例
@@ -423,7 +423,7 @@ order: 180
 ### 字段
 
 | 字段 | 类型 | 必填 | 默认值 | 描述 |
-|-----|------|------|---------|------|
+|--- | --- | --- | --- | ---|
 | `custom_prompt` | string | 否 | - | 自定义提示，替换默认警告消息。使用 `{{comments}}` 占位符表示检测到的注释 XML |
 
 ### 配置示例
@@ -443,7 +443,7 @@ order: 180
 ### 字段
 
 | 字段 | 类型 | 必填 | 默认值 | 描述 |
-|-----|------|------|---------|------|
+|--- | --- | --- | --- | ---|
 | `aggressive_truncation` | boolean | 否 | - | 启用更激进的截断行为 |
 | `auto_resume` | boolean | 否 | - | 启用自动恢复（从思考块错误或思考禁用违规中恢复） |
 | `truncate_all_tool_outputs` | boolean | 否 | false | 截断所有工具输出，而不仅仅是白名单工具 |
@@ -452,7 +452,7 @@ order: 180
 ### dynamic_context_pruning 配置
 
 | 字段 | 类型 | 必填 | 默认值 | 描述 |
-|-----|------|------|---------|------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | 否 | false | 启用动态上下文修剪 |
 | `notification` | enum | 否 | `detailed` | 通知级别：`off` / `minimal` / `detailed` |
 | `turn_protection` | object | 否 | - | Turn 保护配置 |
@@ -462,14 +462,14 @@ order: 180
 ### turn_protection 配置
 
 | 字段 | 类型 | 必填 | 默认值 | 描述 |
-|-----|------|------|---------|------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | 否 | true | 启用 turn 保护 |
 | `turns` | number | 否 | 3 | 保护最近 N 轮的工具输出（1-10） |
 
 ### strategies 配置
 
 | 字段 | 类型 | 必填 | 默认值 | 描述 |
-|-----|------|------|---------|------|
+|--- | --- | --- | --- | ---|
 | `deduplication` | object | 否 | - | 去重策略配置 |
 | `supersede_writes` | object | 否 | - | 写入覆盖策略配置 |
 | `purge_errors` | object | 否 | - | 错误清理策略配置 |
@@ -477,20 +477,20 @@ order: 180
 ### deduplication 配置
 
 | 字段 | 类型 | 必填 | 默认值 | 描述 |
-|-----|------|------|---------|------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | 否 | true | 移除重复的工具调用（相同工具 + 相同参数） |
 
 ### supersede_writes 配置
 
 | 字段 | 类型 | 必填 | 默认值 | 描述 |
-|-----|------|------|---------|------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | 否 | true | 在后续读取时修剪写入输入 |
 | `aggressive` | boolean | 否 | false | 激进模式：如果 ANY 后续读取则修剪 ANY 写入 |
 
 ### purge_errors 配置
 
 | 字段 | 类型 | 必填 | 默认值 | 描述 |
-|-----|------|------|---------|------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | 否 | true | 在 N 轮后修剪错误的工具输入 |
 | `turns` | number | 否 | 5 | 修剪错误工具输入的轮数（1-20） |
 
@@ -574,7 +574,7 @@ Skills 支持两种格式：
 ### Skill 定义字段
 
 | 字段 | 类型 | 必填 | 描述 |
-|-----|------|------|------|
+|--- | --- | --- | ---|
 | `description` | string | 否 | Skill 描述 |
 | `template` | string | 否 | Skill 模板 |
 | `from` | string | 否 | 来源 |
@@ -591,7 +591,7 @@ Skills 支持两种格式：
 ### 内置 Skills
 
 | Skill | 描述 |
-|-------|------|
+|--- | ---|
 | `playwright` | 浏览器自动化（默认） |
 | `agent-browser` | 浏览器自动化（Vercel CLI） |
 | `frontend-ui-ux` | 前端 UI/UX 设计 |
@@ -651,7 +651,7 @@ Skills 支持两种格式：
 > 更新时间：2026-01-26
 
 | 功能 | 文件路径 | 行号 |
-|------|----------|------|
+|--- | --- | ---|
 | 配置 Schema 定义 | [`src/config/schema.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/master/src/config/schema.ts) | 1-378 |
 | JSON Schema | [`assets/oh-my-opencode.schema.json`](https://github.com/code-yeongyu/oh-my-opencode/blob/master/assets/oh-my-opencode.schema.json) | 1-51200 |
 | 配置文档 | [`docs/configurations.md`](https://github.com/code-yeongyu/oh-my-opencode/blob/master/docs/configurations.md) | 1-595 |

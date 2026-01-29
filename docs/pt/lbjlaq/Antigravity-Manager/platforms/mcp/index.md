@@ -66,7 +66,7 @@ As Antigravity Tools fornecem três tipos de endpoints MCP:
 ### Classificação de endpoints
 
 | Tipo de endpoint | Método de implementação | Caminho local | Alvo upstream |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | **Web Search** | Proxy remoto reverso | `/mcp/web_search_prime/mcp` | `https://api.z.ai/api/mcp/web_search_prime/mcp` |
 | **Web Reader** | Proxy remoto reverso | `/mcp/web_reader/mcp` | `https://api.z.ai/api/mcp/web_reader/mcp` |
 | **Vision MCP** | Servidor integrado (JSON-RPC 2.0) | `/mcp/zai-mcp-server/mcp` | Chamada interna de API PaaS do z.ai |
@@ -320,7 +320,7 @@ data: keepalive
 ## Consulta rápida de ferramentas Vision MCP
 
 | Nome da ferramenta | Função | Parâmetros obrigatórios | Cenário de exemplo |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `ui_to_artifact` | Converter screenshot UI em código/prompt/especificação/descrição | `image_source`, `output_type`, `prompt` | Gerar código front-end a partir de design |
 | `extract_text_from_screenshot` | Extrair texto/código de screenshot (semelhante OCR) | `image_source`, `prompt` | Ler logs de erro em screenshot |
 | `diagnose_error_screenshot` | Diagnosticar screenshot de erro (stack trace, logs) | `image_source`, `prompt` | Analisar erro de tempo de execução |
@@ -469,7 +469,7 @@ Pontos-chave:
 > Atualizado em: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Número da linha |
-| --- | --- | --- |
+|--- | --- | ---|
 | Endpoint Web Search | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L115-L135) | 115-135 |
 | Endpoint Web Reader | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L137-L157) | 137-157 |
 | Endpoint Vision MCP (entrada principal) | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L376-L397) | 376-397 |

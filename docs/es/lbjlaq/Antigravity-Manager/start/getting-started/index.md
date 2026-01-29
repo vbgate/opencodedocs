@@ -121,7 +121,7 @@ Ve al capítulo «Iniciar proxy inverso local y conectar el primer cliente» par
 ## Advertencias sobre problemas comunes
 
 | Escenario | Qué podrías hacer (❌) | Enfoque recomendado (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Permitir que el teléfono/otra computadora acceda | Habilitar directamente `allow_lan_access=true` sin establecer autenticación | Habilitar la autenticación al mismo tiempo, y primero verificar `GET /healthz` en la red de área local |
 | El cliente informa 404 | Solo cambiar host/port, sin importar cómo el cliente concatena `/v1` | Primero confirmar la estrategia de concatenación base_url del cliente, luego decidir si es necesario llevar el prefijo `/v1` |
 | Empiezas directamente a depurar con Claude Code | Conectar directamente un cliente complejo, sin saber dónde verificar cuando falla | Primero ejecutar el ciclo cerrado mínimo: iniciar Proxy -> `GET /healthz` -> luego conectar el cliente |
@@ -149,11 +149,11 @@ Ve al capítulo «Iniciar proxy inverso local y conectar el primer cliente» par
 > Fecha de actualización: 2026-01-23
 
 | Función | Ruta del archivo | Línea |
-| --- | --- | --- |
+|--- | --- | ---|
 | Posicionamiento del producto (estación de transferencia de IA local / brecha de protocolos) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L35-L77) | 35-77 |
 | Visión general de puntos finales del Router (OpenAI/Claude/Gemini/healthz) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | Lógica de puerto predeterminado / solo local predeterminado / key predeterminado y bind address | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L291) | 174-291 |
-| Decisión real de `auth_mode=auto` (LAN -> all_except_health) | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L10-L29) | 10-29 |
+|--- | --- | ---|
 | Estructura de enrutamiento de páginas GUI (Dashboard/Accounts/API Proxy/Monitor/Token Stats/Settings) | [`src/App.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/App.tsx#L19-L48) | 19-48 |
 
 **Valores predeterminados clave**:

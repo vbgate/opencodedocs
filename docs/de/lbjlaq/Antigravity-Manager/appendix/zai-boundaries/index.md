@@ -63,7 +63,7 @@ Nachweise:
 `dispatch_mode` bestimmt, ob `/v1/messages` über z.ai geleitet wird:
 
 | dispatch_mode | Was passiert | Nachweis |
-| --- | --- | --- |
+|--- | --- | ---|
 | `off` | z.ai niemals verwenden | `src-tauri/src/proxy/config.rs#L20-L37` + `src-tauri/src/proxy/handlers/claude.rs#L282-L314` |
 | `exclusive` | Alle Claude-Anforderungen werden über z.ai geleitet | `src-tauri/src/proxy/handlers/claude.rs#L285-L314` |
 | `fallback` | Nur wenn der Google-Pool nicht verfügbar ist (0 Konten oder „keine verfügbaren Konten"), wird z.ai verwendet | `src-tauri/src/proxy/handlers/claude.rs#L288-L305` |
@@ -104,7 +104,7 @@ Nachweise:
 Lokale Endpunkte und Upstream-Adressen sind fest codiert:
 
 | Lokaler Endpunkt | Upstream-Adresse | Schalter | Nachweis |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `/mcp/web_search_prime/mcp` | `https://api.z.ai/api/mcp/web_search_prime/mcp` | `proxy.zai.mcp.web_search_enabled` | `src-tauri/src/proxy/handlers/mcp.rs#L115-L135` |
 | `/mcp/web_reader/mcp` | `https://api.z.ai/api/mcp/web_reader/mcp` | `proxy.zai.mcp.web_reader_enabled` | `src-tauri/src/proxy/handlers/mcp.rs#L137-L157` |
 
@@ -222,20 +222,20 @@ Nachweis: [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravit
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
-| z.ai Integrationsumfang (Claude-Protokoll + MCP + Vision MCP) | [`docs/zai/implementation.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/zai/implementation.md#L12-L17) | 12-17 |
-| z.ai Dispatch-Modus und Modellstandardwerte | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L20-L116) | 20-116 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | z.ai Standard base_url / Standardmodelle | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L265-L279) | 265-279 |
 | `/v1/messages` Wahllogik, ob über z.ai geleitet wird | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L256-L374) | 256-374 |
-| `/v1/messages/count_tokens` z.ai Forwarding und Platzhalter-Rückgabe | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L1186-L1209) | 1186-1209 |
-| z.ai Anthropic Upstream-Forwarding (JSON-Forwarding + Antwort-Streaming) | [`src-tauri/src/proxy/providers/zai_anthropic.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/providers/zai_anthropic.rs#L133-L219) | 133-219 |
+|--- | --- | ---|
+|--- | --- | ---|
 | z.ai Modellzuordnungsregeln (map_model_for_zai) | [`src-tauri/src/proxy/providers/zai_anthropic.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/providers/zai_anthropic.rs#L13-L37) | 13-37 |
-| Header-Whitelist + Injektion von z.ai auth | [`src-tauri/src/proxy/providers/zai_anthropic.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/providers/zai_anthropic.rs#L70-L110) | 70-110 |
-| MCP Search/Reader Reverse-Proxy und Schalter | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L45-L157) | 45-157 |
-| Vision MCP integrierter Server (GET/POST/DELETE + JSON-RPC) | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L190-L397) | 190-397 |
-| Vision MCP minimale Implementierung-Position (kein vollständiger MCP-Server) | [`docs/zai/vision-mcp.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/zai/vision-mcp.md#L17-L37) | 17-37 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Vision Werkzeugliste und Einschränkungen (tool_specs + Dateigröße + stream=false) | [`src-tauri/src/proxy/zai_vision_tools.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/zai_vision_tools.rs#L57-L270) | 57-270 |
-| `/v1/models/claude` Modelllistenquelle (lokale Zuordnung, kein Upstream-Check) | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L84-L132) | 84-132 |
-| Usage/Budget-Überwachung nicht implementiert (Dokumentationsangabe) | [`docs/zai/implementation.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/zai/implementation.md#L194-L198) | 194-198 |
+|--- | --- | ---|
+|--- | --- | ---|
 
 </details>

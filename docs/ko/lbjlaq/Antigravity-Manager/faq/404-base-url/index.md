@@ -73,7 +73,7 @@ Invoke-WebRequest -UseBasicParsing http://127.0.0.1:8045/healthz | Select-Object
 Antigravity Tools의 리버스 프록시 라우팅은 "전체 경로 하드코딩"입니다(참조: `src-tauri/src/proxy/server.rs`). 일반적인 진입점은 다음과 같습니다:
 
 | 프로토콜 | 경로 | 용도 |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI | `/v1/models` | 모델 목록 |
 | OpenAI | `/v1/chat/completions` | 채팅 완성 |
 | OpenAI | `/v1/responses` | Codex CLI 호환 |
@@ -122,7 +122,7 @@ Invoke-WebRequest -UseBasicParsing http://127.0.0.1:8045/v1beta/models | Select-
 Base URL 문제의 본질은 "작성한 경로"와 "클라이언트가 추가하는 경로"가 겹치는 것입니다.
 
 | 사용 중인 것 | Base URL 권장 작성법 | 정렬 중인 라우팅 |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI SDK(Python/Node 등) | `http://127.0.0.1:8045/v1` | `/v1/chat/completions`, `/v1/models` |
 | Claude Code CLI(Anthropic) | `http://127.0.0.1:8045` | `/v1/messages` |
 | Gemini SDK / Gemini 모드 클라이언트 | `http://127.0.0.1:8045` | `/v1beta/models/*` |
@@ -170,7 +170,7 @@ http://127.0.0.1:8045/v1/chat/completions
 이 표를 사용하여 "최종 요청 경로"가 Antigravity Tools에 도달할 수 있는지 빠르게 확인할 수 있습니다:
 
 | 로그에서 본 경로 | 결론 |
-| --- | --- |
+|--- | ---|
 | `/v1/`로 시작(예: `/v1/models`, `/v1/chat/completions`) | OpenAI/Anthropic 호환 라우팅 사용 |
 | `/v1beta/`로 시작(예: `/v1beta/models/...`) | Gemini 네이티브 라우팅 사용 |
 | `/v1/v1/`出现 | Base URL에 `/v1`이 포함되어 있고 클라이언트가 다시 연결함 |
@@ -207,7 +207,7 @@ http://127.0.0.1:8045/v1/chat/completions
 ## 이 과정 요약
 
 | 현상 | 가장 일반적인 원인 | 해결 방법 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 계속 404 | Base URL 연결 오류 | curl로 `/v1/models`/`/v1beta/models`가 404가 아닌지 먼저 확인 |
 | `/v1/v1/...` | `/v1` 중복 | OpenAI SDK의 Base URL을 `/v1`로 끝나게 유지 |
 | `/v1/chat/completions/responses` | 클라이언트 중첩 경로 | Gemini 프로토콜로 전환하거나 경로 재작성(초보자 비권장) |
@@ -233,7 +233,7 @@ http://127.0.0.1:8045/v1/chat/completions
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 리버스 프록시 라우팅 정의(전체 라우팅 테이블) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L193) | 120-193 |
 | `AxumServer::start()`(라우팅 구성 진입점) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L79-L216) | 79-216 |
 | `health_check_handler()` | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L266-L272) | 266-272 |

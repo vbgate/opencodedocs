@@ -231,7 +231,7 @@ If output is empty, terminal detection has failed.
 **Supported terminal names** (lowercase):
 
 | Terminal | Name | Terminal | Name |
-|-----|------|-----|------|
+|--- | --- | --- | ---|
 | Ghostty | `ghostty` | Kitty | `kitty` |
 | iTerm2 | `iterm2` or `iterm` | WezTerm | `wezterm` |
 | Alacritty | `alacritty` | macOS Terminal | `terminal` or `apple_terminal` |
@@ -345,7 +345,7 @@ EOF
 **Supported macOS Sounds**:
 
 | Sound Name | Description | Sound Name | Description |
-|---------|------|---------|------|
+|--- | --- | --- | ---|
 | Basso | Bass | Blow | Blow |
 | Bottle | Bottle | Frog | Frog |
 | Funk | Funk | Glass | Glass (default task completion) |
@@ -432,7 +432,7 @@ The plugin automatically detects the terminal and retrieves the Bundle ID on sta
 ### 6.1 Feature Comparison Table
 
 | Feature | macOS | Windows | Linux |
-|-----|-------|---------|-------|
+|--- | --- | --- | ---|
 | Native Notifications | ✅ | ✅ | ✅ |
 | Custom Sounds | ✅ | ❌ | ❌ |
 | Focus Detection | ✅ | ❌ | ❌ |
@@ -508,7 +508,7 @@ opencode-notify troubleshooting can be summarized into these 6 categories:
 > Last updated: 2026-01-27
 
 | Function | File Path | Lines |
-| --- | --- | --- |
+|--- | --- | ---|
 | Configuration loading and error handling | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L90-L114) | 90-114 |
 | Terminal detection | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L145-L164) | 145-164 |
 | macOS osascript execution | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L120-L133) | 120-133 |

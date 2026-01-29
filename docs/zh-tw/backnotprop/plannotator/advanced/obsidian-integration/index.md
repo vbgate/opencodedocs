@@ -117,7 +117,7 @@ tags: [plan, authentication, typescript, sql]
 每個儲存的計畫都包含以下 frontmatter 欄位：
 
 | 欄位   | 值範例                           | 說明                         |
-| ------ | -------------------------------- | ---------------------------- |
+|--- | --- | ---|
 | `created` | `2026-01-24T14:30:00.000Z`    | ISO 8601 格式的建立時間戳記     |
 | `source` | `plannotator`                   | 固定值，標識來源             |
 | `tags` | `[plan, authentication, typescript]` | 自動擷取的標籤陣列 |
@@ -142,7 +142,7 @@ Plannotator 使用以下規則自動擷取標籤：
 檔案名稱採用可讀性強的格式：`Title - Jan 2, 2026 2-30pm.md`
 
 | 部分       | 範例         | 說明                  |
-| ---------- | ------------ | --------------------- |
+|--- | --- | ---|
 | 標題       | `User Authentication` | 從 H1 擷取，限制 50 字元 |
 | 日期       | `Jan 2, 2026` | 目前日期               |
 | 時間       | `2-30pm`     | 目前時間（12 小時制）   |
@@ -160,7 +160,7 @@ Plannotator 使用以下規則自動擷取標籤：
 Plannotator 自動偵測不同作業系統的 Obsidian 設定檔位置：
 
 | 作業系統 | 設定檔路徑                                    |
-| -------- | ----------------------------------------------- |
+|--- | ---|
 | macOS     | `~/Library/Application Support/obsidian/obsidian.json` |
 | Windows   | `%APPDATA%\obsidian/obsidian.json`                 |
 | Linux     | `~/.config/obsidian/obsidian.json`                 |
@@ -229,7 +229,7 @@ Obsidian 整合功能讓你的計畫審查流程與知識管理無縫連接：
 > 更新時間：2026-01-24
 
 | 功能                | 檔案路徑                                                                                     | 行號    |
-| ------------------- | -------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 偵測 Obsidian vaults | [`packages/server/integrations.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/integrations.ts#L135-L175) | 135-175 |
 | 儲存計畫到 Obsidian | [`packages/server/integrations.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/integrations.ts#L180-L227) | 180-227 |
 | 擷取標籤             | [`packages/server/integrations.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/integrations.ts#L34-L74) | 34-74   |

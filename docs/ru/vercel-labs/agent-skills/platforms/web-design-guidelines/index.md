@@ -65,7 +65,7 @@ Web Interface Guidelines — это коллекция стандартов ка
 Руководства по веб-дизайну интерфейсов охватывают **17 категорий**, разделенных по приоритетам на три блока:
 
 | Блок категорий | Фокус | Типичная отдача |
-| -------------- | ----- | --------------- |
+|--- | --- | ---|
 | **Доступность (Accessibility)** | Обеспечить доступность для всех пользователей (включая экранное чтение, клавиатуру) | Соответствие стандартам WCAG, расширение аудитории |
 | **Производительность & UX (Performance & UX)** | Оптимизация скорости загрузки, плавности анимации, взаимодействия | Повышение удержания пользователей, снижение отказов |
 | **Полнота & Детали (Completeness)** | Темный режим, адаптивность, валидация форм, обработка ошибок | Снижение жалоб пользователей, повышение бренда |
@@ -73,7 +73,7 @@ Web Interface Guidelines — это коллекция стандартов ка
 **17 категорий правил**:
 
 | Категория | Типичное правило | Приоритет |
-| --------- | --------------- | --------- |
+|--- | --- | ---|
 | Accessibility | aria-labels, семантический HTML, обработка клавиатуры | ⭐⭐⭐ Высший |
 | Focus States | Видимый фокус, :focus-visible вместо :focus | ⭐⭐⭐ Высший |
 | Forms | autocomplete, валидация, обработка ошибок | ⭐⭐⭐ Высший |
@@ -634,7 +634,7 @@ const formattedDate = new Intl.DateTimeFormat(undefined, {
 > Обновлено: 2026-01-25
 
 | Функция | Путь к файлу | Строки |
-| ------- | ------------ | ------ |
+|--- | --- | ---|
 | Определение навыка руководств по веб-дизайну | [`skills/web-design-guidelines/SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/web-design-guidelines/SKILL.md) | Весь файл |
 | Источник правил (100) | [`https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md`](https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md) | Весь файл |
 | Обзор README | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md) | 28-50 |
@@ -642,7 +642,7 @@ const formattedDate = new Intl.DateTimeFormat(undefined, {
 **17 категорий правил**:
 
 | Категория | Количество правил | Типичное правило |
-| --------- | ---------------- | ---------------- |
+|--- | --- | ---|
 | Accessibility | 10 | aria-labels, семантический HTML, обработка клавиатуры |
 | Focus States | 4 | видимый фокус, :focus-visible |
 | Forms | 11 | autocomplete, валидация, обработка ошибок |

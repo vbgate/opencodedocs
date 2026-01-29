@@ -57,7 +57,7 @@ Antes de começar, confirme:
 O canal Slack do Clawdbot é baseado no framework [Bolt](https://slack.dev/bolt-js), suportando dois modos de conexão:
 
 | Modo | Cenário Aplicável | Vantagens | Desvantagens |
-| ------ | -------- | ------ | ------ |
+|--- | --- | --- | ---|
 | **Socket Mode** | Gateway local, uso pessoal | Configuração simples (apenas Token) | Precisa manter conexão WebSocket constante |
 | **HTTP Mode** | Implantação em servidor, acesso remoto | Pode passar por firewall, suporta balanceamento de carga | Precisa de IP público, configuração complexa |
 
@@ -423,7 +423,7 @@ Bot responde normalmente à sua mensagem.
 As seguintes permissões não são obrigatórias na versão atual, mas podem ter suporte adicionado no futuro:
 
 | Permissão | Propósito |
-| ------ | ------ |
+|--- | ---|
 | `groups:write` | Gerenciamento de canais privados (criar, renomear, convidar, arquivar) |
 | `mpim:write` | Gerenciamento de sessões de grupo DM |
 | `chat:write.public` | Publicar mensagens em canais onde o Bot não entrou |
@@ -529,7 +529,7 @@ Controla como o Bot responde em canais:
 ```
 
 | Modo | Comportamento |
-| ----- | ------ |
+|--- | ---|
 | `off` | Padrão, responde no canal principal |
 | `first` | Primeira resposta entra em thread, respostas subsequentes no canal principal |
 | `all` | Todas as respostas estão em thread |
@@ -596,7 +596,7 @@ Permite que o Agent chame operações específicas do Slack:
 > Última atualização: 2026-01-27
 
 | Funcionalidade            | Caminho do Arquivo                                                                                               | Linhas       |
-| --------------- | ------------------------------------------------------------------------------------------------ | ---------- |
+|--- | --- | ---|
 | Tipos de Configuração Slack | [`src/config/types.slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.slack.ts) | 1-150      |
 | Lógica de onboarding Slack  | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/slack.ts) | 1-539      |
 | Ferramentas Slack Actions | [`src/agents/tools/slack-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/slack-actions.ts) | 1-301      |

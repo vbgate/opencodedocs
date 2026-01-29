@@ -90,7 +90,7 @@ Add or modify the `quietHours` section in the configuration file:
 **Configuration Options**:
 
 | Option | Type | Default | Description |
-|-------|------|--------|------|
+|--- | --- | --- | ---|
 | `enabled` | boolean | `false` | Whether to enable quiet hours |
 | `start` | string | `"22:00"` | Quiet hours start time, format is `"HH:MM"` |
 | `end` | string | `"08:00"` | Quiet hours end time, format is `"HH:MM"` |
@@ -334,7 +334,7 @@ By properly configuring quiet hours, you can let AI complete tasks silently duri
 > Last updated: 2026-01-27
 
 | Feature | File Path | Lines |
-| --- | --- | --- |
+|--- | --- | ---|
 | Quiet Hours Check | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L181-L199) | 181-199 |
 | Configuration Interface Definition | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L30-L48) | 30-48 |
 | Default Configuration | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L56-L68) | 56-68 |

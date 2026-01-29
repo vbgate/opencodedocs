@@ -52,14 +52,14 @@ Je nach Bedarf kannst du verschiedene Lernpfade wählen:
 ### Kernkonfiguration
 
 | Thema | Beschreibung | Geschätzte Zeit |
-|-------|-------------|-----------------|
+|--- | --- | ---|
 | [KI-Modell- und Authentifizierungskonfiguration](./models-auth/) | Konfiguration verschiedener KI-Modellanbieter und Authentifizierungsmethoden wie Anthropic, OpenAI, OpenRouter, Ollama | 15 Minuten |
 | [Sitzungsverwaltung und Multi-Agent](./session-management/) | Lerne Kernkonzepte wie Sitzungsmodelle, Sitzungsisolierung, Unter-Agent-Zusammenarbeit, Kontextkompression | 20 Minuten |
 
 ### Tool-System
 
 | Thema | Beschreibung | Geschätzte Zeit |
-|-------|-------------|-----------------|
+|--- | --- | ---|
 | [Browserautomatisierungs-Tools](./tools-browser/) | Nutze Browser-Tools für Webseitenautomatisierung, Screenshots, Formularoperationen | 25 Minuten |
 | [Befehlsausführungs-Tools und Genehmigung](./tools-exec/) | Konfiguration und Nutzung des exec-Tools, Verständnis des Sicherheitsgenehmigungsmechanismus und Berechtigungssteuerung | 15 Minuten |
 | [Web-Suche und Extraktions-Tools](./tools-web/) | Nutze die Tools web_search und web_fetch für Netzwerksuche und Inhaltsextraktion | 20 Minuten |
@@ -67,28 +67,28 @@ Je nach Bedarf kannst du verschiedene Lernpfade wählen:
 ### Interaktionserfahrung
 
 | Thema | Beschreibung | Geschätzte Zeit |
-|-------|-------------|-----------------|
+|--- | --- | ---|
 | [Canvas-Visualisierungsoberfläche und A2UI](./canvas/) | Verstehe Canvas A2UI-Push-Mechanismus, visuelle Oberflächenoperationen und benutzerdefinierte Oberflächen | 20 Minuten |
 | [Sprachsteuerung und Text-zu-Sprache](./voice-tts/) | Konfiguration von Voice Wake, Talk Mode und TTS-Anbietern, Implementierung der Sprachinteraktion | 15 Minuten |
 
 ### Intelligente Erweiterung
 
 | Thema | Beschreibung | Geschätzte Zeit |
-|-------|-------------|-----------------|
+|--- | --- | ---|
 | [Gedächtnissystem und Vektorsuche](./memory-system/) | Konfiguration und Nutzung des Gedächtnissystems (SQLite-vec, FTS5, hybride Suche) | 25 Minuten |
 | [Skill-Plattform und ClawdHub](./skills-platform/) | Verständnis des Skill-Systems, Bundled/Managed/Workspace-Skills, ClawdHub-Integration | 20 Minuten |
 
 ### Automatisierung und Bereitstellung
 
 | Thema | Beschreibung | Geschätzte Zeit |
-|-------|-------------|-----------------|
+|--- | --- | ---|
 | [Cron-zeitgesteuerte Aufgaben und Webhook](./cron-automation/) | Konfiguration zeitgesteuerter Aufgaben, Webhook-Auslösung, Gmail Pub/Sub und weitere Automatisierungsfunktionen | 20 Minuten |
 | [Remote-Gateway und Tailscale](./remote-gateway/) | Fernzugriff auf das Gateway über Tailscale Serve/Funnel oder SSH-Tunnel | 15 Minuten |
 
 ### Sicherheitsmechanismen
 
 | Thema | Beschreibung | Geschätzte Zeit |
-|-------|-------------|-----------------|
+|--- | --- | ---|
 | [Sicherheit und Sandbox-Isolation](./security-sandbox/) | Verständnis des Sicherheitsmodells, Tool-Berechtigungssteuerung, Sandbox-Isolation, Containerisierungsbereitstellung | 20 Minuten |
 ## Nächste Schritte
 

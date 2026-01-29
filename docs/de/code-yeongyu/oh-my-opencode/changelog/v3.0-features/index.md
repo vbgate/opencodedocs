@@ -42,7 +42,7 @@ Jede Kategorie definiert:
 ### 7 Integrierte Kategorien
 
 | Kategorie | Standardmodell | Temperatur | Anwendungsfälle |
-|----------|---------------|-------------|-----------|
+|--- | --- | --- | ---|
 | `visual-engineering` | `google/gemini-3-pro` | 0.7 | Frontend, UI/UX, Design, Styling, Animationen |
 | `ultrabrain` | `openai/gpt-5.2-codex` (xhigh) | 0.1 | Tiefes logisches Denken, komplexe Architekturentscheidungen, die umfangreiche Analysen erfordern |
 | `artistry` | `google/gemini-3-pro` (max) | 0.7 | Aufgaben mit hoher Kreativität/Kunst, neue Ideen |
@@ -229,7 +229,7 @@ Bei der Delegation von Aufgaben sind **klare und spezifische** Prompts entscheid
 Sie können Kategorien in `oh-my-opencode.json` feinabstimmen.
 
 | Feld | Typ | Beschreibung |
-|-------|------|-------------|
+|--- | --- | ---|
 | `description` | string | Menschenlesbare Beschreibung des Kategoriezwecks. Wird in delegate_task-Prompts angezeigt. |
 | `model` | string | Zu verwendende KI-Modell-ID (z. B. `anthropic/claude-opus-4-5`) |
 | `variant` | string | Modellvariante (z. B. `max`, `xhigh`) |

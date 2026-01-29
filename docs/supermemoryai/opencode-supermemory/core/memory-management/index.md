@@ -27,7 +27,7 @@ opencode-supermemory divides memory into two isolated **Scopes**, similar to glo
 ### 1. Two Types of Scopes
 
 | Scope | Scope ID | Lifecycle | Typical Usage |
-| :--- | :--- | :--- | :--- |
+|--- | --- | --- | ---|
 | **User Scope** | `user` | **Follows you permanently**<br>Shared across all projects | • Coding style preferences (e.g., "Prefer TypeScript")<br>• Personal habits (e.g., "Always write comments")<br>• General knowledge |
 | **Project Scope** | `project` | **Limited to current project**<br>Invalid upon switching directories | • Project architecture design<br>• Business logic explanations<br>• Fixes for specific bugs |
 
@@ -191,7 +191,7 @@ Supermemory's vector indexing is usually sub-second, but there might be brief de
 > Updated: 2026-01-23
 
 | Feature | File Path | Line Number |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Scope Generation Logic | [`src/services/tags.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/tags.ts#L18-L36) | 18-36 |
 | Memory Tool Definition | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
 | Memory Type Definition | [`src/types/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/types/index.ts) | - |

@@ -66,7 +66,7 @@ Proxy Monitor logs are written to SQLite in the data directory: `proxy_logs.db`.
 In a Proxy Monitor record (backend struct `ProxyRequestLog`), the most useful fields are:
 
 | Field | What You Use It to Answer |
-| --- | --- |
+|--- | ---|
 | `status` | Was this request successful or failed (200-399 vs others) |
 | `url` / `method` | Which endpoint did you actually hit (e.g., `/v1/messages`, `/v1/chat/completions`) |
 | `protocol` | Which protocol: OpenAI / Claude(Anthropic) / Gemini |
@@ -191,7 +191,7 @@ Clearing deletes all records in `proxy_logs.db`.
 ## Common Pitfalls
 
 | Scenario | What You Might Think (❌) | Actual Behavior (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | "Paused" = no monitoring overhead at all | Think paused means requests won't be parsed | Paused mainly affects "whether to write to Proxy Monitor logs." Token Stats may still record normally (backend records token usage first, then checks if monitoring is enabled). |
 | Binary/large body logs are empty | Think monitoring is broken | Binary requests/responses display as `[Binary Request Data]` / `[Binary Response Data]`; when exceeding limits they may be marked as "too large." |
 | Want to use Monitor to find "who initiated the request" | Think you can trace back to client process | Monitor records HTTP layer info (method/path/model/account), not "caller process name." You need to combine with client logs or system network packet capture to identify the source. |
@@ -247,12 +247,12 @@ Since Proxy Monitor is essentially SQLite, you can also treat `proxy_logs.db` as
 > Last updated: 2026-01-23
 
 | Feature | File Path | Lines |
-| --- | --- | --- |
+|--- | --- | ---|
 | Monitor page entry (mounts ProxyMonitor) | [`src/pages/Monitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Monitor.tsx#L1-L12) | 1-12 |
 | Monitor UI: table/filter/details modal | [`src/components/proxy/ProxyMonitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/proxy/ProxyMonitor.tsx#L13-L713) | 13-713 |
 | UI: read config and sync enable_logging | [`src/components/proxy/ProxyMonitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/proxy/ProxyMonitor.tsx#L174-L243) | 174-243 |
 | UI: toggle recording (write config + set_proxy_monitor_enabled) | [`src/components/proxy/ProxyMonitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/proxy/ProxyMonitor.tsx#L254-L267) | 254-267 |
-| UI: real-time event listener (proxy://request) and deduplication | [`src/components/proxy/ProxyMonitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/proxy/ProxyMonitor.tsx#L273-L355) | 273-355 |
+|--- | --- | ---|
 | UI: clear logs (clear_proxy_logs) | [`src/components/proxy/ProxyMonitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/proxy/ProxyMonitor.tsx#L389-L403) | 389-403 |
 | UI: load single detail (get_proxy_log_detail) | [`src/components/proxy/ProxyMonitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/proxy/ProxyMonitor.tsx#L505-L519) | 505-519 |
 | Monitor middleware: capture request/response, parse tokens, write to monitor | [`src-tauri/src/proxy/middleware/monitor.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/monitor.rs#L13-L337) | 13-337 |

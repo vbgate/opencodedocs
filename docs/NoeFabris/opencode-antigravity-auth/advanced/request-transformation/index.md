@@ -38,7 +38,7 @@ You may encounter these issues:
 When you need:
 
 | Scenario | Why Understand Transformation Mechanism |
-| -------- | ------------------------------------- |
+|--- | ---|
 | Developing custom MCP servers | Ensure tool schema is compatible with Antigravity API |
 | Troubleshooting 400/500 errors | Determine if it's a schema issue or transformation logic issue |
 | Optimizing Thinking performance | Understand thinking block signature and caching mechanism |
@@ -82,7 +82,7 @@ graph TD
 **Key Transformation Points**:
 
 | Transformation Type | Purpose | Source Location |
-| ------------------- | ------- | --------------- |
+|--- | --- | ---|
 | Schema cleaning | Remove fields not supported by Antigravity API | `src/plugin/request-helpers.ts` |
 | Thinking configuration | Inject correct thinking config based on model family | `src/plugin/transform/claude.ts`, `src/plugin/transform/gemini.ts` |
 | Thinking block processing | Strip historical thinking blocks and inject signatures | `src/plugin/request.ts` |
@@ -98,7 +98,7 @@ Claude models use different protocol formats (snake_case, VALIDATED mode), requi
 **Key Transformation Rules**
 
 | Original Format | Transformed Format | Description |
-| --------------- | ------------------ | ----------- |
+|--- | --- | ---|
 | `toolConfig.functionCallingConfig.mode` | `"VALIDATED"` | Force enable tool call verification |
 | `thinkingConfig.includeThoughts` | `include_thoughts` | snake_case format |
 | `thinkingConfig.thinkingBudget` | `thinking_budget` | snake_case format |
@@ -151,7 +151,7 @@ Gemini models use camelCase format and have strict requirements for JSON Schema 
 **Key Transformation Rules**
 
 | Original Format | Transformed Format | Description |
-| --------------- | ------------------ | ----------- |
+|--- | --- | ---|
 | JSON Schema `type: "object"` | `type: "OBJECT"` | Types must be uppercase |
 | `additionalProperties: false` | Remove | Gemini API doesn't support |
 | `$ref: "#/$defs/Foo"` | Convert to `description: "See: Foo"` | References converted to description |
@@ -221,7 +221,7 @@ Antigravity API uses strict protobuf-backed validation and doesn't support all f
 **Unsupported Fields List**:
 
 | Field | Why Unsupported | Alternative |
-| ----- | -------------- | ----------- |
+|--- | --- | ---|
 | `$ref` | References not allowed | Convert to description hint |
 | `const` | Constants not allowed | Use `enum` |
 | `additionalProperties` | Doesn't validate extra properties | Note in description |
@@ -287,7 +287,7 @@ Antigravity API returns SSE (Server-Sent Events) streams, which need to be conve
 **Key Transformation Rules**
 
 | Original Format | Transformed Format | Description |
-| --------------- | ------------------ | ----------- |
+|--- | --- | ---|
 | `thought: true` | `type: "reasoning"` | Thinking block format conversion |
 | `text` | Keep unchanged | Text content |
 | `tool_use` | Keep unchanged | Tool calls |
@@ -448,7 +448,7 @@ Key points of request transformation mechanism:
 > Updated: 2026-01-23
 
 | Feature | File Path | Line Numbers |
-|---------|-----------|--------------|
+|--- | --- | ---|
 | Main request transformation entry | [`src/plugin/request.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request.ts#L585) | 585-1443 |
 | Response transformation entry | [`src/plugin/request.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request.ts#L1445) | 1445-1663 |
 | Claude model detection | [`src/plugin/transform/claude.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/claude.ts#L27) | 27-29 |
@@ -457,9 +457,9 @@ Key points of request transformation mechanism:
 | Gemini model detection | [`src/plugin/transform/gemini.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/gemini.ts#L129) | 129-132 |
 | Gemini 3 Thinking configuration | [`src/plugin/transform/gemini.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/gemini.ts) | Find `buildGemini3ThinkingConfig` |
 | Gemini Schema transformation | [`src/plugin/transform/gemini.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/gemini.ts#L52) | 52-124 |
-| Schema cleaning - $ref conversion | [`src/plugin/request-helpers.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request-helpers.ts#L55) | 55-80 |
-| Schema cleaning - const conversion | [`src/plugin/request-helpers.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request-helpers.ts#L86) | 86-104 |
-| Schema cleaning - remove unsupported fields | [`src/plugin/request-helpers.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request-helpers.ts#L150) | 150-280 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Thinking block stripping | [`src/plugin/request-helpers.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request-helpers.ts) | Find `deepFilterThinkingBlocks` |
 | Thinking block signature injection | [`src/plugin/request.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request.ts#L715) | 715-720 |
 | Streaming response transformation | [`src/plugin/core/streaming.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/core/streaming.ts) | Full file |

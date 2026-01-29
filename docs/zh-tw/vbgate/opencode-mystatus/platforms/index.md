@@ -15,7 +15,7 @@ order: 2
 opencode-mystatus 支援以下 4 個主流 AI 平台：
 
 | 平台 | 限額類型 | 特點 |
-|------|---------|------|
+|--- | --- | ---|
 | OpenAI | 3 小時 / 24 小時滑動視窗 | 支援 Plus、Team、Pro 訂閱 |
 | 智證 AI | 5 小時 Token / MCP 月度配額 | 支援 Coding Plan |
 | GitHub Copilot | 月度配額 | 顯示 Premium Requests 使用量 |

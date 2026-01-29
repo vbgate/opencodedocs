@@ -47,7 +47,7 @@ Error: No SKILL.md files found in repository
 OpenSkills 的错误主要分为 4 类：
 
 | 错误类型 | 常见原因 | 解决思路 |
-| -------- | -------- | -------- |
+|--- | --- | ---|
 | **Git 相关** | 网络问题、SSH 配置、仓库不存在 | 检查网络、配置 Git 凭证、验证仓库地址 |
 | **文件相关** | SKILL.md 缺失、格式错误、路径错误 | 检查文件存在性、验证 YAML 格式 |
 | **权限相关** | 目录权限、路径遍历、符号链接 | 检查目录权限、验证安装路径 |
@@ -75,7 +75,7 @@ Tip: For private repos, ensure git SSH keys or credentials are configured
 **可能原因**：
 
 | 原因 | 场景 |
-| ---- | ---- |
+|--- | ---|
 | 仓库不存在 | 拼写错误的 owner/repo |
 | 私有仓库 | 未配置 SSH key 或 Git 凭证 |
 | 网络问题 | 无法访问 GitHub |
@@ -118,7 +118,7 @@ Error: No valid SKILL.md files found
 **可能原因**：
 
 | 原因 | 说明 |
-| ---- | ---- |
+|--- | ---|
 | 仓库无 SKILL.md | 仓库不是技能仓库 |
 | SKILL.md 无 frontmatter | 缺少 YAML 元数据 |
 | SKILL.md 格式错误 | YAML 语法错误 |
@@ -172,7 +172,7 @@ Error: Path must be a directory
 **可能原因**：
 
 | 原因 | 说明 |
-| ---- | ---- |
+|--- | ---|
 | 路径拼写错误 | 输入了错误的路径 |
 | 路径指向文件 | 应该是目录而不是文件 |
 | 路径未展开 | 使用 `~` 时需要展开 |
@@ -219,8 +219,8 @@ Error: Invalid SKILL.md (missing YAML frontmatter)
 **可能原因**：
 
 | 原因 | 说明 |
-| ---- | ---- |
-| 缺少 `---` 分隔符 | YAML frontmatter 必须用 `---` 包裹 |
+|--- | ---|
+|--- | ---|
 | 缺少必需字段 | 必须有 `name` 和 `description` |
 | YAML 语法错误 | 冒号、引号等格式问题 |
 
@@ -259,7 +259,7 @@ Security error: Installation path outside target directory
 **可能原因**：
 
 | 原因 | 说明 |
-| ---- | ---- |
+|--- | ---|
 | 技能名称包含 `..` | 尝试访问目标目录外的路径 |
 | 符号链接指向外部 | symlink 指向目标目录外 |
 | 恶意技能 | 技能试图绕过安全限制 |
@@ -308,7 +308,7 @@ Install skills: npx openskills install owner/repo
 **可能原因**：
 
 | 原因 | 说明 |
-| ---- | ---- |
+|--- | ---|
 | 技能未安装 | 该技能没有安装在任意目录中 |
 | 技能名称拼写错误 | 名称不匹配 |
 | 安装在其他位置 | 技能安装在非标准目录 |
@@ -354,7 +354,7 @@ Error: No skill names provided
 **可能原因**：
 
 | 原因 | 说明 |
-| ---- | ---- |
+|--- | ---|
 | 忘记传参 | `openskills read` 后没有参数 |
 | 空字符串 | 传递了空字符串 |
 
@@ -391,7 +391,7 @@ Error: Output file must be a markdown file (.md)
 **可能原因**：
 
 | 原因 | 说明 |
-| ---- | ---- |
+|--- | ---|
 | 输出文件不是 .md | 指定了 .txt、.json 等格式 |
 | --output 参数错误 | 路径不以 .md 结尾 |
 
@@ -432,7 +432,7 @@ No skills installed. Install skills first:
 **可能原因**：
 
 | 原因 | 说明 |
-| ---- | ---- |
+|--- | ---|
 | 从未安装技能 | 首次使用 OpenSkills |
 | 删除了技能目录 | 手动删除了技能文件 |
 
@@ -470,7 +470,7 @@ Skipped: my-skill (no source metadata; re-install once to enable updates)
 **可能原因**：
 
 | 原因 | 说明 |
-| ---- | ---- |
+|--- | ---|
 | 旧版本安装 | 技能安装于元数据功能之前 |
 | 手动复制 | 直接复制技能目录，未通过 OpenSkills 安装 |
 | 元数据文件损坏 | `.openskills.json` 损坏或丢失 |
@@ -511,7 +511,7 @@ Skipped: my-skill (local source missing)
 **可能原因**：
 
 | 原因 | 说明 |
-| ---- | ---- |
+|--- | ---|
 | 本地路径被移动 | 源目录位置改变 |
 | 本地路径被删除 | 源目录不存在 |
 | 路径未展开 | 使用 `~` 但元数据中存储了展开路径 |
@@ -549,7 +549,7 @@ Skipped: my-skill (SKILL.md not found in repo at subpath)
 **可能原因**：
 
 | 原因 | 说明 |
-| ---- | ---- |
+|--- | ---|
 | 仓库结构变化 | 技能子路径或名称改变 |
 | 技能被删除 | 仓库中不再包含该技能 |
 | 子路径错误 | 元数据中记录的子路径不正确 |
@@ -588,7 +588,7 @@ Skipped: my-skill (SKILL.md not found in repo at subpath)
 **现象**：
 
 | 操作 | 现象 |
-| ---- | ---- |
+|--- | ---|
 | 安装失败 | 提示权限错误 |
 | 删除失败 | 提示无法删除文件 |
 | 读取失败 | 提示文件访问受限 |
@@ -596,7 +596,7 @@ Skipped: my-skill (SKILL.md not found in repo at subpath)
 **可能原因**：
 
 | 原因 | 说明 |
-| ---- | ---- |
+|--- | ---|
 | 目录权限不足 | 用户无写入权限 |
 | 文件权限不足 | 文件只读 |
 | 系统保护 | macOS SIP、Windows UAC 限制 |
@@ -639,7 +639,7 @@ Skipped: my-skill (SKILL.md not found in repo at subpath)
 **现象**：
 
 | 现象 | 说明 |
-| ---- | ---- |
+|--- | ---|
 | 列表时跳过技能 | `openskills list` 不显示该技能 |
 | 读取失败 | 提示文件不存在 |
 | 更新失败 | 源路径无效 |
@@ -647,7 +647,7 @@ Skipped: my-skill (SKILL.md not found in repo at subpath)
 **可能原因**：
 
 | 原因 | 说明 |
-| ---- | ---- |
+|--- | ---|
 | 目标目录被删除 | 符号链接指向不存在的路径 |
 | 符号链接损坏 | 链接文件本身损坏 |
 | 跨设备链接 | 某些系统不支持跨设备的符号链接 |
@@ -719,7 +719,7 @@ Skipped: my-skill (SKILL.md not found in repo at subpath)
 本课学习了 OpenSkills 常见问题的排查和修复方法：
 
 | 问题类型 | 关键解决方法 |
-| -------- | ------------ |
+|--- | ---|
 | Git clone 失败 | 检查网络、配置凭证、验证仓库地址 |
 | 找不到 SKILL.md | 检查仓库结构、验证 YAML 格式 |
 | 读取失败 | 用 `openskills list` 检查技能状态 |
@@ -747,7 +747,7 @@ Skipped: my-skill (SKILL.md not found in repo at subpath)
 > 更新时间：2026-01-24
 
 | 功能                | 文件路径                                                                                   | 行号     |
-| ------------------- | ------------------------------------------------------------------------------------------ | -------- |
+|--- | --- | ---|
 | Git clone 失败处理   | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L162-L168) | 162-168  |
 | 路径不存在错误       | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L205-L207) | 205-207  |
 | 不是目录错误         | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L210-L213) | 210-213  |

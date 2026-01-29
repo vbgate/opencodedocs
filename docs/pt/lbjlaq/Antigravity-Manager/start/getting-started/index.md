@@ -126,7 +126,7 @@ Vá para o capítulo "Iniciar Proxy Reverso Local e Conectar o Primeiro Cliente"
 ## Aviso sobre armadilhas
 
 | Cenário | O que você pode fazer (❌) | Prática recomendada (✓) |
-|---------|---------------------------|--------------------------|
+|--- | --- | ---|
 | Quer que celular/outro PC acesse | Abra diretamente `allow_lan_access=true` mas não configure autenticação | Habilite autenticação simultaneamente, e primeiro valide `GET /healthz` na LAN |
 | Cliente reporta 404 | Mude host/port apenas, não importa como o cliente concatena `/v1` | Primeiro confirme a estratégia de concatenação base_url do cliente, depois decida se precisa prefixar `/v1` |
 | Começa logo resolvendo Claude Code | Conecte diretamente o cliente complexo, quando falhar não sabe onde verificar | Primeiro execute o ciclo mínimo: inicie Proxy -> `GET /healthz` -> depois conecte o cliente |
@@ -155,11 +155,11 @@ Vá para o capítulo "Iniciar Proxy Reverso Local e Conectar o Primeiro Cliente"
 > Atualizado em: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Linha |
-|---------------|---------------------|-------|
+|--- | --- | ---|
 | Posicionamento do produto (hub de transbordo local AI / lacuna de protocolo) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L35-L77) | 35-77 |
 | Visão geral dos endpoints do Router (OpenAI/Claude/Gemini/healthz) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | Lógica de porta padrão / acesso apenas local padrão / key padrão e bind address | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L291) | 174-291 |
-| Decisão real do `auth_mode=auto` (LAN -> all_except_health) | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L10-L29) | 10-29 |
+|--- | --- | ---|
 | Estrutura de roteamento da página GUI (Dashboard/Accounts/API Proxy/Monitor/Token Stats/Settings) | [`src/App.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/App.tsx#L19-L48) | 19-48 |
 
 **Valores padrão principais**:

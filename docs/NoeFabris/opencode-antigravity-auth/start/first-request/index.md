@@ -67,7 +67,7 @@ Sending the first request can verify whether the entire pipeline is unobstructed
 In the Antigravity plugin, **model and variant are two independent concepts**:
 
 | Concept | Role | Example |
-|---------|------|---------|
+|--- | --- | ---|
 | **Model** | Select the specific AI model | `antigravity-claude-sonnet-4-5-thinking` |
 | **Variant** | Configure the model's thinking budget or mode | `low` (lightweight thinking), `max` (maximum thinking) |
 
@@ -85,7 +85,7 @@ Thinking budget refers to the number of tokens a model can use for "thinking" be
 Recommended model and variant combinations for different needs:
 
 | Need | Model | Variant | Characteristics |
-|------|-------|---------|-----------------|
+|--- | --- | --- | ---|
 | **Quick Testing** | `antigravity-gemini-3-flash` | `minimal` | Fastest response, ideal for verification |
 | **Daily Development** | `antigravity-claude-sonnet-4-5-thinking` | `low` | Balanced speed and quality |
 | **Complex Reasoning** | `antigravity-claude-opus-4-5-thinking` | `max` | Strongest reasoning capability |
@@ -230,7 +230,7 @@ opencode run "Describe the content of this image" --model=google/antigravity-gem
 After completing the above tests, confirm the following checklist:
 
 | Check Item | Expected Result | Status |
-|------------|-----------------|--------|
+|--- | --- | ---|
 | **Basic Connection** | Simple request from Step 1 succeeds | ☐ |
 | **Thinking Model** | See thinking process in Step 2 | ☐ |
 | **Gemini 3 Model** | Both models from Step 3 work normally | ☐ |
@@ -340,7 +340,7 @@ Different models support different variant configuration formats.
 Check the variant definition in the model configuration:
 
 | Model Type | Variant Format | Example Value |
-|------------|----------------|---------------|
+|--- | --- | ---|
 | **Claude Thinking** | `thinkingConfig.thinkingBudget` | `{ "thinkingConfig": { "thinkingBudget": 32768 } }` |
 | **Gemini 3** | `thinkingLevel` | `{ "thinkingLevel": "high" }` |
 | **Gemini 2.5** | `thinkingConfig.thinkingBudget` | `{ "thinkingConfig": { "thinkingBudget": 8192 } }` |
@@ -462,7 +462,7 @@ In daily development:
 > Last updated: 2026-01-23
 
 | Function | File Path | Lines |
-|----------|-----------|-------|
+|--- | --- | ---|
 | Request transformation entry | [`src/plugin/request.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request.ts) | 1-100 |
 | Account selection and token management | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts) | 1-50 |
 | Claude model transformation | [`src/plugin/transform/claude.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/claude.ts) | Full file |

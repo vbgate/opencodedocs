@@ -96,7 +96,7 @@ Para evitar activaciones consecutivas que causen bucles infinitos, entre dos com
 Cuando la compresión se activa, Supermemory inyecta un System Prompt especial (`[COMPACTION CONTEXT INJECTION]`) al Agent, forzando que el resumen incluya las siguientes 5 partes:
 
 | Sección | Explicación del contenido | Propósito |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **1. User Requests** | Solicitudes originales del usuario (conservar tal cual) | Prevenir deriva de requisitos |
 | **2. Final Goal** | Objetivo final a alcanzar | Clarificar el estado final |
 | **3. Work Completed** | Trabajo completado, archivos modificados | Evitar trabajo repetitivo |
@@ -231,7 +231,7 @@ La compresión preventiva es el "secreto de larga distancia" de Supermemory. A t
 > Fecha de actualización: 2026-01-23
 
 | Función | Ruta del archivo | Número de línea |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Definición de constantes de umbral | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L11-L14) | 11-14 |
 | Generación de Prompt de guía | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L58-L98) | 58-98 |
 | Lógica de detección de activación | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L317-L358) | 317-358 |

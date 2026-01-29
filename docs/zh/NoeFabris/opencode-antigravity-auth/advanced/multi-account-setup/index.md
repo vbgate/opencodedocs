@@ -37,7 +37,7 @@ order: 4
 多账户配置适合以下场景：
 
 | 场景 | 推荐账户数 | 原因 |
-| ---- | ---------- | ---- |
+|--- | --- | ---|
 | 个人开发 | 2-3 个 | 备用账户，避免中断 |
 | 团队协作 | 3-5 个 | 分摊请求，减少竞争 |
 | 高频 API 调用 | 5+ 个 | 负载均衡，最大化吞吐 |
@@ -66,7 +66,7 @@ order: 4
 假设每个账户的 Claude 配额为 1000 请求/分钟：
 
 | 账户数 | 理论总配额 | 实际可用（考虑缓存） |
-| ------ | ---------- | ------------------ |
+|--- | --- | ---|
 | 1      | 1000/min   | 1000/min          |
 | 3      | 3000/min   | ~2500/min（sticky 策略） |
 | 5      | 5000/min   | ~4000/min（round-robin） |
@@ -254,7 +254,7 @@ notepad %APPDATA%\opencode\antigravity.json
 根据你的账户数选择：
 
 | 账户数 | 推荐策略 | 配置值 | 原因 |
-| ------ | -------- | ------ | ---- |
+|--- | --- | --- | ---|
 | 1      | sticky   | `"sticky"` | 保持 prompt cache |
 | 2-5    | hybrid   | `"hybrid"` | 平衡吞吐和缓存 |
 | 5+     | round-robin | `"round-robin"` | 最大化吞吐 |
@@ -406,7 +406,7 @@ opencode auth login
 > 更新时间：2026-01-23
 
 | 功能        | 文件路径                                                                                    | 行号    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | AccountManager 类 | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L174-L250) | 174-250 |
 | 负载均衡策略 | [`src/plugin/rotation.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/rotation.ts)         | 全文   |
 | 配置 Schema | [`src/plugin/config/schema.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/schema.ts) | 全文   |
@@ -415,7 +415,7 @@ opencode auth login
 **关键常量**：
 
 | 常量名 | 值 | 说明 |
-| -------- | --- | ---- |
+|--- | --- | ---|
 | `QUOTA_EXHAUSTED_BACKOFFS` | `[60000, 300000, 1800000, 7200000]` | 配额耗尽退避时间（1分钟→5分钟→30分钟→2小时） |
 | `RATE_LIMIT_EXCEEDED_BACKOFF` | `30000` | 速率限制退避时间（30秒） |
 | `MIN_BACKOFF_MS` | `2000` | 最小退避时间（2秒） |
@@ -430,7 +430,7 @@ opencode auth login
 **配置项**（来自 schema.ts）：
 
 | 配置项 | 类型 | 默认值 | 说明 |
-| -------- | ---- | ------ | ---- |
+|--- | --- | --- | ---|
 | `account_selection_strategy` | enum | `"hybrid"` | 账户选择策略 |
 | `quota_fallback` | boolean | `false` | 启用 Gemini 双配额 fallback |
 | `pid_offset_enabled` | boolean | `false` | 启用 PID 偏移 |

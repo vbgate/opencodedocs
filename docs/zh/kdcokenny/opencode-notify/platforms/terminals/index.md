@@ -54,7 +54,7 @@ opencode-notify 使用 `detect-terminal` 库自动识别你使用的终端模拟
 ### macOS 终端
 
 | 终端名称 | 进程名 | 特性 |
-|---------|-------|------|
+|--- | --- | ---|
 | **Ghostty** | Ghostty | ✅ 焦点检测 + ✅ 点击聚焦 |
 | **iTerm2** | iTerm2 | ✅ 焦点检测 + ✅ 点击聚焦 |
 | **Kitty** | kitty | ✅ 焦点检测 + ✅ 点击聚焦 |
@@ -78,7 +78,7 @@ macOS 终端支持完整功能:
 ### Windows 终端
 
 | 终端名称 | 特性 |
-|---------|------|
+|--- | ---|
 | **Windows Terminal** | ✅ 原生通知(Toast) |
 | **Git Bash** | ✅ 原生通知(Toast) |
 | **ConEmu** | ✅ 原生通知(Toast) |
@@ -100,13 +100,13 @@ Windows 平台功能相对基础:
 ### Linux 终端
 
 | 终端名称 | 特性 |
-|---------|------|
-| **gnome-terminal** | ✅ 原生通知(notify-send) |
+|--- | ---|
+|--- | ---|
 | **konsole** | ✅ 原生通知(notify-send) |
 | **xterm** | ✅ 原生通知(notify-send) |
 | **lxterminal** | ✅ 原生通知(notify-send) |
-| **xfce4-terminal** | ✅ 原生通知(notify-send) |
-| **mate-terminal** | ✅ 原生通知(notify-send) |
+|--- | ---|
+|--- | ---|
 | **alacritty** | ✅ 原生通知(notify-send) |
 | **kitty** | ✅ 原生通知(notify-send) |
 | **wezterm** | ✅ 原生通知(notify-send) |
@@ -317,7 +317,7 @@ notepad $env:USERPROFILE\.config\opencode\kdco-notify.json
 终端名称必须是 `detect-terminal` 库识别的名称。常见名称:
 
 | 终端 | 配置值 |
-|-----|-------|
+|--- | ---|
 | Ghostty | `"ghostty"` |
 | iTerm2 | `"iterm2"` 或 `"iterm"` |
 | Kitty | `"kitty"` |
@@ -487,7 +487,7 @@ console.log("Terminal info:", terminalInfo)
 > 更新时间:2026-01-27
 
 | 功能 | 文件路径 | 行号 |
-| ---- | --------- | ---- |
+|--- | --- | ---|
 | 终端映射表 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L71-L84) | 71-84 |
 | 终端检测函数 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L145-L164) | 145-164 |
 | macOS Bundle ID 获取 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L135-L137) | 135-137 |

@@ -95,7 +95,7 @@ To prevent continuous triggering loops, there is at least a **30-second** interv
 When compaction is triggered, Supermemory injects a special System Prompt (`[COMPACTION CONTEXT INJECTION]`), mandating the summary to include the following 5 sections:
 
 | Section | Content Description | Purpose |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **1. User Requests** | Original user requests (kept as-is) | Prevent requirement drift |
 | **2. Final Goal** | The ultimate goal to achieve | Clarify the end state |
 | **3. Work Completed** | Work done, files modified | Avoid repetitive work |
@@ -230,7 +230,7 @@ Preemptive compaction is Supermemory's "marathon secret". By **intervening early
 > Updated: 2026-01-23
 
 | Feature | File Path | Line No. |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Threshold Constants | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L11-L14) | 11-14 |
 | Guidance Prompt Generation | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L58-L98) | 58-98 |
 | Trigger Detection Logic | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L317-L358) | 317-358 |

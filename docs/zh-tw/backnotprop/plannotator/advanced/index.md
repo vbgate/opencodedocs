@@ -19,7 +19,7 @@ description: "掌握 Plannotator 的團隊協作和筆記整合功能。透過 U
 ## 本章內容
 
 | 課程 | 說明 | 適合情境 |
-|------|------|----------|
+|--- | --- | ---|
 | [URL 分享](./url-sharing/) | 透過 URL 分享計畫和註解，實現無後端的團隊協作 | 需要與團隊成員分享審查結果 |
 | [Obsidian 整合](./obsidian-integration/) | 將批准的計畫自動儲存到 Obsidian vault | 使用 Obsidian 管理知識庫 |
 | [Bear 整合](./bear-integration/) | 透過 x-callback-url 將計畫儲存到 Bear | macOS/iOS 使用者使用 Bear 筆記 |

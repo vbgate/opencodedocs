@@ -52,7 +52,7 @@ npm update @vbgate/opencode-mystatus
 支持一键查询以下平台的额度使用情况：
 
 | 平台 | 支持的订阅类型 | 额度类型 |
-| ---- | -------------- | -------- |
+|--- | --- | ---|
 | OpenAI | Plus/Team/Pro | 3 小时限额、24 小时限额 |
 | 智谱 AI | Coding Plan | 5 小时 Token 限额、MCP 月度配额 |
 | Google Cloud | Antigravity | G3 Pro、G3 Image、G3 Flash、Claude |

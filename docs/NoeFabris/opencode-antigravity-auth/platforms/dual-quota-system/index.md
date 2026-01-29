@@ -46,7 +46,7 @@ The **dual quota system** is a mechanism where the Antigravity Auth plugin maint
 The Antigravity Auth plugin maintains **two independent Gemini quota pools** for each Google account:
 
 | Quota Pool | Type | Priority | Reset Rule |
-| ---------- | ---- | -------- | ---------- |
+|--- | --- | --- | ---|
 | **Antigravity** | Primary quota pool | Use first | Dynamically calculated based on reset time returned by server |
 | **Gemini CLI** | Backup quota pool | fallback use | Dynamically calculated based on reset time returned by server |
 
@@ -273,7 +273,7 @@ flowchart TD
 The plugin uses the following quota keys to track rate limiting (source code: `accounts.ts:77`):
 
 | Quota Key | Meaning |
-| --------- | ------- |
+|--- | ---|
 | `claude` | Claude model quota |
 | `gemini-antigravity` | Gemini Antigravity quota pool |
 | `gemini-cli` | Gemini CLI quota pool |
@@ -305,7 +305,7 @@ When selecting a quota pool, the plugin checks in the following order (source co
 Automatic fallback triggers when the following conditions are met:
 
 | Condition | Description | Source Location |
-| --------- | ----------- | --------------- |
+|--- | --- | ---|
 | `quota_fallback = true` | Automatic fallback enabled in configuration | `config/schema.ts:234` |
 | Current account's Antigravity quota pool rate-limited | Received 429 response | `plugin.ts:1149` |
 | Model doesn't explicitly specify quota pool | Model name doesn't contain `:antigravity` or `:gemini-cli` suffix | `plugin.ts:1151` |
@@ -348,7 +348,7 @@ By properly using the dual quota system, you can double each account's Gemini qu
 > Last updated: 2026-01-23
 
 | Function | File Path | Line Numbers |
-| -------- | --------- | ------------ |
+|--- | --- | ---|
 | Quota key definition (BaseQuotaKey) | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L77-L78) | 77-78 |
 | Get quota key (getQuotaKey) | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L107-L116) | 107-116 |
 | Check quota pool rate limit status | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L134-L152) | 134-152 |

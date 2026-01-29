@@ -214,7 +214,7 @@ AI 根据技能内容输出友好的问候。
 ### 技能找不到？
 
 | 错误现象 | 可能原因 | 解决方法 |
-| -------- | -------- | -------- |
+|--- | --- | ---|
 | 插件找不到技能 | 目录名或文件名错误 | 确认文件名是 `SKILL.md`（全大写） |
 | 插件找不到技能 | Frontmatter 格式错误 | 检查 `---` 是否存在，前后是否有空行 |
 | 插件找不到技能 | name 字段不符合规范 | name 必须是小写字母、数字、连字符 |
@@ -222,7 +222,7 @@ AI 根据技能内容输出友好的问候。
 ### 解析失败？
 
 | 错误现象 | 可能原因 | 解决方法 |
-| -------- | -------- | -------- |
+|--- | --- | ---|
 | YAML 解析失败 | Frontmatter 格式不对 | 确保使用正确的 YAML 格式，字符串用引号包裹 |
 | 验证失败 | name 包含大写字母或特殊字符 | name 字段只能是小写字母、数字、连字符 |
 | 验证失败 | description 为空 | description 必须有值 |
@@ -258,7 +258,7 @@ description: A skill for demonstration
 ### Frontmatter 字段必填性
 
 | 字段 | 是否必填 | 约束 | 示例 |
-| ---- | -------- | ---- | ---- |
+|--- | --- | --- | ---|
 | name | ✅ 是 | 小写字母数字连字符 | `my-skill` |
 | description | ✅ 是 | 非空字符串 | `A skill for git management` |
 | license | ❌ 否 | 开源协议名称 | `MIT` |
@@ -296,7 +296,7 @@ description: A skill for demonstration
 > 更新时间：2026-01-24
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Frontmatter Schema 定义 | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L105-L114) | 105-114 |
 | 解析 SKILL.md 文件 | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L122-L167) | 122-167 |
 | 查找技能脚本 | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L59-L99) | 59-99 |

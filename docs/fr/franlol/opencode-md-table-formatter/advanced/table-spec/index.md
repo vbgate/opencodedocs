@@ -103,7 +103,7 @@ La ligne de séparation est celle entre l'en-tête et les lignes de données, ut
 Chaque cellule doit correspondre à l'expression régulière `/^\s*:?-+:?\s*$/`, ce qui signifie en langage humain:
 
 | Composant | Signification | Exemple |
-| --- | --- | --- |
+|--- | --- | ---|
 | `\s*` | Espace blanc optionnel | Permet `| --- |` ou `|---|` |
 | `:?` | Deux-points optionnels | Pour spécifier l'alignement |
 | `-+` | Au moins un tiret | `-`, `---`, `------` sont tous valides |
@@ -145,12 +145,12 @@ Si la première ligne a 3 colonnes, chaque ligne suivante doit également avoir 
 ```markdown
 ✅ Correct (chaque ligne a 3 colonnes)
 | A | B | C |
-| --- | --- | --- |
+|--- | --- | ---|
 | 1 | 2 | 3 |
 
 ❌ Incorrect (la troisième ligne n'a que 2 colonnes)
 | A | B | C |
-| --- | --- | --- |
+|--- | --- | ---|
 | 1 | 2 |
 ```
 
@@ -181,7 +181,7 @@ Emplacement du code source: `index.ts:70-88`
 La ligne de séparation sert non seulement à séparer, mais aussi à spécifier l'alignement:
 
 | Syntaxe | Alignement | Effet |
-| --- | --- | --- |
+|--- | --- | ---|
 | `---` ou `:---` | Aligné à gauche | Texte à gauche (par défaut) |
 | `:---:` | Centré | Texte centré |
 | `---:` | Aligné à droite | Texte à droite |
@@ -190,7 +190,7 @@ La ligne de séparation sert non seulement à séparer, mais aussi à spécifier
 
 ```markdown
 | Aligné à gauche | Centré | Aligné à droite |
-| :--- | :---: | ---: |
+|--- | --- | ---|
 | Texte | Texte | Texte |
 ```
 
@@ -198,7 +198,7 @@ Après formatage:
 
 ```markdown
 | Aligné à gauche |  Centré  | Aligné à droite |
-| :-------------- | :------: | ---------------: |
+|--- | --- | ---|
 | Texte           |  Texte   |            Texte |
 ```
 
@@ -220,7 +220,7 @@ Emplacement du code source: `index.ts:141-149`
 ## Dépannage des erreurs courantes
 
 | Symptôme d'erreur | Cause possible | Solution |
-| --- | --- | --- |
+|--- | --- | ---|
 | `invalid structure` | Ligne de séparation manquante | Ajoutez `\| --- \| --- \|` après l'en-tête |
 | `invalid structure` | Nombre de colonnes incohérent | Vérifiez que chaque ligne a le même nombre de `\|` |
 | `invalid structure` | `\|` manquant au début/à la fin de la ligne | Ajoutez les `\|` manquants |
@@ -239,7 +239,7 @@ Après avoir terminé cette leçon, vous devriez pouvoir répondre:
 ## Résumé de la leçon
 
 | Condition | Exigence |
-| --- | --- |
+|--- | ---|
 | Début et fin de ligne | Doit commencer et finir par `\|` |
 | Nombre de séparateurs | Au moins 2 `\|` |
 | Ligne de séparation | Obligatoire, format `:?-+:?` |
@@ -268,7 +268,7 @@ Après avoir terminé cette leçon, vous devriez pouvoir répondre:
 > Date de mise à jour: 2026-01-26
 
 | Fonction | Chemin du fichier | Numéro de ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Détection de ligne de tableau | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61) | 58-61 |
 | Détection de ligne de séparation | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L63-L68) | 63-68 |
 | Validation de tableau | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88) | 70-88 |

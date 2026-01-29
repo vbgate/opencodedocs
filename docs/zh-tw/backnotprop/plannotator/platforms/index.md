@@ -26,7 +26,7 @@ order: 2
 學習如何審查 AI 產生的執行計畫，新增修改建議，讓 AI 按你的意圖執行。
 
 | 教學 | 說明 |
-|------|------|
+|--- | ---|
 | [計畫審查基礎](./plan-review-basics/) | 學會使用 Plannotator 視覺化審查 AI 產生的計畫，包括批准或拒絕計畫 |
 | [新增計畫註解](./plan-review-annotations/) | 掌握如何在計畫中新增不同類型的註解（刪除、取代、插入、評論） |
 | [新增圖像標註](./plan-review-images/) | 學會在計畫審查中附加圖像，並使用畫筆、箭頭、圓形工具進行標註 |
@@ -36,8 +36,8 @@ order: 2
 學習如何審查程式碼變更，新增行級註解，在提交前發現問題。
 
 | 教學 | 說明 |
-|------|------|
-| [程式碼審查基礎](./code-review-basics/) | 學會使用 `/plannotator-review` 指令審查 git diff，支援 side-by-side 和 unified 檢視 |
+|--- | ---|
+|--- | ---|
 | [新增程式碼註解](./code-review-annotations/) | 掌握如何在程式碼審查中新增行級註解（comment/suggestion/concern） |
 | [切換 Diff 檢視](./code-review-diff-types/) | 學會在程式碼審查中切換不同的 diff 類型（uncommitted/staged/last commit/branch） |
 

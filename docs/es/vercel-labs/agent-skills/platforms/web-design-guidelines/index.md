@@ -38,7 +38,7 @@ Escribiste componentes de UI, pero siempre sientes que algo no está bien:
 Las guías de diseño de interfaz web cubren **17 categorías**, agrupadas en tres bloques principales por prioridad:
 
 | Bloque de categorías | Enfoque | Beneficio típico |
-| ------ | ---- | ---- |
+|--- | --- | ---|
 | **Accesibilidad** | Asegurar que todos los usuarios puedan usar (incluyendo lectores de pantalla, usuarios de teclado) | Cumplir con estándares WCAG, ampliar base de usuarios |
 | **Rendimiento y UX** | Optimizar velocidad de carga, fluidez de animaciones, experiencia de interacción | Mejorar retención de usuarios, reducir tasa de rebote |
 | **Integridad y detalles** | Modo oscuro, diseño responsivo, validación de formularios, manejo de errores | Reducir quejas de usuarios, mejorar imagen de marca |

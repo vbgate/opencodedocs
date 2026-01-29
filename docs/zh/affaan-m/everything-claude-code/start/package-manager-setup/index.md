@@ -386,7 +386,7 @@ Everything Claude Code 的包管理器检测机制非常智能：
 > 更新时间：2026-01-25
 
 | 功能                    | 文件路径                                                                                      | 行号    |
-| ----------------------- | --------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 包管理器检测核心逻辑     | [`scripts/lib/package-manager.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/lib/package-manager.js#L157-L236)         | 157-236 |
 | Lock 文件检测          | [`scripts/lib/package-manager.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/lib/package-manager.js#L92-L102)          | 92-102  |
 | package.json 检测      | [`scripts/lib/package-manager.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/lib/package-manager.js#L107-L126)          | 107-126 |
@@ -396,7 +396,7 @@ Everything Claude Code 的包管理器检测机制非常智能：
 | 项目配置保存            | [`scripts/lib/package-manager.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/lib/package-manager.js#L257-L272)         | 257-272 |
 | 命令行脚本入口          | [`scripts/setup-package-manager.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/setup-package-manager.js#L158-L206)   | 158-206 |
 | 检测命令实现            | [`scripts/setup-package-manager.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/setup-package-manager.js#L62-L95)    | 62-95   |
-| /setup-pm 命令定义     | [`commands/setup-pm.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/setup-pm.md#L1-L81)               | 1-81    |
+|--- | --- | ---|
 
 **关键常量**：
 - `PACKAGE_MANAGERS`：支持的包管理器及其命令配置（第 13-54 行）

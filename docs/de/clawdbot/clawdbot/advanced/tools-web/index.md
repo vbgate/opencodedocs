@@ -46,7 +46,7 @@ Sie möchten, dass der KI-Assistent "online geht", wissen aber nicht:
 
 ::: tip Tool-Auswahl-Leitfaden
 | Szenario | Empfohlenes Tool | Grund |
-|------|----------|------|
+|--- | --- | ---|
 | Mehrere Quellen suchen | web_search | Gibt mehrere Ergebnisse in einer einzigen Abfrage zurück |
 | Inhalt einer einzelnen Seite extrahieren | web_fetch | Ruft vollständigen Text ab, unterstützt Markdown |
 | Dynamische Seiten/Anmeldung erforderlich | [browser](../tools-browser/) | Erfordert JavaScript-Ausführung |
@@ -111,7 +111,7 @@ web_search und web_fetch sind **leichtgewichtige Tools**, die kein JavaScript au
 Beide Tools enthalten integrierten Cache, um doppelte Anfragen zu reduzieren:
 
 | Tool | Cache-Schlüssel | Standard-TTL | Konfigurationselement |
-|------|---------|----------|--------|
+|--- | --- | --- | ---|
 | web_search | `provider:query:count:country:search_lang:ui_lang:freshness` | 15 Minuten | `tools.web.search.cacheTtlMinutes` |
 | web_fetch | `fetch:url:extractMode:maxChars` | 15 Minuten | `tools.web.fetch.cacheTtlMinutes` |
 
@@ -128,7 +128,7 @@ Beide Tools enthalten integrierten Cache, um doppelte Anfragen zu reduzieren:
 Clawdbot unterstützt zwei Suchanbieter:
 
 | Anbieter | Vorteile | Nachteile | API-Key |
-|--------|------|--------|---------|
+|--- | --- | --- | ---|
 | **Brave** (Standard) | Schnell, strukturierte Ergebnisse, kostenlose Stufe | Traditionelle Suchergebnisse | `BRAVE_API_KEY` |
 | **Perplexity** | KI-synthetisierte Antworten, Zitate, Echtzeit | Erfordert Perplexity- oder OpenRouter-Zugriff | `OPENROUTER_API_KEY` oder `PERPLEXITY_API_KEY` |
 
@@ -317,10 +317,10 @@ Wenn Sie `baseUrl` weglassen, wählt Clawdbot automatisch je nach API-Key-Präfi
 #### 4.3 Perplexity-Modell auswählen
 
 | Modell | Beschreibung | Anwendungsfall |
-|------|------|----------|
+|--- | --- | ---|
 | `perplexity/sonar` | Schnelle Q&A + Web-Suche | Einfache Abfragen, schnelle Suche |
 | `perplexity/sonar-pro` (Standard) | Multi-Schritt-Reasoning + Web-Suche | Komplexe Probleme, erfordert Reasoning |
-| `perplexity/sonar-reasoning-pro` | Thought-Chain-Analyse | Tiefe Forschung, erfordert Reasoning-Prozess |
+|--- | --- | ---|
 
 ### Schritt 5: web_fetch-Tool konfigurieren
 
@@ -552,14 +552,14 @@ web_fetch blockiert standardmäßig interne Netzwerk-IPs, um SSRF-Angriffe zu ve
 > Aktualisierungsdatum: 2026-01-27
 
 | Funktion | Dateipfad | Zeilennummer |
-|------|----------|------|
-| Definition des web_search-Tools | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 409-483 |
-| Definition des web_fetch-Tools | [`src/agents/tools/web-fetch.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-fetch.ts) | 572-624 |
-| Brave Search API-Aufruf | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 309-407 |
-| Perplexity API-Aufruf | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 268-307 |
-| Readability-Inhaltsextraktion | [`src/agents/tools/web-fetch-utils.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-fetch-utils.ts) | - |
-| Firecrawl-Integration | [`src/agents/tools/web-fetch.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-fetch.ts) | 257-330 |
-| Cache-Implementierung | [`src/agents/tools/web-shared.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-shared.ts) | - |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | SSRF-Schutz | [`src/infra/net/ssrf.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/net/ssrf.ts) | - |
 | Konfigurationsschema | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | - |
 

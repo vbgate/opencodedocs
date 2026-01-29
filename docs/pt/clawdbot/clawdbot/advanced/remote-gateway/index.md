@@ -39,7 +39,7 @@ Você pode ter estes problemas:
 **Gateway Remoto** é adequado para os seguintes cenários:
 
 | Cenário | Solução Recomendada | Razão |
-| ------ | ------------------- | ----- |
+|--- | --- | ---|
 | Notebook hiberna frequentemente, precisa de IA sempre ativa | **Tailscale Serve + Linux VPS** | VPS não hiberna, acesso seguro via tailnet |
 | Gateway em desktop doméstico, controle remoto de notebook | **Túnel SSH** ou **Tailscale Serve** | Sessões e configurações unificadas do Gateway |
 | Precisa acessar da internet pública (teste temporário) | **Tailscale Funnel + Senha** | Exposição rápida, mas precisa de proteção por senha |
@@ -97,7 +97,7 @@ flowchart TD
 ### Três Conceitos Chave
 
 | Conceito | Explicação | Exemplo |
-| -------- | ---------- | ------- |
+|--- | --- | ---|
 | **Host do Gateway** | Máquina que executa o serviço Gateway, possui sessões, autenticação, canais e estado | VPS Linux, desktop doméstico |
 | **Cliente** | Ferramenta que se conecta ao Gateway (macOS App, CLI, WebChat) | Seu notebook, celular |
 | **Nó de Dispositivo** | Periférico conectado via Gateway WebSocket, executa operações locais do dispositivo | Dispositivo iOS, dispositivo Android, modo nó macOS |
@@ -107,7 +107,7 @@ flowchart TD
 Este é o ponto mais comum de confusão:
 
 | Tipo de Operação | Onde É Executado | Razão |
-| ----------------- | ---------------- | ----- |
+|--- | --- | ---|
 | Ferramenta `exec` | **Host do Gateway** | Comandos Shell são executados na máquina Gateway |
 | Ferramenta `browser` | **Host do Gateway** (ou servidor de controle de navegador separado) | O navegador é iniciado na máquina Gateway |
 | Operações de nó (`camera.snap`, `system.run`) | **Nó de Dispositivo** | Precisa acessar recursos locais do dispositivo |
@@ -540,7 +540,7 @@ clawdbot health --url wss://your-funnel-url.ts.net --password your-secure-passwo
 Após completar qualquer uma das opções acima, verifique os seguintes pontos:
 
 | Item de Verificação | Comando | Resultado Esperado |
-| ------------------- | ------- | ------------------ |
+|--- | --- | ---|
 | Gateway está rodando | `clawdbot gateway status` | ✅ Running |
 | WebSocket está acessível | `clawdbot health --url <url>` | ✅ Healthy |
 | Canais estão conectados | `clawdbot channels status` | ✅ connected |
@@ -667,7 +667,7 @@ ssh -N -L 18790:127.0.0.1:18789 clawdbot-remote
 ### Comparação de Configuração
 
 | Opção | Segurança | Escopo de Acesso | Complexidade de Configuração | Cenário Recomendado |
-| ----- | --------- | ----------------- | ---------------------------- | ------------------- |
+|--- | --- | --- | --- | ---|
 | Tailscale Serve | ⭐⭐⭐⭐⭐ | Tailnet | Médio | **Recomendado**: Gateway Always-on |
 | Túnel SSH | ⭐⭐⭐⭐ | Acesso via conexão SSH | Baixo | Fallback genérico, controle remoto de desktop doméstico |
 | Tailscale Funnel | ⭐⭐ | Internet pública | Baixo | Teste temporário, Demo |
@@ -702,7 +702,7 @@ ssh -N -L 18790:127.0.0.1:18789 clawdbot-remote
 > Última atualização: 2026-01-27
 
 | Funcionalidade | Caminho do Arquivo | Linhas |
-| -------------- | ------------------ | ------ |
+|--- | --- | ---|
 | Schema de Configuração Remota do Gateway | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 200-220 |
 | Schema de Configuração Tailscale do Gateway | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 150-180 |
 | Integração Tailscale | [`src/infra/tailscale.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/tailscale.ts) | 1-100 |

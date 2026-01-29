@@ -31,7 +31,7 @@ AI-generated Markdown tables often look like this:
 
 ```markdown
 | Name | Description | Status |
-|---|---|---|
+|--- | --- | ---|
 | **User Management** | Manage system users | ✅ Complete |
 | API | API documentation | 🚧 In Progress |
 ```
@@ -64,7 +64,7 @@ The plugin automatically detects Markdown tables in AI-generated text and unifie
 
 ```markdown
 | Name | Description | Status |
-|---|---|---|
+|--- | --- | ---|
 | **User Management** | Manage system users | ✅ Complete |
 | API | API documentation | 🚧 In Progress |
 ```
@@ -73,7 +73,7 @@ The plugin automatically detects Markdown tables in AI-generated text and unifie
 
 ```markdown
 | Name         | Description         | Status       |
-| ------------ | ------------ | ---------- |
+|--- | --- | ---|
 | **User Management** | Manage system users | ✅ Complete    |
 | API          | API documentation     | 🚧 In Progress  |
 ```
@@ -111,7 +111,7 @@ Source location: `index.ts:181-185`
 Supports three alignment methods for Markdown tables:
 
 | Syntax | Alignment | Effect |
-| --- | --- | --- |
+|--- | --- | ---|
 | `---` or `:---` | Left-aligned | Text aligned left (both syntaxes have the same effect) |
 | `:---:` | Center-aligned | Text centered |
 | `---:` | Right-aligned | Text aligned right |
@@ -120,7 +120,7 @@ Supports three alignment methods for Markdown tables:
 
 ```markdown
 | Left-aligned | Center | Right-aligned |
-| :--- | :---: | ---: |
+|--- | --- | ---|
 | Text | Text | Text |
 ```
 
@@ -171,7 +171,7 @@ Source location: `index.ts:168-193`
 The plugin correctly handles various edge cases:
 
 | Scenario | Handling Method |
-| --- | --- |
+|--- | ---|
 | Emoji emojis | Use `Bun.stringWidth` to correctly calculate display width |
 | Unicode characters | Chinese, Japanese, and other full-width characters align correctly |
 | Empty cells | Pad with spaces to minimum width (3 characters) |
@@ -225,7 +225,7 @@ After completing this lesson, you should be able to answer:
 ## Lesson Summary
 
 | Feature | Description |
-| --- | --- |
+|--- | ---|
 | Automatic Formatting | Triggers automatically after AI generates text, no manual operation needed |
 | Concealment Mode Compatibility | Correctly calculates display width after Markdown symbols are hidden |
 | Alignment Support | Left-aligned, center-aligned, right-aligned |
@@ -254,7 +254,7 @@ After completing this lesson, you should be able to answer:
 > Last updated: 2026-01-26
 
 | Feature | File path | Line number |
-| --- | --- | --- |
+|--- | --- | ---|
 | Plugin entry point | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L9-L23) | 9-23 |
 | Table detection | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61) | 58-61 |
 | Table validation | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88) | 70-88 |

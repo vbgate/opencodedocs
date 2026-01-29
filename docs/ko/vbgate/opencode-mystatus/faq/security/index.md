@@ -47,7 +47,7 @@ opencode-mystatus는 「읽기 전용 로컬 파일 + 공용 API 직접 조회�
 플러그인은 두 개의 로컬 구성 파일만 읽으며, 모두 **읽기 전용 모드**입니다:
 
 | 파일 경로 | 용도 | 소스 코드 위치 |
-| -------- | ---- | -------- |
+|--- | --- | ---|
 | `~/.local/share/opencode/auth.json` | OpenCode 공용 인증 저장소 | `mystatus.ts:35` |
 | `~/.config/opencode/antigravity-accounts.json` | Antigravity 플러그인 계정 저장소 | `google.ts`(읽기 로직) |
 
@@ -130,7 +130,7 @@ Account:        9c89****AQVM (Coding Plan)
 플러그인은 각 플랫폼의 **공용 API**만 호출하며, 타사 서버를 거치지 않습니다:
 
 | 플랫폼 | API 엔드포인트 | 용도 |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | OpenAI | `https://chatgpt.com/backend-api/wham/usage` | 할당량 조회 |
 | Zhipu AI | `https://bigmodel.cn/api/monitor/usage/quota/limit` | 토큰 한도 조회 |
 | Z.ai | `https://api.z.ai/api/monitor/usage/quota/limit` | 토큰 한도 조회 |
@@ -189,7 +189,7 @@ export async function fetchWithTimeout(
 ### 플러그인이 하지 않는 것
 
 | 작업 | 플러그인 행동 |
-| ---- | -------- |
+|--- | ---|
 | 데이터 저장 | ❌ 사용자 데이터 저장 안 함 |
 | 데이터 업로드 | ❌ 타사 서버에 데이터 업로드 안 함 |
 | 결과 캐시 | ❌ 조회 결과 캐시 안 함 |
@@ -199,7 +199,7 @@ export async function fetchWithTimeout(
 ### 플러그인이 하는 것
 
 | 작업 | 플러그인 행동 |
-| ---- | -------- |
+|--- | ---|
 | 파일 읽기 | ✅ 로컬 인증 파일 읽기 전용 |
 | API 호출 | ✅ 공용 API 엔드포인트만 호출 |
 | 마스킹 표시 | ✅ API 키 등 민감 정보 자동 숨김 |
@@ -265,7 +265,7 @@ export async function fetchWithTimeout(
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 인증 파일 읽기 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts#L38-L40) | 38-40 |
 | API 마스킹 함수 | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L130-L135) | 130-135 |
 | 요청 시간 초과 구성 | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L114) | 114 |

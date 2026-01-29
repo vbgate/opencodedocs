@@ -57,7 +57,7 @@ WebChat을 사용하기 전에 다음을 확인하세요:
 ### 필수 조건
 
 | 조件                     | 확인 방법                                        |
-| ---------------------- | ------------------------------------------- |
+|--- | ---|
 | **Gateway 시작됨**   | `clawdbot gateway status` 또는 프로세스 실행 중인지 확인 |
 | **포트 액세스 가능**       | 18789 포트(또는 사용자 지정 포트)가 사용 중이 아닌지 확인 |
 | **AI 모델 구성됨** | `clawdbot models list`로 사용 가능한 모델 확인      |
@@ -123,7 +123,7 @@ clawdbot config set gateway.auth.token your-secure-token-here
 **다른 채널과의 차이점**:
 
 | 특성         | WebChat                          | WhatsApp/Telegram 등                |
-| ------------ | -------------------------------- | ------------------------------ |
+|--- | --- | ---|
 | **액세스 방식** | 브라우저에서 Gateway에 직접 액세스           | 타사 APP 및 로그인 필요         |
 | **구성 요구** | 별도 구성 불필요, Gateway 포트 재사용   | 채널별 API Key/Token 필요  |
 | **응답 라우팅** | WebChat로 결정적 라우팅          | 해당 채널로 라우팅              |
@@ -349,7 +349,7 @@ WebChat은 슬래시 명령을 지원하여 특정 작업을 빠르게 실행할
 **일반적인 명령**:
 
 | 명령             | 기능                         |
-| ---------------- | ---------------------------- |
+|--- | ---|
 | `/new`          | 새 세션 생성                   |
 | `/reset`        | 현재 세션 기록 재설정           |
 | `/clear`        | 현재 세션의 모든 메시지 지우기       |
@@ -612,7 +612,7 @@ http://localhost:18789
 > 업데이트 날짜: 2026-01-27
 
 | 기능                  | 파일 경로                                                                                    | 행 번호    |
-| ------------------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | WebChat 원리 설명     | [`docs/web/webchat.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/web/webchat.md) | 전체 파일   |
 | Gateway WebSocket API | [`src/gateway/protocol/`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/) | 전체 디렉토리   |
 | chat.send 메서드        | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 296-380  |

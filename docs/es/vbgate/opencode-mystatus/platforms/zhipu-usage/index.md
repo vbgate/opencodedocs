@@ -46,7 +46,7 @@ Cuando tú:
 El sistema de cuota de **Zhipu AI** y **Z.ai** se divide en dos tipos:
 
 | Tipo de cuota | Significado | Ciclo de restablecimiento |
-| -------- | ---- | -------- |
+|--- | --- | ---|
 | **Límite de token de 5 horas** | Límite de uso de tokens para solicitudes API | Se restablece automáticamente cada 5 horas |
 | **Cuota mensual de MCP** | Límite mensual de veces de búsqueda de MCP (Model Context Protocol) | Se restablece cada mes |
 
@@ -143,7 +143,7 @@ Solo comprendiendo el significado de cada línea de salida, puedes gestionar efi
 Compara con la siguiente explicación para ver tu salida:
 
 | Campo de salida | Significado | Ejemplo |
-| -------- | ---- | ---- |
+|--- | --- | ---|
 | **Account** | API Key enmascarada y tipo de cuenta | `9c89****AQVM (Coding Plan)` |
 | **5 小时 Token 限额** | Uso de tokens en el ciclo actual de 5 horas | Barra de progreso + porcentaje |
 | **已用: X / Y** | Token usado / cuota total | `0.5M / 10.0M` |
@@ -249,7 +249,7 @@ En esta lección aprendimos a usar opencode-mystatus para consultar las cuotas d
 > Fecha de actualización: 2026-01-23
 
 | Función | Ruta de archivo | Línea |
-| --- | --- | --- |
+|--- | --- | ---|
 | Consulta de cuota de Zhipu AI | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 213-217 |
 | Consulta de cuota de Z.ai | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 224-228 |
 | Formato de salida | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 115-177 |

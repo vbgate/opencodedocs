@@ -13,8 +13,8 @@ Este capítulo registra evolução de versão e notas de lançamento do Antigrav
 ## Conteúdo do Capítulo
 
 | Página | Descrição |
-| --- | --- |
-| [Evolução de Versão](./release-notes/) | Como ler Changelog embutido no README, julgar rapidamente impacto de atualização e completar verificação pós-atualização |
+|--- | ---|
+|--- | ---|
 
 ## Caminho de Aprendizado
 

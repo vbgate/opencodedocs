@@ -36,7 +36,7 @@ AI 代理只能访问本地文件和网络请求，但缺乏专业的搜索和�
 当你需要扩展 AI 代理的能力时：
 
 | 场景 | 推荐使用的 MCP |
-|-----|--------------|
+|--- | ---|
 | 需要获取最新技术信息、新闻、行业动态 | **websearch** (Exa) |
 | 查询库或框架的官方 API 文档 | **context7** |
 | 在 GitHub 仓库中查找实现示例 | **grep_app** (Grep.app) |
@@ -182,7 +182,7 @@ setx EXA_API_KEY "your-api-key-here"
 内置 MCP 的禁用配置优先级：
 
 | 配置位置 | 优先级 |
-|---------|--------|
+|--- | ---|
 | 用户配置 `~/.config/opencode/oh-my-opencode.json` | 高（覆盖项目配置） |
 | 项目配置 `.opencode/oh-my-opencode.json` | 中 |
 | 代码默认值 | 低（全部启用） |
@@ -211,7 +211,7 @@ export const websearch = {
 **配置字段说明**：
 
 | 字段 | 类型 | 说明 |
-|-----|------|------|
+|--- | --- | ---|
 | `type` | `"remote"` | 固定值，表示远程 MCP |
 | `url` | `string` | MCP 服务器的 HTTP 地址 |
 | `enabled` | `boolean` | 是否启用（代码中固定为 `true`，由 `disabled_mcps` 控制） |
@@ -288,7 +288,7 @@ oh-my-opencode doctor --verbose
 本课介绍了 Oh-My-OpenCode 的 3 个内置 MCP 服务器：
 
 | MCP | 功能 | 配置要求 | 主要用途 |
-|-----|------|---------|---------|
+|--- | --- | --- | ---|
 | **websearch** | 实时网络搜索 | EXA_API_KEY | 获取最新信息 |
 | **context7** | 官方文档查询 | 无 | 查阅 API 文档 |
 | **grep_app** | GitHub 代码搜索 | 无 | 查找实现示例 |
@@ -312,7 +312,7 @@ oh-my-opencode doctor --verbose
 > 更新时间：2026-01-26
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | MCP 工厂函数 | [`src/mcp/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/mcp/index.ts) | 22-32 |
 | websearch 配置 | [`src/mcp/websearch.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/mcp/websearch.ts) | 1-11 |
 | context7 配置 | [`src/mcp/context7.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/mcp/context7.ts) | 1-7 |

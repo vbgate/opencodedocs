@@ -47,7 +47,7 @@ opencode-mystatus следует принципу «только чтение л
 Плагин только читает два локальных конфигурационных файла, и все они в режиме **только чтения**:
 
 | Путь к файлу | Назначение | Местоположение исходного кода |
-| -------- | ---- | -------- |
+|--- | --- | ---|
 | `~/.local/share/opencode/auth.json` | Официальное хранилище аутентификации OpenCode | `mystatus.ts:35` |
 | `~/.config/opencode/antigravity-accounts.json` | Хранилище учётных записей плагина Antigravity | `google.ts` (логика чтения) |
 
@@ -130,7 +130,7 @@ Account:        9c89****AQVM (Coding Plan)
 Плагин вызывает только **официальные API** каждой платформы, без прохождения через какие-либо сторонние серверы:
 
 | Платформа | Конечная точка API | Назначение |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | OpenAI | `https://chatgpt.com/backend-api/wham/usage` | Запрос квоты |
 | 智谱 AI | `https://bigmodel.cn/api/monitor/usage/quota/limit` | Запрос лимита Token |
 | Z.ai | `https://api.z.ai/api/monitor/usage/quota/limit` | Запрос лимита Token |
@@ -189,7 +189,7 @@ export async function fetchWithTimeout(
 ### Что плагин не будет делать
 
 | Операция | Поведение плагина |
-| ---- | -------- |
+|--- | ---|
 | Хранение данных | ❌ Не хранит какие-либо данные пользователя |
 | Загрузка данных | ❌ Не загружает какие-либо данные на сторонний сервер |
 | Кэширование результатов | ❌ Не кэширует результаты запросов |
@@ -199,7 +199,7 @@ export async function fetchWithTimeout(
 ### Что плагин будет делать
 
 | Операция | Поведение плагина |
-| ---- | -------- |
+|--- | ---|
 | Чтение файлов | ✅ Только чтение локальных файлов аутентификации |
 | Вызов API | ✅ Только вызов официальных конечных точек API |
 | Маскированное отображение | ✅ Автоматическое скрытие конфиденциальной информации, такой как API Key |
@@ -265,11 +265,11 @@ export async function fetchWithTimeout(
 > Время обновления: 2026-01-23
 
 | Функция | Путь к файлу | Номер строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Чтение файлов аутентификации | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts#L38-L40) | 38-40 |
 | Функция маскировки API | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L130-L135) | 130-135 |
 | Настройка тайм-аута запроса | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L114) | 114 |
-| Реализация тайм-аута запроса | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L84-L106) | 84-106 |
+|--- | --- | ---|
 | Пример маскировки 智谱 AI | [`plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts#L124) | 124 |
 
 **Ключевые функции**:

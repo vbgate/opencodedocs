@@ -59,7 +59,7 @@ Google Cloud Antigravity se autentica mediante el mecanismo OAuth, cada cuenta t
 mystatus muestra la cuota de los siguientes 4 modelos:
 
 | Nombre de visualización | Modelo Key (principal/respaldo) | Descripción |
-| --------- | ----------------- | ---- |
+|--- | --- | ---|
 | G3 Pro | `gemini-3-pro-high` / `gemini-3-pro-low` | Gemini 3 Pro versión de alto rendimiento |
 | G3 Image | `gemini-3-pro-image` | Gemini 3 Pro generación de imágenes |
 | G3 Flash | `gemini-3-flash` | Gemini 3 Flash versión rápida |
@@ -227,7 +227,7 @@ user@gmail.com: No project ID found
 > Fecha de actualización: 2026-01-23
 
 | Función | Ruta de archivo | Línea |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Configuración de modelos | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts#L69-L78) | 69-78 |
 | Lógica de consulta de cuentas | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts#L304-L370) | 304-370 |
 | Refresco de token | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts#L162-L184) | 162-184 |

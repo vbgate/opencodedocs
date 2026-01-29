@@ -133,7 +133,7 @@ Open `~/.config/opencode/opencode.json` and find the `command` section:
 **Key Configuration Explained**:
 
 | Config | Value | Purpose |
-| ------ | ----- | ------- |
+|--- | --- | ---|
 | `description` | "Query quota usage for all AI accounts" | Description shown in the command list |
 | `template` | "Use the mystatus tool..." | Instructs OpenCode how to handle this command |
 
@@ -144,7 +144,7 @@ The template is an "instruction" for OpenCode, telling it: when the user inputs 
 Confirm you've mastered both usage methods:
 
 | Skill | How to Check | Expected Result |
-| ----- | ------------ | --------------- |
+|--- | --- | ---|
 | Slash command query | Input `/mystatus` | Displays quota information for all platforms |
 | Natural language query | Input "Check my OpenAI quota" | Displays quota information |
 | Understand configuration | View opencode.json | Find the mystatus command configuration |
@@ -209,7 +209,7 @@ Both methods query all configured AI platforms in parallel and return results wi
 > Last updated: 2026-01-23
 
 | Feature | File Path | Line Numbers |
-| ------- | --------- | ------------ |
+|--- | --- | ---|
 | mystatus tool definition | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 29-33 |
 | Tool description | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 30-31 |
 | Slash command configuration | [`command/mystatus.md`](https://github.com/vbgate/opencode-mystatus/blob/main/command/mystatus.md) | 1-6 |

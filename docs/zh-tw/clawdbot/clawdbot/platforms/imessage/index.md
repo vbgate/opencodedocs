@@ -71,7 +71,7 @@ sequenceDiagram
 **關鍵概念**：
 
 | 概念 | 說明 |
-| ------ | ------ |
+|--- | ---|
 | **imsg CLI** | 第三方工具，透過 JSON-RPC over stdio 與 Messages 互動 |
 | **Full Disk Access** | macOS 權限，允許 Clawdbot 讀取 Messages chat.db |
 | **Automation 權限** | macOS 權限，允許 imsg 透過 Automation API 傳送訊息 |
@@ -409,7 +409,7 @@ exec ssh -T bot@mac-mini.tailnet-1234.ts.net imsg "$@"
 ### 基本設定
 
 | 設定項 | 類型 | 預設值 | 說明 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `enabled` | boolean | false | 是否啟用 iMessage 頻道 |
 | `cliPath` | string | "imsg" | imsg CLI 路徑（可以是 SSH wrapper） |
 | `dbPath` | string | - | Messages chat.db 路徑 |
@@ -418,7 +418,7 @@ exec ssh -T bot@mac-mini.tailnet-1234.ts.net imsg "$@"
 ### DM 策略
 
 | 設定項 | 類型 | 預設值 | 說明 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `dmPolicy` | "pairing"|"allowlist"|"open"|"disabled" | "pairing" | DM 存取策略 |
 | `allowFrom` | array | [] | 允許的傳送者列表（handles、emails、E.164、`chat_id:*`） |
 
@@ -439,7 +439,7 @@ iMessage 沒有使用者名稱概念，使用 handles（電話號碼或郵件地
 ### 群組策略
 
 | 設定項 | 類型 | 預設值 | 說明 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `groupPolicy` | "allowlist"|"open"|"disabled" | "allowlist" | 群組存取策略 |
 | `groupAllowFrom` | array | [] | 允許在群組中觸發 AI 的傳送者 |
 | `groups` | object | {} | 按 chat_id 的群組設定 |
@@ -466,7 +466,7 @@ iMessage 沒有使用者名稱概念，使用 handles（電話號碼或郵件地
 ### 媒體和文字限制
 
 | 設定項 | 類型 | 預設值 | 說明 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `includeAttachments` | boolean | false | 是否將附件包含在上下文中 |
 | `mediaMaxMb` | number | 16 | 最大媒體檔案大小（MB） |
 | `textChunkLimit` | number | 4000 | 出站文字分塊大小（字元） |
@@ -475,7 +475,7 @@ iMessage 沒有使用者名稱概念，使用 handles（電話號碼或郵件地
 ### 歷史記錄
 
 | 設定項 | 類型 | 預設值 | 說明 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `historyLimit` | number | - | 群組最大歷史訊息數（0 停用） |
 | `dmHistoryLimit` | number | - | DM 歷史訊息限制（使用者輪次） |
 | `dms["<handle>"].historyLimit` | number | - | 按 handle 覆寫 DM 歷史限制 |
@@ -569,7 +569,7 @@ iMessage 沒有使用者名稱概念，使用 handles（電話號碼或郵件地
 > 更新時間：2026-01-27
 
 | 功能 | 檔案路徑 | 行號 |
-| ------ | --------- | ---- |
+|--- | --- | ---|
 | iMessage 設定型別定義 | [`src/config/types.imessage.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.imessage.ts) | 1-80 |
 | iMessage 帳戶解析 | [`src/imessage/accounts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/imessage/accounts.ts) | 1-83 |
 | iMessage 探測 | [`src/imessage/probe.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/imessage/probe.ts) | 1-92 |

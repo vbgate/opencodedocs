@@ -15,7 +15,7 @@ Ce chapitre détaille en profondeur les fonctionnalités de consultation des quo
 opencode-mystatus prend en charge les 4 plateformes IA principales suivantes :
 
 | Plateforme | Type de limite | Caractéristiques |
-| ---------- | ------------- | --------------- |
+|--- | --- | ---|
 | OpenAI | Fenêtre glissante de 3h / 24h | Prend en charge les abonnements Plus, Team, Pro |
 | Zhipu AI | Limite de token sur 5h / Quota mensuel MCP | Prend en charge le Coding Plan |
 | GitHub Copilot | Quota mensuel | Affiche l'utilisation des Premium Requests |

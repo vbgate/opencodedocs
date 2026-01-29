@@ -97,7 +97,7 @@ Clawdbot設定ファイルは、以下の主要な設定セクションを含む
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `lastTouchedVersion` | string | - | この設定を最後に変更したClawdbotのバージョン |
 | `lastTouchedAt` | string | - | この設定を最後に変更した時刻（ISO 8601） |
 
@@ -123,7 +123,7 @@ Clawdbot設定ファイルは、以下の主要な設定セクションを含む
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `shellEnv.enabled` | boolean | `false` | ログインシェルから環境変数をインポートするか（欠落しているキーのみインポート） |
 | `shellEnv.timeoutMs` | number | `15000` | シェル環境インポートのタイムアウト（ミリ秒） |
 | `vars` | object | - | インライン環境変数（キー値ペア） |
@@ -150,7 +150,7 @@ CLIウィザード（`onboard`、`configure`、`doctor`）によって書き込�
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `lastRunAt` | string | - | ウィザードを最後に実行した時刻 |
 | `lastRunVersion` | string | - | ウィザードを最後に実行した時のClawdbotのバージョン |
 | `lastRunCommit` | string | - | ウィザードを最後に実行した時のGitコミットハッシュ |
@@ -192,7 +192,7 @@ CLIウィザード（`onboard`、`configure`、`doctor`）によって書き込�
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | `false` | 診断機能を有効にする |
 | `flags` | string[] | - | 診断フラグのリスト |
 | `otel.enabled` | boolean | `false` | OpenTelemetryテレメトリを有効にする |
@@ -232,7 +232,7 @@ CLIウィザード（`onboard`、`configure`、`doctor`）によって書き込�
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `level` | string | `info` | ログレベル（`silent` \| `fatal` \| `error` \| `warn` \| `info` \| `debug` \| `trace`） |
 | `file` | string | - | ログファイルパス（デフォルト：`/tmp/clawdbot/clawdbot-YYYY-MM-DD.log`） |
 | `consoleLevel` | string | `info` | コンソールログレベル（`level`オプションと同じ） |
@@ -257,7 +257,7 @@ CLIウィザード（`onboard`、`configure`、`doctor`）によって書き込�
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `channel` | string | `stable` | 更新チャネル（`stable` \| `beta` \| `dev`） |
 | `checkOnStart` | boolean | - | 起動時に更新をチェック |
 
@@ -296,7 +296,7 @@ CLIウィザード（`onboard`、`configure`、`doctor`）によって書き込�
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | - | ブラウザツールを有効にする |
 | `controlUrl` | string | - | ブラウザ制御WebSocket URL |
 | `controlToken` | string | - | ブラウザ制御認証トークン |
@@ -338,7 +338,7 @@ UIカスタマイズ設定（Control UI、WebChat）。
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `seamColor` | string | - | Seamカラーの16進数値 |
 | `assistant.name` | string | - | アシスタント表示名（最大50文字） |
 | `assistant.avatar` | string | - | アシスタントアバターパスまたはURL（最大200文字） |
@@ -389,7 +389,7 @@ UIカスタマイズ設定（Control UI、WebChat）。
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `profiles` | object | - | プロファイルマッピング（キー：プロファイルID、値：設定） |
 | `profiles.<profileId>.provider` | string | - | プロバイダー名 |
 | `profiles.<profileId>.mode` | string | - | 認証モード（`api_key` \| `oauth` \| `token`） |
@@ -492,7 +492,7 @@ AIモデルプロバイダーと設定。
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `mode` | string | - | モデルマージモード（`merge` \| `replace`） |
 | `providers` | object | - | プロバイダーマッピング（キー：プロバイダーID、値：プロバイダー設定） |
 | `providers.<providerId>.baseUrl` | string | - | APIベースURL |
@@ -664,7 +664,7 @@ AIモデルプロバイダーと設定。
 **デフォルト設定**（`agents.defaults`）：
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `workspace` | string | `~/clawd` | エージェントワークスペースディレクトリ |
 | `repoRoot` | string | - | Gitリポジトリルートディレクトリ（システムプロンプト用） |
 | `skipBootstrap` | boolean | `false` | ワークスペースブートストラップファイル作成をスキップ |
@@ -693,7 +693,7 @@ AIモデルプロバイダーと設定。
 **エージェントリスト**（`agents.list`）：
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `id` | string | 必須 | エージェントID（安定した識別子） |
 | `default` | boolean | `false` | デフォルトエージェントか（複数の場合最初のものが優先） |
 | `name` | string | - | エージェント表示名 |
@@ -751,7 +751,7 @@ AIモデルプロバイダーと設定。
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `agentId` | string | 必須 | ターゲットエージェントID（`agents.list`になければなりません） |
 | `match.channel` | string | 必須 | 一致するチャネル |
 | `match.accountId` | string | - | 一致するアカウントID（`*` = 任意のアカウント；省略 = デフォルトアカウント） |
@@ -801,7 +801,7 @@ AIモデルプロバイダーと設定。
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `exec.elevated.enabled` | boolean | `false` | 昇格bashを有効にする（`! <cmd>`） |
 | `exec.elevated.allowFrom` | object | - | 各チャネルの昇格allowlist |
 | `browser.enabled` | boolean | - | ブラウザツールを有効にする |
@@ -826,7 +826,7 @@ AIモデルプロバイダーと設定。
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `strategy` | string | - | ブロードキャスト戦略（`parallel` \| `sequential`） |
 | `<peerId>` | string[] | - | これらのエージェントにメッセージを送信（動的キー） |
 
@@ -898,7 +898,7 @@ AIモデルプロバイダーと設定。
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `responsePrefix` | string | - | すべての送信レスポンスのプレフィックス（テンプレート変数をサポート） |
 | `ackReaction` | string | - | 着信メッセージを確認する絵文字 |
 | `ackReactionScope` | string | - | 確認を送信するタイミング（`group-mentions` \| `group-all` \| `direct` \| `all`） |
@@ -915,7 +915,7 @@ AIモデルプロバイダーと設定。
 **テンプレート変数**（`responsePrefix`用）：
 
 | 変数 | 説明 | 例 |
-|------|------|------|
+|--- | --- | ---|
 | `{model}` | 短いモデル名 | `claude-opus-4-5`、`gpt-4` |
 | `{modelFull}` | 完全なモデル識別子 | `anthropic/claude-opus-4-5` |
 | `{provider}` | プロバイダー名 | `anthropic`、`openai` |
@@ -947,7 +947,7 @@ AIモデルプロバイダーと設定。
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `native` | string | `auto` | ネイティブコマンド（`auto` \| `true` \| `false`） |
 | `text` | boolean | `true` | チャットメッセージのスラッシュコマンドを解析 |
 | `bash` | boolean | `false` | `!`を許可（`/bash`のエイリアス） |
@@ -984,7 +984,7 @@ AIモデルプロバイダーと設定。
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `activation.defaultMode` | string | `auto` | デフォルトアクティベーションモード（`auto` \| `always` \| `manual`） |
 | `activation.defaultDurationMs` | number | - | デフォルトアクティベーション期間（ミリ秒） |
 | `activation.keepAlive` | boolean | - | アクティブ状態を維持 |
@@ -1012,7 +1012,7 @@ AIモデルプロバイダーと設定。
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | - | Cronエンジンを有効にする |
 | `store` | string | - | Cronストアファイルパス |
 | `maxConcurrentRuns` | number | - | 最大同時実行数 |
@@ -1056,7 +1056,7 @@ Webhookとイベント転送。
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | - | Hooksを有効にする |
 | `path` | string | - | Hooksディレクトリパス |
 | `token` | string | - | Webhook認証トークン |
@@ -1315,7 +1315,7 @@ Gateway WebSocketサーバーと認証。
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `port` | number | `18789` | Gateway WebSocketポート |
 | `mode` | string | `local` | Gatewayモード（`local` \| `remote`） |
 | `bind` | string | - | バインドアドレス（`auto` \| `lan` \| `loopback` \| `custom` \| `tailnet`） |
@@ -1382,7 +1382,7 @@ Serve/Funnelが有効な場合、`gateway.bind`は`loopback`のままである�
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `allowBundled` | string[] | - | 許可されたバンドルスキルのリスト |
 | `load.extraDirs` | string[] | - | 追加のスキルディレクトリ |
 | `load.watch` | boolean | - | スキルファイルの変更を監視 |
@@ -1417,7 +1417,7 @@ Serve/Funnelが有効な場合、`gateway.bind`は`loopback`のままである�
 ```
 
 | フィールド | タイプ | 必須 | デフォルト | 説明 |
-|---------|-------|-------|----------|------|
+|--- | --- | --- | --- | ---|
 | `enabled` | boolean | - | プラグインシステムを有効にする |
 | `allow` | string[] | - | 許可されたプラグインのリスト |
 | `deny` | string[] | - | 拒否されたプラグインのリスト |
@@ -1526,7 +1526,7 @@ clawdbot doctor --yes
 ## 設定ファイルパス
 
 | ファイル | パス | 説明 |
-|--------|------|------|
+|--- | --- | ---|
 | メイン設定 | `~/.clawdbot/clawdbot.json` | メイン設定ファイル |
 | 環境変数 | `~/.clawdbot/.env` | グローバル環境変数 |
 | ワークスペース環境 | `~/clawd/.env` | ワークスペース環境変数 |
@@ -1569,7 +1569,7 @@ clawdbot doctor --yes
 > 更新日時：2026-01-27
 
 | 設定セクション | ファイルパス | 行番号 |
-|--------------|-----------|------|
+|--- | --- | ---|
 | メインSchema | [`src/config/zod-schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.ts) | 1-556 |
 | コアSchema | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | 1-300 |
 | エージェントSchema | [`src/config/zod-schema.agents.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.agents.ts) | 1-54 |

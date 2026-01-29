@@ -125,7 +125,7 @@ Plannotatorは以下の環境変数をサポートしています。必要に応
 ::: details 環境変数の説明
 
 | 環境変数 | 用途 | デフォルト値 | 例 |
-| --------- | ---- | ------ | ---- |
+|--- | --- | --- | ---|
 | `PLANNOTATOR_REMOTE` | リモートモードを有効化（devcontainer/SSH） | 未設定 | `export PLANNOTATOR_REMOTE=1` |
 | `PLANNOTATOR_PORT` | 固定ポート（リモートモードでは必須） | ローカルはランダム、リモートは19432 | `export PLANNOTATOR_PORT=9999` |
 | `PLANNOTATOR_BROWSER` | カスタムブラウザパス | システムデフォルト | `export PLANNOTATOR_BROWSER="/Applications/Google Chrome.app"` |
@@ -259,10 +259,10 @@ Plannotator server running at http://localhost:9999
 > 更新日：2026-01-24
 
 | 機能                    | ファイルパス                                                                                      | 行番号       |
-| --------------------- | --------------------------------------------------------------------------------------------- | ---------- |
+|--- | --- | ---|
 | プラグインエントリ定義               | [`apps/opencode-plugin/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/opencode-plugin/index.ts) | 34-280     |
 | `submit_plan`ツール定義 | [`apps/opencode-plugin/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/opencode-plugin/index.ts) | 209-252    |
-| `/plannotator-review`コマンド処理 | [`apps/opencode-plugin/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/opencode-plugin/index.ts) | 115-206    |
+|--- | --- | ---|
 | プラグイン設定（opencode.json）注入 | [`apps/opencode-plugin/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/opencode-plugin/index.ts) | 55-63      |
 | 環境変数の読み取り               | [`apps/opencode-plugin/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/opencode-plugin/index.ts) | 37-51      |
 | プランレビューサーバー起動            | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts) | 全文        |

@@ -28,7 +28,7 @@ order: 2
 mystatusは**2つのCopilot認証方式**をサポートします：
 
 | 認証方式 | 説明 | 利点 | 欠点 |
-|---------|------|------|------|
+|--- | --- | --- | ---|
 | **OAuth Token**（デフォルト） | OpenCodeログイン時に取得されるGitHub OAuth Token | 追加設定不要、即座に使用可能 | 新版OpenCodeのOAuth TokenにはCopilot権限がない場合がある |
 | **Fine-grained PAT**（推奨） | ユーザーが手動作成したFine-grained Personal Access Token | 安定で信頼性高く、OAuth権限に依存しない | 手動で一度設定が必要 |
 
@@ -92,8 +92,8 @@ mystatusは2つのCopilot認証方式をサポート：
 <summary><strong>クリックしてソースコードの場所を展開</strong></summary>
 
 | 機能 | ファイルパス | 行番号 |
-| --------------------------- | ------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | Copilot認証戦略エントリ | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 481-524 |
-| Fine-grained PAT読み取り | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 122-151 |
+|--- | --- | ---|
 
 </details>

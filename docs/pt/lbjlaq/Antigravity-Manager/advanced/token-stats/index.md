@@ -143,7 +143,7 @@ Prática: Entre na área Advanced de Settings, clique "Abrir diretório de dados
 ## Avisos sobre armadilhas
 
 | Fenômeno | Causa comum | O que você pode fazer |
-| --- | --- | --- |
+|--- | --- | ---|
 | Token Stats mostra "sem dados" | Você realmente não gerou solicitações de modelo; ou a resposta upstream não carrega campos de token analisáveis | Primeiro reutilize o cliente já verificado para enviar solicitações; depois veja se a resposta contém `usage/usageMetadata` |
 | Estatísticas parecem erradas "por modelo" | Métricas estatísticas usam `model` da solicitação, não `X-Mapped-Model` | Trate roteamento de modelo como "solicitar modelo -> modelo mapeado"; estatísticas veem "modelo solicitado" |
 | Dimensão de conta ausente | Só será gravado quando obtiver `X-Account-Email` e analisar uso de token | Confirme que a solicitação realmente chegou ao pool de contas; depois compare logs de solicitação/cabeçalhos de resposta |
@@ -175,8 +175,8 @@ Você aprenderá:
 > Atualizado em: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Número da linha |
-| --- | --- | --- |
-| Rota da página Token Stats `/token-stats` | [`src/App.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/App.tsx#L19-L47) | 19-47 |
+|--- | --- | ---|
+|--- | --- | ---|
 | UI do Token Stats: janela de tempo/alternância de visualização e coleta de dados | [`src/pages/TokenStats.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/TokenStats.tsx#L49-L166) | 49-166 |
 | UI do Token Stats: prompt de dados vazios ("sem dados") | [`src/pages/TokenStats.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/TokenStats.tsx#L458-L507) | 458-507 |
 | Extração de uso de Token: analisar model da solicitação, analisar usage/usageMetadata da resposta | [`src-tauri/src/proxy/middleware/monitor.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/monitor.rs#L32-L120) | 32-120 |

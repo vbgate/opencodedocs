@@ -108,7 +108,7 @@ Get-ChildItem -Force $dataDir
 Ниже приведены имена файлов из исходного кода проекта, они фиксированные:
 
 | Что вы увидите | Назначение | Что важно для вас |
-| --- | --- | --- |
+|--- | --- | ---|
 | `accounts.json` | Индекс аккаунтов (список аккаунтов/текущий аккаунт) | При миграции аккаунтов рекомендуется создавать резервную копию вместе |
 | `accounts/` | Для каждого аккаунта отдельный файл `*.json` | Это основные данные аккаунтов |
 | `logs/` | Каталог журналов приложения | При устранении неполадок в первую очередь смотрите сюда |
@@ -188,7 +188,7 @@ Get-ChildItem -Force (Join-Path $HOME ".antigravity_tools\logs")
 
 ::: info Два типа «автозапуска», не путайте
 | Название | Что означает | Доказательство |
-| --- | --- | --- |
+|--- | --- | ---|
 | Автозапуск при включении | Автоматический запуск Antigravity Tools при включении компьютера (само приложение) | Параметры запуска включают `--minimized`, предоставляется команда `toggle_auto_launch` |
 | Автозапуск прокси | После запуска Antigravity Tools, если настроено `proxy.auto_start=true`, автоматически запускается локальная служба прокси | При запуске приложения читается конфигурация и `start_proxy_service(...)` |
 :::
@@ -204,7 +204,7 @@ Get-ChildItem -Force (Join-Path $HOME ".antigravity_tools\logs")
 ## Частые ошибки
 
 | Ситуация | Что вы можете сделать (❌) | Рекомендуемый подход (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Не можете найти каталог данных | Хаотично искать каталог установки приложения в системе | Перейдите на Settings -> Advanced, посмотрите «Каталог данных» и откройте одним кликом |
 | Закрыли окно и думаете, что вышли | После закрытия окна сразу меняете конфигурацию/порт | Сначала проверьте, есть ли значок трея; для выхода используйте Quit в трее |
 | Слишком много журналов, трудно устранять неполадки | При воспроизведении проблемы просматриваете старые журналы | Сначала «очистите журналы», затем воспроизведите снова, в конце смотрите только этот файл журнала |
@@ -238,7 +238,7 @@ Get-ChildItem -Force (Join-Path $HOME ".antigravity_tools\logs")
 > Обновлено: 2026-01-23
 
 | Функция | Путь к файлу | Строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Расположение каталога данных (`~/.antigravity_tools`) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | Индекс аккаунтов и каталог файлов аккаунтов (`accounts.json` / `accounts/`) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L46) | 16-46 |
 | Каталог журналов и ежедневная ротация (`logs/` + `app.log`) | [`src-tauri/src/modules/logger.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/logger.rs#L17-L83) | 17-83 |
@@ -247,8 +247,8 @@ Get-ChildItem -Force (Join-Path $HOME ".antigravity_tools\logs")
 | Очистка журналов одним кликом на странице настроек (кнопка + логика диалога) | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L127-L135) | 127-135 |
 | Очистка журналов одним кликом на странице настроек (кнопка на вкладке Advanced) | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L732-L747) | 732-747 |
 | Меню трея и события клика (переключение аккаунтов/обновление/отображение/выход) | [`src-tauri/src/modules/tray.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/tray.rs#L9-L158) | 9-158 |
-| Закрытие окна -> скрыть (свернуть в трей) | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L150-L160) | 150-160 |
-| Инициализация плагина автозапуска при включении (включая `--minimized`) | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L58-L66) | 58-66 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Переключатель автозапуска при включении (`toggle_auto_launch` / `is_auto_launch_enabled`) | [`src-tauri/src/commands/autostart.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/autostart.rs#L4-L39) | 4-39 |
 | Команды: открыть каталог данных / получить путь / очистить журналы | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L578-L621) | 578-621 |
 | Имя файла базы данных Token Stats (`token_stats.db`) | [`src-tauri/src/modules/token_stats.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/token_stats.rs#L58-L61) | 58-61 |

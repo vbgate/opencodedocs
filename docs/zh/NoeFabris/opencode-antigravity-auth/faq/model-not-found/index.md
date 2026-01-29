@@ -20,7 +20,7 @@ order: 3
 使用 Antigravity 模型时，可能会遇到以下几种错误：
 
 | 错误信息 | 典型症状 |
-| --------- | --------- |
+|--- | ---|
 | `Model not found` | 提示模型不存在，无法发起请求 |
 | `Invalid JSON payload received. Unknown name "parameters"` | 400 错误，工具调用失败 |
 | MCP 服务器调用报错 | 特定 MCP 工具无法使用 |
@@ -209,7 +209,7 @@ npm install -g opencode-antigravity-auth@beta
 插件会自动清理以下不兼容特性（源码 `src/plugin/request-helpers.ts:24-37`）：
 
 | 特性 | 转换方式 | 示例 |
-| ---- | --------- | ---- |
+|--- | --- | ---|
 | `const` | 转换为 `enum` | `{ const: "text" }` → `{ enum: ["text"] }` |
 | `$ref` | 转换为 description hint | `{ $ref: "#/$defs/Foo" }` → `{ type: "object", description: "See: Foo" }` |
 | `$defs` / `definitions` | 展开到 schema 中 | 不再使用引用 |
@@ -325,7 +325,7 @@ opencode auth login
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| ---- | --------- | ---- |
+|--- | --- | ---|
 | JSON Schema 清理主函数 | [`src/plugin/request-helpers.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request-helpers.ts) | 658-685 |
 | 转换 const 为 enum | [`src/plugin/request-helpers.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request-helpers.ts) | 86-104 |
 | 转换 $ref 为 hints | [`src/plugin/request-helpers.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request-helpers.ts) | 55-80 |

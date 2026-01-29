@@ -62,7 +62,7 @@ Wenn Sie die Komprimierungsauslösung mit Anforderungstypen, Konten oder Werkzeu
 Diese Stabilitätslösung löscht nicht einfach die gesamte Historie, sondern greift schichtweise mit zunehmenden Kosten ein:
 
 | Ebene | Auslöser (konfigurierbar) | Was getan wird | Kosten/Nebenwirkungen |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | Layer 1 | `proxy.experimental.context_compression_threshold_l1` (Standard 0,4) | Identifiziert Werkzeugrunden, behält nur die letzten N Runden (im Code 5), löscht frühere tool_use/tool_result-Paare | Ändert nicht den Inhalt verbleibender Nachrichten, Prompt Cache-freundlicher |
 | Layer 2 | `proxy.experimental.context_compression_threshold_l2` (Standard 0,55) | Komprimiert alten Thinking-Text zu `"..."`, behält aber `signature` und schützt die letzten 4 Nachrichten vor Änderungen | Ändert historische Inhalte, Kommentare weisen explizit darauf hin, dass cache gebrochen wird, kann aber Signaturkette retten |
 | Layer 3 | `proxy.experimental.context_compression_threshold_l3` (Standard 0,7) | Ruft ein Hintergrundmodell auf, um eine XML-Zusammenfassung zu generieren, und forkt eine neue Nachrichtensequenz, um das Gespräch fortzusetzen | Abhängig von Hintergrundmodellaufrufen; bei Fehlern wird 400 zurückgegeben (mit freundlicher Meldung) |
@@ -218,11 +218,11 @@ Denken Sie an drei Hauptpunkte:
 ## Fallstruktur-Hinweise
 
 | Phänomen | Mögliche Ursache | Was Sie tun können |
-| --- | --- | --- |
+|--- | --- | ---|
 | Nach Auslösung von Layer 2 wirkt der Kontext nicht mehr so stabil | Layer 2 ändert historische Inhalte, Kommentare weisen explizit darauf hin, dass cache gebrochen wird | Wenn Sie auf Prompt Cache-Konsistenz angewiesen sind, lassen Sie L1 das Problem zuerst lösen oder erhöhen Sie L2-Schwellenwert |
 | Nach Auslösung von Layer 3 wird direkt 400 zurückgegeben | Fork + Zusammenfassung Hintergrundmodellaufruf fehlgeschlagen (Netzwerk/Konto/Upstream-Fehler etc.) | Folgen Sie zuerst den Vorschlägen im error JSON mit `/compact` oder `/clear`; prüfen Sie gleichzeitig die Hintergrundmodellaufrufkette |
 | Bilder/ große Inhalte in Werkzeugausgaben fehlen | tool_result entfernt base64-Bilder, schneidet zu lange Ausgaben ab | Speichern Sie wichtige Inhalte in lokale Dateien/Links und referenzieren Sie sie; zählen Sie nicht darauf, 100.000 Zeilen Text direkt in die Konversation zu geben |
-| Sie verwenden Gemini-Modell aber tragen Claude-Signatur, führt zu Fehlern | Signatur ist nicht modellübergreifend kompatibel (Code hat family-Prüfung) | Bestätigen Sie die Signaturquelle; lassen Sie den Proxy bei retry-Szenarien historische Signaturen abspalten (siehe Anforderungskonvertierungslogik) |
+|--- | --- | ---|
 
 ## Zusammenfassung dieser Lektion
 
@@ -244,25 +244,25 @@ Denken Sie an drei Hauptpunkte:
 > Aktualisiert: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
+|--- | --- | ---|
 | Experimentelle Konfiguration: Komprimierungsschwellenwerte und Standardwerte | `src-tauri/src/proxy/config.rs` | 119-168 |
 | Kontextabschätzung: Mehrsprachige Zeichenabschätzung + 15% Puffer | `src-tauri/src/proxy/mappers/context_manager.rs` | 9-37 |
-| Token-Verbrauchsabschätzung: Durchlaufen system/messages/tools/thinking | `src-tauri/src/proxy/mappers/context_manager.rs` | 103-198 |
+|--- | --- | ---|
 | Layer 1: Werkzeugrunden identifizieren + alte Runden beschneiden | `src-tauri/src/proxy/mappers/context_manager.rs` | 311-439 |
-| Layer 2: Thinking-Komprimierung unter Beibehaltung der Signatur (letzte N schützen) | `src-tauri/src/proxy/mappers/context_manager.rs` | 200-271 |
+|--- | --- | ---|
 | Layer 3 Hilfsfunktion: letzte gültige Signatur extrahieren | `src-tauri/src/proxy/mappers/context_manager.rs` | 73-109 |
-| Hintergrund-Task-Downgrade: Aggressive Bereinigung von Thinking-Blöcken | `src-tauri/src/proxy/handlers/claude.rs` | 540-583 |
+|--- | --- | ---|
 | Dreischichtige Komprimierung Hauptfluss: Abschätzung, Kalibrierung, Auslösung L1/L2/L3 nach Schwellenwert | `src-tauri/src/proxy/handlers/claude.rs` | 379-731 |
-| Layer 3: XML-Zusammenfassung + Fork-Sitzung-Implementierung | `src-tauri/src/proxy/handlers/claude.rs` | 1560-1687 |
-| Signatur-Caching: TTL/dreischichtige Caching-Struktur (Tool/Family/Session) | `src-tauri/src/proxy/signature_cache.rs` | 5-88 |
-| Signatur-Caching: Session-Signatur schreiben/lesen | `src-tauri/src/proxy/signature_cache.rs` | 141-223 |
-| SSE-Stream-Parsing: thinking/tool signature in Session/Tool cache zwischenspeichern | `src-tauri/src/proxy/mappers/claude/streaming.rs` | 766-776 |
-| SSE-Stream-Parsing: tool_use tool_use_id -> signature zwischenspeichern | `src-tauri/src/proxy/mappers/claude/streaming.rs` | 958-975 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Anforderungskonvertierung: tool_use Signatur bevorzugt aus Session/Tool cache zurückfüllen | `src-tauri/src/proxy/mappers/claude/request.rs` | 1045-1142 |
-| Anforderungskonvertierung: tool_result löst Werkzeugergebnis-Komprimierung aus | `src-tauri/src/proxy/mappers/claude/request.rs` | 1159-1225 |
-| Werkzeugergebnis-Komprimierung: Einstieg `compact_tool_result_text()` | `src-tauri/src/proxy/mappers/tool_result_compressor.rs` | 28-69 |
-| Werkzeugergebnis-Komprimierung: Browser-Snapshot Kopf- und Endzusammenfassung | `src-tauri/src/proxy/mappers/tool_result_compressor.rs` | 123-178 |
-| Werkzeugergebnis-Komprimierung: base64-Bilder entfernen + Gesamtzeichenbegrenzung | `src-tauri/src/proxy/mappers/tool_result_compressor.rs` | 247-320 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Testplan: Dreischichtige Komprimierungsauslösung und Protokollvalidierung | `docs/testing/context_compression_test_plan.md` | 1-116 |
 
 </details>

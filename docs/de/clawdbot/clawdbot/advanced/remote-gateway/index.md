@@ -39,9 +39,9 @@ Du hast vielleicht folgende Fragen:
 **Remote-Gateway** eignet sich für folgende Szenarien:
 
 | Szenario | Empfohlene Lösung | Grund |
-| -------- | ----------------- | ----- |
+|--- | --- | ---|
 | Laptop geht oft in den Ruhezustand, AI muss ständig verfügbar sein | **Tailscale Serve + Linux VPS** | VPS geht nicht in den Ruhezustand, sicherer Zugriff über Tailnet |
-| Desktop-Gateway zu Hause, Laptop steuert es fern | **SSH-Tunnel** oder **Tailscale Serve** | Einheitliche Gateway-Sitzungen und Konfiguration |
+|--- | --- | ---|
 | Öffentlicher Internetzugriff erforderlich (temporärer Test) | **Tailscale Funnel + Passwort** | Schnell bereitgestellt, aber Passwortschutz erforderlich |
 | Mehrere Geräte teilen sich einen AI-Assistenten | **Always-on Gateway** | Zentralisierte Verwaltung aller Sitzungen, Konfigurationen und Historien |
 
@@ -97,7 +97,7 @@ flowchart TD
 ### Drei Schlüsselkonzepte
 
 | Konzept | Erklärung | Beispiel |
-| -------- | --------- | -------- |
+|--- | --- | ---|
 | **Gateway-Host** | Maschine, auf der der Gateway-Dienst läuft, besitzt Sitzungen, Authentifizierung, Channels und Status | Linux VPS, Desktop zu Hause |
 | **Client** | Tool, das sich mit Gateway verbindet (macOS App, CLI, WebChat) | Dein Laptop, Handy |
 | **Geräteknoten** | Externe Geräte, die sich über Gateway WebSocket verbinden, führen Gerätelokaloperationen aus | iOS-Gerät, Android-Gerät, macOS Node-Modus |
@@ -107,7 +107,7 @@ flowchart TD
 Dies ist der häufigste Missverständnispunkt:
 
 | Operationstyp | Wo wird ausgeführt | Grund |
-| ------------- | ----------------- | ----- |
+|--- | --- | ---|
 | `exec` Tool | **Gateway-Host** | Shell-Befehle laufen auf der Gateway-Maschine |
 | `browser` Tool | **Gateway-Host** (oder separater Browser-Kontrollserver) | Browser wird auf der Gateway-Maschine gestartet |
 | Knotenoperationen (`camera.snap`, `system.run`) | **Geräteknoten** | Zugriff auf Gerätelokale Ressourcen erforderlich |
@@ -539,7 +539,7 @@ clawdbot health --url wss://your-funnel-url.ts.net --password your-secure-passwo
 Nach Abschluss einer der oben genannten Lösungen, verifiziere folgende Punkte:
 
 | Prüfungsitem | Befehl | Erwartetes Ergebnis |
-| ------------ | ------ | ------------------- |
+|--- | --- | ---|
 | Gateway läuft | `clawdbot gateway status` | ✅ Running |
 | WebSocket erreichbar | `clawdbot health --url <url>` | ✅ Healthy |
 | Channels verbunden | `clawdbot channels status` | ✅ connected |
@@ -666,7 +666,7 @@ ssh -N -L 18790:127.0.0.1:18789 clawdbot-remote
 ### Konfigurationsvergleich
 
 | Lösung | Sicherheit | Zugriffsbereich | Konfigurations­komplexität | Empfohlenes Szenario |
-| ------ | --------- | --------------- | ------------------------- | -------------------- |
+|--- | --- | --- | --- | ---|
 | Tailscale Serve | ⭐⭐⭐⭐⭐ | Tailnet | Mittel | **Empfohlen**: Always-on Gateway |
 | SSH-Tunnel | ⭐⭐⭐⭐ | Über SSH-Verbindung erreichbar | Niedrig | Allgemeiner Fallback, Desktop-Remote-Steuerung zu Hause |
 | Tailscale Funnel | ⭐⭐ | Öffentliches Internet | Niedrig | Temporärer Test, Demo |
@@ -701,13 +701,13 @@ ssh -N -L 18790:127.0.0.1:18789 clawdbot-remote
 > Aktualisiert am: 2026-01-27
 
 | Funktion | Dateipfad | Zeilen |
-| -------- | --------- | ------ |
+|--- | --- | ---|
 | Gateway-Remote-Konfiguration Schema | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 200-220 |
 | Gateway-Tailscale-Konfiguration Schema | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 150-180 |
 | Tailscale-Integration | [`src/infra/tailscale.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/tailscale.ts) | 1-100 |
 | Remote-Gateway-Dokumentation | [`docs/gateway/remote.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/remote.md) | 1-123 |
 | Tailscale-Dokumentation | [`docs/gateway/tailscale.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/tailscale.md) | 1-147 |
-| macOS App Remote-Zugriff-Dokumentation | [`docs/gateway/remote-gateway-readme.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/remote-gateway-readme.md) | 1-154 |
+|--- | --- | ---|
 | Sicherheitsdokumentation | [`docs/gateway/security.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/security.md) | 1-100 |
 
 **Wichtige Konfigurationsfelder**:

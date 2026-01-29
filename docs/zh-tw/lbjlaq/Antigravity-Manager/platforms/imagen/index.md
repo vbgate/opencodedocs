@@ -172,7 +172,7 @@ curl.exe -i http://127.0.0.1:PORT/v1/images/generations `
 Imagen 3 上游接的是標準化 `aspectRatio`；你只要把 `size` 寫成一組常見的寬高，就能穩定對應到標準比例。
 
 | 你傳的 size | 代理計算出的 aspectRatio |
-| --- | --- |
+|--- | ---|
 | `"1024x1024"` | `1:1` |
 | `"1920x1080"` / `"1280x720"` | `16:9` |
 | `"1080x1920"` / `"720x1280"` | `9:16` |
@@ -188,7 +188,7 @@ Imagen 3 上游接的是標準化 `aspectRatio`；你只要把 `size` 寫成一�
 你不需要記 Imagen 3 的內部欄位，只用 OpenAI Images 的 `quality` 就能切換解析度檔位。
 
 | 你傳的 quality | 代理寫入的 imageSize |
-| --- | --- |
+|--- | ---|
 | `"standard"` | 不設定（走上游預設） |
 | `"medium"` | `"2K"` |
 | `"hd"` | `"4K"` |
@@ -201,7 +201,7 @@ Imagen 3 上游接的是標準化 `aspectRatio`；你只要把 `size` 寫成一�
 這個實作裡 `response_format: "url"` 並不會給你一個可公網存取的 URL，而是回傳 `data:<mime>;base64,...` 的 Data URI；很多工具更適合直接用 `b64_json`。
 
 | response_format | data[] 的欄位 |
-| --- | --- |
+|--- | ---|
 | `"b64_json"`（預設） | `{ "b64_json": "..." }` |
 | `"url"` | `{ "url": "data:image/png;base64,..." }` |
 
@@ -219,7 +219,7 @@ Imagen 3 上游接的是標準化 `aspectRatio`；你只要把 `size` 寫成一�
 這裡的 `size` 解析邏輯是按 `WIDTHxHEIGHT` 來拆分的；如果 `size` 不是這種格式，會直接回退到 `1:1`。
 
 | 寫法 | 結果 |
-| --- | --- |
+|--- | ---|
 | ✓ `"1920x1080"` | 16:9 |
 | ❌ `"16:9"` | 回退 1:1 |
 
@@ -254,12 +254,12 @@ Imagen 3 上游接的是標準化 `aspectRatio`；你只要把 `size` 寫成一�
 > 更新時間：2026-01-23
 
 | 功能 | 檔案路徑 | 行號 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 暴露 OpenAI Images 路由 | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L123-L146) | 123-146 |
 | Images 產生端點：解析 prompt/size/quality + 拼裝 OpenAI 回應 | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L1104-L1333) | 1104-1333 |
-| size/quality 解析與對應（size->aspectRatio，quality->imageSize） | [`src-tauri/src/proxy/mappers/common_utils.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/common_utils.rs#L19-L222) | 19-222 |
+|--- | --- | ---|
 | OpenAIRequest 宣告 size/quality（用於協定層相容） | [`src-tauri/src/proxy/mappers/openai/models.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/models.rs#L6-L38) | 6-38 |
-| OpenAI->Gemini 請求轉換：把 size/quality 傳入統一解析函式 | [`src-tauri/src/proxy/mappers/openai/request.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/request.rs#L19-L27) | 19-27 |
+|--- | --- | ---|
 
 **關鍵欄位（來自原始碼）**：
 - `size`：按 `WIDTHxHEIGHT` 解析為 `aspectRatio`

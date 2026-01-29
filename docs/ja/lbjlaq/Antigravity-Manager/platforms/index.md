@@ -13,7 +13,7 @@ Antigravity Tools のコア能力は、複数の AI プラットフォームの�
 ## この章が含むもの
 
 | チュートリアル | 説明 |
-|-----|------|
+|--- | ---|
 | [OpenAI 互換 API](./openai/) | `/v1/chat/completions` と `/v1/responses` の実装戦略、OpenAI SDK を無意識に接続可能にする |
 | [Anthropic 互換 API](./anthropic/) | `/v1/messages` と Claude Code の重要な契約、思考連鎖、システムプロンプトなどのコア能力をサポート |
 | [Gemini ネイティブ API](./gemini/) | `/v1beta/models` および Google SDK エンドポイント接続、`x-goog-api-key` 互換をサポート |
@@ -34,7 +34,7 @@ Antigravity Tools のコア能力は、複数の AI プラットフォームの�
 **クイック選択**：
 
 | あなたのシーン | 推奨先に見る |
-|---------|---------|
+|--- | ---|
 | Claude Code CLI を使用 | [Anthropic 互換 API](./anthropic/) |
 | OpenAI Python SDK を使用 | [OpenAI 互換 API](./openai/) |
 | Google 公式 SDK を使用 | [Gemini ネイティブ API](./gemini/) |

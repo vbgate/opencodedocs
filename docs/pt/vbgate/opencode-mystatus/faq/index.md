@@ -35,7 +35,7 @@ Entenda os mecanismos de segurança do plugin:
 Encontre soluções rapidamente com base em mensagens de erro:
 
 | Palavra-chave de erro | Possível Causa | Solução |
-|-----------|----------|----------|
+|--- | --- | ---|
 | `auth.json not found` | Arquivo de autenticação não existe | [Solução de Problemas](./troubleshooting/) |
 | `Token expired` | Token expirou | [Solução de Problemas](./troubleshooting/) |
 | `Permission denied` | Permissões insuficientes | [Configuração de Autenticação do Copilot](../advanced/copilot-auth/) |

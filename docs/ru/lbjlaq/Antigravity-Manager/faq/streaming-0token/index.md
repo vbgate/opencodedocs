@@ -142,7 +142,7 @@ Get-ChildItem -Force (Join-Path $HOME ".antigravity_tools\logs") | Sort-Object L
 ## Предупреждения о типичных ошибках
 
 | Сценарий | Что вы можете сделать (❌) | Рекомендуемый способ (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | При виде 0 Token сразу много раз вручную повторять | Постоянно нажимать кнопку повтора клиента, совсем не смотреть логи | Сначала посмотрите Proxy Monitor + app.log один раз, подтвердите, это ли ранняя неудача на этапе peek (автоматически повторит/ротирует) |
 | При `Invalid \`signature\`` сразу очистить каталог данных | Удалить весь `.antigravity_tools`, аккаунты/статистика все пропали | Сначала позвольте прокси выполнить один раз "повторную попытку исправления подписи"; только когда лог явно показывает, что восстановление невозможно, рассмотрите ручное вмешательство |
 | Считать "колебание сервера" как "аккаунт сломан" | 400/503/529一律 ротировать аккаунты | Действенность ротации зависит от кода состояния; у прокси сами есть правила `should_rotate_account(...)` (`src-tauri/src/proxy/handlers/claude.rs#L226-L236`) |
@@ -167,7 +167,7 @@ Get-ChildItem -Force (Join-Path $HOME ".antigravity_tools\logs") | Sort-Object L
 > Обновлено: 2026-01-23
 
 | Функция | Путь к файлу | Строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Claude handler: стратегия отступления повторной попытки + правила ротации | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L117-L236) | 117-236 |
 | Claude handler: внутренне преобразует непотоковый в потоковый (better quota) | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L665-L776) | 665-776 |
 | Claude handler: peek предчтение (пропуск heartbeat/комментариев, избегая пустой поток) | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L812-L926) | 812-926 |

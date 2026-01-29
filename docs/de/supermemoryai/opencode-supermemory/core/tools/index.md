@@ -31,7 +31,7 @@ opencode-supermemory ist keine Black Box; es interagiert mit dem Agenten über d
 Das Plugin registriert ein Tool namens `supermemory` beim Agenten, das wie ein Schweizer Taschenmesser mit 6 Modi ist:
 
 | Modus | Funktion | Typisches Szenario |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **add** | Speicher hinzufügen | "Merken Sie sich, dieses Projekt muss mit Bun laufen" |
 | **search** | Speicher suchen | "Habe ich vorher gesagt, wie man Authentifizierung behandelt?" |
 | **profile** | Benutzerprofil | Zeigen Sie die Codierungsgewohnheiten, die der Agent über Sie zusammengefasst hat |
@@ -187,8 +187,8 @@ A: Das Plugin maskiert automatisch den Inhalt innerhalb von `<private>`-Tags. Um
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| :--- | :--- | :--- |
-| Tool-Definition | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Schlüsselworterkennung | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L34-L37) | 34-37 |
 | Auslöseprompt | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L20-L28) | 20-28 |
 | Client-Implementierung | [`src/services/client.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/client.ts) | Vollständiger Text |

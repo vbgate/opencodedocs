@@ -241,7 +241,7 @@ MEDIA:/tmp/clawdbot-camera-snap-abc123.jpg
 **Параметры камеры iOS**:
 
 | Параметр | Тип | По умолчанию | Описание |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `facing` | `front\|back` | `front` | Ориентация камеры |
 | `maxWidth` | number | `1600` | Максимальная ширина (пиксели) |
 | `quality` | `0..1` | `0.9` | Качество JPEG (0-1) |
@@ -388,7 +388,7 @@ clawdbot config set canvasHost "http://<gateway-host>:18793/__clawdbot__/canvas/
 > Обновлено: 2026-01-27
 
 | Функция | Путь к файлу | Номера строк |
-| --- | --- | --- |
+|--- | --- | ---|
 | Вход iOS приложения | [`apps/ios/Sources/ClawdbotApp.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/ClawdbotApp.swift) | 1-30 |
 | Рендеринг Canvas | [`apps/ios/Sources/RootCanvas.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/RootCanvas.swift) | 1-250 |
 | Подключение к Gateway | [`apps/ios/Sources/Gateway/`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/Gateway/) | - |

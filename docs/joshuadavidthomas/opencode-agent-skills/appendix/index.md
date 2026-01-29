@@ -13,8 +13,8 @@ This chapter provides reference materials and development specifications for Ope
 ## What You'll Learn
 
 | Page | Description |
-|-----|-------------|
-| [Skill Development Best Practices](./best-practices/) | Master techniques and specifications for writing high-quality skills, including naming conventions, description writing, directory organization, and script usage |
+|--- | ---|
+|--- | ---|
 | [API Tool Reference](./api-reference/) | View detailed parameters and return values for all available tools, including `get_available_skills`, `read_skill_file`, `run_skill_script`, and `use_skill` |
 
 ## Learning Path Recommendations

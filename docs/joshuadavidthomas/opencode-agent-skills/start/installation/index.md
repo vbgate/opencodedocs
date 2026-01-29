@@ -48,7 +48,7 @@ OpenCode Agent Skills is a plugin published through npm. Installation is simple:
 **Use cases for the three installation methods**:
 
 | Method | Use Case | Pros & Cons |
-| --- | --- | --- |
+|--- | --- | ---|
 | **Basic Installation** | Always use the latest version on startup | ✅ Convenient automatic updates<br>❌ May encounter breaking changes |
 | **Pinned Version** | Need a stable production environment | ✅ Version control<br>❌ Manual upgrades required |
 | **Local Development** | Custom plugins or contributing code | ✅ Flexible modifications<br>❌ Manual dependency management |
@@ -284,7 +284,7 @@ After installation, you can verify through the tool list, tool calls, or startup
 > Updated: 2026-01-24
 
 | Feature | File Path | Line |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Plugin entry definition | [`package.json:18`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/package.json#L18) | 18 |
 | Plugin main file | [`src/plugin.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/plugin.ts) | Full file |
 | Dependency configuration | [`package.json:27-32`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/package.json#L27-L32) | 27-32 |

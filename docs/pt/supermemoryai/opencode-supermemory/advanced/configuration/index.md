@@ -128,7 +128,7 @@ Quando o contexto da sessão é longo demais, o plugin ativará automaticamente 
 Além do arquivo de configuração, você também pode usar variáveis de ambiente para gerenciar informações sensíveis ou substituir o comportamento padrão.
 
 | Variável de Ambiente | Descrição | Prioridade |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | `SUPERMEMORY_API_KEY` | Chave de API do Supermemory | Menor que arquivo de configuração |
 | `USER` ou `USERNAME` | Identificador usado para gerar Hash de escopo de usuário | Padrão do sistema |
 
@@ -236,7 +236,7 @@ Memória salva: o caminho base da API deste projeto é /api/v2
 > Última atualização: 2026-01-23
 
 | Funcionalidade | Caminho do Arquivo | Linha |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Definição da interface de configuração | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L12-L23) | 12-23 |
 | Definição de valores padrão | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L44-L54) | 44-54 |
 | Palavras de gatilho padrão | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L25-L42) | 25-42 |

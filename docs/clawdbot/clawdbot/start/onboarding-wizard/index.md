@@ -300,7 +300,7 @@ The wizard will ask for the workspace directory:
 By setting the `CLAWDBOT_PROFILE` environment variable, you can use independent configurations for different working environments:
 
 | Profile Value | Workspace Path | Config File |
-|---------------|-----------------|-------------|
+|--- | --- | ---|
 | `default` or unset | `~/clawd` | `~/.clawdbot/clawdbot.json` |
 | `work` | `~/clawd-work` | `~/.clawdbot/clawdbot.json` (work profile) |
 | `dev` | `~/clawd-dev` | `~/.clawdbot/clawdbot.json` (dev profile) |
@@ -679,7 +679,7 @@ The onboarding wizard is the recommended way to configure Clawdbot, guiding you 
 > Last updated: 2026-01-27
 
 | Function | File Path | Lines |
-|----------|-----------|-------|
+|--- | --- | ---|
 | Wizard main flow | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 87-452 |
 | Security warning confirmation | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 46-85 |
 | Gateway configuration | [`src/wizard/onboarding.gateway-config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.gateway-config.ts) | 28-249 |

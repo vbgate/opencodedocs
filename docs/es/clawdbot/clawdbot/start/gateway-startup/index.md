@@ -36,7 +36,7 @@ Has completado la configuración del asistente y la configuración básica de Ga
 **Métodos de inicio recomendados**:
 
 | Escenario                  | Comando                               | Descripción                                   |
-| ----------------------- | -------------------------------------- | -------------------------------------- |
+|--- | --- | ---|
 | Uso diario                | `clawdbot gateway install` + `clawdbot gateway start` | Iniciar automáticamente como servicio en segundo plano                  |
 | Desarrollo y depuración                | `clawdbot gateway --dev`                     | Crear configuración de desarrollo, recarga automática                  |
 | Prueba temporal                | `clawdbot gateway`                           | Ejecución en primer plano, registros直接输出到终端            |
@@ -487,7 +487,7 @@ En esta lección aprendiste:
 **Referencia rápida de comandos clave**:
 
 | Escenario                   | Comando                                        |
-| ---------------------- | ------------------------------------------- |
+|--- | ---|
 | Uso diario (servicio)       | `clawdbot gateway install && clawdbot gateway start` |
 | Desarrollo y depuración              | `clawdbot gateway --dev`                     |
 | Prueba temporal              | `clawdbot gateway`                           |
@@ -516,7 +516,7 @@ En esta lección aprendiste:
 > Última actualización: 2026-01-27
 
 | Función                        | Ruta del archivo                                                                                   | Línea     |
-| --------------------------- | -------------------------------------------------------------------------------------- | -------- |
+|--- | --- | ---|
 | Punto de entrada de inicio de Gateway            | [`src/cli/gateway-cli/run.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/gateway-cli/run.ts) | 55-310   |
 | Abstracción de servicio de demonio         | [`src/daemon/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/service.ts) | 66-155    |
 | Iniciar servicio de barra lateral           | [`src/gateway/server-startup.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup.ts) | 26-160    |

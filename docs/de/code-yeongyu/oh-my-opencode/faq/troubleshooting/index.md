@@ -143,7 +143,7 @@ bunx oh-my-opencode doctor --verbose
 2. Häufige Fehlertypen (aus `src/config/schema.ts`):
 
 | Fehlermeldung | Ursache | Korrektur |
-|--------------|-------|-----|
+|--- | --- | ---|
 | `agents.sisyphus.mode: Invalid enum value` | `mode` kann nur `subagent`/`primary`/`all` sein | Ändern Sie zu `primary` |
 | `categories.quick.model: Expected string` | `model` muss ein String sein | Fügen Sie Anführungszeichen hinzu: `"anthropic/claude-haiku-4-5"` |
 | `background_task.defaultConcurrency: Expected number` | Gleichzeitigkeit muss eine Zahl sein | Ändern Sie zu Zahl: `3` |
@@ -222,7 +222,7 @@ Details:
 **Häufige Probleme**:
 
 | Problem | Ursache | Lösung |
-|-------|-------|----------|
+|--- | --- | ---|
 | `unknown` Modell | Die Provider-Fallback-Kette ist leer | Stellen Sie sicher, dass mindestens ein Provider verfügbar ist |
 | Modell nicht verwendet | Provider nicht verbunden | Führen Sie `opencode` aus, um den Provider zu verbinden |
 | Modell überschreiben möchten | Standardmodell verwenden | Setzen Sie `agents.<name>.model` in `oh-my-opencode.json` |
@@ -324,10 +324,10 @@ opencode models --refresh
 Der Doctor-Befehl ist das Schweizer Taschenmesser von oh-my-opencode, das Ihnen hilft, Probleme schnell zu lokalisieren:
 
 | Befehl | Zweck | Wann verwenden |
-|---------|---------|-------------|
+|--- | --- | ---|
 | `bunx oh-my-opencode doctor` | Vollständige Diagnose | Nach der ersten Installation, bei Problemen |
 | `--verbose` | Detaillierte Informationen | Wenn Sie Fehlerdetails anzeigen möchten |
-| `--json` | JSON-Ausgabe | CI/CD, Skript-Automatisierung |
+|--- | --- | ---|
 | `--category <name>` | Einzelkategorie-Überprüfung | Wenn Sie nur einen bestimmten Aspekt überprüfen möchten |
 
 **Denken Sie daran**: Wann immer Sie auf ein Problem stoßen, führen Sie zuerst `doctor` aus und verstehen Sie den Fehler klar, bevor Sie Maßnahmen ergreifen.
@@ -351,14 +351,14 @@ Der Doctor-Befehl ist das Schweizer Taschenmesser von oh-my-opencode, das Ihnen 
 > Aktualisiert: 2026-01-26
 
 | Funktion | Dateipfad | Zeilennummern |
-|---------|-----------|-------------|
-| Doctor-Befehlseinstieg | [`src/cli/doctor/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/cli/doctor/index.ts#L1-L11) | 1-11 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Alle Überprüfungsregistrierungen | [`src/cli/doctor/checks/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/cli/doctor/checks/index.ts#L24-L37) | 24-37 |
-| Plugin-Registrierungsüberprüfung | [`src/cli/doctor/checks/plugin.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/cli/doctor/checks/plugin.ts#L79-L117) | 79-117 |
+|--- | --- | ---|
 | Konfigurationsvalidierungsüberprüfung | [`src/cli/doctor/checks/config.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/cli/doctor/checks/config.ts#L82-L112) | 82-112 |
 | Authentifizierungsüberprüfung | [`src/cli/doctor/checks/auth.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/cli/doctor/checks/auth.ts#L49-L76) | 49-76 |
-| Model-Auflösungsüberprüfung | [`src/cli/doctor/checks/model-resolution.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/cli/doctor/checks/model-resolution.ts#L234-L254) | 234-254 |
-| Konfigurations-Schema | [`src/config/schema.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/config/schema.ts#L1-L50) | 1-50 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Modellanforderungsdefinition | [`src/shared/model-requirements.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/shared/model-requirements.ts) | Gesamte Datei |
 
 **Wichtige Konstanten**:

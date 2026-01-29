@@ -57,7 +57,7 @@ Slack은 팀 협업의 핵심 도구이지만 다음 문제에 직면할 수 있
 Clawdbot의 Slack 채널은 [Bolt](https://slack.dev/bolt-js) 프레임워크를 기반으로 구현되며 두 가지 연결 모드를 지원합니다:
 
 | 모드 | 적용 시나리오 | 장점 | 단점 |
-| ------ | -------- | ------ | ------ |
+|--- | --- | --- | ---|
 | **Socket Mode** | 로컬 Gateway, 개인 사용 | 구성 간단(Token만 필요) | 지속적인 WebSocket 연결 필요 |
 | **HTTP Mode** | 서버 배포, 원격 액세스 | 방화벽 통과, 로드 밸런싱 지원 | 공용 IP 필요, 구성 복잡 |
 
@@ -423,7 +423,7 @@ Bot이 메시지에 정상적으로 응답.
 다음 권한은 현재 버전에서 필수가 아니지만 향후 지원 추가 시 필요할 수 있습니다:
 
 | 권한 | 용도 |
-| ------ | ------ |
+|--- | ---|
 | `groups:write` | 프라이빗 채널 관리(생성, 이름 변경, 초대, 보관) |
 | `mpim:write` | 그룹 DM 세션 관리 |
 | `chat:write.public` | Bot이 참여하지 않은 채널에 메시지 게시 |
@@ -529,7 +529,7 @@ Gateway가 원격 서버에 배포된 경우 HTTP Mode 사용:
 ```
 
 | 모드 | 동작 |
-| ----- | ------ |
+|--- | ---|
 | `off` | 기본값, 메인 채널에서 답장 |
 | `first` | 첫 번째 답장이 스레드로, 이후 답장은 메인 채널 |
 | `all` | 모든 답장이 스레드 |
@@ -596,7 +596,7 @@ Agent가 Slack 특정 작업을 호출하도록 허용:
 > 업데이트 날짜: 2026-01-27
 
 | 기능            | 파일 경로                                                                                               | 행 번호       |
-| --------------- | ------------------------------------------------------------------------------------------------ | ---------- |
+|--- | --- | ---|
 | Slack 구성 타입 | [`src/config/types.slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.slack.ts) | 1-150      |
 | Slack 온보딩 로직  | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/slack.ts) | 1-539      |
 | Slack Actions 도구 | [`src/agents/tools/slack-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/slack-actions.ts) | 1-301      |

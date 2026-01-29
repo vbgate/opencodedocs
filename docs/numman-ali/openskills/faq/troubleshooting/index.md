@@ -49,7 +49,7 @@ When you encounter the following situations:
 OpenSkills errors mainly fall into 4 categories:
 
 | Error Type | Common Causes | Solution Approach |
-| ---------- | ------------- | ----------------- |
+|--- | --- | ---|
 | **Git-related** | Network issues, SSH configuration, repository doesn't exist | Check network, configure Git credentials, verify repository URL |
 | **File-related** | SKILL.md missing, format error, path error | Check file existence, verify YAML format |
 | **Permission-related** | Directory permissions, path traversal, symlinks | Check directory permissions, verify installation path |
@@ -77,7 +77,7 @@ Tip: For private repos, ensure git SSH keys or credentials are configured
 **Possible causes**:
 
 | Cause | Scenario |
-| ----- | -------- |
+|--- | ---|
 | Repository doesn't exist | Misspelled owner/repo |
 | Private repository | SSH key or Git credentials not configured |
 | Network issues | Cannot access GitHub |
@@ -120,7 +120,7 @@ Error: No valid SKILL.md files found
 **Possible causes**:
 
 | Cause | Description |
-| ----- | ----------- |
+|--- | ---|
 | Repository has no SKILL.md | Repository is not a skill repository |
 | SKILL.md has no frontmatter | Missing YAML metadata |
 | SKILL.md format error | YAML syntax error |
@@ -174,7 +174,7 @@ Error: Path must be a directory
 **Possible causes**:
 
 | Cause | Description |
-| ----- | ----------- |
+|--- | ---|
 | Misspelled path | Entered wrong path |
 | Path points to file | Should be a directory, not a file |
 | Path not expanded | Need to expand when using `~` |
@@ -221,8 +221,8 @@ Error: Invalid SKILL.md (missing YAML frontmatter)
 **Possible causes**:
 
 | Cause | Description |
-| ----- | ----------- |
-| Missing `---` separator | YAML frontmatter must be wrapped with `---` |
+|--- | ---|
+|--- | ---|
 | Missing required fields | Must have `name` and `description` |
 | YAML syntax error | Format issues with colons, quotes, etc. |
 
@@ -261,7 +261,7 @@ Security error: Installation path outside target directory
 **Possible causes**:
 
 | Cause | Description |
-| ----- | ----------- |
+|--- | ---|
 | Skill name contains `..` | Attempting to access path outside target directory |
 | Symlink points outside | symlink points outside target directory |
 | Malicious skill | Skill attempting to bypass security restrictions |
@@ -310,7 +310,7 @@ Install skills: npx openskills install owner/repo
 **Possible causes**:
 
 | Cause | Description |
-| ----- | ----------- |
+|--- | ---|
 | Skill not installed | Skill not installed in any directory |
 | Misspelled skill name | Name doesn't match |
 | Installed in other location | Skill installed in non-standard directory |
@@ -356,7 +356,7 @@ Error: No skill names provided
 **Possible causes**:
 
 | Cause | Description |
-| ----- | ----------- |
+|--- | ---|
 | Forgot to pass arguments | No arguments after `openskills read` |
 | Empty string | Passed empty string |
 
@@ -393,7 +393,7 @@ Error: Output file must be a markdown file (.md)
 **Possible causes**:
 
 | Cause | Description |
-| ----- | ----------- |
+|--- | ---|
 | Output file is not .md | Specified .txt, .json, etc. formats |
 | --output parameter error | Path doesn't end with .md |
 
@@ -434,7 +434,7 @@ No skills installed. Install skills first:
 **Possible causes**:
 
 | Cause | Description |
-| ----- | ----------- |
+|--- | ---|
 | Never installed skills | First time using OpenSkills |
 | Deleted skill directory | Manually deleted skill files |
 
@@ -472,7 +472,7 @@ Skipped: my-skill (no source metadata; re-install once to enable updates)
 **Possible causes**:
 
 | Cause | Description |
-| ----- | ----------- |
+|--- | ---|
 | Old version installation | Skill installed before metadata feature |
 | Manual copy | Directly copied skill directory, not installed via OpenSkills |
 | Metadata file corrupted | `.openskills.json` corrupted or lost |
@@ -513,7 +513,7 @@ Skipped: my-skill (local source missing)
 **Possible causes**:
 
 | Cause | Description |
-| ----- | ----------- |
+|--- | ---|
 | Local path moved | Source directory location changed |
 | Local path deleted | Source directory doesn't exist |
 | Path not expanded | Used `~` but metadata stored expanded path |
@@ -551,7 +551,7 @@ Skipped: my-skill (SKILL.md not found in repo at subpath)
 **Possible causes**:
 
 | Cause | Description |
-| ----- | ----------- |
+|--- | ---|
 | Repository structure changed | Skill subpath or name changed |
 | Skill deleted | Repository no longer contains this skill |
 | Incorrect subpath | Subpath recorded in metadata is incorrect |
@@ -590,7 +590,7 @@ Skipped: my-skill (SKILL.md not found in repo at subpath)
 **Symptoms**:
 
 | Operation | Symptom |
-| --------- | ------- |
+|--- | ---|
 | Installation failed | Prompts permission error |
 | Deletion failed | Prompts unable to delete file |
 | Read failed | Prompts file access restricted |
@@ -598,7 +598,7 @@ Skipped: my-skill (SKILL.md not found in repo at subpath)
 **Possible causes**:
 
 | Cause | Description |
-| ----- | ----------- |
+|--- | ---|
 | Insufficient directory permissions | User doesn't have write permission |
 | Insufficient file permissions | File is read-only |
 | System protection | macOS SIP, Windows UAC restrictions |
@@ -641,7 +641,7 @@ Skipped: my-skill (SKILL.md not found in repo at subpath)
 **Symptoms**:
 
 | Symptom | Description |
-| ------- | ----------- |
+|--- | ---|
 | Skipped skill in list | `openskills list` doesn't show the skill |
 | Read failed | Prompts file doesn't exist |
 | Update failed | Invalid source path |
@@ -649,10 +649,10 @@ Skipped: my-skill (SKILL.md not found in repo at subpath)
 **Possible causes**:
 
 | Cause | Description |
-| ----- | ----------- |
+|--- | ---|
 | Target directory deleted | Symlink points to non-existent path |
 | Symlink corrupted | Link file itself corrupted |
-| Cross-device link | Some systems don't support cross-device symlinks |
+|--- | ---|
 
 **Solution**:
 
@@ -721,7 +721,7 @@ Skipped: my-skill (SKILL.md not found in repo at subpath)
 In this lesson, we learned troubleshooting and fixing methods for common OpenSkills problems:
 
 | Problem Type | Key Solutions |
-| ------------ | ------------- |
+|--- | ---|
 | Git clone failed | Check network, configure credentials, verify repository URL |
 | SKILL.md not found | Check repository structure, verify YAML format |
 | Read failed | Check skill status with `openskills list` |
@@ -749,7 +749,7 @@ In this lesson, we learned troubleshooting and fixing methods for common OpenSki
 > Updated: 2026-01-24
 
 | Feature | File Path | Line Numbers |
-| ------- | --------- | ------------ |
+|--- | --- | ---|
 | Git clone failure handling | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L162-L168) | 162-168 |
 | Path doesn't exist error | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L205-L207) | 205-207 |
 | Not a directory error | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L210-L213) | 210-213 |

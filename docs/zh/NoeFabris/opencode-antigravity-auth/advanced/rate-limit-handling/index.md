@@ -66,7 +66,7 @@ Google 对每个账户都有速率限制。如果简单地"遇到 429 就切换"
 Antigravity Auth 会根据 API 响应中的 `reason` 字段或 `message` 内容，区分以下 5 种限速类型：
 
 | 类型 | 原因 | 退避策略 | 典型场景 |
-|------|------|---------|---------|
+|--- | --- | --- | ---|
 | `QUOTA_EXHAUSTED` | 配额用完（日配额或月配额） | 递增退避：1min → 5min → 30min → 120min | 日配额耗尽 |
 | `RATE_LIMIT_EXCEEDED` | 请求过快（每分钟限制） | 固定 30 秒 | 短时间大量请求 |
 | `MODEL_CAPACITY_EXHAUSTED` | 模型服务器容量不足 | 固定 15 秒 | 高峰时段 |
@@ -147,7 +147,7 @@ flowchart TD
 **关键配置**（config/schema.ts:256-259）：
 
 | 配置项 | 默认值 | 说明 |
-|-------|-------|------|
+|--- | --- | ---|
 | `switch_on_first_rate_limit` | `true` | 首次限速是否立即切换账户（等待 1s 后） |
 | `max_rate_limit_wait_seconds` | `300` | 所有账户限速时的最大等待时间（5 分钟） |
 
@@ -185,7 +185,7 @@ Gemini 模型支持两个独立的配额池：
 你有 2 个账户，都遇到 429：
 
 | 状态 | quota_fallback=false | quota_fallback=true |
-|------|---------------------|-------------------|
+|--- | --- | ---|
 | 账户 1（Antigravity） | 限速 | 限速 → 尝试 Gemini CLI |
 | 账户 2（Antigravity） | 限速 | 限速 → 尝试 Gemini CLI |
 | 结果 | 等待 5 分钟后重试 | 切换到 Gemini CLI，无需等待 |
@@ -227,7 +227,7 @@ const expBackoffMs = Math.min(1000 * Math.pow(2, attempt - 1), 60000);
 **与多账户的区别**：
 
 | 场景 | 策略 | 等待时间 |
-|------|------|---------|
+|--- | --- | ---|
 | 单账户 | 指数退避重试 | 1s → 2s → 4s → 8s → ... → 60s |
 | 多账户 | 切换账户 | 1s（首次）或 5s（第 2 次） |
 
@@ -522,7 +522,7 @@ Rate limited. Retrying in 60s... (toast 通知)
 ## 本课小结
 
 | 机制 | 核心特点 | 适用场景 |
-|------|---------|---------|
+|--- | --- | ---|
 | **速率限制检测** | 区分 5 种类型（QUOTA_EXHAUSTED、RATE_LIMIT_EXCEEDED 等） | 所有场景 |
 | **指数退避** | 失败次数越多，等待时间越长（1s → 2s → 4s → ... → 60s） | 单账户 |
 | **账户切换** | 多账户优先切换，单账户退避重试 | 多账户 |
@@ -532,7 +532,7 @@ Rate limited. Retrying in 60s... (toast 通知)
 **关键配置**：
 
 | 配置项 | 默认值 | 推荐值 | 说明 |
-|-------|-------|--------|------|
+|--- | --- | --- | ---|
 | `switch_on_first_rate_limit` | `true` | `true`（多账户） | 首次限速立即切换 |
 | `quota_fallback` | `false` | `true`（Gemini） | 启用双配额池 fallback |
 | `max_rate_limit_wait_seconds` | `300` | `300` | 最大等待时间（秒） |
@@ -562,7 +562,7 @@ Rate limited. Retrying in 60s... (toast 通知)
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | 速率限制类型定义 | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L10-L20) | 10-20 |
 | 解析限速原因 | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L29-L49) | 29-49 |
 | 计算退避时间 | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L51-L75) | 51-75 |

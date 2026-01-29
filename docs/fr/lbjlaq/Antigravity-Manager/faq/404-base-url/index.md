@@ -73,7 +73,7 @@ Si vous n'avez pas fourni de clé en mode `auth_mode=strict/all_except_health/au
 Les routes du reverse proxy d'Antigravity Tools sont "toutes codées en dur" (voir `src-tauri/src/proxy/server.rs`), les points d'entrée courants sont :
 
 | Protocole | Chemin | Usage |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI | `/v1/models` | Lister les modèles |
 | OpenAI | `/v1/chat/completions` | Complétions de chat |
 | OpenAI | `/v1/responses` | Compatibilité Codex CLI |
@@ -122,7 +122,7 @@ Invoke-WebRequest -UseBasicParsing http://127.0.0.1:8045/v1beta/models | Select-
 Le piège de la Base URL est essentiellement que "votre chemin" et "le chemin ajouté par le client" se superposent.
 
 | Ce que vous utilisez | Base URL recommandée | La route sur laquelle vous vous alignez |
-| --- | --- | --- |
+|--- | --- | ---|
 | SDK OpenAI (Python/Node, etc.) | `http://127.0.0.1:8045/v1` | `/v1/chat/completions`, `/v1/models` |
 | Claude Code CLI (Anthropic) | `http://127.0.0.1:8045` | `/v1/messages` |
 | SDK Gemini / clients en mode Gemini | `http://127.0.0.1:8045` | `/v1beta/models/*` |
@@ -170,7 +170,7 @@ http://127.0.0.1:8045/v1/chat/completions
 Vous pouvez utiliser ce tableau pour vérifier rapidement si votre "chemin de requête final" peut correspondre aux routes d'Antigravity Tools :
 
 | Chemin que vous voyez dans les journaux | Conclusion |
-| --- | --- |
+|--- | ---|
 | Commence par `/v1/` (comme `/v1/models`, `/v1/chat/completions`) | Utilise les routes compatibles OpenAI/Anthropic |
 | Commence par `/v1beta/` (comme `/v1beta/models/...`) | Utilise les routes natives Gemini |
 | Apparaît `/v1/v1/` | La Base URL contenait `/v1`, le client l'a ajouté à nouveau |
@@ -207,7 +207,7 @@ Vous pouvez utiliser ce tableau pour vérifier rapidement si votre "chemin de re
 ## Résumé de la leçon
 
 | Phénomène | Cause la plus fréquente | Ce que vous devriez modifier |
-| --- | --- | --- |
+|--- | --- | ---|
 | 404 constant | Concaténation incorrecte de la Base URL | Vérifiez d'abord avec curl que `/v1/models`/`/v1beta/models` ne renvoient pas 404 |
 | `/v1/v1/...` | `/v1` en double | Gardez la Base URL du SDK OpenAI qui se termine par `/v1` |
 | `/v1/chat/completions/responses` | Client à chemins imbriqués | Passez au protocole Gemini ou faites une réécriture de chemin (non recommandé pour les débutants) |
@@ -233,7 +233,7 @@ Vous pouvez utiliser ce tableau pour vérifier rapidement si votre "chemin de re
 > Date de mise à jour : 2026-01-23
 
 | Fonction | Chemin du fichier | Numéro de ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Définition des routes du reverse proxy (table de routage complète) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L193) | 120-193 |
 | `AxumServer::start()` (point d'entrée de la construction des routes) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L79-L216) | 79-216 |
 | `health_check_handler()` | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L266-L272) | 266-272 |

@@ -30,7 +30,7 @@ Pour ce faire, nous avons volontairement limité certaines fonctionnalités afin
 ## Aperçu des limitations connues
 
 | Limitation | Description | Prise en charge prévue |
-| --- | --- | --- |
+|--- | --- | ---|
 | **Tableaux HTML** | Uniquement les tableaux Markdown avec pipes (`\| ... \|`) | ❌ Non pris en charge |
 | **Cellules multilignes** | Les cellules ne peuvent pas contenir de balises de saut de ligne comme `<br>` | ❌ Non pris en charge |
 | **Tableaux sans séparateur** | Doit avoir une ligne de séparation `|---|` | ❌ Non pris en charge |
@@ -67,7 +67,7 @@ Le plugin ne traite que les tableaux Markdown avec pipes (Pipe Table), c'est-à-
 
 ```markdown
 | Colonne 1 | Colonne 2 |
-| --- | --- |
+|--- | ---|
 | Donnée 1 | Donnée 2 |
 ```
 
@@ -97,7 +97,7 @@ Si vous devez formater des tableaux HTML, nous vous recommandons :
 
 ```markdown
 | Colonne 1 | Colonne 2 |
-| --- | --- |
+|--- | ---|
 | Ligne 1<br>Ligne 2 | Une seule ligne |
 ```
 
@@ -166,7 +166,7 @@ return hasSeparator  // Renvoie false si pas de séparateur
 
 ```markdown
 | Colonne 1 | Colonne 2 |
-| --- | --- |
+|--- | ---|
 | Fusionner deux colonnes |  ← Attendu pour couvrir les colonnes 1 et 2
 | Donnée 1 | Donnée 2 |
 ```
@@ -187,7 +187,7 @@ La norme Markdown ne prend pas en charge la syntaxe de fusion de cellules, et le
 **Phénomène**
 
 ```markdown
-| :--- | :---: | ---: |
+|--- | --- | ---|
 | Aligné à gauche | Centré | Aligné à droite |
 | Donnée 1 | Donnée 2 | Donnée 3 |
 ```
@@ -305,7 +305,7 @@ Le plugin n'a pas de limite de largeur de colonne maximale, si le contenu des ce
 ## Résumé du cours
 
 | Limitation | Raison | Solution alternative |
-| --- | --- | --- |
+|--- | --- | ---|
 | Tableaux HTML non pris en charge | Le plugin se concentre sur les tableaux Markdown avec pipes | Utiliser des outils de formatage HTML |
 | Cellules multilignes non prises en charge | Logique de traitement ligne par ligne | Diviser en plusieurs lignes ou accepter l'élargissement |
 | Tableaux sans séparateur non pris en charge | Exigence de la spécification Markdown | Ajouter une ligne de séparation `|---|` |
@@ -330,7 +330,7 @@ Le plugin n'a pas de limite de largeur de colonne maximale, si le contenu des ce
 > Dernière mise à jour : 2026-01-26
 
 | Limitation | Chemin du fichier | Numéros de ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Détection de tableaux HTML | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61) | 58-61 |
 | Détection de ligne de séparation | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L63-L68) | 63-68 |
 | Validation de tableau (doit contenir une ligne de séparation) | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88) | 70-88 |

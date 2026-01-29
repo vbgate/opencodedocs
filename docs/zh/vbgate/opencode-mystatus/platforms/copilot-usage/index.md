@@ -66,7 +66,7 @@ Premium Requests 是 Copilot 的主要配额指标，包含：
 不同订阅类型有不同的月度限额：
 
 | 订阅类型    | 月度限额 | 适用人群               |
-| ----------- | -------- | ---------------------- |
+|--- | --- | ---|
 | Free        | 50 次    | 个人开发者试用         |
 | Pro         | 300 次   | 个人开发者正式版       |
 | Pro+        | 1,500 次 | 重度个人开发者         |
@@ -307,7 +307,7 @@ OpenCode 的新 OAuth 集成不支持访问配额 API。
 如果你填写的 `tier` 与实际订阅不符，限额计算会错误。
 
 | 你的实际订阅 | tier 字段应填           | 错误填写示例 |
-| ------------ | ----------------------- | ------------ |
+|--- | --- | ---|
 | Free         | `free`                  | `pro` ❌     |
 | Pro          | `pro`                   | `free` ❌    |
 | Pro+         | `pro+`                  | `pro` ❌     |
@@ -375,9 +375,9 @@ OpenCode 的新 OAuth 集成不支持访问配额 API。
 > 更新时间：2026-01-23
 
 | 功能             | 文件路径                                                                                      | 行号    |
-| ---------------- | --------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Copilot 配额查询 | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 481-524 |
-| Fine-grained PAT 读取 | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 122-151 |
+|--- | --- | ---|
 | Public Billing API 查询 | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 157-177 |
 | Internal API 查询 | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 242-304 |
 | Token 交换逻辑   | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 183-208 |

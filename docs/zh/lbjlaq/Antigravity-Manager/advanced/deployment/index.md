@@ -61,7 +61,7 @@ order: 10
 ## 选型速查：Docker vs Headless Xvfb
 
 | 你最在意的点 | 更推荐 | 为什么 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 需要浏览器做 OAuth/授权 | Docker（noVNC） | 容器内自带 Firefox ESR，可直接在浏览器里操作（见 `deploy/docker/README.md`） |
 | 想要 systemd 管理/日志落盘 | Headless Xvfb | install 脚本会安装 systemd service，并把日志 append 到 `logs/app.log`（见 `deploy/headless-xvfb/install.sh`） |
 | 想要隔离与资源限制 | Docker | compose 方式天然隔离、也更容易配资源限制（见 `deploy/docker/README.md`） |
@@ -222,7 +222,7 @@ sudo ./upgrade.sh
 ## 踩坑提醒
 
 | 场景 | 常见错误（❌） | 推荐做法（✓） |
-| --- | --- | --- |
+|--- | --- | ---|
 | 账号/配置丢失 | ❌ 只关心“程序跑起来” | ✓ 先确认 `.antigravity_tools/` 是持久化的（volume 或 `/opt/antigravity`） |
 | noVNC 端口改不生效 | ❌ 只改 `NOVNC_PORT` | ✓ 保持默认 6080；要改就同时核对 `start.sh` 里 `websockify` 端口 |
 | 把 8045 暴露到公网 | ❌ 不设 `api_key`/不看 auth_mode | ✓ 先按 **[安全与隐私](/zh/lbjlaq/Antigravity-Manager/advanced/security/)** 做基线，再考虑隧道/反代 |
@@ -249,7 +249,7 @@ sudo ./upgrade.sh
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Docker 部署入口与 noVNC URL | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L5-L13) | 5-13 |
 | Docker 部署环境变量说明（VNC_PASSWORD/RESOLUTION/NOVNC_PORT） | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L32-L39) | 32-39 |
 | Docker compose 端口映射与数据卷（antigravity_data） | [`deploy/docker/docker-compose.yml`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/docker-compose.yml#L1-L21) | 1-21 |

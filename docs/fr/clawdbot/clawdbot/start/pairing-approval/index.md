@@ -70,7 +70,7 @@ Pour protéger votre assistant IA, Clawdbot fournit un **mécanisme d'appariemen
 **Tous les canaux utilisent par défaut `dmPolicy="pairing"`**, ce qui signifie :
 
 | Stratégie | Comportement |
-| ---------- | ----------- |
+|--- | ---|
 | `pairing` | Les expéditeurs inconnus reçoivent un code d'appariement, les messages ne sont pas traités (par défaut) |
 | `allowlist` | Seuls les expéditeurs de la liste `allowFrom` sont autorisés |
 | `open` | Autorise tous les expéditeurs (nécessite une configuration explicite `"*"`) |
@@ -296,7 +296,7 @@ Rappelez-vous : **le mécanisme d'appariement est la pierre angulaire de la séc
 > Dernière mise à jour : 2026-01-27
 
 | Fonctionnalité | Chemin du fichier | Lignes |
-| --- | --- | --- |
+|--- | --- | ---|
 | Génération du code d'appariement (8 caractères, exclut les caractères confus) | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L173-L181) | 173-181 |
 | Stockage et TTL des demandes d'appariement (1 heure) | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L11-L14) | 11-14 |
 | Commande d'approbation d'appariement | [`src/cli/pairing-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/pairing-cli.ts#L107-L143) | 107-143 |

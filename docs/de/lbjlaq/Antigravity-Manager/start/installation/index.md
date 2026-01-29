@@ -59,7 +59,7 @@ Die Kosten für "Upgrade / Rollback / Fehlerbehebung" sind bei verschiedenen Ins
 **Empfehlung**:
 
 | Szenario | Empfohlene Installationsmethode |
-| --- | --- |
+|--- | ---|
 | macOS / Linux Desktop | Homebrew (Option A) |
 | Windows Desktop | GitHub Releases (Option B) |
 | Arch Linux | Offizielles Skript (Arch-Option) |
@@ -217,17 +217,17 @@ In der nächsten Lektion machen wir einen Schritt weiter von "kann geöffnet wer
 > Aktualisierungszeit: 2026-01-23
 
 | Thema | Dateipfad | Zeilennummer |
-| --- | --- | --- |
-| Homebrew-Installation (tap + cask) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L112-L127) | 112-127 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Releases manuelles Download (Installationspakete für verschiedene Plattformen) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L128-L133) | 128-133 |
-| Arch Ein-Klick-Installationsskript-Einstieg | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L134-L140) | 134-140 |
-| Arch-Installationsskript-Implementierung (GitHub API + makepkg) | [`deploy/arch/install.sh`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/arch/install.sh#L1-L56) | 1-56 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Headless Xvfb-Installationseinstieg (curl | sudo bash) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L141-L149) | 141-149 |
-| Headless Xvfb-Bereitstellung/Upgrade/Wartungsbefehle | [`deploy/headless-xvfb/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/headless-xvfb/README.md#L1-L99) | 1-99 |
+|--- | --- | ---|
 | Headless Xvfb install.sh (systemd + 8045 Standardkonfiguration) | [`deploy/headless-xvfb/install.sh`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/headless-xvfb/install.sh#L1-L99) | 1-99 |
-| Docker-Bereitstellungseinstieg (docker compose up -d) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L150-L166) | 150-166 |
-| Docker-Bereitstellungsbeschreibung (noVNC 6080 / Proxy 8045) | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L1-L35) | 1-35 |
-| Docker-Port/Datenvolumenkonfiguration (8045 + antigravity_data) | [`deploy/docker/docker-compose.yml`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/docker-compose.yml#L1-L25) | 1-25 |
-| macOS "beschädigt, kann nicht geöffnet werden" Fehlerbehebung (xattr / --no-quarantine) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L171-L186) | 171-186 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 </details>

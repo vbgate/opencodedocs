@@ -102,7 +102,7 @@ Everything Claude Code provides two professional review agents:
 ### Issue Severity Grading
 
 | Level | Meaning | Block Commit? | Example |
-|-------|---------|---------------|---------|
+|--- | --- | --- | ---|
 | **CRITICAL** | Critical security vulnerability or major quality issue | ❌ Must block | Hardcoded API key, SQL injection |
 | **HIGH** | Important security or code quality issue | ❌ Must block | Missing error handling, XSS vulnerability |
 | **MEDIUM** | Medium priority issue | ⚠️ Can commit with caution | Emoji usage, missing JSDoc |
@@ -437,7 +437,7 @@ After completing the steps above, you should:
 **Code Review Workflow** is one of the core features of Everything Claude Code:
 
 | Feature | Agent | Check Content | Severity |
-|---------|-------|--------------|----------|
+|--- | --- | --- | ---|
 | **Code Quality Review** | code-reviewer | Function size, error handling, best practices | HIGH/MEDIUM/LOW |
 | **Security Review** | security-reviewer | OWASP Top 10, key leaks, injection vulnerabilities | CRITICAL/HIGH/MEDIUM |
 
@@ -471,11 +471,11 @@ After completing the steps above, you should:
 > Last updated: 2026-01-25
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
-| /code-review command definition | [`commands/code-review.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/code-review.md) | 1-41 |
-| code-reviewer agent | [`agents/code-reviewer.md`](https://github.com/affaan-m/everything-claude-code/blob/main/agents/code-reviewer.md) | 1-105 |
-| security-reviewer agent | [`agents/security-reviewer.md`](https://github.com/affaan-m/everything-claude-code/blob/main/agents/security-reviewer.md) | 1-546 |
-| security-review skill | [`skills/security-review/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/security-review/SKILL.md) | 1-495 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Key constants**:
 - Function size limit: 50 lines (code-reviewer.md:47)

@@ -59,7 +59,7 @@ Antigravity Tools がどのような問題を解決するかまだ確実では�
 **推奨**：
 
 | シナリオ | 推奨インストール方法 |
-| --- | --- |
+|--- | ---|
 | macOS / Linux デスクトップ | Homebrew（オプション A） |
 | Windows デスクトップ | GitHub Releases（オプション B） |
 | Arch Linux | 公式スクリプト（Arch オプション） |
@@ -217,7 +217,7 @@ docker compose up -d
 > 更新日時：2026-01-23
 
 | トピック | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Homebrew インストール（tap + cask） | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L112-L127) | 112-127 |
 | Releases 手動ダウンロード（各プラットフォームインストールパッケージ） | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L128-L133) | 128-133 |
 | Arch ワンクリックインストールスクリプト入口 | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L134-L140) | 134-140 |
@@ -225,9 +225,9 @@ docker compose up -d
 | Headless Xvfb インストール入口（curl | sudo bash） | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L141-L149) | 141-149 |
 | Headless Xvfb デプロイ/アップグレード/運用コマンド | [`deploy/headless-xvfb/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/headless-xvfb/README.md#L1-L99) | 1-99 |
 | Headless Xvfb install.sh（systemd + 8045 デフォルト設定） | [`deploy/headless-xvfb/install.sh`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/headless-xvfb/install.sh#L1-L99) | 1-99 |
-| Docker デプロイ入口（docker compose up -d） | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L150-L166) | 150-166 |
+|--- | --- | ---|
 | Docker デプロイ説明（noVNC 6080 / プロキシ 8045） | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L1-L35) | 1-35 |
 | Docker ポート/データボリューム設定（8045 + antigravity_data） | [`deploy/docker/docker-compose.yml`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/docker-compose.yml#L1-L25) | 1-25 |
-| macOS 「破損、開けません」トラブルシューティング（xattr / --no-quarantine） | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L171-L186) | 171-186 |
+|--- | --- | ---|
 
 </details>

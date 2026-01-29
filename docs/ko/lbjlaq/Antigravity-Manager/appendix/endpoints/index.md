@@ -27,7 +27,7 @@ order: 1
 Antigravity Tools의 로컬 리버스 프록시 서비스는 다음과 같은 엔드포인트를 제공합니다:
 
 | 프로토콜 분류 | 용도 | 전형적인 클라이언트 |
-| --- | --- | --- |
+|--- | --- | ---|
 | **OpenAI 프로토콜** | 범용 AI 애플리케이션 호환 | OpenAI SDK / 호환 클라이언트 |
 | **Anthropic 프로토콜** | Claude 시리즈 호출 | Claude Code / Anthropic SDK |
 | **Gemini 프로토콜** | Google 공식 SDK | Google Gemini SDK |
@@ -41,7 +41,7 @@ Antigravity Tools의 로컬 리버스 프록시 서비스는 다음과 같은 �
 이 엔드포인트는 OpenAI API 형식을 호환하며, OpenAI SDK를 지원하는 대부분의 클라이언트에 적합합니다.
 
 | 메서드 | 경로 | 라우팅 진입점(Rust handler) | 비고 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | GET | `/v1/models` | `handlers::openai::handle_list_models` | OpenAI 호환: 모델 리스트 |
 | POST | `/v1/chat/completions` | `handlers::openai::handle_chat_completions` | OpenAI 호환: Chat Completions |
 | POST | `/v1/completions` | `handlers::openai::handle_completions` | OpenAI 호환: Legacy Completions |
@@ -61,7 +61,7 @@ Antigravity Tools의 로컬 리버스 프록시 서비스는 다음과 같은 �
 이 엔드포인트는 Anthropic API의 경로 및 요청 형식에 따라 구성되어, Claude Code / Anthropic SDK 호출에 사용됩니다.
 
 | 메서드 | 경로 | 라우팅 진입점(Rust handler) | 비고 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | POST | `/v1/messages` | `handlers::claude::handle_messages` | Anthropic 호환: Messages |
 | POST | `/v1/messages/count_tokens` | `handlers::claude::handle_count_tokens` | Anthropic 호환: count_tokens |
 | GET | `/v1/models/claude` | `handlers::claude::handle_list_models` | Anthropic 호환: 모델 리스트 |
@@ -73,7 +73,7 @@ Antigravity Tools의 로컬 리버스 프록시 서비스는 다음과 같은 �
 이 엔드포인트는 Google Gemini API 형식을 호환하며, Google 공식 SDK를 직접 사용할 수 있습니다.
 
 | 메서드 | 경로 | 라우팅 진입점(Rust handler) | 비고 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | GET | `/v1beta/models` | `handlers::gemini::handle_list_models` | Gemini 네이티브: 모델 리스트 |
 | GET | `/v1beta/models/:model` | `handlers::gemini::handle_get_model` | Gemini 네이티브: GetModel |
 | POST | `/v1beta/models/:model` | `handlers::gemini::handle_generate` | Gemini 네이티브: generateContent / streamGenerateContent |
@@ -90,7 +90,7 @@ Antigravity Tools의 로컬 리버스 프록시 서비스는 다음과 같은 �
 MCP(Model Context Protocol) 엔드포인트는 "도구 호출" 인터페이스를 외부에 노출하는 데 사용됩니다(`handlers::mcp::*`로 처리). 활성화 여부 및 구체적인 동작은 구성에 따릅니다. 세부 사항은 [MCP 엔드포인트](../../platforms/mcp/)를 참조하세요.
 
 | 메서드 | 경로 | 라우팅 진입점(Rust handler) | 비고 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | ANY | `/mcp/web_search_prime/mcp` | `handlers::mcp::handle_web_search_prime` | MCP: Web Search Prime |
 | ANY | `/mcp/web_reader/mcp` | `handlers::mcp::handle_web_reader` | MCP: Web Reader |
 | ANY | `/mcp/zai-mcp-server/mcp` | `handlers::mcp::handle_zai_mcp_server` | MCP: z.ai MCP Server |
@@ -106,7 +106,7 @@ MCP의 사용 가능 범위와 경계 설명은 [z.ai 통합 능력 경계(이�
 이 엔드포인트는 시스템 내부 기능 및 외부 모니터링에 사용됩니다.
 
 | 메서드 | 경로 | 라우팅 진입점(Rust handler) | 비고 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | POST | `/internal/warmup` | `handlers::warmup::handle_warmup` | 내부 웜업 엔드포인트 |
 | POST | `/v1/api/event_logging` | `silent_ok_handler` | 텔레메트리 로그 인터셉트: 직접 200 반환 |
 | POST | `/v1/api/event_logging/batch` | `silent_ok_handler` | 텔레메트리 로그 인터셉트: 직접 200 반환 |
@@ -128,7 +128,7 @@ MCP의 사용 가능 범위와 경계 설명은 [z.ai 통합 능력 경계(이�
 모든 엔드포인트의 액세스 권한은 `proxy.auth_mode`로 제어됩니다:
 
 | 모드 | 설명 | `/healthz` 인증 필요? | 다른 엔드포인트 인증 필요? |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `off` | 완전 개방 | ❌ 아니오 | ❌ 아니오 |
 | `strict` | 모든 라우트 인증 필요 | ✅ 예 | ✅ 예 |
 | `all_except_health` | 헬스 체크만 개방 | ❌ 아니오 | ✅ 예 |
@@ -204,7 +204,7 @@ Antigravity Tools는 완전한 다중 프로토콜 호환 엔드포인트를 제
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 라우팅 등록(모든 엔드포인트) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | 인증 미들웨어(Header 호환 + `/healthz` 면제 + OPTIONS 통과) | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L14-L78) | 14-78 |
 | auth_mode 모드 및 auto 파생 규칙 | [`docs/proxy/auth.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy/auth.md#L9-L24) | 9-24 |

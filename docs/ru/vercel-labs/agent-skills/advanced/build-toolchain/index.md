@@ -89,7 +89,7 @@ rules/*.md (57 файлов)
 **Четыре основные команды**:
 
 | Команда | Функция | Применимые сценарии |
-| -------- | --------- | ------------------- |
+|--- | --- | ---|
 | `pnpm validate` | Проверка формата и полноты всех файлов правил | Проверка перед отправкой, валидация CI |
 | `pnpm build` | Генерация AGENTS.md и test-cases.json | После изменения правил, перед публикацией |
 | `pnpm dev` | Выполнение build + validate (процесс разработки) | Быстрая итерация, разработка новых правил |
@@ -419,7 +419,7 @@ jobs:
 CI автоматически запустится в следующих случаях:
 
 | Событие | Условие |
-| -------- | -------- |
+|--- | ---|
 | `push` | Отправка в ветку `main`, и изменены `skills/react-best-practices/**` или `packages/react-best-practices-build/**` |
 | `pull_request` | Создание или обновление PR в ветку `main`, и изменены указанные пути |
 
@@ -593,7 +593,7 @@ pnpm dev (проверка + сборка + извлечение тестов)
 > Обновлено: 2026-01-25
 
 | Функция | Путь к файлу | Строки |
-| ------- | ------------ | ------ |
+|--- | --- | ---|
 | Определение скриптов package.json | [`packages/react-best-practices-build/package.json`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/package.json) | 6-12 |
 | Функция входа сборки | [`packages/react-best-practices-build/src/build.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/build.ts) | 131-290 |
 | Парсер правил | [`packages/react-best-practices-build/src/parser.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/parser.ts) | Весь файл |

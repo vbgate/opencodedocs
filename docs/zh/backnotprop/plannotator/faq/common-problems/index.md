@@ -144,7 +144,7 @@ taskkill /PID <PID> /F  # Windows
 **原因分析**：
 
 | 场景 | 原因 |
-| ----- | ---- |
+|--- | ---|
 | 远程环境 | Plannotator 检测到远程模式，跳过浏览器自动打开 |
 | `PLANNOTATOR_BROWSER` 配置错误 | 浏览器路径或名称不正确 |
 | 浏览器未安装 | 系统默认浏览器不存在 |
@@ -230,7 +230,7 @@ set PLANNOTATOR_BROWSER="C:\Program Files\Google\Chrome\Application\chrome.exe"
 **可能原因**：
 
 | 原因 | 计划评审 | 代码评审 |
-| ---- | ------- | ------- |
+|--- | --- | ---|
 | Plan 参数为空 | ✅ 常见 | ❌ 不适用 |
 | Git 仓库问题 | ❌ 不适用 | ✅ 常见 |
 | 无 diff 可显示 | ❌ 不适用 | ✅ 常见 |
@@ -370,7 +370,7 @@ git diff HEAD
 **可能原因**：
 
 | 原因 | 解决方法 |
-| ---- | ------- |
+|--- | ---|
 | 未选择文件 | 点击上传按钮并选择图片 |
 | 文件格式不支持 | 使用 png/jpeg/webp 格式 |
 | 文件过大 | 压缩图片后再上传 |
@@ -431,7 +431,7 @@ dir %TEMP%\plannotator
 **可能原因**：
 
 | 原因 | Obsidian | Bear |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | 集成未启用 | ✅ | ✅ |
 | Vault/App 未检测到 | ✅ | N/A |
 | 路径配置错误 | ✅ | ✅ |
@@ -650,7 +650,7 @@ http://localhost:9999
 **可能原因**：
 
 | 原因 | 解决方法 |
-| ---- | ------- |
+|--- | ---|
 | 计划保存被禁用 | 检查设置中的 "Plan Save" 选项 |
 | 自定义路径无效 | 验证路径是否可写 |
 | 注释内容为空 | 这是正常行为（仅当有注释时才保存） |
@@ -748,7 +748,7 @@ New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.plannotator\plans"
 > 更新时间：2026-01-24
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 服务器启动与重试逻辑 | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts#L79-L335) | 79-335 |
 | 端口占用错误处理（计划评审） | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts#L319-L334) | 319-334 |
 | 端口占用错误处理（代码评审） | [`packages/server/review.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/review.ts#L252-L267) | 252-267 |
@@ -763,7 +763,7 @@ New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.plannotator\plans"
 **关键常量**：
 
 | 常量 | 值 | 说明 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `MAX_RETRIES` | 5 | 服务器启动最大重试次数 |
 | `RETRY_DELAY_MS` | 500 | 重试延迟（毫秒） |
 

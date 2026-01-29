@@ -22,7 +22,7 @@ prerequisite: []
 ### ImpactLevel（影響級別）
 
 | 值 | 說明 |
-| --- | --- |
+|--- | ---|
 | CRITICAL | 關鍵瓶頸 |
 | HIGH | 重要改進 |
 | MEDIUM-HIGH | 中高優先級 |
@@ -33,7 +33,7 @@ prerequisite: []
 ### Rule（規則）
 
 | 欄位 | 類型 | 必填 |
-| --- | --- | --- |
+|--- | --- | ---|
 | id | string | ✅ |
 | title | string | ✅ |
 | section | number | ✅ |

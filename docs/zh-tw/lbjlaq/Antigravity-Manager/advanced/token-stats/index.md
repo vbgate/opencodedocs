@@ -143,7 +143,7 @@ Token Stats 統計來自真實請求。只啟動代理但沒發過一次模型�
 ## 踩坑提醒
 
 | 現象 | 常見原因 | 你可以怎麼做 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Token Stats 顯示"暫無資料" | 你確實沒產生模型請求；或上游響應沒帶可解析的 token 欄位 | 先複用已驗證可用的客戶端發請求；再看響應裡是否包含 `usage/usageMetadata` |
 | 統計按"模型"看起來不對 | 統計口徑使用請求裡的 `model`，不是 `X-Mapped-Model` | 把模型路由當成"請求模型 -> 映射模型"；統計看的是"請求模型" |
 | 帳號維度缺失 | 只有拿到 `X-Account-Email` 且解析到 token 用量時才會寫入 | 確認請求確實走到了帳號池；再對照請求日誌/響應標頭 |
@@ -175,8 +175,8 @@ Token Stats 統計來自真實請求。只啟動代理但沒發過一次模型�
 > 更新時間：2026-01-23
 
 | 功能 | 檔案路徑 | 行號 |
-| --- | --- | --- |
-| Token Stats 頁面路由 `/token-stats` | [`src/App.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/App.tsx#L19-L47) | 19-47 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Token Stats UI：時間視窗/視圖切換與取數 | [`src/pages/TokenStats.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/TokenStats.tsx#L49-L166) | 49-166 |
 | Token Stats UI：空資料提示（"暫無資料"） | [`src/pages/TokenStats.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/TokenStats.tsx#L458-L507) | 458-507 |
 | Token 用量提取：從請求解析 model、從響應解析 usage/usageMetadata | [`src-tauri/src/proxy/middleware/monitor.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/monitor.rs#L32-L120) | 32-120 |

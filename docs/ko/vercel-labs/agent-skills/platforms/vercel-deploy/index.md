@@ -180,7 +180,7 @@ To transfer this deployment to your Vercel account, visit Claim URL.
 Vercel Deploy 스킬은 **40+ 개 프레임워크** 자동 감지 가능:
 
 | 카테고리 | 프레임워크(부분 예시) |
-| ---- | --------------- |
+|--- | ---|
 | **React** | Next.js, Gatsby, Create React App, Remix |
 | **Vue** | Nuxt, Vitepress, Vuepress |
 | **Svelte** | SvelteKit, Svelte |
@@ -345,7 +345,7 @@ Vercel Deploy 스킬은 배포를 전례 없이 간단하게 만듭니다:
 > 업데이트 날짜: 2026-01-25
 
 | 기능              | 파일 경로                                                                                             | 행번호     |
-| ----------------- | ---------------------------------------------------------------------------------------------------- | -------- |
+|--- | --- | ---|
 | 배포 스크립트 진입점      | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 1-250    |
 | 프레임워크 감지 로직      | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 12-156   |
 | 패키징 및 API 업로드  | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 208-222  |

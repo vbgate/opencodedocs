@@ -40,7 +40,7 @@ order: 260
 **메모리 시스템**은 다음 시나리오에 적합합니다:
 
 | 시나리오 | 예시 | 저장 위치 |
-|------|--------|----------|
+|--- | --- | ---|
 | 지속적인 지식 | "채식주의자다, 이걸 기억해줘" | MEMORY.md |
 | 일일 메모 | "오늘의 작업 진도 및 할 일" | memory/YYYY-MM-DD.md |
 | 세션 검색 | "이전에 논의한 API 엔드포인트는?" | 벡터 인덱스 |
@@ -55,7 +55,7 @@ order: 260
 Clawdbot은 장기 메모리를 관리하기 위해 **2계층 데이터**를 사용합니다:
 
 | 계층 | 파일 경로 | 용도 | 로드 타이밍 |
-|------|----------|------|----------|
+|--- | --- | --- | ---|
 | **장기 메모리** | `MEMORY.md` | 선별된 지식, 선호도, 중요한 사실 | 메인 세션 시작 시 로드 |
 | **매일 로그** | `memory/YYYY-MM-DD.md` | 일일 메모, 실행 컨텍스트 | 오늘 + 어제의 것을 로드 |
 
@@ -86,7 +86,7 @@ graph LR
 벡터 검색은 "의미 매칭"에 강하지만 "정확한 매칭"에는 약합니다:
 
 | 쿼리 유형 | 벡터 검색 | BM25 전체 텍스트 | 하이브리드 검색 |
-|----------|----------|-----------|----------|
+|--- | --- | --- | ---|
 | "서버 IP 주소" | ❌ 약함 | ✅ 강함 | ✅ 최적 |
 | "Gateway 배포 방법" | ✅ 강함 | ⚠️ 중간 | ✅ 최적 |
 | "API 엔드포인트 a828e60" | ❌ 약함 | ✅ 강함 | ✅ 최적 |
@@ -386,7 +386,7 @@ pnpm rebuild node-llama-cpp
 **매개변수 설명**:
 
 | 매개변수 | 기본값 | 설명 | 조정 제안 |
-|------|---------|------|----------|
+|--- | --- | --- | ---|
 | `vectorWeight` | 0.7 | 의미 검색 가중치 | "자연어" 쿼리에는 0.8로 상향 |
 | `textWeight` | 0.3 | 키워드 검색 가중치 | "코드/ID" 쿼리에는 0.5로 상향 |
 | `candidateMultiplier` | 4 | 후보 배수 | 재현율 향상을 위해 6으로 증가 |
@@ -452,7 +452,7 @@ clawdbot memory status --deep
 위 단계를 완료한 후 다음을 확인하세요:
 
 | 확인 항목 | 검증 방법 | 예상 결과 |
-|---------|----------|----------|
+|--- | --- | ---|
 | 메모리 파일 존재 | `ls ~/clawd/` | MEMORY.md 및 memory/ 디렉터리 존재 |
 | 인덱스 생성됨 | `clawdbot memory status` | Indexed > 0 chunks 표시 |
 | 검색 정상 | `clawdbot memory search "..."` | 관련 결과 반환 |
@@ -595,7 +595,7 @@ clawdbot memory status --verbose
 > 업데이트: 2026-01-27
 
 | 기능 | 파일 경로 | 행 번호 |
-|------|----------|------|
+|--- | --- | ---|
 | 메모리 관리자 | [`src/memory/manager.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/memory/manager.ts) | 1-200 |
 | 하이브리드 검색 | [`src/memory/hybrid.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/memory/hybrid.ts) | 1-112 |
 | Embedding 제공자 | [`src/memory/embeddings.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/memory/embeddings.ts) | 1-80 |

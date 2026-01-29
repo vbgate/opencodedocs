@@ -57,7 +57,7 @@ Slack 是团队协作的核心工具，但你可能遇到以下问题：
 Clawdbot 的 Slack 渠道基于 [Bolt](https://slack.dev/bolt-js) 框架实现，支持两种连接模式：
 
 | 模式 | 适用场景 | 优势 | 劣势 |
-| ------ | -------- | ------ | ------ |
+|--- | --- | --- | ---|
 | **Socket Mode** | 本地 Gateway、个人使用 | 配置简单（只需 Token） | 需要常连 WebSocket |
 | **HTTP Mode** | 服务器部署、远程访问 | 可通过防火墙、支持负载均衡 | 需要公网 IP、配置复杂 |
 
@@ -423,7 +423,7 @@ Bot 正常回复你的消息。
 以下权限在当前版本中不是必需的，但未来可能添加支持：
 
 | 权限 | 用途 |
-| ------ | ------ |
+|--- | ---|
 | `groups:write` | 私有频道管理（创建、重命名、邀请、归档） |
 | `mpim:write` | 群组 DM 会话管理 |
 | `chat:write.public` | 向 Bot 未加入的频道发布消息 |
@@ -529,7 +529,7 @@ Bot 正常回复你的消息。
 ```
 
 | 模式 | 行为 |
-| ----- | ------ |
+|--- | ---|
 | `off` | 默认，在主频道回复 |
 | `first` | 首条回复进入线程，后续回复在主频道 |
 | `all` | 所有回复都在线程 |
@@ -596,7 +596,7 @@ Bot 正常回复你的消息。
 > 更新时间：2026-01-27
 
 | 功能            | 文件路径                                                                                               | 行号       |
-| --------------- | ------------------------------------------------------------------------------------------------ | ---------- |
+|--- | --- | ---|
 | Slack 配置类型 | [`src/config/types.slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.slack.ts) | 1-150      |
 | Slack onboarding 逻辑 | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/slack.ts) | 1-539      |
 | Slack Actions 工具 | [`src/agents/tools/slack-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/slack-actions.ts) | 1-301      |

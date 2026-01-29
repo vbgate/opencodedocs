@@ -20,7 +20,7 @@ This appendix introduces all data models used in Plannotator, including core dat
 Plannotator uses TypeScript to define the following core data models:
 
 | Model | Purpose | Definition Location |
-| --- | --- | --- |
+|--- | --- | ---|
 | `Annotation` | Annotations in plan reviews | [`packages/ui/types.ts:11-33`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L11-L33) |
 | `Block` | Content blocks after Markdown parsing | [`packages/ui/types.ts:35-44`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L35-L44) |
 | `CodeAnnotation` | Annotations in code reviews | [`packages/ui/types.ts:55-66`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L55-L66) |
@@ -72,7 +72,7 @@ export enum AnnotationType {
 ### Field Descriptions
 
 | Field | Type | Required | Description |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `id` | string | ✅ | Unique identifier, typically an auto-generated UUID |
 | `blockId` | string | ✅ | Associated `Block` ID (deprecated, retained for compatibility) |
 | `startOffset` | number | ✅ | Starting character offset (deprecated, retained for compatibility) |
@@ -163,7 +163,7 @@ type BlockType =
   | 'paragraph'     // Paragraph
   | 'heading'       // Heading
   | 'blockquote'    // Blockquote
-  | 'list-item'     // List item
+|---|
   | 'code'          // Code block
   | 'hr'            // Horizontal rule
   | 'table';        // Table
@@ -172,7 +172,7 @@ type BlockType =
 ### Field Descriptions
 
 | Field | Type | Required | Description |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `id` | string | ✅ | Unique identifier, format is `block-{number}` |
 | `type` | BlockType | ✅ | Block type (paragraph/heading/blockquote/list-item/code/hr/table) |
 | `content` | string | ✅ | Plain text content of the block |
@@ -273,7 +273,7 @@ export type CodeAnnotationType =
 ### Field Descriptions
 
 | Field | Type | Required | Description |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `id` | string | ✅ | Unique identifier |
 | `type` | CodeAnnotationType | ✅ | Annotation type (comment/suggestion/concern) |
 | `filePath` | string | ✅ | Relative path of the file being annotated (e.g., `src/auth.ts`) |
@@ -290,7 +290,7 @@ export type CodeAnnotationType =
 The `side` field corresponds to the diff view of the [@pierre/diffs](https://www.npmjs.com/package/@pierre/diffs) library:
 
 | side value | @pierre/diffs counterpart | Description |
-| --- | --- | --- |
+|--- | --- | ---|
 | `'old'` | `deletions` | Deleted lines (content in the old version) |
 | `'new'` | `additions` | Added lines (content in the new version) |
 
@@ -345,7 +345,7 @@ export type ShareableAnnotation =
 ### Type Explanations
 
 | Type | First Character | Tuple Structure | Description |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | DELETION | `'D'` | `['D', original, author?, images?]` | Delete content |
 | REPLACEMENT | `'R'` | `['R', original, replacement, author?, images?]` | Replace content |
 | COMMENT | `'C'` | `['C', original, comment, author?, images?]` | Comment on content |
@@ -394,7 +394,7 @@ export interface SharePayload {
 ### Field Descriptions
 
 | Field | Type | Required | Description |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `p` | string | ✅ | Original plan's Markdown content |
 | `a` | ShareableAnnotation[] | ✅ | Annotation array (using `ShareableAnnotation` simplified format) |
 | `g` | string[] | ❌ | Global attachment paths (images not associated with specific annotations) |
@@ -556,7 +556,7 @@ These data models are widely used in plan reviews, code reviews, and URL sharing
 > Updated: 2026-01-24
 
 | Feature | File Path | Line Number |
-| --- | --- | --- |
+|--- | --- | ---|
 | Annotation interface | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L11-L33) | 11-33 |
 | AnnotationType enum | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L1-L7) | 1-7 |
 | Block interface | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L35-L44) | 35-44 |

@@ -133,7 +133,7 @@ Get-Content "$env:USERPROFILE\.config\opencode\dcp.jsonc"
 DCP supports three levels of configuration files:
 
 | Level | Path | Priority | Use Case |
-|------|------|----------|----------|
+|--- | --- | --- | ---|
 | **Global** | `~/.config/opencode/dcp.jsonc` or `dcp.json` | 2 | Default configuration for all projects |
 | **Environment Variable** | `$OPENCODE_CONFIG_DIR/dcp.jsonc` or `dcp.json` | 3 | Configuration for specific environments |
 | **Project** | `<project>/.opencode/dcp.jsonc` or `dcp.json` | 4 | Single project configuration override |
@@ -162,7 +162,7 @@ Edit the global configuration file:
 **Notification level descriptions**:
 
 | Level | Behavior | Use Case |
-|------|----------|----------|
+|--- | --- | ---|
 | **off** | Don't show pruning notifications | Focus on development, no feedback needed |
 | **minimal** | Show only brief statistics (number of tokens saved) | Need simple feedback, don't want too much information |
 | **detailed** | Show detailed pruning information (tool names, reasons) | Understand pruning behavior, debug configuration |
@@ -408,7 +408,7 @@ Core points of DCP configuration system:
 > Last updated: 2026-01-23
 
 | Feature        | File Path                                                                                                            | Line Numbers |
-| ----------- | ------------------------------------------------------------------------------------------------------------------- | --------- |
+|--- | --- | ---|
 | Configuration Management Core | [`lib/config.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/config.ts)         | 1-798     |
 | Configuration Schema  | [`dcp.schema.json`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/dcp.schema.json) | 1-232     |
 | Default Configuration    | [`lib/config.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/config.ts#L423-L464) | 423-464   |

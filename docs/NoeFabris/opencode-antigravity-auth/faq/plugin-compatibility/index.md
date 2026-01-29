@@ -59,7 +59,7 @@ Edit `~/.config/opencode/oh-my-opencode.json` and add the following configuratio
 **Configuration Explanation**:
 
 | Configuration | Value | Description |
-|---------------|-------|-------------|
+|--- | --- | ---|
 | `google_auth` | `false` | Disable oh-my-opencode's built-in Google authentication |
 | `agents.<agent-name>.model` | `google/antigravity-*` | Override Agent model to Antigravity model |
 
@@ -174,7 +174,7 @@ Regularly check the plugin list in `config.json` and remove unnecessary plugins 
 **Unnecessary Plugins**:
 
 | Plugin Type | Example | Reason |
-|-------------|---------|--------|
+|--- | --- | ---|
 | **gemini-auth plugins** | `opencode-gemini-auth`, `@username/gemini-auth` | Antigravity Auth already handles all Google OAuth |
 | **Claude authentication plugins** | `opencode-claude-auth` | Antigravity Auth does not use Claude authentication |
 
@@ -328,7 +328,7 @@ These configurations can avoid most compatibility issues and keep your OpenCode 
 > Last updated: 2026-01-23
 
 | Feature        | File Path                                                                                    | Lines |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Thinking blocks processing | [`src/plugin/request-helpers.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request-helpers.ts#L898-L930)         | 898-930 |
 | Thinking block signature cache | [`src/plugin/cache/signature-cache.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/cache/signature-cache.ts) | entire file |
 | PID offset configuration | [`src/plugin/config/schema.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/schema.ts#L69-L72)               | 69-72   |

@@ -62,7 +62,7 @@ const widthCache = new Map<string, number>()
 **Examples**:
 
 | Original Text (Key) | Display Width (Value) | Description |
-| ------------------- | --------------------- | ----------- |
+|--- | --- | ---|
 | `**姓名**` | 4 | Width is 4 after stripping `**` |
 | `*年龄*` | 4 | Width is 4 after stripping `*` |
 | `` `status` `` | 8 | Code block symbols are also counted in width |
@@ -120,7 +120,7 @@ graph TD
 **Step Breakdown**:
 
 | Step | Operation | Time Complexity |
-| ---- | --------- | --------------- |
+|--- | --- | ---|
 | 1 | Check `widthCache.has(text)` | O(1) |
 | 2 | Cache hit → Return directly | O(1) |
 | 3 | Cache miss → Calculate width | O(n) |
@@ -166,7 +166,7 @@ function cleanupCache() {
 **Trigger conditions** (triggered when either condition is met):
 
 | Condition | Threshold | Description |
-| --------- | --------- | ----------- |
+|--- | --- | ---|
 | Operation count | > 100 formatting operations | Avoid frequent cleanup triggers |
 | Cache entries | > 1000 cells | Prevent excessive memory usage |
 
@@ -192,7 +192,7 @@ Assume a 5-column × 10-row table where:
 **Cache effectiveness**:
 
 | Scenario | Without Cache | With Cache | Performance Improvement |
-| -------- | ------------- | ---------- | ----------------------- |
+|--- | --- | --- | ---|
 | 5 columns × 10 rows (no duplicates) | 50 calculations | 50 calculations | None |
 | 5 columns × 10 rows (duplicate headers) | 50 calculations | 10 calculations + 40 cache hits | ~80% |
 
@@ -207,8 +207,8 @@ Assume a 5-column × 10-row table where:
 **Example scenarios**:
 
 | Scenario | Cache Effectiveness |
-| -------- | ------------------- |
-| AI-generated comparison tables | ✅ Significant (multi-column duplicate content) |
+|--- | ---|
+|--- | ---|
 | Simple single-row tables | ⚪ Moderate (unique content) |
 | Tables with nested Markdown | ✅ Significant (high symbol stripping overhead) |
 
@@ -254,7 +254,7 @@ This mechanism keeps the plugin smooth when handling complex tables and is the c
 > Last updated: 2026-01-26
 
 | Feature | File Path | Line Number |
-| ------- | --------- | ----------- |
+|--- | --- | ---|
 | widthCache definition | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L6) | 6 |
 | cacheOperationCount definition | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L7) | 7 |
 | calculateDisplayWidth function | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L151-L159) | 151-159 |

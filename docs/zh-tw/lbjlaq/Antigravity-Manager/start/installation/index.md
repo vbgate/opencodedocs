@@ -59,7 +59,7 @@ order: 2
 **推薦**：
 
 | 場景 | 推薦安裝方式 |
-| --- | --- |
+|--- | ---|
 | macOS / Linux 桌面 | Homebrew（選項 A） |
 | Windows 桌面 | GitHub Releases（選項 B） |
 | Arch Linux | 官方腳本（Arch 選項） |
@@ -217,7 +217,7 @@ docker compose up -d
 > 更新時間：2026-01-23
 
 | 主題 | 檔案路徑 | 行號 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Homebrew 安裝（tap + cask） | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L112-L127) | 112-127 |
 | Releases 手動下載（各平台安裝包） | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L128-L133) | 128-133 |
 | Arch 一鍵安裝腳本入口 | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L134-L140) | 134-140 |
@@ -225,9 +225,9 @@ docker compose up -d
 | Headless Xvfb 安裝入口（curl | sudo bash） | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L141-L149) | 141-149 |
 | Headless Xvfb 部署/升級/運維指令 | [`deploy/headless-xvfb/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/headless-xvfb/README.md#L1-L99) | 1-99 |
 | Headless Xvfb install.sh（systemd + 8045 預設配置） | [`deploy/headless-xvfb/install.sh`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/headless-xvfb/install.sh#L1-L99) | 1-99 |
-| Docker 部署入口（docker compose up -d） | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L150-L166) | 150-166 |
+|--- | --- | ---|
 | Docker 部署說明（noVNC 6080 / 代理 8045） | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L1-L35) | 1-35 |
 | Docker 連接埠/資料卷配置（8045 + antigravity_data） | [`deploy/docker/docker-compose.yml`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/docker-compose.yml#L1-L25) | 1-25 |
-| macOS 「已損壞，無法開啟」排障（xattr / --no-quarantine） | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L171-L186) | 171-186 |
+|--- | --- | ---|
 
 </details>

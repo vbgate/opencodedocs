@@ -43,7 +43,7 @@ order: 80
 Сценарии, в которых использование системы фоновых задач может повысить эффективность:
 
 | Сценарий | Пример | Значение |
-|----------|---------|-------|
+|--- | --- | ---|
 | **Параллельное исследование** | Explore находит реализации + Librarian консультирует документацию | В 3 раза быстрее завершение исследования |
 | **Мультиэкспертная проверка** | Oracle проверяет архитектуру + Momus валидирует планы | Быстро получайте мультиперспективную обратную связь |
 | **Асинхронные задачи** | Выполняйте обзор кода при отправке Git-коммита | Не блокируйте основной поток |
@@ -172,7 +172,7 @@ ID сессии: sess_uvwx012
 ## Статус задачи
 
 | Поле | Значение |
-|-------|-------|
+|--- | ---|
 | ID задачи | `bg_abc123` |
 | Описание | Explore: 查找认证实现 |
 | Агент | explore |
@@ -266,7 +266,7 @@ ID сессии: sess_xyz789
 Отменено 3 фоновых задач(и):
 
 | ID задачи | Описание | Статус | ID сессии |
-|---------|-------------|--------|------------|
+|--- | --- | --- | ---|
 | `bg_abc123` | Explore: 查找认证实现 | running | `sess_xyz789` |
 | `bg_def456` | Librarian: 研究最佳实践 | running | `sess_uvwx012` |
 | `bg_ghi789` | Oracle: 审查架构设计 | pending | (не запущена) |
@@ -359,7 +359,7 @@ ID сессии: sess_xyz789
 > Обновлено: 2026-01-26
 
 | Функция | Путь к файлу | Номера строк |
-|---------|-----------|-------------|
+|--- | --- | ---|
 | Менеджер фоновых задач | [`src/features/background-agent/manager.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/background-agent/manager.ts) | 1-1378 |
 | Контроль параллелизма | [`src/features/background-agent/concurrency.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/background-agent/concurrency.ts) | 1-138 |
 | Инструмент delegate_task | [`src/tools/background-task/tools.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/background-task/tools.ts) | 51-119 |

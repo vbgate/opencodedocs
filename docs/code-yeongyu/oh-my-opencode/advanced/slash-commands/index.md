@@ -36,7 +36,7 @@ Such long instructions waste time and are prone to missing steps.
 **Slash commands** are preset workflow templates that trigger complex tasks with one click. These commands cover common development scenarios:
 
 | Scenario | Command to Use |
-|----------|----------------|
+|--- | ---|
 | Initialize project knowledge base | `/init-deep` |
 | Make AI work continuously | `/ralph-loop` |
 | Intelligently refactor code | `/refactor` |
@@ -64,7 +64,7 @@ graph LR
 oh-my-opencode includes 6 built-in slash commands:
 
 | Command | Function | Complexity |
-|---------|----------|------------|
+|--- | --- | ---|
 | `/init-deep` | Generate hierarchical AGENTS.md files | Medium |
 | `/ralph-loop` | Self-referential development loop | High |
 | `/ulw-loop` | Ultrawork version of ralph-loop | High |
@@ -305,7 +305,7 @@ Which plan would you like to work on? (Enter number or plan name)
 ## Summary
 
 | Command | Core Function | Usage Frequency |
-|---------|--------------|-----------------|
+|--- | --- | ---|
 | `/init-deep` | Auto-generate project knowledge base | Initial setup |
 | `/ralph-loop` | Continuous work loop | High |
 | `/ulw-loop` | Ultrawork version of loop | Medium |
@@ -339,7 +339,7 @@ Which plan would you like to work on? (Enter number or plan name)
 > Updated: 2026-01-26
 
 | Feature | File Path | Line Numbers |
-|---------|-----------|--------------|
+|--- | --- | ---|
 | Command definitions | [`src/features/builtin-commands/commands.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/commands.ts) | 8-73 |
 | Command loader | [`src/features/builtin-commands/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/index.ts) | 75-89 |
 | init-deep template | [`src/features/builtin-commands/templates/init-deep.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/templates/init-deep.ts) | Full text |

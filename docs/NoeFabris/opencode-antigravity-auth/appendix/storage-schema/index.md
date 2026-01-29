@@ -34,7 +34,7 @@ You may encounter these situations:
 Account storage files are located at:
 
 | OS | Path |
-| ---------- | ---------------------------------------------------------- |
+|--- | ---|
 | macOS/Linux | `~/.config/opencode/antigravity-accounts.json` |
 | Windows | `%APPDATA%\opencode\antigravity-accounts.json` |
 
@@ -80,7 +80,7 @@ The storage format has version control, currently at **v3**. The plugin automati
 **Field Description**:
 
 | Field | Type | Required | Description |
-| --------------------- | ------- | ---- | ---- |
+|--- | --- | --- | ---|
 | `version` | number | Y | Storage format version (fixed at 3) |
 | `accounts` | array | Y | Account list |
 | `activeIndex` | number | Y | Current active account index (starting from 0) |
@@ -89,7 +89,7 @@ The storage format has version control, currently at **v3**. The plugin automati
 **Account Object Fields**:
 
 | Field | Type | Required | Description |
-| --------------------- | ------- | ---- | ---- |
+|--- | --- | --- | ---|
 | `email` | string | N | Google account email |
 | `refreshToken` | string | Y | OAuth refresh token (unique identifier) |
 | `projectId` | string | N | GCP project ID (required for Gemini CLI models) |
@@ -354,7 +354,7 @@ If you find duplicate accounts have been deleted:
 > Last updated: 2026-01-23
 
 | Feature | File Path | Line Numbers |
-| -------------- | ------------------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Storage format definition | [`src/plugin/storage.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/storage.ts) | 128-198 |
 | v1 → v2 migration | [`src/plugin/storage.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/storage.ts) | 366-395 |
 | v2 → v3 migration | [`src/plugin/storage.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/storage.ts) | 397-431 |

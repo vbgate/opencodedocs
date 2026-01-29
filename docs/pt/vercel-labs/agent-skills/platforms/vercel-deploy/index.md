@@ -180,7 +180,7 @@ Após o deploy, confirme os seguintes itens:
 Vercel Deploy habilidade pode detectar automaticamente **40+ frameworks**:
 
 | Categoria          | Frameworks (alguns exemplos)              |
-| ----------------- | ------------------------------------------- |
+|--- | ---|
 | **React**           | Next.js, Gatsby, Create React App, Remix   |
 | **Vue**             | Nuxt, Vitepress, Vuepress, Gridsome     |
 | **Svelte**           | SvelteKit, Svelte                      |
@@ -337,7 +337,7 @@ Se quiser explorar mais sobre como as habilidades funcionam por baixo dos panos,
 > Atualizado em: 2026-01-25
 
 | Funcionalidade              | Caminho do Arquivo                                                                                             | Número de Linha    |
-| ----------------------- | --------------------------------------------------------------------------------------------------------- | ----------------- |
+|--- | --- | ---|
 | Script de entrada de deploy  | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 1-250            |
 | Lógica de detecção de framework      | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 12-156           |
 | Empacotar e upload na API         | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 208-222          |

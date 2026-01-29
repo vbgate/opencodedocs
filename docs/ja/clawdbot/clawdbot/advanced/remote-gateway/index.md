@@ -39,7 +39,7 @@ order: 300
 **リモート Gateway** は次のシナリオに適しています：
 
 | シナリオ | 推奨ソリューション | 理由 |
-| -------- | ------------------ | ---- |
+|--- | --- | ---|
 | ノート PC が頻繁にスリープし、AI を常駐させたい | **Tailscale Serve + Linux VPS** | VPS はスリープせず、tailnet を通じて安全にアクセスできます |
 | 家庭デスクトップで Gateway を実行し、ノート PC からリモート制御 | **SSH トンネル** または **Tailscale Serve** | Gateway セッションと設定を統一 |
 | 公開インターネットからアクセスしたい（一時テスト） | **Tailscale Funnel + パスワード** | 簡単に公開できますが、パスワード保護が必要 |
@@ -97,7 +97,7 @@ flowchart TD
 ### 3 つの重要な概念
 
 | 概念 | 説明 | 例 |
-| ------ | ---- | ---- |
+|--- | --- | ---|
 | **Gateway ホスト** | Gateway サービスを実行するマシン、セッション、認証、チャネル、状態を管理 | Linux VPS、家庭デスクトップ |
 | **クライアント** | Gateway に接続するツール（macOS App、CLI、WebChat） | あなたのノート PC、スマートフォン |
 | **デバイスノード** | Gateway WebSocket を通じて接続する周辺機器、デバイスローカル操作を実行 | iOS デバイス、Android デバイス、macOS ノードモード |
@@ -107,7 +107,7 @@ flowchart TD
 最も一般的な混乱点です：
 
 | 操作タイプ | 実行場所 | 理由 |
-| -------- | ---------- | ---- |
+|--- | --- | ---|
 | `exec` ツール | **Gateway ホスト** | Shell コマンドは Gateway マシンで実行されます |
 | `browser` ツール | **Gateway ホスト**（または個別のブラウザ制御サーバー） | ブラウザは Gateway マシンで起動します |
 | ノード操作（`camera.snap`、`system.run`）| **デバイスノード** | デバイスローカルリソースにアクセスする必要があります |
@@ -540,7 +540,7 @@ clawdbot health --url wss://your-funnel-url.ts.net --password your-secure-passwo
 上記のいずれかのソリューションを完了したら、以下を確認します：
 
 | チェック項目 | コマンド | 期待される結果 |
-| -------- | ------ | -------- |
+|--- | --- | ---|
 | Gateway が実行中か | `clawdbot gateway status` | ✅ Running |
 | WebSocket にアクセスできるか | `clawdbot health --url <url>` | ✅ Healthy |
 | Channels が接続されているか | `clawdbot channels status` | ✅ connected |
@@ -667,7 +667,7 @@ ssh -N -L 18790:127.0.0.1:18789 clawdbot-remote
 ### 設定の比較
 
 | ソリューション | セキュリティ | アクセス範囲 | 設定の複雑さ | 推奨シナリオ |
-| ---- | ------ | -------- | ---------- | -------- |
+|--- | --- | --- | --- | ---|
 | Tailscale Serve | ⭐⭐⭐⭐⭐ | Tailnet | 中 | **推奨**：Always-on Gateway |
 | SSH トンネル | ⭐⭐⭐⭐ | SSH 接続到達可能 | 低 | 汎用フォールバック、家庭デスクトップのリモート制御 |
 | Tailscale Funnel | ⭐⭐ | 公開インターネット | 低 | 一時テスト、デモ |
@@ -702,7 +702,7 @@ ssh -N -L 18790:127.0.0.1:18789 clawdbot-remote
 > 更新日時：2026-01-27
 
 | 機能 | ファイルパス | 行番号 |
-| ----- | -------- | ---- |
+|--- | --- | ---|
 | Gateway リモート設定 Schema | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 200-220 |
 | Gateway Tailscale 設定 Schema | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 150-180 |
 | Tailscale インテグレーション | [`src/infra/tailscale.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/tailscale.ts) | 1-100 |

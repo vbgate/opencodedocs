@@ -115,7 +115,7 @@ code %APPDATA%\opencode\opencode.json
 **为什么这样配置**：
 
 | 配置项        | 值                                      | 作用                                 |
-| ------------- | --------------------------------------- | ------------------------------------ |
+|--- | --- | ---|
 | `plugin` 数组 | `["opencode-mystatus"]`                 | 告诉 OpenCode 加载这个插件           |
 | `description` | "Query quota usage for all AI accounts" | 斜杠命令列表中显示的说明             |
 | `template`    | "Use the mystatus tool..."              | 提示 OpenCode 如何调用 mystatus 工具 |
@@ -234,7 +234,7 @@ Supported account types:
 #### 5.2 理解输出含义
 
 | 元素（中文版本）          | 元素（英文版本）          | 含义                   |
-| ------------------------- | ------------------------- | ---------------------- |
+|--- | --- | ---|
 | `## OpenAI 账号额度`      | `## OpenAI Account Quota` | 平台标题               |
 | `user@example.com (team)` | `user@example.com (team)` | 账号信息（邮箱或团队） |
 | `3小时限额`               | `3-hour limit`            | 限额类型（3 小时限额） |
@@ -248,7 +248,7 @@ Supported account types:
 确认你已经完成以下步骤：
 
 | 步骤          | 检查方法                                | 预期结果                                |
-| ------------- | --------------------------------------- | --------------------------------------- |
+|--- | --- | ---|
 | 安装插件      | 查看 `~/.config/opencode/opencode.json` | `plugin` 数组包含 `"opencode-mystatus"` |
 | 配置斜杠命令  | 查看同一文件                            | `command` 对象包含 `mystatus` 配置      |
 | 重启 OpenCode | 查看 OpenCode 进程                      | 已重新启动                              |
@@ -364,7 +364,7 @@ Supported account types:
 > 更新时间：2026-01-23
 
 | 功能              | 文件路径                                                                                           | 行号  |
-| ----------------- | -------------------------------------------------------------------------------------------------- | ----- |
+|--- | --- | ---|
 | 插件入口          | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts)   | 26-94 |
 | mystatus 工具定义 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts)   | 29-33 |
 | 读取认证文件      | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts)   | 35-46 |

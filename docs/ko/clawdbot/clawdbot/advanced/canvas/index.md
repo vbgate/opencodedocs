@@ -40,7 +40,7 @@ AI 어시스턴트가 있지만 텍스트로만 상호작용할 수 있습니다
 **Canvas + A2UI는 다음 시나리오에 적합합니다**:
 
 | 시나리오 | 예시 |
-| ------ | ------ |
+|--- | ---|
 | **데이터 시각화** | 통계 차트, 진행률 표시줄, 타임라인 표시 |
 | **대화형 양식** | 사용자에게 작업 확인 또는 옵션 선택 요청 |
 | **상태 패널** | 실시간 작업 진행률 및 시스템 상태 표시 |
@@ -334,7 +334,7 @@ clawdbot nodes canvas hide --node abc123-def456-ghi789
 **Canvas 기능이 정상 작동하는지 확인**:
 
 | 항목 | 확인 방법 |
-| ------- | -------- |
+|--- | ---|
 | Canvas Host 실행 중 | `lsof -i :18793`에 출력이 있음 |
 | 노드 Canvas 기능 | `clawdbot nodes list`에 `canvas` 표시됨 |
 | 페이지 로드 성공 | 노드에 HTML 콘텐츠 표시됨 |
@@ -400,7 +400,7 @@ clawdbot nodes canvas hide --node abc123-def456-ghi789
 > 업데이트 날짜: 2026-01-27
 
 | 기능 | 파일 경로 | 줄 번호 |
-| ----- | --------- | ---- |
+|--- | --- | ---|
 | Canvas Host 서버 | [`src/canvas-host/server.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/server.ts) | 372-441 |
 | A2UI 프로토콜 처리 | [`src/canvas-host/a2ui.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/a2ui.ts) | 150-203 |
 | Canvas 도구 정의 | [`src/agents/tools/canvas-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/canvas-tool.ts) | 52-179 |

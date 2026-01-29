@@ -15,7 +15,7 @@ Este capítulo presenta en detalle las funciones de consulta de cuota de cada pl
 opencode-mystatus soporta las siguientes 4 plataformas de IA principales:
 
 | Plataforma | Tipo de límite | Características |
-|------|---------|------|
+|--- | --- | ---|
 | OpenAI | Ventana deslizante de 3 horas / 24 horas | Soporta suscripciones Plus, Team, Pro |
 | Zhipu AI | Token de 5 horas / cuota mensual de MCP | Soporta Coding Plan |
 | GitHub Copilot | Cuota mensual | Muestra uso de Premium Requests |

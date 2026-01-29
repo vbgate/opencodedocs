@@ -62,7 +62,7 @@ Claude 프로세서는 `ContextManager::estimate_token_usage()`으로 가벼운 
 이 안정성 설계는 역사를 모두 지우는 것이 아니라, 비용이 낮은 것에서 높은 것으로 단계적으로 개입합니다:
 
 | 레이어 | 트리거 지점(구성 가능) | 하는 일 | 비용/부작용 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | Layer 1 | `proxy.experimental.context_compression_threshold_l1`(기본값 0.4) | 툴 라운드를 식별하고, 최근 N 라운드(코드에서는 5)만 유지하며, 더 오래된 tool_use/tool_result 쌍을 삭제함 | 남은 메시지 내용을 수정하지 않아 Prompt Cache에 더 친화적 |
 | Layer 2 | `proxy.experimental.context_compression_threshold_l2`(기본값 0.55) | 오래된 Thinking 텍스트를 `"..."`로 압축하지만 `signature`는 유지하고, 최근 4개 메시지는 보호함 | 역사 내용을 수정하며, 주석에서 명시적으로 cache를 깬다고 하지만, 서명 체인을 보호할 수 있음 |
 | Layer 3 | `proxy.experimental.context_compression_threshold_l3`(기본값 0.7) | 백그라운드 모델을 호출하여 XML 요약을 생성한 다음, 새 메시지 시퀀스를 Fork하여 대화를 계속함 | 백그라운드 모델 호출에 의존함; 실패하면 400을 반환함(친절한 프롬프트 있음) |
@@ -218,7 +218,7 @@ Claude 프로세서에서, 백그라운드 작업 다운그레이드는 `Context
 ## 일반적인 실수
 
 | 현상 | 가능한 원인 | 할 수 있는 것 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Layer 2 트리거 후 컨텍스트가 덜 안정해 보임 | Layer 2는 역사 내용을 수정하며, 주석에서 명시적으로 cache를 깬다고 함 | Prompt Cache 일관성에 의존한다면, L1이 먼저 문제를 해결하게 하거나, L2 임계값을 높임 |
 | Layer 3 트리거 후 직접 400 반환 | Fork + 요약 백그라운드 모델 호출 실패(네트워크/계정/업스트림 오류 등) | 먼저 error JSON의 제안에 따라 `/compact`나 `/clear` 사용; 동시에 백그라운드 모델 호출 체인 확인 |
 | 툴 출력에서 이미지/대용량 내용이 사라짐 | tool_result는 base64 이미지를 제거하고, 초장 출력을 트렁케이션함 | 중요한 내용을 로컬 파일/링크에 저장한 다음 참조; 10만 행 텍스트를 대화에 직접 넣는 것을 기대하지 마세요 |
@@ -244,7 +244,7 @@ Claude 프로세서에서, 백그라운드 작업 다운그레이드는 `Context
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 라인 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 실험적 설정: 압축 임계값과 스위치 기본값 | `src-tauri/src/proxy/config.rs` | 119-168 |
 | 컨텍스트 추정: 다국어 문자 추정 + 15% 여유 | `src-tauri/src/proxy/mappers/context_manager.rs` | 9-37 |
 | 토큰 사용량 추정: system/messages/tools/thinking 순회 | `src-tauri/src/proxy/mappers/context_manager.rs` | 103-198 |
@@ -257,7 +257,7 @@ Claude 프로세서에서, 백그라운드 작업 다운그레이드는 `Context
 | 서명 캐시: TTL/세 레이어 캐시 구조(Tool/Family/Session) | `src-tauri/src/proxy/signature_cache.rs` | 5-88 |
 | 서명 캐시: Session 서명 쓰기/읽기 | `src-tauri/src/proxy/signature_cache.rs` | 141-223 |
 | SSE 스트리밍 파싱: thinking/tool의 서명을 Session/Tool cache에 캐시 | `src-tauri/src/proxy/mappers/claude/streaming.rs` | 766-776 |
-| SSE 스트리밍 파싱: tool_use 캐시 tool_use_id -> signature | `src-tauri/src/proxy/mappers/claude/streaming.rs` | 958-975 |
+|--- | --- | ---|
 | 요청 변환: tool_use 우선 Session/Tool cache에서 서명 복구 | `src-tauri/src/proxy/mappers/claude/request.rs` | 1045-1142 |
 | 요청 변환: tool_result 트리거 툴 결과 압축 | `src-tauri/src/proxy/mappers/claude/request.rs` | 1159-1225 |
 | 툴 결과 압축: 입구 `compact_tool_result_text()` | `src-tauri/src/proxy/mappers/tool_result_compressor.rs` | 28-69 |

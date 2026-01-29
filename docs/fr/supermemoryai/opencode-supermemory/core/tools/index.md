@@ -31,7 +31,7 @@ opencode-supermemory n'est pas une boîte noire, il interagit avec l'Agent via l
 Le plugin enregistre un outil nommé `supermemory` auprès de l'Agent. Il est comme un couteau suisse, avec 6 modes :
 
 | Mode | Fonction | Scénario typique |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **add** | Ajouter une mémoire | "Souviens-toi, ce projet doit fonctionner avec Bun" |
 | **search** | Rechercher une mémoire | "Est-ce que j'ai déjà dit comment gérer l'authentification ?" |
 | **profile** | Profil utilisateur | Voir les habitudes de codage résumées par l'Agent |
@@ -187,9 +187,9 @@ R : Le plugin masque automatiquement le contenu des balises `<private>`. Mais pa
 > Date de mise à jour : 2026-01-23
 
 | Fonctionnalité | Chemin du fichier | Lignes |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Définition de l'outil | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
-| Détection de mots-clés | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L34-L37) | 34-37 |
+|--- | --- | ---|
 | Prompt de déclenchement | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L20-L28) | 20-28 |
 | Implémentation du client | [`src/services/client.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/client.ts) | Texte complet |
 

@@ -36,7 +36,7 @@ order: 30
 **권장 시작 방식**:
 
 | 시나리오                  | 사용 명령                               | 설명                                   |
-| ----------------------- | -------------------------------------- | -------------------------------------- |
+|--- | --- | ---|
 | 일상 사용                | `clawdbot gateway install` + `clawdbot gateway start` | 백그라운드 서비스로 자동 시작                  |
 | 개발 디버깅                | `clawdbot gateway --dev`                     | 개발 구성 생성, 자동 리로드                  |
 | 임시 테스트                | `clawdbot gateway`                           | 포그라운드 실행, 로그가 터미널에 직접 출력            |
@@ -486,7 +486,7 @@ clawdbot gateway --port 19001  # 다른 포트 사용
 **핵심 명령 요약**:
 
 | 시나리오                   | 명령                                        |
-| ---------------------- | ------------------------------------------- |
+|--- | ---|
 | 일상 사용(서비스)       | `clawdbot gateway install && clawdbot gateway start` |
 | 개발 디버깅              | `clawdbot gateway --dev`                     |
 | 임시 테스트              | `clawdbot gateway`                           |
@@ -515,7 +515,7 @@ clawdbot gateway --port 19001  # 다른 포트 사용
 > 업데이트 시간: 2026-01-27
 
 | 기능                        | 파일 경로                                                                                   | 라인 번호      |
-| --------------------------- | -------------------------------------------------------------------------------------- | --------- |
+|--- | --- | ---|
 | Gateway 시작 입구            | [`src/cli/gateway-cli/run.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/gateway-cli/run.ts) | 55-310   |
 | 데몬 서비스 추상화         | [`src/daemon/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/service.ts) | 66-155    |
 | 사이드바 서비스 시작           | [`src/gateway/server-startup.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup.ts) | 26-160    |

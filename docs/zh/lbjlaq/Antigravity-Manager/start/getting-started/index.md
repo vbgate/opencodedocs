@@ -126,7 +126,7 @@ Antigravity Tools 的目标是把这些“边角工作”做进一个本地网�
 ## 踩坑提醒
 
 | 场景 | 你可能会怎么做（❌） | 推荐做法（✓） |
-| --- | --- | --- |
+|--- | --- | ---|
 | 想让手机/另一台电脑访问 | 直接打开 `allow_lan_access=true` 但不设鉴权 | 同时启用鉴权，并先在局域网里验证 `GET /healthz` |
 | 客户端报 404 | 只改 host/port，不管客户端如何拼接 `/v1` | 先确认客户端的 base_url 拼接策略，再决定是否需要带 `/v1` 前缀 |
 | 一上来就排 Claude Code | 直接接入复杂客户端，失败后不知道从哪查 | 先跑通最小闭环：启动 Proxy -> `GET /healthz` -> 再接入客户端 |
@@ -155,11 +155,11 @@ Antigravity Tools 的目标是把这些“边角工作”做进一个本地网�
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 产品定位（本地 AI 中转站/协议鸿沟） | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L35-L77) | 35-77 |
 | Router 端点总览（OpenAI/Claude/Gemini/healthz） | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | 默认端口/默认仅本机/默认 key 与 bind address 逻辑 | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L291) | 174-291 |
-| `auth_mode=auto` 的实际决策（LAN -> all_except_health） | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L10-L29) | 10-29 |
+|--- | --- | ---|
 | GUI 页面路由结构（Dashboard/Accounts/API Proxy/Monitor/Token Stats/Settings） | [`src/App.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/App.tsx#L19-L48) | 19-48 |
 
 **关键默认值**：

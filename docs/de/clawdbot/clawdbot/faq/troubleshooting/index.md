@@ -62,7 +62,7 @@ clawdbot status --deep
 
 ::: tip 命令说明
 | 命令 | 功能 | 使用场景 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `clawdbot status` | 本地摘要：系统信息、Gateway 连接、服务状态、Agent 状态、提供商配置 | 首次检查，快速概览 |
 | `clawdbot status --all` | 完整诊断（只读、可分享、相对安全），包含日志尾部 | 需要分享调试报告时 |
 | `clawdbot status --deep` | 运行 Gateway 健康检查（包括提供商探测，需要可连接的 Gateway） | "已配置"但不等于"工作"时 |
@@ -671,7 +671,7 @@ clawdbot channels login --verbose
 ### 日志位置
 
 | 日志 | 位置 |
-| --- | --- |
+|--- | ---|
 | Gateway 文件日志（结构化） | `/tmp/clawdbot/clawdbot-YYYY-MM-DD.log`（或 `logging.file`） |
 | Gateway 服务日志 | macOS: `$CLAWDBOT_STATE_DIR/logs/gateway.log` + `gateway.err.log`<br/>Linux: `journalctl --user -u clawdbot-gateway[-<profile>].service -n 200 --no-pager`<br/>Windows: `schtasks /Query /TN "Clawdbot Gateway (<profile>)" /V /FO LIST` |
 | 会话文件 | `$CLAWDBOT_STATE_DIR/agents/<agentId>/sessions/` |
@@ -841,7 +841,7 @@ npm install -g clawdbot@<version>
 > 更新时间：2026-01-27
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 故障排除命令 | [`src/commands/doctor.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/doctor.ts) | 全文 |
 | Gateway 健康检查 | [`src/gateway/server-channels.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-channels.ts) | 93+ |
 | 日志系统 | [`src/logging/index.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/logging/index.ts) | 全文 |

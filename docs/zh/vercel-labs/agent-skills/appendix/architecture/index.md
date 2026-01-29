@@ -107,7 +107,7 @@ graph LR
 **验证项**：
 
 | 检查项       | 说明                                   | 失败时输出                           |
-| ------------ | -------------------------------------- | ------------------------------------ |
+|--- | --- | ---|
 | Title 非空   | 必须有标题（Frontmatter 或 `##` 标题） | `Missing or empty title`             |
 | 至少一个示例 | `examples` 数组不为空                  | `At least one code example required` |
 | Impact 合法  | 必须是有效的 `ImpactLevel` 枚举值      | `Invalid impact level`               |
@@ -256,16 +256,16 @@ Reference: [React文档](https://react.dev), [Next.js指南](https://nextjs.org/
 export type ImpactLevel =
   | 'CRITICAL'
   | 'HIGH'
-  | 'MEDIUM-HIGH'
+|---|
   | 'MEDIUM'
-  | 'LOW-MEDIUM'
+|---|
   | 'LOW'
 ```
 
 **级别说明**：
 
 | 级别        | 影响               | 示例规则                     |
-| ----------- | ------------------ | ---------------------------- |
+|--- | --- | ---|
 | CRITICAL    | 关键瓶颈，必须修复 | async-parallel               |
 | HIGH        | 重要改进，建议优先 | server-cache-react           |
 | MEDIUM-HIGH | 中高优先级         | client-data-fetch            |
@@ -442,7 +442,7 @@ detect_framework() {
 ### 支持的框架
 
 | 类别         | 框架列表                                                      | 检测关键词                    |
-| ------------ | ------------------------------------------------------------- | ----------------------------- |
+|--- | --- | ---|
 | React        | Next.js, Gatsby, Create React App, Remix, React Router, Blitz | `next`, `gatsby`, `remix-run` |
 | Vue          | Nuxt, Vitepress, Vuepress, Gridsome                           | `nuxt`, `vitepress`           |
 | Svelte       | SvelteKit, Svelte, Sapper                                     | `@sveltejs/kit`, `svelte`     |
@@ -534,7 +534,7 @@ fi
 > 更新时间：2026-01-25
 
 | 功能             | 文件路径                                                                                                                                                                         | 行号    |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 类型系统         | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts)                     | 1-54    |
 | 路径配置         | [`packages/react-best-practices-build/src/config.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/config.ts)                   | 1-18    |
 | 规则解析器       | [`packages/react-best-practices-build/src/parser.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/parser.ts)                   | 18-238  |

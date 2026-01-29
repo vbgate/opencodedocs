@@ -40,7 +40,7 @@ Você pode estar enfrentando estas situações:
 **Tarefas Agendadas Cron** são adequadas para estes cenários:
 
 | Cenário | Exemplo | Método de agendamento |
-|---------|---------|----------------------|
+|--- | --- | ---|
 | Lembrete único | "Lembre-me da reunião amanhã às 9 da manhã" | at |
 | Verificação periódica | "Verificar o status do sistema a cada 30 minutos" | every |
 | Execução agendada | "Gerar relatório diário todas as tardes às 17h" | cron |
@@ -80,7 +80,7 @@ graph LR
 ### Comparação dos três métodos de agendamento
 
 | Método | Cenário de uso | Exemplo | Precisão |
-|--------|---------------|---------|-----------|
+|--- | --- | --- | ---|
 | `at` | Tarefa única | 2026-01-27 09:00:00 | Nível de milissegundos |
 | `every` | Intervalo fixo | A cada 30 minutos | Nível de milissegundos |
 | `cron` | Ciclo complexo | Todas as manhãs às 9h | Nível de minutos |
@@ -88,7 +88,7 @@ graph LR
 ### Dois objetivos de sessão
 
 | Objetivo de sessão | Tipo de Payload | Descrição |
-|---------------------|----------------|------------|
+|--- | --- | ---|
 | `main` | `systemEvent` | Injetar eventos do sistema na sessão principal |
 | `isolated` | `agentTurn` | Executar Agent em sessão isolada |
 
@@ -282,7 +282,7 @@ Criar uma tarefa que será executada todos os dias às 9 da manhã:
 **Expressões comuns**:
 
 | Expressão | Descrição |
-|-----------|-----------|
+|--- | ---|
 | `0 9 * * *` | Todos os dias às 9 da manhã |
 | `0 9 * * 1-5` | Segunda a sexta às 9 da manhã |
 | `0 */6 * * *` | A cada 6 horas |
@@ -336,7 +336,7 @@ Criar uma tarefa que será executada em uma sessão isolada:
 **Parâmetros do Payload `agentTurn`**:
 
 | Parâmetro | Tipo | Descrição |
-|-----------|------|------------|
+|--- | --- | ---|
 | `message` | string | Prompt enviado ao Agent |
 | `model` | string | Sobrescrever o modelo a usar (opcional) |
 | `thinking` | string | Nível de pensamento: "off" \| "minimal" \| "low" \| "medium" \| "high" |
@@ -359,7 +359,7 @@ Criar uma tarefa que será executada em uma sessão isolada:
 ```
 
 | Parâmetro | Descrição |
-|-----------|------------|
+|--- | ---|
 | `postToMainPrefix` | Prefixo ao reenviar resultados à sessão principal |
 | `postToMainMode` | "summary" (resumo) ou "full" (texto completo) |
 | `postToMainMaxChars` | Máximo de caracteres quando `postToMainMode="full"` |
@@ -564,7 +564,7 @@ Webhooks permitem que serviços externos acionem eventos internos do Clawdbot at
 **Parâmetros de configuração de mapeamento**:
 
 | Parâmetro | Descrição |
-|-----------|------------|
+|--- | ---|
 | `match.path` | Caminho URL para corresponder |
 | `match.source` | Cabeçalho de origem da requisição para corresponder |
 | `action` | `"wake"` ou `"agent"` |
@@ -611,7 +611,7 @@ Gmail Pub/Sub permite que você acione o Clawdbot em tempo real ao receber novos
 **Descrição dos parâmetros de configuração**:
 
 | Parâmetro | Descrição | Valor padrão |
-|-----------|------------|--------------|
+|--- | --- | ---|
 | `account` | Endereço da conta Gmail | - |
 | `label` | Etiqueta Gmail para monitorar | `INBOX` |
 | `topic` | Caminho do tópico Pub/Sub do Google Cloud | - |
@@ -656,7 +656,7 @@ Gmail Pub/Sub permite que você acione o Clawdbot em tempo real ao receber novos
 ```
 
 | Modo | Descrição |
-|------|------------|
+|--- | ---|
 | `off` | Não usar Tailscale |
 | `serve` | Expor serviço local através de Tailscale Serve |
 | `funnel` | Acesso da internet através de Tailscale Funnel |
@@ -708,7 +708,7 @@ clawdbot hooks gmail-watch
 **Possíveis causas**:
 
 | Causa | Solução |
-|-------|---------|
+|--- | ---|
 | Serviço Cron não habilitado | Verificar configuração `cron.enabled` |
 | Hora não alcançada | Verificar próxima execução com `clawdbot cron list` |
 | Fuso horário incorreto | Verificar se campo `tz` está correto |
@@ -721,7 +721,7 @@ clawdbot hooks gmail-watch
 **Erros comuns**:
 
 | Erro | Correto | Descrição |
-|------|---------|-----------|
+|--- | --- | ---|
 | `9 * * *` | `0 9 * * *` | Campo minuto faltando |
 | `0 9 * * * *` | `0 9 * * *` | Um campo extra |
 | `0 9 1-5 * *` | `0 9 * * 1-5` | Posição do campo dia da semana incorreta |
@@ -803,7 +803,7 @@ Ao configurar adequadamente essas funcionalidades, você pode construir um assis
 > Data de atualização: 2026-01-27
 
 | Funcionalidade | Caminho do arquivo | Números de linha |
-|---------------|-------------------|-------------------|
+|--- | --- | ---|
 | Definição de tipos de configuração Cron | [`src/config/types.cron.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.cron.ts#L1-L6) | 1-6 |
 | Definição de tipos centrais Cron | [`src/cron/types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/types.ts#L1-L95) | 1-95 |
 | Cron Service | [`src/cron/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/service.ts#L1-L49) | 1-49 |

@@ -71,7 +71,7 @@ sequenceDiagram
 **Ключевые концепции**:
 
 | Концепция | Описание |
-| ------ | ------ |
+|--- | ---|
 | **imsg CLI** | Сторонний инструмент для взаимодействия с Messages через JSON-RPC over stdio |
 | **Full Disk Access** | Разрешение macOS, позволяющее Clawdbot читать chat.db Messages |
 | **Разрешение Automation** | Разрешение macOS, позволяющее imsg отправлять сообщения через Automation API |
@@ -409,7 +409,7 @@ exec ssh -T bot@mac-mini.tailnet-1234.ts.net imsg "$@"
 ### Базовая конфигурация
 
 | Параметр | Тип | По умолчанию | Описание |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `enabled` | boolean | false | Включить ли канал iMessage |
 | `cliPath` | string | "imsg" | Путь к CLI imsg (может быть SSH wrapper) |
 | `dbPath` | string | - | Путь к базе данных chat.db Messages |
@@ -418,7 +418,7 @@ exec ssh -T bot@mac-mini.tailnet-1234.ts.net imsg "$@"
 ### Стратегия DM
 
 | Параметр | Тип | По умолчанию | Описание |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `dmPolicy` | "pairing"|"allowlist"|"open"|"disabled" | "pairing" | Стратегия доступа DM |
 | `allowFrom` | array | [] | Список разрешённых отправителей (handles, emails, E.164, `chat_id:*`) |
 
@@ -439,7 +439,7 @@ clawdbot pairing approve imessage <CODE>
 ### Стратегия групп
 
 | Параметр | Тип | По умолчанию | Описание |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `groupPolicy` | "allowlist"|"open"|"disabled" | "allowlist" | Стратегия доступа групп |
 | `groupAllowFrom` | array | [] | Отправители, которые могут запускать AI в группах |
 | `groups` | object | {} | Конфигурация групп по chat_id |
@@ -466,7 +466,7 @@ clawdbot pairing approve imessage <CODE>
 ### Ограничения медиа и текста
 
 | Параметр | Тип | По умолчанию | Описание |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `includeAttachments` | boolean | false | Включать ли вложения в контекст |
 | `mediaMaxMb` | number | 16 | Максимальный размер медиа файла (МБ) |
 | `textChunkLimit` | number | 4000 | Размер блоков исходящего текста (символы) |
@@ -475,7 +475,7 @@ clawdbot pairing approve imessage <CODE>
 ### История
 
 | Параметр | Тип | По умолчанию | Описание |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `historyLimit` | number | - | Максимальное количество исторических сообщений в группах (0 отключает) |
 | `dmHistoryLimit` | number | - | Ограничение истории DM (обороты пользователя) |
 | `dms["<handle>"].historyLimit` | number | - | Переопределение ограничения истории DM по handle |
@@ -569,7 +569,7 @@ clawdbot pairing approve imessage <CODE>
 > Дата обновления: 2026-01-27
 
 | Функция | Путь к файлу | Строки |
-| ------ | --------- | ---- |
+|--- | --- | ---|
 | Определение типа конфигурации iMessage | [`src/config/types.imessage.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.imessage.ts) | 1-80 |
 | Парсинг аккаунтов iMessage | [`src/imessage/accounts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/imessage/accounts.ts) | 1-83 |
 | Зондирование iMessage | [`src/imessage/probe.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/imessage/probe.ts) | 1-92 |

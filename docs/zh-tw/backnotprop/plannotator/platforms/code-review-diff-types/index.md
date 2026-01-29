@@ -51,7 +51,7 @@ Git diff 指令有很多變體，每個變體顯示不同的程式碼範圍。Pl
 ::: info Git Diff 類型速查
 
 | diff 類型 | 顯示範圍 | 典型使用情境 |
-|---------|---------|------------|
+|--- | --- | ---|
 | Uncommitted changes | 工作區 + 暫存區 | 審查本次開發的所有修改 |
 | Staged changes | 僅暫存區 | 提交前審查準備提交的內容 |
 | Unstaged changes | 僅工作區 | 審查還沒 `git add` 的修改 |
@@ -206,7 +206,7 @@ Uncommitted 檢視顯示工作區和暫存區的所有變更（`git diff HEAD`�
 Plannotator 支援的 5 種 diff 類型：
 
 | 類型 | Git 指令 | 情境 |
-|-----|----------|-----|
+|--- | --- | ---|
 | Uncommitted | `git diff HEAD` | 審查本次開發的所有修改 |
 | Staged | `git diff --staged` | 提交前審查暫存區 |
 | Unstaged | `git diff` | 審查工作區修改 |
@@ -234,7 +234,7 @@ Plannotator 支援的 5 種 diff 類型：
 > 更新時間：2026-01-24
 
 | 功能 | 檔案路徑 | 行號 |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | Diff 類型定義 | [`packages/server/git.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/git.ts#L10-L15) | 10-15 |
 | Git 上下文取得 | [`packages/server/git.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/git.ts#L79-L96) | 79-96 |
 | 執行 Git Diff | [`packages/server/git.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/git.ts#L101-L147) | 101-147 |

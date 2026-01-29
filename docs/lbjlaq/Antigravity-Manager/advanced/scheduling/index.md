@@ -256,17 +256,17 @@ If the fixed account is marked as rate-limited or hit by quota protection, the s
 > Last updated: 2026-01-23
 
 | Function | File Path | Lines |
-| --- | --- | --- |
+|--- | --- | ---|
 | Scheduling mode and config structure (StickySessionConfig) | [`src-tauri/src/proxy/sticky_config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/sticky_config.rs#L1-L36) | 1-36 |
 | Session fingerprint generation (Claude/OpenAI/Gemini) | [`src-tauri/src/proxy/session_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/session_manager.rs#L1-L159) | 1-159 |
 | TokenManager: Fixed account mode fields and initialization | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L27-L50) | 27-50 |
-| TokenManager: Core account selection logic (fixed account/sticky session/60s window/round-robin/quota protection) | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L470-L940) | 470-940 |
-| TokenManager: invalid_grant auto-disable and remove from pool | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L868-L878) | 868-878 |
+|--- | --- | ---|
+|--- | --- | ---|
 | TokenManager: Rate limit recording and success clearing API | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L1087-L1147) | 1087-1147 |
 | TokenManager: Update scheduling config / Clear session bindings / Fixed account mode setter | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L1419-L1461) | 1419-1461 |
 | ProxyConfig: scheduling field definition and defaults | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L257) | 174-257 |
 | Sync scheduling config when reverse proxy starts | [`src-tauri/src/commands/proxy.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/proxy.rs#L70-L100) | 70-100 |
-| Scheduling-related Tauri commands (get/update/clear bindings/fixed account) | [`src-tauri/src/commands/proxy.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/proxy.rs#L478-L551) | 478-551 |
+|--- | --- | ---|
 | OpenAI handler: session_id + force rotate on retry | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L160-L182) | 160-182 |
 | OpenAI handler: 429/5xx record rate limit + parse retry delay | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L349-L367) | 349-367 |
 | Gemini handler: session_id + force rotate on retry | [`src-tauri/src/proxy/handlers/gemini.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/gemini.rs#L62-L88) | 62-88 |

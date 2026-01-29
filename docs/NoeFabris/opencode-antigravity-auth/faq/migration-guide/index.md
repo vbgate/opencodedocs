@@ -42,14 +42,14 @@ You bought a new computer and need to continue using Antigravity Auth on it to a
 The storage format has version control (currently v3), and the plugin **automatically handles version migration**:
 
 | Version | Main Changes | Current Status |
-| ------- | ------------ | -------------- |
+|--- | --- | ---|
 | v1 → v2 | Structured rate limit state | ✅ Auto migrate |
 | v2 → v3 | Support dual quota pools (gemini-antigravity/gemini-cli) | ✅ Auto migrate |
 
 Storage file locations (cross-platform):
 
 | Platform | Path |
-| -------- | ---- |
+|--- | ---|
 | macOS/Linux | `~/.config/opencode/antigravity-accounts.json` |
 | Windows | `%APPDATA%\opencode\antigravity-accounts.json` |
 
@@ -319,11 +319,11 @@ The plugin **automatically handles version migration**, no manual modification o
 > Last updated: 2026-01-23
 
 | Feature | File Path | Lines |
-| -------- | --------- | ----- |
+|--- | --- | ---|
 | Storage format definition | [`src/plugin/storage.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/storage.ts#L128-L198) | 128-198 |
 | v1→v2 migration | [`src/plugin/storage.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/storage.ts#L366-L395) | 366-395 |
 | v2→v3 migration | [`src/plugin/storage.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/storage.ts#L397-L431) | 397-431 |
-| Account loading (with auto-migration) | [`src/plugin/storage.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/storage.ts#L433-L518) | 433-518 |
+|--- | --- | ---|
 | Configuration directory path | [`src/plugin/storage.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/storage.ts#L202-L213) | 202-213 |
 | File deduplication logic | [`src/plugin/storage.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/storage.ts#L301-L364) | 301-364 |
 

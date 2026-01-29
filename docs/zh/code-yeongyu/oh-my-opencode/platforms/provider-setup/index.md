@@ -68,7 +68,7 @@ oh-my-opencode 的智能之处在于：**让每个任务用最合适的模型，
 oh-my-opencode 的配置支持两个层级：
 
 | 位置 | 路径 | 优先级 | 适用场景 |
-|-------|--------|---------|---------|
+|--- | --- | --- | ---|
 | **项目配置** | `.opencode/oh-my-opencode.json` | 低 | 项目特定配置（随代码库提交） |
 | **用户配置** | `~/.config/opencode/oh-my-opencode.json` | 高 | 全局配置（所有项目共享） |
 
@@ -131,7 +131,7 @@ oh-my-opencode 支持 6 种主要 Provider。配置方法因 Provider 而异。
 **模型映射**（Sisyphus 默认配置）：
 
 | 代理 | 默认模型 | 用途 |
-|-----|---------|------|
+|--- | --- | ---|
 | Sisyphus | `anthropic/claude-opus-4-5` | 主编排器，复杂推理 |
 | Prometheus | `anthropic/claude-opus-4-5` | 项目规划 |
 | Metis | `anthropic/claude-sonnet-4-5` | 前规划分析 |
@@ -162,7 +162,7 @@ oh-my-opencode 支持 6 种主要 Provider。配置方法因 Provider 而异。
 **模型映射**（Oracle 默认配置）：
 
 | 代理 | 默认模型 | 用途 |
-|-----|---------|------|
+|--- | --- | ---|
 | Oracle | `openai/gpt-5.2` | 架构审查、调试 |
 
 **手动覆盖示例**：
@@ -246,7 +246,7 @@ oh-my-opencode 支持 6 种主要 Provider。配置方法因 Provider 而异。
 **模型映射**（默认配置）：
 
 | 代理 | 默认模型 | 用途 |
-|-----|---------|------|
+|--- | --- | ---|
 | Multimodal Looker | `google/antigravity-gemini-3-flash` | PDF、图片分析 |
 
 ### GitHub Copilot（备用 Provider）
@@ -278,7 +278,7 @@ GitHub Copilot 作为代理 Provider，将请求路由到你订阅的底层模�
 **模型映射**（当 GitHub Copilot 是最佳可用 Provider 时）：
 
 | 代理 | 模型 | 用途 |
-|-----|-------|------|
+|--- | --- | ---|
 | Sisyphus | `github-copilot/claude-opus-4.5` | 主编排器 |
 | Oracle | `github-copilot/gpt-5.2` | 架构审查 |
 | Explore | `opencode/gpt-5-nano` | 快速探索 |
@@ -305,7 +305,7 @@ bunx oh-my-opencode install
 **模型映射**（当 Z.ai 是唯一可用 Provider 时）：
 
 | 代理 | 模型 | 用途 |
-|-----|-------|------|
+|--- | --- | ---|
 | Sisyphus | `zai-coding-plan/glm-4.7` | 主编排器 |
 | Oracle | `zai-coding-plan/glm-4.7` | 架构审查 |
 | Explore | `zai-coding-plan/glm-4.7-flash` | 快速探索 |
@@ -325,7 +325,7 @@ bunx oh-my-opencode install
 **模型映射**（当 OpenCode Zen 是最佳可用 Provider 时）：
 
 | 代理 | 模型 | 用途 |
-|-----|-------|------|
+|--- | --- | ---|
 | Sisyphus | `opencode/claude-opus-4-5` | 主编排器 |
 | Oracle | `opencode/gpt-5.2` | 架构审查 |
 | Explore | `opencode/gpt-5-nano` | 快速探索 |
@@ -380,7 +380,7 @@ anthropic → github-copilot → opencode → antigravity → google
 **所有代理的 Provider 优先级链**：
 
 | 代理 | 模型（无前缀） | Provider 优先级链 |
-|-----|----------------|-------------------|
+|--- | --- | ---|
 | **Sisyphus** | `claude-opus-4-5` | anthropic → github-copilot → opencode → antigravity → google |
 | **Oracle** | `gpt-5.2` | openai → anthropic → google → github-copilot → opencode |
 | **Librarian** | `big-pickle` | opencode → github-copilot → anthropic |
@@ -394,13 +394,13 @@ anthropic → github-copilot → opencode → antigravity → google
 **Category（类别）的 Provider 优先级链**：
 
 | Category | 模型（无前缀） | Provider 优先级链 |
-|----------|----------------|-------------------|
-| **visual-engineering** | `gemini-3-pro` | google → openai → anthropic → github-copilot → opencode |
+|--- | --- | ---|
+|--- | --- | ---|
 | **ultrabrain** | `gpt-5.2-codex` | openai → anthropic → google → github-copilot → opencode |
 | **artistry** | `gemini-3-pro` | google → openai → anthropic → github-copilot → opencode |
 | **quick** | `claude-haiku-4-5` | anthropic → github-copilot → opencode → antigravity → google |
-| **unspecified-low** | `claude-sonnet-4-5` | anthropic → github-copilot → opencode → antigravity → google |
-| **unspecified-high** | `claude-opus-4-5` | anthropic → github-copilot → opencode → antigravity → google |
+|--- | --- | ---|
+|--- | --- | ---|
 | **writing** | `gemini-3-flash` | google → openai → anthropic → github-copilot → opencode |
 
 ### 步骤 3：系统默认
@@ -745,7 +745,7 @@ bunx oh-my-opencode install --no-tui --zai-coding-plan=no
 > 更新时间：2026-01-26
 
 | 功能 | 文件路径 | 行号 |
-|------|----------|------|
+|--- | --- | ---|
 | 配置 Schema 定义 | [`src/config/schema.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/config/schema.ts) | 1-378 |
 | 安装指南（Provider 配置） | [`docs/guide/installation.md`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/docs/guide/installation.md) | 1-299 |
 | 配置参考（模型解析） | [`docs/configurations.md`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/docs/configurations.md) | 391-512 |

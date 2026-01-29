@@ -275,7 +275,7 @@ Installing the DCP plugin is very simple:
 > Last updated: 2026-01-23
 
 | Feature        | File Path                                                                                    | Line Range |
-| --------------- | -------------------------------------------------------------------------------------------- | ---------- |
+|--- | --- | ---|
 | Plugin Entry    | [`index.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/index.ts) | 12-102     |
 | Config Manager  | [`lib/config.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/config.ts) | 669-794    |
 | Command Handler | [`lib/commands/help.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/commands/help.ts) | 1-40       |

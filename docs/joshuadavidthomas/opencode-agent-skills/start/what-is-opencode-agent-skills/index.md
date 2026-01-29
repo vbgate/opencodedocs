@@ -45,7 +45,7 @@ A skill is a reusable module containing AI workflow guidance. It is typically a 
 The plugin is built with TypeScript + Bun + Zod, providing 4 core tools:
 
 | Tool | Function |
-|------|----------|
+|--- | ---|
 | `use_skill` | Injects the SKILL.md content of a skill into the session context |
 | `read_skill_file` | Reads supporting files (documentation, configs, etc.) from the skill directory |
 | `run_skill_script` | Executes executable scripts in the skill directory context |
@@ -119,7 +119,7 @@ When enabled, the plugin automatically detects the `using-superpowers` skill and
 ## Comparison with Other Solutions
 
 | Solution | Features | Use Cases |
-|----------|----------|-----------|
+|--- | --- | ---|
 | **opencode-agent-skills** | Dynamic discovery, compression recovery, auto recommendations | Scenarios requiring unified management and automated recommendations |
 | **opencode-skills** | Auto-registers as `skills_{{name}}` tools | Scenarios requiring independent tool calls |
 | **superpowers** | Complete software development workflow | Projects requiring strict process standards |
@@ -159,7 +159,7 @@ The OpenCode Agent Skills plugin provides complete skill management capabilities
 > Last updated: 2026-01-24
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | Plugin entry and functionality overview | [`src/plugin.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/plugin.ts#L1-L12) | 1-12 |
 | Core feature list | [`README.md`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/README.md#L5-L11) | 5-11 |
 | Skill discovery priority | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L241-L246) | 241-246 |

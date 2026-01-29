@@ -404,7 +404,7 @@ Now you can let AI agents use these skills. When AI agents need to perform PDF p
 ### Core Functions
 
 | Function        | File Path                                                                                     | Line Numbers |
-| --------------- | -------------------------------------------------------------------------------------------- | ------------ |
+|--- | --- | ---|
 | Install skills  | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts) | 83-424       |
 | Sync to AGENTS.md | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts)     | 18-109       |
 | List skills     | [`src/commands/list.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/list.ts)     | 7-43         |

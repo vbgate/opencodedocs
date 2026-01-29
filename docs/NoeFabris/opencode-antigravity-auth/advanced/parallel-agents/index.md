@@ -41,7 +41,7 @@ When using oh-my-opencode or running multiple OpenCode instances simultaneously,
 PID offset functionality is suitable for the following scenarios:
 
 | Scenario | Needs PID Offset? | Reason |
-| -------- | ---------------- | ------ |
+|--- | --- | ---|
 | Single OpenCode Instance | ❌ No | Single process, no account conflicts |
 | Manual Account Switching | ❌ No | Non-concurrent, sticky strategy is sufficient |
 | oh-my-opencode Multiple Agents | ✅ Recommended | Multi-process concurrency, need to distribute accounts |
@@ -105,7 +105,7 @@ T3: Process C starts → PID offset → Uses account 2  ← Distributed!
 PID offset only takes effect during the fallback phase of the sticky strategy (round-robin and hybrid strategies have their own allocation logic):
 
 | Strategy | PID Offset Effective? | Recommended Scenario |
-| -------- | --------------------- | ------------------- |
+|--- | --- | ---|
 | `sticky` | ✅ Yes | Single process + prompt cache priority |
 | `round-robin` | ❌ No | Multi-process/parallel agents, max throughput |
 | `hybrid` | ❌ No | Intelligent allocation, health score priority |
@@ -370,7 +370,7 @@ PID offset functionality optimizes account allocation in multi-process scenarios
 After configuring multiple accounts, choose the appropriate strategy based on your use case:
 
 | Scenario | Recommended Strategy | PID Offset |
-| -------- | -------------------- | ---------- |
+|--- | --- | ---|
 | Single process, prompt cache priority | sticky | No |
 | Multi-process/parallel agents | round-robin | No |
 | hybrid strategy + staggered starts | hybrid | Optional |
@@ -395,7 +395,7 @@ After configuring multiple accounts, choose the appropriate strategy based on yo
 > Last updated: 2026-01-23
 
 | Feature | File Path | Lines |
-| ------- | --------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | PID Offset Implementation | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L388-L393) | 388-393 |
 | Config Schema Definition | [`src/plugin/config/schema.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/schema.ts#L244-L255) | 244-255 |
 | Environment Variable Support | [`src/plugin/config/loader.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/loader.ts#L163-L168) | 163-168 |

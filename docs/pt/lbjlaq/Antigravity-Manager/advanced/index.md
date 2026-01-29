@@ -13,7 +13,7 @@ Este capítulo aprofunda funcionalidades avançadas do Antigravity Tools: gerenc
 ## Conteúdo do Capítulo
 
 | Tutorial | Descrição |
-|-----|------|
+|--- | ---|
 | [Configuração Completa](./config/) | Campos completos de AppConfig/ProxyConfig, localização de persistência e semântica de atualização a quente |
 | [Segurança e Privacidade](./security/) | `auth_mode`, `allow_lan_access` e design de linha de base de segurança |
 | [Agendamento de Alta Disponibilidade](./scheduling/) | Rotação, conta fixa, sessão aderente e mecanismo de retry em caso de falha |
@@ -70,7 +70,7 @@ Resolva problemas ocultos de sessão longa, deixar cliente mais parecido com pro
 **Seleção Rápida**:
 
 | Seu cenário | Recomendado ver primeiro |
-|---------|---------------------------|
+|--- | ---|
 | Rotação de múltiplas contas instável | [Agendamento de Alta Disponibilidade](./scheduling/) |
 | Quer fixar certo nome de modelo | [Roteamento de Modelo](./model-router/) |
 | Cota sempre esgota | [Governança de Cota](./quota/) |

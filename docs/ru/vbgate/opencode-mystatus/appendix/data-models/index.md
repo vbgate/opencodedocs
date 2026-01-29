@@ -114,7 +114,7 @@ type CopilotTier = "free" | "pro" | "pro+" | "business" | "enterprise";
 **Лимиты ежемесячной квоты для каждого типа подписки**:
 
 | tier      | Ежемесячная квота (Premium Requests) |
-| --------- | --------------------------- |
+|--- | ---|
 | `free`    | 50                          |
 | `pro`     | 300                         |
 | `pro+`    | 1,500                       |
@@ -263,7 +263,7 @@ interface UsageLimitItem {
 **Описание типа лимита**:
 
 | type          | Описание               | Период сброса  |
-| ------------- | ------------------ | --------- |
+|--- | --- | ---|
 | `TOKENS_LIMIT` | лимит Token за 5 часов  | 5 часов   |
 | `TIME_LIMIT`   | ежемесячная квота MCP      | 1 месяц   |
 
@@ -522,7 +522,7 @@ interface GoogleQuotaResponse {
 **Отображаемые 4 модели**:
 
 | Отображаемое имя     | Ключ модели                                  | Альтернативный ключ              |
-| ------------ | ----------------------------------------- | --------------------- |
+|--- | --- | ---|
 | G3 Pro       | `gemini-3-pro-high`                        | `gemini-3-pro-low`    |
 | G3 Image     | `gemini-3-pro-image`                      | -                     |
 | G3 Flash     | `gemini-3-flash`                          | -                     |
@@ -569,7 +569,7 @@ export const REQUEST_TIMEOUT_MS = 10000;
 > Время обновления: 2026-01-23
 
 | Функция              | Путь к файлу                                                                                              | Номер строки    |
-| ----------------- | --------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Тип данных аутентификации      | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L99-L104)        | 99-104  |
 | Аутентификация OpenAI       | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L28-L33)         | 28-33   |
 | Аутентификация 智谱 AI      | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L38-L41)         | 38-41   |

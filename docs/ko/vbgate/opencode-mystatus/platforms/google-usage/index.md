@@ -58,7 +58,7 @@ Google Cloud Antigravity는 OAuth 메커니즘을 통해 인증하며, 각 계�
 mystatus는 다음 4개 모델의 할당량을 표시합니다:
 
 | 표시 이름 | 모델 키(주/대체) | 설명 |
-| --------- | ----------------- | ---- |
+|--- | --- | ---|
 | G3 Pro | `gemini-3-pro-high` / `gemini-3-pro-low` | Gemini 3 Pro 고성능 버전 |
 | G3 Image | `gemini-3-pro-image` | Gemini 3 Pro 이미지 생성 |
 | G3 Flash | `gemini-3-flash` | Gemini 3 Flash 빠른 버전 |
@@ -227,7 +227,7 @@ user@gmail.com: No project ID found
 > 업데이트 시간: 2026-01-23
 
 | 기능          | 파일 경로                                                                                                                  | 행번호    |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 모델 구성      | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts#L69-L78)                    | 69-78   |
 | 계정 조회 로직  | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts#L304-L370)                   | 304-370 |
 | 토큰 새로 고침    | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts#L162-L184)                   | 162-184 |

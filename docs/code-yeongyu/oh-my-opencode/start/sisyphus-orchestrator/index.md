@@ -37,7 +37,7 @@ You may have encountered these problems:
 Sisyphus is your main orchestrator, suitable for these scenarios:
 
 | Scenario | Suitable | Alternative |
-|----------|----------|-------------|
+|--- | --- | ---|
 | Complex feature development (3+ steps) | ✅ Highly Recommended | Prometheus + Atlas (requires detailed planning) |
 | Quick fix of known bugs | ✅ Appropriate | Let Sisyphus handle it directly |
 | Need to research multiple repos/docs | ✅ Highly Recommended | Use Sisyphus parallel delegation |
@@ -91,7 +91,7 @@ Sisyphus uses **Claude Opus 4.5 + 32k thinking budget**.
 What's the benefit?
 
 | Low Budget (No Thinking) | 32k Thinking Budget |
-|--------------------------|---------------------|
+|--- | ---|
 | Starts writing code directly | First deeply analyzes requirements, assesses complexity, breaks down tasks |
 | Prone to missing edge cases | Proactively identifies potential issues and risks |
 | Realizes it's on the wrong track halfway | Chooses the optimal approach from the start |
@@ -171,7 +171,7 @@ When you need results, it calls `background_output(task_id="...")` to retrieve t
 **Why is this faster?**
 
 | Serial Approach (Traditional) | Parallel Approach (Sisyphus) |
-|-------------------------------|------------------------------|
+|--- | ---|
 | Codebase search (2 min) | ⏳ Codebase search (2 min) |
 | Waiting... | ⏳ Documentation research (2 min, concurrent) |
 | Documentation research (2 min) | Start implementation (total 2 min) |
@@ -228,7 +228,7 @@ You disable all expert agents in configuration, leaving only Sisyphus.
 Keep default configuration and let Sisyphus automatically delegate to experts:
 
 | Task | Sisyphus Itself | Delegate to Expert |
-|------|-----------------|-------------------|
+|--- | --- | ---|
 | Simple single-file modification | ✅ OK | Not needed |
 | Codebase search | ⚠️ Slow | ✅ Explore (faster) |
 | Documentation research | ⚠️ May be inaccurate | ✅ Librarian (more professional) |
@@ -269,7 +269,7 @@ Sisyphus's power doesn't come from being "smarter", but from:
 > Last updated: 2026-01-26
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | Sisyphus agent factory | [`src/agents/sisyphus.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/sisyphus.ts) | 419-450 |
 | Sisyphus core prompt | [`src/agents/sisyphus.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/sisyphus.ts) | 17-416 |
 | Agent metadata and model configuration | [`src/agents/AGENTS.md`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/AGENTS.md) | 24-36 |

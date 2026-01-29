@@ -30,7 +30,7 @@ order: 70
 ## 알려진 제한 요약
 
 | 제한 | 설명 | 지원 계획 여부 |
-| --- | --- | --- |
+|--- | --- | ---|
 | **HTML 테이블** | Markdown 파이프 테이블(`\| ... \|`)만 지원 | ❌ 미지원 |
 | **다중 행 셀** | 셀 내에 `<br>` 등 줄바꿈 태그 포함 불가 | ❌ 미지원 |
 | **구분 행 없는 테이블** | `|---|` 구분 행이 있어야 함 | ❌ 미지원 |
@@ -67,7 +67,7 @@ order: 70
 
 ```markdown
 | 열 1 | 열 2 |
-| --- | --- |
+|--- | ---|
 | 데이터 1 | 데이터 2 |
 ```
 
@@ -97,7 +97,7 @@ HTML 테이블 포맷팅이 필요한 경우 다음을 권장합니다:
 
 ```markdown
 | 열 1 | 열 2 |
-| --- | --- |
+|--- | ---|
 | 1행<br>2행 | 단일 행 |
 ```
 
@@ -166,7 +166,7 @@ return hasSeparator  // 구분 행 없으면 false 반환
 
 ```markdown
 | 열 1 | 열 2 |
-| --- | --- |
+|--- | ---|
 | 두 열 병합 |  ← 열 1과 열 2를 병합하려는 의도
 | 데이터 1 | 데이터 2 |
 ```
@@ -187,7 +187,7 @@ Markdown 표준은 셀 병합 구문을 지원하지 않으며, 플러그인도 
 **현상**
 
 ```markdown
-| :--- | :---: | ---: |
+|--- | --- | ---|
 | 왼쪽 정렬 | 가운데 정렬 | 오른쪽 정렬 |
 | 데이터 1 | 데이터 2 | 데이터 3 |
 ```
@@ -305,7 +305,7 @@ if (cacheOperationCount > 100 || widthCache.size > 1000) {
 ## 이 과정 요약
 
 | 제한 | 원인 | 대안 |
-| --- | --- | --- |
+|--- | --- | ---|
 | HTML 테이블 미지원 | 플러그인은 Markdown 파이프 테이블에 집중 | HTML 포맷팅 도구 사용 |
 | 다중 행 셀 미지원 | 행별 처리 로직 | 여러 행으로 분할하거나 넓어지는 것을 수용 |
 | 구분 행 없는 테이블 미지원 | Markdown 규격 요구사항 | `|---|` 구분 행 추가 |
@@ -330,7 +330,7 @@ if (cacheOperationCount > 100 || widthCache.size > 1000) {
 > 업데이트 시간: 2026-01-26
 
 | 제한 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | HTML 테이블 감지 | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61) | 58-61 |
 | 구분 행 감지 | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L63-L68) | 63-68 |
 | 테이블 검증(구분 행 필수) | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88) | 70-88 |

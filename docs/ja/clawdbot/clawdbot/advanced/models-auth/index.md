@@ -67,7 +67,7 @@ Clawdbotでは、**モデル選択**と**認証資格情報**は2つの独立し
 Clawdbotは3種類の認証方式をサポートしており、異なるシナリオに適しています：
 
 | 認証方式 | 保存形式 | 典型的なシナリオ | サポートされるプロバイダ |
-|---------|---------|-----------|------------|
+|--- | --- | --- | ---|
 | **API Key** | `{ type: "api_key", key: "sk-..." }` | クイックスタート、テスト | Anthropic、OpenAI、OpenRouter、DeepSeekなど |
 | **OAuth** | `{ type: "oauth", access: "...", refresh: "..." }` | 長期実行、自動更新 | Anthropic (Claude Code CLI)、OpenAI (Codex)、Qwen Portal |
 | **Token** | `{ type: "token", token: "..." }` | 静的Bearerトークン | GitHub Copilot、一部のカスタムプロキシ |
@@ -78,7 +78,7 @@ Clawdbotは以下のモデルプロバイダを内蔵でサポートしていま
 
 ::: details 内蔵プロバイダ一覧
 | プロバイダ | 認証方式 | 推奨モデル | 備考 |
-|---------|----------|----------|------|
+|--- | --- | --- | ---|
 | **Anthropic** | API Key / OAuth (Claude Code CLI) | `anthropic/claude-opus-4-5` | Claude Pro/Max + Opus 4.5を推奨 |
 | **OpenAI** | API Key / OAuth (Codex) | `openai/gpt-5.2` | 標準OpenAIとCodex版をサポート |
 | **OpenRouter** | API Key | `openrouter/anthropic/claude-sonnet-4-5` | 数百のモデルを統合 |
@@ -460,7 +460,7 @@ auth:
 Clawdbotは以下のOAuthプロバイダの自動更新をサポートしています：
 
 | プロバイダ | OAuthフロー | 更新メカニズム |
-|---------|-----------|----------|
+|--- | --- | ---|
 | **Anthropic** (Claude Code CLI) | 標準認証コード | pi-mono RPC更新 |
 | **OpenAI** (Codex) | 標準認証コード | pi-mono RPC更新 |
 | **Qwen Portal** | カスタムOAuth | `refreshQwenPortalCredentials` |
@@ -522,7 +522,7 @@ agents:
 一部のプロバイダは明示的な設定が不要で、Clawdbotが自動的に検出します：
 
 | プロバイダ | 検出方法 | 設定ファイル |
-|---------|----------|----------|
+|--- | --- | ---|
 | **GitHub Copilot** | `~/.copilot/credentials.json` | 設定不要 |
 | **AWS Bedrock** | 環境変数またはAWS SDK資格情報 | `~/.aws/credentials` |
 | **Codex CLI** | `~/.codex/auth.json` | 設定不要 |
@@ -632,7 +632,7 @@ clawdbot gateway restart
 > 更新日時：2026-01-27
 
 | 機能 | ファイルパス | 行番号 |
-| ----- | --------- | ---- |
+|--- | --- | ---|
 | 認証資格情報タイプ定義 | [`src/agents/auth-profiles/types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/types.ts) | 1-74 |
 | OAuthトークンの解析と更新 | [`src/agents/auth-profiles/oauth.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/oauth.ts) | 1-220 |
 | 認証設定ファイル管理 | [`src/agents/auth-profiles/profiles.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/profiles.ts) | 1-85 |

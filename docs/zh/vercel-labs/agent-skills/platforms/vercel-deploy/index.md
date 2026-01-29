@@ -182,7 +182,7 @@ To transfer this deployment to your Vercel account, visit the Claim URL.
 Vercel Deploy 技能可以自动检测 **40+ 种框架**：
 
 | 类别             | 框架（部分示例）                                 |
-| ---------------- | ------------------------------------------------ |
+|--- | ---|
 | **React**        | Next.js, Gatsby, Create React App, Remix         |
 | **Vue**          | Nuxt, Vitepress, Vuepress                        |
 | **Svelte**       | SvelteKit, Svelte                                |
@@ -347,7 +347,7 @@ Vercel Deploy 技能让部署变得前所未有的简单：
 > 更新时间：2026-01-25
 
 | 功能             | 文件路径                                                                                                                                                                         | 行号    |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 部署脚本入口     | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 1-250   |
 | 框架检测逻辑     | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh)                                                  | 12-156  |
 | 打包并上传到 API | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh)                                                  | 208-222 |

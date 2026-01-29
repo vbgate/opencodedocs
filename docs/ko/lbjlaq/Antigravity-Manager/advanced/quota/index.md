@@ -192,7 +192,7 @@ TokenManager의 `target_model` 정규화는 "화이트리스트식"입니다: �
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 라인 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Quota Protection UI(임계값, 모델 체크, 최소 1개 유지) | [`src/components/settings/QuotaProtection.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/settings/QuotaProtection.tsx#L13-L168) | 13-168 |
 | Smart Warmup UI(활성화 후 기본 체크, 최소 1개 유지) | [`src/components/settings/SmartWarmup.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/settings/SmartWarmup.tsx#L14-L120) | 14-120 |
 | 쿼터 거버넌스 구성 필드(`quota_protection` / `scheduled_warmup`) | [`src/types/config.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/types/config.ts#L54-L94) | 54-94 |

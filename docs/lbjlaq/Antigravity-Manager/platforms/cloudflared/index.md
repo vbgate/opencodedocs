@@ -59,7 +59,7 @@ Exposing to public internet has risks! Make sure to:
 The project's built-in "auto-download + install" logic only covers the following OS/architecture combinations (other platforms will report `Unsupported platform`).
 
 | Operating System | Architecture | Support Status |
-| --- | --- | --- |
+|--- | --- | ---|
 | macOS | Apple Silicon (arm64) | ✅ |
 | macOS | Intel (x86_64) | ✅ |
 | Linux | x86_64 | ✅ |
@@ -69,7 +69,7 @@ The project's built-in "auto-download + install" logic only covers the following
 ### Two Modes Comparison
 
 | Feature | Quick Mode | Auth Mode |
-| --- | --- | --- |
+|--- | --- | ---|
 | **URL Type** | `https://xxx.trycloudflare.com` (temporary URL extracted from logs) | App may not automatically extract URL (depends on cloudflared logs); ingress domain based on your Cloudflare configuration |
 | **Requires Token** | ❌ No | ✅ Yes (obtained from Cloudflare console) |
 | **Stability** | URL may change with process restart | Depends on your Cloudflare configuration (app only responsible for starting process) |
@@ -139,7 +139,7 @@ Choose the appropriate mode based on your use case.
 2. Click to select:
 
 | Mode | Description | When to Choose |
-| --- | --- | --- |
+|--- | --- | ---|
 | **Quick Tunnel** | Automatically generates temporary URL (`*.trycloudflare.com`) | Quick testing, temporary access |
 | **Named Tunnel** | Use Cloudflare account and custom domain | Production environment, fixed domain requirement |
 
@@ -377,7 +377,7 @@ You'll learn:
 > Last updated: 2026-01-23
 
 | Function | File Path | Lines |
-| --- | --- | --- |
+|--- | --- | ---|
 | Cloudflared installation logic | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs) | 147-211 |
 | Quick mode startup command | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs) | 238-247 |
 | Auth mode startup command | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs) | 249-262 |

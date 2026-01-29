@@ -66,7 +66,7 @@ sequenceDiagram
 **主要な概念**：
 
 | 概念 | 説明 |
-| ------ | ------ |
+|--- | ---|
 | **Service Account** | Google Cloud 認証方式、ボットのアイデンティティ検証に使用 |
 | **Webhook** | Google Chat から Gateway にメッセージを POST する HTTP エンドポイント |
 | **Audience** | webhook リクエストを検証するためのターゲット（app-url または project-number） |
@@ -412,7 +412,7 @@ clawdbot channels status
 ### Service Account 認証
 
 | 設定項目 | 型 | デフォルト値 | 説明 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `serviceAccountFile` | string | - | Service Account JSON ファイルパス |
 | `serviceAccount` | string\|object | - | インライン JSON 認証情報（ファイルパスの代わりに使用） |
 | `audienceType` | "app-url"\|"project-number" | "app-url" | 検証タイプ：URL またはプロジェクト番号 |
@@ -423,7 +423,7 @@ clawdbot channels status
 デフォルトでは、未知の送信者はペアリングが必要です：
 
 | 設定項目 | 型 | デフォルト値 | 説明 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `dm.enabled` | boolean | 未定義 | DM 受信を有効にするか |
 | `dm.policy` | "pairing"|"open" | "pairing" | アクセスポリシー：ペアリングまたはオープン |
 | `dm.allowFrom` | array | [] | 許可された送信者リスト（ユーザー ID またはメール） |
@@ -437,7 +437,7 @@ clawdbot pairing approve googlechat <ペアリングコード>
 ### グループポリシー
 
 | 設定項目 | 型 | デフォルト値 | 説明 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `groupPolicy` | "allowlist"|"disabled" | "allowlist" | グループポリシー：許可リストまたは無効 |
 | `requireMention` | boolean | true | @メンションが必要か |
 | `groups` | object | {} | スペース ID 別の設定 |
@@ -464,7 +464,7 @@ clawdbot pairing approve googlechat <ペアリングコード>
 ### その他の設定
 
 | 設定項目 | 型 | デフォルト値 | 説明 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `webhookPath` | string | "/googlechat" | Webhook パス |
 | `botUser` | string | - | ボットユーザーリソース名（メンション検出用） |
 | `typingIndicator` | "none"|"message"|"reaction" | "message" | 入力インジケーターモード |
@@ -568,7 +568,7 @@ clawdbot pairing approve googlechat <ペアリングコード>
 > 更新日：2026-01-27
 
 | 機能 | ファイルパス | 行番号 |
-| ------ | --------- | ---- |
+|--- | --- | ---|
 | Google Chat 設定型定義 | [`src/config/types.googlechat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.googlechat.ts) | 1-109 |
 | Google Chat Zod Schema | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts) | 273-341 |
 | チャンネルレジストリ | [`src/channels/registry.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.ts) | 61-67 |

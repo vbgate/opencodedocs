@@ -74,7 +74,7 @@ Dispositivo Android (aplicativo do nó)
 O nó Android suporta as seguintes operações locais de dispositivo:
 
 | Funcionalidade | Comando | Descrição |
-| ---- | ------ | ---- |
+|--- | --- | ---|
 | **Canvas** | `canvas.*` | Exibe interface de visualização em tempo real (A2UI) |
 | **Camera** | `camera.*` | Tira fotos (JPG) e grava vídeos (MP4) |
 | **Screen** | `screen.*` | Gravação de tela |
@@ -454,7 +454,7 @@ Esta lição apresentou como configurar um nó Android para executar operações
 > Última atualização: 2026-01-27
 
 | Funcionalidade        | Caminho do arquivo                                                                                    | Número de linhas    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Política de comandos de nó | [`src/gateway/node-command-policy.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/node-command-policy.ts) | 1-112   |
 | Schema do protocolo de nó | [`src/gateway/protocol/schema/nodes.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/schema/nodes.ts) | 1-103   |
 | Documentação do Android  | [`docs/platforms/android.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/android.md) | 1-142   |

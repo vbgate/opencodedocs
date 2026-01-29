@@ -144,7 +144,7 @@ Usage notes:
 每个 `<skill>` 包含以下必需字段：
 
 | 字段        | 类型     | 可选值        | 说明                                         |
-| ----------- | -------- | ------------- | -------------------------------------------- |
+|--- | --- | --- | ---|
 | `<name>`    | string   | -             | 技能名称（与 SKILL.md 文件名或 YAML 中的 `name` 一致） |
 | `<description>` | string | -             | 技能描述（来自 SKILL.md 的 YAML frontmatter）        |
 | `<location>` | string   | `project` \| `global` | 技能安装位置标记（用于 AI 代理理解技能来源）         |
@@ -222,7 +222,7 @@ AGENTS.md 支持两种标记方式，OpenSkills 会自动识别：
 ### 源码位置
 
 | 功能            | 文件路径                                                                      | 行号    |
-| --------------- | ----------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 生成 XML        | [`src/utils/agents-md.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/agents-md.ts#L23-L62) | 23-62   |
 | 替换技能部分    | [`src/utils/agents-md.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/agents-md.ts#L67-L93) | 67-93   |
 | 解析现有技能    | [`src/utils/agents-md.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/agents-md.ts#L6-L18)  | 6-18    |
@@ -302,7 +302,7 @@ AI 代理可能会根据这个标记调整技能加载策略，但大多数代�
 > 更新时间：2026-01-24
 
 | 功能           | 文件路径                                                                                     | 行号    |
-| -------------- | -------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 生成技能 XML   | [`src/utils/agents-md.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/agents-md.ts#L23-L62) | 23-62   |
 | 替换技能部分   | [`src/utils/agents-md.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/agents-md.ts#L67-L93) | 67-93   |
 | 解析现有技能   | [`src/utils/agents-md.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/agents-md.ts#L6-L18)  | 6-18    |

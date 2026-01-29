@@ -190,7 +190,7 @@ Los datos completos de cada cuenta se almacenan individualmente en formato JSON 
 ### Explicación de campos clave
 
 | Campo | Tipo | Significado del negocio | Condición de activación |
-| ----- | ---- | -------- | -------- |
+|--- | --- | --- | ---|
 | `disabled` | bool | La cuenta está completamente deshabilitada (como cuando el refresh_token es inválido) | Se establece automáticamente en `true` cuando ocurre `invalid_grant` |
 | `proxy_disabled` | bool | Solo deshabilita la función de proxy, no afecta el uso de GUI | Deshabilitación manual o activación por protección de cuota |
 | `protected_models` | string[] | Lista de "modelos restringidos" para la protección de cuota a nivel de modelo | Actualizada por la lógica de protección de cuota |
@@ -220,7 +220,7 @@ La base de datos de estadísticas de tokens registra el consumo de tokens de cad
 #### token_usage (registros de uso originales)
 
 | Campo | Tipo | Descripción |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | id | INTEGER PRIMARY KEY AUTOINCREMENT | Clave primaria autoincremental |
 | timestamp | INTEGER | Marca de tiempo de la solicitud |
 | account_email | TEXT | Correo electrónico de la cuenta |
@@ -320,7 +320,7 @@ La base de datos de registros de proxy registra información detallada de cada s
 ### Estructura de tabla: request_logs
 
 | Campo | Tipo | Descripción |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | id | TEXT PRIMARY KEY | ID único de solicitud (UUID) |
 | timestamp | INTEGER | Marca de tiempo de solicitud |
 | method | TEXT | Método HTTP (GET/POST) |
@@ -556,7 +556,7 @@ Si se activa la "protección de cuota" está determinado por `quota_protection.e
 > Fecha de actualización: 2026-01-23
 
 | Función | Ruta del archivo | Línea |
-| --- | --- | --- |
+|--- | --- | ---|
 | Directorio de datos (.antigravity_tools) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | Directorio de cuentas (accounts/) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L35-L46) | 35-46 |
 | Estructura de accounts.json | [`src-tauri/src/models/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/models/account.rs#L76-L92) | 76-92 |
@@ -572,7 +572,7 @@ Si se activa la "protección de cuota" está determinado por `quota_protection.e
 | Directorio logs/ y app.log | [`src-tauri/src/modules/logger.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/logger.rs#L17-L45) | 17-45 |
 | Ruta de bin/cloudflared | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L92-L101) | 92-101 |
 | device_original.json | [`src-tauri/src/modules/device.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/device.rs#L11-L13) | 11-13 |
-| invalid_grant -> disabled escritura en disco | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L869-L969) | 869-969 |
+|--- | --- | ---|
 
 **Constantes clave**:
 - `DATA_DIR = ".antigravity_tools"`: Nombre del directorio de datos (`src-tauri/src/modules/account.rs:16-18`)

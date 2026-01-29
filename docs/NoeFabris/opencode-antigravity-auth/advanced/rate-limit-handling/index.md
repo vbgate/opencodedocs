@@ -67,7 +67,7 @@ Google has rate limits for each account. Simply "switch on 429" may cause freque
 Antigravity Auth distinguishes 5 rate limit types based on the `reason` field or `message` content in API responses:
 
 | Type | Reason | Backoff Strategy | Typical Scenario |
-|------|--------|------------------|------------------|
+|--- | --- | --- | ---|
 | `QUOTA_EXHAUSTED` | Quota exhausted (daily or monthly) | Incremental backoff: 1min → 5min → 30min → 120min | Daily quota exhausted |
 | `RATE_LIMIT_EXCEEDED` | Requests too fast (per minute limit) | Fixed 30 seconds | Short burst of requests |
 | `MODEL_CAPACITY_EXHAUSTED` | Model server capacity insufficient | Fixed 15 seconds | Peak hours |
@@ -148,7 +148,7 @@ flowchart TD
 **Key Configurations** (config/schema.ts:256-259):
 
 | Config | Default | Description |
-|-------|---------|-------------|
+|--- | --- | ---|
 | `switch_on_first_rate_limit` | `true` | Whether to immediately switch account on first rate limit (after waiting 1s) |
 | `max_rate_limit_wait_seconds` | `300` | Maximum wait time when all accounts rate limited (5 minutes) |
 
@@ -186,7 +186,7 @@ Gemini models support two independent quota pools:
 You have 2 accounts, both encounter 429:
 
 | Status | quota_fallback=false | quota_fallback=true |
-|--------|---------------------|-------------------|
+|--- | --- | ---|
 | Account 1 (Antigravity) | Rate limited | Rate limited → Try Gemini CLI |
 | Account 2 (Antigravity) | Rate limited | Rate limited → Try Gemini CLI |
 | Result | Wait 5 minutes then retry | Switch to Gemini CLI, no wait needed |
@@ -228,7 +228,7 @@ const expBackoffMs = Math.min(1000 * Math.pow(2, attempt - 1), 60000);
 **Difference from Multi-Account**:
 
 | Scenario | Strategy | Wait Time |
-|----------|----------|-----------|
+|--- | --- | ---|
 | Single Account | Exponential backoff retry | 1s → 2s → 4s → 8s → ... → 60s |
 | Multi-Account | Switch account | 1s (first) or 5s (2nd) |
 
@@ -523,7 +523,7 @@ Rate limited. Retrying in 60s... (toast notification)
 ## Summary
 
 | Mechanism | Core Feature | Use Case |
-|-----------|--------------|----------|
+|--- | --- | ---|
 | **Rate Limit Detection** | Distinguish 5 types (QUOTA_EXHAUSTED, RATE_LIMIT_EXCEEDED, etc.) | All scenarios |
 | **Exponential Backoff** | More failures = longer wait (1s → 2s → 4s → ... → 60s) | Single account |
 | **Account Switching** | Multi-account prioritizes switching, single account retries | Multi-account |
@@ -533,7 +533,7 @@ Rate limited. Retrying in 60s... (toast notification)
 **Key Configurations**:
 
 | Config | Default | Recommended | Description |
-|--------|---------|-------------|-------------|
+|--- | --- | --- | ---|
 | `switch_on_first_rate_limit` | `true` | `true` (multi-account) | Immediate switch on first rate limit |
 | `quota_fallback` | `false` | `true` (Gemini) | Enable dual quota pool fallback |
 | `max_rate_limit_wait_seconds` | `300` | `300` | Maximum wait time (seconds) |
@@ -563,7 +563,7 @@ Rate limited. Retrying in 60s... (toast notification)
 > Last updated: 2026-01-23
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | Rate limit type definition | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L10-L20) | 10-20 |
 | Parse rate limit reason | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L29-L49) | 29-49 |
 | Calculate backoff time | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L51-L75) | 51-75 |

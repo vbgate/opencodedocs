@@ -68,7 +68,7 @@ Einschichtiger Schutz ist leicht zu umgehen oder falsch zu konfigurieren. Mehrsc
 ### Vergleich der drei Ausführungsmodi
 
 | Ausführungsmodus | Ausführungsort | Sicherheitsstufe | Typische Szenarien | Genehmigung erforderlich? |
-|----------------|----------------|-----------------|-------------------|--------------------------|
+|--- | --- | --- | --- | ---|
 | **sandbox** | Innerhalb von Containern (z.B. Docker) | Hoch | Isolierte Umgebung, Tests | Nein |
 | **gateway** | Der Computer, auf dem der Gateway-Daemon läuft | Mittel | Lokale Entwicklung, Integration | Ja (Allowlist + Genehmigung) |
 | **node** | Gekoppelter Geräte-Knoten (macOS/iOS/Android) | Mittel | Lokale Geräteoperationen | Ja (Allowlist + Genehmigung) |
@@ -106,7 +106,7 @@ Das exec-Tool unterstützt die folgenden Parameter：
 **Parameterbeschreibung**：
 
 | Parameter | Typ | Standardwert | Beschreibung |
-|-----------|------|--------------|-------------|
+|--- | --- | --- | ---|
 | `command` | string | Erforderlich | Auszuführender Shell-Befehl |
 | `workdir` | string | Aktuelles Arbeitsverzeichnis | Ausführungsverzeichnis |
 | `env` | object | Umgebung erben | Umgebungsvariablen überschreiben |
@@ -148,7 +148,7 @@ Bearbeiten Sie `~/.clawdbot/clawdbot.json`：
 **Beschreibung der Konfigurationselemente**：
 
 | Konfigurationselement | Typ | Standardwert | Beschreibung |
-|-----------------------|------|--------------|-------------|
+|--- | --- | --- | ---|
 | `host` | string | sandbox | Standard-Ausführungs-Host |
 | `security` | string | deny (sandbox) / allowlist (gateway, node) | Standard-Sicherheitsrichtlinie |
 | `ask` | string | on-miss | Standard-Genehmigungsrichtlinie |
@@ -247,7 +247,7 @@ Bearbeiten Sie `~/.clawdbot/exec-approvals.json`：
 Allowlist verwendet **glob-Musterabgleich** (Groß-/Kleinschreibung unempfindlich)：
 
 | Muster | Übereinstimmung | Beschreibung |
-|--------|----------------|-------------|
+|--- | --- | ---|
 | `~/Projects/**/bin/*` | `/Users/user/Projects/any/bin/rg` | Übereinstimmung mit allen Unterverzeichnissen |
 | `~/.local/bin/*` | `/Users/user/.local/bin/jq` | Übereinstimmung mit lokalem bin |
 | `/opt/homebrew/bin/rg` | `/opt/homebrew/bin/rg` | Absolute Pfadübereinstimmung |
@@ -318,7 +318,7 @@ Bearbeiten Sie `~/.clawdbot/clawdbot.json`：
 **Beschreibung der Konfigurationselemente**：
 
 | Konfigurationselement | Beschreibung |
-|-----------------------|-------------|
+|--- | ---|
 | `enabled` | Ob die exec-Genehmigungsweiterleitung aktiviert werden soll |
 | `mode` | `"session"` \| `"targets"` \| `"both"` - Genehmigungszielmodus |
 | `agentFilter` | Nur Genehmigungsanfragen bestimmter Agents verarbeiten |
@@ -363,7 +363,7 @@ Security: allowlist
 ### Häufige Fehler
 
 | Fehler | Ursache | Lösung |
-|--------|---------|---------|
+|--- | --- | ---|
 | `Command not allowed by exec policy` | `security=deny` oder Allowlist stimmt nicht überein | Überprüfen Sie `tools.exec.security` und Allowlist-Konfiguration |
 | `Approval timeout` | UI nicht verfügbar, `askFallback=deny` | Stellen Sie `askFallback=allowlist` ein oder aktivieren Sie die UI |
 | `Pattern does not resolve to binary` | Verwendung von Basename im Allowlist-Modus | Verwenden Sie den vollständigen Pfad (z.B. `/opt/homebrew/bin/rg`) |
@@ -390,7 +390,7 @@ Im Modus `security=allowlist` werden die folgenden Shell-Funktionen **nicht unte
 Die verschiedenen Ausführungsmodi verarbeiten PATH unterschiedlich：
 
 | Ausführungsmodus | PATH-Verarbeitung | Beschreibung |
-|-----------------|------------------|-------------|
+|--- | --- | ---|
 | `sandbox` | Erbt shell login, kann von `/etc/profile` zurückgesetzt werden | `pathPrepend` wird nach dem Profil angewendet |
 | `gateway` | Merged login shell PATH in die exec-Umgebung | Der Daemon hält minimalen PATH, aber exec erbt Benutzer-PATH |
 | `node` | Verwendet nur übergebene Umgebungsvariablenüberschreibungen | macOS-Knoten verwerfen `PATH`-Überschreibungen, headless-Knoten unterstützen prepend |
@@ -427,15 +427,15 @@ Das exec-Tool ermöglicht es KI-Assistenten, Shell-Befehle sicher auszuführen, 
 > Zuletzt aktualisiert：2026-01-27
 
 | Funktion | Dateipfad | Zeilennummer |
-|----------|-----------|-------------|
-| exec-Tool-Definition | [`src/agents/bash-tools.exec.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/bash-tools.exec.ts) | 1-500+ |
-| exec-Genehmigungslogik | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 1-1268 |
-| Shell-Befehlsanalyse | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 500-1100 |
-| Allowlist-Abgleich | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 507-521 |
-| Safe-bin-Validierung | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 836-873 |
-| Genehmigungs-Socket-Kommunikation | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 1210-1267 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Prozessausführung | [`src/process/exec.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/process/exec.ts) | 1-125 |
-| Tool-Konfigurationsschema | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | - |
+|--- | --- | ---|
 
 **Wichtige Typen**：
 - `ExecHost`: `"sandbox" \| "gateway" \| "node"` - Ausführungs-Host-Typ

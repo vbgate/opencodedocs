@@ -203,7 +203,7 @@ Parabéns! Você instalou com sucesso "hipocampo" para o OpenCode. Agora seu Age
 > Última atualização: 2026-01-23
 
 | Funcionalidade | Caminho do Arquivo | Linha |
-| --- | --- | --- |
+|--- | --- | ---|
 | Lógica do script de instalação | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L327-L410) | 327-410 |
 | Lógica de registro do plugin | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L195-L248) | 195-248 |
 | Lógica de detecção de conflitos | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L273-L320) | 273-320 |

@@ -178,7 +178,7 @@ order: 5
 ## Частые ошибки
 
 | Ситуация | Что вы можете сделать (❌) | Рекомендуемый подход (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Безопасность файла резервной копии | Отправляете экспортированный JSON как обычный файл конфигурации | Относитесь к JSON как к паролю, минимизируйте распространение, избегайте публичного доступа |
 | Ошибка импорта JSON | JSON не массив, или у refresh_token нет префикса `1//` | Используйте JSON, экспортированный этим проектом, как шаблон, сохраняйте имена полей и структуру одинаковыми |
 | Импорт из DB не находит данные | Antigravity ни разу не входил, или в DB нет `jetskiStateSync.agentManagerInitState` | Сначала подтвердите, что Antigravity/IDE вошёл, затем попробуйте импортировать; при необходимости используйте Custom DB для выбора правильного файла |
@@ -210,14 +210,14 @@ order: 5
 > Обновлено: 2026-01-23
 
 | Функция | Путь к файлу | Строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Экспорт/импорт JSON Accounts (`save_text_file` / `read_text_file`) | [`src/pages/Accounts.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Accounts.tsx#L458-L578) | 458-578 |
 | Экспорт JSON аккаунтов на Dashboard | [`src/pages/Dashboard.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Dashboard.tsx#L113-L148) | 113-148 |
 | Вкладка Import: кнопки импорта DB / Custom DB / V1 | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L491-L539) | 491-539 |
 | Добавление аккаунта: игнорировать email фронтенда, использовать refresh_token для получения реального email, автоматически обновлять квоту, горячая перезагрузка Proxy | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L19-L60) | 19-60 |
-| Импорт V1: сканирование `~/.antigravity-agent` и совместимость с несколькими форматами | [`src-tauri/src/modules/migration.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/migration.rs#L9-L190) | 9-190 |
+|--- | --- | ---|
 | Импорт DB: извлечение refresh_token из `state.vscdb` (ItemTable + base64 + protobuf) | [`src-tauri/src/modules/migration.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/migration.rs#L192-L267) | 192-267 |
-| Вывод пути DB по умолчанию (`--user-data-dir` / portable / стандартный путь) | [`src-tauri/src/modules/db.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/db.rs#L18-L63) | 18-63 |
+|--- | --- | ---|
 | После импорта из DB автоматически установить как «текущий аккаунт» и обновить квоту | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L495-L511) | 495-511 |
 | auto_sync: сравнить refresh_token, если такой же пропустить; при изменении запустить импорт из DB | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L532-L564) | 532-564 |
 | Фоновая задача фронтенда: периодический вызов `syncAccountFromDb()` по `sync_interval` | [`src/components/common/BackgroundTaskRunner.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/common/BackgroundTaskRunner.tsx#L43-L72) | 43-72 |

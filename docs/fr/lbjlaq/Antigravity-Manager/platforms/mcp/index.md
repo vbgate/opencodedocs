@@ -66,7 +66,7 @@ Les **points de terminaison MCP** sont un ensemble de routes HTTP exposées par 
 ### Classification des points de terminaison
 
 | Type de point de terminaison | Mode d'implémentation | Chemin local | Cible en amont |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | **Web Search** | Proxy inverse à distance | `/mcp/web_search_prime/mcp` | `https://api.z.ai/api/mcp/web_search_prime/mcp` |
 | **Web Reader** | Proxy inverse à distance | `/mcp/web_reader/mcp` | `https://api.z.ai/api/mcp/web_reader/mcp` |
 | **Vision MCP** | Serveur intégré (JSON-RPC 2.0) | `/mcp/zai-mcp-server/mcp` | Appel interne à l'API z.ai PaaS |
@@ -320,7 +320,7 @@ data: keepalive
 ## Référence rapide des outils Vision MCP
 
 | Nom de l'outil | Fonctionnalité | Paramètres requis | Scénario d'exemple |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `ui_to_artifact` | Convertir une capture d'écran UI en code/prompt/spécification/description | `image_source`, `output_type`, `prompt` | Générer du code frontend à partir d'une maquette |
 | `extract_text_from_screenshot` | Extraire du texte/code d'une capture d'écran (comme OCR) | `image_source`, `prompt` | Lire une capture d'écran de journal d'erreurs |
 | `diagnose_error_screenshot` | Diagnostiquer une capture d'écran d'erreur (trace de pile, journaux) | `image_source`, `prompt` | Analyser une erreur d'exécution |
@@ -469,7 +469,7 @@ Points clés :
 > Dernière mise à jour : 2026-01-23
 
 | Fonctionnalité | Chemin du fichier | Lignes |
-| --- | --- | --- |
+|--- | --- | ---|
 | Point de terminaison Web Search | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L115-L135) | 115-135 |
 | Point de terminaison Web Reader | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L137-L157) | 137-157 |
 | Point de terminaison Vision MCP (entrée principale) | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L376-L397) | 376-397 |

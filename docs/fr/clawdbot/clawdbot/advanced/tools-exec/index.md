@@ -68,7 +68,7 @@ Une protection à une seule couche est facile à contourner ou à configurer inc
 ### Comparaison des trois modes d'exécution
 
 | Mode d'exécution | Lieu d'exécution | Niveau de sécurité | Scénarios typiques | Approbation requise |
-|-----------------|------------------|-------------------|-------------------|---------------------|
+|--- | --- | --- | --- | ---|
 | **sandbox** | Dans des conteneurs (ex. Docker) | Élevé | Environnement isolé, tests | Non |
 | **gateway** | La machine où le démon Gateway s'exécute | Moyen | Développement local, intégration | Oui (allowlist + approbation) |
 | **node** | Nœud d'appareil apparié (macOS/iOS/Android) | Moyen | Opérations locales d'appareil | Oui (allowlist + approbation) |
@@ -106,7 +106,7 @@ L'outil exec prend en charge les paramètres suivants :
 **Description des paramètres** :
 
 | Paramètre | Type | Valeur par défaut | Description |
-|-----------|------|------------------|-------------|
+|--- | --- | --- | ---|
 | `command` | string | Requis | Commande Shell à exécuter |
 | `workdir` | string | Répertoire de travail actuel | Répertoire d'exécution |
 | `env` | object | Hériter de l'environnement | Remplacement des variables d'environnement |
@@ -148,7 +148,7 @@ Définir des valeurs par défaut globales via des fichiers de configuration évi
 **Description des éléments de configuration** :
 
 | Élément de configuration | Type | Valeur par défaut | Description |
-|------------------------|------|------------------|-------------|
+|--- | --- | --- | ---|
 | `host` | string | sandbox | Hôte d'exécution par défaut |
 | `security` | string | deny (sandbox) / allowlist (gateway, node) | Politique de sécurité par défaut |
 | `ask` | string | on-miss | Politique d'approbation par défaut |
@@ -247,7 +247,7 @@ clawdbot approvals
 allowlist utilise **la correspondance de motifs glob** (insensible à la casse) :
 
 | Motif | Correspondance | Description |
-|-------|---------------|-------------|
+|--- | --- | ---|
 | `~/Projects/**/bin/*` | `/Users/user/Projects/any/bin/rg` | Correspond à tous les sous-répertoires |
 | `~/.local/bin/*` | `/Users/user/.local/bin/jq` | Correspond au bin local |
 | `/opt/homebrew/bin/rg` | `/opt/homebrew/bin/rg` | Correspondance de chemin absolu |
@@ -318,7 +318,7 @@ Lorsque l'interface n'est pas disponible, vous pouvez approuver les demandes exe
 **Description des éléments de configuration** :
 
 | Élément de configuration | Description |
-|------------------------|-------------|
+|--- | ---|
 | `enabled` | Si activer le transfert des approbations exec |
 | `mode` | `"session"` \| `"targets"` \| `"both"` - mode de cibles d'approbation |
 | `agentFilter` | Traiter uniquement les demandes d'approbation d'agents spécifiques |
@@ -363,7 +363,7 @@ Security: allowlist
 ### Erreurs courantes
 
 | Erreur | Cause | Solution |
-|--------|-------|----------|
+|--- | --- | ---|
 | `Command not allowed by exec policy` | `security=deny` ou allowlist ne correspond pas | Vérifiez `tools.exec.security` et la configuration allowlist |
 | `Approval timeout` | Interface non disponible, `askFallback=deny` | Définissez `askFallback=allowlist` ou activez l'interface |
 | `Pattern does not resolve to binary` | Utilisation du nom de base en mode allowlist | Utilisez le chemin complet (ex. `/opt/homebrew/bin/rg`) |
@@ -390,7 +390,7 @@ En mode `security=allowlist`, les fonctionnalités Shell suivantes **ne sont pas
 Les modes d'exécution gèrent PATH de différentes manières :
 
 | Mode d'exécution | Gestion de PATH | Description |
-|-----------------|----------------|-------------|
+|--- | --- | ---|
 | `sandbox` | Hérite du shell login, peut être réinitialisé par `/etc/profile` | `pathPrepend` s'applique après le profil |
 | `gateway` | Fusionne le PATH du shell de login dans l'environnement exec | Le démon garde un PATH minimal, mais exec hérite du PATH utilisateur |
 | `node` | Utilise uniquement les remplacements de variables d'environnement passés | Les nœuds macOS rejettent les remplacements de `PATH`, les nœuds headless prennent en charge prepend |
@@ -427,7 +427,7 @@ L'outil exec permet aux assistants IA d'exécuter des commandes Shell de manièr
 > Dernière mise à jour : 2026-01-27
 
 | Fonctionnalité | Chemin de fichier | Numéro de ligne |
-|----------------|------------------|----------------|
+|--- | --- | ---|
 | Définition de l'outil exec | [`src/agents/bash-tools.exec.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/bash-tools.exec.ts) | 1-500+ |
 | Logique d'approbation exec | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 1-1268 |
 | Analyse des commandes Shell | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 500-1100 |

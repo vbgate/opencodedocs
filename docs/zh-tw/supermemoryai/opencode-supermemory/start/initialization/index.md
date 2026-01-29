@@ -108,7 +108,7 @@ supermemory(mode: "list", scope: "project")
 Agent 列出了一系列結構化的記憶，例如：
 
 | 類型 | 內容範例 |
-| :--- | :--- |
+|--- | ---|
 | `project-config` | "Uses Bun runtime. Build command: bun run build" |
 | `architecture` | "API routes are located in src/routes/, using Hono framework" |
 | `preference` | "Strict TypeScript usage: no 'any' type allowed" |
@@ -162,7 +162,7 @@ Agent 回覆確認，並呼叫 `supermemory(mode: "add")` 儲存這條新規則�
 > 更新時間：2026-01-23
 
 | 功能 | 檔案路徑 | 行號 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | 初始化 Prompt 定義 | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L13-L163) | 13-163 |
 | 記憶工具實作 | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
 

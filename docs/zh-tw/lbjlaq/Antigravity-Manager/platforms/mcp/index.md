@@ -66,7 +66,7 @@ Antigravity Tools 提供了三種 MCP 端點：
 ### 端點分類
 
 | 端點類型 | 實作方式 | 本地路徑 | 上游目標 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | **Web Search** | 遠端反向代理 | `/mcp/web_search_prime/mcp` | `https://api.z.ai/api/mcp/web_search_prime/mcp` |
 | **Web Reader** | 遠端反向代理 | `/mcp/web_reader/mcp` | `https://api.z.ai/api/mcp/web_reader/mcp` |
 | **Vision MCP** | 內建伺服器（JSON-RPC 2.0） | `/mcp/zai-mcp-server/mcp` | 內部調用 z.ai PaaS API |
@@ -319,7 +319,7 @@ data: keepalive
 ## Vision MCP 工具速查
 
 | 工具名 | 功能 | 必需參數 | 範例場景 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `ui_to_artifact` | 把 UI 截圖轉為代碼/提示詞/規格/描述 | `image_source`、`output_type`、`prompt` | 從設計稿生成前端代碼 |
 | `extract_text_from_screenshot` | 從截圖提取文字/代碼（類似 OCR） | `image_source`、`prompt` | 讀取錯誤日誌截圖 |
 | `diagnose_error_screenshot` | 診斷錯誤截圖（堆疊追蹤、日誌） | `image_source`、`prompt` | 分析執行時錯誤 |
@@ -468,7 +468,7 @@ Antigravity Tools 的 MCP 端點把 z.ai 的能力暴露為可調用工具，分
 > 更新時間：2026-01-23
 
 | 功能 | 檔案路徑 | 行號 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Web Search 端點 | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L115-L135) | 115-135 |
 | Web Reader 端點 | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L137-L157) | 137-157 |
 | Vision MCP 端點（主入口） | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L376-L397) | 376-397 |

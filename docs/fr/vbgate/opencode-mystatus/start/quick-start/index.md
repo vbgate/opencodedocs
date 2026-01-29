@@ -115,7 +115,7 @@ Ajoutez le contenu suivant au fichier de configuration (conservez les configurat
 **Pourquoi cette configuration** :
 
 | Élément de configuration | Valeur | Rôle |
-| ------------------- | ------ | ---- |
+|--- | --- | ---|
 | Tableau `plugin` | `["opencode-mystatus"]` | Indique à OpenCode de charger ce plugin |
 | `description` | "Query quota usage for all AI accounts" | Description affichée dans la liste des commandes slash |
 | `template` | "Use the mystatus tool..." | Indique à OpenCode comment appeler l'outil mystatus |
@@ -234,7 +234,7 @@ Supported account types:
 #### 5.2 Comprendre la signification de la sortie
 
 | Élément (version chinoise) | Élément (version anglaise) | Signification |
-| ------------------------- | ------------------------- | ------------- |
+|--- | --- | ---|
 | `## OpenAI 账号额度` | `## OpenAI Account Quota` | Titre de la plateforme |
 | `user@example.com (team)` | `user@example.com (team)` | Informations du compte (email ou équipe) |
 | `3小时限额` | `3-hour limit` | Type de limite (limite de 3 heures) |
@@ -248,7 +248,7 @@ Supported account types:
 Confirmez que vous avez terminé les étapes suivantes :
 
 | Étape | Méthode de vérification | Résultat attendu |
-| ----- | ---------------------- | ---------------- |
+|--- | --- | ---|
 | Installer le plugin | Vérifier `~/.config/opencode/opencode.json` | Le tableau `plugin` contient `"opencode-mystatus"` |
 | Configurer la commande slash | Vérifier le même fichier | L'objet `command` contient la configuration `mystatus` |
 | Redémarrer OpenCode | Vérifier le processus OpenCode | Redémarré |
@@ -364,7 +364,7 @@ Une fois l'installation terminée, vous pouvez utiliser la commande `/mystatus` 
 > Date de mise à jour : 2026-01-23
 
 | Fonction | Chemin du fichier | Ligne |
-| --------- | ---------------- | ----- |
+|--- | --- | ---|
 | Entrée du plugin | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 26-94 |
 | Définition de l'outil mystatus | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 29-33 |
 | Lecture du fichier d'authentification | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 35-46 |

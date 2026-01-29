@@ -104,7 +104,7 @@ When you can't get `refresh_token` (or you prefer "portable asset"), directly us
 Supported input formats (frontend will parse and batch add):
 
 | Input Type | Example | Parsing Logic |
-| --- | --- | --- |
+|--- | --- | ---|
 | Pure token text | `1//abc...` | Regex extraction: `/1\/\/[a-zA-Z0-9_\-]+/g` (see `AddAccountDialog.tsx:213-220`) |
 | Embedded in text | Logs/exported text containing multiple `1//...` | Regex batch extraction and deduplication (see `AddAccountDialog.tsx:213-224`) |
 | JSON array | `[{"refresh_token":"1//..."}]` | Parse array and take `item.refresh_token` (see `AddAccountDialog.tsx:198-207`) |
@@ -165,7 +165,7 @@ If you're in the middle of authorization, don't rush to switch tabs.
 ### 4) Refresh Token Correct/Incorrect Examples
 
 | Example | Will be recognized | Reason |
-| --- | --- | --- |
+|--- | --- | ---|
 | `1//0gAbC...` | ✓ | Matches `1//` prefix rule (see `AddAccountDialog.tsx:215-219`) |
 | `ya29.a0...` | ✗ | Doesn't match frontend extraction rule, will be treated as invalid input |
 
@@ -191,16 +191,16 @@ In the next lesson, we'll do something more practical: turn the account pool int
 > Last updated: 2026-01-23
 
 | Function | File Path | Line Numbers |
-| --- | --- | --- |
+|--- | --- | ---|
 | Accounts page mounts add dialog | [`src/pages/Accounts.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Accounts.tsx#L267-L731) | 267-731 |
-| OAuth URL pre-generation + callback event auto-completion | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L49-L125) | 49-125 |
+|--- | --- | ---|
 | OAuth callback event triggers `completeOAuthLogin()` | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L67-L109) | 67-109 |
 | Refresh Token batch parsing and deduplication | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L185-L268) | 185-268 |
 | Frontend calls Tauri commands (add/OAuth/cancel) | [`src/services/accountService.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/services/accountService.ts#L5-L91) | 5-91 |
 | Backend add_account: ignore email, use refresh_token to fetch real email and save | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L19-L60) | 19-60 |
 | Backend OAuth: check refresh_token missing and provide revoke authorization solution | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L38-L79) | 38-79 |
 | OAuth callback server: listen on IPv4/IPv6 simultaneously and choose redirect_uri | [`src-tauri/src/modules/oauth_server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/oauth_server.rs#L43-L113) | 43-113 |
-| OAuth callback parse `code` and emit `oauth-callback-received` | [`src-tauri/src/modules/oauth_server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/oauth_server.rs#L140-L180) | 140-180 |
+|--- | --- | ---|
 
 **Key Event Names**:
 - `oauth-url-generated`: Backend sends OAuth URL to frontend after generation (see `oauth_server.rs:250-252`)

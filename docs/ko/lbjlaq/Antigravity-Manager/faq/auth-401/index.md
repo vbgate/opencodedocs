@@ -64,7 +64,7 @@ curl -i http://127.0.0.1:8045/healthz
 `auto`는 "독립 정책"이 아니며, `allow_lan_access`에 따라 실제 실행할 모드를 계산합니다.
 
 | `proxy.auth_mode` | 추가 조건 | 실제 유효값(effective mode) |
-| --- | --- | --- |
+|--- | --- | ---|
 | `off` | - | `off` |
 | `strict` | - | `strict` |
 | `all_except_health` | - | `all_except_health` |
@@ -119,7 +119,7 @@ curl -i http://127.0.0.1:8045/v1/models \
 ## 일반적인 문제(모두 소스 코드에서 실제 발생함)
 
 | 현상 | 실제 원인 | 해결 방법 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `auth_mode=auto`이지만 로컬 호출이 여전히 401 | `allow_lan_access=true`로 인해 `auto`가 `all_except_health`로 유효함 | `allow_lan_access`를 끄거나 클라이언트에 key를 추가하세요 |
 | "명백히 x-api-key를 가지고 있는데" 여전히 401 | 동시에 불일치하는 `Authorization`을 가지고 있어 미들웨어가 우선 사용함 | 불필요한 Header를 삭제하고 확인한 올바른 하나만 유지하세요 |
 | `Authorization: Bearer<key>`가 여전히 401 | `Bearer` 뒤에 공백이 없어 `Bearer ` 접두사 제거 불가 | `Authorization: Bearer <key>`로 변경 |
@@ -150,7 +150,7 @@ curl -i http://127.0.0.1:8045/v1/models \
 > 업데이트 시간: 2026-01-23
 
 | 기능        | 파일 경로                                                                                             | 행 번호    |
-| ----------- | ---------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | ProxyAuthMode 열거형 | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L5-L18) | 5-18 |
 | ProxyConfig: allow_lan_access/auth_mode/api_key 및 기본값 | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L258) | 174-258 |
 | auto 모드 구문 분석(effective_auth_mode) | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L1-L30) | 1-30 |

@@ -46,7 +46,7 @@ Antigravity **不是** Vertex AI 的直接模型 API。它是一个内部网关�
 **核心特性**：
 
 | 特性 | 说明 |
-|------|------|
+|--- | ---|
 | **单 API 格式** | 所有模型使用 Gemini 风格的 `contents` 数组 |
 | **项目级访问** | 需要有效的 Google Cloud Project ID |
 | **内部路由** | 自动路由到正确的后端（Vertex AI 或 Gemini API） |
@@ -60,7 +60,7 @@ Antigravity **不是** Vertex AI 的直接模型 API。它是一个内部网关�
 ### API 环境
 
 | 环境 | URL | 状态 | 用途 |
-|------|------|------|------|
+|--- | --- | --- | ---|
 | **Daily (Sandbox)** | `https://daily-cloudcode-pa.sandbox.googleapis.com` | ✅ 活跃 | 主要端点（与 CLIProxy 一致） |
 | **Production** | `https://cloudcode-pa.googleapis.com` | ✅ 活跃 | Gemini CLI 模型、loadCodeAssist |
 | **Autopush (Sandbox)** | `https://autopush-cloudcode-pa.sandbox.googleapis.com` | ❌ 不可用 | 已废弃 |
@@ -70,7 +70,7 @@ Antigravity **不是** Vertex AI 的直接模型 API。它是一个内部网关�
 ### API 路径
 
 | Action | 路径 | 说明 |
-|--------|------|------|
+|--- | --- | ---|
 | 生成内容 | `/v1internal:generateContent` | 非流式请求 |
 | 流式生成 | `/v1internal:streamGenerateContent?alt=sse` | 流式请求（SSE） |
 | 加载代码助手 | `/v1internal:loadCodeAssist` | 项目发现（自动获取 Project ID） |
@@ -200,7 +200,7 @@ Accept: text/event-stream
 ```
 
 | 字段 | 类型 | 说明 |
-|------|------|------|
+|--- | --- | ---|
 | `maxOutputTokens` | number | 响应最大 token 数 |
 | `temperature` | number | 随机性（0.0 - 2.0） |
 | `topP` | number | nucleus sampling 阈值 |
@@ -260,7 +260,7 @@ System Instruction **必须是包含 `parts` 的对象**，**不能**是纯字�
 #### Function 命名规则
 
 | 规则 | 说明 |
-|------|------|
+|--- | ---|
 | 首字符 | 必须是字母（a-z, A-Z）或下划线（_） |
 | 允许字符 | `a-zA-Z0-9`、下划线（_）、点（.）、冒号（:）、连字符（-） |
 | 最大长度 | 64 字符 |
@@ -280,7 +280,7 @@ System Instruction **必须是包含 `parts` 的对象**，**不能**是纯字�
 ### 支持的功能
 
 | 功能 | 状态 | 说明 |
-|------|------|------|
+|--- | --- | ---|
 | `type` | ✅ 支持 | `object`、`string`、`number`、`integer`、`boolean`、`array` |
 | `properties` | ✅ 支持 | 对象属性 |
 | `required` | ✅ 支持 | 必填字段数组 |
@@ -360,7 +360,7 @@ data: {"response": {"candidates": [{"content": {"role": "model", "parts": [{"tex
 ### 响应字段说明
 
 | 字段 | 说明 |
-|------|------|
+|--- | ---|
 | `response.candidates` | 响应候选数组 |
 | `response.candidates[].content.role` | 始终为 `"model"` |
 | `response.candidates[].content.parts` | 内容部分数组 |
@@ -376,7 +376,7 @@ data: {"response": {"candidates": [{"content": {"role": "model", "parts": [{"tex
 ### Response ID 格式
 
 | 模型类型 | 格式 | 示例 |
-|----------|------|------|
+|--- | --- | ---|
 | Claude | `msg_vrtx_...` | `msg_vrtx_01UDKZG8PWPj9mjajje8d7u7` |
 | Gemini | Base64 风格 | `ypM9abPqFKWl0-kPvamgqQw` |
 | GPT-OSS | Base64 风格 | `y5M9aZaSKq6z2roPoJ7pEA` |
@@ -508,7 +508,7 @@ Claude thinking 模型可能包含 `thought: true` 部分：
 ### 常见错误码
 
 | Code | Status | 说明 |
-|------|--------|------|
+|--- | --- | ---|
 | 400 | `INVALID_ARGUMENT` | 无效的请求格式 |
 | 401 | `UNAUTHENTICATED` | 无效或过期的令牌 |
 | 403 | `PERMISSION_DENIED` | 无资源访问权限 |
@@ -542,7 +542,7 @@ Claude thinking 模型可能包含 `thought: true` 部分：
 以下 Anthropic/Vertex AI 功能**不支持**：
 
 | 功能 | 错误 |
-|------|------|
+|--- | ---|
 | `anthropic_version` | Unknown field |
 | `messages` 数组 | Unknown field（必须用 `contents`） |
 | `max_tokens` | Unknown field（必须用 `maxOutputTokens`） |
@@ -591,7 +591,7 @@ Claude thinking 模型可能包含 `thought: true` 部分：
 ## 响应 Headers
 
 | Header | 说明 |
-|--------|------|
+|--- | ---|
 | `x-cloudaicompanion-trace-id` | 调试用跟踪 ID |
 | `server-timing` | 请求持续时间 |
 
@@ -600,7 +600,7 @@ Claude thinking 模型可能包含 `thought: true` 部分：
 ## Antigravity vs Vertex AI Anthropic 对比
 
 | 特性 | Antigravity | Vertex AI Anthropic |
-|------|-------------|---------------------|
+|--- | --- | ---|
 | 端点 | `cloudcode-pa.googleapis.com` | `aiplatform.googleapis.com` |
 | 请求格式 | Gemini 风格 `contents` | Anthropic `messages` |
 | `anthropic_version` | 不使用 | 必需 |
@@ -649,7 +649,7 @@ OPENCODE_ANTIGRAVITY_DEBUG=1 opencode
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-|------|----------|------|
+|--- | --- | ---|
 | API 端点常量 | [`src/constants.ts:32-43`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/constants.ts#L32-L43) | 32-43 |
 | Antigravity Headers | [`src/constants.ts:73-77`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/constants.ts#L73-L77) | 73-77 |
 | Gemini CLI Headers | [`src/constants.ts:79-83`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/constants.ts#L79-L83) | 79-83 |

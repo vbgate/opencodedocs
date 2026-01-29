@@ -22,7 +22,7 @@ OpenSkills 的文件结构分为三类：**技能安装目录**、**技能目录
 OpenSkills 支持 4 个技能安装位置，按优先级从高到低排列：
 
 | 优先级 | 位置 | 说明 | 何时使用 |
-| ------ | ---- | ---- | -------- |
+|--- | --- | --- | ---|
 | 1 | `./.agent/skills/` | 项目本地 Universal 模式 | 多代理环境，避免与 Claude Code 冲突 |
 | 2 | `~/.agent/skills/` | 全局 Universal 模式 | 多代理环境 + 全局安装 |
 | 3 | `./.claude/skills/` | 项目本地（默认） | 标准安装，项目特定技能 |
@@ -184,7 +184,7 @@ Usage notes:
 ### 组件说明
 
 | 组件 | 说明 |
-| ---- | ---- |
+|--- | ---|
 | `<skills_system>` | XML 标签，标记技能系统部分 |
 | `<usage>` | 技能使用说明（告诉 AI 如何调用技能） |
 | `<available_skills>` | 可用技能列表（每个技能一个 `<skill>` 标签） |
@@ -250,7 +250,7 @@ my-project/
 ### 1. 目录选择
 
 | 场景 | 推荐目录 | 命令 |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | 项目特定技能 | `.claude/skills/` | `openskills install repo` |
 | 多代理共享 | `.agent/skills/` | `openskills install repo --universal` |
 | 跨项目通用 | `~/.claude/skills/` | `openskills install repo --global` |
@@ -296,7 +296,7 @@ OpenSkills 的文件结构设计简洁清晰：
 > 更新时间：2026-01-24
 
 | 功能 | 文件路径 | 行号 |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | 目录路径工具 | [`src/utils/dirs.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/dirs.ts) | 1-25 |
 | 技能查找 | [`src/utils/skills.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skills.ts) | 30-84 |
 | 元数据管理 | [`src/utils/skill-metadata.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skill-metadata.ts) | 1-36 |

@@ -37,7 +37,7 @@ Vous avez peut-être rencontré ces problèmes :
 Sisyphus est votre orchestrateur principal, adapté à ces scénarios :
 
 | Scénario | Adapté | Alternative |
-|----------|----------|-------------|
+|--- | --- | ---|
 | Développement de fonctionnalités complexes (3+ étapes) | ✅ Fortement recommandé | Prometheus + Atlas (nécessite une planification détaillée) |
 | Correction rapide de bugs connus | ✅ Approprié | Laissez Sisyphus le gérer directement |
 | Besoin de rechercher plusieurs dépôts/docs | ✅ Fortement recommandé | Utilisez la délégation parallèle de Sisyphus |
@@ -91,7 +91,7 @@ Sisyphus utilise **Claude Opus 4.5 + budget de réflexion de 32k**.
 Quel est l'avantage ?
 
 | Budget faible (Pas de réflexion) | Budget de réflexion de 32k |
-|--------------------------|---------------------|
+|--- | ---|
 | Commence à écrire du code directement | Analyse d'abord profondément les exigences, évalue la complexité, décompose les tâches |
 | Susceptible de manquer les cas limites | Identifie de manière proactive les problèmes et risques potentiels |
 | Réalise qu'il est sur la mauvaise piste à mi-chemin | Choisit l'approche optimale dès le départ |
@@ -171,7 +171,7 @@ Lorsqu'il a besoin des résultats, il appelle `background_output(task_id="...")`
 **Pourquoi est-ce plus rapide ?**
 
 | Approche séquentielle (Traditionnelle) | Approche parallèle (Sisyphus) |
-|-------------------------------|------------------------------|
+|--- | ---|
 | Recherche de codebase (2 min) | ⏳ Recherche de codebase (2 min) |
 | En attente... | ⏳ Recherche de documentation (2 min, simultanée) |
 | Recherche de documentation (2 min) | Commencer l'implémentation (total 2 min) |
@@ -228,7 +228,7 @@ Vous désactivez tous les agents experts dans la configuration, ne laissant que 
 Gardez la configuration par défaut et laissez Sisyphus déléguer automatiquement aux experts :
 
 | Tâche | Sisyphus lui-même | Déléguer à l'expert |
-|------|-----------------|-------------------|
+|--- | --- | ---|
 | Modification simple de fichier unique | ✅ OK | Pas nécessaire |
 | Recherche de codebase | ⚠️ Lent | ✅ Explore (plus rapide) |
 | Recherche de documentation | ⚠️ Peut être inexact | ✅ Librarian (plus professionnel) |
@@ -269,7 +269,7 @@ La puissance de Sisyphus ne vient pas d'être "plus intelligent", mais de :
 > Dernière mise à jour : 2026-01-26
 
 | Fonctionnalité | Chemin du fichier | Lignes |
-|---------|-----------|-------|
+|--- | --- | ---|
 | Fabrique d'agent Sisyphus | [`src/agents/sisyphus.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/sisyphus.ts) | 419-450 |
 | Prompt principal de Sisyphus | [`src/agents/sisyphus.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/sisyphus.ts) | 17-416 |
 | Métadonnées d'agent et configuration de modèle | [`src/agents/AGENTS.md`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/AGENTS.md) | 24-36 |

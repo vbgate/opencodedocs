@@ -215,7 +215,7 @@ ls -la ~/.claude/agents/ | grep -i plan
 **Common mismatch examples**:
 
 | Command invokes | Actual Agent filename | Issue |
-|----------------|----------------------|-------|
+|--- | --- | ---|
 | `planner` | `planner.md` | ✅ Correct |
 | `planner` | `Planner.md` | ❌ Case mismatch (Unix systems are case-sensitive) |
 | `planner` | `planner.md.backup` | ❌ Incorrect file extension |
@@ -319,7 +319,7 @@ grep "^tools:" ~/.claude/agents/*.md
 **Common errors**:
 
 | Incorrect | Correct | Issue |
-|-----------|---------|-------|
+|--- | --- | ---|
 | `tools: read, grep, glob` | `tools: Read, Grep, Glob` | ❌ Case error |
 | `tools: Read, Grep, Glob,` | `tools: Read, Grep, Glob` | ❌ Trailing comma (YAML syntax error) |
 | `tools: "Read, Grep, Glob"` | `tools: Read, Grep, Glob` | ❌ Quotes not needed |
@@ -525,7 +525,7 @@ If the project has specific skill libraries (`~/.claude/skills/`), Agents will a
 **Choose the correct Agent based on task type**:
 
 | Task Type | Recommended | Command |
-|-----------|-------------|---------|
+|--- | --- | ---|
 | Implement new features | `tdd-guide` | `/tdd` |
 | Plan complex features | `planner` | `/plan` |
 | Code review | `code-reviewer` | `/code-review` |
@@ -588,7 +588,7 @@ model: opus
 **Verify tool name spelling** (case-sensitive):
 
 | ✅ Correct | ❌ Incorrect |
-|------------|-------------|
+|--- | ---|
 | `Read` | `read`, `READ` |
 | `Write` | `write`, `WRITE` |
 | `Edit` | `edit`, `EDIT` |
@@ -765,7 +765,7 @@ If none of the above methods solve the problem:
 Agent invocation failures usually fall into these categories:
 
 | Issue Type | Common Causes | Quick Troubleshooting |
-|------------|---------------|----------------------|
+|--- | --- | ---|
 | **Not invoked at all** | Agent/Command file path errors, plugin not loaded | Check file locations, verify plugin configuration |
 | **Agent not found** | Name mismatch (Command invokes vs filename) | Verify filename and invokes field |
 | **Format errors** | Front Matter missing fields, YAML syntax errors | Check required fields, validate YAML format |
@@ -796,7 +796,7 @@ Remember: Most issues can be resolved by checking file paths, validating Front M
 > Last updated: 2026-01-25
 
 | Feature             | File Path                                                                                    | Lines   |
-| ------------------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Plugin manifest config | [`.claude-plugin/plugin.json`](https://github.com/affaan-m/everything-claude-code/blob/main/.claude-plugin/plugin.json) | 1-28    |
 | Planner Agent       | [`agents/planner.md`](https://github.com/affaan-m/everything-claude-code/blob/main/agents/planner.md) | 1-120   |
 | TDD Guide Agent     | [`agents/tdd-guide.md`](https://github.com/affaan-m/everything-claude-code/blob/main/agents/tdd-guide.md) | 1-281   |

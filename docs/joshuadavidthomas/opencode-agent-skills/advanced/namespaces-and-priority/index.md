@@ -56,7 +56,7 @@ Without namespaces, the system wouldn't know which one to use. With namespaces, 
 OpenCode Agent Skills supports multiple skill sources, each with a corresponding label:
 
 | Source | Label (label) | Path | Description |
-|--------|---------------|------|-------------|
+|--- | --- | --- | ---|
 | **OpenCode project-level** | `project` | `.opencode/skills/` | Skills specific to the current project |
 | **Claude project-level** | `claude-project` | `.claude/skills/` | Claude Code compatible project skills |
 | **OpenCode user-level** | `user` | `~/.config/opencode/skills/` | General skills shared across all projects |
@@ -344,10 +344,10 @@ This mechanism allows you to enjoy the convenience of automatic discovery while 
 > Last updated: 2026-01-24
 
 | Function | File Path | Line |
-|----------|-----------|------|
+|--- | --- | ---|
 | SkillLabel type definition | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L30) | 30 |
 | Discovery priority list | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L241-L246) | 241-246 |
-| Same-name skill deduplication logic | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L258-L259) | 258-259 |
+|--- | --- | ---|
 | resolveSkill namespace handling | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L269-L283) | 269-283 |
 | Superpowers namespace instructions | [`src/superpowers.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/superpowers.ts#L18-L25) | 18-25 |
 

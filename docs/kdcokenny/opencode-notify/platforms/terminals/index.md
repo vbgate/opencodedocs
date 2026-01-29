@@ -54,7 +54,7 @@ If detection fails, notifications still work but smart filtering will be disable
 ### macOS Terminals
 
 | Terminal Name | Process Name | Features |
-|--------------|--------------|----------|
+|--- | --- | ---|
 | **Ghostty** | Ghostty | Focus detection + Click-to-focus |
 | **iTerm2** | iTerm2 | Focus detection + Click-to-focus |
 | **Kitty** | kitty | Focus detection + Click-to-focus |
@@ -78,7 +78,7 @@ All terminals send notifications through macOS Notification Center.
 ### Windows Terminals
 
 | Terminal Name | Features |
-|--------------|----------|
+|--- | ---|
 | **Windows Terminal** | Native notifications (Toast) |
 | **Git Bash** | Native notifications (Toast) |
 | **ConEmu** | Native notifications (Toast) |
@@ -100,13 +100,13 @@ All Windows terminals send notifications through Windows Toast with system defau
 ### Linux Terminals
 
 | Terminal Name | Features |
-|--------------|----------|
-| **gnome-terminal** | Native notifications (notify-send) |
+|--- | ---|
+|--- | ---|
 | **konsole** | Native notifications (notify-send) |
 | **xterm** | Native notifications (notify-send) |
 | **lxterminal** | Native notifications (notify-send) |
-| **xfce4-terminal** | Native notifications (notify-send) |
-| **mate-terminal** | Native notifications (notify-send) |
+|--- | ---|
+|--- | ---|
 | **alacritty** | Native notifications (notify-send) |
 | **kitty** | Native notifications (notify-send) |
 | **wezterm** | Native notifications (notify-send) |
@@ -317,7 +317,7 @@ notepad $env:USERPROFILE\.config\opencode\kdco-notify.json
 Terminal names must be recognized by the `detect-terminal` library. Common names:
 
 | Terminal | Config Value |
-|----------|--------------|
+|--- | ---|
 | Ghostty | `"ghostty"` |
 | iTerm2 | `"iterm2"` or `"iterm"` |
 | Kitty | `"kitty"` |
@@ -487,7 +487,7 @@ In this lesson, we learned:
 > Last updated: 2026-01-27
 
 | Function | File Path | Lines |
-| ---- | --------- | ---- |
+|--- | --- | ---|
 | Terminal Mapping Table | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L71-L84) | 71-84 |
 | Terminal Detection Function | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L145-L164) | 145-164 |
 | macOS Bundle ID Retrieval | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L135-L137) | 135-137 |

@@ -97,7 +97,7 @@ description: Deploy applications and websites to Vercel. Use this skill when use
 ### Guia de Escolha de Palavras-Chave
 
 | Cenário de Escrita           | Palavras-Chave Recomendadas          | Evitar Usar                  |
-| ---------------------------- | -------------------------------------- | ----------------------------- |
+|--- | --- | ---|
 | **Operação de Deploy**       | "deploy", "production", "push", "publish" | "send", "move"                 |
 | **Auditoria de Código**      | "review", "check", "audit", "optimize"   | "look at", "see"              |
 | **Auditoria de Design**      | "accessibility", "a11y", "UX check", "design audit" | "design", "style"          |
@@ -146,7 +146,7 @@ Tokens são recursos limitados. Se o arquivo `SKILL.md` for muito longo, ocupar�
 Segundo a documentação oficial, estas estratégias podem minimizar o uso de contexto:
 
 | Estratégia                          | Descrição                                           | Efeito                        |
-| ----------------------------------- | ---------------------------------------------------- | ----------------------------- |
+|--- | --- | ---|
 | **Mantenha SKILL.md conciso**      | Coloque materiais de referência detalhados em arquivos separados | Reduz carregamento inicial |
 | **Escreva descrições específicas**   | Ajuda a IA a julgar com precisão quando acivar            | Evita ativação incorreta  |
 | **Divulgação Progressiva**        | Apenas lê arquivos de suporte quando necessário          | Controla consumo real de Tokens |
@@ -230,7 +230,7 @@ For complete API reference, see:
 ### Exemplo Prático: Vercel Deploy vs React Best Practices
 
 | Habilidade           | Linhas SKILL.md | Conteúdo Carregado       | Estratégia de Otimização            |
-| -------------------- | ---------------- | ----------------------- | ------------------------------------ |
+|--- | --- | --- | ---|
 | Vercel Deploy        | ~60 linhas       | Uso breve + formato de saída | Scripts tratam lógica complexa        |
 | React Best Practices | ~300 linhas      | Índice de regras + classificação  | Regras detalhadas em AGENTS.md      |
 | Web Design Guidelines | ~50 linhas       | Fluxo de auditoria         | Busca regras dinamicamente do GitHub |
@@ -335,7 +335,7 @@ IA: (carrega vercel-deploy uma vez, executa)
 **Comparação**: Para completar a mesma tarefa, qual consome menos?
 
 | Maneira           | Consumo de Tokens | Cenário Recomendado        |
-| ----------------- | ------------------- | --------------------------- |
+|--- | --- | ---|
 | **Código inline** (escrever lógica em SKILL.md) | Alto (carregado a cada ativação) | Tarefas simples (<10 linhas) |
 | **Script Bash**     | Baixo (apenas carrega caminho do script, não carrega conteúdo) | Tarefas complexas (>10 linhas) |
 
@@ -525,11 +525,11 @@ description: "Review React code for accessibility and UX"
 > Atualizado em: 2026-01-25
 
 | Funcionalidade             | Caminho do Arquivo                                                                              | Número de Linha   |
-| ------------------------ | --------------------------------------------------------------------------------------------- | ------------------ |
+|--- | --- | ---|
 | Melhores práticas de gerenciamento de contexto | [`AGENTS.md:70-78`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L70-L78) | 70-78             |
 | Exemplos de acivação de habilidades | [`README.md:88-102`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L88-L102) | 88-102            |
-| Palavras-chave de habilidade React | [`SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/SKILL.md) | 1-30              |
-| Palavras-chave Vercel Deploy | [`SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/SKILL.md) | 1-30              |
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Princípios Chave**:
 - Keep SKILL.md under 500 lines: Mantenha arquivo de habilidade curto

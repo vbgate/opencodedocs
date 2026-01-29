@@ -92,7 +92,7 @@ Discord user (see reply)
 ### Difference Between DM and Server Channels
 
 | Type | Session Isolation | Default Behavior | Use Case |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | **DM** | All DMs share `agent:main:main` session | Requires pairing protection | Personal conversation, continuous context |
 | **Server Channel** | Each channel has independent session `agent:<agentId>:discord:channel:<channelId>` | Requires @mention to reply | Server smart assistant, multi-channel parallel |
 
@@ -150,7 +150,7 @@ Discord does not let Bot read message content by default, you need to enable it 
 In **Bot → Privileged Gateway Intents**, enable:
 
 | Intent | Required | Description |
-| --- | --- | --- |
+|--- | --- | ---|
 | **Message Content Intent** | ✅ **Required** | Read message text content (without it, Bot cannot see messages) |
 | **Server Members Intent** | ⚠️ **Recommended** | For member lookup and username resolution |
 
@@ -175,7 +175,7 @@ Bot needs permissions to read and send messages in servers.
 3. In **Bot Permissions**, at minimum select:
 
 | Permission | Description |
-| --- | --- |
+|--- | ---|
 | **View Channels** | View channels |
 | **Send Messages** | Send messages |
 | **Read Message History** | Read message history |
@@ -211,7 +211,7 @@ Clawdbot configuration prefers to use IDs (numbers) because IDs never change.
 #### 3.2 Copy IDs
 
 | Type | Action |
-| --- | --- |
+|--- | ---|
 | **Server ID** | Right-click server name → **Copy Server ID** |
 | **Channel ID** | Right-click channel (e.g., `#general`) → **Copy Channel ID** |
 | **User ID** | Right-click user avatar → **Copy User ID** |
@@ -309,7 +309,7 @@ Before continuing, confirm the following:
 Default policy is `pairing` (pairing mode), suitable for personal use. You can adjust as needed:
 
 | Policy | Description | Configuration Example |
-| --- | --- | --- |
+|--- | --- | ---|
 | **pairing** (default) | Strangers receive pairing code, need manual approval | `"dm": { "policy": "pairing" }` |
 | **allowlist** | Only allow users in the list | `"dm": { "policy": "allowlist", "allowFrom": ["123456", "alice"] }` |
 | **open** | Allow everyone (requires `allowFrom` to include `"*"`) | `"dm": { "policy": "open", "allowFrom": ["*"] }` |
@@ -401,7 +401,7 @@ clawdbot pairing approve discord <pairing_code>
 AI Agent can call `discord` tools to perform Discord-specific operations. Control permissions via `channels.discord.actions`:
 
 | Operation Category | Default Status | Description |
-| --- | --- | --- |
+|--- | --- | ---|
 | **reactions** | ✅ Enabled | Add/read emoji reactions |
 | **messages** | ✅ Enabled | Read/send/edit/delete messages |
 | **threads** | ✅ Enabled | Create/reply to threads |
@@ -436,7 +436,7 @@ When enabling `moderation` and `roles` operations, ensure AI has strict prompts 
 ### Other Configuration Options
 
 | Configuration | Description | Default Value |
-| --- | --- | --- |
+|--- | --- | ---|
 | `historyLimit` | Number of historical messages included in server channel context | 20 |
 | `dmHistoryLimit` | Number of DM session history messages | Unlimited |
 | `textChunkLimit` | Maximum characters per message | 2000 |
@@ -564,7 +564,7 @@ In this lesson, you learned:
 > Updated: 2026-01-27
 
 | Feature | File Path | Line |
-| --- | --- | --- |
+|--- | --- | ---|
 | Discord Bot Configuration Schema | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts#L320-L427) | 320-427 |
 | Discord Onboarding Wizard | [`src/channels/plugins/onboarding/discord.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/discord.ts) | 1-485 |
 | Discord Tool Operations | [`src/agents/tools/discord-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/discord-actions.ts) | 1-72 |

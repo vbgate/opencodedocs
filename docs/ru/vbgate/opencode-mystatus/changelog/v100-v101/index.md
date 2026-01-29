@@ -52,7 +52,7 @@ npm update @vbgate/opencode-mystatus
 Поддерживает запрос квоты использования следующих платформ одним кликом:
 
 | Платформа | Поддерживаемые типы подписок | Тип квоты |
-| ---- | -------------- | -------- |
+|--- | --- | ---|
 | OpenAI | Plus/Team/Pro | Лимит за 3 часа、Лимит за 24 часа |
 | 智谱 AI | Coding Plan | Лимит Token за 5 часов、Ежемесячная квота MCP |
 | Google Cloud | Antigravity | G3 Pro、G3 Image、G3 Flash、Claude |

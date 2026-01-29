@@ -36,7 +36,7 @@ AI 에이전트는 로컬 파일과 네트워크 요청만 가능하며, 전문 
 AI 에이전트 기능을 확장해야 할 때 사용합니다:
 
 | 시나리오 | 권장 MCP |
-|----------|----------------|
+|--- | ---|
 | 최신 기술 정보, 뉴스, 산업 동향 필요 | **websearch** (Exa) |
 | 라이브러리나 프레임워크의 공식 API 문서 조회 | **context7** |
 | GitHub 저장소에서 구현 예제 찾기 | **grep_app** (Grep.app) |
@@ -182,7 +182,7 @@ setx EXA_API_KEY "your-api-key-here"
 내장 MCP의 비활성화 설정 우선순위:
 
 | 설정 위치 | 우선순위 |
-|------------------------|----------|
+|--- | ---|
 | 사용자 설정 `~/.config/opencode/oh-my-opencode.json` | 높음 (프로젝트 설정 우선) |
 | 프로젝트 설정 `.opencode/oh-my-opencode.json` | 중간 |
 | 코드 기본값 | 낮음 (모두 활성화) |
@@ -211,7 +211,7 @@ export const websearch = {
 **설정 필드 설명**:
 
 | 필드 | 타입 | 설명 |
-|-------|------|-------------|
+|--- | --- | ---|
 | `type` | `"remote"` | 고정값, 원격 MCP를 나타냄 |
 | `url` | `string` | MCP 서버의 HTTP 주소 |
 | `enabled` | `boolean` | 활성화 여부 (코드에서 `true`로 고정, `disabled_mcps`로 제어) |
@@ -288,7 +288,7 @@ oh-my-opencode doctor --verbose
 이 단원에서는 Oh-My-OpenCode의 3개 내장 MCP 서버를 소개했습니다:
 
 | MCP | 기능 | 설정 요구사항 | 주요 용도 |
-|-----|----------|---------------------------|----------|
+|--- | --- | --- | ---|
 | **websearch** | 실시간 웹 검색 | EXA_API_KEY | 최신 정보 확보 |
 | **context7** | 공식 문서 조회 | 없음 | API 문서 참조 |
 | **grep_app** | GitHub 코드 검색 | 없음 | 구현 예제 찾기 |
@@ -312,7 +312,7 @@ oh-my-opencode doctor --verbose
 > 업데이트: 2026-01-26
 
 | 기능 | 파일 경로 | 줄 번호 |
-|----------|-----------|--------------|
+|--- | --- | ---|
 | MCP 팩토리 함수 | [`src/mcp/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/mcp/index.ts) | 22-32 |
 | websearch 설정 | [`src/mcp/websearch.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/mcp/websearch.ts) | 1-11 |
 | context7 설정 | [`src/mcp/context7.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/mcp/context7.ts) | 1-7 |

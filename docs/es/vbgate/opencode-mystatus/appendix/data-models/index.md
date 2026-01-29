@@ -114,7 +114,7 @@ type CopilotTier = "free" | "pro" | "pro+" | "business" | "enterprise";
 **Límites de cuota por cada tipo de suscripción**:
 
 | tier      | Cuota mensual (Premium Requests) |
-| --------- | --------------------------- |
+|--- | ---|
 | `free`    | 50                          |
 | `pro`     | 300                         |
 | `pro+`    | 1,500                       |
@@ -263,7 +263,7 @@ interface UsageLimitItem {
 **Explicación de tipos de límite**:
 
 | type          | Descripción               | Ciclo de restablecimiento  |
-| ------------- | ------------------ | --------- |
+|--- | --- | ---|
 | `TOKENS_LIMIT` | Límite de tokens de 5 horas  | 5 horas   |
 | `TIME_LIMIT`   | Cuota mensual de MCP      | 1 mes   |
 
@@ -522,7 +522,7 @@ interface GoogleQuotaResponse {
 **4 modelos mostrados**:
 
 | Nombre de visualización     | Modelo Key                                  | Key alternativo              |
-| ------------ | ----------------------------------------- | --------------------- |
+|--- | --- | ---|
 | G3 Pro       | `gemini-3-pro-high`                        | `gemini-3-pro-low`    |
 | G3 Image     | `gemini-3-pro-image`                      | -                     |
 | G3 Flash     | `gemini-3-flash`                          | -                     |
@@ -569,7 +569,7 @@ export const REQUEST_TIMEOUT_MS = 10000;
 > Fecha de actualización: 2026-01-23
 
 | Función              | Ruta de archivo                                                                                              | Línea    |
-| ----------------- | --------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Tipos de datos de autenticación      | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L99-L104)        | 99-104  |
 | Autenticación de OpenAI       | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L28-L33)         | 28-33   |
 | Autenticación de Zhipu AI      | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L38-L41)         | 38-41   |

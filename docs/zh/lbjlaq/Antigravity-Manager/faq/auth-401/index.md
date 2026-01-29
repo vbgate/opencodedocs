@@ -64,7 +64,7 @@ curl -i http://127.0.0.1:8045/healthz
 `auto` 不是一个“独立策略”，它会根据 `allow_lan_access` 计算出真正要执行的模式。
 
 | `proxy.auth_mode` | 额外条件 | 实际生效值（effective mode） |
-| --- | --- | --- |
+|--- | --- | ---|
 | `off` | - | `off` |
 | `strict` | - | `strict` |
 | `all_except_health` | - | `all_except_health` |
@@ -119,7 +119,7 @@ curl -i http://127.0.0.1:8045/v1/models \
 ## 常见坑（都是源码里真实会发生的）
 
 | 现象 | 真实原因 | 你该怎么改 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `auth_mode=auto`，但本机调用仍然 401 | `allow_lan_access=true` 导致 `auto` 生效为 `all_except_health` | 关闭 `allow_lan_access`，或让客户端带上 key |
 | 你觉得“我明明带了 x-api-key”，但仍 401 | 同时带了一个不匹配的 `Authorization`，中间件优先用它 | 删掉多余 Header，只保留一个你确定正确的 |
 | `Authorization: Bearer<key>` 仍 401 | `Bearer` 后少了空格，无法按 `Bearer ` 前缀剥离 | 改成 `Authorization: Bearer <key>` |
@@ -150,7 +150,7 @@ curl -i http://127.0.0.1:8045/v1/models \
 > 更新时间：2026-01-23
 
 | 功能        | 文件路径                                                                                             | 行号    |
-| ----------- | ---------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | ProxyAuthMode 枚举 | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L5-L18) | 5-18 |
 | ProxyConfig: allow_lan_access/auth_mode/api_key 与默认值 | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L258) | 174-258 |
 | auto 模式解析（effective_auth_mode） | [`src-tauri/src/proxy/security.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/security.rs#L1-L30) | 1-30 |

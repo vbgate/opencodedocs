@@ -130,7 +130,7 @@ graph LR
 Mejor momento para usar Agent Skills:
 
 | Escenario | Habilidad usada | Ejemplo de prompt de activación |
-| --------- | --------------- | ------------------------------ |
+|--- | --- | ---|
 | Escribir componentes de React | react-best-practices | "Revisar este componente de React para problemas de rendimiento" |
 | Optimizar páginas de Next.js | react-best-practices | "Ayúdame a optimizar esta página de Next.js" |
 | Verificar calidad de interfaz de usuario | web-design-guidelines | "Verificar accesibilidad de mi sitio" |
@@ -189,7 +189,7 @@ Las habilidades adoptan un mecanismo de carga bajo demanda para reducir el uso d
 > Fecha de actualización: 2026-01-25
 
 | Función        | Ruta de archivo                                                              | Número de línea    |
-| ----------- | ----------------------------------------------------------------------------- | ----------------- |
+|--- | --- | ---|
 | Lista de paquetes de habilidades   | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L7-L80) | 7-80    |
 | Explicación de la estructura de habilidades | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L103-L110) | 103-110 |
 | Especificación AGENTS.md | [`AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md) | Texto completo    |

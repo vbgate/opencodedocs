@@ -57,7 +57,7 @@ Slack 是團隊協作的核心工具，但你可能遇到以下問題：
 Clawdbot 的 Slack 頻道基於 [Bolt](https://slack.dev/bolt-js) 框架實作，支援兩種連線模式：
 
 | 模式 | 適用場景 | 優勢 | 劣勢 |
-| ------ | -------- | ------ | ------ |
+|--- | --- | --- | ---|
 | **Socket Mode** | 本地 Gateway、個人使用 | 設定簡單（只需 Token） | 需要常連 WebSocket |
 | **HTTP Mode** | 伺服器部署、遠端存取 | 可透過防火牆、支援負載平衡 | 需要公網 IP、設定複雜 |
 
@@ -423,7 +423,7 @@ Bot 正常回覆你的訊息。
 以下權限在目前版本中不是必需的，但未來可能新增支援：
 
 | 權限 | 用途 |
-| ------ | ------ |
+|--- | ---|
 | `groups:write` | 私有頻道管理（建立、重新命名、邀請、封存） |
 | `mpim:write` | 群組 DM 會話管理 |
 | `chat:write.public` | 向 Bot 未加入的頻道發布訊息 |
@@ -529,7 +529,7 @@ Bot 正常回覆你的訊息。
 ```
 
 | 模式 | 行為 |
-| ----- | ------ |
+|--- | ---|
 | `off` | 預設，在主頻道回覆 |
 | `first` | 首條回覆進入執行緒，後續回覆在主頻道 |
 | `all` | 所有回覆都在執行緒 |
@@ -596,7 +596,7 @@ Bot 正常回覆你的訊息。
 > 更新時間：2026-01-27
 
 | 功能            | 檔案路徑                                                                                               | 行號       |
-| --------------- | ------------------------------------------------------------------------------------------------ | ---------- |
+|--- | --- | ---|
 | Slack 設定類型 | [`src/config/types.slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.slack.ts) | 1-150      |
 | Slack onboarding 邏輯 | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/slack.ts) | 1-539      |
 | Slack Actions 工具 | [`src/agents/tools/slack-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/slack-actions.ts) | 1-301      |

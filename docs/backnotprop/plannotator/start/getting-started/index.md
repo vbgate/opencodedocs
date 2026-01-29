@@ -314,7 +314,7 @@ Plannotator is a locally running review tool that improves plan review and code 
 > Updated: 2026-01-24
 
 | Feature              | File Path                                                                                              | Line Number |
-| -------------------- | ------------------------------------------------------------------------------------------------------ | ----------- |
+|--- | --- | ---|
 | CLI entry (plan review) | [`apps/hook/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/hook/server/index.ts#L1-L50)         | 1-50        |
 | CLI entry (code review) | [`apps/hook/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/hook/server/index.ts#L46-L84)         | 46-84       |
 | Plan review server     | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts#L1-L200)            | 1-200       |

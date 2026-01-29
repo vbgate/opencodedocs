@@ -41,7 +41,7 @@ Comprende el mecanismo automático de detección de idioma:
 ## Escenarios de uso
 
 | Escenario | Tutorial recomendado |
-|------|---------|
+|--- | ---|
 | Usar múltiples cuentas de Google | [Configuración de Google Cloud](./google-setup/) |
 | Fallo en la consulta de cuota de Copilot | [Configuración de autenticación de Copilot](./copilot-auth/) |
 | Quieres cambiar el idioma de salida | [Soporte multilingüe](./i18n-setup/) |

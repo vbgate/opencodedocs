@@ -27,7 +27,7 @@ opencode-supermemory divide la memoria en dos **alcances (Scope)** aislados, sim
 ### 1. Dos alcances
 
 | Alcance | Identificador (Scope ID) | Ciclo de vida | Caso de uso típico |
-| :--- | :--- | :--- | :--- |
+|--- | --- | --- | ---|
 | **User Scope**<br>(Alcance de usuario) | `user` | **Te sigue permanentemente**<br>Compartido entre todos los proyectos | • Preferencias de estilo de codificación (ej: "prefiere TypeScript")<br>• Hábitos personales (ej: "siempre escribe comentarios")<br>• Conocimiento general |
 | **Project Scope**<br>(Alcance del proyecto) | `project` | **Solo para el proyecto actual**<br>Deja de funcionar al cambiar de directorio | • Diseño de arquitectura del proyecto<br>• Explicación de lógica de negocio<br>• Solución para Bug específico |
 
@@ -191,7 +191,7 @@ La indexación vectorial de Supermemory suele ser de nivel de segundo, pero pued
 > Fecha de actualización: 2026-01-23
 
 | Función | Ruta del archivo | Número de línea |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Lógica de generación de Scope | [`src/services/tags.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/tags.ts#L18-L36) | 18-36 |
 | Definición de herramientas de memoria | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
 | Definición de tipos de memoria | [`src/types/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/types/index.ts) | - |

@@ -50,7 +50,7 @@ OpenSkills 的核心思想很简单：**把 Claude Code 的技能系统变成通
 ### 它解决了什么问题
 
 | 问题 | 解决方案 |
-|------|----------|
+|--- | ---|
 | 技能格式不统一 | 使用 Claude Code 的标准 SKILL.md 格式 |
 | 技能无法跨工具共享 | 生成统一的 AGENTS.md，所有工具都能读取 |
 | 技能管理分散 | 统一的安装、更新、删除命令 |
@@ -160,7 +160,7 @@ OpenSkills 和 Claude Code 是互补关系，不是替代关系。
 ### 格式完全兼容
 
 | Aspect | Claude Code | OpenSkills |
-|--------|-------------|------------|
+|--- | --- | ---|
 | **提示格式** | `<available_skills>` XML | 相同的 XML |
 | **技能存储** | `.claude/skills/` | `.claude/skills/` (默认) |
 | **技能调用** | `Skill("name")` tool | `npx openskills read <name>` |
@@ -170,7 +170,7 @@ OpenSkills 和 Claude Code 是互补关系，不是替代关系。
 ### 使用场景对比
 
 | 场景 | 推荐工具 | 原因 |
-|------|----------|------|
+|--- | --- | ---|
 | 只用 Claude Code | Claude Code 内置 | 无需额外安装，官方支持 |
 | 多个 AI 工具混用 | OpenSkills | 统一管理，避免重复 |
 | 需要私有技能 | OpenSkills | 支持本地和私有仓库 |
@@ -183,7 +183,7 @@ OpenSkills 和 Claude Code 是互补关系，不是替代关系。
 OpenSkills 支持三种安装位置：
 
 | 安装位置 | 命令 | 适用场景 |
-|----------|------|----------|
+|--- | --- | ---|
 | **项目本地** | 默认 | 单个项目使用，技能随项目版本管理 |
 | **全局安装** | `--global` | 所有项目共享常用技能 |
 | **Universal 模式** | `--universal` | 多代理环境，避免与 Claude Code 冲突 |
@@ -256,7 +256,7 @@ OpenSkills 的核心思想是：
 > 更新时间：2026-01-24
 
 | 功能 | 文件路径 | 行号 |
-|------|----------|------|
+|--- | --- | ---|
 | 核心类型定义 | [`src/types.ts`](https://github.com/numman-ali/openskills/blob/main/src/types.ts#L1-L24) | 1-24 |
 | 技能接口（Skill） | [`src/types.ts`](https://github.com/numman-ali/openskills/blob/main/src/types.ts#L1-L6) | 1-6 |
 | 技能位置接口（SkillLocation） | [`src/types.ts`](https://github.com/numman-ali/openskills/blob/main/src/types.ts#L8-L12) | 8-12 |

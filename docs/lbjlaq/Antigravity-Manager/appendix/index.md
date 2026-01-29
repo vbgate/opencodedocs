@@ -13,7 +13,7 @@ This chapter compiles technical reference materials for Antigravity Tools, inclu
 ## In This Chapter
 
 | Document | Description | Use Cases |
-|----------|-------------|-----------|
+|--- | --- | ---|
 | **[Endpoint Quick Reference](./endpoints/)** | Overview of external HTTP routes: OpenAI/Anthropic/Gemini/MCP endpoints, auth modes, and Header formats | Integrating new clients, troubleshooting 404/401 |
 | **[Data & Models](./storage-models/)** | Account file structure, SQLite stats database table structure, key field definitions | Backup and migration, direct database queries, troubleshooting |
 | **[z.ai Integration Boundaries](./zai-boundaries/)** | Checklist of features implemented vs. explicitly not implemented in z.ai | Evaluate z.ai capabilities, avoid misuse |

@@ -108,7 +108,7 @@ Tous les fichiers ne méritent pas d'être sauvegardés. Commençons par disting
 Les noms de fichiers ci-dessous proviennent du code source du projet et sont tous fixes :
 
 | Contenu que vous verrez | Utilité | Ce qui vous intéresse |
-| --- | --- | --- |
+|--- | --- | ---|
 | `accounts.json` | Index des comptes (contient la liste des comptes/compte actuel) | Recommandé de sauvegarder ensemble lors de la migration de comptes |
 | `accounts/` | Un fichier `*.json` par compte | C'est le corps principal des données de compte |
 | `logs/` | Répertoire des journaux de l'application | Priorité pour le dépannage |
@@ -190,7 +190,7 @@ Dans Settings -> General, trouvez "Démarrage automatique au démarrage du syst�
 
 ::: info Deux types de "démarrage automatique", ne les confondez pas
 | Nom | De quoi il s'agit | Preuve |
-| --- | --- | --- |
+|--- | --- | ---|
 | Démarrage au démarrage du système | Antigravity Tools démarre automatiquement après le démarrage de l'ordinateur (l'application de bureau elle-même) | Les paramètres de démarrage contiennent `--minimized`, et la commande `toggle_auto_launch` est fournie |
 | Démarrage automatique du proxy inverse | Après le démarrage d'Antigravity Tools, si la configuration `proxy.auto_start=true`, il tente de démarrer automatiquement le service de proxy inverse local | L'application lit la configuration au démarrage et exécute `start_proxy_service(...)` |
 :::
@@ -206,7 +206,7 @@ Dans Settings -> General, trouvez "Démarrage automatique au démarrage du syst�
 ## Mises en garde sur les pièges
 
 | Scénario | Ce que vous pourriez faire (❌) | Approche recommandée (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Répertoire de données introuvable | Chercher au hasard le répertoire d'installation de l'App dans le système | Allez directement dans Settings -> Advanced, regardez "Répertoire de données" et ouvrez en un clic |
 | Fermer la fenêtre en pensant avoir quitté | Après avoir cliqué sur fermer la fenêtre, modifier la configuration/changer de port | Vérifiez d'abord si l'icône de la barre d'état existe toujours ; pour quitter, utilisez Quit de la barre d'état |
 | Trop de journaux difficiles à dépanner | Chercher dans les anciens journaux tout en reproduisant le problème | D'abord "Vider les journaux", puis reproduire une fois, enfin regarder uniquement le fichier journal de cette fois |
@@ -235,7 +235,7 @@ Dans Settings -> General, trouvez "Démarrage automatique au démarrage du syst�
 > Dernière mise à jour : 2026-01-23
 
 | Fonctionnalité | Chemin du fichier | Lignes |
-| --- | --- | --- |
+|--- | --- | ---|
 | Emplacement du répertoire de données (`~/.antigravity_tools`) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | Index des comptes et répertoire des fichiers de comptes (`accounts.json` / `accounts/`) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L46) | 16-46 |
 | Répertoire des journaux et rotation quotidienne (`logs/` + `app.log`) | [`src-tauri/src/modules/logger.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/logger.rs#L17-L83) | 17-83 |
@@ -244,8 +244,8 @@ Dans Settings -> General, trouvez "Démarrage automatique au démarrage du syst�
 | Page des paramètres vide les journaux en un clic (bouton + logique de fenêtre contextuelle) | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L127-L135) | 127-135 |
 | Page des paramètres vide les journaux en un clic (bouton onglet Advanced) | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L732-L747) | 732-747 |
 | Menu de la barre d'état et événements de clic (changer de compte/rafraîchir/afficher/quitter) | [`src-tauri/src/modules/tray.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/tray.rs#L9-L158) | 9-158 |
-| Fermer la fenêtre -> masquer (minimiser dans la barre d'état) | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L150-L160) | 150-160 |
-| Initialisation du plugin de démarrage automatique au démarrage (incluant `--minimized`) | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L58-L66) | 58-66 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Interrupteur de démarrage automatique (`toggle_auto_launch` / `is_auto_launch_enabled`) | [`src-tauri/src/commands/autostart.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/autostart.rs#L4-L39) | 4-39 |
 | Commandes d'ouverture en un clic du répertoire de données / obtention du chemin / vidage des journaux | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L578-L621) | 578-621 |
 | Nom du fichier de base de données Token Stats (`token_stats.db`) | [`src-tauri/src/modules/token_stats.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/token_stats.rs#L58-L61) | 58-61 |

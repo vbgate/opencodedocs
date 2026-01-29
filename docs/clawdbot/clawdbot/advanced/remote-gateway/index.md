@@ -39,7 +39,7 @@ You may be facing these issues:
 **Remote Gateway** is suitable for these scenarios:
 
 | Scenario | Recommended Solution | Reason |
-|----------|----------------------|--------|
+|--- | --- | ---|
 | Laptop sleeps frequently, need AI always online | **Tailscale Serve + Linux VPS** | VPS doesn't sleep, access securely via tailnet |
 | Home desktop runs Gateway, laptop controls remotely | **SSH Tunnel** or **Tailscale Serve** | Unified Gateway session and configuration |
 | Need public internet access (temporary testing) | **Tailscale Funnel + Password** | Quick exposure, but requires password protection |
@@ -97,7 +97,7 @@ flowchart TD
 ### Three Key Concepts
 
 | Concept | Explanation | Example |
-|---------|-------------|---------|
+|--- | --- | ---|
 | **Gateway Host** | Machine running the Gateway service, owns sessions, authentication, channels, and state | Linux VPS, home desktop |
 | **Client** | Tool connecting to Gateway (macOS App, CLI, WebChat) | Your laptop, phone |
 | **Device Node** | Peripheral device connecting via Gateway WebSocket, executes device local operations | iOS device, Android device, macOS Node mode |
@@ -107,7 +107,7 @@ flowchart TD
 This is the most common point of confusion:
 
 | Operation Type | Where It Executes | Reason |
-|----------------|-------------------|--------|
+|--- | --- | ---|
 | `exec` tool | **Gateway Host** | Shell commands run on the Gateway machine |
 | `browser` tool | **Gateway Host** (or separate browser control server) | Browser launches on the Gateway machine |
 | Node operations (`camera.snap`, `system.run`) | **Device Node** | Needs access to device local resources |
@@ -540,7 +540,7 @@ clawdbot health --url wss://your-funnel-url.ts.net --password your-secure-passwo
 After completing any of the above solutions, verify the following:
 
 | Check Item | Command | Expected Result |
-|------------|---------|-----------------|
+|--- | --- | ---|
 | Gateway is running | `clawdbot gateway status` | ✅ Running |
 | WebSocket is accessible | `clawdbot health --url <url>` | ✅ Healthy |
 | Channels are connected | `clawdbot channels status` | ✅ connected |
@@ -667,7 +667,7 @@ ssh -N -L 18790:127.0.0.1:18789 clawdbot-remote
 ### Configuration Comparison
 
 | Solution | Security | Access Scope | Configuration Complexity | Recommended Scenarios |
-|----------|----------|--------------|-------------------------|----------------------|
+|--- | --- | --- | --- | ---|
 | Tailscale Serve | ⭐⭐⭐⭐⭐ | Tailnet | Medium | **Recommended**: Always-on Gateway |
 | SSH Tunnel | ⭐⭐⭐⭐ | SSH connection reachable | Low | Universal fallback, home desktop remote control |
 | Tailscale Funnel | ⭐⭐ | Public Internet | Low | Temporary testing, Demo |
@@ -702,7 +702,7 @@ ssh -N -L 18790:127.0.0.1:18789 clawdbot-remote
 > Last Updated: 2026-01-27
 
 | Feature | File Path | Line Numbers |
-|---------|-----------|--------------|
+|--- | --- | ---|
 | Gateway Remote Configuration Schema | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 200-220 |
 | Gateway Tailscale Configuration Schema | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 150-180 |
 | Tailscale Integration | [`src/infra/tailscale.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/tailscale.ts) | 1-100 |

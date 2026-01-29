@@ -130,7 +130,7 @@ graph LR
 Die besten Momente für die Verwendung von Agent Skills:
 
 | Szenario | Verwendeter Skill | Beispiel für Auslösenden-Keywords |
-| ---- | ---------- | -------------- |
+|--- | --- | ---|
 | React-Komponenten schreiben | react-best-practices | "Review this React component for performance issues" |
 | Next.js-Seiten optimieren | react-best-practices | "Help me optimize this Next.js page" |
 | UI-Qualität überprüfen | web-design-guidelines | "Check accessibility of my site" |
@@ -189,15 +189,15 @@ Skills verwenden einen On-Demand-Lademechanismus, um die Kontextnutzung zu reduz
 > Aktualisierungszeit: 2026-01-25
 
 | Funktion        | Dateipfad                                                              | Zeilen    |
-| ----------- | --------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Skillpaketliste   | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L7-L80) | 7-80    |
 | Skillstrukturbeschreibung | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L103-L110) | 103-110 |
 | AGENTS.md Spezifikation | [`AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md) | Ganze Datei    |
-| Skill-Verzeichnisstruktur | [`AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L11-L20) | 11-20   |
+|--- | --- | ---|
 | SKILL.md Format | [`AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L29-L68) | 29-68   |
-| Skill-Packing-Befehl | [`AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L93-L96) | 93-96   |
+|--- | --- | ---|
 | Benutzerinstallationsmethode | [`AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L98-L110) | 98-110  |
-| On-Demand-Lademechanismus | [`AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L72-L78) | 72-78   |
+|--- | --- | ---|
 | Build-Tool-Skript | [`packages/react-best-practices-build/package.json`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/package.json) | Ganze Datei    |
 
 **Wichtige Konstanten**:

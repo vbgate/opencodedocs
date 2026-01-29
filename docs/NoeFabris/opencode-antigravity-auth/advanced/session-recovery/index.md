@@ -37,7 +37,7 @@ When using OpenCode, you may encounter these interruption scenarios:
 Session recovery is suitable for these scenarios:
 
 | Scenario | Error Type | Recovery Method |
-| -------- | ---------- | --------------- |
+|--- | --- | ---|
 | ESC interrupts tool | `tool_result_missing` | Auto-inject synthetic tool_result |
 | Thinking block order error | `thinking_block_order` | Auto-prepend empty thinking block |
 | Non-thinking model uses thinking | `thinking_disabled_violation` | Auto-strip all thinking blocks |
@@ -335,7 +335,7 @@ ls -la ~/.local/share/opencode/storage/part/
 > Updated: 2026-01-23
 
 | Feature | File Path | Lines |
-| -------- | --------- | ----- |
+|--- | --- | ---|
 | Session Recovery Main Logic | [`src/plugin/recovery.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/recovery.ts) | Full |
 | Error Type Detection | [`src/plugin/recovery.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/recovery.ts#L85-L110) | 85-110 |
 | tool_result_missing Recovery | [`src/plugin/recovery.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/recovery.ts#L143-L183) | 143-183 |
@@ -351,7 +351,7 @@ ls -la ~/.local/share/opencode/storage/part/
 **Key Constants**:
 
 | Constant Name | Value | Description |
-| ------------- | ----- | ----------- |
+|--- | --- | ---|
 | `RECOVERY_RESUME_TEXT` | `"[session recovered - continuing previous task]"` | Recovery text sent during Auto Resume |
 | `THINKING_TYPES` | `Set(["thinking", "redacted_thinking", "reasoning"])` | Thinking block type set |
 | `META_TYPES` | `Set(["step-start", "step-finish"])` | Metadata type set |
@@ -373,7 +373,7 @@ ls -la ~/.local/share/opencode/storage/part/
 **Configuration Options** (from schema.ts):
 
 | Option | Type | Default | Description |
-| ------ | ---- | ------- | ----------- |
+|--- | --- | --- | ---|
 | `session_recovery` | boolean | `true` | Enable session recovery functionality |
 | `auto_resume` | boolean | `false` | Automatically send "continue" message |
 | `quiet_mode` | boolean | `false` | Hide toast notifications |

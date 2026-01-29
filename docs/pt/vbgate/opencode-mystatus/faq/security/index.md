@@ -47,7 +47,7 @@ Esses três princípios se sobrepõem, garantindo que seus dados sejam seguros d
 O plugin lê apenas dois arquivos de configuração locais, ambos em **modo only-read**:
 
 | Caminho do arquivo | Propósito | Localização no código |
-| ----------------- | --------- | -------------------- |
+|--- | --- | ---|
 | `~/.local/share/opencode/auth.json` | Armazenamento de autenticação oficial OpenCode | `mystatus.ts:35` |
 | `~/.config/opencode/antigravity-accounts.json` | Armazenamento de contas do plugin Antigravity | `google.ts` (lógica de leitura) |
 
@@ -130,7 +130,7 @@ Mesmo que você compartilhe um print da saída da consulta com outras pessoas, s
 O plugin apenas chama as **APIs oficiais** de cada plataforma, sem passar por nenhum servidor de terceiros:
 
 | Plataforma | Endpoint da API | Propósito |
-| ---------- | --------------- | --------- |
+|--- | --- | ---|
 | OpenAI | `https://chatgpt.com/backend-api/wham/usage` | Consulta de cota |
 | Zhipu AI | `https://bigmodel.cn/api/monitor/usage/quota/limit` | Consulta de limite de token |
 | Z.ai | `https://api.z.ai/api/monitor/usage/quota/limit` | Consulta de limite de token |
@@ -189,7 +189,7 @@ export async function fetchWithTimeout(
 ### O que o plugin não faz
 
 | Operação | Comportamento do plugin |
-| -------- | ----------------------- |
+|--- | ---|
 | Armazenar dados | ❌ Não armazena nenhum dado do usuário |
 | Carregar dados | ❌ Não carrega nenhum dado para servidores de terceiros |
 | Cache de resultados | ❌ Não armazena resultados de consulta em cache |
@@ -199,7 +199,7 @@ export async function fetchWithTimeout(
 ### O que o plugin faz
 
 | Operação | Comportamento do plugin |
-| -------- | ----------------------- |
+|--- | ---|
 | Ler arquivos | ✅ Apenas lê arquivos de autenticação locais |
 | Chamar APIs | ✅ Apenas chama endpoints de API oficiais |
 | Exibir mascarado | ✅ Oculta automaticamente informações sensíveis como API Key |
@@ -265,7 +265,7 @@ Não. O plugin não tem nenhum recurso de rastreamento ou coleta de dados, não 
 > Data de atualização: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Número da linha |
-| -------------- | ----------------- | --------------- |
+|--- | --- | ---|
 | Leitura de arquivo de autenticação | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts#L38-L40) | 38-40 |
 | Função de mascaramento de API | [`plugin/lib/utils.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/utils.ts#L130-L135) | 130-135 |
 | Configuração de tempo limite de solicitação | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts#L114) | 114 |

@@ -45,7 +45,7 @@ tests/
 **Test Coverage**:
 
 | Module | Test Count | Coverage |
-|--------|-----------|----------|
+|--- | --- | ---|
 | `utils.js` | 21 | Platform detection, directory operations, file operations, date/time, system commands |
 | `package-manager.js` | 21 | Package manager detection, command generation, priority logic |
 | Hook Scripts | 14 | Session lifecycle, compact suggestions, session evaluation, hooks.json validation |
@@ -218,7 +218,7 @@ Tests cross-platform utility functions from `scripts/lib/utils.js`.
 **Test Categories**:
 
 | Category | Test Count | Coverage |
-|----------|-----------|----------|
+|--- | --- | ---|
 | Platform Detection | 2 | `isWindows`, `isMacOS`, `isLinux` |
 | Directory Functions | 5 | `getHomeDir`, `getClaudeDir`, `getSessionsDir`, `getTempDir`, `ensureDir` |
 | Date/Time | 3 | `getDateString`, `getTimeString`, `getDateTimeString` |
@@ -249,7 +249,7 @@ Tests package manager detection and selection logic from `scripts/lib/package-ma
 **Test Categories**:
 
 | Category | Test Count | Coverage |
-|----------|-----------|----------|
+|--- | --- | ---|
 | Package Manager Constants | 2 | `PACKAGE_MANAGERS`, property completeness |
 | Lock File Detection | 5 | npm, pnpm, yarn, bun lock file recognition |
 | package.json Detection | 4 | `packageManager` field parsing |
@@ -285,7 +285,7 @@ Tests Hook script execution and configuration validation.
 **Test Categories**:
 
 | Category | Test Count | Coverage |
-|----------|-----------|----------|
+|--- | --- | ---|
 | session-start.js | 2 | Execution success, output format |
 | session-end.js | 2 | Execution success, file creation |
 | pre-compact.js | 3 | Execution success, output format, log creation |
@@ -534,13 +534,13 @@ The test suite is an important part of Everything Claude Code quality assurance.
 > Last updated: 2026-01-25
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | Test Runner | [`tests/run-all.js`](https://github.com/affaan-m/everything-claude-code/blob/main/tests/run-all.js) | 1-77 |
 | utils Tests | [`tests/lib/utils.test.js`](https://github.com/affaan-m/everything-claude-code/blob/main/tests/lib/utils.test.js) | 1-237 |
-| package-manager Tests | [`tests/lib/package-manager.test.js`](https://github.com/affaan-m/everything-claude-code/blob/main/tests/lib/package-manager.test.js) | 1-353 |
+|--- | --- | ---|
 | hooks Tests | [`tests/hooks/hooks.test.js`](https://github.com/affaan-m/everything-claude-code/blob/main/tests/hooks/hooks.test.js) | 1-317 |
 | utils Module | [`scripts/lib/utils.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/lib/utils.js) | 1-384 |
-| package-manager Module | [`scripts/lib/package-manager.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/lib/package-manager.js) | 1-391 |
+|--- | --- | ---|
 
 **Key Functions**:
 

@@ -70,7 +70,7 @@ Clawdbot 連接到真實的訊息平台（WhatsApp、Telegram、Slack 等），�
 **所有頻道預設使用 `dmPolicy="pairing"`**，這表示：
 
 | 策略 | 行為 |
-| ------ | ---- |
+|--- | ---|
 | `pairing` | 未知發送者收到配對代碼，訊息不處理（預設） |
 | `allowlist` | 只允許 `allowFrom` 清單中的發送者 |
 | `open` | 允許所有發送者（需顯式設定 `"*"`） |
@@ -296,7 +296,7 @@ Failed to notify requester: <error details>
 > 更新時間：2026-01-27
 
 | 功能 | 檔案路徑 | 行號 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 配對代碼產生（8 位，排除易混淆字元） | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L173-L181) | 173-181 |
 | 配對請求儲存與 TTL（1 小時） | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L11-L14) | 11-14 |
 | 批准配對指令 | [`src/cli/pairing-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/pairing-cli.ts#L107-L143) | 107-143 |

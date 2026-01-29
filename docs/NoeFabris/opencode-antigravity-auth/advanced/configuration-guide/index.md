@@ -49,7 +49,7 @@ Environment variables have the highest priority and are suitable for temporary t
 Depending on the operating system, user-level configuration file locations vary:
 
 | System      | Path                                              |
-| ----------- | ------------------------------------------------- |
+|--- | ---|
 | Linux/macOS | `~/.config/opencode/antigravity.json`             |
 | Windows     | `%APPDATA%\opencode\antigravity.json` |
 
@@ -178,7 +178,7 @@ These options affect how models think and respond.
 #### keep_thinking
 
 | Value  | Default | Description                                          |
-| ------ | ------- | ---------------------------------------------------- |
+|--- | --- | ---|
 | `true` | -       | Retain Claude thinking blocks, maintain coherence across rounds |
 | `false` | ✓       | Strip thinking blocks, more stable, smaller context |
 
@@ -189,14 +189,14 @@ Enabling `keep_thinking` may lead to decreased model stability and signature err
 #### session_recovery
 
 | Value  | Default | Description                                               |
-| ------ | ------- | --------------------------------------------------------- |
+|--- | --- | ---|
 | `true` | ✓       | Automatically resume sessions interrupted by tool calls    |
 | `false` | -       | Do not automatically resume when errors occur             |
 
 #### auto_resume
 
 | Value  | Default | Description                                             |
-| ------ | ------- | ------------------------------------------------------- |
+|--- | --- | ---|
 | `true` | -       | Automatically send "continue" after recovery            |
 | `false` | ✓       | Only display prompt after recovery, manual continuation  |
 
@@ -207,7 +207,7 @@ Custom text sent during recovery. Defaults to `"continue"`, you can change it to
 #### web_search
 
 | Option               | Default   | Description                                       |
-| -------------------- | --------- | ------------------------------------------------- |
+|--- | --- | ---|
 | `default_mode`       | `"off"`   | `"auto"` or `"off"`                              |
 | `grounding_threshold`| `0.3`     | Search threshold (0=always search, 1=never search)|
 
@@ -224,7 +224,7 @@ These options manage request distribution across multiple accounts.
 #### account_selection_strategy
 
 | Strategy     | Default | Use Case                           |
-| ------------ | ------- | ---------------------------------- |
+|--- | --- | ---|
 | `sticky`     | -       | Single account, preserve prompt cache      |
 | `round-robin`| -       | 4+ accounts, maximize throughput     |
 | `hybrid`     | ✓       | 2-3 accounts, intelligent rotation |
@@ -240,14 +240,14 @@ Recommended strategies for different account counts:
 #### switch_on_first_rate_limit
 
 | Value  | Default | Description                                          |
-| ------ | ------- | ---------------------------------------------------- |
+|--- | --- | ---|
 | `true` | ✓       | Switch account immediately on first 429             |
 | `false` | -       | Retry current account first, switch on second 429    |
 
 #### pid_offset_enabled
 
 | Value  | Default | Description                                               |
-| ------ | ------- | --------------------------------------------------------- |
+|--- | --- | ---|
 | `true` | -       | Different sessions (PIDs) use different starting accounts |
 | `false` | ✓       | All sessions start from the same account                  |
 
@@ -258,7 +258,7 @@ Keep `false` for single-session use to preserve Anthropic prompt cache. Enable `
 #### quota_fallback
 
 | Value  | Default | Description                                |
-| ------ | ------- | ------------------------------------------ |
+|--- | --- | ---|
 | `true` | -       | Gemini model quota pool fallback           |
 | `false` | ✓       | Fallback disabled                          |
 
@@ -275,14 +275,14 @@ These options control the plugin's own behavior.
 #### quiet_mode
 
 | Value  | Default | Description                                             |
-| ------ | ------- | ------------------------------------------------------- |
+|--- | --- | ---|
 | `true` | -       | Silence most toast notifications (except recovery notifications) |
 | `false` | ✓       | Display all notifications                               |
 
 #### debug
 
 | Value  | Default | Description                                |
-| ------ | ------- | ------------------------------------------ |
+|--- | --- | ---|
 | `true` | -       | Enable debug logs                          |
 | `false` | ✓       | Do not log debug information               |
 
@@ -301,7 +301,7 @@ Custom debug log directory. Defaults to `~/.config/opencode/antigravity-logs/`.
 #### auto_update
 
 | Value  | Default | Description                             |
-| ------ | ------- | --------------------------------------- |
+|--- | --- | ---|
 | `true` | ✓       | Automatically check and update plugin   |
 | `false` | -       | Do not update automatically             |
 
@@ -317,7 +317,7 @@ These options are for edge cases; most users don't need to modify them.
 #### Error Recovery
 
 | Option                            | Default | Description                                      |
-| --------------------------------- | ------- | ------------------------------------------------ |
+|--- | --- | ---|
 | `empty_response_max_attempts`     | `4`     | Empty response retry count                       |
 | `empty_response_retry_delay_ms`   | `2000`  | Retry interval (milliseconds)                   |
 | `tool_id_recovery`                | `true`  | Fix tool ID mismatches                           |
@@ -327,7 +327,7 @@ These options are for edge cases; most users don't need to modify them.
 #### Token Management
 
 | Option                                   | Default | Description                         |
-| ---------------------------------------- | ------- | ----------------------------------- |
+|--- | --- | ---|
 | `proactive_token_refresh`                | `true`  | Proactively refresh token before expiry |
 | `proactive_refresh_buffer_seconds`       | `1800`  | Refresh 30 minutes in advance       |
 | `proactive_refresh_check_interval_seconds`| `300`   | Refresh check interval (seconds)    |
@@ -335,7 +335,7 @@ These options are for edge cases; most users don't need to modify them.
 #### Signature Cache (Effective when `keep_thinking: true`)
 
 | Option                              | Default | Description                        |
-| ----------------------------------- | ------- | ---------------------------------- |
+|--- | --- | ---|
 | `signature_cache.enabled`           | `true`  | Enable disk cache                  |
 | `signature_cache.memory_ttl_seconds`| `3600`  | Memory cache TTL (1 hour)          |
 | `signature_cache.disk_ttl_seconds`  | `172800`| Disk cache TTL (48 hours)          |
@@ -344,7 +344,7 @@ These options are for edge cases; most users don't need to modify them.
 #### Health Scoring (Used by `hybrid` strategy)
 
 | Option                           | Default | Description                       |
-| -------------------------------- | ------- | --------------------------------- |
+|--- | --- | ---|
 | `health_score.initial`           | `70`    | Initial health score             |
 | `health_score.success_reward`    | `1`     | Success reward points             |
 | `health_score.rate_limit_penalty`| `-10`   | Rate limit penalty points        |
@@ -356,7 +356,7 @@ These options are for edge cases; most users don't need to modify them.
 #### Token Bucket (Used by `hybrid` strategy)
 
 | Option                              | Default | Description              |
-| ----------------------------------- | ------- | ------------------------ |
+|--- | --- | ---|
 | `token_bucket.max_tokens`           | `50`    | Bucket maximum capacity  |
 | `token_bucket.regeneration_rate_per_minute`| `6` | Tokens recovered per minute |
 | `token_bucket.initial_tokens`       | `50`    | Initial token count      |
@@ -491,7 +491,7 @@ Recommended configurations for different scenarios:
 > Last updated: 2026-01-23
 
 | Feature                 | File Path | Lines |
-| ----------------------- | --------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Configuration Schema Definition | [`src/plugin/config/schema.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/schema.ts) | 12-323 |
 | Default Configuration Values   | [`src/plugin/config/schema.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/schema.ts) | 325-373 |
 | Configuration Loading Logic    | [`src/plugin/config/loader.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/config/loader.ts) | 1-100 |

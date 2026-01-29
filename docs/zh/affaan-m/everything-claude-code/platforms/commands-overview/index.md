@@ -57,7 +57,7 @@ Everything Claude Code 的 15 个斜杠命令就是为了解决这些痛点设�
 15 个命令按功能分类：
 
 | 类别 | 命令 | 用途 |
-|-----|------|------|
+|--- | --- | ---|
 | **开发流程** | `/plan` | 创建实现计划 |
 | | `/tdd` | 执行测试驱动开发 |
 | | `/orchestrate` | 序列执行多个 agents |
@@ -250,7 +250,7 @@ Coverage: 100% ✅ (Target: 80%)
 **工作流类型**：
 
 | 工作流类型 | Agent 序列 |
-|-----------|-----------|
+|--- | ---|
 | `feature` | planner → tdd-guide → code-reviewer → security-reviewer |
 | `bugfix` | explorer → tdd-guide → code-reviewer |
 | `refactor` | architect → code-reviewer → tdd-guide |
@@ -320,7 +320,7 @@ RECOMMENDATION
 **检查项**：
 
 | 类别 | 检查内容 | 严重程度 |
-|-----|---------|---------|
+|--- | --- | ---|
 | **安全** | 硬编码密钥、SQL 注入、XSS、缺少输入验证 | CRITICAL |
 | **代码质量** | 函数 > 50 行、文件 > 800 行、嵌套深度 > 4 | HIGH |
 | **最佳实践** | 变异模式、console.log、缺少测试、TODO/FIXME | MEDIUM |
@@ -1356,7 +1356,7 @@ $env:CLAUDE_PACKAGE_MANAGER = "pnpm"
 ## 命令对比速查表
 
 | 命令 | 主要用途 | 触发 Agent | 输出 |
-|------|---------|------------|------|
+|--- | --- | --- | ---|
 | `/plan` | 创建实现计划 | planner | 分阶段计划 |
 | `/tdd` | TDD 开发 | tdd-guide | 测试 + 实现 + 覆盖率 |
 | `/orchestrate` | 序列执行 agents | 多个 agents | 综合报告 |
@@ -1456,7 +1456,7 @@ Everything Claude Code 的 15 个斜杠命令提供了完整的开发工作流�
 > 更新时间：2026-01-25
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | TDD 命令 | [`commands/tdd.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/tdd.md) | 1-327 |
 | Plan 命令 | [`commands/plan.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/plan.md) | 1-114 |
 | Code Review 命令 | [`commands/code-review.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/code-review.md) | 1-41 |

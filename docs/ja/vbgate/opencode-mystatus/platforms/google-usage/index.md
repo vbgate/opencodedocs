@@ -60,7 +60,7 @@ Google Cloud AntigravityはOAuthメカニズムで認証し、各アカウント
 mystatusは以下の4つのモデルのクォータを表示します：
 
 | 表示名 | モデルKey（メイン/サブ） | 説明 |
-| --------- | ----------------- | ---- |
+|--- | --- | ---|
 | G3 Pro | `gemini-3-pro-high` / `gemini-3-pro-low` | Gemini 3 Pro高性能バージョン |
 | G3 Image | `gemini-3-pro-image` | Gemini 3 Pro画像生成 |
 | G3 Flash | `gemini-3-flash` | Gemini 3 Flash高速バージョン |
@@ -154,7 +154,7 @@ Claude     2d 9h      ░░░░░░░░░░░░░░░░░░░ 
 > 更新日時：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| ------------- | ---------------------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | モデル設定 | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts#L69-L78) | 69-78 |
 | アカウントクエリロジック | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts#L304-L370) | 304-370 |
 | Tokenリフレッシュ | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts#L162-L184) | 162-184 |

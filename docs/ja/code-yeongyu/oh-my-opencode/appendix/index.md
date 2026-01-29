@@ -18,7 +18,7 @@ order: 170
 本チャプターには 3 つの重要なセクションが含まれています：
 
 | サブページ | 説明 | 難易度 |
-| ---------- | ---- | ------ |
+|--- | --- | ---|
 | [Claude Code 互換性](./claude-code-compatibility/) | Claude Code から OpenCode への完全な移行ガイド。Commands、Skills、Agents、MCPs、Hooks の互換メカニズムを含む | ⭐⭐ |
 | [設定リファレンス](./configuration-reference/) | oh-my-opencode 設定ファイルの完全な Schema 説明。すべてのフィールド、型、デフォルト値を網羅 | ⭐⭐⭐ |
 | [組み込み MCP](./builtin-mcps/) | 3 つの組み込み MCP サーバー（Exa Websearch、Context7、Grep.app）の機能と使用方法 | ⭐⭐ |

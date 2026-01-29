@@ -53,7 +53,7 @@ Everything Claude Code 提供了 9 个专业化 agents，每个 agent 都专注�
 ### 9 个 Agents 总览
 
 | Agent | 角色 | 典型场景 | 关键能力 |
-|-------|------|----------|---------|
+|--- | --- | --- | ---|
 | **planner** | 规划专家 | 复杂功能开发前的计划制定 | 需求分析、架构审查、步骤拆解 |
 | **architect** | 架构师 | 系统设计和技术决策 | 架构评估、模式推荐、权衡分析 |
 | **tdd-guide** | TDD 导师 | 编写测试和实现功能 | Red-Green-Refactor 流程、覆盖率保证 |
@@ -1142,7 +1142,7 @@ docs/CODEMAPS/
 ## Key Modules
 
 | Module | Purpose | Exports | Dependencies |
-|--------|---------|---------|--------------|
+|--- | --- | --- | ---|
 | ... | ... | ... | ... |
 
 ## Data Flow
@@ -1211,7 +1211,7 @@ website/src/
 ## Key Components
 
 | Component | Purpose | Location |
-|-----------|---------|----------|
+|--- | --- | ---|
 | HeaderWallet | Wallet connection | components/HeaderWallet.tsx |
 | MarketsClient | Markets listing | app/markets/MarketsClient.js |
 | SemanticSearchBar | Search UI | components/SemanticSearchBar.js |
@@ -1239,7 +1239,7 @@ User → Markets Page → API Route → Supabase → Redis (optional) → Respon
 ## API Routes
 
 | Route | Method | Purpose |
-|-------|--------|---------|
+|--- | --- | ---|
 | /api/markets | GET | List all markets |
 | /api/markets/search | GET | Semantic search |
 | /api/market/[slug] | GET | Single market |
@@ -1311,7 +1311,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md)
 基于你的任务类型，选择合适的 agent：
 
 | 任务类型 | 推荐调用 | 替代方案 |
-|---------|----------|----------|
+|--- | --- | ---|
 | **规划新功能** | `/plan` → planner agent | 手动调用 planner agent |
 | **系统架构设计** | 手动调用 architect agent | `/orchestrate` → 序列调用 agents |
 | **编写新功能** | `/tdd` → tdd-guide agent | planner → tdd-guide |
@@ -1416,7 +1416,7 @@ Everything Claude Code 提供了 9 个专业化 agents，每个 agent 都专注�
 > 更新时间：2026-01-25
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | Planner Agent | [agents/planner.md](https://github.com/affaan-m/everything-claude-code/blob/main/agents/planner.md) | 1-120 |
 | Architect Agent | [agents/architect.md](https://github.com/affaan-m/everything-claude-code/blob/main/agents/architect.md) | 1-212 |
 | TDD Guide Agent | [agents/tdd-guide.md](https://github.com/affaan-m/everything-claude-code/blob/main/agents/tdd-guide.md) | 1-281 |

@@ -193,7 +193,7 @@ Certain agents **should not** have full permissions:
 **Permission Description**:
 
 | Permission      | Value            | Description                                         |
-| --------------- | ---------------- | --------------------------------------------------- |
+|--- | --- | ---|
 | `edit`          | `ask/allow/deny` | File editing permission                             |
 | `bash`          | `ask/allow/deny` or object | Bash execution permission (can be refined to specific commands) |
 | `webfetch`      | `ask/allow/deny` | Web request permission                              |
@@ -304,7 +304,7 @@ Category is a new feature in v3.0, implementing **dynamic agent combinations**:
 **Category Configuration Fields**:
 
 | Field               | Description                    | Example                              |
-| ------------------- | ------------------------------ | ------------------------------------ |
+|--- | --- | ---|
 | `model`             | Model to use                   | `"anthropic/claude-sonnet-4-5"`     |
 | `temperature`       | Temperature (0-2)              | `0.2` (deterministic) / `0.8` (creative) |
 | `top_p`             | Nucleus sampling (0-1)         | `0.9`                                |
@@ -372,7 +372,7 @@ Certain features might not fit your workflow:
 **Available Hooks List** (partial):
 
 | Hook Name                | Function                                   |
-| ----------------------- | ------------------------------------------ |
+|--- | ---|
 | `todo-continuation-enforcer` | Force completion of TODO list             |
 | `comment-checker`          | Detect redundant comments                 |
 | `tool-output-truncator`     | Truncate tool output to save context      |
@@ -533,7 +533,7 @@ cat ~/.config/opencode/oh-my-opencode.json | jq .
 **Advanced Configuration = Precise Control**:
 
 | Configuration          | Purpose                     | Common Scenarios                   |
-| --------------------- | --------------------------- | ---------------------------------- |
+|--- | --- | ---|
 | `agents.model`        | Override agent models       | Cost optimization, task adaptation |
 | `agents.permission`   | Control agent permissions   | Security isolation, read-only mode |
 | `agents.prompt_append` | Append additional instructions | Follow architecture standards, optimize search strategy |
@@ -568,7 +568,7 @@ cat ~/.config/opencode/oh-my-opencode.json | jq .
 > Last Updated: 2026-01-26
 
 | Feature                | File Path                                                                 | Line Number |
-| ------------------- | -------------------------------------------------------------------------- | ----------- |
+|--- | --- | ---|
 | Configuration Schema Definition    | [`src/config/schema.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/config/schema.ts) | 1-378      |
 | AgentOverrideConfig | [`src/config/schema.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/config/schema.ts) | 98-119      |
 | CategoryConfig      | [`src/config/schema.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/config/schema.ts) | 154-172     |

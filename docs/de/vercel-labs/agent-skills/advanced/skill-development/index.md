@@ -85,8 +85,8 @@ Skripte sind der Teil, der die tatsächliche Ausführung übernimmt und den Eing
 > Aktualisierungszeit: 2026-01-25
 
 | Funktion               | Dateipfad                                                                                       | Zeilen   |
-| ------------------ | ---------------------------------------------------------------------------------------------- | ------ |
-| Skill-Entwicklungsspezifikation       | [`AGENTS.md:9-69`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L9-L69)     | 9-69   |
+|--- | --- | ---|
+|--- | --- | ---|
 | Verzeichnisstrukturdefinition       | [`AGENTS.md:11-20`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L11-L20)   | 11-20  |
 | Benennungskonvention           | [`AGENTS.md:22-27`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L22-L27)   | 22-27  |
 | SKILL.md Format      | [`AGENTS.md:29-68`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L29-L68)   | 29-68  |

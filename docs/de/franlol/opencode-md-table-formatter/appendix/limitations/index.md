@@ -30,7 +30,7 @@ Dazu haben wir bewusst einige Funktionen eingeschränkt, um die Zuverlässigkeit
 ## Übersicht der bekannten Einschränkungen
 
 | Einschränkung | Beschreibung | Geplant |
-| --- | --- | --- |
+|--- | --- | ---|
 | **HTML-Tabellen** | Nur Markdown-Pipe-Tabellen (`\| ... \|`) werden unterstützt | ❌ Nicht unterstützt |
 | **Mehrzeilige Zellen** | Zellen dürfen keine `<br>` oder andere Zeilenumbruch-Tags enthalten | ❌ Nicht unterstützt |
 | **Tabellen ohne Trennzeile** | Muss eine `|---|`-Trennzeile haben | ❌ Nicht unterstützt |
@@ -67,7 +67,7 @@ Das Plugin verarbeitet nur Markdown-Pipe-Tabellen, also das mit `|` getrennte Fo
 
 ```markdown
 | Spalte 1 | Spalte 2 |
-| --- | --- |
+|--- | ---|
 | Daten 1 | Daten 2 |
 ```
 
@@ -97,7 +97,7 @@ Wenn Sie HTML-Tabellen formatieren müssen, empfehlen wir:
 
 ```markdown
 | Spalte 1 | Spalte 2 |
-| --- | --- |
+|--- | ---|
 | Zeile 1<br>Zeile 2 | Einzeilig |
 ```
 
@@ -166,7 +166,7 @@ return hasSeparator  // Gibt false zurück, wenn keine Trennzeile vorhanden ist
 
 ```markdown
 | Spalte 1 | Spalte 2 |
-| --- | --- |
+|--- | ---|
 | Zwei Spalten zusammenführen |  ← Erwartet: Überbrückt Spalte 1 und Spalte 2
 | Daten 1 | Daten 2 |
 ```
@@ -187,7 +187,7 @@ Der Markdown-Standard unterstützt keine Syntax für zusammengeführte Zellen, u
 **Phänomen**
 
 ```markdown
-| :--- | :---: | ---: |
+|--- | --- | ---|
 | Links ausgerichtet | Zentriert | Rechts ausgerichtet |
 | Daten 1 | Daten 2 | Daten 3 |
 ```
@@ -305,8 +305,8 @@ Das Plugin hat keine Begrenzung für die maximale Spaltenbreite. Wenn der Zellen
 ## Zusammenfassung dieser Lektion
 
 | Einschränkung | Grund | Alternative |
-| --- | --- | --- |
-| HTML-Tabellen nicht unterstützt | Plugin konzentriert sich auf Markdown-Pipe-Tabellen | HTML-Formatierungstools verwenden |
+|--- | --- | ---|
+|--- | --- | ---|
 | Mehrzeilige Zellen nicht unterstützt | Zeilenweise Verarbeitungslogik | In mehrere Zeilen aufteilen oder Breiterwerden akzeptieren |
 | Tabellen ohne Trennzeile nicht unterstützt | Markdown-Spezifikation erfordert dies | `|---|`-Trennzeile hinzufügen |
 | Keine Konfigurationsoptionen | Aktuelle Version nicht implementiert | Auf zukünftige Versionupdates warten |
@@ -330,12 +330,12 @@ Das Plugin hat keine Begrenzung für die maximale Spaltenbreite. Wenn der Zellen
 > Aktualisierungszeit: 2026-01-26
 
 | Einschränkung | Dateipfad | Zeilennummer |
-| --- | --- | --- |
-| HTML-Tabellenerkennung | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61) | 58-61 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Trennzeilenerkennung | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L63-L68) | 63-68 |
 | Tabellenvalidierung (muss Trennzeile enthalten) | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88) | 70-88 |
 | Minimale Spaltenbreite fest codiert | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L115) | 115 |
-| Cache-Schwellenwert fest codiert | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L222-L224) | 222-224 |
+|--- | --- | ---|
 
 **Wichtige Funktionen**:
 - `isTableRow()`: Erkennt, ob es sich um eine Markdown-Pipe-Tabellenzeile handelt

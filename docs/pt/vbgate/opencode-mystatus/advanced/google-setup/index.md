@@ -32,7 +32,7 @@ As contas são armazenadas em `~/.config/opencode/antigravity-accounts.json`, ge
 O Google Cloud Antigravity oferece múltiplos modelos; o plugin exibirá os 4 mais comumente usados:
 
 | Nome de Exibição | Key do Modelo (principal) | Key do Modelo (alternativo) |
-| -------- | -------------- | --------------- |
+|--- | --- | ---|
 | G3 Pro | `gemini-3-pro-high` | `gemini-3-pro-low` |
 | G3 Image | `gemini-3-pro-image` | - |
 | G3 Flash | `gemini-3-flash` | - |
@@ -230,7 +230,7 @@ Claude     1d 5h      ████████░░░░░░░░░░░ 
 > Última atualização: 2026-01-23
 
 | Funcionalidade | Caminho do Arquivo | Linha |
-| --- | --- | --- |
+|--- | --- | ---|
 | Mapeamento de configuração de modelos | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 69-78 |
 | Consulta paralela de múltiplas contas | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 327-334 |
 | Filtro de contas (deve ter e-mail) | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 318 |

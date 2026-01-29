@@ -21,7 +21,7 @@ prerequisite:
 ## 主要命令
 
 | 命令 | 功能 |
-|------|------|
+|--- | ---|
 | pnpm validate | 驗證規則檔案 |
 | pnpm build | 建構 AGENTS.md 和 test-cases.json |
 | pnpm dev | 建構 + 驗證（開發流程）|

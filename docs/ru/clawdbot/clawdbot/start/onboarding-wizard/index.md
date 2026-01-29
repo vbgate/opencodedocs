@@ -300,7 +300,7 @@ Gateway работает на другой машине:
 Установив переменную окружения `CLAWDBOT_PROFILE`, можно использовать независимые конфигурации для различных рабочих сред:
 
 | Значение Profile | Путь рабочей области | Файл конфигурации |
-|----------|----------|----------|
+|--- | --- | ---|
 | `default` или не установлено | `~/clawd` | `~/.clawdbot/clawdbot.json` |
 | `work` | `~/clawd-work` | `~/.clawdbot/clawdbot.json` (work profile) |
 | `dev` | `~/clawd-dev` | `~/.clawdbot/clawdbot.json` (dev profile) |
@@ -673,7 +673,7 @@ clawdbot onboard --mode reset
 > Обновлено: 2026-01-27
 
 | Функция           | Путь файла                                                                                                  | Номера строк      |
-| -------------- | ------------------------------------------------------------------------------------------------- | --------- |
+|--- | --- | ---|
 | Главный процесс мастера     | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 87-452    |
 | Подтверждение предупреждения безопасности   | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 46-85     |
 | Настройка Gateway   | [`src/wizard/onboarding.gateway-config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.gateway-config.ts) | 28-249    |

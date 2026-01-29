@@ -49,7 +49,7 @@ DCP 在子代理会话中会**自动禁用所有修剪功能**。
 这背后有一个重要的设计理念：
 
 | 角色       | Token 使用策略             | 核心目标                     |
-| ---------- | -------------------------- | ---------------------------- |
+|--- | --- | ---|
 | **主代理** | 需要高效使用 Token        | 长对话保持上下文，降低成本    |
 | **子代理** | 可以自由使用 Token        | 生成丰富的信息，便于主代理汇总 |
 
@@ -86,7 +86,7 @@ export async function isSubAgentSession(client: any, sessionID: string): Promise
 DCP 在检测到子代理后，会跳过以下功能：
 
 | 功能               | 正常会话 | 子代理会话 | 跳过位置 |
-| ------------------ | -------- | ---------- | -------- |
+|--- | --- | --- | ---|
 | 系统提示词注入     | ✅ 执行  | ❌ 跳过    | `hooks.ts:26-28` |
 | 自动修剪策略       | ✅ 执行  | ❌ 跳过    | `hooks.ts:64-66` |
 | 工具列表注入       | ✅ 执行  | ❌ 跳过    | `hooks.ts:64-66` |
@@ -239,7 +239,7 @@ DCP 跳过所有修剪操作 ❌
 > 更新时间：2026-01-23
 
 | 功能           | 文件路径                                                                                                              | 行号    |
-| -------------- | --------------------------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 子代理检测函数 | [`lib/state/utils.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/state/utils.ts)         | 1-8     |
 | 会话状态初始化 | [`lib/state/state.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/state/state.ts)         | 80-116   |
 | 系统提示词处理器（跳过子代理） | [`lib/hooks.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/hooks.ts)         | 26-28    |

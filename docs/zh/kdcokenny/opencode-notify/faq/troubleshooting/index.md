@@ -231,7 +231,7 @@ node -e "console.log(require('detect-terminal')())"
 **支持的终端名称**（小写）：
 
 | 终端 | 名称 | 终端 | 名称 |
-|-----|------|-----|------|
+|--- | --- | --- | ---|
 | Ghostty | `ghostty` | Kitty | `kitty` |
 | iTerm2 | `iterm2` 或 `iterm` | WezTerm | `wezterm` |
 | Alacritty | `alacritty` | macOS Terminal | `terminal` 或 `apple_terminal` |
@@ -345,7 +345,7 @@ EOF
 **支持的 macOS 音效**：
 
 | 音效名称 | 说明 | 音效名称 | 说明 |
-|---------|------|---------|------|
+|--- | --- | --- | ---|
 | Basso | 低音 | Blow | 吹气声 |
 | Bottle | 瓶子声 | Frog | 青蛙声 |
 | Funk | 放克 | Glass | 玻璃声（默认任务完成） |
@@ -432,7 +432,7 @@ Windows 和 Linux 的通知音效由系统设置控制：
 ### 6.1 功能对比表
 
 | 功能 | macOS | Windows | Linux |
-|-----|-------|---------|-------|
+|--- | --- | --- | ---|
 | 原生通知 | ✅ | ✅ | ✅ |
 | 自定义音效 | ✅ | ❌ | ❌ |
 | 焦点检测 | ✅ | ❌ | ❌ |
@@ -508,7 +508,7 @@ opencode-notify 的故障排查可以归纳为以下 6 类问题：
 > 更新时间：2026-01-27
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 配置加载与错误处理 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L90-L114) | 90-114 |
 | 终端检测 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L145-L164) | 145-164 |
 | macOS osascript 执行 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L120-L133) | 120-133 |

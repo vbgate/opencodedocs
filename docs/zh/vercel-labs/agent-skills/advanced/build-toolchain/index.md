@@ -90,7 +90,7 @@ rules/*.md (57 个文件)
 **四个核心命令**：
 
 | 命令                 | 功能                              | 适用场景             |
-| -------------------- | --------------------------------- | -------------------- |
+|--- | --- | ---|
 | `pnpm validate`      | 验证所有规则文件的格式和完整性    | 提交前检查、CI 验证  |
 | `pnpm build`         | 生成 AGENTS.md 和 test-cases.json | 规则修改后、发布前   |
 | `pnpm dev`           | 执行 build + validate（开发流程） | 快速迭代、开发新规则 |
@@ -419,7 +419,7 @@ jobs:
 CI 会在以下情况自动运行：
 
 | 事件           | 条件                                                                                                      |
-| -------------- | --------------------------------------------------------------------------------------------------------- |
+|--- | ---|
 | `push`         | 提交到 `main` 分支，且修改了 `skills/react-best-practices/**` 或 `packages/react-best-practices-build/**` |
 | `pull_request` | 创建或更新 PR 到 `main` 分支，且修改了上述路径                                                            |
 
@@ -593,7 +593,7 @@ PR 审查 → 合并到 main
 > 更新时间：2026-01-25
 
 | 功能                  | 文件路径                                                                                                                                                                     | 行号    |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | package.json 脚本定义 | [`packages/react-best-practices-build/package.json`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/package.json)                 | 6-12    |
 | 构建入口函数          | [`packages/react-best-practices-build/src/build.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/build.ts)                 | 131-290 |
 | 规则解析器            | [`packages/react-best-practices-build/src/parser.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/parser.ts)               | 全文    |

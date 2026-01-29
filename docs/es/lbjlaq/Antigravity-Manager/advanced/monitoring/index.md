@@ -66,7 +66,7 @@ Los registros de Proxy Monitor se escriben en SQLite bajo el directorio de datos
 En un registro de Proxy Monitor (estructura de backend `ProxyRequestLog`), los campos más prácticos son:
 
 | Campo | Lo que usas para responder |
-| --- | --- |
+|--- | ---|
 | `status` | ¿Esta solicitud tuvo éxito o falló? (200-399 vs otros) |
 | `url` / `method` | ¿A qué endpoint realmente llegaste? (por ejemplo, `/v1/messages`, `/v1/chat/completions`) |
 | `protocol` | ¿Qué protocolo: OpenAI / Claude(Anthropic) / Gemini? |
@@ -191,7 +191,7 @@ Limpiar eliminará todos los registros en `proxy_logs.db`.
 ## Advertencias sobre trampas comunes
 
 | Escenario | Lo que podrías entender (❌) | Comportamiento real (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | "Pausado" = sin gastos de monitoreo en absoluto | Crees que al pausar, las solicitudes no se analizarán | Pausar solo afecta "si se escribe en los registros de Proxy Monitor". Pero el análisis de solicitud/respuesta (incluyendo el análisis de SSE de datos en streaming) seguirá ocurriendo, solo que los datos analizados no se guardarán. Token Stats seguirá registrándose (independientemente de si la monitorización está habilitada). |
 | Registros binarios/de cuerpos grandes están vacíos | Piensas que la monitorización está rota | Las solicitudes/respuestas binarias se mostrarán como `[Binary Request Data]` / `[Binary Response Data]`. Los cuerpos de respuesta que excedan 100MB se marcarán como `[Response too large (>100MB)]`; los cuerpos de solicitud que excedan el límite no se registrarán. |
 | Quieres usar Monitor para encontrar "quién inició la solicitud" | Piensas que puedes rastrear hasta el proceso del cliente | Monitor registra información a nivel HTTP (método/ruta/modelo/cuenta), no incluye "nombre del proceso de llamada". Necesitas combinar los registros del propio cliente o capturar paquetes de red del sistema para localizar el origen. |
@@ -248,7 +248,7 @@ Dado que Proxy Monitor esencialmente es SQLite, también puedes tratar `proxy_lo
 > Fecha de actualización: 2026-01-23
 
 | Función | Ruta del archivo | Número de línea |
-| --- | --- | --- |
+|--- | --- | ---|
 | Entrada a la página Monitor (monta ProxyMonitor) | [`src/pages/Monitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Monitor.tsx#L1-L12) | 1-12 |
 | UI de Monitor: tabla/filtros/ventana emergente de detalles | [`src/components/proxy/ProxyMonitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/proxy/ProxyMonitor.tsx#L13-L713) | 13-713 |
 | UI: leer configuración y sincronizar enable_logging | [`src/components/proxy/ProxyMonitor.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/proxy/ProxyMonitor.tsx#L174-L243) | 174-243 |

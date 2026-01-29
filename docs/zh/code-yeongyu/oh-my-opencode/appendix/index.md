@@ -18,7 +18,7 @@ order: 170
 本章节包含三个重要部分：
 
 | 子页面 | 描述 | 难度 |
-| ------ | ---- | ---- |
+|--- | --- | ---|
 | [Claude Code 兼容性](./claude-code-compatibility/) | 从 Claude Code 迁移到 OpenCode 的完整指南，包括 Commands、Skills、Agents、MCPs 和 Hooks 的兼容机制 | ⭐⭐ |
 | [配置参考](./configuration-reference/) | oh-my-opencode 配置文件的完整 Schema 说明，涵盖所有字段、类型和默认值 | ⭐⭐⭐ |
 | [内置 MCP](./builtin-mcps/) | 3 个内置 MCP 服务器（Exa Websearch、Context7、Grep.app）的功能和使用方法 | ⭐⭐ |

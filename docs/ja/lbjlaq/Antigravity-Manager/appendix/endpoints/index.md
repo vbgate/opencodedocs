@@ -26,7 +26,7 @@ order: 1
 Antigravity Tools のローカルリバースプロキシサービスは、以下の種類のエンドポイントを提供します：
 
 | プロトコル分類 | 用途 | 代表的なクライアント |
-| --- | --- | --- |
+|--- | --- | ---|
 | **OpenAI プロトコル** | 汎用 AI アプリ互換 | OpenAI SDK / 互換クライアント |
 | **Anthropic プロトコル** | Claude シリーズ呼び出し | Claude Code / Anthropic SDK |
 | **Gemini プロトコル** | Google 公式 SDK | Google Gemini SDK |
@@ -40,7 +40,7 @@ Antigravity Tools のローカルリバースプロキシサービスは、以�
 これらのエンドポイントは OpenAI API フォーマットに互換性があり、大多数の OpenAI SDK をサポートするクライアントに適しています。
 
 | メソッド | パス | ルート入り口（Rust handler） | 備考 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | GET | `/v1/models` | `handlers::openai::handle_list_models` | OpenAI 互換：モデル一覧 |
 | POST | `/v1/chat/completions` | `handlers::openai::handle_chat_completions` | OpenAI 互換：Chat Completions |
 | POST | `/v1/completions` | `handlers::openai::handle_completions` | OpenAI 互換：Legacy Completions |
@@ -60,7 +60,7 @@ Antigravity Tools のローカルリバースプロキシサービスは、以�
 これらのエンドポイントは Anthropic API のパスとリクエストフォーマットに従って整理され、Claude Code / Anthropic SDK の呼び出しに使用されます。
 
 | メソッド | パス | ルート入り口（Rust handler） | 備考 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | POST | `/v1/messages` | `handlers::claude::handle_messages` | Anthropic 互換：Messages |
 | POST | `/v1/messages/count_tokens` | `handlers::claude::handle_count_tokens` | Anthropic 互換：count_tokens |
 | GET | `/v1/models/claude` | `handlers::claude::handle_list_models` | Anthropic 互換：モデル一覧 |
@@ -72,7 +72,7 @@ Antigravity Tools のローカルリバースプロキシサービスは、以�
 これらのエンドポイントは Google Gemini API フォーマットに互換性があり、Google 公式 SDK を直接使用できます。
 
 | メソッド | パス | ルート入り口（Rust handler） | 備考 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | GET | `/v1beta/models` | `handlers::gemini::handle_list_models` | Gemini ネイティブ：モデル一覧 |
 | GET | `/v1beta/models/:model` | `handlers::gemini::handle_get_model` | Gemini ネイティブ：GetModel |
 | POST | `/v1beta/models/:model` | `handlers::gemini::handle_generate` | Gemini ネイティブ：generateContent / streamGenerateContent |
@@ -89,7 +89,7 @@ Antigravity Tools のローカルリバースプロキシサービスは、以�
 MCP（Model Context Protocol）エンドポイントは「ツール呼び出し」インターフェースを公開するために使用されます（`handlers::mcp::*` で処理）。有効かどうかと具体的な動作は設定によります；詳細は [MCP エンドポイント](../../platforms/mcp/) を参照してください。
 
 | メソッド | パス | ルート入り口（Rust handler） | 備考 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | ANY | `/mcp/web_search_prime/mcp` | `handlers::mcp::handle_web_search_prime` | MCP：Web Search Prime |
 | ANY | `/mcp/web_reader/mcp` | `handlers::mcp::handle_web_reader` | MCP：Web Reader |
 | ANY | `/mcp/zai-mcp-server/mcp` | `handlers::mcp::handle_zai_mcp_server` | MCP：z.ai MCP Server |
@@ -105,7 +105,7 @@ MCP の利用範囲と境界説明は、[z.ai 統合の能力境界（実装済�
 これらのエンドポイントはシステム内部機能と外部モニタリングに使用されます。
 
 | メソッド | パス | ルート入り口（Rust handler） | 備考 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | POST | `/internal/warmup` | `handlers::warmup::handle_warmup` | 内部ウォームアップエンドポイント |
 | POST | `/v1/api/event_logging` | `silent_ok_handler` | テレメトリログインターセプト：直接 200 を返す |
 | POST | `/v1/api/event_logging/batch` | `silent_ok_handler` | テレメトリログインターセプト：直接 200 を返す |
@@ -127,7 +127,7 @@ MCP の利用範囲と境界説明は、[z.ai 統合の能力境界（実装済�
 すべてのエンドポイントのアクセス権限は `proxy.auth_mode` で制御されます：
 
 | モード | 説明 | `/healthz` は認証が必要？ | 他のエンドポイントは認証が必要？ |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `off` | 完全に公開 | ❌ いいえ | ❌ いいえ |
 | `strict` | すべて認証必要 | ✅ はい | ✅ はい |
 | `all_except_health` | ヘルスチェックのみ公開 | ❌ いいえ | ✅ はい |
@@ -203,7 +203,7 @@ Antigravity Tools は、OpenAI、Anthropic、Gemini の 3 つの主流 API フ�
 > 更新日時：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | ルート登録（すべてのエンドポイント） | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | 認証ミドルウェア（Header 互換 + `/healthz` 除外 + OPTIONS 通過） | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L14-L78) | 14-78 |
 | auth_mode モードと auto 派生ルール | [`docs/proxy/auth.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy/auth.md#L9-L24) | 9-24 |

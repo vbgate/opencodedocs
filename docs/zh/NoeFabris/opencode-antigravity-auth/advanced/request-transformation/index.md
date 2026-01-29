@@ -38,7 +38,7 @@ order: 7
 当你需要：
 
 | 场景 | 为什么需要理解转换机制 |
-| ---- | --------------------- |
+|--- | ---|
 | 开发自定义 MCP 服务器 | 确保工具 Schema 兼容 Antigravity API |
 | 排查 400/500 错误 | 判断是 Schema 问题还是转换逻辑问题 |
 | 优化 Thinking 性能 | 理解思考块签名和缓存机制 |
@@ -82,7 +82,7 @@ graph TD
 **关键转换点**：
 
 | 转换类型 | 目的 | 源码位置 |
-| -------- | ---- | -------- |
+|--- | --- | ---|
 | Schema 清理 | 移除 Antigravity API 不支持的字段 | `src/plugin/request-helpers.ts` |
 | Thinking 配置 | 根据模型族注入正确的思考配置 | `src/plugin/transform/claude.ts`, `src/plugin/transform/gemini.ts` |
 | 思考块处理 | 剥离历史思考块并注入签名 | `src/plugin/request.ts` |
@@ -98,7 +98,7 @@ Claude 模型使用不同的协议格式（snake_case、VALIDATED 模式），�
 **关键转换规则**
 
 | 原始格式 | 转换后格式 | 说明 |
-| -------- | ---------- | ---- |
+|--- | --- | ---|
 | `toolConfig.functionCallingConfig.mode` | `"VALIDATED"` | 强制启用工具调用验证 |
 | `thinkingConfig.includeThoughts` | `include_thoughts` | snake_case 格式 |
 | `thinkingConfig.thinkingBudget` | `thinking_budget` | snake_case 格式 |
@@ -151,7 +151,7 @@ Gemini 模型使用 camelCase 格式，且对 JSON Schema 有严格要求（type
 **关键转换规则**
 
 | 原始格式 | 转换后格式 | 说明 |
-| -------- | ---------- | ---- |
+|--- | --- | ---|
 | JSON Schema `type: "object"` | `type: "OBJECT"` | 类型必须大写 |
 | `additionalProperties: false` | 移除 | Gemini API 不支持 |
 | `$ref: "#/$defs/Foo"` | 转换为 `description: "See: Foo"` | 引用转换为描述 |
@@ -221,7 +221,7 @@ Antigravity API 使用严格的 protobuf-backed 验证，不支持标准 JSON Sc
 **不受支持的字段列表**：
 
 | 字段 | 为什么不支持 | 替代方案 |
-| ---- | ----------- | -------- |
+|--- | --- | ---|
 | `$ref` | 不允许引用 | 转换为描述提示 |
 | `const` | 不允许常量 | 使用 `enum` |
 | `additionalProperties` | 不验证额外属性 | 在描述中注明 |
@@ -287,7 +287,7 @@ Antigravity API 返回 SSE（Server-Sent Events）流，需要转换为 OpenCode
 **关键转换规则**
 
 | 原始格式 | 转换后格式 | 说明 |
-| -------- | ---------- | ---- |
+|--- | --- | ---|
 | `thought: true` | `type: "reasoning"` | 思考块格式转换 |
 | `text` | 保持不变 | 文本内容 |
 | `tool_use` | 保持不变 | 工具调用 |
@@ -448,7 +448,7 @@ data: {"type": "tool_use", "id": "tool-123", "name": "my_function"}
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 主请求转换入口 | [`src/plugin/request.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request.ts#L585) | 585-1443 |
 | 响应转换入口 | [`src/plugin/request.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request.ts#L1445) | 1445-1663 |
 | Claude 模型检测 | [`src/plugin/transform/claude.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/claude.ts#L27) | 27-29 |
@@ -457,9 +457,9 @@ data: {"type": "tool_use", "id": "tool-123", "name": "my_function"}
 | Gemini 模型检测 | [`src/plugin/transform/gemini.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/gemini.ts#L129) | 129-132 |
 | Gemini 3 Thinking 配置 | [`src/plugin/transform/gemini.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/gemini.ts) | 查找 `buildGemini3ThinkingConfig` |
 | Gemini Schema 转换 | [`src/plugin/transform/gemini.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/transform/gemini.ts#L52) | 52-124 |
-| Schema 清理 - $ref 转换 | [`src/plugin/request-helpers.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request-helpers.ts#L55) | 55-80 |
-| Schema 清理 - const 转换 | [`src/plugin/request-helpers.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request-helpers.ts#L86) | 86-104 |
-| Schema 清理 - 移除不支持字段 | [`src/plugin/request-helpers.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request-helpers.ts#L150) | 150-280 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | 思考块剥离 | [`src/plugin/request-helpers.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request-helpers.ts) | 查找 `deepFilterThinkingBlocks` |
 | 思考块签名注入 | [`src/plugin/request.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request.ts#L715) | 715-720 |
 | 流式响应转换 | [`src/plugin/core/streaming.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/core/streaming.ts) | 全文 |

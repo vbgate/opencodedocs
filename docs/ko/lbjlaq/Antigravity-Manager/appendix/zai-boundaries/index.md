@@ -63,7 +63,7 @@ z.ai의 Anthropic 업스트림 포워딩은 Claude handler의 z.ai 분기에서�
 `dispatch_mode`는 `/v1/messages`가 z.ai를 통과하는지 여부를 결정합니다:
 
 | dispatch_mode | 발생하는 작업 | 증거 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `off` | z.ai를 사용하지 않음 | `src-tauri/src/proxy/config.rs#L20-L37` + `src-tauri/src/proxy/handlers/claude.rs#L282-L314` |
 | `exclusive` | 모든 Claude 요청이 z.ai를 통과함 | `src-tauri/src/proxy/handlers/claude.rs#L285-L314` |
 | `fallback` | Google 풀 사용 불가(0 계정 또는 "사용 가능한 계정 없음")일 때만 z.ai를 통과함 | `src-tauri/src/proxy/handlers/claude.rs#L288-L305` |
@@ -104,7 +104,7 @@ z.ai 업스트림 포워딩은 "모든 Header를 그대로 전달"하지 않고 
 로컬 엔드포인트와 업스트림 주소는 하드코딩되어 있습니다:
 
 | 로컬 엔드포인트 | 업스트림 주소 | 스위치 | 증거 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `/mcp/web_search_prime/mcp` | `https://api.z.ai/api/mcp/web_search_prime/mcp` | `proxy.zai.mcp.web_search_enabled` | `src-tauri/src/proxy/handlers/mcp.rs#L115-L135` |
 | `/mcp/web_reader/mcp` | `https://api.z.ai/api/mcp/web_reader/mcp` | `proxy.zai.mcp.web_reader_enabled` | `src-tauri/src/proxy/handlers/mcp.rs#L137-L157` |
 
@@ -222,7 +222,7 @@ z.ai 구성은 `ProxyConfig.zai` 아래에 있으며 다음 필드를 포함합�
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | z.ai 통합 범위(Claude 프로토콜 + MCP + Vision MCP) | [`docs/zai/implementation.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/zai/implementation.md#L12-L17) | 12-17 |
 | z.ai 스케줄링 모드 및 기본 모델 | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L20-L116) | 20-116 |
 | z.ai 기본 base_url / 기본 모델 | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L265-L279) | 265-279 |
@@ -232,7 +232,7 @@ z.ai 구성은 `ProxyConfig.zai` 아래에 있으며 다음 필드를 포함합�
 | z.ai 모델 매핑 규칙(map_model_for_zai) | [`src-tauri/src/proxy/providers/zai_anthropic.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/providers/zai_anthropic.rs#L13-L37) | 13-37 |
 | Header 허용 목록 + z.ai auth 주입 | [`src-tauri/src/proxy/providers/zai_anthropic.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/providers/zai_anthropic.rs#L70-L110) | 70-110 |
 | MCP Search/Reader 리버스 프록시 및 스위치 | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L45-L157) | 45-157 |
-| Vision MCP 내장 서버(GET/POST/DELETE + JSON-RPC) | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L190-L397) | 190-397 |
+|--- | --- | ---|
 | Vision MCP 최소 구현 위치(완전한 MCP Server 아님) | [`docs/zai/vision-mcp.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/zai/vision-mcp.md#L17-L37) | 17-37 |
 | Vision 도구 목록 및 제한(tool_specs + 파일 크기 + stream=false) | [`src-tauri/src/proxy/zai_vision_tools.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/zai_vision_tools.rs#L57-L270) | 57-270 |
 | `/v1/models/claude` 모델 목록 소스(로컬 매핑, 업스트림 쿼리 안 함) | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L84-L132) | 84-132 |

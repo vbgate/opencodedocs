@@ -43,7 +43,7 @@ opencode-supermemory is extremely restrained, triggering automatic injection onl
 The plugin fetches three types of data in parallel and combines them into a `[SUPERMEMORY]` prompt block:
 
 | Data Dimension | Source | Function | Example |
-| :--- | :--- | :--- | :--- |
+|--- | --- | --- | ---|
 | **1. User Profile** (Profile) | `getProfile` | Your long-term preferences | "User likes functional programming", "Prefers arrow functions" |
 | **2. Project Knowledge** (Project) | `listMemories` | Global knowledge of the current project | "This project uses Clean Architecture", "APIs are in src/api" |
 | **3. Relevant Memories** (Relevant) | `searchMemories` | Past experiences related to your first sentence | You ask "How to fix this bug", it finds similar fix records from the past |
@@ -180,7 +180,7 @@ After modifying the configuration, you need to restart OpenCode or reload the pl
 > Updated: 2026-01-23
 
 | Feature | File Path | Line Number |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Injection Trigger Logic | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L125-L176) | 125-176 |
 | Keyword Detection | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L34-L37) | 34-37 |
 | Prompt Formatting | [`src/services/context.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/context.ts#L14-L64) | 14-64 |

@@ -66,7 +66,7 @@ Premium Requests은 Copilot의 주 할당량 지표로, 다음을 포함합니�
 다양한 구독 유형은 다른 월별 한도가 있습니다:
 
 | 구독 유형    | 월별 한도 | 적용 대상               |
-| ----------- | -------- | ---------------------- |
+|--- | --- | ---|
 | Free        | 50 회    | 개인 개발자 시험         |
 | Pro         | 300 회   | 개인 개발자 정식 버전       |
 | Pro+        | 1,500 회 | 중도 개인 개발자         |
@@ -307,7 +307,7 @@ OpenCode의 새 OAuth 통합은 할당량 API 액세스를 지원하지 않습�
 `tier`를 실제 구독과 다르게 입력하면 한도 계산이 틀릴 수 있습니다.
 
 | 실제 구독 | tier 필드에 입력해야 할 값 | 잘못 입력 예시 |
-| ------------ | ----------------------- | ------------ |
+|--- | --- | ---|
 | Free         | `free`                  | `pro` ❌     |
 | Pro          | `pro`                   | `free` ❌    |
 | Pro+         | `pro+`                  | `pro` ❌     |
@@ -375,9 +375,9 @@ OAuth 토큰(내부 API) 방식을 사용하는 경우, 모델 사용 상세가 
 > 업데이트 시간: 2026-01-23
 
 | 기능             | 파일 경로                                                                                      | 행번호    |
-| ---------------- | --------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Copilot 할당량 조회 | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 481-524 |
-| Fine-grained PAT 읽기 | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 122-151 |
+|--- | --- | ---|
 | 공용 Billing API 조회 | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 157-177 |
 | 내부 API 조회 | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 242-304 |
 | 토큰 교환 로직   | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 183-208 |

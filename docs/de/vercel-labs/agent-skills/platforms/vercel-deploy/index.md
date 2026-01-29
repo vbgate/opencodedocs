@@ -181,7 +181,7 @@ Nach dem Deployment überprüfen Sie Folgendes:
 Der Vercel-Deploy-Skill kann automatisch **40+ Frameworks** erkennen:
 
 | Kategorie | Frameworks (Teilbeispiele) |
-| ---- | --------------- |
+|--- | ---|
 | **React** | Next.js, Gatsby, Create React App, Remix |
 | **Vue** | Nuxt, Vitepress, Vuepress |
 | **Svelte** | SvelteKit, Svelte |
@@ -346,12 +346,12 @@ Wenn Sie die Arbeitsweise des Skills vertieft verstehen möchten, können Sie si
 > Aktualisierungszeit:2026-01-25
 
 | Funktion              | Dateipfad                                                                                             | Zeilen     |
-| ----------------- | ---------------------------------------------------------------------------------------------------- | -------- |
-| Deployment-Skript-Einstieg      | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 1-250    |
-| Framework-Erkennungslogik      | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 12-156   |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Packen und Hochladen auf API  | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 208-222  |
 | Umbenennung von statischem HTML  | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 192-205  |
-| Skill-Definitionsdatei      | [`skills/claude.ai/vercel-deploy-claimable/SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/SKILL.md) | 1-113    |
+|--- | --- | ---|
 | Netzwerkfehlerbehandlung      | [`SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/SKILL.md) | 102-112  |
 
 **Wichtige Konstanten**:

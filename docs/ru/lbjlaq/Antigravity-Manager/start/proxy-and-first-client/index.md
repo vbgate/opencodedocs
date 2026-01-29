@@ -234,7 +234,7 @@ print(resp.text)
 > Дата обновления: 2026-01-23
 
 | Тема | Путь к файлу | Строка |
-| --- | --- | --- |
+|--- | --- | ---|
 | Запуск/остановка/статус обратного прокси | [`src-tauri/src/commands/proxy.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/proxy.rs#L42-L178) | 42-178 |
 | Проверка доступности пула учетных записей перед запуском (ошибка при отсутствии учетных записей) | [`src-tauri/src/commands/proxy.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/proxy.rs#L81-L91) | 81-91 |
 | Регистрация маршрутов (включая `/healthz`) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |

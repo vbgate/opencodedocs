@@ -57,7 +57,7 @@ Clawdbot routes messages to the correct Agent based on the session key and maint
 Clawdbot uses structured session keys to identify different types of sessions:
 
 | Session Type | Key Format | Example | Description |
-|--------------|------------|---------|-------------|
+|--- | --- | --- | ---|
 | **Main Session** | `agent:<agentId>:<mainKey>` | `agent:main:main` | Default main session for each Agent |
 | **Direct Message** | `agent:<agentId>:dm:<peerId>` | `agent:main:dm:+15551234567` | Isolated by `dmScope` configuration |
 | **Group/Channel** | `agent:<agentId>:<channel>:group:<id>` | `agent:main:whatsapp:group:123` | Automatic isolation for groups and channels |
@@ -111,7 +111,7 @@ Each Agent has its own independent:
 #### Why Multiple Agents?
 
 | Scenario | Solution |
-|----------|----------|
+|--- | ---|
 | **Multi-user shared server** | Each user has an independent Agent, sessions completely isolated |
 | **Different channels, different personas** | WhatsApp for daily Agent, Telegram for deep work Agent |
 | **Permission separation** | Family Agent with restricted tools, personal Agent with full access |
@@ -183,7 +183,7 @@ For example, if you want to route a specific DM to the `work` Agent and other Wh
 Use `session.dmScope` to control how direct messages are grouped:
 
 | Option | Behavior | Use Case |
-|--------|----------|----------|
+|--- | --- | ---|
 | `main` (default) | All DMs share the main session | Single user, multiple channels |
 | `per-peer` | Isolated by sender ID | Multi-user environment |
 | `per-channel-peer` | Isolated by channel + sender | Shared inbox |
@@ -244,7 +244,7 @@ Use the `sessions_spawn` tool to create a sub-agent:
 Parameter description:
 
 | Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
+|--- | --- | --- | ---|
 | `task` | string | ✅ | Task description for the sub-agent |
 | `label` | string | ❌ | Readable task label (for tracking) |
 | `agentId` | string | ❌ | Target Agent ID (default: current Agent) |
@@ -348,7 +348,7 @@ This guides the AI to focus on specific content when summarizing.
 ### Compression vs Pruning
 
 | Operation | Purpose | Persistence | Location |
-|-----------|---------|-------------|----------|
+|--- | --- | --- | ---|
 | **Compression** | Summarize old conversations | ✅ | Written to JSONL |
 | **Pruning** | Remove old tool results | ❌ | In memory only |
 
@@ -490,7 +490,7 @@ After completing the configuration, verify the following:
 ### Common Errors
 
 | Error | Cause | Solution |
-|-------|-------|----------|
+|--- | --- | ---|
 | **Agent-to-Agent call forbidden** | `tools.agentToAgent.enabled` not enabled or `allow` list doesn't include target Agent | Check configuration, ensure it's enabled and add the allowed list |
 | **Sub-agent creation failed** | When calling across Agents, the target Agent is not in the allowed list | Check `tools.agentToAgent.allow` configuration |
 | **Session key conflict** | Binding rule order is wrong, more specific rules are overridden | Place peer rules before channel rules |
@@ -533,13 +533,13 @@ By properly configuring session management, you can let Clawdbot serve multiple 
 > Last updated: 2026-01-27
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | Session key parsing | [`src/routing/session-key.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/routing/session-key.ts) | 1-100 |
 | Session configuration schema | [`src/config/zod-schema.session.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.session.ts) | 11-83 |
-| Sub-agent spawn tool | [`src/agents/tools/sessions-spawn-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/sessions-spawn-tool.ts) | 28-269 |
+|--- | --- | ---|
 | Session tool helper functions | [`src/agents/tools/sessions-helpers.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/sessions-helpers.ts) | 1-328 |
 | Session management documentation | [`docs/concepts/session.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/concepts/session.md) | 1-151 |
-| Multi-Agent routing documentation | [`docs/concepts/multi-agent.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/concepts/multi-agent.md) | 1-355 |
+|--- | --- | ---|
 | Context compression documentation | [`docs/concepts/compaction.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/concepts/compaction.md) | 1-50 |
 
 **Key Constants**:

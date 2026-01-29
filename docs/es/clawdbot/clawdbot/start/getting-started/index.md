@@ -54,7 +54,7 @@ Gateway es el plano de control de Clawdbot, que:
 ### Requisitos del sistema
 
 | Componente | Requisito |
-| ----------- | ----------- |
+|--- | ---|
 | **Node.js** | ≥ 22.12.0 |
 | **Sistema operativo** | macOS / Linux / Windows (WSL2) |
 | **Gestor de paquetes** | npm / pnpm / bun |
@@ -70,7 +70,7 @@ En Windows se recomienda encarecidamente usar **WSL2**, porque:
 Aunque se admite cualquier modelo, recomendamos encarecidamente:
 
 | Proveedor | Modelo recomendado | Razón |
-| ---------- | ---------------- | -------- |
+|--- | --- | ---|
 | Anthropic | Claude Opus 4.5 | Ventaja de contexto largo, mayor resistencia a inyección de prompts |
 | OpenAI | GPT-5.2 + Codex | Fuerte capacidad de programación, soporte multimodal |
 
@@ -98,7 +98,7 @@ WhatsApp / Telegram / Slack / Discord / Signal / iMessage / WebChat
 **Conceptos clave**:
 
 | Concepto | Función |
-| -------- | -------- |
+|--- | ---|
 | **Gateway** | Demonio responsable de la gestión de sesiones, conexiones de canales e invocación de herramientas |
 | **Channel** | Canal de mensajería (WhatsApp, Telegram, Slack, etc.) |
 | **Agent** | Entorno de ejecución de IA (modo RPC basado en pi-mono) |
@@ -156,7 +156,7 @@ clawdbot onboard --install-daemon
 **Lo que te preguntará el asistente**:
 
 | Paso | Pregunta | Descripción |
-| --------- | --------------------------------- | ------------------ |
+|--- | --- | ---|
 | 1 | Seleccionar método de autenticación del modelo de IA | OAuth / API Key |
 | 2 | Configurar Gateway (puerto, autenticación) | Por defecto: 127.0.0.1:18789 |
 | 3 | Configurar canales (WhatsApp, Telegram, etc.) | Se puede omitir, configurar más tarde |
@@ -341,7 +341,7 @@ node --version
 Ubicación predeterminada del archivo de configuración de Clawdbot:
 
 | Sistema operativo | Ruta de configuración |
-| -------- | --------------------------- |
+|--- | ---|
 | macOS/Linux | `~/.clawdbot/clawdbot.json` |
 | Windows (WSL2) | `~/.clawdbot/clawdbot.json` |
 
@@ -433,7 +433,7 @@ pnpm gateway:watch  # Recarga automática al modificar archivos TS
 > Fecha de actualización: 2026-01-27
 
 | Función | Ruta del archivo | Número de línea |
-| --------------- | -------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Entrada CLI | [`src/cli/run-main.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/run-main.ts) | 26-60 |
 | Comando Onboarding | [`src/cli/program/register.onboard.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.onboard.ts) | 34-100 |
 | Instalación Daemon | [`src/cli/daemon-cli/install.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/daemon-cli/install.ts) | 15-100 |

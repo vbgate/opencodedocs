@@ -36,7 +36,7 @@ order: 130
 **Слэш-команды** — это готовые шаблоны рабочих процессов, которые запускают сложные задачи в один клик. Эти команды охватывают распространённые сценарии разработки:
 
 | Сценарий | Команда для использования |
-|----------|---------------------------|
+|--- | ---|
 | Инициализация базы знаний проекта | `/init-deep` |
 | Непрерывная работа ИИ | `/ralph-loop` |
 | Умный рефакторинг кода | `/refactor` |
@@ -64,7 +64,7 @@ graph LR
 oh-my-opencode включает 6 встроенных слэш-команд:
 
 | Команда | Функция | Сложность |
-|---------|---------|-----------|
+|--- | --- | ---|
 | `/init-deep` | Генерация иерархических файлов AGENTS.md | Средняя |
 | `/ralph-loop` | Цикл самореференциальной разработки | Высокая |
 | `/ulw-loop` | Ultrawork-версия ralph-loop | Высокая |
@@ -305,7 +305,7 @@ Which plan would you like to work on? (Enter number or plan name)
 ## Резюме
 
 | Команда | Основная функция | Частота использования |
-|---------|------------------|----------------------|
+|--- | --- | ---|
 | `/init-deep` | Автоматическая генерация базы знаний проекта | Начальная настройка |
 | `/ralph-loop` | Цикл непрерывной работы | Высокая |
 | `/ulw-loop` | Ultrawork-версия цикла | Средняя |
@@ -339,7 +339,7 @@ Which plan would you like to work on? (Enter number or plan name)
 > Обновлено: 2026-01-26
 
 | Функция | Путь к файлу | Номера строк |
-|---------|--------------|--------------|
+|--- | --- | ---|
 | Определения команд | [`src/features/builtin-commands/commands.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/commands.ts) | 8-73 |
 | Загрузчик команд | [`src/features/builtin-commands/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/index.ts) | 75-89 |
 | Шаблон init-deep | [`src/features/builtin-commands/templates/init-deep.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-commands/templates/init-deep.ts) | Полный текст |

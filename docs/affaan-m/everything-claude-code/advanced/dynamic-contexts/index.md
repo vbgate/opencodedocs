@@ -50,7 +50,7 @@ The core of dynamic context injection is **making AI have different behavioral s
 Everything Claude Code provides three predefined contexts:
 
 | Mode   | File            | Focus                     | Priority                          | Use Cases                              |
-| ------ | --------------- | ------------------------- | --------------------------------- | -------------------------------------- |
+|--- | --- | --- | --- | ---|
 | **dev** | `contexts/dev.md` | Implement features, iterate quickly | Get it working first, refine later | Daily development, new feature implementation |
 | **review** | `contexts/review.md` | Code quality, security, maintainability | Discover issues first, suggest fixes | Code Review, PR review |
 | **research** | `contexts/research.md` | Understand problems, explore solutions | Understand first, then act | Technical research, bug analysis, architecture design |
@@ -472,7 +472,7 @@ Dynamic context injection optimizes AI behavior strategies in different scenario
 > Last updated: 2026-01-25
 
 | Feature               | File Path                                                                                   | Lines |
-| --------------------- | ------------------------------------------------------------------------------------------- | ----- |
+|--- | --- | ---|
 | dev context definition | [`contexts/dev.md`](https://github.com/affaan-m/everything-claude-code/blob/main/contexts/dev.md) | 1-21  |
 | review context definition | [`contexts/review.md`](https://github.com/affaan-m/everything-claude-code/blob/main/contexts/review.md) | 1-23  |
 | research context definition | [`contexts/research.md`](https://github.com/affaan-m/everything-claude-code/blob/main/contexts/research.md) | 1-27  |

@@ -15,7 +15,7 @@ Este capítulo apresenta detalhadamente as funcionalidades de verificação de c
 O opencode-mystatus suporta as seguintes 4 plataformas principais de IA:
 
 | Plataforma | Tipo de Cota | Características |
-|-----------|-------------|----------------|
+|--- | --- | ---|
 | OpenAI | Janela de 3 horas / 24 horas | Suporta assinaturas Plus, Team, Pro |
 | Zhipu AI | Cota de 5 horas Token / Cota mensal MCP | Suporta Coding Plan |
 | GitHub Copilot | Cota mensal | Exibe uso de Premium Requests |

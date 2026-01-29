@@ -31,7 +31,7 @@ Las tablas Markdown generadas por IA suelen ser así:
 
 ```markdown
 | 名称 | 描述 | 状态 |
-|---|---|---|
+|--- | --- | ---|
 | **用户管理** | 管理系统用户 | ✅ 完成 |
 | API | 接口文档 | 🚧 进行中 |
 ```
@@ -64,7 +64,7 @@ El complemento detectará automáticamente las tablas Markdown en el texto gener
 
 ```markdown
 | 名称 | 描述 | 状态 |
-|---|---|---|
+|--- | --- | ---|
 | **用户管理** | 管理系统用户 | ✅ 完成 |
 | API | 接口文档 | 🚧 进行中 |
 ```
@@ -73,7 +73,7 @@ El complemento detectará automáticamente las tablas Markdown en el texto gener
 
 ```markdown
 | 名称         | 描述         | 状态       |
-| ------------ | ------------ | ---------- |
+|--- | --- | ---|
 | **用户管理** | 管理系统用户 | ✅ 完成    |
 | API          | 接口文档     | 🚧 进行中  |
 ```
@@ -111,7 +111,7 @@ Ubicación del código fuente: `index.ts:181-185`
 Soporta los tres métodos de alineación de tablas Markdown:
 
 | Sintaxis | Método de alineación | Efecto |
-| --- | --- | --- |
+|--- | --- | ---|
 | `---` o `:---` | Alineación izquierda | Texto a la izquierda (ambas sintaxis tienen el mismo efecto) |
 | `:---:` | Centrado | Texto centrado |
 | `---:` | Alineación derecha | Texto a la derecha |
@@ -120,7 +120,7 @@ Soporta los tres métodos de alineación de tablas Markdown:
 
 ```markdown
 | Alineación izquierda | Centrado | Alineación derecha |
-| :--- | :---: | ---: |
+|--- | --- | ---|
 | Texto | Texto | Texto |
 ```
 
@@ -171,7 +171,7 @@ Ubicación del código fuente: `index.ts:168-193`
 El complemento puede manejar correctamente varios casos límite:
 
 | Escenario | Método de manejo |
-| --- | --- |
+|--- | ---|
 | Emoji表情 | Usa `Bun.stringWidth` para calcular correctamente el ancho de visualización |
 | Caracteres Unicode | Caracteres de ancho completo como chino, japonés se alinean correctamente |
 | Celdas vacías | Rellenar con espacios hasta el ancho mínimo (3 caracteres) |
@@ -225,7 +225,7 @@ Después de completar esta lección, deberías poder responder:
 ## Resumen de esta Lección
 
 | Función | Descripción |
-| --- | --- |
+|--- | ---|
 | Formateo automático | Se activa automáticamente cuando la IA termina de generar texto, sin necesidad de operación manual |
 | Compatibilidad con modo oculto | Calcula correctamente el ancho de visualización después de ocultar los símbolos Markdown |
 | Soporte de alineación | Alineación izquierda, centrado, alineación derecha |
@@ -254,7 +254,7 @@ Después de completar esta lección, deberías poder responder:
 > Fecha de actualización: 2026-01-26
 
 | Función | Ruta del archivo | Líneas |
-| --- | --- | --- |
+|--- | --- | ---|
 | Entrada del complemento | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L9-L23) | 9-23 |
 | Detección de tablas | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61) | 58-61 |
 | Validación de tablas | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88) | 70-88 |

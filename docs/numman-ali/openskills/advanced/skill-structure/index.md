@@ -73,7 +73,7 @@ graph LR
 ### Bundled Resources Classification
 
 | Directory   | Loaded to Context | Use Cases                | Example Types               |
-| ----------- | ----------------- | ------------------------ | --------------------------- |
+|--- | --- | --- | ---|
 | `references/` | ✅ On-demand      | Detailed docs, API specs | API docs, database schemas  |
 | `scripts/`  | ❌ Not loaded     | Executable code         | Python/Bash scripts        |
 | `assets/`   | ❌ Not loaded     | Templates, output files, images | JSON templates, boilerplate code |
@@ -96,14 +96,14 @@ description: Use this skill when you need to demonstrate proper format.
 **Required fields**:
 
 | Field       | Type     | Format Requirements                    | Example                    |
-| ----------- | -------- | -------------------------------------- | -------------------------- |
+|--- | --- | --- | ---|
 | `name`      | string   | kebab-case, no spaces                  | `pdf-editor`, `api-client` |
 | `description` | string | 1-2 sentences, third person            | `Use this skill to edit PDF files` |
 
 ::: danger Common Errors
 
 | Error Example | Problem | Fix Method |
-| ------------- | ------- | ---------- |
+|--- | --- | ---|
 | `name: My Skill` | Contains spaces | Change to `name: my-skill` |
 | `name: my_skill` | Underscore format | Change to `name: my-skill` |
 | `description: You should use this when...` | Second person | Change to `description: Use this skill when...` |
@@ -159,7 +159,7 @@ You should execute this task by:
 **Comparison table**:
 
 | ✅ Correct (Imperative/Infinitive) | ❌ Incorrect (Second Person) |
-| ---------------------------------- | ---------------------------- |
+|--- | ---|
 | "Load this skill when X"          | "If you need Y"              |
 | "To accomplish Z, execute A"      | "You should do Z"            |
 | "See references/guide.md"        | "When you want to Z"         |
@@ -326,7 +326,7 @@ if __name__ == "__main__":
 Compared to inlining code in SKILL.md:
 
 | Feature      | Inline Code    | scripts/            |
-| ------------ | -------------- | ------------------ |
+|--- | --- | ---|
 | Token usage  | ✅ High        | ❌ Low             |
 | Reusability  | ❌ Poor        | ✅ Good            |
 | Testability  | ❌ Difficult   | ✅ Easy            |
@@ -416,7 +416,7 @@ def generate_output(data, template_path):
 **File size guidelines** (official recommendations):
 
 | Directory   | Size Limit      | Loading Behavior      |
-| ----------- | --------------- | --------------------- |
+|--- | --- | ---|
 | SKILL.md    | < 5,000 words   | Always loaded (when needed) |
 | references/ | No strict limit | Loaded on-demand     |
 | scripts/    | Not counted     | Not loaded, only executed |
@@ -486,7 +486,7 @@ Base directory: /path/to/project/.claude/skills/my-skill
 **Relative path resolution rules**:
 
 | Reference Path          | Resolved Result                                          |
-| ----------------------- | -------------------------------------------------------- |
+|--- | ---|
 | `references/api.md`     | `/base/directory/references/api.md`                     |
 | `scripts/process.py`    | `/base/directory/scripts/process.py`                    |
 | `assets/template.json`  | `/base/directory/assets/template.json`                  |
@@ -508,7 +508,7 @@ export function readSkill(skillNames: string[] | string): void {
 ::: danger Path Error Examples
 
 | ❌ Incorrect Method           | Problem                | ✅ Correct Method         |
-| ---------------------------- | ---------------------- | ------------------------ |
+|--- | --- | ---|
 | `/absolute/path/to/api.md`   | Uses absolute path     | `references/api.md`       |
 | `../other-skill/references/api.md` | Cross-skill reference | `references/api.md`       |
 | `~/references/api.md`        | Uses tilde expansion   | `references/api.md`       |
@@ -701,7 +701,7 @@ description: "Use this skill: for testing"
 **Comparison table**:
 
 | Second Person (❌ Avoid)   | Imperative (✅ Recommend)      |
-| ------------------------- | ------------------------------ |
+|--- | ---|
 | "You should execute..."   | "To execute X, run..."        |
 | "When you want to..."     | "Load this skill when..."      |
 | "If you need..."          | "Use X to accomplish Y"       |
@@ -738,7 +738,7 @@ Key points of skill structure:
 > Last updated: 2026-01-24
 
 | Feature                   | File Path                                                                  | Line   |
-| ------------------------- | -------------------------------------------------------------------------- | ------ |
+|--- | --- | ---|
 | YAML frontmatter validation | [`src/utils/yaml.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/yaml.ts) | 12-14  |
 | YAML field extraction      | [`src/utils/yaml.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/yaml.ts) | 4-7    |
 | Skill read command         | [`src/commands/read.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/read.ts) | 1-49   |

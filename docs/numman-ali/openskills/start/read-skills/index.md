@@ -133,7 +133,7 @@ Skill read: pdf
 **Output Structure Explanation**:
 
 | Part | Content | Purpose |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | `Reading: pdf` | Skill name | Identifies the skill being read |
 | `Base directory: ...` | Skill base directory | AI uses this path to resolve references/, scripts/ and other resources |
 | SKILL.md content | Complete skill definition | Contains instructions, resource references, etc. |
@@ -424,15 +424,15 @@ In this lesson, you learned:
 **Core Concepts**:
 
 | Concept | Description |
-| ---- | ---- |
+|--- | ---|
 | **Lookup priority** | Search 4 directories in order, return first match |
 | **Base directory** | Reference directory used by AI agents to resolve relative paths in skills |
-| **Multi-skill reading** | Comma-separated, read in specified order |
+|--- | ---|
 
 **Core Commands**:
 
 | Command | Purpose |
-| ---- | ---- |
+|--- | ---|
 | `npx openskills read <name>` | Read a single skill |
 | `npx openskills read name1,name2` | Read multiple skills |
 | `npx openskills list` | View installed skills and their locations |
@@ -460,7 +460,7 @@ After learning how to use skills, you need to understand all commands provided b
 > Updated: 2026-01-24
 
 | Function | File Path | Line Numbers |
-| ---- | --------- | ---- |
+|--- | --- | ---|
 | read command entry point | [`src/commands/read.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/read.ts#L8-L48) | 8-48 |
 | skill lookup (findSkill) | [`src/utils/skills.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skills.ts#L69-L84) | 69-84 |
 | skill name normalization | [`src/utils/skill-names.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skill-names.ts) | 1-8 |

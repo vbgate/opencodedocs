@@ -38,7 +38,7 @@ order: 3
 El proxy intentará analizar `error.details[0].reason` o `error.message` del cuerpo de la respuesta, clasificando 429 en varias categorías (según lo que realmente se devuelva):
 
 | Tipo identificado por el proxy | reason / pista común | Característica típica |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **Cuota agotada** | `QUOTA_EXHAUSTED` / el texto contiene `exhausted`, `quota` | Es posible que necesites esperar a que la cuota se actualice |
 | **Límite de velocidad** | `RATE_LIMIT_EXCEEDED` / el texto contiene `per minute`, `rate limit`, `too many requests` | Generalmente enfriamiento de nivel de decenas de segundos |
 | **Capacidad del modelo insuficiente** | `MODEL_CAPACITY_EXHAUSTED` / el texto contiene `model_capacity` | Comúnmente sobrecarga temporal, se puede recuperar más tarde |
@@ -133,14 +133,14 @@ En Proxy Monitor, observa el cuerpo de respuesta de errores 429, enfócate en do
 Entra a la página **API Proxy**, observa la estrategia de programación:
 
 | Elemento de configuración | Descripción | Valor predeterminado/sugerencia |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **Scheduling Mode** | Modo de programación | `Balance` (predeterminado) |
 | **Preferred Account** | Modo de cuenta fija | No seleccionado (predeterminado) |
 
 **Comparación de modos de programación**:
 
 | Modo | Estrategia de reutilización de cuenta | Manejo de limitación | Escenario aplicable |
-| :--- | :--- | :--- | :--- |
+|--- | --- | --- | ---|
 | **CacheFirst** | Habilita sesión pegajosa y reutilización de ventana de 60s | **Prioriza la espera**, mejora enormemente la tasa de aciertos de Prompt Caching | Conversación / necesita alta tasa de aciertos de caché |
 | **Balance** | Habilita sesión pegajosa y reutilización de ventana de 60s | **Cambia inmediatamente** a una cuenta alternativa, equilibra éxito y rendimiento | Escenario general, predeterminado |
 | **PerformanceFirst** | Salta sesión pegajosa y reutilización de ventana de 60s, modo round-robin puro | Cambia inmediatamente, carga de cuentas más equilibrada | Alta concurrencia, solicitudes sin estado |
@@ -294,7 +294,7 @@ All accounts are currently limited. Please wait 30s.
 R: No.
 
 | Característica | Protección de cuota | Seguimiento de limitación |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **Condición de activación** | La cuota del modelo está por debajo del umbral | Recibió error 429 |
 | **Alcance** | Modelos específicos | Toda la cuenta |
 | **Duración** | Hasta que la cuota se recupere | Decidido por el upstream (generalmente de segundos a minutos) |
@@ -336,7 +336,7 @@ Dentro de una sola solicitud, el proxy también forzará rotación al reintentar
 > Última actualización: 2026-01-23
 
 | Función | Ruta de archivo | Línea |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Análisis de retraso de reintento 429 (RetryInfo / quotaResetDelay) | [`src-tauri/src/proxy/upstream/retry.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/upstream/retry.rs#L38-L67) | 38-67 |
 | Herramienta de análisis de Duration | [`src-tauri/src/proxy/upstream/retry.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/upstream/retry.rs#L11-L35) | 11-35 |
 | Enumeración de modos de programación (CacheFirst/Balance/PerformanceFirst) | [`src-tauri/src/proxy/sticky_config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/sticky_config.rs#L3-L12) | 3-12 |

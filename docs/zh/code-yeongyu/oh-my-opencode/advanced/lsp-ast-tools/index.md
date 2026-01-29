@@ -27,7 +27,7 @@ order: 90
 传统代码搜索和重构工具存在明显局限：
 
 | 问题 | 传统方案 | 实际需求 |
-|------|---------|---------|
+|--- | --- | ---|
 | **符号跳转不准确** | 简单字符串匹配 | 需要理解代码语义，跳转到真实定义 |
 | **查找引用漏项** | 正则表达式搜索 | 需要跨文件、跨作用域的精确引用追踪 |
 | **重构不安全** | 手动替换 + grep | 需要理解代码结构，避免破坏性修改 |
@@ -40,7 +40,7 @@ order: 90
 ## 什么时候用这一招
 
 | 工具 | 适用场景 | 示例 |
-|------|---------|------|
+|--- | --- | ---|
 | **LSP 工具** | 需要 IDE 功能时 | 跳转到定义、查找所有引用、获取错误列表、重命名符号 |
 | **AST-Grep** | 需要代码模式匹配 | 搜索特定代码结构、批量重构、检查代码规范 |
 | **Grep/Glob** | 简单文本搜索 | 查找函数名、文件名匹配 |
@@ -401,7 +401,7 @@ Applied 2 changes:
 ### LSP 工具常见问题
 
 | 问题 | 原因 | 解决方法 |
-|------|------|---------|
+|--- | --- | ---|
 | **找不到定义** | LSP 服务器未启动或配置错误 | 检查 `opencode.json` 中的 LSP 配置 |
 | **引用列表不完整** | 代码中有错误，LSP 服务器未完全分析 | 先修复代码中的错误 |
 | **重命名失败** | 新名称与现有符号冲突 | 使用更具体的名称 |
@@ -409,7 +409,7 @@ Applied 2 changes:
 ### AST-Grep 常见问题
 
 | 问题 | 原因 | 解决方法 |
-|------|------|---------|
+|--- | --- | ---|
 | **模式不匹配** | 模式不完整或语法错误 | 确保模式是完整的 AST 节点 |
 | **Python 模式尾随冒号** | Python 的 `def` 和 `class` 不需要冒号 | ❌ `def func():` → ✅ `def func($$$):` |
 | **匹配过多** | 模式过于宽泛 | 使用更具体的上下文或限制路径 |
@@ -436,7 +436,7 @@ ast_grep_search({
 ## LSP 工具完整列表
 
 | 工具 | 功能 | 参数 |
-|------|------|------|
+|--- | --- | ---|
 | `lsp_goto_definition` | 跳转到符号定义 | `filePath`, `line`, `character` |
 | `lsp_find_references` | 查找所有引用 | `filePath`, `line`, `character`, `includeDeclaration?` |
 | `lsp_symbols` | 获取文件大纲或工作区符号 | `filePath`, `scope`, `query?`, `limit?` |
@@ -451,7 +451,7 @@ ast_grep_search({
 ## AST-Grep 工具完整列表
 
 | 工具 | 功能 | 参数 |
-|------|------|------|
+|--- | --- | ---|
 | `ast_grep_search` | AST 模式搜索 | `pattern`, `lang`, `paths?`, `globs?`, `context?` |
 | `ast_grep_replace` | AST 模式替换 | `pattern`, `rewrite`, `lang`, `paths?`, `globs?`, `dryRun?` |
 
@@ -568,7 +568,7 @@ lsp_rename({
 ### LSP 工具
 
 | 功能 | 文件路径 | 行号 |
-|------|----------|------|
+|--- | --- | ---|
 | LSP 工具定义 | [`src/tools/lsp/tools.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/lsp/tools.ts) | 29-261 |
 | LSP 客户端实现 | [`src/tools/lsp/client.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/lsp/client.ts) | 1-596 |
 | LSP 常量定义 | [`src/tools/lsp/constants.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/lsp/constants.ts) | 1-391 |
@@ -577,11 +577,11 @@ lsp_rename({
 ### AST-Grep 工具
 
 | 功能 | 文件路径 | 行号 |
-|------|----------|------|
-| AST-Grep 工具定义 | [`src/tools/ast-grep/tools.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/ast-grep/tools.ts) | 35-110 |
-| AST-Grep 常量定义 | [`src/tools/ast-grep/constants.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/ast-grep/constants.ts) | 1-262 |
-| AST-Grep CLI 集成 | [`src/tools/ast-grep/cli.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/ast-grep/cli.ts) | 1-169 |
-| AST-Grep 类型定义 | [`src/tools/ast-grep/types.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/ast-grep/types.ts) | 1-112 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **关键常量**：
 - `DEFAULT_MAX_REFERENCES = 200` - 最大返回引用数

@@ -128,7 +128,7 @@ async function recurse(dir: string, depth: number, relPath: string) {
 **Recursion Depth by Location**:
 
 | Location                    | Label          | Max Depth | Notes                       |
-| --------------------------- | -------------- | --------- | --------------------------- |
+|--- | --- | --- | ---|
 | `.opencode/skills/`         | project        | 3         | Supports nested directories |
 | `.claude/skills/`           | claude-project | 1         | Scans only the first level  |
 | `~/.config/opencode/skills/` | user           | 3         | Supports nested directories |
@@ -222,7 +222,7 @@ const SkillFrontmatterSchema = z.object({
 - Spaces, uppercase letters, and underscores are not allowed
 
 | ❌ Incorrect Skill Name | ✅ Correct Skill Name |
-| ----------------------- | --------------------- |
+|--- | ---|
 | `MySkill`               | `my-skill`            |
 | `git_helper`            | `git-helper`          |
 | `Git Helper`            | `git-helper`          |
@@ -272,7 +272,7 @@ async function recurse(dir: string, depth: number, relPath: string) {
 **Script Discovery Rules**:
 
 | Rule                  | Description                                          |
-| --------------------- | ---------------------------------------------------- |
+|--- | ---|
 | Executable bit check  | Files must have execute permission (`chmod +x`)      |
 | Skip hidden dirs      | Does not scan `.git`, `.venv`, etc.                  |
 | Skip dependency dirs  | Does not scan `node_modules`, `__pycache__`, etc.    |
@@ -420,7 +420,7 @@ OpenCode Agent Skills automatically discovers skills from multiple locations, se
 > Last updated: 2026-01-24
 
 | Feature                  | File Path                                                                                      | Lines   |
-| ------------------------ | ---------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Discovery paths          | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L241-L246)     | 241-246 |
 | Discover all skills      | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L240-L263)     | 240-263 |
 | Recursive search skills  | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L176-L218)     | 176-218 |

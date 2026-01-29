@@ -172,7 +172,7 @@ Cliquez "Réinitialiser mappage".
 ## Attention aux pièges courants
 
 | Scénario | Ce que vous pourriez faire (❌) | Approche recommandée (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Caractère générique inefficace | Avoir écrit `GPT-4*` espérant correspondre à `gpt-4-turbo` | Utiliser minuscules `gpt-4*` ; la correspondance de caractères génériques backend est sensible à la casse |
 | Deux caractères génériques peuvent correspondre | Avoir écrit simultanément `gpt-*` et `gpt-4*`, incertain lequel prendra | Rendre la règle plus spécifique plus "longue", assurer qu'elle a plus de caractères non `*` |
 | Règle semble correcte mais toujours inchangée | Ne regarder que le corps de réponse, pas l'en-tête de réponse | Utiliser `curl -i` pour confirmer `X-Mapped-Model` (c'est le résultat explicitement renvoyé par le backend) |
@@ -198,7 +198,7 @@ Cliquez "Réinitialiser mappage".
 > Date de mise à jour : 2026-01-23
 
 | Fonction | Chemin du fichier | Ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Champ configuration : `proxy.custom_mapping` (type frontend) | [`src/types/config.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/types/config.ts#L6-L20) | 6-20 |
 | Interface : écriture/réinitialisation/préréglage (appel `update_model_mapping`) | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L371-L475) | 371-475 |
 | Interface : carte routage de modèles (appliquer mappage prédéfini / réinitialiser mappage / liste et formulaire ajout) | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L1762-L1931) | 1762-1931 |
@@ -207,7 +207,7 @@ Cliquez "Réinitialiser mappage".
 | Algorithme de routage : exact > générique (plus spécifique prioritaire) > mappage par défaut | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L180-L228) | 180-228 |
 | Correspondance générique : supporte plusieurs `*`, et sensible à la casse | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L134-L178) | 134-178 |
 | Calcul de `mapped_model` dans la requête (exemple : handler OpenAI) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L154-L159) | 154-159 |
-| Renvoi en-tête `X-Mapped-Model` (exemple : handler OpenAI) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L310-L334) | 310-334 |
+|--- | --- | ---|
 
 **Fonctions clés** :
 - `resolve_model_route(original_model, custom_mapping)` : entrée principale routage de modèles (voir `src-tauri/src/proxy/common/model_mapping.rs`)

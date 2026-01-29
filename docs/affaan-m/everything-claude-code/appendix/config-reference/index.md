@@ -98,7 +98,7 @@ Hooks are the core automation mechanism of Everything Claude Code, defining auto
 ### Hook Types and Trigger Timing
 
 | Hook Type | Trigger Timing | Use Case |
-|-----------|---------------|----------|
+|--- | --- | ---|
 | `SessionStart` | When Claude Code session starts | Load context, detect package manager |
 | `SessionEnd` | When Claude Code session ends | Save session state, evaluate extraction patterns |
 | `PreToolUse` | Before tool invocation | Validate commands, block dangerous operations |
@@ -128,7 +128,7 @@ Each Hook entry contains the following fields:
 Defines trigger conditions, supporting the following variables:
 
 | Variable | Meaning | Example Value |
-|----------|---------|---------------|
+|--- | --- | ---|
 | `tool` | Tool name | `"Bash"`, `"Write"`, `"Edit"` |
 | `tool_input.command` | Bash command content | `"npm run dev"` |
 | `tool_input.file_path` | Write/Edit file path | `"/path/to/file.ts"` |
@@ -576,7 +576,7 @@ MCP (Model Context Protocol) servers extend Claude Code's external service integ
 Here is the list of all pre-configured MCP servers:
 
 | Server Name | Type | Description | Configuration Required |
-|-------------|------|-------------|------------------------|
+|--- | --- | --- | ---|
 | `github` | npx | GitHub operations (PRs, Issues, Repos) | GitHub PAT |
 | `firecrawl` | npx | Web scraping and crawling | Firecrawl API Key |
 | `supabase` | npx | Supabase database operations | Project Ref |
@@ -692,7 +692,7 @@ Enabling too many MCP servers consumes significant context window space. It's re
 ### Field Descriptions
 
 | Field | Type | Required | Description |
-|-------|------|----------|-------------|
+|--- | --- | --- | ---|
 | `name` | string | Y | Plugin name |
 | `description` | string | Y | Plugin description |
 | `author.name` | string | Y | Author name |
@@ -1018,7 +1018,7 @@ This tutorial systematically explained the complete configuration system of Ever
 > Last updated: 2026-01-25
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | Hooks Configuration | [`hooks/hooks.json`](https://github.com/affaan-m/everything-claude-code/blob/main/hooks/hooks.json) | 1-158 |
 | Plugin Manifest | [`.claude-plugin/plugin.json`](https://github.com/affaan-m/everything-claude-code/blob/main/.claude-plugin/plugin.json) | 1-28 |
 | MCP Server Configuration | [`mcp-configs/mcp-servers.json`](https://github.com/affaan-m/everything-claude-code/blob/main/mcp-configs/mcp-servers.json) | 1-92 |

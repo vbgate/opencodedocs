@@ -46,7 +46,7 @@ Quando você:
 O sistema de cota do **Zhipu AI** e **Z.ai** é dividido em dois tipos:
 
 | Tipo de cota | Significado | Ciclo de redefinição |
-| ------------ | ---------- | -------------------- |
+|--- | --- | ---|
 | **Limite de token de 5 horas** | Limite de uso de token de solicitações API | Redefinição automática de 5 horas |
 | **Cota mensal de MCP** | Limite mensal de contagem de pesquisas MCP (Model Context Protocol) | Redefinição mensal |
 
@@ -144,7 +144,7 @@ Entender o significado de cada linha de saída, para gerenciar efetivamente a co
 Compare sua saída com as seguintes explicações:
 
 | Campo de saída | Significado | Exemplo |
-| -------------- | ---------- | ------- |
+|--- | --- | ---|
 | **Account** | API Key mascarada e tipo de conta | `9c89****AQVM (Coding Plan)` |
 | **5 小时 Token 限额** | Uso de token no ciclo de 5 horas atual | Barra de progresso + porcentagem |
 | **已用: X / Y** | Usado / Total | `0.5M / 10.0M` |
@@ -250,7 +250,7 @@ Esta seção aprendeu como usar o opencode-mystatus para consultar a cota do Zhi
 > Data de atualização: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Número da linha |
-| ------------- | ----------------- | --------------- |
+|--- | --- | ---|
 | Consulta de cota Zhipu AI | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 213-217 |
 | Consulta de cota Z.ai | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 224-228 |
 | Formatação de saída | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 115-177 |

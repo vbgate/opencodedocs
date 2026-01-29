@@ -241,7 +241,7 @@ MEDIA:/tmp/clawdbot-camera-snap-abc123.jpg
 **iOS カメラパラメータ**：
 
 | パラメータ | タイプ | デフォルト値 | 説明 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `facing` | `front\|back` | `front` | カメラの向き |
 | `maxWidth` | number | `1600` | 最大幅（ピクセル） |
 | `quality` | `0..1` | `0.9` | JPEG 品質（0-1） |
@@ -388,7 +388,7 @@ clawdbot config set canvasHost "http://<gateway-host>:18793/__clawdbot__/canvas/
 > 更新時間：2026-01-27
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | iOS アプリエントリー | [`apps/ios/Sources/ClawdbotApp.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/ClawdbotApp.swift) | 1-30 |
 | Canvas レンダリング | [`apps/ios/Sources/RootCanvas.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/RootCanvas.swift) | 1-250 |
 | Gateway 接続 | [`apps/ios/Sources/Gateway/`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/Gateway/) | - |

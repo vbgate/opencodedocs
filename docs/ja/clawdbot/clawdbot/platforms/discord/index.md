@@ -90,7 +90,7 @@ Discordユーザー
 ### DMとサーバーチャンネルの違い
 
 | タイプ | セッション分離 | デフォルト動作 | 使用シーン |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | **DM（ダイレクトメッセージ）** | すべてのDMが`agent:main:main`セッションを共有 | ペアリング保護が必要 | 個人の会話、コンテキストを継続 |
 | **サーバーチャンネル** | 各チャンネルが独立したセッション`agent:<agentId>:discord:channel:<channelId>` | @メンションが必要な場合のみ返信 | サーバースマートアシスタント、マルチチャンネル並列 |
 
@@ -148,7 +148,7 @@ DiscordはデフォルトでBotにメッセージコンテンツの読み取り�
 **Bot → Privileged Gateway Intents**（特権ゲートウェイインテント）で以下を有効化：
 
 | Intent | 必須 | 説明 |
-| --- | --- | --- |
+|--- | --- | ---|
 | **Message Content Intent** | ✅ **必須** | メッセージテキストの内容を読み取る（これがないとBotはメッセージを認識できません） |
 | **Server Members Intent** | ⚠️ **推奨** | メンバー検索とユーザー名解決に使用 |
 
@@ -173,7 +173,7 @@ Botがサーバーでメッセージを読み取り、送信するには権限�
 3. **Bot Permissions**（Bot権限）で少なくとも以下を選択：
 
 | 権限 | 説明 |
-| --- | --- |
+|--- | ---|
 | **View Channels** | チャンネルを表示 |
 | **Send Messages** | メッセージを送信 |
 | **Read Message History** | 過去のメッセージを読み取る |
@@ -209,7 +209,7 @@ Clawdbotの設定ではID（数値）を使用することが推奨されます�
 #### 3.2 IDをコピー
 
 | タイプ | 操作 |
-| --- | --- |
+|--- | ---|
 | **サーバーID** | サーバー名を右クリック → **Copy Server ID** |
 | **チャンネルID** | チャンネル（例：`#general`）を右クリック → **Copy Channel ID** |
 | **ユーザーID** | ユーザーアバターを右クリック → **Copy User ID** |
@@ -307,7 +307,7 @@ Botが返信しない場合、[トラブルシューティング](#トラブル�
 デフォルトのポリシーは`pairing`（ペアリングモード）で、個人使用に適しています。必要に応じて調整できます：
 
 | ポリシー | 説明 | 設定例 |
-| --- | --- | --- |
+|--- | --- | ---|
 | **pairing**（デフォルト） | 見知らぬユーザーはペアリングコードを受け取り、手動で承認が必要 | `"dm": { "policy": "pairing" }` |
 | **allowlist** | リスト内のユーザーのみ許可 | `"dm": { "policy": "allowlist", "allowFrom": ["123456", "alice"] }` |
 | **open** | すべてのユーザーを許可（`allowFrom`に`"*"`を含める必要あり） | `"dm": { "policy": "open", "allowFrom": ["*"] }` |
@@ -399,7 +399,7 @@ clawdbot pairing approve discord <ペアリングコード>
 AI Agentは`discord`ツールを呼び出してDiscord固有の操作を実行できます。`channels.discord.actions`を通じて権限を制御：
 
 | 操作カテゴリ | デフォルト状態 | 説明 |
-| --- | --- | --- |
+|--- | --- | ---|
 | **reactions** | ✅ 有効 | リアクションの追加/読み取り |
 | **messages** | ✅ 有効 | メッセージの読み取り/送信/編集/削除 |
 | **threads** | ✅ 有効 | スレッドの作成/返信 |
@@ -434,7 +434,7 @@ AI Agentは`discord`ツールを呼び出してDiscord固有の操作を実行�
 ### その他の設定オプション
 
 | 設定項目 | 説明 | デフォルト値 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `historyLimit` | サーバーチャンネルのコンテキストに含める過去のメッセージ数 | 20 |
 | `dmHistoryLimit` | DMセッションの過去メッセージ数 | 無制限 |
 | `textChunkLimit` | 1メッセージあたりの最大文字数 | 2000 |
@@ -560,7 +560,7 @@ clawdbot gateway --port 18789 --verbose
 > 更新日時：2026-01-27
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Discord Bot設定Schema | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts#L320-L427) | 320-427 |
 | Discordオンボーディングウィザード | [`src/channels/plugins/onboarding/discord.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/discord.ts) | 1-485 |
 | Discordツール操作 | [`src/agents/tools/discord-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/discord-actions.ts) | 1-72 |

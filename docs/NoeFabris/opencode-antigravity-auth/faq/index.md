@@ -65,7 +65,7 @@ Understand usage risks to avoid account suspension.
 ## Quick Problem Location
 
 | Error Symptom | Recommended Reading |
-| ------------- | ------------------ |
+|--- | ---|
 | Authentication failure, authorization timeout | [OAuth Authentication Failure Troubleshooting](./common-auth-issues/) |
 | invalid_grant, Permission Denied | [OAuth Authentication Failure Troubleshooting](./common-auth-issues/) |
 | Model not found, 400 errors | [Model Not Found Troubleshooting](./model-not-found/) |

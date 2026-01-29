@@ -57,7 +57,7 @@ Bevor Sie beginnen, stellen Sie sicher:
 Der Slack-Kanal von Clawdbot basiert auf dem [Bolt](https://slack.dev/bolt-js)-Framework und unterstützt zwei Verbindungsmodi:
 
 | Modus | Anwendungsfall | Vorteile | Nachteile |
-| ------ | -------------- | -------- | --------- |
+|--- | --- | --- | ---|
 | **Socket-Modus** | Lokales Gateway, persönliche Nutzung | Einfache Konfiguration (nur Token erforderlich) | Erfordert ständige WebSocket-Verbindung |
 | **HTTP-Modus** | Server-Deployment, Remote-Zugriff | Kann Firewalls passieren, unterstützt Lastverteilung | Erfordert öffentliche IP, komplexere Konfiguration |
 
@@ -423,7 +423,7 @@ Der Bot antwortet normal auf Ihre Nachricht.
 Die folgenden Berechtigungen sind in der aktuellen Version nicht erforderlich, können aber in Zukunft hinzugefügt werden:
 
 | Berechtigung | Zweck |
-| ------------ | ------ |
+|--- | ---|
 | `groups:write` | Privater Kanal-Management (Erstellen, Umbenennen, Einladen, Archivieren) |
 | `mpim:write` | Gruppen-DM-Sitzungs-Management |
 | `chat:write.public` | Nachrichten in Kanäle veröffentlichen, in denen der Bot nicht Mitglied ist |
@@ -529,7 +529,7 @@ Steuern Sie die Antwortweise des Bot in Kanälen:
 ```
 
 | Modus | Verhalten |
-| ----- | -------- |
+|--- | ---|
 | `off` | Standard, antwortet im Hauptkanal |
 | `first` | Erste Antwort im Thread, nachfolgende Antworten im Hauptkanal |
 | `all` | Alle Antworten im Thread |
@@ -596,10 +596,10 @@ Erlauben Sie dem Agent, Slack-spezifische Operationen aufzurufen:
 > Aktualisiert: 2026-01-27
 
 | Funktion            | Dateipfad                                                                                               | Zeilennummer       |
-| --------------- | ------------------------------------------------------------------------------------------------ | ---------- |
+|--- | --- | ---|
 | Slack-Konfigurationstyp | [`src/config/types.slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.slack.ts) | 1-150      |
 | Slack-Onboarding-Logik | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/slack.ts) | 1-539      |
-| Slack Actions-Tools | [`src/agents/tools/slack-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/slack-actions.ts) | 1-301      |
+|--- | --- | ---|
 | Slack-offizielle Dokumentation | [`docs/channels/slack.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/slack.md) | 1-508      |
 
 **Wichtige Typdefinitionen**:

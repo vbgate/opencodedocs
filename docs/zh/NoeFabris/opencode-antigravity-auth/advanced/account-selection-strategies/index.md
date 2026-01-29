@@ -38,7 +38,7 @@ order: 1
 Antigravity Auth 插件支持三种账户选择策略，决定如何在多个 Google 账户之间分配模型请求：
 
 | 策略 | 行为 | 适用场景 |
-|------|------|---------|
+|--- | --- | ---|
 | `sticky` | 除非当前账户被限速，否则一直用同一个账户 | 单账户、需要 prompt 缓存 |
 | `round-robin` | 每次请求轮换到下一个可用账户 | 多账户、最大化吞吐量 |
 | `hybrid`（默认） | 结合健康评分 + Token bucket + LRU 智能选择 | 2-3 个账户、平衡性能与稳定性 |
@@ -128,7 +128,7 @@ Google 对每个账户都有速率限制。如果只有一个账户，频繁请�
 根据 README 和 CONFIGURATION.md 的推荐：
 
 | 你的设置 | 推荐策略 | 原因 |
-|---------|----------|------|
+|--- | --- | ---|
 | **1 个账户** | `sticky` | 无需轮换，保留 prompt 缓存 |
 | **2-3 个账户** | `hybrid`（默认） | 智能轮换，避免过度限速 |
 | **4+ 个账户** | `round-robin` | 最大化吞吐量，配额利用最均衡 |
@@ -340,7 +340,7 @@ export OPENCODE_ANTIGRAVITY_DEBUG=2 opencode run "Hello" --model=google/antigrav
 ## 本课小结
 
 | 策略 | 核心特点 | 适用场景 |
-|------|---------|---------|
+|--- | --- | ---|
 | `sticky` | 保持账户直到限速 | 1 个账户、需要 prompt 缓存 |
 | `round-robin` | 循环轮换账户 | 4+ 个账户、最大化吞吐量 |
 | `hybrid` | 健康 + Token + LRU 智能选择 | 2-3 个账户、平衡性能与稳定性 |
@@ -374,10 +374,10 @@ export OPENCODE_ANTIGRAVITY_DEBUG=2 opencode run "Hello" --model=google/antigrav
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | 账户选择策略入口 | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L340-L412) | 340-412 |
 | Sticky 策略实现 | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L395-L411) | 395-411 |
-| Round-Robin 策略实现 | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L349-L356) | 349-356 |
+|--- | --- | ---|
 | Hybrid 策略实现 | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts#L358-L383) | 358-383 |
 | 健康评分系统 | [`src/plugin/rotation.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/rotation.ts#L14-L163) | 14-163 |
 | Token bucket 系统 | [`src/plugin/rotation.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/rotation.ts#L290-L402) | 290-402 |

@@ -62,7 +62,7 @@ const widthCache = new Map<string, number>()
 **Exemplo**:
 
 | Texto original (Key) | Largura de exibição (Value) | Descrição |
-| --------------- | ---------------- | ---- |
+|--- | --- | ---|
 | `**姓名**` | 4 | Largura de 4 após remover `**` |
 | `*年龄*` | 4 | Largura de 4 após remover `*` |
 | `` `status` `` | 8 | Símbolos de bloco de código também são contados na largura |
@@ -120,7 +120,7 @@ graph TD
 **Análise de etapas**:
 
 | Etapa | Operação | Complexidade de tempo |
-| ---- | ---- | ---------- |
+|--- | --- | ---|
 | 1 | Verificar `widthCache.has(text)` | O(1) |
 | 2 | Cache hit → Retornar diretamente | O(1) |
 | 3 | Cache miss → Calcular largura | O(n) |
@@ -166,7 +166,7 @@ function cleanupCache() {
 **Condições de acionamento** (qualquer uma delas aciona):
 
 | Condição | Limiar | Descrição |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | Número de operações | > 100 operações de formatação | Evita acionar limpeza com muita frequência |
 | Entradas de cache | > 1000 células | Evita ocupação excessiva de memória |
 
@@ -192,7 +192,7 @@ Suponha uma tabela de 5 colunas × 10 linhas, onde:
 **Efeito do cache**:
 
 | Cenário | Sem cache | Com cache | Melhoria de desempenho |
-| ---- | ---------- | -------- | -------- |
+|--- | --- | --- | ---|
 | 5 colunas × 10 linhas (sem repetição) | 50 cálculos | 50 cálculos | Nenhuma |
 | 5 colunas × 10 linhas (cabeçalho repetido) | 50 cálculos | 10 cálculos + 40 cache hits | ~80% |
 
@@ -207,7 +207,7 @@ Suponha uma tabela de 5 colunas × 10 linhas, onde:
 **Cenários de exemplo**:
 
 | Cenário | Efeito do cache |
-| ---- | -------- |
+|--- | ---|
 | IA gera tabelas de comparação | ✅ Efeito significativo (múltiplas colunas com conteúdo repetido) |
 | Tabelas simples de linha única | ⚪ Efeito médio (conteúdo único) |
 | Tabelas com Markdown aninhado | ✅ Efeito significativo (sobrecarga de remoção de símbolos grande) |
@@ -254,7 +254,7 @@ Este mecanismo permite que o plugin permaneça fluido ao processar tabelas compl
 > Atualizado em: 2026-01-26
 
 | Função | Caminho do arquivo | Número da linha |
-| --- | --- | --- |
+|--- | --- | ---|
 | Definição de widthCache | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L6) | 6 |
 | Definição de cacheOperationCount | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L7) | 7 |
 | Função calculateDisplayWidth | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L151-L159) | 151-159 |

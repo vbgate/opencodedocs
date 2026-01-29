@@ -46,7 +46,7 @@ order: 1
 **详细说明**：
 
 | 对比项 | OpenSkills | Claude Code |
-| ------ | ---------- | ----------- |
+|--- | --- | ---|
 | **定位** | 通用技能加载器 | Anthropic 官方 AI 编码代理 |
 | **支持范围** | 所有 AI 代理（Cursor、Windsurf、Aider 等） | 仅 Claude Code |
 | **技能格式** | 与 Claude Code 完全一致（`SKILL.md`） | 官方规范 |
@@ -61,7 +61,7 @@ order: 1
 **核心原因**：技能是静态文件，MCP 是动态工具，两者解决不同问题。
 
 | 对比维度 | MCP（Model Context Protocol） | OpenSkills（CLI） |
-| -------- | --------------------------- | ----------------- |
+|--- | --- | ---|
 | **适用场景** | 动态工具、实时 API 调用 | 静态指令、文档、脚本 |
 | **运行要求** | 需要 MCP 服务器 | 无需服务器（纯文件） |
 | **代理支持** | 仅支持 MCP 的代理 | 所有能读 `AGENTS.md` 的代理 |
@@ -198,7 +198,7 @@ npx openskills install anthropics/skills --universal
 **为什么有效**：
 
 | 目录 | 谁用 | 说明 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | `.claude/skills/` | Claude Code | Claude Code Marketplace 使用 |
 | `.agent/skills/` | OpenSkills | 其他代理（Cursor、Windsurf）使用 |
 
@@ -547,7 +547,7 @@ OpenSkills 常见问题核心要点：
 > 更新时间：2026-01-24
 
 | 功能        | 文件路径                                                                                                   | 行号    |
-| ----------- | ---------------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 安装命令    | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts)              | 1-424   |
 | 同步命令    | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts)                  | 1-99    |
 | 更新命令    | [`src/commands/update.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/update.ts)              | 1-113   |

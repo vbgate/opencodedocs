@@ -76,7 +76,7 @@ Add a separator row (second row, using `|---|` format):
 
 ```markdown
 | Name | Age |
-|------|-----|
+|--- | ---|
 | Alice | 25 |
 | Bob | 30 |
 ```
@@ -133,7 +133,7 @@ Only 1 row, incomplete format.
 
 ```markdown
 | Name |
-|------|
+|---|
 ```
 
 At least 2 rows are required (including separator row).
@@ -144,7 +144,7 @@ At least 2 rows are required (including separator row).
 
 ```markdown
 | Name | Age |
-|------|-----|
+|--- | ---|
 | Alice |
 ```
 
@@ -154,7 +154,7 @@ First row has 2 columns, second row has 1 column. Column count is inconsistent.
 
 ```markdown
 | Name | Age |
-|------|-----|
+|--- | ---|
 | Alice | 25 |
 ```
 
@@ -176,7 +176,7 @@ No separator row like `|---|---|`.
 
 ```markdown
 | Name | Age |
-|------|-----|
+|--- | ---|
 | Alice | 25 |
 | Bob | 30 |
 ```
@@ -243,7 +243,7 @@ The plugin wraps formatting logic in try-catch, so even if an error occurs, it w
 
 ```markdown
 | Name | Description |
-|------|-------------|
+|--- | ---|
 | Alice | Line 1<br>Line 2 |
 ```
 
@@ -293,7 +293,7 @@ Markdown symbols in inline code (`` `**code**` ``) are calculated at **literal w
 
 ```
 | Symbol | Width |
-|--------|-------|
+|--- | ---|
 | Normal text | 4 |
 | `**bold**` | 8 |
 ```
@@ -342,7 +342,7 @@ If you've checked all the above issues but the problem still exists:
 > Last updated: 2026-01-26
 
 | Feature            | File path                                                                                    | Line number |
-| ------------------ | ------------------------------------------------------------------------------------------- | ----------- |
+|--- | --- | ---|
 | Table validation logic | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88)     | 70-88       |
 | Table row detection | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61)     | 58-61       |
 | Separator row detection | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L63-L68)     | 63-68       |

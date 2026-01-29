@@ -13,7 +13,7 @@ Dieses Kapitel dokumentiert die Versionenvielfalt und Release-Hinweise von Antig
 ## Kapitelinhalt
 
 | Seite | Beschreibung |
-| --- | --- |
+|--- | ---|
 | [Versionsverlauf](./release-notes/) | Wie Sie das in das README eingebettete Changelog lesen, schnell die Auswirkungen eines Upgrades bewerten und nach dem Upgrade verifizieren |
 
 ## Lernpfad

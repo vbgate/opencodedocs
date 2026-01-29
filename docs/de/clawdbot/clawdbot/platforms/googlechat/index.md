@@ -66,11 +66,11 @@ sequenceDiagram
 **Wichtige Konzepte**:
 
 | Konzept | Beschreibung |
-| ------- | ------------ |
+|--- | ---|
 | **Service Account** | Google Cloud-Authentifizierungsmethode für Bot-Identitätsverifizierung |
 | **Webhook** | HTTP-Endpunkt, an den Google Chat Nachrichten an das Gateway POSTet |
 | **Audience** | Ziel zur Verifizierung von Webhook-Anfragen (app-url oder project-number) |
-| **DM-Pairing** | Standard-Sicherheitsmechanismus, Fremde müssen genehmigt werden |
+|--- | ---|
 
 ::: tip
 Der Google Chat-Kanal unterstützt nur Service Account-Authentifizierung, keine OAuth-Benutzerautorisierung. Wenn du Benutzerberechtigungen benötigst, erwäge die Verwendung eines anderen Kanals.
@@ -412,7 +412,7 @@ Wenn du Fehler siehst, führe `clawdbot channels status --probe` aus, um detaill
 ### Service Account-Authentifizierung
 
 | Konfiguration | Typ | Standardwert | Beschreibung |
-| -------------- | --- | ------------ | ------------ |
+|--- | --- | --- | ---|
 | `serviceAccountFile` | string | - | Pfad zur Service Account JSON-Datei |
 | `serviceAccount` | string\|object | - | Inline-JSON-Zugangsdaten (ersetzt Dateipfad) |
 | `audienceType` | "app-url"\|"project-number" | "app-url" | Verifizierungstyp: URL oder Projektnummer |
@@ -423,7 +423,7 @@ Wenn du Fehler siehst, führe `clawdbot channels status --probe` aus, um detaill
 Standardmäßig benötigen fremde Absender Pairing:
 
 | Konfiguration | Typ | Standardwert | Beschreibung |
-| -------------- | --- | ------------ | ------------ |
+|--- | --- | --- | ---|
 | `dm.enabled` | boolean | undefiniert | DM-Empfang aktivieren |
 | `dm.policy` | "pairing"|"open" | "pairing" | Zugriffsrichtlinie: Pairing oder offen |
 | `dm.allowFrom` | array | [] | Liste der zulässigen Absender (Benutzer-IDs oder E-Mails) |
@@ -437,7 +437,7 @@ clawdbot pairing approve googlechat <Pairing-Code>
 ### Gruppenrichtlinie
 
 | Konfiguration | Typ | Standardwert | Beschreibung |
-| -------------- | --- | ------------ | ------------ |
+|--- | --- | --- | ---|
 | `groupPolicy` | "allowlist"|"disabled" | "allowlist" | Gruppenrichtlinie: Whitelist oder deaktiviert |
 | `requireMention` | boolean | true | @Erwähnung zum Auslösen erforderlich |
 | `groups` | object | {} | Konfiguration nach Raum-ID |
@@ -464,7 +464,7 @@ clawdbot pairing approve googlechat <Pairing-Code>
 ### Andere Konfigurationen
 
 | Konfiguration | Typ | Standardwert | Beschreibung |
-| -------------- | --- | ------------ | ------------ |
+|--- | --- | --- | ---|
 | `webhookPath` | string | "/googlechat" | Webhook-Pfad |
 | `botUser` | string | - | Bot-Benutzer-Ressourcenname (für Erwähnungserkennung) |
 | `typingIndicator` | "none"|"message"|"reaction" | "message" | Tippindikator-Modus |
@@ -568,11 +568,11 @@ Füge in `~/.clawdbot/clawdbot.json` Folgendes hinzu:
 > Aktualisierungszeit: 2026-01-27
 
 | Funktion | Dateipfad | Zeilennummer |
-| -------- | --------- | ------------ |
+|--- | --- | ---|
 | Google Chat Konfigurationstyp-Definitionen | [`src/config/types.googlechat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.googlechat.ts) | 1-109 |
 | Google Chat Zod Schema | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts) | 273-341 |
 | Kanal-Registrierung | [`src/channels/registry.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.ts) | 61-67 |
-| Gruppen-Erwähnungs-Parsing | [`src/channels/plugins/group-mentions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/group-mentions.ts) | 158-175 |
+|--- | --- | ---|
 | Google Chat Dokumentation | [`docs/channels/googlechat.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/googlechat.md) | 1-221 |
 
 **Wichtige Typen**:

@@ -74,7 +74,7 @@ Android 裝置（節點應用程式）
 Android 節點支援以下裝置本機操作：
 
 | 功能 | 指令 | 說明 |
-| ---- | ------ | ---- |
+|--- | --- | ---|
 | **Canvas** | `canvas.*` | 顯示即時視覺化介面（A2UI） |
 | **Camera** | `camera.*` | 拍照（JPG）和錄影（MP4） |
 | **Screen** | `screen.*` | 螢幕錄製 |
@@ -454,7 +454,7 @@ clawdbot nodes invoke --node "android-node" --command location.get
 > 更新時間：2026-01-27
 
 | 功能        | 檔案路徑                                                                                    | 行號    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 節點指令策略 | [`src/gateway/node-command-policy.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/node-command-policy.ts) | 1-112   |
 | 節點通訊協定 Schema | [`src/gateway/protocol/schema/nodes.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/schema/nodes.ts) | 1-103   |
 | Android 文件  | [`docs/platforms/android.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/android.md) | 1-142   |

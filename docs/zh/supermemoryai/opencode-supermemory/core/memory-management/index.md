@@ -27,7 +27,7 @@ opencode-supermemory 将记忆分为两个隔离的**作用域 (Scope)**，类�
 ### 1. 两种作用域
 
 | 作用域 | 标识符 (Scope ID) | 生命周期 | 典型用途 |
-| :--- | :--- | :--- | :--- |
+|--- | --- | --- | ---|
 | **User Scope**<br>(用户作用域) | `user` | **永久跟随你**<br>跨所有项目共享 | • 编码风格偏好 (如 "喜欢 TypeScript")<br>• 个人习惯 (如 "总是写注释")<br>• 通用知识 |
 | **Project Scope**<br>(项目作用域) | `project` | **仅限当前项目**<br>切换目录即失效 | • 项目架构设计<br>• 业务逻辑说明<br>• 特定 Bug 的修复方案 |
 
@@ -191,7 +191,7 @@ Supermemory 的向量索引通常是秒级的，但在网络波动时可能有�
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Scope 生成逻辑 | [`src/services/tags.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/tags.ts#L18-L36) | 18-36 |
 | 记忆工具定义 | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
 | 记忆类型定义 | [`src/types/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/types/index.ts) | - |

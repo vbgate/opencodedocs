@@ -56,7 +56,7 @@ Antigravity Tools のミドルウェアは `Authorization` を優先的に読み
 ### 互換エンドポイント概要（この授業関連）
 
 | エンドポイント | 用途 | コード証拠 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `POST /v1/chat/completions` | Chat Completions（ストリーミングを含む） | `src-tauri/src/proxy/server.rs` ルート登録；`src-tauri/src/proxy/handlers/openai.rs` |
 | `POST /v1/completions` | Legacy Completions（同じハンドラーを再利用） | `src-tauri/src/proxy/server.rs` ルート登録 |
 | `POST /v1/responses` | Responses/Codex CLI 互換（同じハンドラーを再利用） | `src-tauri/src/proxy/server.rs` ルート登録（コメント：Codex CLI 互換） |
@@ -203,16 +203,16 @@ OpenAI ハンドラーは最大3回の試行を内蔵し（アカウントプー
 > 更新日時：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI ルート登録（/v1/responses を含む） | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | Chat Completions ハンドラー（Responses 形式検出を含む） | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L70-L462) | 70-462 |
 | /v1/completions と /v1/responses ハンドラー（Codex/Responses 正規化 + 再試行/ローテーション） | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L464-L1080) | 464-1080 |
 | /v1/models の返り（動的モデルリスト） | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L1082-L1102) | 1082-1102 |
 | OpenAI リクエストデータ構造（messages/instructions/input/size/quality） | [`src-tauri/src/proxy/mappers/openai/models.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/models.rs#L7-L38) | 7-38 |
-| OpenAI -> Gemini リクエスト変換（systemInstruction/thinkingConfig/tools） | [`src-tauri/src/proxy/mappers/openai/request.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/request.rs#L6-L553) | 6-553 |
-| Gemini -> OpenAI レスポンス変換（choices/usageMetadata） | [`src-tauri/src/proxy/mappers/openai/response.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/response.rs#L5-L214) | 5-214 |
+|--- | --- | ---|
+|--- | --- | ---|
 | モデルマッピングとワイルドカード優先度（厳密 > ワイルドカード > デフォルト） | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L180-L228) | 180-228 |
-| 認証ミドルウェア（Authorization/x-api-key/x-goog-api-key） | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L15-L77) | 15-77 |
+|--- | --- | ---|
 
 **重要な定数**：
 - `MAX_RETRY_ATTEMPTS = 3`：OpenAI プロトコル最大試行回数（ローテーションを含む）（`src-tauri/src/proxy/handlers/openai.rs` を参照）

@@ -234,7 +234,7 @@ print(resp.text)
 > 更新時間：2026-01-23
 
 | 主題 | 檔案路徑 | 行號 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 反代服務啟動/停止/狀態 | [`src-tauri/src/commands/proxy.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/proxy.rs#L42-L178) | 42-178 |
 | 啟動前帳戶池檢查（無帳戶時的報錯條件） | [`src-tauri/src/commands/proxy.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/proxy.rs#L81-L91) | 81-91 |
 | 路由註冊（含 `/healthz`） | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |

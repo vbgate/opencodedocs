@@ -13,7 +13,7 @@ Este capítulo recopila los códigos de error y escenarios de excepción más co
 ## Contenido de este capítulo
 
 | Tipo de problema | Página | Descripción |
-|------------------|--------|-------------|
+|--- | --- | ---|
 | Cuenta desactivada | [invalid_grant y desactivación automática de cuentas](./invalid-grant/) | ¿La cuenta de repente no está disponible? Entiende las causas de la invalidación del token OAuth y el proceso de recuperación |
 | Falla de autenticación | [401/falla de autenticación](./auth-401/) | ¿Solicitud rechazada? Verifica la configuración de auth_mode y el formato de Header |
 | Error de limitación | [429/error de capacidad](./429-rotation/) | ¿429 frecuente? Distingue entre cuota insuficiente y limitación upstream, usa estrategias de rotación para reducir el impacto |

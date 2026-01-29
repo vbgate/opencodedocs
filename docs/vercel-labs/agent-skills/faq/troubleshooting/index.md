@@ -81,7 +81,7 @@ bash skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh .
 2. Common error types:
 
 | Error Message | Possible Cause | Solution |
-| -------- | -------- | -------- |
+|--- | --- | ---|
 | "File too large" | Project size exceeds limit | Exclude unnecessary files (e.g., `*.log`, `*.test.ts`) |
 | "Invalid framework" | Framework recognition failed | Add `package.json` or manually specify framework |
 | "Network timeout" | Network timeout | Check network connection, retry deployment |
@@ -116,7 +116,7 @@ According to source code [`deploy.sh:12-156`](https://github.com/vercel-labs/age
 **Solution**:
 
 | Scenario | Solution |
-| ---- | -------- |
+|--- | ---|
 | `package.json` exists but detection fails | Check if dependencies are in `dependencies` or `devDependencies` |
 | Pure static HTML project | Ensure root directory has `index.html`, script will automatically rename single HTML files (see source code [`deploy.sh:198-205`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh#L198-L205)) |
 | Framework not in supported list | Deploy directly (framework is null), Vercel will auto-detect |
@@ -209,7 +209,7 @@ According to source code [`validate.ts:21-66`](https://github.com/vercel-labs/ag
 ::: tip Validation Error Examples and Fixes
 
 | Error Message | Cause | Fix |
-| -------- | ---- | -------- |
+|--- | --- | ---|
 | `Missing or empty title` | frontmatter missing `title` | Add at top of rule file:<br>`---`<br>`title: "Rule Title"`<br>`---` |
 | `Missing or empty explanation` | Missing rule explanation | Add `explanation` field in frontmatter |
 | `Missing examples` | No code examples | Add `**Incorrect:**` and `**Correct:**` code blocks |
@@ -459,7 +459,7 @@ If above methods cannot solve the problem:
 > Last updated: 2026-01-25
 
 | Feature        | File Path                                                                                      | Line #  |
-| ----------- | --------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Network error handling | [`skills/claude.ai/vercel-deploy-claimable/SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/SKILL.md#L100-L113) | 100-113 |
 | Rule validation logic | [`packages/react-best-practices-build/src/validate.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/validate.ts) | 21-66   |
 | Framework detection logic | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 12-156  |

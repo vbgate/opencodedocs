@@ -44,7 +44,7 @@ opencode-notify 监听四类 OpenCode 事件，每类都有明确的触发场景
 **触发时机**：当 AI 会话进入空闲状态（任务完成）
 
 | 项目 | 说明 |
-|-----|------|
+|--- | ---|
 | 通知标题 | Ready for review |
 | 通知内容 | 会话标题（最多 50 字符） |
 | 默认音效 | Glass (macOS) |
@@ -56,7 +56,7 @@ opencode-notify 监听四类 OpenCode 事件，每类都有明确的触发场景
 **触发时机**：当 AI 会话执行出错
 
 | 项目 | 说明 |
-|-----|------|
+|--- | ---|
 | 通知标题 | Something went wrong |
 | 通知内容 | 错误摘要（最多 100 字符） |
 | 默认音效 | Basso (macOS) |
@@ -68,7 +68,7 @@ opencode-notify 监听四类 OpenCode 事件，每类都有明确的触发场景
 **触发时机**：当 AI 需要用户授权执行某操作（如读取文件、访问网络）
 
 | 项目 | 说明 |
-|-----|------|
+|--- | ---|
 | 通知标题 | Waiting for you |
 | 通知内容 | OpenCode needs your input |
 | 默认音效 | Submarine (macOS) |
@@ -80,7 +80,7 @@ opencode-notify 监听四类 OpenCode 事件，每类都有明确的触发场景
 **触发时机**：当 AI 使用 `question` 工具向你提问
 
 | 项目 | 说明 |
-|-----|------|
+|--- | ---|
 | 通知标题 | Question for you |
 | 通知内容 | OpenCode needs your input |
 | 默认音效 | Submarine (macOS) |
@@ -242,7 +242,7 @@ sequenceDiagram
 通过配置文件，你可以调整过滤机制的各个层级：
 
 | 配置项 | 影响层级 | 默认值 | 说明 |
-|-------|---------|--------|------|
+|--- | --- | --- | ---|
 | `notifyChildSessions` | 父会话检查 | `false` | 设为 `true` 可启用子会话通知 |
 | `quietHours.enabled` | 静音时段检查 | `false` | 设为 `true` 启用静音时段 |
 | `quietHours.start` | 静音时段检查 | `"22:00"` | 静音开始时间 |
@@ -302,7 +302,7 @@ opencode-notify 的工作原理可以概括为：
 > 更新时间：2026-01-27
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 插件主入口 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L357-L406) | 357-406 |
 | 配置加载 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L90-L114) | 90-114 |
 | 默认配置 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L56-L68) | 56-68 |

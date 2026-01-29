@@ -68,7 +68,7 @@ The intelligence of oh-my-opencode lies in: **making each task use the most suit
 oh-my-opencode supports two levels of configuration:
 
 | Location | Path | Priority | Use Case |
-|----------|------|----------|----------|
+|--- | --- | --- | ---|
 | **Project Configuration** | `.opencode/oh-my-opencode.json` | Low | Project-specific configuration (committed with codebase) |
 | **User Configuration** | `~/.config/opencode/oh-my-opencode.json` | High | Global configuration (shared across all projects) |
 
@@ -131,7 +131,7 @@ oh-my-opencode supports 6 main Providers. Configuration methods vary by Provider
 **Model Mapping** (Sisyphus default configuration):
 
 | Agent | Default Model | Purpose |
-|-------|---------------|---------|
+|--- | --- | ---|
 | Sisyphus | `anthropic/claude-opus-4-5` | Main orchestrator, complex reasoning |
 | Prometheus | `anthropic/claude-opus-4-5` | Project planning |
 | Metis | `anthropic/claude-sonnet-4-5` | Pre-planning analysis |
@@ -162,7 +162,7 @@ oh-my-opencode supports 6 main Providers. Configuration methods vary by Provider
 **Model Mapping** (Oracle default configuration):
 
 | Agent | Default Model | Purpose |
-|-------|---------------|---------|
+|--- | --- | ---|
 | Oracle | `openai/gpt-5.2` | Architecture review, debugging |
 
 **Manual Override Example**:
@@ -246,7 +246,7 @@ For Gemini authentication, we highly recommend installing the [`opencode-antigra
 **Model Mapping** (default configuration):
 
 | Agent | Default Model | Purpose |
-|-------|---------------|---------|
+|--- | --- | ---|
 | Multimodal Looker | `google/antigravity-gemini-3-flash` | PDF, image analysis |
 
 ### GitHub Copilot (Backup Provider)
@@ -278,7 +278,7 @@ GitHub Copilot acts as a proxy Provider, routing requests to the underlying mode
 **Model Mapping** (when GitHub Copilot is the best available Provider):
 
 | Agent | Model | Purpose |
-|-------|-------|---------|
+|--- | --- | ---|
 | Sisyphus | `github-copilot/claude-opus-4.5` | Main orchestrator |
 | Oracle | `github-copilot/gpt-5.2` | Architecture review |
 | Explore | `opencode/gpt-5-nano` | Quick exploration |
@@ -305,7 +305,7 @@ bunx oh-my-opencode install
 **Model Mapping** (when Z.ai is the only available Provider):
 
 | Agent | Model | Purpose |
-|-------|-------|---------|
+|--- | --- | ---|
 | Sisyphus | `zai-coding-plan/glm-4.7` | Main orchestrator |
 | Oracle | `zai-coding-plan/glm-4.7` | Architecture review |
 | Explore | `zai-coding-plan/glm-4.7-flash` | Quick exploration |
@@ -325,7 +325,7 @@ bunx oh-my-opencode install
 **Model Mapping** (when OpenCode Zen is the best available Provider):
 
 | Agent | Model | Purpose |
-|-------|-------|---------|
+|--- | --- | ---|
 | Sisyphus | `opencode/claude-opus-4-5` | Main orchestrator |
 | Oracle | `opencode/gpt-5.2` | Architecture review |
 | Explore | `opencode/gpt-5-nano` | Quick exploration |
@@ -380,7 +380,7 @@ anthropic → github-copilot → opencode → antigravity → google
 **Provider Priority Chain for All Agents**:
 
 | Agent | Model (no prefix) | Provider Priority Chain |
-|-------|-------------------|-------------------------|
+|--- | --- | ---|
 | **Sisyphus** | `claude-opus-4-5` | anthropic → github-copilot → opencode → antigravity → google |
 | **Oracle** | `gpt-5.2` | openai → anthropic → google → github-copilot → opencode |
 | **Librarian** | `big-pickle` | opencode → github-copilot → anthropic |
@@ -394,13 +394,13 @@ anthropic → github-copilot → opencode → antigravity → google
 **Provider Priority Chain for Categories**:
 
 | Category | Model (no prefix) | Provider Priority Chain |
-|----------|-------------------|-------------------------|
-| **visual-engineering** | `gemini-3-pro` | google → openai → anthropic → github-copilot → opencode |
+|--- | --- | ---|
+|--- | --- | ---|
 | **ultrabrain** | `gpt-5.2-codex` | openai → anthropic → google → github-copilot → opencode |
 | **artistry** | `gemini-3-pro` | google → openai → anthropic → github-copilot → opencode |
 | **quick** | `claude-haiku-4-5` | anthropic → github-copilot → opencode → antigravity → google |
-| **unspecified-low** | `claude-sonnet-4-5` | anthropic → github-copilot → opencode → antigravity → google |
-| **unspecified-high** | `claude-opus-4-5` | anthropic → github-copilot → opencode → antigravity → google |
+|--- | --- | ---|
+|--- | --- | ---|
 | **writing** | `gemini-3-flash` | google → openai → anthropic → github-copilot → opencode |
 
 ### Step 3: System Default
@@ -745,7 +745,7 @@ Or manually override:
 > Last updated: 2026-01-26
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | Configuration Schema Definition | [`src/config/schema.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/config/schema.ts) | 1-378 |
 | Installation Guide (Provider Configuration) | [`docs/guide/installation.md`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/docs/guide/installation.md) | 1-299 |
 | Configuration Reference (Model Resolution) | [`docs/configurations.md`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/docs/configurations.md) | 391-512 |

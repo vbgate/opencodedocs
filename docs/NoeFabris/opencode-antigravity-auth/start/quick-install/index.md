@@ -288,7 +288,7 @@ If you see the AI responding normally, congratulations! The Antigravity Auth plu
 **Solutions**: Use `~/.config/opencode/opencode.json` on all systems, including Windows (where `~` automatically resolves to the user directory).
 
 | System | Correct Path | Incorrect Path |
-| ---- | ------------------------ | --------------------- |
+|--- | --- | ---|
 | macOS/Linux | `~/.config/opencode/opencode.json` | `/usr/local/etc/...` |
 | Windows | `C:\Users\YourName\.config\opencode\opencode.json` | `%APPDATA%\opencode\...` |
 
@@ -326,7 +326,7 @@ In this lesson, we completed:
 > Last updated: 2026-01-23
 
 | Feature | File Path | Lines |
-| ------------------- | ---------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | OAuth Authorization URL Generation | [`src/antigravity/oauth.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/antigravity/oauth.ts#L91-L113) | 91-113  |
 | PKCE Key Pair Generation | [`src/antigravity/oauth.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/antigravity/oauth.ts#L1-L2)   | 1-2     |
 | Token Exchange | [`src/antigravity/oauth.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/antigravity/oauth.ts#L201-L270) | 201-270 |

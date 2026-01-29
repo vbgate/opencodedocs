@@ -46,7 +46,7 @@ order: 2
 **智谱 AI**和**Z.ai**的额度系统分为两种类型：
 
 | 额度类型 | 含义 | 重置周期 |
-| -------- | ---- | -------- |
+|--- | --- | ---|
 | **5 小时 Token 限额** | API 请求的 Token 使用量限制 | 5 小时自动重置 |
 | **MCP 月度配额** | MCP（Model Context Protocol）搜索次数的月度限制 | 每月重置 |
 
@@ -143,7 +143,7 @@ Account:        9c89****AQVM (Z.ai)
 对照以下说明查看你的输出：
 
 | 输出字段 | 含义 | 示例 |
-| -------- | ---- | ---- |
+|--- | --- | ---|
 | **Account** | 脱敏后的 API Key 和账号类型 | `9c89****AQVM (Coding Plan)` |
 | **5 小时 Token 限额** | 当前 5 小时周期内的 Token 使用情况 | 进度条 + 百分比 |
 | **已用: X / Y** | 已使用 Token / 总配额 | `0.5M / 10.0M` |
@@ -249,7 +249,7 @@ Account:        9c89****AQVM (Z.ai)
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 查询智谱 AI 额度 | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 213-217 |
 | 查询 Z.ai 额度 | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 224-228 |
 | 格式化输出 | [`source/vbgate/opencode-mystatus/plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 115-177 |

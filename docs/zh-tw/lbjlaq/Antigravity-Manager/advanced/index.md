@@ -13,7 +13,7 @@ description: "學習 Antigravity-Manager 的進階配置方法。掌握帳號調
 ## 本章包含
 
 | 教程 | 說明 |
-|-----|------|
+|--- | ---|
 | [配置全解](./config/) | AppConfig/ProxyConfig 的完整欄位、落盤位置與熱更新語義 |
 | [安全與隱私](./security/) | `auth_mode`、`allow_lan_access` 與安全基線設計 |
 | [高可用調度](./scheduling/) | 輪換、固定帳號、黏性會話與失敗重試機制 |
@@ -70,7 +70,7 @@ context-compression  system    deployment
 **快速選擇**：
 
 | 你的場景 | 推薦先看 |
-|---------|---------|
+|--- | ---|
 | 多帳號輪換不穩定 | [高可用調度](./scheduling/) |
 | 想固定某個模型名 | [模型路由](./model-router/) |
 | 配額總是用完 | [配額治理](./quota/) |

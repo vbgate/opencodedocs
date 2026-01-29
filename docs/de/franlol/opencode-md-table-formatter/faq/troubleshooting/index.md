@@ -76,7 +76,7 @@ Fügen Sie eine Trennzeile hinzu (zweite Zeile im Format `|---|`):
 
 ```markdown
 | Name | Age |
-|------|-----|
+|--- | ---|
 | Alice | 25 |
 | Bob | 30 |
 ```
@@ -133,7 +133,7 @@ Nur 1 Zeile, Format unvollständig.
 
 ```markdown
 | Name |
-|------|
+|---|
 ```
 
 Mindestens 2 Zeilen erforderlich (einschließlich Trennzeile).
@@ -144,7 +144,7 @@ Mindestens 2 Zeilen erforderlich (einschließlich Trennzeile).
 
 ```markdown
 | Name | Age |
-|------|-----|
+|--- | ---|
 | Alice |
 ```
 
@@ -154,7 +154,7 @@ Erste Zeile 2 Spalten, zweite Zeile 1 Spalte, Spaltenanzahl nicht einheitlich.
 
 ```markdown
 | Name | Age |
-|------|-----|
+|--- | ---|
 | Alice | 25 |
 ```
 
@@ -176,7 +176,7 @@ Keine Trennzeile wie `|---|---|`.
 
 ```markdown
 | Name | Age |
-|------|-----|
+|--- | ---|
 | Alice | 25 |
 | Bob | 30 |
 ```
@@ -243,7 +243,7 @@ Das Plugin umschließt die Formatierungslogik mit try-catch. Selbst bei einem Fe
 
 ```markdown
 | Name | Description |
-|------|-------------|
+|--- | ---|
 | Alice | Line 1<br>Line 2 |
 ```
 
@@ -293,7 +293,7 @@ Markdown-Symbole in Inline-Code (`` `**code**` ``) werden **wörtlich nach Breit
 
 ```
 | Symbol | Breite |
-|--------|--------|
+|--- | ---|
 | Normaler Text | 4 |
 | `**bold**` | 8 |
 ```
@@ -342,7 +342,7 @@ Wenn Sie alle oben genannten Probleme überprüft haben, aber das Problem weiter
 > Aktualisierungszeit: 2026-01-26
 
 | Funktion            | Dateipfad                                                                                    | Zeilen  |
-| ------------------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Tabellenvalidierungslogik    | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88)     | 70-88   |
 | Tabellenzeilenerkennung      | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61)     | 58-61   |
 | Trennzeilenerkennung      | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L63-L68)     | 63-68   |

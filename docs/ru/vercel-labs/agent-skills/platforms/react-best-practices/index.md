@@ -64,7 +64,7 @@ Agent Skills — это набор расширяемых навыков для 
 Оптимизация производительности React — это не только использование нескольких Hook, но и решение проблем **на уровне архитектуры**. 57 правил Vercel разделены по приоритетам на 8 категорий:
 
 | Приоритет | Категория | Фокус | Типичный прирост |
-| --------- | --------- | ----- | --------------- |
+|--- | --- | --- | ---|
 | **CRITICAL** | Устранение каскадной загрузки | Избегание последовательных async операций | 2-10× улучшение |
 | **CRITICAL** | Оптимизация сборки | Уменьшение начального размера пакета | Значительное улучшение TTI/LCP |
 | **HIGH** | Производительность сервера | Оптимизация получения данных и кеширования | Уменьшение нагрузки на сервер |
@@ -379,7 +379,7 @@ const filtered = items.filter(...)
 > Обновлено: 2026-01-25
 
 | Функция | Путь к файлу | Строки |
-| ------- | ------------ | ------ |
+|--- | --- | ---|
 | Определение навыка лучших практик React | [`skills/react-best-practices/SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/SKILL.md) | Весь файл |
 | Полная документация правил | [`skills/react-best-practices/AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/AGENTS.md) | Весь файл |
 | 57 файлов правил | [`skills/react-best-practices/rules/*.md`](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices/rules) | - |
@@ -390,7 +390,7 @@ const filtered = items.filter(...)
 **Ключевые файлы (примеры правил уровня CRITICAL)**:
 
 | Правило | Путь к файлу | Описание |
-| ------- | ------------ | -------- |
+|--- | --- | ---|
 | Параллельные запросы Promise.all() | [`async-parallel.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/async-parallel.md) | Устранение каскадной загрузки |
 | Динамический импорт больших компонентов | [`bundle-dynamic-imports.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/bundle-dynamic-imports.md) | Уменьшение размера Bundle |
 | Defer await | [`async-defer-await.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/async-defer-await.md) | Отложенное выполнение асинхронных операций |

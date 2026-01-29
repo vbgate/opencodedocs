@@ -98,7 +98,7 @@ description: Deploy applications and websites to Vercel. Use this skill when the
 ### Trigger Keyword Selection Guide
 
 | Writing Scenario | Recommended Keywords | Avoid Using |
-|-----------------|---------------------|-------------|
+|--- | --- | ---|
 | **Deployment Operations** | "deploy", "production", "push", "publish" | "send", "move" |
 | **Code Review** | "review", "check", "audit", "optimize" | "look at", "see" |
 | **Design Check** | "accessibility", "a11y", "UX check", "design audit" | "design", "style" |
@@ -147,7 +147,7 @@ Tokens are a limited resource. If the `SKILL.md` file is too long, it will occup
 According to official documentation, the following strategies can minimize context usage:
 
 | Strategy | Description | Effect |
-|----------|-------------|--------|
+|--- | --- | ---|
 | **Keep SKILL.md concise** | Put detailed reference materials in separate files | Reduces initial load |
 | **Write specific descriptions** | Helps AI precisely determine when to activate | Avoids false triggers |
 | **Progressive disclosure** | Read support files only when needed | Controls actual token consumption |
@@ -233,7 +233,7 @@ For complete API reference, see:
 ### Practical Example: Vercel Deploy vs React Best Practices
 
 | Skill | SKILL.md Lines | Loaded Content | Optimization Strategy |
-|-------|----------------|----------------|----------------------|
+|--- | --- | --- | ---|
 | Vercel Deploy | ~60 lines | Concise usage + output format | Scripts handle complex logic |
 | React Best Practices | ~300 lines | Rule index + categorization | Detailed rules in AGENTS.md |
 | Web Design Guidelines | ~50 lines | Audit process | Dynamically pull rules from GitHub |
@@ -338,7 +338,7 @@ AI: (loads vercel-deploy, executes once)
 **Comparison**: Which consumes fewer tokens for the same task?
 
 | Approach | Token Consumption | Recommended Scenario |
-|----------|------------------|---------------------|
+|--- | --- | ---|
 | **Inline code** (logic in SKILL.md) | High (loads every trigger) | Simple tasks (<10 lines) |
 | **Bash scripts** | Low (loads script path only, not content) | Complex tasks (>10 lines) |
 
@@ -528,7 +528,7 @@ description: "Review React code for accessibility and UX"
 > Last updated: 2026-01-25
 
 | Function | File Path | Line Numbers |
-|----------|-----------|--------------|
+|--- | --- | ---|
 | Context management best practices | [`AGENTS.md:70-78`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L70-L78) | 70-78 |
 | Skill triggering examples | [`README.md:88-102`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L88-L102) | 88-102 |
 | React skill trigger words | [`SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/SKILL.md) | 1-30 |

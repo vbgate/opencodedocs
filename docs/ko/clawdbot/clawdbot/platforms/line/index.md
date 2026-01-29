@@ -76,7 +76,7 @@ LINE 사용자
 **핵심 개념**:
 
 | 개념 | 역할 |
-|------|------|
+|--- | ---|
 | **Channel Access Token** | 메시지 전송을 위한 인증 토큰 |
 | **Channel Secret** | Webhook 서명을 검증하기 위한 비밀 키 |
 | **Webhook URL** | Clawdbot이 LINE 이벤트를 수신하는 엔드포인트(HTTPS 필수) |
@@ -88,7 +88,7 @@ LINE 사용자
 ### 필요한 계정 및 도구
 
 | 항목 | 요구사항 | 획득 방법 |
-|------|----------|----------|
+|--- | --- | ---|
 | **LINE Developers 계정** | 무료 등록 | https://developers.line.biz/console/ |
 | **LINE Provider** | Provider 및 Messaging API channel 생성 | LINE Console |
 | **HTTPS 서버** | Webhook은 HTTPS 필수 | ngrok, Cloudflare Tunnel, Tailscale Serve/Funnel |
@@ -155,7 +155,7 @@ Clawdbot를 구성하려면 `Channel Access Token`과 `Channel Secret`이 필요
 3. 다음 정보 복사:
 
 | 항목 | 위치 | 예시 |
-|------|------|------|
+|--- | --- | ---|
 | **Channel Access Token** | Basic settings → Channel access token (long-lived) | `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...` |
 | **Channel Secret** | Basic settings → Channel secret | `1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7` |
 
@@ -261,7 +261,7 @@ ngrok http 18789
 Webhook settings에서 다음 이벤트를 체크:
 
 | 이벤트 | 용도 |
-|------|------|
+|--- | ---|
 | **Message event** | 사용자가 보낸 메시지 수신 |
 | **Follow event** | 사용자가 Bot을 친구로 추가 |
 | **Unfollow event** | 사용자가 Bot을 제거 |
@@ -348,7 +348,7 @@ clawdbot pairing approve line ABC123
 구성이 올바른지 확인:
 
 | 확인 항목 | 확인 방법 | 예상 결과 |
-|--------|----------|----------|
+|--- | --- | ---|
 | **플러그인 설치됨** | `clawdbot plugins list` | `@clawdbot/line` 표시 |
 | **구성 유효함** | `clawdbot doctor` | LINE 관련 오류 없음 |
 | **Webhook 접근 가능** | LINE Console 확인 | `✓ Verification succeeded` |
@@ -531,7 +531,7 @@ clawdbot line rich-menu set-default --rich-menu-id <MENU_ID>
 Clawdbot은 Markdown 형식을 LINE이 지원하는 형식으로 자동 변환합니다:
 
 | Markdown | LINE 변환 결과 |
-|----------|---------------|
+|--- | ---|
 | 코드 블록 | Flex 카드 |
 | 표 | Flex 카드 |
 | 링크 | 자동 감지 및 Flex 카드로 변환 |
@@ -577,7 +577,7 @@ LINE 채널은 풍부한 메시지 유형과 상호 작용 방식을 제공하�
 > 업데이트 시간: 2026-01-27
 
 | 기능 | 파일 경로 | 행 번호 |
-|------|---------|------|
+|--- | --- | ---|
 | LINE Bot 핵심 구현 | [`src/line/bot.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/bot.ts) | 27-83 |
 | 구성 Schema 정의 | [`src/line/config-schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/config-schema.ts) | 1-54 |
 | Webhook 이벤트 핸들러 | [`src/line/bot-handlers.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/bot-handlers.ts) | 1-100 |

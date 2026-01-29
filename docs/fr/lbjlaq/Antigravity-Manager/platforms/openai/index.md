@@ -56,7 +56,7 @@ L'**API compatible OpenAI** est un ensemble de routes HTTP et de protocoles JSON
 ### Aperçu des points de terminaison compatibles (liés à ce cours)
 
 | Point de terminaison | Utilisation | Preuve dans le code |
-| --- | --- | --- |
+|--- | --- | ---|
 | `POST /v1/chat/completions` | Chat Completions (avec flux) | Enregistrement de route dans `src-tauri/src/proxy/server.rs` ; `src-tauri/src/proxy/handlers/openai.rs` |
 | `POST /v1/completions` | Completions héritées (réutilisation du même gestionnaire) | Enregistrement de route dans `src-tauri/src/proxy/server.rs` |
 | `POST /v1/responses` | Compatibilité Responses/Codex CLI (réutilisation du même gestionnaire) | Enregistrement de route dans `src-tauri/src/proxy/server.rs` (commentaire : compatibilité Codex CLI) |
@@ -203,16 +203,16 @@ Le gestionnaire OpenAI intègre jusqu'à 3 tentatives (et est limité par la tai
 > Dernière mise à jour : 2026-01-23
 
 | Fonctionnalité | Chemin du fichier | Lignes |
-| --- | --- | --- |
+|--- | --- | ---|
 | Enregistrement des routes OpenAI (incluant /v1/responses) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | Gestionnaire Chat Completions (incluant la détection du format Responses) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L70-L462) | 70-462 |
 | Gestionnaire /v1/completions et /v1/responses (normalisation Codex/Responses + nouvelles tentatives/rotation) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L464-L1080) | 464-1080 |
 | Retour de /v1/models (liste dynamique de modèles) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L1082-L1102) | 1082-1102 |
 | Structure de données de requête OpenAI (messages/instructions/input/size/quality) | [`src-tauri/src/proxy/mappers/openai/models.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/models.rs#L7-L38) | 7-38 |
-| Conversion OpenAI -> Gemini de la requête (systemInstruction/thinkingConfig/tools) | [`src-tauri/src/proxy/mappers/openai/request.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/request.rs#L6-L553) | 6-553 |
-| Conversion Gemini -> OpenAI de la réponse (choices/usageMetadata) | [`src-tauri/src/proxy/mappers/openai/response.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/response.rs#L5-L214) | 5-214 |
+|--- | --- | ---|
+|--- | --- | ---|
 | Mappage de modèles et priorité des caractères génériques (exact > générique > défaut) | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L180-L228) | 180-228 |
-| Middleware d'authentification (Authorization/x-api-key/x-goog-api-key) | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L15-L77) | 15-77 |
+|--- | --- | ---|
 
 **Constantes clés** :
 - `MAX_RETRY_ATTEMPTS = 3` : nombre maximum de tentatives pour le protocole OpenAI (incluant la rotation) (voir `src-tauri/src/proxy/handlers/openai.rs`)

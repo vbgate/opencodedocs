@@ -43,7 +43,7 @@ But what if you could run them in parallel? 3 agents working at the same time, t
 Scenarios where using the background task system can boost efficiency:
 
 | Scenario | Example | Value |
-|----------|---------|-------|
+|--- | --- | ---|
 | **Parallel Research** | Explore finding implementations + Librarian consulting docs | 3x faster research completion |
 | **Multi-Expert Review** | Oracle reviewing architecture + Momus validating plans | Get multi-perspective feedback quickly |
 | **Async Tasks** | Perform code review while submitting Git commit | Don't block the main flow |
@@ -172,7 +172,7 @@ If the task is still running:
 ## Task Status
 
 | Field | Value |
-|-------|-------|
+|--- | ---|
 | Task ID | `bg_abc123` |
 | Description | Explore: 查找认证实现 |
 | Agent | explore |
@@ -266,7 +266,7 @@ Sometimes tasks get stuck or are no longer needed; you can actively cancel them 
 Cancelled 3 background task(s):
 
 | Task ID | Description | Status | Session ID |
-|---------|-------------|--------|------------|
+|--- | --- | --- | ---|
 | `bg_abc123` | Explore: 查找认证实现 | running | `sess_xyz789` |
 | `bg_def456` | Librarian: 研究最佳实践 | running | `sess_uvwx012` |
 | `bg_ghi789` | Oracle: 审查架构设计 | pending | (not started) |
@@ -359,7 +359,7 @@ The background task system lets you work like a real team, with multiple AI agen
 > Updated: 2026-01-26
 
 | Feature | File Path | Line Numbers |
-|---------|-----------|-------------|
+|--- | --- | ---|
 | Background Task Manager | [`src/features/background-agent/manager.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/background-agent/manager.ts) | 1-1378 |
 | Concurrency Control | [`src/features/background-agent/concurrency.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/background-agent/concurrency.ts) | 1-138 |
 | delegate_task tool | [`src/tools/background-task/tools.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/tools/background-task/tools.ts) | 51-119 |

@@ -115,7 +115,7 @@ No arquivo de configuração, adicione o seguinte conteúdo (mantenha a configur
 **Por que configurar assim**:
 
 | Item de Configuração | Valor | Função |
-| ------------- | --------------------------------------- | ------------------------------------ |
+|--- | --- | ---|
 | Array `plugin` | `["opencode-mystatus"]` | Informa ao OpenCode para carregar este plugin |
 | `description` | "Query quota usage for all AI accounts" | Descrição exibida na lista de comandos de barra |
 | `template` | "Use mystatus tool..." | Indica ao OpenCode como chamar a ferramenta mystatus |
@@ -234,7 +234,7 @@ Supported account types:
 #### 5.2 Entenda o Significado da Saída
 
 | Elemento (versão em chinês) | Elemento (versão em inglês) | Significado |
-| ------------------------- | ------------------------- | ---------------------- |
+|--- | --- | ---|
 | `## OpenAI 账号额度` | `## OpenAI Account Quota` | Título da plataforma |
 | `user@example.com (team)` | `user@example.com (team)` | Informações da conta (e-mail ou equipe) |
 | `3小时限额` | `3-hour limit` | Tipo de cota (cota de 3 horas) |
@@ -248,7 +248,7 @@ Supported account types:
 Confirme se você completou as seguintes etapas:
 
 | Etapa | Método de Verificação | Resultado Esperado |
-| ------------- | --------------------------------------- | --------------------------------------- |
+|--- | --- | ---|
 | Instalar plugin | Verifique `~/.config/opencode/opencode.json` | O array `plugin` contém `"opencode-mystatus"` |
 | Configurar comando de barra | Verifique o mesmo arquivo | O objeto `command` contém a configuração `mystatus` |
 | Reiniciar OpenCode | Verifique o processo do OpenCode | Reiniciado |
@@ -363,7 +363,7 @@ Após completar a instalação, você pode usar o comando `/mystatus` ou consult
 > Última atualização: 2026-01-23
 
 | Funcionalidade | Caminho do Arquivo | Linha |
-| ----------------- | -------------------------------------------------------------------------------------------------- | ----- |
+|--- | --- | ---|
 | Entrada do plugin | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 26-94 |
 | Definição da ferramenta mystatus | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 29-33 |
 | Leitura de arquivo de autenticação | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 35-46 |

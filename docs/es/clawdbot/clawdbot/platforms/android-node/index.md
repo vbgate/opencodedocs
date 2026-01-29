@@ -74,7 +74,7 @@ Dispositivo Android (aplicación del nodo)
 El nodo Android admite las siguientes operaciones locales del dispositivo:
 
 | Función | Comando | Descripción |
-| ---- | ------ | ---- |
+|--- | --- | ---|
 | **Canvas** | `canvas.*` | Muestra interfaz visual en tiempo real (A2UI) |
 | **Camera** | `camera.*` | Toma fotos (JPG) y graba videos (MP4) |
 | **Screen** | `screen.*` | Grabación de pantalla |
@@ -454,7 +454,7 @@ Esta lección introdujo cómo configurar el nodo Android para ejecutar operacion
 > Última actualización: 2026-01-27
 
 | Función        | Ruta del archivo                                                                                    | Línea    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Política de comandos de nodo | [`src/gateway/node-command-policy.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/node-command-policy.ts) | 1-112   |
 | Schema de protocolo de nodo | [`src/gateway/protocol/schema/nodes.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/schema/nodes.ts) | 1-103   |
 | Documentación Android  | [`docs/platforms/android.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/android.md) | 1-142   |

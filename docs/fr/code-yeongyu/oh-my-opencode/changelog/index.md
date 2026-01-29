@@ -21,7 +21,7 @@ Ce chapitre enregistre l'historique des versions de oh-my-opencode, y compris le
 ## Navigation des sous-pages
 
 | Version | Titre | Description | Statut de publication |
-|---------|-------|-------------|----------------|
+|--- | --- | --- | ---|
 | **v3.0** | [Fonctionnalités v3.0](./v3.0-features/) | Introduit les systèmes tout nouveaux de Catégories et Compétences, 7 catégories de tâches intégrées, 3 packages de compétences professionnelles, l'exécuteur Sisyphus-Junior et les capacités de composition dynamique d'agents | ✅ Stable |
 
 ---
@@ -66,7 +66,7 @@ Après avoir lu le journal des modifications, vous pouvez continuer à apprendre
 Les versions actuellement incluses dans cette section :
 
 | Version | Date de publication | Mises à jour majeures | Importance |
-|---------|--------------|---------------|------------|
+|--- | --- | --- | ---|
 | v3.0.0 | 2026-01 | Systèmes de Catégories et Compétences, Sisyphus-Junior | 🔥 Mise à jour majeure |
 
 ---

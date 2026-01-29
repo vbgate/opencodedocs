@@ -49,7 +49,7 @@ DCP will **automatically disable all pruning functionality** in subagent session
 There's an important design philosophy behind this:
 
 | Role       | Token Usage Strategy             | Core Goal                     |
-| ---------- | -------------------------- | ---------------------------- |
+|--- | --- | ---|
 | **Main Agent** | Needs efficient token use        | Maintain context in long conversations, reduce costs    |
 | **Subagent** | Can freely use tokens        | Generate rich information for main agent aggregation |
 
@@ -86,7 +86,7 @@ export async function isSubAgentSession(client: any, sessionID: string): Promise
 After detecting a subagent, DCP will skip the following features:
 
 | Feature               | Normal Session | Subagent Session | Skip Location |
-| ------------------ | -------- | ---------- | -------- |
+|--- | --- | --- | ---|
 | System prompt injection     | ✅ Execute  | ❌ Skip    | `hooks.ts:26-28` |
 | Auto-pruning strategy       | ✅ Execute  | ❌ Skip    | `hooks.ts:64-66` |
 | Tool list injection       | ✅ Execute  | ❌ Skip    | `hooks.ts:64-66` |
@@ -239,7 +239,7 @@ DCP skips all pruning operations ❌
 > Last Updated: 2026-01-23
 
 | Feature           | File Path                                                                                                              | Line Number    |
-| -------------- | --------------------------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Subagent Detection Function | [`lib/state/utils.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/state/utils.ts)         | 1-8     |
 | Session State Initialization | [`lib/state/state.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/state/state.ts)         | 80-116   |
 | System Prompt Handler (Skip Subagent) | [`lib/hooks.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/hooks.ts)         | 26-28    |

@@ -40,7 +40,7 @@ Vous avez déjà exécuté Gateway et configuré les modèles d'IA, mais vous av
 **Scénarios d'utilisation des outils de navigateur**:
 
 | Scénario | Action | Exemple |
-| ---- | ------ | ---- |
+|--- | --- | ---|
 | Automatisation de formulaire | `act` + `fill` | Remplir des formulaires d'inscription, soumettre des commandes |
 | Web scraping | `snapshot` | Extraire la structure de page, collecter des données |
 | Enregistrer captures d'écran | `screenshot` | Enregistrer des captures d'écran de pages, enregistrer des preuves |
@@ -77,7 +77,7 @@ Les outils de navigateur sont des outils d'automatisation intégrés à Clawdbot
 **Deux modes de navigateur**:
 
 | Mode | Profile | Pilote | Description |
-| ---- | ------- | ---- | ---- |
+|--- | --- | --- | ---|
 | **Navigateur autonome** | `clawd` (par défaut) | clawd | Clawdbot démarre une instance indépendante de Chrome/Chromium |
 | **Relais Chrome** | `chrome` | extension | Prend le contrôle de vos onglets Chrome existants (nécessite l'installation de l'extension) |
 
@@ -211,7 +211,7 @@ Page snapshot:
 ::: tip Choix du format d'instantané
 
 | Format | Usage | Caractéristiques |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | `ai` | Par défaut, pour l'IA | Bonne lisibilité, adapté pour l'analyse IA |
 | `aria` | Sortie structurée | Adapté pour les scénarios nécessitant une structure précise |
 | `refs="aria"` | Stable entre les appels | Recommandé pour les opérations multi-étapes (snapshot → act) |
@@ -283,7 +283,7 @@ target: sandbox
 ::: tip Opérations UI courantes
 
 | Opération | Kind | Paramètres |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | Clic | `click` | `ref`, `doubleClick`, `button`, `modifiers` |
 | Saisie de texte | `type` | `ref`, `text`, `submit`, `slowly` |
 | Appui de touche | `press` | `key`, `targetId` |
@@ -333,7 +333,7 @@ type: jpeg
 ::: tip Formats de capture d'écran
 
 | Format | Usage |
-| ---- | ---- |
+|--- | ---|
 | `png` | Par défaut, compression sans perte, adapté pour les documents |
 | `jpeg` | Compression avec perte, fichiers plus petits, adapté pour le stockage |
 
@@ -535,7 +535,7 @@ Dans cette leçon, vous avez appris:
 **Référence rapide des opérations clés**:
 
 | Opération | Action | Paramètres clés |
-| ---- | ------ | -------- |
+|--- | --- | ---|
 | Démarrer navigateur | `start` | `profile` (clawd/chrome) |
 | Ouvrir page web | `open` | `targetUrl` |
 | Obtenir instantané | `snapshot` | `targetId`, `snapshotFormat`, `refs` |
@@ -564,7 +564,7 @@ Dans cette leçon, vous avez appris:
 > Date de mise à jour: 2026-01-27
 
 | Fonction | Chemin du fichier | Numéro de ligne |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | Définition de l'outil Browser | [`src/agents/tools/browser-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/browser-tool.ts) | 269-791 |
 | Browser Schema | [`src/agents/tools/browser-tool.schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/browser-tool.schema.ts) | 1-115 |
 | Définition des types Action | [`src/browser/client-actions-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/browser/client-actions-core.ts) | 18-86 |

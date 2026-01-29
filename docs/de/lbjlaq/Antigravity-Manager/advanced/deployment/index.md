@@ -61,7 +61,7 @@ Wenn Sie 8045 im LAN/Internet offenlegen, lesen Sie zuerst **[Sicherheit und Dat
 ## Schnellauswahl: Docker vs Headless Xvfb
 
 | Was Ihnen am wichtigsten ist | Empfehlung | Warum |
-| --- | --- | --- |
+|--- | --- | ---|
 | Browser für OAuth/Autorisierung erforderlich | Docker (noVNC) | Der Container enthält Firefox ESR und ermöglicht direkte Operationen im Browser (siehe `deploy/docker/README.md`) |
 | systemd-Verwaltung/Logs auf Festplatte gewünscht | Headless Xvfb | Das Installations-Skript installiert einen systemd-Dienst und hängt Logs an `logs/app.log` an (siehe `deploy/headless-xvfb/install.sh`) |
 | Isolation und Ressourcenbegrenzung gewünscht | Docker | Compose-Art isoliert von Natur aus und erleichtert die Konfiguration von Ressourcenbegrenzungen (siehe `deploy/docker/README.md`) |
@@ -222,7 +222,7 @@ sudo ./upgrade.sh
 ## Häufige Fallstricke
 
 | Szenario | Häufiger Fehler (❌) | Empfohlener Ansatz (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Konten/Konfigurationen verloren | ❌ Nur darauf achten, dass "das Programm läuft" | ✓ Bestätigen Sie zuerst, dass `.antigravity_tools/` persistiert ist (volume oder `/opt/antigravity`) |
 | noVNC-Portänderung nicht wirksam | ❌ Nur `NOVNC_PORT` ändern | ✓ Behalten Sie den Standard 6080 bei; wenn Sie ändern, prüfen Sie gleichzeitig den `websockify`-Port in `start.sh` |
 | 8045 im Internet offenlegen | ❌ Keinen `api_key` festlegen/auth_mode ignorieren | ✓ Führen Sie zuerst die **[Sicherheit und Datenschutz](./security/)**-Basis durch, dann überlegen Sie Tunnel/Reverse-Proxy |
@@ -249,17 +249,17 @@ sudo ./upgrade.sh
 > Aktualisiert am: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
-| Docker-Bereitstellungseinstieg und noVNC-URL | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L5-L13) | 5-13 |
-| Erklärung der Docker-Bereitstellungsumgebungsvariablen (VNC_PASSWORD/RESOLUTION/NOVNC_PORT) | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L32-L39) | 32-39 |
-| Docker-Compose-Port-Zuordnung und Daten-Volumes (antigravity_data) | [`deploy/docker/docker-compose.yml`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/docker-compose.yml#L1-L21) | 1-21 |
-| Docker-Start-Skript: Automatische Versionsaktualisierung (GitHub rate limit) | [`deploy/docker/start.sh`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/start.sh#L27-L58) | 27-58 |
-| Docker-Start-Skript: Start von Xtigervnc/Openbox/noVNC/Anwendung | [`deploy/docker/start.sh`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/start.sh#L60-L78) | 60-78 |
-| Docker-Health-Check: Bestätigung der Existenz der Xtigervnc/websockify/antigravity_tools-Prozesse | [`deploy/docker/Dockerfile`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/Dockerfile#L60-L79) | 60-79 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Headless Xvfb: Verzeichnisstruktur und Betriebsbefehle (systemctl/healthz) | [`deploy/headless-xvfb/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/headless-xvfb/README.md#L19-L78) | 19-78 |
 | Headless Xvfb: install.sh installiert Abhängigkeiten und initialisiert gui_config.json (Standard 8045) | [`deploy/headless-xvfb/install.sh`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/headless-xvfb/install.sh#L16-L67) | 16-67 |
 | Headless Xvfb: sync.sh sucht automatisch lokale Datenverzeichnisse und rsynct auf den Server | [`deploy/headless-xvfb/sync.sh`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/headless-xvfb/sync.sh#L8-L32) | 8-32 |
 | Headless Xvfb: upgrade.sh lädt neue Version herunter und rollt bei Fehlern zurück | [`deploy/headless-xvfb/upgrade.sh`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/headless-xvfb/upgrade.sh#L11-L51) | 11-51 |
-| Reverse-Proxy-Dienst Health-Check-Endpunkt `/healthz` | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
+|--- | --- | ---|
 
 </details>

@@ -75,7 +75,7 @@ order: 70
 Prometheus 最重要的特点是什么？**它永远不写代码**。
 
 | 功能 | Prometheus | Sisyphus | Atlas |
-|------|-----------|-----------|-------|
+|--- | --- | --- | ---|
 | 需求收集 | ✅ | ❌ | ❌ |
 | 工作计划生成 | ✅ | ❌ | ❌ |
 | 代码实现 | ❌ | ✅ | ✅（委托）|
@@ -503,7 +503,7 @@ Prometheus：我看到你有 vitest 测试框架。工作需要包含测试吗�
 > 更新时间：2026-01-26
 
 | 功能 | 文件路径 | 行号 |
-|------|----------|------|
+|--- | --- | ---|
 | Prometheus 系统提示词 | [`src/agents/prometheus-prompt.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/prometheus-prompt.ts) | 19-1184 |
 | Prometheus 权限配置 | [`src/agents/prometheus-prompt.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/prometheus-prompt.ts) | 1187-1197 |
 | Metis 代理 | [`src/agents/metis.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/agents/metis.ts) | - |

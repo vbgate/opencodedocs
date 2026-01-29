@@ -88,7 +88,7 @@ Este diseño por capas asegura que incluso si el modelo es manipulado, el alcanc
 Clawdbot proporciona tres capas de control de acceso:
 
 | Capa | Contenido Protegido | Ubicación de Configuración |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | **Autenticación Gateway** | Conexiones WebSocket | `gateway.auth` |
 | **Política DM** | Mensajes de chat privado | `channels.*.dmPolicy` |
 | **Política Group** | Mensajes de grupo | `channels.*.groupPolicy` / `channels.*.groups` |
@@ -119,7 +119,7 @@ clawdbot security audit --fix
 La herramienta de auditoría verificará los siguientes aspectos:
 
 | Categoría de Verificación | Elementos Específicos | Nivel de Riesgo |
-| --------- | ----- | ----- |
+|--- | --- | ---|
 | **Acceso Entrante** | Autenticación Gateway, política DM, política Group | Critical / Warn |
 | **Acceso a Herramientas** | Lista de permitidos de exec elevado, allow/deny de herramientas | Critical / Warn |
 | **Exposición de Red** | Modo de enlace Gateway, Tailscale Serve/Funnel | Critical / Info |
@@ -173,7 +173,7 @@ De forma predeterminada, Gateway requiere autenticación para aceptar conexiones
 **Modos de autenticación**:
 
 | Modo | Propósito | Escenario Recomendado |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `token` | Token bearer compartido | La mayoría de casos, recomendado |
 | `password` | Autenticación con contraseña | Desarrollo local, conveniente para pruebas rápidas |
 | Tailscale Identity | Tailscale Serve | Acceso remoto a través de Tailscale |
@@ -187,7 +187,7 @@ De forma predeterminada, Gateway requiere autenticación para aceptar conexiones
 La política DM controla si los usuarios desconocidos pueden hablar directamente con tu asistente de IA.
 
 | Política | Comportamiento | Escenario Recomendado |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `pairing` (predeterminado) | Remitentes desconocidos reciben código de emparejamiento, no se procesa antes de emparejar | Uso personal, recomendado |
 | `allowlist` | Remitentes desconocidos son rechazados | Entorno confiable de múltiples personas |
 | `open` | Permite a cualquiera | Servicio público (requiere `allowFrom` que contenga `"*"`) |
@@ -228,7 +228,7 @@ clawdbot pairing approve whatsapp <código de emparejamiento>
 La política Group decide cómo responde el asistente de IA a mensajes en grupos.
 
 | Política | Comportamiento | Ubicación de Configuración |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `allowlist` | Solo aceptar grupos en la lista blanca | `channels.whatsapp.groups` |
 | `disabled` | Ignorar todos los mensajes de grupo | `channels.telegram.groups` |
 | `requireMention` | Solo responder cuando se mencione con @ o se active con comando | `channels.*.groups.*` |
@@ -307,7 +307,7 @@ Puedes configurar listas blancas y negras de herramientas globalmente o para cad
 ### Categorías comunes de herramientas
 
 | Categoría de Herramienta | Herramientas Específicas | Nivel de Riesgo |
-| --------- | ----- | ----- |
+|--- | --- | ---|
 | **Operaciones de Archivos** | `read`, `write`, `edit`, `apply_patch` | Medio |
 | **Ejecución Shell** | `exec`, `process` | Alto |
 | **Control de Navegador** | `browser` | Alto |
@@ -353,7 +353,7 @@ El aislamiento de sandbox hace que las herramientas se ejecuten en contenedores 
 ### Modos de Sandbox
 
 | Modo | Comportamiento | Escenario Recomendado |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `off` | Todas las herramientas se ejecutan en el host | Entorno confiable personal |
 | `non-main` (recomendado) | Sesión principal en host, otras sesiones en sandbox | Equilibrar rendimiento y seguridad |
 | `all` | Todas las sesiones en sandbox | Entorno de múltiples personas, servicio público |
@@ -375,7 +375,7 @@ El aislamiento de sandbox hace que las herramientas se ejecuten en contenedores 
 El acceso al espacio de trabajo decide qué directorios del host puede ver el contenedor de sandbox.
 
 | Nivel de Acceso | Comportamiento | Escenario Recomendado |
-| --------- | ----- | ----- |
+|--- | --- | ---|
 | `none` (predeterminado) | Espacio de trabajo de sandbox `~/.clawdbot/sandboxes` | Aislamiento máximo |
 | `ro` | Espacio de trabajo del agente montado solo lectura en `/agent` | Leer pero no escribir archivos |
 | `rw` | Espacio de trabajo del agente montado lectura/escritura en `/workspace` | Agentes que necesitan escribir archivos |
@@ -397,7 +397,7 @@ El acceso al espacio de trabajo decide qué directorios del host puede ver el co
 El alcance del sandbox decide la granularidad de aislamiento del contenedor.
 
 | Alcance | Comportamiento | Número de Contenedores |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `session` (predeterminado) | Un contenedor por sesión | Más contenedores, mejor aislamiento |
 | `agent` | Un contenedor por Agente | Equilibrar aislamiento y recursos |
 | `shared` | Todas las sesiones comparten un contenedor | Ahorra recursos, menor aislamiento |
@@ -697,7 +697,7 @@ Para instrucciones detalladas de instalación de Docker, consulta: [Opciones de 
 ### Resumen de Mejores Prácticas
 
 | Práctica | Razón |
-| ----- | ----- |
+|--- | ---|
 | Usar modo `pairing` predeterminado | Equilibrar experiencia de usuario y seguridad |
 | Usar `requireMention` en mensajes de grupo | Evitar ser manipulado |
 | Usar lista blanca de herramientas en lugar de lista negra | Principio de mínimo privilegio |
@@ -747,7 +747,7 @@ Esta lección presentó el modelo de seguridad y funcionalidad de aislamiento de
 > Última actualización: 2026-01-27
 
 | Funcionalidad | Ruta de Archivo | Líneas |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | Auditoría de Seguridad | [`src/security/audit.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/audit.ts#L1-L910) | 1-910 |
 | Reparación de Seguridad | [`src/security/fix.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/fix.ts#L1-L385) | 1-385 |
 | Verificación de Permisos de Archivos | [`src/security/audit-fs.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/audit-fs.ts) | Todo el archivo |

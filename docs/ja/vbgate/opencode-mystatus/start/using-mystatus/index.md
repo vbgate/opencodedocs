@@ -134,7 +134,7 @@ Show my AI account status
 **重要な設定項目の説明**：
 
 | 設定項目 | 値 | 役割 |
-| ------ | --- | ---- |
+|--- | --- | ---|
 | `description` | "Query quota usage for all AI accounts" | コマンドリストに表示される説明 |
 | `template` | "Use to mystatus tool..." | OpenCodeにこのコマンドを処理する方法を指示する |
 
@@ -146,7 +146,7 @@ templateはOpenCodeへの「指示」で、ユーザーが `/mystatus` と入力
 2つの使用方法を習得したことを確認してください：
 
 | スキル | チェック方法 | 期待される結果 |
-| ---- | -------- | -------- |
+|--- | --- | ---|
 | スラッシュコマンドクエリ | `/mystatus` と入力 | すべてのプラットフォームのクォータ情報が表示される |
 | 自然言語クエリ | "Check my OpenAI quota" と入力 | クォータ情報が表示される |
 | 設定の理解 | opencode.jsonを確認 | mystatusコマンドの設定が見つかる |
@@ -212,7 +212,7 @@ mystatusツールは2つの使用方法を提供しています：
 > 更新日時：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | mystatusツール定義 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 29-33 |
 | ツールの説明 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 30-31 |
 | スラッシュコマンド設定 | [`command/mystatus.md`](https://github.com/vbgate/opencode-mystatus/blob/main/command/mystatus.md) | 1-6 |

@@ -87,7 +87,7 @@ Clawdbot macOS app is a **dual-role** system:
 **Two Operating Modes**:
 
 | Mode | Gateway Location | Node Service | Use Case |
-| ----- | -------------- | --------- | -------- |
+|--- | --- | --- | ---|
 | **Local Mode** (default) | Local machine (launchd daemon) | Not started | Gateway runs on this Mac |
 | **Remote Mode** | Remote machine (via SSH/Tailscale) | Started | Gateway runs on another machine |
 
@@ -318,7 +318,7 @@ Listen ──► AI Process ──► TTS Play ──► Listen
 **Talk Mode Interface States**:
 
 | State | Display | Description |
-| ----- | ---- | ---- |
+|--- | --- | ---|
 | **Listening** | Cloud pulse animation + mic volume | Waiting for you to speak |
 | **Thinking** | Sinking animation | AI is thinking |
 | **Speaking** | Radiating ring animation + ripples | AI is replying (TTS playing) |
@@ -359,7 +359,7 @@ Node Mode allows the macOS app to expose local capabilities to a remote Gateway,
 **Available Commands in Node Mode**:
 
 | Command Category | Command Examples | Function Description |
-| --------- | ---------- | -------- |
+|--- | --- | ---|
 | **Canvas** | `canvas.present`, `canvas.navigate`, `canvas.eval` | Render visual interfaces on macOS |
 | **Camera** | `camera.snap`, `camera.clip` | Take photos or videos |
 | **Screen** | `screen.record` | Screen recording |
@@ -425,7 +425,7 @@ The AI will automatically select available tools based on permissions.
 **Security Policy Types**:
 
 | Policy | Behavior | Use Case |
-| ----- | ---- | -------- |
+|--- | --- | ---|
 | `deny` | Deny all `system.run` calls | High security, disable all commands |
 | `allowlist` | Only allow commands in the allowlist | Balance security and convenience |
 | `ask` | Prompt user for approval when not in allowlist | Flexible but requires confirmation |
@@ -468,7 +468,7 @@ Triggers Gateway `agent` request, equivalent to running `clawdbot agent` in the 
 **Parameters**:
 
 | Parameter | Description | Example |
-| ----- | ---- | ---- |
+|--- | --- | ---|
 | `message` (required) | Message to send to AI | `message=Hello%20from%20deep%20link` |
 | `sessionKey` (optional) | Target session key, default `main` | `sessionKey=main` |
 | `thinking` (optional) | Thinking level: off\|minimal\|low\|medium\|high\|xhigh | `thinking=high` |
@@ -571,7 +571,7 @@ If the permission toggle cannot be enabled or immediately disables:
 **Possible Causes and Solutions**:
 
 | Cause | Check Method | Solution |
-| ----- | -------- | -------- |
+|--- | --- | ---|
 | Gateway not started | Run `clawdbot gateway status` | Start Gateway service |
 | Wrong address | Check WebSocket URL | Confirm `ws://127.0.0.1:18789` or remote address is correct |
 | Port occupied | Run `lsof -i :18789` | Close process occupying the port |
@@ -666,7 +666,7 @@ In this lesson, you learned:
 > Updated: 2026-01-27
 
 | Feature        | File Path                                                                                    | Line    |
-| ----------- | --------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | App Entry     | [`apps/macos/Sources/Clawdbot/ClawdbotApp.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/ClawdbotApp.swift) | Entire file   |
 | Gateway Connection | [`apps/macos/Sources/Clawdbot/GatewayConnection.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/GatewayConnection.swift) | 1-500   |
 | Voice Wake Runtime | [`apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift) | Entire file   |

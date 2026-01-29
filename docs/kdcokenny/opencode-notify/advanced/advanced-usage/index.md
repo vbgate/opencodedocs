@@ -117,7 +117,7 @@ Different event types with different sounds let you know what happened without l
 macOS provides 14 built-in sounds:
 
 | Sound Name | Use Case | Style |
-| ---------- | -------- | ---- |
+|--- | --- | ---|
 | Glass | Task completion (default) | Crisp |
 | Basso | Error (default) | Deep |
 | Submarine | Permission request (default) | Gentle |
@@ -189,7 +189,7 @@ Add `terminal` field in configuration:
 Common terminal names (case-insensitive):
 
 | Terminal | Configuration Value |
-| -------- | ------------------ |
+|--- | ---|
 | Ghostty | `"ghostty"` |
 | Kitty | `"kitty"` |
 | iTerm2 | `"iterm"` or `"iterm2"` |
@@ -258,7 +258,7 @@ Default configuration is already optimized, but you may need to adjust according
 **Default Strategy Summary**
 
 | Configuration | Default Value | Effect |
-| ------------- | ------------- | ------ |
+|--- | --- | ---|
 | `notifyChildSessions` | `false` | Only notify parent sessions |
 | `quietHours.enabled` | `false` | Quiet hours not enabled |
 
@@ -312,7 +312,7 @@ This will significantly increase notification frequency, suitable for scenarios 
 After completing configuration, verify the following:
 
 | Check Item | Verification Method |
-| ---------- | ------------------- |
+|--- | ---|
 | Parent session filtering | Trigger an AI task with subtasks, receive only one "Ready for review" notification |
 | Sound customization | Trigger task completion, error, and permission request separately, hear different sounds |
 | Terminal override | On macOS, click notification, terminal window correctly brings to front |
@@ -394,7 +394,7 @@ In this lesson, we learned opencode-notify's advanced usage and best practices:
 > Last updated: 2026-01-27
 
 | Feature | File Path | Lines |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Parent session detection | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L205-L214) | 205-214   |
 | Configuration schema | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L30-L68) | 30-68 |
 | Default configuration | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L56-L68) | 56-68 |

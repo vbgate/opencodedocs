@@ -66,7 +66,7 @@ sequenceDiagram
 **Key Concepts**:
 
 | Concept | Description |
-| ------- | ----------- |
+|--- | ---|
 | **Service Account** | Google Cloud authentication method for bot identity verification |
 | **Webhook** | HTTP endpoint where Google Chat POSTs messages to Gateway |
 | **Audience** | Target used to verify webhook requests (app-url or project-number) |
@@ -412,7 +412,7 @@ If you see errors, run `clawdbot channels status --probe` to view detailed diagn
 ### Service Account Authentication
 
 | Config | Type | Default | Description |
-| ------ | ---- | ------- | ----------- |
+|--- | --- | --- | ---|
 | `serviceAccountFile` | string | - | Service Account JSON file path |
 | `serviceAccount` | string\|object | - | Inline JSON credentials (alternative to file path) |
 | `audienceType` | "app-url"\|"project-number" | "app-url" | Verification type: URL or project number |
@@ -423,7 +423,7 @@ If you see errors, run `clawdbot channels status --probe` to view detailed diagn
 By default, unknown senders need pairing:
 
 | Config | Type | Default | Description |
-| ------ | ---- | ------- | ----------- |
+|--- | --- | --- | ---|
 | `dm.enabled` | boolean | undefined | Whether to enable DM receiving |
 | `dm.policy` | "pairing"|"open" | "pairing" | Access policy: pairing or open |
 | `dm.allowFrom` | array | [] | Allowed sender list (user IDs or emails) |
@@ -437,7 +437,7 @@ clawdbot pairing approve googlechat <pairing code>
 ### Group Policy
 
 | Config | Type | Default | Description |
-| ------ | ---- | ------- | ----------- |
+|--- | --- | --- | ---|
 | `groupPolicy` | "allowlist"|"disabled" | "allowlist" | Group policy: allowlist or disabled |
 | `requireMention` | boolean | true | Whether @mention is required to trigger |
 | `groups` | object | {} | Configuration by space ID |
@@ -464,7 +464,7 @@ clawdbot pairing approve googlechat <pairing code>
 ### Other Configuration
 
 | Config | Type | Default | Description |
-| ------ | ---- | ------- | ----------- |
+|--- | --- | --- | ---|
 | `webhookPath` | string | "/googlechat" | Webhook path |
 | `botUser` | string | - | Bot user resource name (for mention detection) |
 | `typingIndicator` | "none"|"message"|"reaction" | "message" | Typing indicator mode |
@@ -568,7 +568,7 @@ Add to `~/.clawdbot/clawdbot.json`:
 > Last updated: 2026-01-27
 
 | Feature | File Path | Lines |
-| ------- | --------- | ----- |
+|--- | --- | ---|
 | Google Chat Config Type Definition | [`src/config/types.googlechat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.googlechat.ts) | 1-109 |
 | Google Chat Zod Schema | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts) | 273-341 |
 | Channel Registry | [`src/channels/registry.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.ts) | 61-67 |

@@ -125,7 +125,7 @@ After AI generates a plan, it typically asks "Is this plan okay?" or "Should I s
 Plannotator supports four annotation types, each with different purposes:
 
 | Annotation Type | Purpose | Feedback AI Receives |
-| --------------- | ------- | -------------------- |
+|--- | --- | ---|
 | **Delete** | Delete unnecessary content | "Delete: [selected text]" |
 | **Replace** | Replace with better content | "Replace: [selected text] with [your input text]" |
 | **Comment** | Comment on a section without requesting modification | "Comment: [selected text]. Note: [your input comment]" |
@@ -134,7 +134,7 @@ Plannotator supports four annotation types, each with different purposes:
 ### Approve vs Request Changes
 
 | Decision Type | Action | Feedback AI Receives | Use Case |
-| ------------- | ------ | -------------------- | -------- |
+|--- | --- | --- | ---|
 | **Approve** | Click Approve button | `{"behavior": "allow"}` | Plan is fine, approve directly |
 | **Request Changes** | Click Request Changes button | `{"behavior": "deny", "message": "..."}` | Parts need modification |
 
@@ -374,7 +374,7 @@ Plan review is Plannotator's core feature, allowing you to visually review AI-ge
 > Updated: 2026-01-24
 
 | Feature | File Path | Line Numbers |
-| --------------- | ------------------------------------------------------------------------------------------------------------------- | ------------ |
+|--- | --- | ---|
 | Plan Review UI | [`packages/editor/App.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/editor/App.tsx#L1-L200) | 1-200 |
 | Annotation Type Definitions | [`packages/ui/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/types.ts#L1-L70) | 1-70 |
 | Plan Review Server | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts#L91-L310) | 91-310 |

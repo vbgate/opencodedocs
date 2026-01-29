@@ -68,7 +68,7 @@ export default plugin
 **Parameters**:
 
 | Parameter | Type | Description |
-| --------- | ---- | ----------- |
+|--- | --- | ---|
 | ctx | `PluginInput` | OpenCode plugin context, containing client and directory information |
 
 **Return Value**:
@@ -76,7 +76,7 @@ export default plugin
 Plugin configuration object, containing the following fields:
 
 | Field | Type | Description |
-| ----- | ---- | ----------- |
+|--- | --- | ---|
 | `experimental.chat.system.transform` | `Handler` | System prompt injection hook |
 | `experimental.chat.messages.transform` | `Handler` | Message transformation hook |
 | `chat.message` | `Handler` | Message capture hook |
@@ -118,7 +118,7 @@ export interface PluginConfig {
 #### Top-Level Configuration
 
 | Option | Type | Default | Description |
-| ------ | ---- | ------- | ----------- |
+|--- | --- | --- | ---|
 | `enabled` | `boolean` | `true` | Whether to enable the plugin |
 | `debug` | `boolean` | `false` | Whether to enable debug logs, logs written to `~/.config/opencode/logs/dcp/` |
 | `pruneNotification` | `"off" \| "minimal" \| "detailed"` | `"detailed"` | Notification display mode |
@@ -134,7 +134,7 @@ export interface Commands {
 ```
 
 | Field | Type | Default | Description |
-| ----- | ---- | ------- | ----------- |
+|--- | --- | --- | ---|
 | `enabled` | `boolean` | `true` | Whether to enable `/dcp` commands |
 | `protectedTools` | `string[]` | `[...DEFAULT_PROTECTED_TOOLS]` | Command-protected tool list, these tools will not be pruned by `/dcp sweep` |
 
@@ -148,7 +148,7 @@ export interface TurnProtection {
 ```
 
 | Field | Type | Default | Description |
-| ----- | ---- | ------- | ----------- |
+|--- | --- | --- | ---|
 | `enabled` | `boolean` | `false` | Whether to enable turn protection |
 | `turns` | `number` | `4` | Number of turns to protect, tools from the most recent N turns will not be pruned |
 
@@ -173,7 +173,7 @@ export interface ToolSettings {
 ```
 
 | Field | Type | Default | Description |
-| ----- | ---- | ------- | ----------- |
+|--- | --- | --- | ---|
 | `nudgeEnabled` | `boolean` | `true` | Whether to enable AI reminders |
 | `nudgeFrequency` | `number` | `10` | Reminder frequency, remind AI to use pruning tools every N tool results |
 | `protectedTools` | `string[]` | `[...DEFAULT_PROTECTED_TOOLS]` | Tool protection list |
@@ -187,7 +187,7 @@ export interface DiscardTool {
 ```
 
 | Field | Type | Default | Description |
-| ----- | ---- | ------- | ----------- |
+|--- | --- | --- | ---|
 | `enabled` | `boolean` | `true` | Whether to enable discard tool |
 
 **ExtractTool**:
@@ -200,7 +200,7 @@ export interface ExtractTool {
 ```
 
 | Field | Type | Default | Description |
-| ----- | ---- | ------- | ----------- |
+|--- | --- | --- | ---|
 | `enabled` | `boolean` | `true` | Whether to enable extract tool |
 | `showDistillation` | `boolean` | `false` | Whether to display extracted content in notifications |
 
@@ -216,7 +216,7 @@ export interface Deduplication {
 ```
 
 | Field | Type | Default | Description |
-| ----- | ---- | ------- | ----------- |
+|--- | --- | --- | ---|
 | `enabled` | `boolean` | `true` | Whether to enable deduplication strategy |
 | `protectedTools` | `string[]` | `[...DEFAULT_PROTECTED_TOOLS]` | Tool list not participating in deduplication |
 
@@ -229,7 +229,7 @@ export interface SupersedeWrites {
 ```
 
 | Field | Type | Default | Description |
-| ----- | ---- | ------- | ----------- |
+|--- | --- | --- | ---|
 | `enabled` | `boolean` | `false` | Whether to enable supersede writes strategy |
 
 **PurgeErrors**:
@@ -243,7 +243,7 @@ export interface PurgeErrors {
 ```
 
 | Field | Type | Default | Description |
-| ----- | ---- | ------- | ----------- |
+|--- | --- | --- | ---|
 | `enabled` | `boolean` | `true` | Whether to enable error purge strategy |
 | `turns` | `number` | `4` | Error purge threshold (number of turns) |
 | `protectedTools` | `string[]` | `[...DEFAULT_PROTECTED_TOOLS]` | Tool list not participating in purge |
@@ -259,7 +259,7 @@ export function getConfig(ctx: PluginInput): PluginConfig
 **Parameters**:
 
 | Parameter | Type | Description |
-| --------- | ---- | ----------- |
+|--- | --- | ---|
 | ctx | `PluginInput` | OpenCode plugin context |
 
 **Return Value**:
@@ -288,13 +288,13 @@ export function createDiscardTool(ctx: PruneToolContext): ReturnType<typeof tool
 **Parameters**:
 
 | Parameter | Type | Description |
-| --------- | ---- | ----------- |
+|--- | --- | ---|
 | ctx | `PruneToolContext` | Tool context, containing client, state, logger, config, workingDirectory |
 
 **Tool Specification**:
 
 | Field | Type | Description |
-| ----- | ---- | ----------- |
+|--- | --- | ---|
 | `ids` | `string[]` | First element is reason (`'completion'` or `'noise'`), followed by numeric IDs |
 
 **Source Location**: [`lib/strategies/tools.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/tools.ts#L155-L181)
@@ -310,13 +310,13 @@ export function createExtractTool(ctx: PruneToolContext): ReturnType<typeof tool
 **Parameters**:
 
 | Parameter | Type | Description |
-| --------- | ---- | ----------- |
+|--- | --- | ---|
 | ctx | `PruneToolContext` | Tool context, containing client, state, logger, config, workingDirectory |
 
 **Tool Specification**:
 
 | Field | Type | Description |
-| ----- | ---- | ----------- |
+|--- | --- | ---|
 | `ids` | `string[]` | Numeric ID array |
 | `distillation` | `string[]` | Extracted content array, length matches ids |
 
@@ -348,7 +348,7 @@ export interface SessionState {
 **Field Descriptions**:
 
 | Field | Type | Description |
-| ----- | ---- | ----------- |
+|--- | --- | ---|
 | `sessionId` | `string \| null` | OpenCode session ID |
 | `isSubAgent` | `boolean` | Whether this is a sub-agent session |
 | `prune` | `Prune` | Pruning state |
@@ -376,7 +376,7 @@ export interface SessionStats {
 **Field Descriptions**:
 
 | Field | Type | Description |
-| ----- | ---- | ----------- |
+|--- | --- | ---|
 | `pruneTokenCounter` | `number` | Pruned token count in current session (cumulative) |
 | `totalPruneTokens` | `number` | Historical cumulative pruned token count |
 
@@ -395,7 +395,7 @@ export interface Prune {
 **Field Descriptions**:
 
 | Field | Type | Description |
-| ----- | ---- | ----------- |
+|--- | --- | ---|
 | `toolIds` | `string[]` | List of tool call IDs marked for pruning |
 
 **Source Location**: [`lib/state/types.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/state/types.ts#L23-L25)
@@ -417,7 +417,7 @@ export interface ToolParameterEntry {
 **Field Descriptions**:
 
 | Field | Type | Description |
-| ----- | ---- | ----------- |
+|--- | --- | ---|
 | `tool` | `string` | Tool name |
 | `parameters` | `any` | Tool parameters |
 | `status` | `ToolStatus \| undefined` | Tool execution status |
@@ -461,7 +461,7 @@ export function createSystemPromptHandler(
 **Parameters**:
 
 | Parameter | Type | Description |
-| --------- | ---- | ----------- |
+|--- | --- | ---|
 | state | `SessionState` | Session state object |
 | logger | `Logger` | Logger system instance |
 | config | `PluginConfig` | Configuration object |
@@ -491,7 +491,7 @@ export function createChatMessageTransformHandler(
 **Parameters**:
 
 | Parameter | Type | Description |
-| --------- | ---- | ----------- |
+|--- | --- | ---|
 | client | `any` | OpenCode client instance |
 | state | `SessionState` | Session state object |
 | logger | `Logger` | Logger system instance |
@@ -525,7 +525,7 @@ export function createCommandExecuteHandler(
 **Parameters**:
 
 | Parameter | Type | Description |
-| --------- | ---- | ----------- |
+|--- | --- | ---|
 | client | `any` | OpenCode client instance |
 | state | `SessionState` | Session state object |
 | logger | `Logger` | Logger system instance |
@@ -565,7 +565,7 @@ If you need to understand the internal implementation details of DCP, we recomme
 > Last Updated: 2026-01-23
 
 | Feature | File Path | Lines |
-| ------- | --------- | ----- |
+|--- | --- | ---|
 | Plugin entry function | [`index.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/index.ts#L12-L102) | 12-102 |
 | Configuration interface definition | [`lib/config.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/config.ts#L7-L66) | 7-66 |
 | getConfig function | [`lib/config.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/config.ts#L669-L797) | 669-797 |

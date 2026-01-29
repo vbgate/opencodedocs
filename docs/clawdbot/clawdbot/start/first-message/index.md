@@ -55,7 +55,7 @@ Before sending your first message, please confirm:
 ### Required Conditions
 
 | Condition                  | How to Check                                        |
-| --------------------------- | --------------------------------------------------- |
+|--- | ---|
 | **Gateway is Running**    | `clawdbot gateway status` or check if the process is running |
 | **AI Model is Configured** | `clawdbot models list` to see if there are available models |
 | **Port is Accessible**     | Confirm port 18789 (or custom port) is not in use |
@@ -119,7 +119,7 @@ Clawdbot supports three main methods for sending messages:
 **Key Differences**:
 
 | Method                  | Goes Through AI? | Purpose                           |
-| ----------------------- | --------------- | ---------------------------------- |
+|--- | --- | ---|
 | `clawdbot agent`        | ✅ Yes          | Chat with AI, get responses and thought process    |
 | `clawdbot message send` | ❌ No           | Send message directly to channel, bypassing AI    |
 | WebChat / Channels      | ✅ Yes          | Chat with AI through graphical interface         |
@@ -193,7 +193,7 @@ Let me think about what needs to be checked for shipping:
 **Thinking Level Options**:
 
 | Level    | Description                     | Use Cases           |
-| -------- | ------------------------------ | ------------------ |
+|--- | --- | ---|
 | `off`     | No thinking process            | Simple Q&A, quick response |
 | `minimal` | Minimal thinking output        | Debugging, checking process     |
 | `low`     | Low detail                     | Daily conversation           |
@@ -263,7 +263,7 @@ WebChat uses the same port as Gateway (default 18789). If you modified the Gatew
 **WebChat Features**:
 
 | Feature   | Description                     |
-| -------- | ------------------------------ |
+|--- | ---|
 | Rich Text | Supports Markdown format            |
 | Attachments | Supports image, audio, video upload    |
 | History | Automatically saves session history             |
@@ -543,7 +543,7 @@ In this lesson, you learned:
 > Updated: 2026-01-27
 
 | Function                  | File Path                                                                                             | Line #    |
-| ------------------- | ---------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | CLI Agent Command Registration  | [`src/cli/program/register.agent.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.agent.ts) | 20-82    |
 | Agent CLI Execution        | [`src/commands/agent-via-gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/agent-via-gateway.ts) | 82-184   |
 | CLI message send Registration | [`src/cli/program/message/register.send.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/message/register.send.ts) | 1-30     |

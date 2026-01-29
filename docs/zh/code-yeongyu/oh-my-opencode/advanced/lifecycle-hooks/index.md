@@ -59,7 +59,7 @@ order: 120
 oh-my-opencode 提供了 32 个内置钩子，分为 7 大类别：
 
 | 类别 | 钩子数量 | 主要作用 |
-| ----- | -------- | -------- |
+|--- | --- | ---|
 | **上下文注入** | 4 | 自动注入项目文档、规则 |
 | **生产力与控制** | 6 | 关键词检测、模式切换、循环管理 |
 | **质量与安全** | 4 | 代码注释检查、思维块验证 |
@@ -298,7 +298,7 @@ stateDiagram-v2
 **功能**：检测用户提示词中的关键词，自动激活对应模式：
 
 | 关键词 | 激活模式 | 说明 |
-| ------ | -------- | ---- |
+|--- | --- | ---|
 | `ultrawork` / `ulw` | **最大性能模式** | 激活所有专业代理和并行任务 |
 | `search` / `find` | **并行探索模式** | 并行启动 explore/librarian |
 | `analyze` / `investigate` | **深度分析模式** | 激活深度探索和分析 |
@@ -496,15 +496,15 @@ flowchart LR
 > 更新时间：2026-01-26
 
 | 功能 | 文件路径 | 行号 |
-| ---- | -------- | ---- |
-| directory-agents-injector | [`src/hooks/directory-agents-injector/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/directory-agents-injector/index.ts) | 1-183 |
-| todo-continuation-enforcer | [`src/hooks/todo-continuation-enforcer.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/todo-continuation-enforcer.ts) | 1-490 |
-| keyword-detector | [`src/hooks/keyword-detector/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/keyword-detector/index.ts) | 1-101 |
-| tool-output-truncator | [`src/hooks/tool-output-truncator.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/tool-output-truncator.ts) | 1-62 |
-| comment-checker | [`src/hooks/comment-checker/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/comment-checker/index.ts) | 1-172 |
-| context-window-monitor | [`src/hooks/context-window-monitor.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/context-window-monitor.ts) | - |
-| session-recovery | [`src/hooks/session-recovery/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/session-recovery/index.ts) | - |
-| claude-code-hooks | [`src/hooks/claude-code-hooks/`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/hooks/claude-code-hooks) | - |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **关键常量**：
 - `AGENTS_FILENAME = "AGENTS.md"`：代理上下文文件名（`src/hooks/directory-agents-injector/constants.ts`）

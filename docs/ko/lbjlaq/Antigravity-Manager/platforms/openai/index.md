@@ -56,7 +56,7 @@ Antigravity Tools의 미들웨어는 `Authorization`을 우선 읽으며 `x-api-
 ### 호환 엔드포인트 개요(이 수업 관련)
 
 | 엔드포인트 | 용도 | 코드 증거 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `POST /v1/chat/completions` | Chat Completions(스트리밍 포함) | `src-tauri/src/proxy/server.rs` 라우팅 등록; `src-tauri/src/proxy/handlers/openai.rs` |
 | `POST /v1/completions` | 레거시 Completions(동일 핸들러 재사용) | `src-tauri/src/proxy/server.rs` 라우팅 등록 |
 | `POST /v1/responses` | Responses/Codex CLI 호환(동일 핸들러 재사용) | `src-tauri/src/proxy/server.rs` 라우팅 등록(주석: Codex CLI 호환) |
@@ -203,16 +203,16 @@ OpenAI 핸들러는 최대 3회 시도(계정 풀 크기 제한 포함)를 내�
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI 라우팅 등록(/v1/responses 포함) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | Chat Completions 핸들러(Responses 형식 감지 포함) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L70-L462) | 70-462 |
 | /v1/completions 및 /v1/responses 핸들러(Codex/Responses 표준화 + 재시작/순환) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L464-L1080) | 464-1080 |
 | /v1/models 반환(동적 모델 목록) | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L1082-L1102) | 1082-1102 |
 | OpenAI 요청 데이터 구조(messages/instructions/input/size/quality) | [`src-tauri/src/proxy/mappers/openai/models.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/models.rs#L7-L38) | 7-38 |
-| OpenAI -> Gemini 요청 변환(systemInstruction/thinkingConfig/tools) | [`src-tauri/src/proxy/mappers/openai/request.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/request.rs#L6-L553) | 6-553 |
-| Gemini -> OpenAI 응답 변환(choices/usageMetadata) | [`src-tauri/src/proxy/mappers/openai/response.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/response.rs#L5-L214) | 5-214 |
+|--- | --- | ---|
+|--- | --- | ---|
 | 모델 매핑 및 와일드카드 우선순위(정확 > 와일드카드 > 기본값) | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L180-L228) | 180-228 |
-| 인증 미들웨어(Authorization/x-api-key/x-goog-api-key) | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L15-L77) | 15-77 |
+|--- | --- | ---|
 
 **핵심 상수**:
 - `MAX_RETRY_ATTEMPTS = 3`: OpenAI 프로토콜 최대 시도 횟수(순환 포함)(`src-tauri/src/proxy/handlers/openai.rs` 참조)

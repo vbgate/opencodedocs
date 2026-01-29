@@ -295,7 +295,7 @@ npm -v
 > 업데이트 날짜: 2026-01-25
 
 | 기능          | 파일 경로                                                                                      | 행번호    |
-| ------------- | --------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | npx 설치 방법  | [`README.md:83-86`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L83-L86)  | 83-86   |
 | Claude Code 수동 설치 | [`AGENTS.md:98-105`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L98-L105) | 98-105  |
 | claude.ai 설치 방법 | [`AGENTS.md:106-109`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L106-L109) | 106-109  |

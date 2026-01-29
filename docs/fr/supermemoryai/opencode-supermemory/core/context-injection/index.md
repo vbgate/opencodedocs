@@ -43,7 +43,7 @@ opencode-supermemory est très discret, ne déclenchant l'injection automatique 
 Le plugin obtient en parallèle trois types de données, les combinant en un bloc de prompt `[SUPERMEMORY]` :
 
 | Dimension | Source | Fonction | Exemple |
-| :--- | :--- | :--- | :--- |
+|--- | --- | --- | ---|
 | **1. Profil utilisateur** (Profile) | `getProfile` | Vos préférences à long terme | "L'utilisateur préfère la programmation fonctionnelle", "préfère les fonctions fléchées" |
 | **2. Connaissances du projet** (Project) | `listMemories` | Connaissances globales du projet actuel | "Ce projet utilise Clean Architecture", "l'API est dans src/api" |
 | **3. Mémoires pertinentes** (Relevant) | `searchMemories` | Expériences passées liées à votre première phrase | Vous demandez "comment corriger ce bug", il trouve les enregistrements de corrections similaires |
@@ -180,9 +180,9 @@ Après avoir modifié la configuration, vous devez redémarrer OpenCode ou recha
 > Date de mise à jour : 2026-01-23
 
 | Fonctionnalité | Chemin du fichier | Lignes |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Logique de déclenchement de l'injection | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L125-L176) | 125-176 |
-| Détection de mots-clés | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L34-L37) | 34-37 |
+|--- | --- | ---|
 | Formatage du prompt | [`src/services/context.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/context.ts#L14-L64) | 14-64 |
 | Configuration par défaut | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L44-L54) | 44-54 |
 

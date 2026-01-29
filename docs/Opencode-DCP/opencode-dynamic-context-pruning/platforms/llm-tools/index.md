@@ -44,7 +44,7 @@ When you:
 DCP provides two tools that allow AI to proactively optimize context during conversations:
 
 | Tool | Purpose | Keep Content? |
-|-----|---------|---------------|
+|--- | --- | ---|
 | **discard** | Remove completed tasks or noise | ❌ No |
 | **extract** | Extract key findings then delete original content | ✅ Yes, keep condensed info |
 
@@ -94,7 +94,7 @@ AI prunes in batches rather than pruning individual tiny tool outputs. This is m
 DCP has multiple layers of protection to prevent AI from accidentally pruning critical content:
 
 | Protection Layer | Description | Configuration |
-|-----------------|-------------|---------------|
+|--- | --- | ---|
 | **Protected Tools** | Core tools like task, write, edit cannot be pruned | `tools.settings.protectedTools` |
 | **Protected Files** | File paths matching glob patterns cannot be pruned | `protectedFilePatterns` |
 | **Turn Protection** | New tools won't be added to pruning list within N turns | `turnProtection.turns` |
@@ -351,11 +351,11 @@ Configuration highlights:
 > Last updated: 2026-01-23
 
 | Feature | File Path | Line Range |
-|---------|-----------|------------|
+|--- | --- | ---|
 | discard tool definition | [`lib/strategies/tools.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/tools.ts#L155-L180) | 155-180 |
 | extract tool definition | [`lib/strategies/tools.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/tools.ts#L183-L220) | 183-220 |
 | Pruning operation execution | [`lib/strategies/tools.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/tools.ts#L26-L153) | 26-153 |
-| prunable-tools list generation | [`lib/messages/inject.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/messages/inject.ts#L53-L100) | 53-100 |
+|--- | --- | ---|
 | Pruning context injection | [`lib/messages/inject.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/messages/inject.ts#L102-L156) | 102-156 |
 | discard tool specification | [`lib/prompts/discard-tool-spec.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/prompts/discard-tool-spec.ts#L1-L41) | 1-41 |
 | extract tool specification | [`lib/prompts/extract-tool-spec.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/prompts/extract-tool-spec.ts#L1-L48) | 1-48 |

@@ -15,7 +15,7 @@ order: 2
 opencode-mystatus는 다음 4개의 주요 AI 플랫폼을 지원합니다:
 
 | 플랫폼 | 할당량 유형 | 특징 |
-|------|---------|------|
+|--- | --- | ---|
 | OpenAI | 3시간 / 24시간 슬라이딩 창 | Plus, Team, Pro 구독 지원 |
 | 지푸 AI | 5시간 Token / MCP 월간 할당량 | Coding Plan 지원 |
 | GitHub Copilot | 월간 할당량 | Premium Requests 사용량 표시 |

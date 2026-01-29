@@ -203,7 +203,7 @@ Congratulations! You have successfully installed a "hippocampus" for OpenCode. N
 > Last Updated: 2026-01-23
 
 | Feature | File Path | Line Number |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Installation Script Logic | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L327-L410) | 327-410 |
 | Plugin Registration Logic | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L195-L248) | 195-248 |
 | Conflict Detection Logic | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L273-L320) | 273-320 |

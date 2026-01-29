@@ -293,7 +293,7 @@ opencode auth login
 **Beta Version Usage Recommendations**:
 
 | Use Case | Recommended Version | Description |
-|---------|---------|------|
+|--- | --- | ---|
 | Production | Stable (vX.Y.Z) | Fully tested, high stability |
 | Daily Development | Latest Stable | Complete features, fewer bugs |
 | Early Testing | Latest Beta | Experience latest features, may be unstable |

@@ -38,7 +38,7 @@ You have completed the wizard configuration, and Gateway's basic setup is ready.
 **Recommended Startup Methods**:
 
 | Scenario | Command | Description |
-|----------|---------|-------------|
+|--- | --- | ---|
 | Daily use | `clawdbot gateway install` + `clawdbot gateway start` | Auto-start as a background service |
 | Development/Debugging | `clawdbot gateway --dev` | Create dev config with auto-reload |
 | Temporary testing | `clawdbot gateway` | Run in foreground, logs output to terminal |
@@ -489,7 +489,7 @@ In this lesson, we learned:
 **Quick Command Reference**:
 
 | Scenario | Command |
-|----------|---------|
+|--- | ---|
 | Daily use (service) | `clawdbot gateway install && clawdbot gateway start` |
 | Development/Debugging | `clawdbot gateway --dev` |
 | Temporary testing | `clawdbot gateway` |
@@ -518,7 +518,7 @@ In this lesson, we learned:
 > Last updated: 2026-01-27
 
 | Function | File Path | Lines |
-|-----------|-----------|-------|
+|--- | --- | ---|
 | Gateway startup entry | [`src/cli/gateway-cli/run.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/gateway-cli/run.ts) | 55-310 |
 | Daemon service abstraction | [`src/daemon/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/service.ts) | 66-155 |
 | Sidebar service startup | [`src/gateway/server-startup.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup.ts) | 26-160 |

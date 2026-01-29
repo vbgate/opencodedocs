@@ -35,7 +35,7 @@ When you need to:
 Clawdbot CLI provides 24 main command groups covering all aspects of system management:
 
 | Command Group | Description |
-| ------------- | ----------- |
+|--- | ---|
 | `gateway` / `daemon` | Gateway service control (start, stop, status) |
 | `agent` / `agents` | Agent interaction and management |
 | `models` | AI model configuration and authentication |
@@ -1309,7 +1309,7 @@ This lesson provided a complete command reference for Clawdbot CLI, including:
 > Updated: 2026-01-27
 
 | Feature | File Path | Lines |
-| ------- | --------- | ----- |
+|--- | --- | ---|
 | CLI Main Program | [`src/cli/program.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program.ts) | Full file |
 | Command Registration | [`src/cli/program/register.subclis.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.subclis.ts) | 30-225 |
 | Agent Commands | [`src/cli/program/register.agent.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.agent.ts) | 20-210 |

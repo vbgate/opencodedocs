@@ -13,8 +13,8 @@ This chapter records Antigravity Tools' version evolution and release notes. Rea
 ## In This Chapter
 
 | Page | Description |
-|------|-------------|
-| [Release Notes](./release-notes/) | How to read the Changelog embedded in README, quickly assess upgrade impact, and complete post-upgrade verification |
+|--- | ---|
+|--- | ---|
 
 ## Learning Path
 

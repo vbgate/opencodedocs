@@ -32,7 +32,7 @@ order: 4
 需要使用远程/Devcontainer 模式的典型场景：
 
 | 场景 | 说明 |
-| --- | --- |
+|--- | ---|
 | **SSH 连接** | 你通过 SSH 连接到远程开发服务器 |
 | **Devcontainer** | 你在 VS Code 中使用 devcontainer 进行开发 |
 | **WSL** | 你在 Windows 上使用 WSL 进行 Linux 开发 |
@@ -70,7 +70,7 @@ Plannotator 通过检测 `PLANNOTATOR_REMOTE` 环境变量自动进入"远程模
 Plannotator 远程模式依赖三个环境变量：
 
 | 环境变量 | 说明 | 默认值 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `PLANNOTATOR_REMOTE` | 启用远程模式 | 未设置（本地模式） |
 | `PLANNOTATOR_PORT` | 固定端口号 | 随机（本地）/ 19432（远程） |
 | `PLANNOTATOR_BROWSER` | 自定义浏览器路径 | 系统默认浏览器 |
@@ -333,7 +333,7 @@ Error: bind: EADDRINUSE: address already in use :::9999
 远程/Devcontainer 模式的核心要点：
 
 | 要点 | 说明 |
-| --- | --- |
+|--- | ---|
 | **环境变量** | `PLANNOTATOR_REMOTE=1` 启用远程模式 |
 | **固定端口** | 使用 `PLANNOTATOR_PORT` 设置固定端口（默认 19432） |
 | **端口转发** | SSH/Devcontainer 需要配置端口转发，WSL 自动转发 |
@@ -361,7 +361,7 @@ Error: bind: EADDRINUSE: address already in use :::9999
 > 更新时间：2026-01-24
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 远程会话检测 | [`packages/server/remote.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/remote.ts#L16-L29) | 16-29 |
 | 服务器端口获取 | [`packages/server/remote.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/remote.ts#L34-L49) | 34-49 |
 | 服务器启动逻辑 | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts#L91-L97) | 91-97 |

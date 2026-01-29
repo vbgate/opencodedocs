@@ -130,7 +130,7 @@ graph LR
 Meilleurs moments pour utiliser Agent Skills :
 
 | Scénario | Compétence utilisée | Exemple d'invite déclencheur |
-| ---- | ---------- | -------------- |
+|--- | --- | ---|
 | Écriture de composants React | react-best-practices | « Review this React component for performance issues » |
 | Optimisation de pages Next.js | react-best-practices | « Help me optimize this Next.js page » |
 | Vérification de la qualité UI | web-design-guidelines | « Check accessibility of my site » |
@@ -189,7 +189,7 @@ Les compétences utilisent un mécanisme de chargement à la demande pour rédui
 > Dernière mise à jour : 2026-01-25
 
 | Fonctionnalité | Chemin de fichier | Ligne |
-| ----------- | ----------------------------------- | ----- |
+|--- | --- | ---|
 | Liste des packs de compétences | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L7-L80) | 7-80 |
 | Description de la structure des compétences | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L103-L110) | 103-110 |
 | Spécification AGENTS.md | [`AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md) | Tout |

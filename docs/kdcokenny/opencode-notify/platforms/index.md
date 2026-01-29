@@ -66,7 +66,7 @@ View all 37+ supported terminal emulators and learn about automatic detection me
 Choose the corresponding chapter based on your operating system:
 
 | Operating System | Recommended Learning Order | Core Features |
-|------------------|---------------------------|---------------|
+|--- | --- | ---|
 | **macOS** | 1. macOS Platform Features → 4. Supported Terminals | Focus detection, click-to-focus, custom sounds |
 | **Windows** | 2. Windows Platform Features → 4. Supported Terminals | Native notifications, basic configuration |
 | **Linux** | 3. Linux Platform Features → 4. Supported Terminals | libnotify integration, dependency installation |
@@ -78,7 +78,7 @@ Regardless of your platform, Lesson 4 "Supported Terminals" is worth studying. I
 ## Feature Comparison Table
 
 | Feature | macOS | Windows | Linux |
-|---------|-------|---------|-------|
+|--- | --- | --- | ---|
 | Native Notifications | ✅ | ✅ | ✅ |
 | Terminal Focus Detection | ✅ | ❌ | ❌ |
 | Click-to-Focus Notifications | ✅ | ❌ | ❌ |

@@ -60,7 +60,7 @@ Clawdbot performance optimization revolves around three layers:
 ### Optimization Priority
 
 | Optimization Item | Impact | Difficulty | Priority |
-| ----------------- | ------ | ---------- | -------- |
+|--- | --- | --- | ---|
 | Prompt Caching | ⭐⭐⭐ | Simple | P0 (Immediate) |
 | Session Pruning | ⭐⭐⭐ | Simple | P0 (Immediate) |
 | Concurrency Control | ⭐⭐ | Medium | P1 (Recommended) |
@@ -95,7 +95,7 @@ Anthropic API supports **prompt caching**: Identical conversation history can be
 Suppose you ask the AI to complete a task requiring 10 conversation rounds:
 
 | Scenario | Without Caching | With Caching |
-| -------- | -------------- | ------------ |
+|--- | --- | ---|
 | Send full history each round | 200,000 tokens × 10 rounds = 2M tokens | Round 1: 200K, next 9 rounds: ~100K (cache hit) |
 | Cost (Anthropic) | ≈$30 | ≈$3.5 (88% savings) |
 | Latency | Every round requires full history | Cache hit only needs to send incremental content |
@@ -176,7 +176,7 @@ flowchart LR
 ### Pruning Effect Comparison
 
 | Scenario | Without Pruning | With Pruning |
-| -------- | --------------- | ------------ |
+|--- | --- | ---|
 | Tool calls retained | All 20 calls in context | Only last 5 valid results |
 | Context size | 200,000 tokens | ~80,000 tokens (60% reduction) |
 | API call latency | Increases noticeably over time | Relatively stable |
@@ -260,7 +260,7 @@ Clawdbot uses **lane queues** to manage concurrency:
 ### Concurrency Selection Recommendations
 
 | Use Case | Recommended Concurrency | Reason |
-| -------- | --------------------- | ------ |
+|--- | --- | ---|
 | Lightweight use (personal assistant) | 2-4 | Fully utilize multi-core, reduce response time |
 | High-frequency messages (group chat) | 4-8 | Prevent queue backlog, maintain low latency |
 | Resource-constrained (low-end device) | 1-2 | Avoid memory overflow, system stutter |
@@ -285,7 +285,7 @@ If you use Clawdbot in group chats or channels, adjust queue strategy:
 
 ::: tip Queue Mode Comparison
 | Mode | Behavior | Use Case |
-| ---- | -------- | -------- |
+|--- | --- | ---|
 | `collect` | Merge into single followup | Avoid duplicate responses |
 | `followup` | Process each message independently | Maintain thread independence |
 | `steer` | Immediately inject into current conversation (cancel pending) | Quick response to additional content |
@@ -310,7 +310,7 @@ If you use Clawdbot in group chats or channels, adjust queue strategy:
 ```
 
 | Level | Purpose | Performance Impact |
-| ----- | ------- | ------------------ |
+|--- | --- | ---|
 | `error` | Errors only | Minimal |
 | `warn` | Warnings and errors | Low |
 | `info` | Normal operation info | Medium |
@@ -422,7 +422,7 @@ If you run **local models** (Ollama, etc.), ensure reasonable hardware configura
 ### Memory Requirements
 
 | Model Size | GPU Memory (Recommended) | System Memory (Recommended) | CPU (Minimum) |
-| ---------- | ----------------------- | -------------------------- | ------------- |
+|--- | --- | --- | ---|
 | Small (7B) | 8 GB                    | 16 GB                      | 4 cores       |
 | Medium (13B) | 16 GB                   | 32 GB                      | 8 cores       |
 | Large (34B) | 24 GB                   | 64 GB                      | 16 cores      |
@@ -485,7 +485,7 @@ You should see:
 Record these metrics to establish performance baselines:
 
 | Metric | Normal Range | Abnormal Threshold |
-| ------ | ------------ | ----------------- |
+|--- | --- | ---|
 | First-token response latency | < 2 seconds | > 5 seconds |
 | Session context size | < 100K tokens | > 150K tokens |
 | Queue wait time | < 2 seconds | > 10 seconds |
@@ -607,7 +607,7 @@ In this lesson, we learned **complete performance optimization strategies** for 
 ### Expected Results
 
 | Metric | Before | After | Improvement |
-| ------ | ------ | ----- | ----------- |
+|--- | --- | --- | ---|
 | Average response latency | 3-5 seconds | 1-2 seconds | -50% |
 | Single API call cost | $0.50 | $0.15 | -70% |
 | Memory usage (stable) | 1.2 GB | 400 MB | -67% |
@@ -635,7 +635,7 @@ In this lesson, we learned **complete performance optimization strategies** for 
 > Last updated: 2026-01-27
 
 | Function | File Path | Lines |
-| --------------------- | ------------------------------------------------------------------- | --------- |
+|--- | --- | ---|
 | Session Pruning | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts#L1750-L1800) | 1750-1800 |
 | Compaction | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts#L1830-L1900) | 1830-1900 |
 | Memory Flush | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts#L1840-L1870) | 1840-1870 |

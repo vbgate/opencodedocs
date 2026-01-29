@@ -220,7 +220,7 @@ Signal은 최대 4개의 장치를 연결할 수 있습니다. Clawdbot은 이 �
 **구성 설명**:
 
 | 필드 | 값 | 설명 |
-|------|-----|------|
+|--- | --- | ---|
 | `enabled` | `true` | Signal 채널 활성화 |
 | `account` | `"+15551234567"` | Signal 계정(E.164 형식) |
 | `cliPath` | `"signal-cli"` | signal-cli 명령 경로 |
@@ -576,7 +576,7 @@ Clawdbot의 강력한 기능을 계속 탐색하세요!🚀
 > 업데이트 시간: 2026-01-27
 
 | 기능        | 파일 경로                                                                                    | 행 번호    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Signal RPC 클라이언트 | [`src/signal/client.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/client.ts)         | 1-186   |
 | Signal 데몬 관리 | [`src/signal/daemon.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/daemon.ts)         | 1-85    |
 | 다중 계정 지원 | [`src/signal/accounts.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/accounts.ts)       | 1-84    |

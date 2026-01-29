@@ -68,7 +68,7 @@ order: 90
 Everything Claude Code 使用了 6 种 Hook 类型：
 
 | Hook 类型 | 触发时机 | 使用场景 |
-| --------- | --------- | -------- |
+|--- | --- | ---|
 | **PreToolUse** | 在任何工具执行前 | 验证命令、阻止操作、提示建议 |
 | **PostToolUse** | 在任何工具执行后 | 自动格式化、类型检查、记录日志 |
 | **PreCompact** | 在上下文压缩前 | 保存状态、记录压缩事件 |
@@ -102,7 +102,7 @@ SessionStart → [PreToolUse → PostToolUse]×N → PreCompact → Stop → Ses
 Everything Claude Code 的所有 Hooks 都使用 Node.js 脚本实现，而不是 Shell 脚本。原因是：
 
 | 优势 | Shell 脚本 | Node.js 脚本 |
-| ---- | ---------- | ------------ |
+|--- | --- | ---|
 | **跨平台** | ❌ 需要 Windows/macOS/Linux 分支 | ✅ 自动跨平台 |
 | **JSON 处理** | ❌ 需要额外工具（jq） | ✅ 原生支持 |
 | **文件操作** | ⚠️ 命令复杂 | ✅ fs API 简洁 |
@@ -563,7 +563,7 @@ main().catch(err => {
 **解决**：使用 Node.js 脚本代替 Shell 脚本
 
 | 功能 | Shell 脚本 | Node.js 脚本 |
-| ---- | ---------- | ------------ |
+|--- | --- | ---|
 | 文件读取 | `cat file.txt` | `fs.readFileSync('file.txt')` |
 | 目录检查 | `[ -d dir ]` | `fs.existsSync(dir)` |
 | 环境变量 | `$VAR` | `process.env.VAR` |
@@ -620,7 +620,7 @@ if (someCondition) {
 **6 种 Hook 类型总结**：
 
 | Hook 类型 | 触发时机 | 典型用途 | Everything Claude Code 数量 |
-| --------- | --------- | -------- | ------------------------ |
+|--- | --- | --- | ---|
 | PreToolUse | 工具执行前 | 验证、阻止、提示 | 5 个 |
 | PostToolUse | 工具执行后 | 格式化、检查、记录 | 4 个 |
 | PreCompact | 上下文压缩前 | 保存状态 | 1 个 |
@@ -668,7 +668,7 @@ if (someCondition) {
 > 更新时间：2026-01-25
 
 | 功能 | 文件路径 | 行号 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | Hooks 主配置 | [`hooks/hooks.json`](https://github.com/affaan-m/everything-claude-code/blob/main/hooks/hooks.json) | 1-158 |
 | SessionStart 脚本 | [`scripts/hooks/session-start.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/hooks/session-start.js) | 1-62 |
 | SessionEnd 脚本 | [`scripts/hooks/session-end.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/hooks/session-end.js) | 1-83 |

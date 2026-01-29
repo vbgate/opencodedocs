@@ -135,7 +135,7 @@ Show my AI account status
 **Описание ключевых параметров**:
 
 | Параметр   | Значение                                   | Назначение                                 |
-| ---------- | ------------------------------------------ | ------------------------------------------ |
+|--- | --- | ---|
 | `description` | "Query quota usage for all AI accounts" | Описание в списке команд                    |
 | `template`    | "Use to mystatus tool..."              | Указывает OpenCode, как обрабатывать эту команду |
 
@@ -147,7 +147,7 @@ template — это "инструкция" для OpenCode, указывающа
 Убедитесь, что вы освоили два способа использования:
 
 | Навык              | Метод проверки                 | Ожидаемый результат                       |
-| ------------------- | ------------------------------ | ---------------------------------------- |
+|--- | --- | ---|
 | Слэш-команда запрос | Введите `/mystatus`           | Отображается информация о квотах всех платформ |
 | Запрос на естественном языке | Введите "Check my OpenAI quota" | Отображается информация о квотах         |
 | Понимание настройки | Проверьте opencode.json         | Найдена конфигурация команды mystatus    |
@@ -213,10 +213,10 @@ template — это "инструкция" для OpenCode, указывающа
 > Обновлено: 2026-01-23
 
 | Функция | Путь к файлу | Строка |
-| --- | --- | --- |
+|--- | --- | ---|
 | Определение инструмента mystatus | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 29-33 |
 | Описание инструмента | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 30-31 |
-| Настройка слэш-команды | [`command/mystatus.md`](https://github.com/vbgate/opencode-mystatus/blob/main/command/mystatus.md) | 1-6 |
+|--- | --- | ---|
 | Параллельный запрос всех платформ | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 49-56 |
 | Сбор и объединение результатов | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 58-89 |
 

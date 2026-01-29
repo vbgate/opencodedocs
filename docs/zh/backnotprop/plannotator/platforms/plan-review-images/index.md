@@ -66,7 +66,7 @@ order: 3
 **图像标注的三种工具**：
 
 | 工具 | 图标 | 快捷键 | 用途 |
-| ---- | ---- | ------ | ---- |
+|--- | --- | --- | ---|
 | **画笔** | 🖊️ | 1 | 自由绘制，适合手写注释、圈选任意形状 |
 | **箭头** | ➡️ | 2 | 标注重点区域或指示方向，适合点对点标注 |
 | **圆形** | ⭕ | 3 | 圈选区域，适合突出显示某个元素 |
@@ -346,7 +346,7 @@ const radius = Math.hypot(x2 - x1, y2 - y1) / 2;
 ## 快捷键速查
 
 | 快捷键 | 功能 |
-| ------ | ---- |
+|--- | ---|
 | `1` | 切换到画笔工具 |
 | `2` | 切换到箭头工具 |
 | `3` | 切换到圆形工具 |
@@ -388,7 +388,7 @@ const radius = Math.hypot(x2 - x1, y2 - y1) / 2;
 > 更新时间：2026-01-24
 
 | 功能          | 文件路径                                                                                              | 行号    |
-| ------------- | ----------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 工具类型定义   | [`packages/ui/components/ImageAnnotator/types.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/components/ImageAnnotator/types.ts#L1-L40) | 1-40    |
 | 渲染函数       | [`packages/ui/components/ImageAnnotator/utils.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/components/ImageAnnotator/utils.ts#L1-L148) | 1-148   |
 | 主组件         | [`packages/ui/components/ImageAnnotator/index.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/ui/components/ImageAnnotator/index.tsx#L1-L233) | 1-233   |

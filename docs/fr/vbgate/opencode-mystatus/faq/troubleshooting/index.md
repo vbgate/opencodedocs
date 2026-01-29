@@ -394,7 +394,7 @@ Si vous ne souhaitez pas configurer de PAT, vous pouvez :
 Confirmez que vous pouvez résoudre indépendamment les problèmes courants :
 
 | Compétence | Méthode de vérification | Résultat attendu |
-| ---------- | ------------------------ | ----------------- |
+|--- | --- | ---|
 | Résoudre les problèmes de fichiers d'authentification | Vérifier si auth.json existe et si le format est correct | Le fichier existe, le format JSON est correct |
 | Rafraîchir le jeton OpenAI | Utiliser une fois le modèle OpenAI dans OpenCode | Le jeton a été mis à jour, le quota peut être interrogé normalement |
 | Configurer le PAT Copilot | Créer copilot-quota-token.json | Le quota Copilot peut être interrogé normalement |
@@ -433,7 +433,7 @@ La plupart des erreurs peuvent être résolues par configuration ou réautorisat
 > Date de mise à jour :2026-01-23
 
 | Fonction | Chemin du fichier | Ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Logique principale de gestion des erreurs | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 41-87 |
 | Lecture des fichiers d'authentification | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 38-46 |
 | Invite de compte introuvable | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 78-80 |

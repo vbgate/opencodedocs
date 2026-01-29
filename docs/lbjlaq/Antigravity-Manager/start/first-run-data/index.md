@@ -108,7 +108,7 @@ Not all files are worth backing up. First, distinguish "which are account data" 
 The following filenames come from the project source code and are all fixed:
 
 | What You'll See | Purpose | What You Need to Care About |
-| --- | --- | --- |
+|--- | --- | ---|
 | `accounts.json` | Account index (includes account list/current account) | Recommend backing up together when migrating accounts |
 | `accounts/` | One `*.json` file per account | This is the main account data |
 | `logs/` | Application log directory | Look here first when troubleshooting |
@@ -188,7 +188,7 @@ In Settings -> General, find "Auto-start on boot" and select enable.
 
 ::: info Two Types of "Auto-Start," Don't Get Confused
 | Name | What It Refers To | Evidence |
-| --- | --- | --- |
+|--- | --- | ---|
 | Startup auto-start | Automatically start Antigravity Tools after computer boots (the desktop app itself) | Startup parameters include `--minimized`, and `toggle_auto_launch` command is provided |
 | Reverse proxy auto-start | After Antigravity Tools starts, if `proxy.auto_start=true` is configured, it will attempt to auto-start the local reverse proxy service | Reads configuration at app startup and calls `start_proxy_service(...)` |
 :::
@@ -204,7 +204,7 @@ In Settings -> General, find "Auto-start on boot" and select enable.
 ## Pitfall Reminders
 
 | Scenario | What You Might Do (❌) | Recommended Approach (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Can't find the data directory | Randomly search for the App's installation directory in the system | Go directly to Settings -> Advanced to see "Data Directory" and open with one click |
 | Closed window and thought it exited | Changed configuration/changed ports after clicking window close | First check if the tray icon is still there; to exit, use tray Quit |
 | Too many logs to troubleshoot | Flipping through old logs while reproducing the problem | First "Clear Logs," then reproduce once, and finally only look at this log file |
@@ -233,24 +233,24 @@ In Settings -> General, find "Auto-start on boot" and select enable.
 > Updated: 2026-01-23
 
 | Function | File Path | Line Numbers |
-| --- | --- | --- |
+|--- | --- | ---|
 | Data directory location (`~/.antigravity_tools`) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | Account index and account files directory (`accounts.json` / `accounts/`) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L46) | 16-46 |
 | Log directory and daily rotation (`logs/` + `app.log`) | [`src-tauri/src/modules/logger.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/logger.rs#L17-L83) | 17-83 |
 | Clear logs (truncate file) | [`src-tauri/src/modules/logger.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/logger.rs#L149-L169) | 149-169 |
-| Settings page shows data directory + one-click open | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L525-L576) | 525-576 |
-| Settings page one-click clear logs (button + dialog logic) | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L127-L135) | 127-135 |
-| Settings page one-click clear logs (Advanced tab button) | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L732-L747) | 732-747 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Tray menu and click events (switch account/refresh/show/exit) | [`src-tauri/src/modules/tray.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/tray.rs#L9-L158) | 9-158 |
-| Close window -> hide (minimize to tray) | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L150-L160) | 150-160 |
-| Startup auto-start plugin initialization (includes `--minimized`) | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L58-L66) | 58-66 |
-| Startup auto-start toggle (`toggle_auto_launch` / `is_auto_launch_enabled`) | [`src-tauri/src/commands/autostart.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/autostart.rs#L4-L39) | 4-39 |
-| One-click open data directory / get path / clear logs commands | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L578-L621) | 578-621 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Token Stats database filename (`token_stats.db`) | [`src-tauri/src/modules/token_stats.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/token_stats.rs#L58-L61) | 58-61 |
 | Proxy Monitor database filename (`proxy_logs.db`) | [`src-tauri/src/modules/proxy_db.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/proxy_db.rs#L5-L8) | 5-8 |
 | Warmup history filename (`warmup_history.json`) | [`src-tauri/src/modules/scheduler.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/scheduler.rs#L14-L17) | 14-17 |
 | Update settings filename (`update_settings.json`) | [`src-tauri/src/modules/update_checker.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/update_checker.rs#L150-L177) | 150-177 |
-| Reverse proxy auto-start (start service when `proxy.auto_start=true`) | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L107-L126) | 107-126 |
+|--- | --- | ---|
 
 </details>
 

@@ -138,9 +138,9 @@ Tokens sind eine begrenzte Ressource. Wenn die Datei `SKILL.md` zu lang ist, bel
 > Aktualisierungszeit: 2026-01-25
 
 | Funktion        | Dateipfad                                                                              | Zeilen   |
-| ----------- | ------------------------------------------------------------------------------------- | ------ |
-| Kontextverwaltungs-Best Practices | [`AGENTS.md:70-78`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L70-L78) | 70-78  |
-| Skill-Auslösungsbeispiele | [`README.md:88-102`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L88-L102) | 88-102 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Kernprinzipien**:
 - Keep SKILL.md under 500 lines: Skill-Dateien kurz halten

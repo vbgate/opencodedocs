@@ -121,7 +121,7 @@ Die meisten Fehler können durch Konfiguration oder erneute Autorisierung gelös
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
+|--- | --- | ---|
 | Fehlerbehandlungsmainlogik | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 41-87 |
 
 </details>

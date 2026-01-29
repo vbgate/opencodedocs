@@ -35,7 +35,7 @@ Have you encountered these situations?
 ## When to Use This Approach
 
 | Scenario | Recommended Skill | Why |
-|----------|------------------|-----|
+|--- | --- | ---|
 | Frontend UI interfaces need beautiful design | `frontend-ui-ux` | Designer perspective, focuses on typography, color, animation |
 | Browser testing, screenshots, data scraping | `playwright` or `agent-browser` | Complete browser automation capabilities |
 | Git commits, history search, branch management | `git-master` | Auto-detects commit style, generates atomic commits |
@@ -327,7 +327,7 @@ Example: `Use git-master to find which commit added the 'calculate_discount' fun
 The forced rule for `git-master` is:
 
 | File Count | Minimum Commits |
-|-------------|----------------|
+|--- | ---|
 | 3+ files | 2+ commits |
 | 5+ files | 3+ commits |
 | 10+ files | 5+ commits |
@@ -472,7 +472,7 @@ EOF
 ::: tip Difference Between playwright and dev-browser
 
 | Feature | playwright | dev-browser |
-|---------|-----------|-------------|
+|--- | --- | ---|
 | **Session Persistence** | ❌ New session each time | ✅ Saved across scripts |
 | **ARIA Snapshot** | ❌ Uses Playwright API | ✅ Auto-generates references |
 | **Extension Mode** | ❌ Not supported | ✅ Connects to user browser |
@@ -488,7 +488,7 @@ EOF
 Select Skills based on task type:
 
 | Task Type | Recommended Combination |
-|-----------|------------------------|
+|--- | ---|
 | Quick Git commits | `delegate_task(category='quick', load_skills=['git-master'])` |
 | UI interface design | `delegate_task(category='visual-engineering', load_skills=['frontend-ui-ux'])` |
 | Browser verification | `delegate_task(category='quick', load_skills=['playwright'])` |
@@ -527,7 +527,7 @@ delegate_task(
 This lesson introduced 4 built-in Skills:
 
 | Skill | Core Value | Typical Scenarios |
-|-------|------------|------------------|
+|--- | --- | ---|
 | **playwright** | Complete browser automation | UI testing, screenshots, web scraping |
 | **frontend-ui-ux** | Designer perspective, aesthetics first | UI component design, interface beautification |
 | **git-master** | Automated Git operations, atomic commits | Code commits, history search |
@@ -560,15 +560,15 @@ This lesson introduced 4 built-in Skills:
 > Last Updated: 2026-01-26
 
 | Feature | File Path | Line Number |
-|---------|-----------|-------------|
+|--- | --- | ---|
 | playwright Skill definition | [`src/features/builtin-skills/skills.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-skills/skills.ts) | 4-16 |
-| agent-browser Skill definition | [`src/features/builtin-skills/skills.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-skills/skills.ts) | 18-313 |
-| frontend-ui-ux Skill definition | [`src/features/builtin-skills/skills.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-skills/skills.ts) | 315-391 |
-| git-master Skill definition | [`src/features/builtin-skills/skills.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-skills/skills.ts) | 393-1497 |
-| dev-browser Skill definition | [`src/features/builtin-skills/skills.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-skills/skills.ts) | 1499-1717 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | createBuiltinSkills function | [`src/features/builtin-skills/skills.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-skills/skills.ts) | 1723-1729 |
 | BuiltinSkill type definition | [`src/features/builtin-skills/types.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/features/builtin-skills/types.ts) | 3-16 |
-| Built-in Skills loading logic | [`src/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/index.ts) | 51, 311-319 |
+|--- | --- | ---|
 | Browser engine configuration | [`src/config/schema.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/config/schema.ts) | - |
 
 **Key Configurations**:

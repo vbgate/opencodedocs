@@ -36,7 +36,7 @@ Aber die manuelle Implementierung dieser Funktionen erhöht die Entwicklungskomp
 Wenn Sie die Fähigkeiten von KI-Agenten erweitern müssen:
 
 | Szenario | Empfohlenes MCP |
-|----------|----------------|
+|--- | ---|
 | Neueste technische Informationen, Nachrichten oder Branchentrends abrufen | **websearch** (Exa) |
 | Offizielle API-Dokumentation für Bibliotheken oder Frameworks abfragen | **context7** |
 | Implementierungsbeispiele in GitHub-Repositories finden | **grep_app** (Grep.app) |
@@ -182,7 +182,7 @@ Das Deaktivieren unnötiger MCPs kann:
 Die Deaktivierungskonfigurationspriorität für integrierte MCPs:
 
 | Konfigurationsspeicherort | Priorität |
-|----------------------------|-----------|
+|--- | ---|
 | Benutzerkonfiguration `~/.config/opencode/oh-my-opencode.json` | Hoch (überschreibt Projektkonfiguration) |
 | Projektkonfiguration `.opencode/oh-my-opencode.json` | Mittel |
 | Code-Standard | Niedrig (alle aktiviert) |
@@ -211,7 +211,7 @@ export const websearch = {
 **Konfigurationsfeldbeschreibungen**:
 
 | Feld | Typ | Beschreibung |
-|------|-----|-------------|
+|--- | --- | ---|
 | `type` | `"remote"` | Festgelegter Wert, der Remote-MCP angibt |
 | `url` | `string` | HTTP-Adresse des MCP-Servers |
 | `enabled` | `boolean` | Ob aktiviert (im Code als `true` festgelegt, durch `disabled_mcps` gesteuert) |
@@ -288,7 +288,7 @@ oh-my-opencode doctor --verbose
 Diese Lektion hat die 3 integrierten MCP-Server von Oh-My-OpenCode vorgestellt:
 
 | MCP | Funktion | Konfigurationsanforderungen | Hauptverwendung |
-|-----|----------|---------------------------|------------------|
+|--- | --- | --- | ---|
 | **websearch** | Echtzeit-Websuche | EXA_API_KEY | Neueste Informationen abrufen |
 | **context7** | Offizielle Dokumentationsabfrage | Keine | API-Dokumentation konsultieren |
 | **grep_app** | GitHub-Codesuche | Keine | Implementierungsbeispiele finden |
@@ -312,11 +312,11 @@ Diese MCP-Server erweitern die Fähigkeiten von KI-Agenten erheblich und ermögl
 > Aktualisiert: 2026-01-26
 
 | Funktion | Dateipfad | Zeilennummern |
-|----------|-----------|--------------|
-| MCP-Factory-Funktion | [`src/mcp/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/mcp/index.ts) | 22-32 |
-| websearch-Konfiguration | [`src/mcp/websearch.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/mcp/websearch.ts) | 1-11 |
-| context7-Konfiguration | [`src/mcp/context7.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/mcp/context7.ts) | 1-7 |
-| grep_app-Konfiguration | [`src/mcp/grep-app.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/mcp/grep-app.ts) | 1-7 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | McpNameSchema | [`src/mcp/types.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/mcp/types.ts) | 1-10 |
 | disabled_mcps-Feld | [`src/config/schema.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/config/schema.ts) | 331 |
 

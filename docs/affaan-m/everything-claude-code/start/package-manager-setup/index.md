@@ -375,7 +375,7 @@ Everything Claude Code's package manager detection mechanism is very intelligent
 > Last updated: 2026-01-25
 
 | Feature                    | File Path                                                                                      | Lines   |
-| ----------------------- | --------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Package manager detection core logic     | [`scripts/lib/package-manager.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/lib/package-manager.js#L157-L236)         | 157-236 |
 | Lock file detection          | [`scripts/lib/package-manager.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/lib/package-manager.js#L92-L102)          | 92-102  |
 | package.json detection      | [`scripts/lib/package-manager.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/lib/package-manager.js#L107-L126)          | 107-126 |
@@ -385,7 +385,7 @@ Everything Claude Code's package manager detection mechanism is very intelligent
 | Project config save            | [`scripts/lib/package-manager.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/lib/package-manager.js#L257-L272)         | 257-272 |
 | Command line script entry          | [`scripts/setup-package-manager.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/setup-package-manager.js#L158-L206)   | 158-206 |
 | Detection command implementation            | [`scripts/setup-package-manager.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/setup-package-manager.js#L62-L95)    | 62-95   |
-| /setup-pm command definition     | [`commands/setup-pm.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/setup-pm.md#L1-L81)               | 1-81    |
+|--- | --- | ---|
 
 **Key Constants**:
 - `PACKAGE_MANAGERS`: Supported package managers and their command configs (lines 13-54)

@@ -128,7 +128,7 @@ tags: bundle, code-splitting, lazy-loading, performance
 **Field descriptions:**
 
 | Field | Required | Description | Example |
-|-------|----------|-------------|---------|
+|--- | --- | --- | ---|
 | `title` | ✅ | Short rule title | `Promise.all() for Independent Operations` |
 | `impact` | ✅ | Impact level (6 enum values) | `CRITICAL` / `HIGH` / `MEDIUM`, etc. |
 | `impactDescription` | ⭕ | Description of impact magnitude | `2-10× improvement` |
@@ -195,7 +195,7 @@ function Dashboard() {
 **Example writing guidelines:**
 
 | Requirement | Description |
-|-------------|-------------|
+|--- | ---|
 | **Label format** | `**Incorrect:**` or `**Incorrect (description):**` (brackets optional) |
 | **Bracket content** | Optional, brief description of why it's wrong/right |
 | **Code block** | Use `\`\`\`typescript` or `\`\`\`tsx` |
@@ -255,7 +255,7 @@ If validation fails, you'll see detailed error messages:
 **Common validation errors:**
 
 | Error message | Cause | Fix method |
-|---------------|-------|------------|
+|--- | --- | ---|
 | `Missing or empty title` | frontmatter missing `title` field | Add `title: Your Title` |
 | `Missing examples (need at least one bad and one good example)` | examples array is empty | Add at least one example (with code block) |
 | `Missing code examples` | Has example label but no actual code | Add code block after label (`\`\`\`typescript`) |
@@ -396,7 +396,7 @@ Remember these 5 key points:
 > Last updated: 2026-01-25
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | Rule template file | [`skills/react-best-practices/rules/_template.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/_template.md) | 1-29 |
 | Rule type definitions | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts) | 5-26 |
 | Rule validation logic | [`packages/react-best-practices-build/src/validate.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/validate.ts) | 21-66 |

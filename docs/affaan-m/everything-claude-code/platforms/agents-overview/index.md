@@ -53,7 +53,7 @@ For example: The `/tdd` command invokes the `tdd-guide` agent to execute the tes
 ### Overview of 9 Agents
 
 | Agent | Role | Typical Scenarios | Key Capabilities |
-|-------|------|-------------------|------------------|
+|--- | --- | --- | ---|
 | **planner** | Planning Expert | Creating plans before complex feature development | Requirements analysis, architecture review, step breakdown |
 | **architect** | Architect | System design and technical decisions | Architecture evaluation, pattern recommendations, tradeoff analysis |
 | **tdd-guide** | TDD Mentor | Writing tests and implementing features | Red-Green-Refactor workflow, coverage guarantees |
@@ -1142,7 +1142,7 @@ docs/CODEMAPS/
 ## Key Modules
 
 | Module | Purpose | Exports | Dependencies |
-|--------|---------|---------|--------------|
+|--- | --- | --- | ---|
 | ... | ... | ... | ... |
 
 ## Data Flow
@@ -1211,7 +1211,7 @@ website/src/
 ## Key Components
 
 | Component | Purpose | Location |
-|-----------|---------|----------|
+|--- | --- | ---|
 | HeaderWallet | Wallet connection | components/HeaderWallet.tsx |
 | MarketsClient | Markets listing | app/markets/MarketsClient.js |
 | SemanticSearchBar | Search UI | components/SemanticSearchBar.js |
@@ -1239,7 +1239,7 @@ User → Markets Page → API Route → Supabase → Redis (optional) → Respon
 ## API Routes
 
 | Route | Method | Purpose |
-|-------|--------|---------|
+|--- | --- | ---|
 | /api/markets | GET | List all markets |
 | /api/markets/search | GET | Semantic search |
 | /api/market/[slug] | GET | Single market |
@@ -1311,7 +1311,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md)
 Based on your task type, choose the appropriate agent:
 
 | Task Type | Recommended Call | Alternative |
-|-----------|-----------------|-------------|
+|--- | --- | ---|
 | **Plan New Feature** | `/plan` → planner agent | Manually call planner agent |
 | **System Architecture Design** | Manually call architect agent | `/orchestrate` → Sequential agent calls |
 | **Write New Feature** | `/tdd` → tdd-guide agent | planner → tdd-guide |
@@ -1416,7 +1416,7 @@ Everything Claude Code provides 9 specialized agents, each focused on a specific
 > Last updated: 2026-01-25
 
 | Feature | File Path | Lines |
-|------|---------|------|
+|--- | --- | ---|
 | Planner Agent | [agents/planner.md](https://github.com/affaan-m/everything-claude-code/blob/main/agents/planner.md) | 1-120 |
 | Architect Agent | [agents/architect.md](https://github.com/affaan-m/everything-claude-code/blob/main/agents/architect.md) | 1-212 |
 | TDD Guide Agent | [agents/tdd-guide.md](https://github.com/affaan-m/everything-claude-code/blob/main/agents/tdd-guide.md) | 1-281 |

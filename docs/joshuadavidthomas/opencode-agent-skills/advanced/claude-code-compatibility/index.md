@@ -47,7 +47,7 @@ OpenCode Agent Skills plugin enables you to use Claude Code skills without modif
 When the plugin detects that a loaded skill is written for Claude Code, it automatically injects a tool mapping guide:
 
 | Claude Code Tool | OpenCode Tool | Mapping Rule |
-| ---------------- | ------------- | ------------ |
+|--- | --- | ---|
 | `TodoWrite/TodoRead` | `todowrite/todoread` | Lowercase |
 | `Task` (sub-agent) | `task` (with subagent_type parameter) | Use parameter |
 | `Skill` | `use_skill` | Replace tool name |
@@ -224,7 +224,7 @@ No need to rewrite skills, install and use directly, the plugin automatically ha
 > Updated: 2026-01-24
 
 | Function                | File Path                                                                                               | Line Number    |
-| ------------------- | ------------------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | Tool mapping definition        | [`src/claude.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/claude.ts#L19-L25)       | 19-25   |
 | v1/v2 format type definitions  | [`src/claude.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/claude.ts#L35-L61)       | 35-61   |
 | Plugin installation path extraction    | [`src/claude.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/claude.ts#L68-L77)       | 68-77   |
@@ -232,7 +232,7 @@ No need to rewrite skills, install and use directly, the plugin automatically ha
 | Discover marketplace skills        | [`src/claude.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/claude.ts#L115-L180)      | 115-180 |
 | Discover cache skills        | [`src/claude.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/claude.ts#L193-L253)      | 193-253 |
 | Skill discovery priority list  | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L241-L254)      | 241-254 |
-| Same-name skill deduplication logic    | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L256-L260)      | 256-260 |
+|--- | --- | ---|
 | toolTranslation import | [`src/tools.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/tools.ts#L15)       | 15   |
 | Tool mapping injection        | [`src/tools.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/tools.ts#L238-L249)      | 238-249 |
 

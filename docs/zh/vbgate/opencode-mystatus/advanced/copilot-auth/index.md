@@ -58,7 +58,7 @@ OpenCode 的新 OAuth 集成不支持访问配额 API。
 mystatus 支持**两种 Copilot 认证方式**：
 
 | 认证方式 | 说明 | 优点 | 缺点 |
-|---------|------|------|------|
+|--- | --- | --- | ---|
 | **OAuth Token**（默认） | 使用 OpenCode 登录时获取的 GitHub OAuth Token | 无需额外配置，开箱即用 | 新版 OpenCode 的 OAuth Token 可能没有 Copilot 权限 |
 | **Fine-grained PAT**（推荐） | 用户手动创建的 Fine-grained Personal Access Token | 稳定可靠，不依赖 OAuth 权限 | 需要手动创建一次 |
 
@@ -124,7 +124,7 @@ https://github.com/settings/tokens?type=beta
 **配置参数**：
 
 | 字段 | 值 |
-|------|-----|
+|--- | ---|
 | **Name** | `mystatus-copilot`（或任何你喜欢的名称） |
 | **Expiration** | 选择过期时间（如 90 days 或 No expiration） |
 | **Resource owner** | 不需要选择（默认） |
@@ -167,7 +167,7 @@ https://github.com/
 你需要知道自己的 Copilot 订阅类型，因为不同类型的月度配额不同：
 
 | 订阅类型 | 月度配额 | 适用场景 |
-|---------|---------|---------|
+|--- | --- | ---|
 | `free` | 50 | Copilot Free（免费用户） |
 | `pro` | 300 | Copilot Pro（个人专业版） |
 | `pro+` | 1500 | Copilot Pro+（个人增强版） |
@@ -255,7 +255,7 @@ Period: 2026-01
 验证一下你理解了：
 
 | 场景 | 你应该看到/做 |
-|------|--------------|
+|--- | ---|
 | 配置文件已存在 | `ls ~/.config/opencode/copilot-quota-token.json` 显示文件 |
 | PAT 创建成功 | Token 以 `github_pat_` 开头 |
 | 订阅类型正确 | 配置中的 `tier` 值是 free/pro/pro+/business/enterprise 之一 |
@@ -344,9 +344,9 @@ mystatus 支持两种 Copilot 认证方式：
 > 更新时间：2026-01-23
 
 | 功能                        | 文件路径                                                                                   | 行号    |
-| --------------------------- | ------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | Copilot 认证策略入口        | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L481-L524) | 481-524 |
-| 读取 Fine-grained PAT 配置  | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L122-L151) | 122-151 |
+|--- | --- | ---|
 | 公共 Billing API 调用       | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L157-L177) | 157-177 |
 | OAuth Token 交换           | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L183-L208) | 183-208 |
 | 内部 API 调用（OAuth）     | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts#L242-L304) | 242-304 |
@@ -372,7 +372,7 @@ mystatus 支持两种 Copilot 认证方式：
 **认证流程对比**：
 
 | 策略 | Token 类型 | API 端点 | 优先级 |
-|------|-----------|---------|--------|
+|--- | --- | --- | ---|
 | Fine-grained PAT | Fine-grained PAT | `/users/{username}/settings/billing/premium_request/usage` | 1（优先） |
 | OAuth Token（缓存） | Copilot Session Token | `/copilot_internal/user` | 2 |
 | OAuth Token（直接） | GitHub OAuth Token | `/copilot_internal/user` | 3 |

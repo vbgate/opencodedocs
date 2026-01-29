@@ -76,7 +76,7 @@ Adicione uma linha separadora (segunda linha, no formato `|---|`):
 
 ```markdown
 | Name | Age |
-|------|-----|
+|--- | ---|
 | Alice | 25 |
 | Bob | 30 |
 ```
@@ -133,7 +133,7 @@ Apenas 1 linha, formato incompleto.
 
 ```markdown
 | Name |
-|------|
+|---|
 ```
 
 Pelo menos 2 linhas são necessárias (incluindo a linha separadora).
@@ -144,7 +144,7 @@ Pelo menos 2 linhas são necessárias (incluindo a linha separadora).
 
 ```markdown
 | Name | Age |
-|------|-----|
+|--- | ---|
 | Alice |
 ```
 
@@ -154,7 +154,7 @@ Primeira linha 2 colunas, segunda linha 1 coluna, número de colunas inconsisten
 
 ```markdown
 | Name | Age |
-|------|-----|
+|--- | ---|
 | Alice | 25 |
 ```
 
@@ -176,7 +176,7 @@ Não há linha separadora como `|---|---|`.
 
 ```markdown
 | Name | Age |
-|------|-----|
+|--- | ---|
 | Alice | 25 |
 | Bob | 30 |
 ```
@@ -243,7 +243,7 @@ O plugin envolve a lógica de formatação com try-catch, então mesmo em caso d
 
 ```markdown
 | Name | Description |
-|------|-------------|
+|--- | ---|
 | Alice | Line 1<br>Line 2 |
 ```
 
@@ -293,7 +293,7 @@ Os símbolos Markdown no código em linha (`` `**code**` ``) serão calculados *
 
 ```
 | 符号 | 宽度 |
-|------|------|
+|--- | ---|
 | 普通文本 | 4 |
 | `**bold**` | 8 |
 ```
@@ -342,7 +342,7 @@ Se você verificou todos os problemas acima mas o problema ainda persiste:
 > Atualizado em: 2026-01-26
 
 | Função            | Caminho do arquivo                                                                                    | Número da linha    |
-| --------------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Lógica de validação de tabela    | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L70-L88)     | 70-88   |
 | Detecção de linha de tabela      | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L58-L61)     | 58-61   |
 | Detecção de linha separadora      | [`index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L63-L68)     | 63-68   |

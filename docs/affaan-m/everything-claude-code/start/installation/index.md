@@ -34,7 +34,7 @@ You want to get started with Everything Claude Code quickly, but you're not sure
 ## When to Use Which Method
 
 | Scenario | Recommended Method | Reason |
-|----------|-------------------|--------|
+|--- | --- | ---|
 | First-time user | Marketplace installation | Easiest, done in 5 minutes |
 | Want to try specific features | Marketplace installation | Full experience before deciding |
 | Specific requirements | Manual installation | Precise control over each component |
@@ -427,7 +427,7 @@ sudo cp -r everything-claude-code/agents/*.md ~/.claude/agents/
 **Comparison of Installation Methods**:
 
 | Feature | Marketplace Installation | Manual Installation |
-|---------|-------------------------|---------------------|
+|--- | --- | ---|
 | Speed | ⚡ Fast | 🐌 Slow |
 | Difficulty | 🟢 Easy | 🟡 Moderate |
 | Flexibility | 🔒 Fixed | 🔓 Customizable |
@@ -461,7 +461,7 @@ sudo cp -r everything-claude-code/agents/*.md ~/.claude/agents/
 > Last updated: 2026-01-25
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | Plugin Metadata | [`source/affaan-m/everything-claude-code/.claude-plugin/plugin.json`](https://github.com/affaan-m/everything-claude-code/blob/main/.claude-plugin/plugin.json) | 1-28 |
 | Marketplace Manifest | [`source/affaan-m/everything-claude-code/.claude-plugin/marketplace.json`](https://github.com/affaan-m/everything-claude-code/blob/main/.claude-plugin/marketplace.json) | 1-45 |
 | Installation Guide | [`source/affaan-m/everything-claude-code/README.md`](https://github.com/affaan-m/everything-claude-code/blob/main/README.md) | 175-242 |

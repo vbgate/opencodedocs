@@ -1,14 +1,14 @@
 ---
-title: "安装: Claude Code 插件 | Plannotator"
-sidebarTitle: "Claude Code 安装"
-subtitle: "安装 Claude Code 插件"
-description: "学习 Plannotator 的安装方法。快速配置 CLI 和 Claude Code 插件，支持插件和手动 Hook 方式，涵盖远程环境设置。"
+title: "Claude Code Install & Setup | Plannotator"
+sidebarTitle: "Claude Code Install"
+subtitle: "Claude Code Install & Setup"
+description: "Learn how to install the Plannotator plugin in Claude Code. Complete setup in 3 minutes with plugin system and manual Hook options, supporting macOS, Linux, and Windows, including remote and Devcontainer environment configuration."
 tags:
   - "installation"
   - "claude-code"
   - "getting-started"
 prerequisite:
-  - "getting-started"
+  - "start-getting-started"
 order: 2
 ---
 
@@ -250,7 +250,7 @@ Host your-server
 > Last updated: 2026-01-24
 
 | Feature           | File Path                                                                                              | Lines   |
-| ----------------- | ----------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Installation script entry | [`README.md`](https://github.com/backnotprop/plannotator/blob/main/README.md#L35-L60)                     | 35-60   |
 | Hook configuration docs  | [`apps/hook/README.md`](https://github.com/backnotprop/plannotator/blob/main/apps/hook/README.md#L30-L39)   | 30-39   |
 | Manual Hook example     | [`apps/hook/README.md`](https://github.com/backnotprop/plannotator/blob/main/apps/hook/README.md#L42-L62)   | 42-62   |

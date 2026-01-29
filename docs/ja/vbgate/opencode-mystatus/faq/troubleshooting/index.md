@@ -137,7 +137,7 @@ mystatusのエラー処理は3層に分かれています：認証ファイル�
 <summary><strong>クリックしてソースコードの場所を展開</strong></summary>
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | エラー処理メインロジック | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 41-87 |
 
 </details>

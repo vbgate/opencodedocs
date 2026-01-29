@@ -104,7 +104,7 @@ OAuth 流程分两段：浏览器授权得到 `code`，再由应用用 `code` �
 支持的输入形式（前端会解析并批量添加）：
 
 | 输入类型 | 例子 | 解析逻辑 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 纯 token 文本 | `1//abc...` | 正则提取：`/1\/\/[a-zA-Z0-9_\-]+/g`（见 `AddAccountDialog.tsx:213-220`） |
 | 夹在一大段文本里 | 日志/导出文本里包含多个 `1//...` | 正则批量提取并去重（见 `AddAccountDialog.tsx:213-224`） |
 | JSON 数组 | `[{"refresh_token":"1//..."}]` | 解析数组并取 `item.refresh_token`（见 `AddAccountDialog.tsx:198-207`） |
@@ -165,7 +165,7 @@ OAuth 回调需要浏览器请求本地回调地址。为降低失败率，后�
 ### 4) Refresh Token 的正确/错误示例
 
 | 例子 | 是否会被识别 | 原因 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `1//0gAbC...` | ✓ | 符合 `1//` 前缀规则（见 `AddAccountDialog.tsx:215-219`） |
 | `ya29.a0...` | ✗ | 不符合前端提取规则，会被当成无效输入 |
 
@@ -191,7 +191,7 @@ OAuth 回调需要浏览器请求本地回调地址。为降低失败率，后�
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Accounts 页面挂载添加弹窗 | [`src/pages/Accounts.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Accounts.tsx#L267-L731) | 267-731 |
 | OAuth URL 预生成 + 回调事件自动收尾 | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L49-L125) | 49-125 |
 | OAuth 回调事件触发 `completeOAuthLogin()` | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L67-L109) | 67-109 |
@@ -200,7 +200,7 @@ OAuth 回调需要浏览器请求本地回调地址。为降低失败率，后�
 | 后端 add_account：忽略 email、用 refresh_token 获取真实邮箱并落盘 | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L19-L60) | 19-60 |
 | 后端 OAuth：检查 refresh_token 缺失并给出撤销授权方案 | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L38-L79) | 38-79 |
 | OAuth 回调 server：同时监听 IPv4/IPv6 并选择 redirect_uri | [`src-tauri/src/modules/oauth_server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/oauth_server.rs#L43-L113) | 43-113 |
-| OAuth 回调解析 `code` 并发出 `oauth-callback-received` | [`src-tauri/src/modules/oauth_server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/oauth_server.rs#L140-L180) | 140-180 |
+|--- | --- | ---|
 
 **关键事件名**：
 - `oauth-url-generated`：后端生成 OAuth URL 后发给前端（见 `oauth_server.rs:250-252`）

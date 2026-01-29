@@ -110,7 +110,7 @@ graph TD
 ### Module Responsibilities
 
 | Module | File | Responsibilities |
-| ----- | ------ | ----- |
+|--- | --- | ---|
 | **Main Entry** | `plugin.ts` | Fetch interceptor, plugin initialization, event handling |
 | **Account Management** | `accounts.ts` | Multi-account pool, load balancing strategy, rate limit tracking |
 | **Request Transformation** | `request.ts` | Request format transformation, response streaming |
@@ -306,7 +306,7 @@ interface AccountPool {
 **2. Account Selection Strategy**
 
 | Strategy | Description | Use Case |
-| ----- | ------ | -------- |
+|--- | --- | ---|
 | **sticky** | Keep current account until rate limit | Single session use, preserve prompt cache |
 | **round-robin** | Rotate to next account per request | Multi-session parallel, maximize throughput |
 | **hybrid** | Health score + Token bucket + LRU combined decision | Default strategy, balance performance and reliability |
@@ -524,7 +524,7 @@ Understanding these mechanisms will help you better use and optimize plugin conf
 > Last updated: 2026-01-23
 
 | Feature | File Path | Line Numbers |
-| --- | --- | --- |
+|--- | --- | ---|
 | Plugin main entry, fetch interceptor | [`src/plugin.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin.ts) | 654-1334 |
 | Account manager, load balancing | [`src/plugin/accounts.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/accounts.ts) | 1-715 |
 | Request transformation, response streaming | [`src/plugin/request.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request.ts) | 1-1664 |

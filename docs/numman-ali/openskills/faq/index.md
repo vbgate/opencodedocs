@@ -69,7 +69,7 @@ After completing this section, you can:
 ## Quick Navigation
 
 | Question Type | Where to Find Answers |
-|--------------|---------------------|
+|--- | ---|
 | "What is OpenSkills?" | [FAQ](./faq/) |
 | "Where are skills installed?" | [FAQ](./faq/) |
 | "Git clone failed" | [Troubleshooting](./troubleshooting/) |

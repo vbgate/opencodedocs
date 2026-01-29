@@ -22,7 +22,7 @@ Esta página proporciona referencia completa de API y comandos de Agent Skills, 
 El nivel de impacto se usa para identificar el grado de impacto en rendimiento de la regla, hay 6 niveles:
 
 | Valor | Descripción | Escenario de aplicación |
-| --- | --- | --- |
+|--- | --- | ---|
 | `CRITICAL` | Cuello de botella clave | Debe repararse, de lo contrario afecta seriamente la experiencia del usuario (como cascadas de solicitudes, tamaño de paquete no optimizado) |
 | `HIGH` | Mejora importante | Mejora significativa del rendimiento (como caché del servidor, eliminación de props duplicados) |
 | `MEDIUM-HIGH` | Prioridad media-alta | Mejora obvia del rendimiento (como optimización de obtención de datos) |

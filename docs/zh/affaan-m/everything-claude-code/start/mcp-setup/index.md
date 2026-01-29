@@ -116,7 +116,7 @@ Claude Code ←→ MCP Server ←→ External Service
 Everything Claude Code 提供了 **15 个预配置 MCP 服务器**：
 
 | MCP 服务器 | 类型 | 需要密钥 | 用途 |
-|-----------|------|---------|------|
+|--- | --- | --- | ---|
 | **github** | npx | ✅ GitHub PAT | PR、Issues、Repos 操作 |
 | **firecrawl** | npx | ✅ API Key | 网页抓取和爬取 |
 | **supabase** | npx | ✅ Project Ref | 数据库操作 |
@@ -157,7 +157,7 @@ cp source/affaan-m/everything-claude-code/mcp-configs/mcp-servers.json ~/.claude
 **示例场景**：
 
 | 项目类型 | 推荐启用的 MCP |
-|---------|---------------|
+|--- | ---|
 | **全栈应用**（GitHub + Supabase + Vercel） | github, supabase, vercel, memory, context7 |
 | **前端项目**（Vercel + 文档查询） | vercel, cloudflare-docs, context7, magic |
 | **数据项目**（ClickHouse + 分析） | clickhouse, sequential-thinking, memory |
@@ -239,7 +239,7 @@ notepad $env:USERPROFILE\.claude.json
 **其他需要密钥的 MCP**：
 
 | MCP | 密钥名称 | 获取地址 |
-|-----|---------|---------|
+|--- | --- | ---|
 | **firecrawl** | FIRECRAWL_API_KEY | https://www.firecrawl.dev/ |
 | **supabase** | --project-ref | https://supabase.com/dashboard |
 
@@ -417,10 +417,10 @@ jq '.mcpServers | length' ~/.claude.json
 > 更新时间：2026-01-25
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | MCP 配置模板 | [`mcp-configs/mcp-servers.json`](https://github.com/affaan-m/everything-claude-code/blob/main/mcp-configs/mcp-servers.json) | 1-92 |
 | README 重要提示 | [`README.md`](https://github.com/affaan-m/everything-claude-code/blob/main/README.md) | 348-369 |
-| 安装指南 - MCP 配置 | [`README.md`](https://github.com/affaan-m/everything-claude-code/blob/main/README.md) | 236-240 |
+|--- | --- | ---|
 
 **关键配置**：
 - 15 个 MCP 服务器（GitHub、Firecrawl、Supabase、Memory、Sequential-thinking、Vercel、Railway、Cloudflare 系列、ClickHouse、Context7、Magic、Filesystem）

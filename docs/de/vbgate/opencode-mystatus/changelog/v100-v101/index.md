@@ -48,7 +48,7 @@ npm update @vbgate/opencode-mystatus
 Unterstützt Kreditnutzung der folgenden Plattformen mit einem Klick abzufragen:
 
 | Plattform | Unterstützte Abonnementtypen | Kreditart |
-| ---- | -------------- | -------- |
+|--- | --- | ---|
 | OpenAI | Plus/Team/Pro | 3-Stunden-Kredit, 24-Stunden-Kredit |
 | Zhipu AI | Coding Plan | 5-Stunden-Token-Kredit, MCP-monatliche Quote |
 

@@ -32,7 +32,7 @@ Les comptes sont stockés dans `~/.config/opencode/antigravity-accounts.json` et
 Google Cloud Antigravity propose plusieurs modèles, le plugin affichera les 4 plus courants :
 
 | Nom affiché | Clé de modèle (principale) | Clé de modèle (alternative) |
-| ----------- | -------------------------- | --------------------------- |
+|--- | --- | ---|
 | G3 Pro | `gemini-3-pro-high` | `gemini-3-pro-low` |
 | G3 Image | `gemini-3-pro-image` | - |
 | G3 Flash | `gemini-3-flash` | - |
@@ -230,9 +230,9 @@ Claude     1d 5h      ████████░░░░░░░░░░░ 
 > Date de mise à jour : 2026-01-23
 
 | Fonction | Chemin du fichier | Ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Mappage de configuration des modèles | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 69-78 |
-| Interrogation parallèle multi-comptes | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 327-334 |
+|--- | --- | ---|
 | Filtrage des comptes (doit avoir un email) | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 318 |
 | Priorité de l'ID de projet | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 231 |
 | Extraction du quota de modèle | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 132-157 |

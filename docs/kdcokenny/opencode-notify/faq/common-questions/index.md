@@ -32,7 +32,7 @@ order: 120
 From the source code implementation:
 
 | Component | Type | Implementation | Impact on Context |
-| --------- | ---- | -------------- | ----------------- |
+|--- | --- | --- | ---|
 | Event Listener | Event | Listens to `session.idle`, `session.error`, `permission.updated` events | ✅ No impact |
 | Tool Hook | Hook | Monitors `question` tool via `tool.execute.before` | ✅ No impact |
 | Conversation Content | - | Doesn't read, modify, or inject any conversation content | ✅ No impact |
@@ -50,7 +50,7 @@ In the source code, the plugin is only responsible for **listening and notifying
 Resource usage characteristics:
 
 | Resource Type | Usage | Description |
-| ------------- | ----- | ----------- |
+|--- | --- | ---|
 | CPU | Almost 0 | Only runs briefly when events are triggered |
 | Memory | < 5 MB | Enters standby state after startup |
 | Disk | < 100 KB | Configuration file and code itself |
@@ -67,7 +67,7 @@ Resource usage characteristics:
 **Privacy Guarantee**:
 
 | Data Type | Processing Method | Upload? |
-| --------- | ----------------- | ------- |
+|--- | --- | ---|
 | AI conversation content | Doesn't read, doesn't store | ❌ No |
 | Session information (title) | Only used for notification text | ❌ No |
 | Error information | Only used for notification text (max 100 characters) | ❌ No |
@@ -89,7 +89,7 @@ All notifications are triggered locally and don't go through OpenCode's cloud se
 **No**. The plugin only reads **necessary metadata**:
 
 | Data Read | Purpose | Limit |
-| --------- | ------- | ----- |
+|--- | --- | ---|
 | Session title (title) | Notification text | Only takes first 50 characters |
 | Error information (error) | Notification text | Only takes first 100 characters |
 | Terminal information | Focus detection and click-to-focus | Doesn't read terminal content |
@@ -108,7 +108,7 @@ There is no logic in the source code that reads conversation messages (messages)
 **Default Notification Strategy**:
 
 | Type | Event/Tool | Notify? | Reason |
-| ---- | ---------- | ------- | ------ |
+|--- | --- | --- | ---|
 | Event | Parent session completion (session.idle) | ✅ Yes | Main task completed |
 | Event | Child session completion (session.idle) | ❌ No | Parent session will notify uniformly |
 | Event | Session error (session.error) | ✅ Yes | Needs immediate attention |
@@ -158,7 +158,7 @@ If you need more granular control, consider submitting a Feature Request.
 **Integration Method**:
 
 | Component | Integration Method | Conflict Risk |
-| --------- | ----------------- | ------------- |
+|--- | --- | ---|
 | Event Listener | OpenCode SDK's `event` hook | ❌ No conflict |
 | Tool Hook | OpenCode Plugin API's `tool.execute.before` hook | ❌ No conflict (only monitors `question` tool) |
 | Session Query | OpenCode SDK's `client.session.get()` | ❌ No conflict (read-only, doesn't write) |
@@ -177,7 +177,7 @@ All plugins run in parallel via the standard Plugin API without interfering with
 **Supports macOS, Windows, and Linux, but there are functional differences**.
 
 | Feature | macOS | Windows | Linux |
-| ------- | ----- | ------- | ----- |
+|--- | --- | --- | ---|
 | Native notifications | ✅ Supported | ✅ Supported | ✅ Supported |
 | Custom sounds | ✅ Supported | ❌ Not supported | ❌ Not supported |
 | Terminal focus detection | ✅ Supported | ❌ Not supported | ❌ Not supported |
@@ -188,7 +188,7 @@ All plugins run in parallel via the standard Plugin API without interfering with
 **Platform Differences Reasons**:
 
 | Platform | Difference Description |
-| -------- | --------------------- |
+|--- | ---|
 | macOS | System provides rich notification APIs and app management interfaces (like `osascript`), supports sounds, focus detection, click-to-focus |
 | Windows | System notification API has limited features, doesn't support application-level foreground detection and sound customization |
 | Linux | Depends on `notify-send` standard, features similar to Windows |
@@ -246,7 +246,7 @@ The plugin uses the [`detect-terminal`](https://github.com/jonschlinkert/detect-
 **Failure Handling Logic**:
 
 | Failure Scenario | Behavior | Impact |
-| ---------------- | -------- | ------ |
+|--- | --- | ---|
 | `detectTerminal()` returns `null` | Terminal info is `{ name: null, bundleId: null, processName: null }` | No focus detection, but notifications send normally |
 | macOS `osascript` execution fails | Bundle ID retrieval fails | macOS click-to-focus function invalid, but notifications normal |
 | `terminal` value in config file invalid | Uses auto-detection result | If auto-detection also fails, no focus detection |
@@ -372,7 +372,7 @@ This lesson answered the common questions users care about most:
 > Last updated: 2026-01-27
 
 | Feature | File Path | Lines |
-| ------- | --------- | ----- |
+|--- | --- | ---|
 | Plugin startup and configuration loading | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L357-L364) | 357-364 |
 | Event listening logic | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L372-L400) | 372-400 |
 | Parent session check | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L256-L259) | 256-259 |

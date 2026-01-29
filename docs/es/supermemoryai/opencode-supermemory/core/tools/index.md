@@ -31,7 +31,7 @@ opencode-supermemory no es una caja negra, interactúa con el Agent a través de
 El plugin registra una herramienta llamada `supermemory` con el Agent, es como una navaja suiza con 6 modos:
 
 | Modo | Función | Escenario típico |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **add** | Agregar memoria | "Recuerda, este proyecto debe ejecutarse con Bun" |
 | **search** | Buscar memoria | "¿Dije antes cómo manejar la autenticación?" |
 | **profile** | Perfil de usuario | Ver los hábitos de codificación resumidos por el Agent sobre ti |
@@ -187,7 +187,7 @@ A: El plugin desensibilizará automáticamente el contenido dentro de las etique
 > Fecha de actualización: 2026-01-23
 
 | Función | Ruta del archivo | Número de línea |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Definición de herramientas | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
 | Detección de palabras clave | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L34-L37) | 34-37 |
 | Prompt de activación | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L20-L28) | 20-28 |

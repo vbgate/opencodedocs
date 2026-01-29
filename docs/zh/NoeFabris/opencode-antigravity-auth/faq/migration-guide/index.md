@@ -42,14 +42,14 @@ order: 2
 存储格式有版本控制（当前是 v3），插件会**自动处理版本迁移**：
 
 | 版本 | 主要变化 | 当前状态 |
-| ---- | -------- | -------- |
+|--- | --- | ---|
 | v1 → v2 | 速率限制状态结构化 | ✅ 自动迁移 |
 | v2 → v3 | 支持双配额池（gemini-antigravity/gemini-cli） | ✅ 自动迁移 |
 
 存储文件位置（跨平台）：
 
 | 平台 | 路径 |
-| ---- | ---- |
+|--- | ---|
 | macOS/Linux | `~/.config/opencode/antigravity-accounts.json` |
 | Windows | `%APPDATA%\opencode\antigravity-accounts.json` |
 
@@ -319,7 +319,7 @@ v3 (当前版本)
 > 更新时间：2026-01-23
 
 | 功能        | 文件路径                                                                                               | 行号    |
-| ----------- | ------------------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | 存储格式定义 | [`src/plugin/storage.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/storage.ts#L128-L198)         | 128-198 |
 | v1→v2 迁移 | [`src/plugin/storage.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/storage.ts#L366-L395)         | 366-395 |
 | v2→v3 迁移 | [`src/plugin/storage.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/storage.ts#L397-L431)         | 397-431 |

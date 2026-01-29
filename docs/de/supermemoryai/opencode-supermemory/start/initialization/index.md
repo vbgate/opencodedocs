@@ -108,7 +108,7 @@ supermemory(mode: "list", scope: "project")
 Der Agent listet eine Reihe strukturierter Speicher auf, wie zum Beispiel:
 
 | Typ | Inhaltsbeispiel |
-| :--- | :--- |
+|--- | ---|
 | `project-config` | "Uses Bun runtime. Build command: bun run build" |
 | `architecture` | "API routes are located in src/routes/, using Hono framework" |
 | `preference` | "Strict TypeScript usage: no 'any' type allowed" |
@@ -162,9 +162,9 @@ Durch `/supermemory-init` haben wir den Übergang vom "Fremden" zum "erfahrenen 
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| :--- | :--- | :--- |
-| Initialisierungs-Prompt-Definition | [`src/cli.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/cli.ts#L13-L163) | 13-163 |
-| Speicher-Tool-Implementierung | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Konstanten**:
 - `SUPERMEMORY_INIT_COMMAND`: Definiert den genauen Prompt-Inhalt des Befehls `/supermemory-init` und leitet den Agenten an, wie Recherche und Speicherung durchzuführen werden.

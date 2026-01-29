@@ -86,7 +86,7 @@ Regelerstellung folgt einem **template-gesteuerten** Ansatz, der Kernpunkte sind
 > Aktualisierungszeit: 2026-01-25
 
 | Funktion                     | Dateipfad                                                                                                                                                           | Zeilen    |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | Regelvorlagedatei             | [`skills/react-best-practices/rules/_template.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/_template.md)           | 1-29    |
 | Regeltypendefinition             | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts)       | 5-26    |
 | Regelvalidierungslogik             | [`packages/react-best-practices-build/src/validate.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/validate.ts) | 21-66   |
@@ -100,7 +100,7 @@ Regelerstellung folgt einem **template-gesteuerten** Ansatz, der Kernpunkte sind
 **Kapitel-Mapping** (Dateinamenpräfix → Kapitel → Level):
 
 | Dateipräfix | Kapitelnummer | Kapiteltitel | Standard-Level |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `async-` | 1 | Beseitigung von Waterfalls | CRITICAL |
 | `bundle-` | 2 | Bundle-Optimierung | CRITICAL |
 

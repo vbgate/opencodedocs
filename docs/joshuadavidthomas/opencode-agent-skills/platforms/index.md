@@ -22,7 +22,7 @@ Before studying this chapter, ensure you have completed:
 ## What You'll Learn
 
 | Course | Description | Core Tool |
-|-------|-------------|-----------|
+|--- | --- | ---|
 | [Skill Discovery Mechanism](./skill-discovery-mechanism/) | Understand where the plugin automatically discovers skills and master priority rules | - |
 | [Query and List Available Skills](./listing-available-skills/) | Use the `get_available_skills` tool to find and filter skills | `get_available_skills` |
 | [Load Skills into Session Context](./loading-skills-into-context/) | Use the `use_skill` tool to load skills and understand the XML injection mechanism | `use_skill` |

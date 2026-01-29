@@ -46,7 +46,7 @@ order: 230
 
 ::: tip Руководство по выбору инструментов
 | Сценарий | Рекомендуемый инструмент | Причина |
-|------|----------|------|
+|--- | --- | ---|
 | Поиск нескольких источников | web_search | Возвращает несколько результатов в одном запросе |
 | Извлечение содержимого одной страницы | web_fetch | Получает полный текст, поддерживает markdown |
 | Динамические страницы/требуют входа | [browser](../tools-browser/) | Требуется выполнение JavaScript |
@@ -111,7 +111,7 @@ web_search и web_fetch — это **лёгкие инструменты**, ко
 Оба инструмента включают встроенный кеш для уменьшения дублирующих запросов:
 
 | Инструмент | Ключ кеша | TTL по умолчанию | Элемент конфигурации |
-|------|---------|----------|--------|
+|--- | --- | --- | ---|
 | web_search | `provider:query:count:country:search_lang:ui_lang:freshness` | 15 минут | `tools.web.search.cacheTtlMinutes` |
 | web_fetch | `fetch:url:extractMode:maxChars` | 15 минут | `tools.web.fetch.cacheTtlMinutes` |
 
@@ -128,7 +128,7 @@ web_search и web_fetch — это **лёгкие инструменты**, ко
 Clawdbot поддерживает два поставщика поиска:
 
 | Поставщик | Преимущества | Недостатки | API Key |
-|--------|------|--------|---------|
+|--- | --- | --- | ---|
 | **Brave** (по умолчанию) | Быстрый, структурированные результаты, бесплатный уровень | Традиционные результаты поиска | `BRAVE_API_KEY` |
 | **Perplexity** | Синтезированные ИИ ответы, цитаты, в реальном времени | Требует доступ Perplexity или OpenRouter | `OPENROUTER_API_KEY` или `PERPLEXITY_API_KEY` |
 
@@ -317,7 +317,7 @@ clawdbot gateway restart
 #### 4.3 Выбор модели Perplexity
 
 | Модель | Описание | Сценарий использования |
-|------|------|----------|
+|--- | --- | ---|
 | `perplexity/sonar` | Быстрые Q&A + веб-поиск | Простые запросы, быстрый поиск |
 | `perplexity/sonar-pro` (по умолчанию) | Многоэтапное рассуждение + веб-поиск | Сложные проблемы, требуется рассуждение |
 | `perplexity/sonar-reasoning-pro` | Анализ цепочки мыслей | Глубокое исследование, требуется процесс рассуждения |
@@ -552,7 +552,7 @@ web_fetch по умолчанию блокирует внутренние сет
 > Дата обновления: 2026-01-27
 
 | Функция | Путь к файлу | Номер строки |
-|------|----------|------|
+|--- | --- | ---|
 | Определение инструмента web_search | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 409-483 |
 | Определение инструмента web_fetch | [`src/agents/tools/web-fetch.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-fetch.ts) | 572-624 |
 | Вызов API Brave Search | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 309-407 |

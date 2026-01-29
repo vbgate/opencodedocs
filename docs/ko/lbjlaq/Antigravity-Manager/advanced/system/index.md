@@ -226,7 +226,7 @@ Invoke-RestMethod "http://127.0.0.1:19527/logs?limit=50&offset=0&filter=&errors_
 > 업데이트 시간: 2026-01-23
 
 | 테마 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | i18n 초기화 및 fallback | [`src/i18n.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/i18n.ts#L1-L67) | 1-67 |
 | Settings: 언어/테마/부팅 시 자동 시작/업데이트 설정/HTTP API 설정 | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L16-L730) | 16-730 |
 | App: 언어 동기화 + 시작 시 업데이트 확인 트리거 | [`src/App.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/App.tsx#L52-L124) | 52-124 |

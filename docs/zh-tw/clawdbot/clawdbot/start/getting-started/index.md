@@ -54,7 +54,7 @@ Gateway 是 Clawdbot 的控制平面，它：
 ### 系統要求
 
 | 元件           | 要求                          |
-| -------------- | ----------------------------- |
+|--- | ---|
 | **Node.js**    | ≥ 22.12.0                     |
 | **作業系統**   | macOS / Linux / Windows (WSL2) |
 | **套件管理器** | npm / pnpm / bun              |
@@ -70,7 +70,7 @@ Windows 上強烈推薦使用 **WSL2**，因為：
 雖然任何模型都支援，但我們強烈推薦：
 
 | 提供商     | 推薦模型          | 理由                               |
-| ---------- | ----------------- | ---------------------------------- |
+|--- | --- | ---|
 | Anthropic  | Claude Opus 4.5   | 長上下文優勢、更強的提示注入抵抗力 |
 | OpenAI     | GPT-5.2 + Codex   | 程式設計能力強、多模態支援         |
 
@@ -98,7 +98,7 @@ WhatsApp / Telegram / Slack / Discord / Signal / iMessage / WebChat
 **關鍵概念**：
 
 | 概念        | 作用                                    |
-| ----------- | --------------------------------------- |
+|--- | ---|
 | **Gateway** | 背景程式，負責工作階段管理、管道連線、工具呼叫 |
 | **Channel** | 訊息管道（WhatsApp、Telegram、Slack 等） |
 | **Agent**   | AI 執行階段（基於 pi-mono 的 RPC 模式）  |
@@ -156,7 +156,7 @@ clawdbot onboard --install-daemon
 **精靈會問你什麼**：
 
 | 步驟 | 問題                                | 說明                  |
-| ---- | ----------------------------------- | --------------------- |
+|--- | --- | ---|
 | 1    | 選擇 AI 模型驗證方式                | OAuth / API Key       |
 | 2    | 設定 Gateway（連接埠、驗證）        | 預設：127.0.0.1:18789 |
 | 3    | 設定管道（WhatsApp、Telegram 等）   | 可跳過，稍後設定      |
@@ -341,7 +341,7 @@ node --version
 Clawdbot 預設設定檔位置：
 
 | 作業系統       | 設定路徑                    |
-| -------------- | --------------------------- |
+|--- | ---|
 | macOS/Linux    | `~/.clawdbot/clawdbot.json` |
 | Windows (WSL2) | `~/.clawdbot/clawdbot.json` |
 
@@ -433,7 +433,7 @@ pnpm gateway:watch  # TS 檔案改動時自動重新載入
 > 更新時間：2026-01-27
 
 | 功能             | 檔案路徑                                                                                     | 行號    |
-| ---------------- | -------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | CLI 入口         | [`src/cli/run-main.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/run-main.ts) | 26-60   |
 | Onboarding 命令  | [`src/cli/program/register.onboard.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.onboard.ts) | 34-100  |
 | Daemon 安裝      | [`src/cli/daemon-cli/install.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/daemon-cli/install.ts) | 15-100  |

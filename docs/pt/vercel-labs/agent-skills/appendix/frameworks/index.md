@@ -43,7 +43,7 @@ A verificação analisa simultaneamente `dependencies` e `devDependencies`, ent�
 ### Ecossistema React
 
 | Framework          | Dependência Detectada | Valor Retornado |
-| ------------------ | --------------------- | --------------- |
+|--- | --- | ---|
 | **Next.js**        | `next`                | `nextjs`        |
 | **Gatsby**        | `gatsby`              | `gatsby`        |
 | **Remix**         | `@remix-run/`         | `remix`         |
@@ -56,7 +56,7 @@ A verificação analisa simultaneamente `dependencies` e `devDependencies`, ent�
 ### Ecossistema Vue
 
 | Framework       | Dependência Detectada | Valor Retornado |
-| -------------- | -------------------- | --------------- |
+|--- | --- | ---|
 | **Nuxt**      | `nuxt`               | `nuxtjs`        |
 | **VitePress** | `vitepress`           | `vitepress`      |
 | **VuePress**  | `vuepress`            | `vuepress`       |
@@ -65,7 +65,7 @@ A verificação analisa simultaneamente `dependencies` e `devDependencies`, ent�
 ### Ecossistema Svelte
 
 | Framework          | Dependência Detectada    | Valor Retornado  |
-| ------------------ | ----------------------- | ---------------- |
+|--- | --- | ---|
 | **SvelteKit**      | `@sveltejs/kit`        | `sveltekit-1`   |
 | **Svelte**         | `svelte`               | `svelte`         |
 | **Sapper** (legacy) | `sapper`              | `sapper`         |
@@ -73,14 +73,14 @@ A verificação analisa simultaneamente `dependencies` e `devDependencies`, ent�
 ### Angular
 
 | Framework         | Dependência Detectada | Valor Retornado |
-| ----------------- | -------------------- | --------------- |
+|--- | --- | ---|
 | **Angular**       | `@angular/core`      | `angular`       |
 | **Ionic Angular** | `@ionic/angular`     | `ionic-angular` |
 
 ### Geradores de Sites Estáticos
 
 | Framework         | Dependência Detectada | Valor Retornado |
-| ----------------- | -------------------- | --------------- |
+|--- | --- | ---|
 | **Astro**         | `astro`               | `astro`         |
 | **Docusaurus**    | `@docusaurus/core`   | `docusaurus-2`  |
 | **Hexo**          | `hexo`                | `hexo`          |
@@ -90,7 +90,7 @@ A verificação analisa simultaneamente `dependencies` e `devDependencies`, ent�
 ### Frameworks de Backend Node.js
 
 | Framework          | Dependência Detectada | Valor Retornado |
-| ------------------ | -------------------- | --------------- |
+|--- | --- | ---|
 | **Express**        | `express`             | `express`       |
 | **NestJS**        | `@nestjs/core`        | `nestjs`        |
 | **Hono**           | `hono`                | `hono`           |
@@ -102,7 +102,7 @@ A verificação analisa simultaneamente `dependencies` e `devDependencies`, ent�
 ### Outros Frameworks
 
 | Framework          | Dependência Detectada          | Valor Retornado    |
-| ------------------ | ----------------------------- | ----------------- |
+|--- | --- | ---|
 | **SolidStart**    | `@solidjs/start`             | `solidstart-1`    |
 | **Ember**         | `ember-cli`, `ember-source`    | `ember`           |
 | **Dojo**          | `@dojo/framework`            | `dojo`            |
@@ -118,7 +118,7 @@ A verificação analisa simultaneamente `dependencies` e `devDependencies`, ent�
 ### Ferramentas de Build
 
 | Framework          | Dependência Detectada | Valor Retornado |
-| ------------------ | -------------------- | --------------- |
+|--- | --- | ---|
 | **Vite**          | `vite`                | `vite`          |
 | **Parcel**        | `parcel`              | `parcel`        |
 
@@ -315,7 +315,7 @@ Consulte o [Tutorial de Deploy com um Clique no Vercel](../../platforms/vercel-d
 > Atualizado em: 2026-01-25
 
 | Funcionalidade        | Caminho do Arquivo                                                                                             | Número de Linha    |
-| ------------------- | ------------------------------------------------------------------------------------------------------------ | ----------------- |
+|--- | --- | ---|
 | Lógica de detecção de framework | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 11-156            |
 | Entrada do script de deploy | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 1-250             |
 | Tratamento de HTML estático | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 192-205           |

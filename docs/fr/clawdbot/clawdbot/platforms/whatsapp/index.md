@@ -102,14 +102,14 @@ Modifiez `~/.clawdbot/clawdbot.json`, ajoutez la configuration WhatsApp :
 **Description des champs** :
 
 | Champ | Type | Par défaut | Description |
-|------|------|------------|-------------|
+|--- | --- | --- | ---|
 | `dmPolicy` | string | `"pairing"` | Stratégie d'accès DM : `pairing` (appariement), `allowlist` (liste blanche), `open` (public), `disabled` (désactivé) |
 | `allowFrom` | string[] | `[]` | Liste des numéros de téléphone autorisés (format E.164, ex. `+15551234567`) |
 
 **Comparaison des stratégies DM** :
 
 | Stratégie | Comportement | Scénario d'utilisation |
-|-----------|--------------|------------------------|
+|--- | --- | ---|
 | `pairing` | Expéditeurs inconnus reçoivent un code d'appariement, approbation manuelle requise | **Recommandé**, équilibre entre sécurité et commodité |
 | `allowlist` | Seuls les numéros de la liste `allowFrom` sont autorisés | Contrôle strict, utilisateurs connus |
 | `open` | N'importe qui peut envoyer (nécessite que `allowFrom` contienne `"*"`) | Test public ou service communautaire |
@@ -230,7 +230,7 @@ Ajoutez dans `clawdbot.json` :
 **Description des champs** :
 
 | Champ | Type | Par défaut | Description |
-|------|------|------------|-------------|
+|--- | --- | --- | ---|
 | `emoji` | string | - | Emoji de confirmation (ex. `"👀"`, `"✅"`), chaîne vide signifie désactivé |
 | `direct` | boolean | `true` | Envoyer la confirmation dans les messages privés |
 | `group` | string | `"mentions"` | Comportement dans les groupes : `"always"` (tous les messages), `"mentions"` (seulement @mentions), `"never"` (jamais) |
@@ -264,7 +264,7 @@ Par défaut, Clawdbot marque automatiquement les messages comme lus (double coch
 ```
 
 | Champ | Par défaut | Description |
-|------|------------|-------------|
+|--- | --- | ---|
 | `textChunkLimit` | 4000 | Nombre maximum de caractères par message texte |
 | `mediaMaxMb` | 50 | Taille maximum des fichiers médias reçus (MB) |
 | `chunkMode` | `"length"` | Mode de découpage : `"length"` (par longueur), `"newline"` (par paragraphe) |
@@ -378,7 +378,7 @@ Points clés de la configuration du canal WhatsApp :
 > Dernière mise à jour : 2026-01-27
 
 | Fonctionnalité | Chemin du fichier | Lignes |
-|---------------|-------------------|--------|
+|--- | --- | ---|
 | Définition des types de configuration WhatsApp | [`src/config/types.whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.whatsapp.ts) | 1-160 |
 | Schéma de configuration WhatsApp | [`src/config/zod-schema.providers-whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-whatsapp.ts) | 13-100 |
 | Configuration d'intégration WhatsApp | [`src/channels/plugins/onboarding/whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/whatsapp.ts) | 1-341 |

@@ -62,7 +62,7 @@ const widthCache = new Map<string, number>()
 **Beispiel**:
 
 | Ursprünglicher Text (Key) | Anzeigebreite (Value) | Erklärung |
-| ------------------------- | --------------------- | --------- |
+|--- | --- | ---|
 | `**Name**` | 4 | Breite nach Entfernen von `**` ist 4 |
 | `*Alter*` | 4 | Breite nach Entfernen von `*` ist 4 |
 | `` `status` `` | 8 | Codeblock-Symbole werden ebenfalls in die Breite einbezogen |
@@ -120,7 +120,7 @@ graph TD
 **Schrittanalyse**:
 
 | Schritt | Operation | Zeitkomplexität |
-| ------- | --------- | --------------- |
+|--- | --- | ---|
 | 1 | Prüfen `widthCache.has(text)` | O(1) |
 | 2 | Cache-Treffer → Direkt zurückgeben | O(1) |
 | 3 | Cache-Fehltreffer → Breite berechnen | O(n) |
@@ -166,7 +166,7 @@ function cleanupCache() {
 **Auslösebedingungen** (wird ausgelöst, wenn eine davon erfüllt ist):
 
 | Bedingung | Schwellenwert | Erklärung |
-| --------- | ------------- | --------- |
+|--- | --- | ---|
 | Anzahl der Operationen | > 100 Formatierungsvorgänge | Vermeidet häufiges Auslösen der Bereinigung |
 | Cache-Einträge | > 1000 Zellen | Verhindert zu hohen Speicherverbrauch |
 
@@ -192,7 +192,7 @@ Nehmen wir eine Tabelle mit 5 Spalten × 10 Zeilen an, wobei:
 **Cache-Effekt**:
 
 | Szenario | Ohne Cache | Mit Cache | Leistungssteigerung |
-| -------- | ---------- | --------- | ------------------- |
+|--- | --- | --- | ---|
 | 5 Spalten × 10 Zeilen (keine Wiederholungen) | 50 Berechnungen | 50 Berechnungen | Keine |
 | 5 Spalten × 10 Zeilen (wiederholte Überschriften) | 50 Berechnungen | 10 Berechnungen + 40 Cache-Treffer | ~80% |
 
@@ -207,7 +207,7 @@ Nehmen wir eine Tabelle mit 5 Spalten × 10 Zeilen an, wobei:
 **Beispielszenarien**:
 
 | Szenario | Cache-Effekt |
-| -------- | ------------ |
+|--- | ---|
 | KI-generierte Vergleichstabellen | ✅ Deutlich (wiederholter Inhalt in mehreren Spalten) |
 | Einfache einzeilige Tabellen | ⚪ Mäßig (eindeutiger Inhalt) |
 | Tabellen mit verschachteltem Markdown | ✅ Deutlich (hoher Aufwand beim Entfernen von Symbolen) |
@@ -254,12 +254,12 @@ Dieser Mechanismus sorgt dafür, dass das Plugin auch bei der Verarbeitung kompl
 > Aktualisierungszeit: 2026-01-26
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
+|--- | --- | ---|
 | widthCache-Definition | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L6) | 6 |
 | cacheOperationCount-Definition | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L7) | 7 |
-| calculateDisplayWidth-Funktion | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L151-L159) | 151-159 |
-| incrementOperationCount-Funktion | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L219-L225) | 219-225 |
-| cleanupCache-Funktion | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L227-L230) | 227-230 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Schlüsselkonstanten**:
 - `widthCache = new Map<string, number>()`: Map-Struktur zum Caching der Anzeigebreite von Zeichenfolgen

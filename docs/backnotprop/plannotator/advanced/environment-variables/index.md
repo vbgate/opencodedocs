@@ -256,7 +256,7 @@ After restarting and triggering plan review, observe:
 **Common Browser Paths**:
 
 | OS | Browser | Path/Command |
-| -------- | ------ | --------- |
+|--- | --- | ---|
 | macOS | Chrome | `Google Chrome` or `/Applications/Google Chrome.app` |
 | macOS | Firefox | `Firefox` or `/Applications/Firefox.app` |
 | macOS | Safari | `Safari` |
@@ -424,7 +424,7 @@ export PLANNOTATOR_REMOTE=enabled
 This lesson covered Plannotator's 4 core environment variables:
 
 | Environment Variable | Purpose | Default Value | Use Case |
-| --------- | ---- | ------ | -------- |
+|--- | --- | --- | ---|
 | `PLANNOTATOR_REMOTE` | Remote mode toggle | Not set (local mode) | SSH, Devcontainer, WSL |
 | `PLANNOTATOR_PORT` | Fixed port | Remote mode 19432, local mode random | Need port forwarding or avoid port conflicts |
 | `PLANNOTATOR_BROWSER` | Custom browser | System default browser | Want to use specific browser |
@@ -456,7 +456,7 @@ This lesson covered Plannotator's 4 core environment variables:
 > Last updated: 2026-01-24
 
 | Feature | File Path | Lines |
-| --- | --- | --- |
+|--- | --- | ---|
 | Remote mode detection | [`packages/server/remote.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/remote.ts) | 16-29 |
 | Port retrieval logic | [`packages/server/remote.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/remote.ts) | 34-49 |
 | Browser opening logic | [`packages/server/browser.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/browser.ts) | 45-74 |

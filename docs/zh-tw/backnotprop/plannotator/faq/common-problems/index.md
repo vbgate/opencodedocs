@@ -144,7 +144,7 @@ taskkill /PID <PID> /F  # Windows
 **原因分析**：
 
 | 情境 | 原因 |
-| ----- | ---- |
+|--- | ---|
 | 遠端環境 | Plannotator 偵測到遠端模式，跳過瀏覽器自動開啟 |
 | `PLANNOTATOR_BROWSER` 設定錯誤 | 瀏覽器路徑或名稱不正確 |
 | 瀏覽器未安裝 | 系統預設瀏覽器不存在 |
@@ -230,7 +230,7 @@ set PLANNOTATOR_BROWSER="C:\Program Files\Google\Chrome\Application\chrome.exe"
 **可能原因**：
 
 | 原因 | 計畫審查 | 程式碼審查 |
-| ---- | ------- | ------- |
+|--- | --- | ---|
 | Plan 參數為空 | ✅ 常見 | ❌ 不適用 |
 | Git 儲存庫問題 | ❌ 不適用 | ✅ 常見 |
 | 無 diff 可顯示 | ❌ 不適用 | ✅ 常見 |
@@ -370,7 +370,7 @@ git diff HEAD
 **可能原因**：
 
 | 原因 | 解決方法 |
-| ---- | ------- |
+|--- | ---|
 | 未選擇檔案 | 點擊上傳按鈕並選擇圖片 |
 | 檔案格式不支援 | 使用 png/jpeg/webp 格式 |
 | 檔案過大 | 壓縮圖片後再上傳 |
@@ -431,7 +431,7 @@ dir %TEMP%\plannotator
 **可能原因**：
 
 | 原因 | Obsidian | Bear |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | 整合未啟用 | ✅ | ✅ |
 | Vault/App 未偵測到 | ✅ | N/A |
 | 路徑設定錯誤 | ✅ | ✅ |
@@ -650,7 +650,7 @@ http://localhost:9999
 **可能原因**：
 
 | 原因 | 解決方法 |
-| ---- | ------- |
+|--- | ---|
 | 計畫儲存被停用 | 檢查設定中的「Plan Save」選項 |
 | 自訂路徑無效 | 驗證路徑是否可寫入 |
 | 註解內容為空 | 這是正常行為（僅當有註解時才儲存） |
@@ -748,7 +748,7 @@ New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.plannotator\plans"
 > 更新時間：2026-01-24
 
 | 功能 | 檔案路徑 | 行號 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 伺服器啟動與重試邏輯 | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts#L79-L335) | 79-335 |
 | 連接埠佔用錯誤處理（計畫審查） | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts#L319-L334) | 319-334 |
 | 連接埠佔用錯誤處理（程式碼審查） | [`packages/server/review.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/review.ts#L252-L267) | 252-267 |
@@ -763,7 +763,7 @@ New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.plannotator\plans"
 **關鍵常數**：
 
 | 常數 | 值 | 說明 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `MAX_RETRIES` | 5 | 伺服器啟動最大重試次數 |
 | `RETRY_DELAY_MS` | 500 | 重試延遲（毫秒） |
 

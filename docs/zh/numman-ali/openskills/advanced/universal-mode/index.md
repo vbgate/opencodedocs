@@ -51,7 +51,7 @@ order: 1
 **Universal 模式的适用场景**：
 
 | 场景 | 是否需要 Universal 模式 | 示例 |
-| ---- | --------------------- | ---- |
+|--- | --- | ---|
 | **单一代理**（仅 Claude Code） | ❌ 否 | 只使用 Claude Code，直接使用默认的 `.claude/skills` |
 | **多代理**（Claude Code + 其他） | ✅ 是 | 同时使用 Claude Code 和 Cursor/Windsurf/Aider |
 | **避免 Marketplace 冲突** | ✅ 是 | 不想与 Claude Code 原生插件市场冲突 |
@@ -500,7 +500,7 @@ npx openskills sync -o .windsurf/AGENTS.md  # Windsurf
 > 更新时间：2026-01-24
 
 | 功能        | 文件路径                                                                                          | 行号    |
-| ----------- | ------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 目录路径工具 | [`src/utils/dirs.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/dirs.ts#L7-L25)     | 7-25    |
 | 安装位置判断 | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L84-L92) | 84-92   |
 | 命令行参数定义 | [`src/cli.ts`](https://github.com/numman-ali/openskills/blob/main/src/cli.ts#L48)                    | 48      |

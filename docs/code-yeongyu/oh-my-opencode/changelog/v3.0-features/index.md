@@ -42,7 +42,7 @@ Each Category defines:
 ### 7 Built-in Categories
 
 | Category | Default Model | Temperature | Use Cases |
-|----------|---------------|-------------|-----------|
+|--- | --- | --- | ---|
 | `visual-engineering` | `google/gemini-3-pro` | 0.7 | Frontend, UI/UX, design, styling, animations |
 | `ultrabrain` | `openai/gpt-5.2-codex` (xhigh) | 0.1 | Deep logical reasoning, complex architecture decisions requiring extensive analysis |
 | `artistry` | `google/gemini-3-pro` (max) | 0.7 | High creativity/artistic tasks, novel ideas |
@@ -229,7 +229,7 @@ When delegating tasks, **clear and specific** prompts are crucial. Include the f
 You can fine-tune Categories in `oh-my-opencode.json`.
 
 | Field | Type | Description |
-|-------|------|-------------|
+|--- | --- | ---|
 | `description` | string | Human-readable description of Category purpose. Shown in delegate_task prompts. |
 | `model` | string | AI model ID to use (e.g., `anthropic/claude-opus-4-5`) |
 | `variant` | string | Model variant (e.g., `max`, `xhigh`) |

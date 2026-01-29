@@ -73,10 +73,10 @@ Das Kanalsystem von Clawdbot verwendet eine **Plugin-Architektur**:
 **Schlüsselkonzepte**:
 
 | Konzept          | Zweck                                   |
-| ---------------- | --------------------------------------- |
+|--- | ---|
 | **Kanal-Plugin** | Jeder Kanal ist ein eigenständiges Plugin |
 | **Einheitliche Schnittstelle** | Alle Kanäle verwenden dieselbe API |
-| **DM-Schutz**     | Standardmäßig aktivierter Pairing-Mechanismus, lehnt unbekannte Absender ab |
+|--- | ---|
 | **Gruppenunterstützung** | Unterstützt `@mention` und Befehlsauslösung |
 
 ---
@@ -88,7 +88,7 @@ Clawdbot unterstützt **13+ Kommunikationskanäle**, unterteilt in zwei Kategori
 ### Kernkanäle (integriert)
 
 | Kanal           | Authentifizierungsmethode             | Schwierigkeit | Eigenschaften                              |
-| --------------- | ------------------------------------ | ------------ | ----------------------------------------- |
+|--- | --- | --- | ---|
 | **Telegram**   | Bot Token                            | ⭐           | Am einfachsten und schnellsten, für Anfänger empfohlen |
 | **WhatsApp**   | QR-Code / Telefonverbindung         | ⭐⭐          | Verwendung echter Nummern, separates Handy + eSIM empfohlen |
 | **Slack**      | Bot Token + App Token                | ⭐⭐          | Erste Wahl für Arbeitsplätze, Socket Mode         |
@@ -100,7 +100,7 @@ Clawdbot unterstützt **13+ Kommunikationskanäle**, unterteilt in zwei Kategori
 ### Erweiterungskanäle (externe Plugins)
 
 | Kanal             | Authentifizierungsmethode             | Typ          | Eigenschaften                              |
-| ----------------- | ------------------------------------ | ------------ | ----------------------------------------- |
+|--- | --- | --- | ---|
 | **WebChat**       | Gateway WebSocket                    | Integriert   | Keine Drittanbieter-Authentifizierung erforderlich, am einfachsten |
 | **LINE**          | Messaging API                        | Externes Plugin   | Häufig verwendet von asiatischen Benutzern |
 | **BlueBubbles**   | Private API                          | Erweiterungs-Plugin   | iMessage-Erweiterung, unterstützt Remotegeräte |
@@ -606,7 +606,7 @@ In dieser Lektion haben Sie gelernt:
 > Aktualisiert am: 2026-01-27
 
 | Funktion            | Dateipfad                                                                                               | Zeilen    |
-| ------------------- | ------------------------------------------------------------------------------------------------------ | --------- |
+|--- | --- | ---|
 | Kanal-Register       | [`src/channels/registry.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.ts) | 7-100     |
 | Kanal-Plugin-Verzeichnis   | [`src/channels/plugins/`](https://github.com/clawdbot/clawdbot/tree/main/src/channels/plugins/) | Vollständiges Verzeichnis  |
 | Kanal-Metadatentyp   | [`src/channels/plugins/types.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/types.core.ts) | 74-93     |

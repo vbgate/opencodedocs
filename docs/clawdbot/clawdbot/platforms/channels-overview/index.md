@@ -73,7 +73,7 @@ Clawdbot's channel system adopts a **plugin architecture**:
 **Key Concepts**:
 
 | Concept         | Role                         |
-| --------------- | ---------------------------- |
+|--- | ---|
 | **Channel Plugin** | Each channel is an independent plugin |
 | **Unified Interface** | All channels use the same API |
 | **DM Protection**   | Pairing mechanism enabled by default, rejects unknown senders |
@@ -88,7 +88,7 @@ Clawdbot supports **13+ communication channels**, divided into two categories:
 ### Core Channels (Built-in)
 
 | Channel           | Authentication Method | Difficulty | Features                              |
-| ----------------- | -------------------- | ---------- | ------------------------------------- |
+|--- | --- | --- | ---|
 | **Telegram**     | Bot Token            | ⭐         | Simplest and fastest, recommended for beginners |
 | **WhatsApp**     | QR Code / Phone Link | ⭐⭐       | Uses real number, recommended separate phone + eSIM |
 | **Slack**        | Bot Token + App Token | ⭐⭐       | Top choice for workplaces, Socket Mode |
@@ -100,7 +100,7 @@ Clawdbot supports **13+ communication channels**, divided into two categories:
 ### Extended Channels (External Plugins)
 
 | Channel             | Authentication Method | Type       | Features                              |
-| ------------------- | -------------------- | ---------- | ------------------------------------- |
+|--- | --- | --- | ---|
 | **WebChat**         | Gateway WebSocket   | Built-in   | No third-party auth required, simplest |
 | **LINE**            | Messaging API       | External Plugin | Popular in Asian markets |
 | **BlueBubbles**     | Private API         | Extended Plugin | iMessage extension, supports remote devices |
@@ -606,7 +606,7 @@ In this lesson, you learned:
 > Updated: 2026-01-27
 
 | Feature            | File Path                                                                                               | Line  |
-| ------------------- | ------------------------------------------------------------------------------------------------------ | ----- |
+|--- | --- | ---|
 | Channel Registry    | [`src/channels/registry.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.ts) | 7-100 |
 | Channel Plugin Dir | [`src/channels/plugins/`](https://github.com/clawdbot/clawdbot/tree/main/src/channels/plugins/)      | Full  |
 | Channel Meta Types | [`src/channels/plugins/types.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/types.core.ts) | 74-93 |

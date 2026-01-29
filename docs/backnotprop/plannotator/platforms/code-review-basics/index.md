@@ -145,7 +145,7 @@ After an AI Agent completes code modifications, it typically outputs git diff co
 ### View Modes
 
 | View Mode | Description | Use Case |
-| --------- | ----------- | -------- |
+|--- | --- | ---|
 | **Split (Side-by-side)** | Left-right split, old code on left, new code on right | Compare large changes, clearly see before/after |
 | **Unified** | Vertical merge, deletions and additions in same column | View small changes, save vertical space |
 
@@ -154,7 +154,7 @@ After an AI Agent completes code modifications, it typically outputs git diff co
 Plannotator supports three code comment types:
 
 | Comment Type | Purpose | UI Representation |
-| ------------ | ------- | ----------------- |
+|--- | --- | ---|
 | **Comment** | Comment on a line of code, ask questions or provide explanations | Purple/blue border markers |
 | **Suggestion** | Provide specific code modification suggestions | Green border markers with suggested code block |
 | **Concern** | Mark potential issues that need attention | Yellow/orange border markers |
@@ -168,7 +168,7 @@ Plannotator supports three code comment types:
 ### Diff Types
 
 | Diff Type | Git Command | Description |
-| --------- | ----------- | ----------- |
+|--- | --- | ---|
 | **Uncommitted** | `git diff HEAD` | Uncommitted changes (default) |
 | **Staged** | `git diff --staged` | Staged changes |
 | **Unstaged** | `git diff` | Unstaged changes |
@@ -443,7 +443,7 @@ Code Review is a visual Git Diff review tool provided by Plannotator:
 > Updated: 2026-01-24
 
 | Feature | File Path | Line Numbers |
-| ----------------- | ---------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Code Review Server | [`packages/server/review.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/review.ts#L1-L302) | 1-302 |
 | Code Review UI | [`packages/review-editor/App.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/review-editor/App.tsx#L1-L150) | 1-150 |
 | DiffViewer Component | [`packages/review-editor/components/DiffViewer.tsx`](https://github.com/backnotprop/plannotator/blob/main/packages/review-editor/components/DiffViewer.tsx#L1-L349) | 1-349 |

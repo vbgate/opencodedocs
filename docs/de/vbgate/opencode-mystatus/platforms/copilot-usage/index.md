@@ -55,7 +55,7 @@ Wenn Sie:
 GitHub Copilot bietet zwei API-Abfragemethoden, die unterschiedliche Antwortformate haben:
 
 | Methode | Authentifizierung | API-Typ | Vor- und Nachteile |
-|---------|------------|----------|------------------|
+|--- | --- | --- | ---|
 | **Public Billing API** (empfohlen) | Fine-grained PAT | Öffentliche API | Stabil, detaillierte Modellnutzung, erfordert manuelle Konfiguration |
 | **Internal API** (alt) | OAuth Token | Interne API | Automatisch, keine Modelldetails, mögliche Berechtigungsprobleme |
 
@@ -166,7 +166,7 @@ Wenn das Feld `tier` nicht mit Ihrem tatsächlichen Abonnement übereinstimmt, w
 **Abonnementtyp-Tabelle**:
 
 | Ihr tatsächliches Abonnement | tier-Feld sollte sein | Falsches Beispiel |
-|--------------|------------------------|----------------|
+|--- | --- | ---|
 | Free | `free` | `pro` ❌ |
 | Pro | `pro` | `free` ❌ |
 | Pro+ | `pro+` | `pro` ❌ |
@@ -200,11 +200,11 @@ Wenn das Feld `tier` nicht mit Ihrem tatsächlichen Abonnement übereinstimmt, w
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| ---------------- | --------------------------------------------------------------------------------------------- | ------- |
-| Copilot-Kreditabfrage | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 481-524 |
-| Fine-grained PAT-Lesung | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 122-151 |
-| Public Billing API-Abfrage | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 157-177 |
-| Interne API-Abfrage | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 242-304 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Konstanten**:
 

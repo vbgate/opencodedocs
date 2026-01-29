@@ -46,7 +46,7 @@ Wenn Sie:
 Das Kreditsystem von **Zhipu AI** und **Z.ai** ist in zwei Typen unterteilt:
 
 | Kreditart | Bedeutung | Rücksetzzyklus |
-| -------- | ---- | -------- |
+|--- | --- | ---|
 | **5-Stunden-Token-Kredit** | Token-Nutzungskredit für API-Anfragen | Automatische Rücksetzung nach 5 Stunden |
 | **MCP-monatliche Quote** | Monatliche Quote für MCP-Suchanfragen (Model Context Protocol) | Monatliche Rücksetzung |
 
@@ -140,7 +140,7 @@ Nur wenn Sie die Bedeutung jeder Ausgabezeile verstehen, können Sie Kredite eff
 Vergleichen Sie Ihre Ausgabe mit folgenden Erklärungen:
 
 | Ausgabefeld | Bedeutung | Beispiel |
-| -------- | ---- | ---- |
+|--- | --- | ---|
 | **Account** | Maskierter API-Key und Kontotyp | `9c89****AQVM (Coding Plan)` |
 | **5 Stunden Token-Kredit** | Token-Nutzung im aktuellen 5-Stunden-Zeitraum | Fortschrittsbalken + Prozentsatz |
 | **Verwendet: X / Y** | Verwendet / Gesamt | `0,5M / 10,0M` |
@@ -246,11 +246,11 @@ In diesem Lektion haben Sie gelernt, wie Sie mit opencode-mystatus Kredite von Z
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
-| Zhipu AI-Kreditabfrage | [`plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 213-217 |
-| Z.ai-Kreditabfrage | [`plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 224-228 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | Ausgabe formatieren | [`plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 115-177 |
-| API-Endpunktkonfiguration | [`plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts) | 62-76 |
+|--- | --- | ---|
 | ZhipuAuthData Typdefinition | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts) | 38-41 |
 | Hochnutzungswarnungsschwelle | [`plugin/lib/types.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/types.ts) | 110-111 |
 

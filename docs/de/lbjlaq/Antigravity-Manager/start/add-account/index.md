@@ -104,7 +104,7 @@ Wenn Sie keinen `refresh_token` erhalten können (oder Sie bevorzugen "migrierba
 Unterstützte Eingabeformate (Frontend analysiert und fügt im Batch hinzu):
 
 | Eingabetyp | Beispiel | Analyse-Logik |
-| --- | --- | --- |
+|--- | --- | ---|
 | Reiner Token-Text | `1//abc...` | Regex-Extraktion: `/1\/\/[a-zA-Z0-9_\-]+/g` (siehe `AddAccountDialog.tsx:213-220`) |
 | Eingebettet in langen Text | Logs/Exporttext enthalten mehrere `1//...` | Regex-Batch-Extraktion mit Deduplizierung (siehe `AddAccountDialog.tsx:213-224`) |
 | JSON-Array | `[{"refresh_token":"1//..."}]` | Array-Parser und `item.refresh_token` extrahieren (siehe `AddAccountDialog.tsx:198-207`) |
@@ -165,7 +165,7 @@ Wenn Sie gerade autorisieren, wechseln Sie nicht eilig die Registerkarte.
 ### 4) Korrekte/Falsche Beispiele für Refresh Token
 
 | Beispiel | Wird erkannt | Grund |
-| --- | --- | --- |
+|--- | --- | ---|
 | `1//0gAbC...` | ✓ | Entspricht `1//`-Prefix-Regel (siehe `AddAccountDialog.tsx:215-219`) |
 | `ya29.a0...` | ✗ | Entspricht nicht der Frontend-Extraktionsregel, wird als ungültige Eingabe behandelt |
 
@@ -191,16 +191,16 @@ In der nächsten Lektion machen wir etwas Solideres: den Konto-Pool zu einem "mi
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
-| Accounts-Seite Hinzufügen-Dialog montieren | [`src/pages/Accounts.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Accounts.tsx#L267-L731) | 267-731 |
-| OAuth-URL-Vorgenerierung + Callback-Ereignis automatischer Abschluss | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L49-L125) | 49-125 |
-| OAuth-Callback-Ereignis löst `completeOAuthLogin()` aus | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L67-L109) | 67-109 |
-| Refresh Token-Batch-Analyse und Deduplizierung | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L185-L268) | 185-268 |
-| Frontend ruft Tauri-Commands auf (add/OAuth/cancel) | [`src/services/accountService.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/services/accountService.ts#L5-L91) | 5-91 |
-| Backend add_account: E-Mail ignorieren, refresh_token verwenden, echte E-Mail abrufen und speichern | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L19-L60) | 19-60 |
-| Backend OAuth: refresh_token-Fehlprüfung und Berechtigung-Widerrufen-Lösung geben | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L38-L79) | 38-79 |
-| OAuth-Callback-Server: Gleichzeitige Überwachung von IPv4/IPv6 und Auswahl von redirect_uri | [`src-tauri/src/modules/oauth_server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/oauth_server.rs#L43-L113) | 43-113 |
-| OAuth-Callback analysiert `code` und gibt `oauth-callback-received` aus | [`src-tauri/src/modules/oauth_server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/oauth_server.rs#L140-L180) | 140-180 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Ereignisnamen**:
 - `oauth-url-generated`: Backend sendet OAuth-URL an Frontend nach Generierung (siehe `oauth_server.rs:250-252`)

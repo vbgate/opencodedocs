@@ -74,7 +74,7 @@ graph TD
 The plugin uses the **Synthetic Message Injection** mechanism to inject content:
 
 | Property | Value | Meaning |
-|----------|-------|---------|
+|--- | --- | ---|
 | `noReply` | `true` | AI does not reply to the injected content itself |
 | `synthetic` | `true` | Marked as system-generated content, not counted as user input, not shown in UI |
 
@@ -252,7 +252,7 @@ This mechanism ensures:
 > Last updated: 2026-01-24
 
 | Function | File Path | Line |
-|----------|-----------|------|
+|--- | --- | ---|
 | Compaction event listener | [`src/plugin.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/plugin.ts#L144-L157) | 144-157 |
 | First message initialization | [`src/plugin.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/plugin.ts#L70-L105) | 70-105 |
 | Skill list injection | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L345-L370) | 345-370 |

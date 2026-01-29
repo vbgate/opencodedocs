@@ -115,7 +115,7 @@ Add the following content to the config file (keep existing `plugin` and `comman
 **Why This Configuration**:
 
 | Config Item | Value | Purpose |
-| ----------- | ----- | ------- |
+|--- | --- | ---|
 | `plugin` array | `["opencode-mystatus"]` | Tells OpenCode to load this plugin |
 | `description` | "Query quota usage for all AI accounts" | Description shown in slash command list |
 | `template` | "Use the mystatus tool..." | Prompts OpenCode how to call the mystatus tool |
@@ -234,7 +234,7 @@ Supported account types:
 #### 5.2 Understand Output Meaning
 
 | Element (Chinese) | Element (English) | Meaning |
-| ----------------- | ----------------- | ------- |
+|--- | --- | ---|
 | `## OpenAI 账号额度` | `## OpenAI Account Quota` | Platform title |
 | `user@example.com (team)` | `user@example.com (team)` | Account info (email or team) |
 | `3小时限额` | `3-hour limit` | Limit type (3-hour limit) |
@@ -248,7 +248,7 @@ Supported account types:
 Confirm you've completed the following steps:
 
 | Step | Check Method | Expected Result |
-| ---- | ------------ | --------------- |
+|--- | --- | ---|
 | Install plugin | Check `~/.config/opencode/opencode.json` | `plugin` array contains `"opencode-mystatus"` |
 | Configure slash command | Check same file | `command` object contains `mystatus` config |
 | Restart OpenCode | Check OpenCode process | Restarted |
@@ -364,7 +364,7 @@ After installation, you can use the `/mystatus` command or natural language in O
 > Last updated: 2026-01-23
 
 | Function | File Path | Line Numbers |
-| --- | --- | --- |
+|--- | --- | ---|
 | Plugin entry | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 26-94 |
 | mystatus tool definition | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 29-33 |
 | Read auth file | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 35-46 |

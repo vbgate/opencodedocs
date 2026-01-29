@@ -143,7 +143,7 @@ bunx oh-my-opencode doctor --verbose
 2. 常见错误类型（来自 `src/config/schema.ts`）：
 
 | 错误信息 | 原因 | 修正方法 |
-|---------|------|---------|
+|--- | --- | ---|
 | `agents.sisyphus.mode: Invalid enum value` | `mode` 只能是 `subagent`/`primary`/`all` | 改为 `primary` |
 | `categories.quick.model: Expected string` | `model` 必须是字符串 | 加引号：`"anthropic/claude-haiku-4-5"` |
 | `background_task.defaultConcurrency: Expected number` | 并发数必须是数字 | 改为数字：`3` |
@@ -222,7 +222,7 @@ Details:
 **常见问题**：
 
 | 问题 | 原因 | 解决方法 |
-|-----|------|---------|
+|--- | --- | ---|
 | `unknown` 模型 | Provider 降级链为空 | 确保至少有一个 Provider 可用 |
 | 模型未被使用 | Provider 未连接 | 运行 `opencode` 连接 Provider |
 | 想覆盖模型 | 使用默认模型 | 在 `oh-my-opencode.json` 中设置 `agents.<name>.model` |
@@ -324,7 +324,7 @@ opencode models --refresh
 Doctor 命令是 oh-my-opencode 的瑞士军刀，帮你快速定位问题：
 
 | 命令 | 用途 | 何时使用 |
-|-----|------|---------|
+|--- | --- | ---|
 | `bunx oh-my-opencode doctor` | 完整诊断 | 首次安装后、遇到问题时 |
 | `--verbose` | 详细信息 | 需要查看错误详情 |
 | `--json` | JSON 输出 | CI/CD、脚本自动化 |
@@ -351,7 +351,7 @@ Doctor 命令是 oh-my-opencode 的瑞士军刀，帮你快速定位问题：
 > 更新时间：2026-01-26
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|-----|
+|--- | --- | ---|
 | Doctor 命令入口 | [`src/cli/doctor/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/cli/doctor/index.ts#L1-L11) | 1-11 |
 | 所有检查项注册 | [`src/cli/doctor/checks/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/cli/doctor/checks/index.ts#L24-L37) | 24-37 |
 | 插件注册检查 | [`src/cli/doctor/checks/plugin.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/main/src/cli/doctor/checks/plugin.ts#L79-L117) | 79-117 |

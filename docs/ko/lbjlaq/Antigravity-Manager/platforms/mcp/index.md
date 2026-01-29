@@ -66,7 +66,7 @@ Antigravity Tools는 세 가지 MCP 엔드포인트를 제공합니다:
 ### 엔드포인트 분류
 
 | 엔드포인트 유형 | 구현 방식 | 로컬 경로 | 업스트림 대상 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | **Web Search** | 원격 리버스 프록시 | `/mcp/web_search_prime/mcp` | `https://api.z.ai/api/mcp/web_search_prime/mcp` |
 | **Web Reader** | 원격 리버스 프록시 | `/mcp/web_reader/mcp` | `https://api.z.ai/api/mcp/web_reader/mcp` |
 | **Vision MCP** | 내장 서버(JSON-RPC 2.0) | `/mcp/zai-mcp-server/mcp` | 내부에서 z.ai PaaS API 호출 |
@@ -320,7 +320,7 @@ data: keepalive
 ## Vision MCP 도구 요약
 
 | 도구 이름 | 기능 | 필수 매개변수 | 예시 시나리오 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `ui_to_artifact` | UI 스크린샷을 코드/프롬프트/사양/설명으로 변환 | `image_source`, `output_type`, `prompt` | 디자인 초안에서 프론트엔드 코드 생성 |
 | `extract_text_from_screenshot` | 스크린샷에서 텍스트/코드 추출(OCR과 유사) | `image_source`, `prompt` | 오류 로그 스크린샷 읽기 |
 | `diagnose_error_screenshot` | 오류 스크린샷 진단(스택 추적, 로그) | `image_source`, `prompt` | 런타임 오류 분석 |
@@ -469,7 +469,7 @@ Antigravity Tools의 MCP 엔드포인트는 z.ai의 능력을 호출 가능한 �
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Web Search 엔드포인트 | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L115-L135) | 115-135 |
 | Web Reader 엔드포인트 | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L137-L157) | 137-157 |
 | Vision MCP 엔드포인트(메인 엔트리) | [`src-tauri/src/proxy/handlers/mcp.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/mcp.rs#L376-L397) | 376-397 |

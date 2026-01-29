@@ -18,7 +18,7 @@ This page lists the **OpenCode event types** monitored by the `opencode-notify` 
 ## Event Types Overview
 
 | Event Type | Trigger Timing | Notification Title | Default Sound | Check Parent Session | Check Terminal Focus |
-| ---------- | -------------- | ------------------ | ------------- | ------------------- | -------------------- |
+|--- | --- | --- | --- | --- | ---|
 | `session.idle` | AI session enters idle state | "Ready for review" | Glass | ✅ | ✅ |
 | `session.error` | AI session execution error | "Something went wrong" | Basso | ✅ | ✅ |
 | `permission.updated` | AI requires user authorization | "Waiting for you" | Submarine | ❌ | ✅ |
@@ -148,7 +148,7 @@ When the user is viewing the terminal, notifications are suppressed to avoid dup
 ## Platform Differences
 
 | Feature | macOS | Windows | Linux |
-| ------- | ----- | ------- | ----- |
+|--- | --- | --- | ---|
 | Native notifications | ✅ | ✅ | ✅ |
 | Terminal focus detection | ✅ | ❌ | ❌ |
 | Click notification to focus terminal | ✅ | ❌ | ❌ |
@@ -200,7 +200,7 @@ Notification behavior can be customized via configuration file:
 > Last updated: 2026-01-27
 
 | Event Type | File Path | Lines | Handler Function |
-| ---------- | --------- | ----- | ---------------- |
+|--- | --- | --- | ---|
 | session.idle | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L249-L284) | 249-284 | `handleSessionIdle` |
 | session.error | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L286-L313) | 286-313 | `handleSessionError` |
 | permission.updated | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L315-L334) | 315-334 | `handlePermissionUpdated` |

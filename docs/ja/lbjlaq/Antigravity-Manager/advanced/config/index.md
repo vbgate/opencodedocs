@@ -119,7 +119,7 @@ Copy-Item (Join-Path $HOME ".antigravity_tools\gui_config.json") (Join-Path $bac
 以下のデフォルト値は、バックエンドの `AppConfig::new()` および `ProxyConfig::default()` に基づいています：
 
 | 設定ブロック | フィールド | デフォルト値（ソースコード） | 留意点 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | AppConfig | `language` | `"zh"` | デフォルトは中国語 |
 | AppConfig | `theme` | `"system"` | システム設定に従う |
 | AppConfig | `auto_refresh` | `true` | デフォルトでクォータを自動更新 |
@@ -269,7 +269,7 @@ Invoke-WebRequest -UseBasicParsing "http://127.0.0.1:8050/healthz" | Select-Obje
 > 更新日時：2026-01-24
 
 | トピック | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | AppConfig デフォルト値（`AppConfig::new()`） | [`src-tauri/src/models/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/models/config.rs#L4-L158) | 4-158 |
 | ProxyConfig デフォルト値（ポート/認証/リッスンアドレス） | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L74-L292) | 74-292 |
 | StickySessionConfig デフォルト値（スケジューリング） | [`src-tauri/src/proxy/sticky_config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/sticky_config.rs#L3-L36) | 3-36 |

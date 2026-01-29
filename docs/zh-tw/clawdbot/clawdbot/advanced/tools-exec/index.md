@@ -68,7 +68,7 @@ exec 工具採用三層安全機制，從粗粒度到細粒度控制 AI 的執�
 ### 三種執行模式對比
 
 | 執行模式 | 執行位置 | 安全等級 | 典型場景 | 是否需要審批 |
-|---------|---------|---------|-----------|------------|
+|--- | --- | --- | --- | ---|
 | **sandbox** | 容器內（如 Docker） | 高 | 隔離環境、測試 | 否 |
 | **gateway** | Gateway 守護程序所在機器 | 中 | 本地開發、整合 | 是（allowlist + 審批） |
 | **node** | 配對的裝置節點（macOS/iOS/Android） | 中 | 裝置本地操作 | 是（allowlist + 審批） |
@@ -106,7 +106,7 @@ exec 工具支援以下參數：
 **參數說明**：
 
 | 參數 | 類型 | 預設值 | 說明 |
-|-----|------|--------|------|
+|--- | --- | --- | ---|
 | `command` | string | 必填 | 要執行的 Shell 指令 |
 | `workdir` | string | 目前工作目錄 | 執行目錄 |
 | `env` | object | 繼承環境 | 環境變數覆蓋 |
@@ -148,7 +148,7 @@ exec 工具支援以下參數：
 **設定項說明**：
 
 | 設定項 | 類型 | 預設值 | 說明 |
-|-------|------|--------|------|
+|--- | --- | --- | ---|
 | `host` | string | sandbox | 預設執行主機 |
 | `security` | string | deny (sandbox) / allowlist (gateway, node) | 預設安全策略 |
 | `ask` | string | on-miss | 預設審批策略 |
@@ -247,7 +247,7 @@ clawdbot approvals
 allowlist 使用 **glob 模式匹配**（不區分大小寫）：
 
 | 模式 | 匹配 | 說明 |
-|------|------|------|
+|--- | --- | ---|
 | `~/Projects/**/bin/*` | `/Users/user/Projects/any/bin/rg` | 匹配所有子目錄 |
 | `~/.local/bin/*` | `/Users/user/.local/bin/jq` | 匹配本地 bin |
 | `/opt/homebrew/bin/rg` | `/opt/homebrew/bin/rg` | 絕對路徑匹配 |
@@ -318,7 +318,7 @@ safe bins 是一組僅支援 stdin 操作的安全二進位，可以在 allowlis
 **設定項說明**：
 
 | 設定項 | 說明 |
-|-------|------|
+|--- | ---|
 | `enabled` | 是否啟用 exec 審批轉發 |
 | `mode` | `"session"` \| `"targets"` \| `"both"` - 審批目標模式 |
 | `agentFilter` | 只處理特定 agent 的審批請求 |
@@ -363,7 +363,7 @@ Security: allowlist
 ### 常見錯誤
 
 | 錯誤 | 原因 | 解決方法 |
-|------|------|---------|
+|--- | --- | ---|
 | `Command not allowed by exec policy` | `security=deny` 或 allowlist 不匹配 | 檢查 `tools.exec.security` 與 allowlist 配置 |
 | `Approval timeout` | UI 不可用，`askFallback=deny` | 設定 `askFallback=allowlist` 或啟用 UI |
 | `Pattern does not resolve to binary` | allowlist 模式使用 basename | 使用完整路徑（如 `/opt/homebrew/bin/rg`） |
@@ -390,7 +390,7 @@ Security: allowlist
 不同執行模式的 PATH 處理方式不同：
 
 | 執行模式 | PATH 處理 | 說明 |
-|---------|-----------|------|
+|--- | --- | ---|
 | `sandbox` | 繼承 shell login，可能被 `/etc/profile` 重置 | `pathPrepend` 會在 profile 之後套用 |
 | `gateway` | 合併登入 shell PATH 到 exec 環境 | daemon 保持最小 PATH，但 exec 繼承使用者 PATH |
 | `node` | 只使用傳遞的環境變數覆蓋 | macOS 節點會丟棄 `PATH` 覆蓋，headless 節點支援 prepend |
@@ -427,7 +427,7 @@ exec 工具透過三層防護機制（工具策略、執行主機、審批）讓
 > 更新時間：2026-01-27
 
 | 功能 | 檔案路徑 | 行號 |
-|------|---------|------|
+|--- | --- | ---|
 | exec 工具定義 | [`src/agents/bash-tools.exec.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/bash-tools.exec.ts) | 1-500+ |
 | exec 審批邏輯 | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 1-1268 |
 | Shell 指令分析 | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 500-1100 |

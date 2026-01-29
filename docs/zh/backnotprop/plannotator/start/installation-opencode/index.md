@@ -125,7 +125,7 @@ Plannotator 支持以下环境变量，根据你的需求配置：
 ::: details 环境变量说明
 
 | 环境变量 | 用途 | 默认值 | 示例 |
-| --------- | ---- | ------ | ---- |
+|--- | --- | --- | ---|
 | `PLANNOTATOR_REMOTE` | 启用远程模式（devcontainer/SSH） | 未设置 | `export PLANNOTATOR_REMOTE=1` |
 | `PLANNOTATOR_PORT` | 固定端口（远程模式必须） | 本地随机，远程 19432 | `export PLANNOTATOR_PORT=9999` |
 | `PLANNOTATOR_BROWSER` | 自定义浏览器路径 | 系统默认 | `export PLANNOTATOR_BROWSER="/Applications/Google Chrome.app"` |
@@ -259,10 +259,10 @@ Plannotator server running at http://localhost:9999
 > 更新时间：2026-01-24
 
 | 功能                    | 文件路径                                                                                      | 行号       |
-| --------------------- | --------------------------------------------------------------------------------------------- | ---------- |
+|--- | --- | ---|
 | 插件入口定义               | [`apps/opencode-plugin/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/opencode-plugin/index.ts) | 34-280     |
 | `submit_plan` tool 定义 | [`apps/opencode-plugin/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/opencode-plugin/index.ts) | 209-252    |
-| `/plannotator-review` 命令处理 | [`apps/opencode-plugin/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/opencode-plugin/index.ts) | 115-206    |
+|--- | --- | ---|
 | 插件配置（opencode.json）注入 | [`apps/opencode-plugin/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/opencode-plugin/index.ts) | 55-63      |
 | 环境变量读取               | [`apps/opencode-plugin/index.ts`](https://github.com/backnotprop/plannotator/blob/main/apps/opencode-plugin/index.ts) | 37-51      |
 | 计划评审服务器启动            | [`packages/server/index.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/index.ts) | 全文        |

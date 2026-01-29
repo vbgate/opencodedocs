@@ -18,7 +18,7 @@ order: 130
 ## 事件类型概览
 
 | 事件类型 | 触发时机 | 通知标题 | 默认音效 | 是否检查父会话 | 是否检查终端焦点 |
-| -------- | -------- | -------- | -------- | -------------- | -------------- |
+|--- | --- | --- | --- | --- | ---|
 | `session.idle` | AI 会话进入空闲状态 | "Ready for review" | Glass | ✅ | ✅ |
 | `session.error` | AI 会话执行出错 | "Something went wrong" | Basso | ✅ | ✅ |
 | `permission.updated` | AI 需要用户授权 | "Waiting for you" | Submarine | ❌ | ✅ |
@@ -148,7 +148,7 @@ order: 130
 ## 平台差异
 
 | 功能 | macOS | Windows | Linux |
-| ---- | ----- | ------- | ----- |
+|--- | --- | --- | ---|
 | 原生通知 | ✅ | ✅ | ✅ |
 | 终端焦点检测 | ✅ | ❌ | ❌ |
 | 点击通知聚焦终端 | ✅ | ❌ | ❌ |
@@ -200,7 +200,7 @@ order: 130
 > 更新时间：2026-01-27
 
 | 事件类型 | 文件路径 | 行号 | 处理函数 |
-| -------- | -------- | ---- | -------- |
+|--- | --- | --- | ---|
 | session.idle | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L249-L284) | 249-284 | `handleSessionIdle` |
 | session.error | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L286-L313) | 286-313 | `handleSessionError` |
 | permission.updated | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L315-L334) | 315-334 | `handlePermissionUpdated` |

@@ -80,7 +80,7 @@ bash skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh .
 2. Tipos comuns de erros:
 
 | Mensagem de Erro                     | Possível Causa             | Solução                                           |
-| ------------------------------------ | -------------------------- | -------------------------------------------------- |
+|--- | --- | ---|
 | "File too large"                       | Volume do projeto excede limite | Exclua arquivos desnecessários (como `*.log`, `*.test.ts`) |
 | "Invalid framework"                     | Falha ao identificar framework | Adicione `package.json` ou especifique framework manualmente |
 | "Network timeout"                       | Tempo limite de rede       | Verifique conexão de rede, tente novamente           |
@@ -115,7 +115,7 @@ Com base no código fonte [`deploy.sh:12-156`](https://github.com/vercel-labs/ag
 **Solução**:
 
 | Cenário                                              | Método de Solução                                             |
-| ----------------------------------------------------- | -------------------------------------------------------------- |
+|--- | ---|
 | `package.json` existe mas detecção falha                | Verifique se dependência está em `dependencies` ou `devDependencies` |
 | Projeto HTML puramente estático                          | Certifique-se de haver `index.html` no diretório raiz, o script renomeará automaticamente arquivo HTML único (ver código fonte [`deploy.sh:198-205`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh#L198-L205)) |
 | Framework não está na lista de suporte                    | Faça deploy diretamente (framework é null), o Vercel detectará automaticamente |
@@ -207,7 +207,7 @@ Com base no código fonte [`validate.ts:21-66`](https://github.com/vercel-labs/a
 ::: tip Exemplos de Erros de Validação e Correção
 
 | Mensagem de Erro                         | Causa                                 | Método de Correção                                                                 |
-| ---------------------------------------- | -------------------------------------- | ---------------------------------------------------------------------------------- |
+|--- | --- | ---|
 | `Missing or empty title`                 | Frontmatter sem campo `title`        | Adicione ao topo do arquivo de regra:<br>`---`<br>`title: "Título da Regra"`<br>`---` |
 | `Missing or empty explanation`            | Falta explicação de regra           | No frontmatter, adicione campo `explanation`                               |
 | `Missing examples`                       | Sem exemplos de código               | Adicione `**Incorrect:**` e `**Correct:**` blocos de código                 |
@@ -456,7 +456,7 @@ Se os métodos acima não conseguirem resolver o problema:
 > Atualizado em: 2026-01-25
 
 | Funcionalidade        | Caminho do Arquivo                                                                                      | Número de Linha    |
-| ------------------- | --------------------------------------------------------------------------------------------------------- | ----------------- |
+|--- | --- | ---|
 | Tratamento de erros de rede | [`skills/claude.ai/vercel-deploy-claimable/SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/SKILL.md#L100-L113) | 100-113           |
 | Lógica de validação de regras | [`packages/react-best-practices-build/src/validate.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/validate.ts) | 21-66             |
 | Lógica de detecção de framework | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 12-156            |

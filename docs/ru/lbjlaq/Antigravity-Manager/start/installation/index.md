@@ -55,7 +55,7 @@ order: 2
 **Рекомендация**:
 
 | Сценарий | Рекомендуемый способ установки |
-| --- | --- |
+|--- | ---|
 | macOS / Linux десктоп | Homebrew (вариант A) |
 | Windows десктоп | GitHub Releases (вариант B) |
 | Arch Linux | Официальный скрипт (вариант Arch) |
@@ -215,7 +215,7 @@ docker compose up -d
 > Дата обновления: 2026-01-23
 
 | Тема | Путь к файлу | Строка |
-| --- | --- | --- |
+|--- | --- | ---|
 | Установка через Homebrew (tap + cask) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L112-L127) | 112-127 |
 | Ручная загрузка через Releases (пакеты установки для всех платформ) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L128-L133) | 128-133 |
 | Вход скрипта Arch | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L134-L140) | 134-140 |
@@ -226,6 +226,6 @@ docker compose up -d
 | Вход развертывания Docker (noVNC 6080 / прокси 8045) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L150-L166) | 150-166 |
 | Описание развертывания Docker (noVNC 6080 / прокси 8045) | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L1-L35) | 1-35 |
 | Конфигурация портов/томов Docker (8045 + antigravity_data) | [`deploy/docker/docker-compose.yml`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/docker-compose.yml#L1-L25) | 1-25 |
-| Обработка «поврежден файл, невозможно открыть» в macOS (xattr / --no-quarantine) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L171-L186) | 171-186 |
+|--- | --- | ---|
 
 </details>

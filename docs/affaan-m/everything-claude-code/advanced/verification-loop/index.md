@@ -65,7 +65,7 @@ This tutorial assumes you have:
 Everything Claude Code provides three layers of verification:
 
 | Layer | Mechanism | Purpose | When to Use |
-|-------|-----------|---------|-------------|
+|--- | --- | --- | ---|
 | **Real-time verification** | PostToolUse Hooks | Capture type errors, console.logs, etc. immediately | After every tool call |
 | **Periodic verification** | `/verify` command | Comprehensive check: build, types, tests, security | Every 15 minutes or after major changes |
 | **Milestone verification** | `/checkpoint` | Compare state differences, track quality trends | After milestones, before PR submission |
@@ -501,7 +501,7 @@ Before PR:          /verify pre-pr
 Verification loop is a systematic approach to maintaining code quality:
 
 | Mechanism | Purpose | Frequency |
-|-----------|---------|-----------|
+|--- | --- | ---|
 | **PostToolUse Hooks** | Capture errors in real-time | Every tool call |
 | **`/verify`** | Periodic comprehensive check | Every 15 minutes |
 | **`/checkpoint`** | Milestone recording and comparison | Each feature phase |
@@ -534,7 +534,7 @@ Core principles:
 > Last updated: 2026-01-25
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | Checkpoint command definition | [`commands/checkpoint.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/checkpoint.md) | 1-75 |
 | Verify command definition | [`commands/verify.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/verify.md) | 1-60 |
 | Verification Loop Skill | [`skills/verification-loop/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/verification-loop/SKILL.md) | 1-121 |

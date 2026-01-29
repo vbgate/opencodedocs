@@ -300,7 +300,7 @@ Loopback 또는 Tailnet 사용을 권장하며, LAN에 직접 노출하는 것�
 `CLAWDBOT_PROFILE` 환경 변수를 설정하여 다른 작업 환경에 대해 독립적인 구성을 사용할 수 있습니다:
 
 | Profile 값 | 작업 공간 경로 | 구성 파일 |
-|----------|----------|----------|
+|--- | --- | ---|
 | `default` 또는 미설정 | `~/clawd` | `~/.clawdbot/clawdbot.json` |
 | `work` | `~/clawd-work` | `~/.clawdbot/clawdbot.json` (work profile) |
 | `dev` | `~/clawd-dev` | `~/.clawdbot/clawdbot.json` (dev profile) |
@@ -679,7 +679,7 @@ clawdbot onboard --mode reset
 > 업데이트 시간: 2026-01-27
 
 | 기능           | 파일 경로                                                                                                  | 라인 번호      |
-| -------------- | ------------------------------------------------------------------------------------------------- | --------- |
+|--- | --- | ---|
 | 마법사 메인 프로세스     | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 87-452    |
 | 보안 경고 확인   | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 46-85     |
 | Gateway 구성   | [`src/wizard/onboarding.gateway-config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.gateway-config.ts) | 28-249    |

@@ -172,7 +172,7 @@ $resp.Headers["X-Mapped-Model"]
 ## よくある落とし穴
 
 | シナリオ | あなたがするかもしれないこと（❌） | 推奨される方法（✓） |
-| --- | --- | --- |
+|--- | --- | ---|
 | ワイルドカードが有効にならない | `GPT-4*` を書いて `gpt-4-turbo` にマッチすることを期待 | 小文字で `gpt-4*` を使用；バックエンドのワイルドカードマッチは大文字小文字を区別する |
 | 2 つのワイルドカードがどちらもマッチ | `gpt-*` と `gpt-4*` を同時に書き、どちらに進むかわからない | より具体的なルールをより「長く」し、非 `*` 文字がより多くなることを確認 |
 | ルールは正しいように見えるが変わらない | レスポンス body しか見ず、レスポンスヘッダを見ない | `curl -i` で `X-Mapped-Model` を確認（これはバックエンドが明示的に返す結果） |
@@ -198,7 +198,7 @@ $resp.Headers["X-Mapped-Model"]
 > 更新日時：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 設定フィールド：`proxy.custom_mapping`（フロントエンド型） | [`src/types/config.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/types/config.ts#L6-L20) | 6-20 |
 | UI：書き込み/リセット/プリセット（`update_model_mapping` 呼び出し） | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L371-L475) | 371-475 |
 | UI：モデルルーティングカード（プリセットマッピング適用 / マッピングリセット / リストと追加フォーム） | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L1762-L1931) | 1762-1931 |
@@ -207,7 +207,7 @@ $resp.Headers["X-Mapped-Model"]
 | ルーティングアルゴリズム：正確 > ワイルドカード（より具体的が優先）> デフォルトマッピング | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L180-L228) | 180-228 |
 | ワイルドカードマッチ：複数 `*` をサポートし、大文字小文字を区別 | [`src-tauri/src/proxy/common/model_mapping.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/common/model_mapping.rs#L134-L178) | 134-178 |
 | リクエスト内で `mapped_model` を計算（例：OpenAI handler） | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L154-L159) | 154-159 |
-| レスポンスヘッダ `X-Mapped-Model` 返送（例：OpenAI handler） | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L310-L334) | 310-334 |
+|--- | --- | ---|
 
 **キー関数**：
 - `resolve_model_route(original_model, custom_mapping)`：モデルルーティングメインエントリ（`src-tauri/src/proxy/common/model_mapping.rs` 参照）

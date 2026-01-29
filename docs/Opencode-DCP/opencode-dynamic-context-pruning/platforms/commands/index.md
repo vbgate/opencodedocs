@@ -46,7 +46,7 @@ When you:
 DCP provides 4 slash commands to help you monitor and control token usage:
 
 | Command | Purpose | Use Case |
-|---------|---------|----------|
+|--- | --- | ---|
 | `/dcp` | Display help | View when you forget commands |
 | `/dcp context` | Analyze current session token distribution | Understand context composition |
 | `/dcp stats` | View cumulative pruning statistics | Verify long-term effects |
@@ -112,7 +112,7 @@ Summary:
 **Token Category Explanation**:
 
 | Category | Calculation | Description |
-|----------|-------------|-------------|
+|--- | --- | ---|
 | **System** | `firstAssistant.input + cache.read - tokenizer(firstUserMessage)` | System prompt |
 | **Tools** | `tokenizer(toolInputs + toolOutputs) - prunedTokens` | Tool calls (pruned portion deducted) |
 | **User** | `tokenizer(all user messages)` | All user messages |
@@ -267,7 +267,7 @@ After pruning, type `/dcp context` again to view the new token distribution.
 DCP's 4 commands help you monitor and control token usage:
 
 | Command | Core Function |
-|---------|---------------|
+|--- | ---|
 | `/dcp` | Display help information |
 | `/dcp context` | Analyze current session token distribution |
 | `/dcp stats` | View cumulative pruning statistics |
@@ -310,7 +310,7 @@ DCP's 4 commands help you monitor and control token usage:
 > Last updated: 2026-01-23
 
 | Function | File Path | Line Number |
-|----------|-----------|-------------|
+|--- | --- | ---|
 | /dcp help command | [`lib/commands/help.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/commands/help.ts) | 19-32 |
 | /dcp context command | [`lib/commands/context.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/commands/context.ts) | 238-247 |
 | Token calculation strategy | [`lib/commands/context.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/commands/context.ts) | 5-38 |

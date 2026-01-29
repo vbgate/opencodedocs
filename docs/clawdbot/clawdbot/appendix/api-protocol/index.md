@@ -219,7 +219,7 @@ All requests sent by the client follow the request frame format:
 ```
 
 | Field | Type | Required | Description |
-|-------|------|----------|-------------|
+|--- | --- | --- | ---|
 | `type` | string | Yes | Fixed value `"req"` |
 | `id` | string | Yes | Unique request identifier, used to match responses |
 | `method` | string | Yes | Method name, such as `"agent"`, `"send"` |
@@ -248,7 +248,7 @@ The server returns a response frame for each request:
 ```
 
 | Field | Type | Required | Description |
-|-------|------|----------|-------------|
+|--- | --- | --- | ---|
 | `type` | string | Yes | Fixed value `"res"` |
 | `id` | string | Yes | Corresponding request ID |
 | `ok` | boolean | Yes | Whether the request was successful |
@@ -305,7 +305,7 @@ The server can actively push events without client requests:
 ```
 
 | Field | Type | Required | Description |
-|-------|------|----------|-------------|
+|--- | --- | --- | ---|
 | `type` | string | Yes | Fixed value `"event"` |
 | `event` | string | Yes | Event name |
 | `payload` | any | No | Event data |
@@ -443,7 +443,7 @@ When using Tailscale Serve/Funnel, authentication can be performed through Tails
 After handshake, the client receives a set of permission scopes that determine which methods it can call:
 
 | Scope | Permission | Available Methods |
-|-------|------------|------------------|
+|--- | --- | ---|
 | `operator.admin` | Administrator | All methods, including configuration changes, Wizard, updates, etc. |
 | `operator.write` | Write | Send messages, call Agents, modify sessions, etc. |
 | `operator.read` | Read-only | Query status, logs, configuration, etc. |
@@ -471,7 +471,7 @@ The server checks permissions on every request. If the client lacks the necessar
 In addition to scopes, the protocol also supports a role system:
 
 | Role | Description | Special Permissions |
-|------|-------------|---------------------|
+|--- | --- | ---|
 | `operator` | Operator | Can call all Operator methods |
 | `node` | Device Node | Can only call Node-specific methods |
 | `device` | Device | Can call device-related methods |
@@ -503,7 +503,7 @@ Send a message to an AI Agent and get a streaming response.
 **Parameter Description**:
 
 | Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
+|--- | --- | --- | ---|
 | `message` | string | Yes | User message content |
 | `agentId` | string | No | Agent ID, defaults to the configured default Agent |
 | `sessionId` | string | No | Session ID |
@@ -595,7 +595,7 @@ Send a message to a specified channel.
 **Parameter Description**:
 
 | Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
+|--- | --- | --- | ---|
 | `to` | string | Yes | Recipient identifier (phone number, user ID, etc.) |
 | `message` | string | Yes | Message content |
 | `mediaUrl` | string | No | Media URL |
@@ -651,7 +651,7 @@ List all active sessions.
 **Parameter Description**:
 
 | Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
+|--- | --- | --- | ---|
 | `limit` | number | No | Maximum number to return |
 | `activeMinutes` | number | No | Filter recently active sessions (minutes) |
 | `includeGlobal` | boolean | No | Include global sessions |
@@ -1355,7 +1355,7 @@ Get API call cost statistics.
 All error responses include error codes and descriptions:
 
 | Error Code | Description | Retryable |
-|------------|-------------|-----------|
+|--- | --- | ---|
 | `NOT_LINKED` | Node not linked | Yes |
 | `NOT_PAIRED` | Node not paired | No |
 | `AGENT_TIMEOUT` | Agent timeout | Yes |
@@ -1578,7 +1578,7 @@ This tutorial detailed the Clawdbot Gateway WebSocket API protocol, including:
 > Last updated: 2026-01-27
 
 | Function | File Path | Lines |
-|----------|-----------|-------|
+|--- | --- | ---|
 | Protocol entry and validators | `src/gateway/protocol/index.ts` | 1-521 |
 | Basic frame type definitions | `src/gateway/protocol/schema/frames.ts` | 1-165 |
 | Protocol version definitions | `src/gateway/protocol/schema/protocol-schemas.ts` | 231 |

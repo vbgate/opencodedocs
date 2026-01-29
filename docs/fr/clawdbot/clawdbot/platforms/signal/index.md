@@ -227,7 +227,7 @@ Modifiez `~/.clawdbot/clawdbot.json` :
 **Explication de la configuration** :
 
 | Champ | Valeur | Description |
-|-------|--------|-------------|
+|--- | --- | ---|
 | `enabled` | `true` | Activer le canal Signal |
 | `account` | `"+15551234567"` | Votre compte Signal (format E.164) |
 | `cliPath` | `"signal-cli"` | Chemin de la commande signal-cli |
@@ -587,7 +587,7 @@ Continuez à explorer les puissantes fonctionnalités de Clawdbot ! 🚀
 > Dernière mise à jour : 2026-01-27
 
 | Fonctionnalité | Chemin du fichier | Lignes |
-| -------------- | ---------------- | ------ |
+|--- | --- | ---|
 | Client RPC Signal | [`src/signal/client.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/client.ts) | 1-186 |
 | Gestion du démon Signal | [`src/signal/daemon.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/daemon.ts) | 1-85 |
 | Prise en charge multi-compte | [`src/signal/accounts.ts`](https://github.com/clawd/clawdbot/blob/main/src/signal/accounts.ts) | 1-84 |

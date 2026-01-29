@@ -166,7 +166,7 @@ The first discovered match wins.
 After completing the above steps, verify the following:
 
 | Check Item | Expected Result |
-|-----------|-----------------|
+|--- | ---|
 | Environment variable set correctly | `echo $OPENCODE_AGENT_SKILLS_SUPERPOWERS_MODE` outputs `true` |
 | Superpowers skill discoverable | Calling `get_available_skills()` shows `using-superpowers` |
 | New session auto-injects | After creating a new session, the AI knows it has superpowers |
@@ -212,7 +212,7 @@ After completing the above steps, verify the following:
 The plugin automatically injects the following tool mappings to help the AI correctly invoke OpenCode tools:
 
 | Superpowers Tool | OpenCode Tool | Description |
-|------------------|---------------|-------------|
+|--- | --- | ---|
 | `TodoWrite` | `todowrite` | Todo write tool |
 | `Task` (with subagents) | `task` + `subagent_type` | Subagent invocation |
 | `Skill` | `use_skill` | Load skill |
@@ -279,7 +279,7 @@ Superpowers integration provides strict workflow guidance. Key points:
 > Last updated: 2026-01-24
 
 | Function | File Path | Line |
-|----------|-----------|------|
+|--- | --- | ---|
 | Superpowers integration module | [`src/superpowers.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/superpowers.ts#L1-L59) | 1-59 |
 | Tool mapping definition | [`src/superpowers.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/superpowers.ts#L12-L16) | 12-16 |
 | Skill namespace definition | [`src/superpowers.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/superpowers.ts#L18-L25) | 18-25 |

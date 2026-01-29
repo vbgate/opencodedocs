@@ -234,7 +234,7 @@ Si vous voulez l'utiliser ainsi, activez au moins `auth_mode` et définissez un 
 > Date de mise à jour : 2026-01-23
 
 | Sujet | Chemin du fichier | Lignes |
-| --- | --- | --- |
+|--- | --- | ---|
 | Démarrage/arrêt/statut du service de reverse proxy | [`src-tauri/src/commands/proxy.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/proxy.rs#L42-L178) | 42-178 |
 | Vérification du pool de comptes avant démarrage (conditions d'erreur sans comptes) | [`src-tauri/src/commands/proxy.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/proxy.rs#L81-L91) | 81-91 |
 | Enregistrement des routes (y compris `/healthz`) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |

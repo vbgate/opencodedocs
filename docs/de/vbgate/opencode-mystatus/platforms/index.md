@@ -15,7 +15,7 @@ Dieses Kapitel beschreibt ausführlich die Kreditabfragefunktionen der verschied
 opencode-mystatus unterstützt die folgenden 4 Haupt-KI-Plattformen:
 
 | Plattform | Kreditart | Merkmale |
-|------|---------|------|
+|--- | --- | ---|
 | OpenAI | 3 Stunden / 24 Stunden Schiebefenster | Unterstützt Plus, Team, Pro-Abonnements |
 | Zhipu AI | 5-Stunden-Token / MCP-monatliche Quote | Unterstützt Coding Plan |
 | GitHub Copilot | Monatliche Quote | Zeigt Premium Requests-Nutzung |

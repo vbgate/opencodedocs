@@ -50,7 +50,7 @@ DCP 会在检测到配置错误时显示 Toast 警告（7 秒后显示），并�
 **常见错误类型**：
 
 | 错误类型 | 问题描述 | 解决方法 |
-|---------|---------|---------|
+|--- | --- | ---|
 | 类型错误 | `pruneNotification` 应为 `"off" | "minimal" | "detailed"` | 检查枚举值拼写 |
 | 数组错误 | `protectedFilePatterns` 必须是字符串数组 | 确保使用 `["pattern1", "pattern2"]` 格式 |
 | 未知键 | 配置文件包含不支持的键 | 删除或注释掉未知键 |
@@ -307,7 +307,7 @@ LLM 提供商（如 Anthropic、OpenAI）基于**精确前缀匹配**缓存 prom
 > 更新时间：2026-01-23
 
 | 功能        | 文件路径                                                                                      | 行号        |
-| ----------- | ------------------------------------------------------------------------------------------- | ----------- |
+|--- | --- | ---|
 | 配置验证     | [`lib/config.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/config.ts#L147-375)  | 147-375    |
 | 配置错误处理 | [`lib/config.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/config.ts#L391-421)  | 391-421    |
 | 日志系统     | [`lib/logger.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/logger.ts#L6-109)      | 6-109      |

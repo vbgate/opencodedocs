@@ -22,14 +22,14 @@ order: 3
 ### 多代理与输出配置
 
 | 教程 | 说明 |
-|------|------|
-| [Universal 模式](./universal-mode/) | 使用 `--universal` 标志在多代理环境中统一管理技能，避免 Claude Code、Cursor、Windsurf 等工具之间的冲突 |
-| [自定义输出路径](./custom-output-path/) | 使用 `-o/--output` 标志将技能同步到任意 `.md` 文件，为不同工具配置独立的技能列表 |
+|--- | ---|
+|--- | ---|
+|--- | ---|
 
 ### 技能开发
 
 | 教程 | 说明 |
-|------|------|
+|--- | ---|
 | [符号链接支持](./symlink-support/) | 通过符号链接实现基于 git 的技能更新和本地开发工作流，多项目共享技能 |
 | [创建自定义技能](./create-skills/) | 从零开始创建 SKILL.md 技能文件，掌握 YAML frontmatter 和目录结构规范 |
 | [技能结构详解](./skill-structure/) | 深入理解 SKILL.md 完整字段规范、references/scripts/assets/ 资源设计和性能优化 |
@@ -37,14 +37,14 @@ order: 3
 ### 自动化与安全
 
 | 教程 | 说明 |
-|------|------|
-| [CI/CD 集成](./ci-integration/) | 使用 `-y/--yes` 标志在 GitHub Actions、GitLab CI 等环境中实现非交互式技能安装 |
+|--- | ---|
+|--- | ---|
 | [安全性说明](./security/) | 了解路径遍历防护、符号链接安全处理、YAML 解析安全等三层防护机制 |
 
 ### 综合指南
 
 | 教程 | 说明 |
-|------|------|
+|--- | ---|
 | [最佳实践](./best-practices/) | 项目配置、技能管理、团队协作的经验总结，帮助你高效使用 OpenSkills |
 
 ## 学习路径建议

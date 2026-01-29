@@ -13,7 +13,7 @@ description: "Antigravity-Manager의 고급 구성 방법을 학습합니다. �
 ## 이 장 포함
 
 | 튜토리얼 | 설명 |
-|-----|------|
+|--- | ---|
 | [설정 완벽 가이드](./config/) | AppConfig/ProxyConfig의 완전 필드, 저장 위치 및 핫 리로드 의미 |
 | [보안 및 프라이버시](./security/) | `auth_mode`, `allow_lan_access` 및 보안 기선 설계 |
 | [고가용성 스케줄링](./scheduling/) | 로테이션, 고정 계정, 스티키 세션 및 실패 재시도 메커니즘 |
@@ -70,7 +70,7 @@ context-compression  system    deployment
 **빠른 선택**:
 
 | 시나리오 | 먼저 볼 것 추천 |
-|---------|---------|
+|--- | ---|
 | 다중 계정 로테이션이 불안정함 | [고가용성 스케줄링](./scheduling/) |
 | 특정 모델 이름을 고정하고 싶음 | [모델 라우팅](./model-router/) |
 | 쿼터가 항상 다 소진됨 | [쿼터 거버넌스](./quota/) |

@@ -209,7 +209,7 @@ Claude がファイル保存を促します：
 **設定説明**：
 
 | フィールド | 説明 | 推奨値 |
-|------|------|--------|
+|--- | --- | ---|
 | `min_session_length` | 最小セッション長（ユーザーメッセージ数） | 10 |
 | `extraction_threshold` | 抽出しきい値 | medium |
 | `auto_approve` | 自動保存するか（推奨 false） | false |
@@ -253,7 +253,7 @@ Stop hook を設定すると、各セッション終了時に自動的にトリ�
 **スクリプトパスの説明**：
 
 | プラットフォーム | スクリプトパス |
-|------|---------|
+|--- | ---|
 | macOS/Linux | `~/.claude/skills/continuous-learning/evaluate-session.sh` |
 | Windows | `C:\Users\YourName\.claude\skills\continuous-learning\evaluate-session.cmd` |
 
@@ -529,7 +529,7 @@ mv ~/.claude/skills/learned/*types*.md ~/.claude/skills/learned/types/
 > 更新日時：2026-01-25
 
 | 機能                  | ファイルパス                                                                                                  | 行番号     |
-| --------------------- | --------------------------------------------------------------------------------------------------------- | -------- |
+|--- | --- | ---|
 | /learn コマンド定義       | [`commands/learn.md`](https://github.com/affaan-m/everything-claude-code/blob/main/commands/learn.md)         | 1-71     |
 | Continuous Learning Skill | [`skills/continuous-learning/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/continuous-learning/SKILL.md) | 1-81     |
 | Stop Hook スクリプト        | [`scripts/hooks/evaluate-session.js`](https://github.com/affaan-m/everything-claude-code/blob/main/scripts/hooks/evaluate-session.js) | 1-79     |
@@ -547,7 +547,7 @@ mv ~/.claude/skills/learned/*types*.md ~/.claude/skills/learned/types/
 
 **設定項目**：
 | 設定項目                | タイプ    | デフォルト                      | 説明                               |
-| --------------------- | ------- | --------------------------- | ---------------------------------- |
+|--- | --- | --- | ---|
 | `min_session_length`  | number  | 10                          | 最小セッション長（ユーザーメッセージ数）          |
 | `extraction_threshold` | string  | "medium"                    | 抽出しきい値                           |
 | `auto_approve`        | boolean | false                       | 自動保存するか（推奨 false）          |

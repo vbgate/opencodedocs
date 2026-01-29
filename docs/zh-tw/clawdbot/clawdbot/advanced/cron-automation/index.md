@@ -40,7 +40,7 @@ order: 270
 **Cron 定時任務**適合這些場景：
 
 | 場景 | 範例 | 調度方式 |
-|------|--------|----------|
+|--- | --- | ---|
 | 一次性提醒 | "明天上午 9 點提醒我開會" | at |
 | 定期檢查 | "每 30 分鐘檢查一下系統狀態" | every |
 | 按時執行 | "每天下午 5 點產生日報" | cron |
@@ -80,7 +80,7 @@ graph LR
 ### 三種調度方式對比
 
 | 方式 | 適用場景 | 範例 | 精度 |
-|------|---------|------|------|
+|--- | --- | --- | ---|
 | `at` | 一次性任務 | 2026-01-27 09:00:00 | 毫秒級 |
 | `every` | 固定間隔 | 每 30 分鐘 | 毫秒級 |
 | `cron` | 複雜週期 | 每天上午 9 點 | 分鐘級 |
@@ -88,7 +88,7 @@ graph LR
 ### 兩種對話目標
 
 | 對話目標 | Payload 類型 | 說明 |
-|---------|------------|------|
+|--- | --- | ---|
 | `main` | `systemEvent` | 向主對話注入系統事件 |
 | `isolated` | `agentTurn` | 在隔離對話中執行 Agent |
 
@@ -282,7 +282,7 @@ Date.now() + 60 * 1000  // 1 分鐘後
 **常用表示式**：
 
 | 表示式 | 說明 |
-|--------|------|
+|--- | ---|
 | `0 9 * * *` | 每天上午 9 點 |
 | `0 9 * * 1-5` | 週一到週五上午 9 點 |
 | `0 */6 * * *` | 每 6 小時 |
@@ -336,7 +336,7 @@ Cron 表示式預設使用 UTC 時區。使用 `tz` 欄位指定時區（如 `"A
 **`agentTurn` Payload 參數**：
 
 | 參數 | 類型 | 說明 |
-|------|------|------|
+|--- | --- | ---|
 | `message` | string | 傳送給 Agent 的提示詞 |
 | `model` | string | 覆蓋使用的模型（可選） |
 | `thinking` | string | 思考層級："off" \| "minimal" \| "low" \| "medium" \| "high" |
@@ -359,7 +359,7 @@ Cron 表示式預設使用 UTC 時區。使用 `tz` 欄位指定時區（如 `"A
 ```
 
 | 參數 | 說明 |
-|------|------|
+|--- | ---|
 | `postToMainPrefix` | 將結果回傳到主對話時的前綴 |
 | `postToMainMode` | "summary"（摘要）或 "full"（完整文字） |
 | `postToMainMaxChars` | `postToMainMode="full"` 時的最大字元數 |
@@ -564,7 +564,7 @@ Webhook 允許外部服務透過 HTTP POST 請求觸發 Clawdbot 的內部事件
 **對應設定參數**：
 
 | 參數 | 說明 |
-|------|------|
+|--- | ---|
 | `match.path` | 符合的 URL 路徑 |
 | `match.source` | 符合的請求來源標頭 |
 | `action` | `"wake"` 或 `"agent"` |
@@ -611,7 +611,7 @@ Gmail Pub/Sub 允許你在收到新郵件時即時觸發 Clawdbot，實現郵件
 **設定參數說明**：
 
 | 參數 | 說明 | 預設值 |
-|------|------|--------|
+|--- | --- | ---|
 | `account` | Gmail 帳戶位址 | - |
 | `label` | 監聽的 Gmail 標籤 | `INBOX` |
 | `topic` | Google Cloud Pub/Sub 主題路徑 | - |
@@ -656,7 +656,7 @@ Gmail Pub/Sub 允許你在收到新郵件時即時觸發 Clawdbot，實現郵件
 ```
 
 | 模式 | 說明 |
-|------|------|
+|--- | ---|
 | `off` | 不使用 Tailscale |
 | `serve` | 透過 Tailscale Serve 暴露本機服務 |
 | `funnel` | 透過 Tailscale Funnel 從公網存取 |
@@ -708,7 +708,7 @@ clawdbot hooks gmail-watch
 **可能原因**：
 
 | 原因 | 解決方法 |
-|------|---------|
+|--- | ---|
 | Cron 服務未啟用 | 檢查 `cron.enabled` 設定 |
 | 時間未到 | 使用 `clawdbot cron list` 查看下次執行時間 |
 | 時區錯誤 | 檢查 `tz` 欄位是否正確 |
@@ -721,7 +721,7 @@ clawdbot hooks gmail-watch
 **常見錯誤**：
 
 | 錯誤 | 正確 | 說明 |
-|------|------|------|
+|--- | --- | ---|
 | `9 * * *` | `0 9 * * *` | 缺少分鐘欄位 |
 | `0 9 * * * *` | `0 9 * * *` | 多了一個欄位 |
 | `0 9 1-5 * *` | `0 9 * * 1-5` | 星期欄位位置錯誤 |
@@ -803,7 +803,7 @@ Cron 和 Webhook 是 Clawdbot 的強大自動化工具：
 > 更新時間：2026-01-27
 
 | 功能 | 檔案路徑 | 行號 |
-|------|----------|------|
+|--- | --- | ---|
 | Cron 設定型別定義 | [`src/config/types.cron.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.cron.ts#L1-L6) | 1-6 |
 | Cron 核心型別定義 | [`src/cron/types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/types.ts#L1-L95) | 1-95 |
 | Cron Service | [`src/cron/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/service.ts#L1-L49) | 1-49 |

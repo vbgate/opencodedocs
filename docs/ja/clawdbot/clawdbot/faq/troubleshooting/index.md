@@ -51,7 +51,7 @@ clawdbot status --deep
 
 ::: tip コマンド説明
 | コマンド | 機能 | 使用シナリオ |
-| --- | --- | --- |
+|--- | --- | ---|
 | `clawdbot status` | ローカル要約：システム情報、Gateway接続、サービス状態、Agent状態、プロバイダー設定 | 最初の確認、クイック概要 |
 | `clawdbot status --all` | 完全診断（読み取り専用、共有可能、比較的安全）、ログの末尾を含む | デバッグレポートを共有する必要がある場合 |
 | `clawdbot status --deep` | Gatewayヘルスチェックを実行（プロバイダープローブを含み、接続可能なGatewayが必要） | 「設定済み」ですが「動作中」ではない場合 |
@@ -660,7 +660,7 @@ clawdbot channels login --verbose
 ### ログ場所
 
 | ログ | 場所 |
-| --- | --- |
+|--- | ---|
 | Gatewayファイルログ（構造化） | `/tmp/clawdbot/clawdbot-YYYY-MM-DD.log`（または `logging.file`） |
 | Gatewayサービスログ | macOS: `$CLAWDBOT_STATE_DIR/logs/gateway.log` + `gateway.err.log`<br/>Linux: `journalctl --user -u clawdbot-gateway[-<profile>].service -n 200 --no-pager`<br/>Windows: `schtasks /Query /TN "Clawdbot Gateway (<profile>)" /V /FO LIST` |
 | セッションファイル | `$CLAWDBOT_STATE_DIR/agents/<agentId>/sessions/` |
@@ -830,7 +830,7 @@ npm install -g clawdbot@<version>
 > 更新日：2026-01-27
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | トラブルシューティングコマンド | [`src/commands/doctor.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/doctor.ts) | 全文 |
 | Gatewayヘルスチェック | [`src/gateway/server-channels.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-channels.ts) | 93+ |
 | ログシステム | [`src/logging/index.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/logging/index.ts) | 全文 |

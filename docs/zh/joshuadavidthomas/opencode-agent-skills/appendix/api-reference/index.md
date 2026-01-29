@@ -27,7 +27,7 @@ order: 2
 OpenCode Agent Skills 插件提供以下 4 个工具：
 
 | 工具名称 | 功能描述 | 使用场景 |
-|---------|---------|---------|
+|--- | --- | ---|
 | `get_available_skills` | 获取可用技能列表 | 查看所有可用技能，支持搜索过滤 |
 | `read_skill_file` | 读取技能文件 | 访问技能的文档、配置等支持文件 |
 | `run_skill_script` | 执行技能脚本 | 在技能目录下运行自动化脚本 |
@@ -42,7 +42,7 @@ OpenCode Agent Skills 插件提供以下 4 个工具：
 ### 参数
 
 | 参数名 | 类型 | 必填 | 描述 |
-|-------|------|------|------|
+|--- | --- | --- | ---|
 | `query` | string | 否 | 搜索查询字符串，匹配技能名称和描述（支持 `*` 通配符） |
 
 ### 返回值
@@ -111,7 +111,7 @@ code-review (user)
 ### 参数
 
 | 参数名 | 类型 | 必填 | 描述 |
-|-------|------|------|------|
+|--- | --- | --- | ---|
 | `skill` | string | 是 | 技能名称 |
 | `filename` | string | 是 | 文件路径（相对于技能目录，如 `docs/guide.md`、`scripts/helper.sh`） |
 
@@ -141,7 +141,7 @@ File "docs/guide.md" from skill "code-review" loaded.
 ### 错误处理
 
 | 错误类型 | 返回信息 |
-|---------|---------|
+|--- | ---|
 | 技能不存在 | `Skill "xxx" not found. Use get_available_skills to list available skills.` |
 | 路径不安全 | `Invalid path: cannot access files outside skill directory.` |
 | 文件不存在 | `File "xxx" not found. Available files: file1, file2, ...` |
@@ -183,7 +183,7 @@ read_skill_file({
 ### 参数
 
 | 参数名 | 类型 | 必填 | 描述 |
-|-------|------|------|------|
+|--- | --- | --- | ---|
 | `skill` | string | 是 | 技能名称 |
 | `script` | string | 是 | 脚本相对路径（如 `build.sh`、`tools/deploy.sh`） |
 | `arguments` | string[] | 否 | 传递给脚本的命令行参数数组 |
@@ -203,7 +203,7 @@ Build complete.
 ### 错误处理
 
 | 错误类型 | 返回信息 |
-|---------|---------|
+|--- | ---|
 | 技能不存在 | `Skill "xxx" not found. Use get_available_skills to list available skills.` |
 | 脚本不存在 | `Script "xxx" not found in skill "yyy". Available scripts: script1, script2, ...` |
 | 执行失败 | `Script failed (exit 1): error message` |
@@ -256,7 +256,7 @@ run_skill_script({
 ### 参数
 
 | 参数名 | 类型 | 必填 | 描述 |
-|-------|------|------|------|
+|--- | --- | --- | ---|
 | `skill` | string | 是 | 技能名称（支持命名空间前缀，如 `project:my-skill`、`user:my-skill`） |
 
 ### 返回值
@@ -300,7 +300,7 @@ Available files: docs/guide.md, examples/bad.js
 使用命名空间前缀精确指定技能来源：
 
 | 命名空间 | 说明 | 示例 |
-|---------|------|------|
+|--- | --- | ---|
 | `project:` | 项目级 OpenCode 技能 | `project:my-skill` |
 | `user:` | 用户级 OpenCode 技能 | `user:my-skill` |
 | `claude-project:` | 项目级 Claude 技能 | `claude-project:my-skill` |
@@ -310,7 +310,7 @@ Available files: docs/guide.md, examples/bad.js
 ### 错误处理
 
 | 错误类型 | 返回信息 |
-|---------|---------|
+|--- | ---|
 | 技能不存在 | `Skill "xxx" not found. Use get_available_skills to list available skills.` |
 
 ### 自动注入功能
@@ -352,7 +352,7 @@ use_skill({
 > 更新时间：2026-01-24
 
 | 工具 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | GetAvailableSkills 工具 | [`src/tools.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/tools.ts#L29-L72) | 29-72 |
 | ReadSkillFile 工具 | [`src/tools.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/tools.ts#L74-L135) | 74-135 |
 | RunSkillScript 工具 | [`src/tools.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/tools.ts#L137-L198) | 137-198 |

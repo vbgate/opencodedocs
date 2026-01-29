@@ -55,13 +55,13 @@ openskills install <source> [options]
 ### 参数
 
 | 参数       | 类型   | 必填 | 说明                      |
-| ---------- | ------ | ---- | ------------------------- |
+|--- | --- | --- | ---|
 | `<source>` | string | Y    | 技能来源（见下方来源格式） |
 
 ### 选项
 
 | 选项              | 简写 | 类型 | 默认值 | 说明                                            |
-| ----------------- | ----- | ---- | ------ | ----------------------------------------------- |
+|--- | --- | --- | --- | ---|
 | `--global`        | `-g`  | flag | false  | 全局安装到 `~/.claude/skills/`                  |
 | `--universal`     | `-u`  | flag | false  | 安装到 `.agent/skills/`（多代理环境）          |
 | `--yes`           | `-y`  | flag | false  | 跳过交互式选择，安装所有找到的技能            |
@@ -69,7 +69,7 @@ openskills install <source> [options]
 ### 来源格式
 
 | 格式                          | 示例                                    | 说明                     |
-| ----------------------------- | --------------------------------------- | ------------------------ |
+|--- | --- | ---|
 | GitHub shorthand               | `anthropics/skills`                    | 从 GitHub 公开仓库安装   |
 | Git URL                       | `https://github.com/owner/repo.git`    | 完整 Git URL             |
 | SSH Git URL                   | `git@github.com:owner/repo.git`        | SSH 私有仓库             |
@@ -166,7 +166,7 @@ openskills read <skill-names...>
 ### 参数
 
 | 参数             | 类型   | 必填 | 说明                          |
-| ---------------- | ------ | ---- | ----------------------------- |
+|--- | --- | --- | ---|
 | `<skill-names...>` | string | Y    | 技能名称（支持逗号分隔的列表） |
 
 ### 选项
@@ -225,7 +225,7 @@ openskills sync [options]
 ### 选项
 
 | 选项                | 简写 | 类型   | 默认值     | 说明                         |
-| ------------------- | ----- | ------ | ---------- | ---------------------------- |
+|--- | --- | --- | --- | ---|
 | `--output <path>`   | `-o`  | string | `AGENTS.md` | 输出文件路径                |
 | `--yes`             | `-y`  | flag   | false      | 跳过交互式选择，同步所有技能 |
 
@@ -297,7 +297,7 @@ openskills update [skill-names...]
 ### 参数
 
 | 参数             | 类型   | 必填 | 说明                          |
-| ---------------- | ------ | ---- | ----------------------------- |
+|--- | --- | --- | ---|
 | `[skill-names...]` | string | N    | 技能名称（逗号分隔），默认全部 |
 
 ### 选项
@@ -402,7 +402,7 @@ openskills remove <skill-name>
 ### 参数
 
 | 参数           | 类型   | 必填 | 说明     |
-| -------------- | ------ | ---- | -------- |
+|--- | --- | --- | ---|
 | `<skill-name>` | string | Y    | 技能名称 |
 
 ### 选项
@@ -434,7 +434,7 @@ openskills rm pdf
 以下选项适用于所有命令：
 
 | 选项            | 简写 | 类型 | 默认值 | 说明            |
-| --------------- | ----- | ---- | ------ | --------------- |
+|--- | --- | --- | --- | ---|
 | `--version`     | `-V`  | flag | -      | 显示版本号      |
 | `--help`        | `-h`  | flag | -      | 显示帮助信息    |
 
@@ -469,7 +469,7 @@ openskills install --help
 ## 退出码
 
 | 退出码 | 说明                        |
-| ------ | --------------------------- |
+|--- | ---|
 | 0      | 成功                        |
 | 1      | 错误（参数错误、命令失败等） |
 
@@ -524,7 +524,7 @@ OpenSkills 使用以下配置文件：
 > 更新时间：2026-01-24
 
 | 命令         | 文件路径                                                                           | 行号   |
-| ------------ | ---------------------------------------------------------------------------------- | ------ |
+|--- | --- | ---|
 | CLI 入口     | [`src/cli.ts`](https://github.com/numman-ali/openskills/blob/main/src/cli.ts)         | 13-80  |
 | install 命令 | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts) | 1-562  |
 | list 命令    | [`src/commands/list.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/list.ts)    | 1-50   |

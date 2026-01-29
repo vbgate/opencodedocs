@@ -83,7 +83,7 @@ graph LR
 ### Project Structure Highlights
 
 | Directory | Purpose |
-|-----------|---------|
+|--- | ---|
 | `src/` | All source code (2475 TypeScript files) |
 | `src/gateway/` | Gateway WebSocket server |
 | `src/channels/` | Channel plugin system |
@@ -337,7 +337,7 @@ In your PR description, explain:
 ### Common Errors
 
 | Error | Cause | Solution |
-|-------|-------|----------|
+|--- | --- | ---|
 | `Cannot find module 'xxx'` | Dependencies not installed | Run `pnpm install` |
 | `Port 18789 already in use` | Gateway already running | Check and close old instance |
 | TypeScript compilation error | Type definition issue | Run `pnpm lint` to check |
@@ -364,7 +364,7 @@ This tutorial covered the complete Clawdbot development workflow:
 Quick command reference:
 
 | Task | Command |
-|------|---------|
+|--- | ---|
 | Install dependencies | `pnpm install` |
 | Build | `pnpm build` |
 | Development mode | `pnpm gateway:watch` |
@@ -398,7 +398,7 @@ Keep exploring and let Clawdbot work for you!
 > Last updated: 2026-01-27
 
 | Feature | File Path | Lines |
-|---------|-----------|-------|
+|--- | --- | ---|
 | Build scripts | [`package.json`](https://github.com/clawdbot/clawdbot/blob/main/package.json) | 77-44 |
 | Install from source | [`README.md`](https://github.com/clawdbot/clawdbot/blob/main/README.md) | 83-99 |
 | Plugin documentation | [`docs/plugin.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/plugin.md) | 1-639 |

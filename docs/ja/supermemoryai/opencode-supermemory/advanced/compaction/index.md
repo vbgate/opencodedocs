@@ -95,7 +95,7 @@ Supermemory は各セッションの Token 使用状況をリアルタイムで�
 圧縮がトリガーされると、Supermemory は Agent に特別なシステムプロンプト（`[COMPACTION CONTEXT INJECTION]`）を注入し、要約に以下の 5 つの部分を含めることを強制します。
 
 | セクション | 内容の説明 | 目的 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **1. User Requests** | ユーザーの元のニーズ（そのまま保持） | ニーズのドリフトを防ぐ |
 | **2. Final Goal** | 最終的に達成すべき目標 | 最終的な状態を明確にする |
 | **3. Work Completed** | 完了した作業、変更したファイル | 繰り返し作業を避ける |
@@ -230,7 +230,7 @@ opencode run supermemory list --scope project --limit 1
 > 更新日：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | しきい値定数の定義 | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L11-L14) | 11-14 |
 | ガイドプロンプトの生成 | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L58-L98) | 58-98 |
 | トリガー検出ロジック | [`src/services/compaction.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/compaction.ts#L317-L358) | 317-358 |

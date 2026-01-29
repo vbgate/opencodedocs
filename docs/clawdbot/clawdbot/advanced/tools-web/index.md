@@ -48,7 +48,7 @@ You want to enable your AI assistant to "go online," but you're unsure about:
 
 ::: tip Tool Selection Guide
 | Scenario | Recommended Tool | Reason |
-|----------|----------------|--------|
+|--- | --- | ---|
 | Search multiple sources | web_search | Returns multiple results in one query |
 | Extract single-page content | web_fetch | Gets complete text, supports markdown |
 | Dynamic pages / Login required | [browser](../tools-browser/) | Requires JavaScript execution |
@@ -113,7 +113,7 @@ web_search and web_fetch are **lightweight tools** that do not execute JavaScrip
 Both tools have built-in caching to reduce duplicate requests:
 
 | Tool | Cache Key | Default TTL | Config Item |
-|------|-----------|-------------|-------------|
+|--- | --- | --- | ---|
 | web_search | `provider:query:count:country:search_lang:ui_lang:freshness` | 15 minutes | `tools.web.search.cacheTtlMinutes` |
 | web_fetch | `fetch:url:extractMode:maxChars` | 15 minutes | `tools.web.fetch.cacheTtlMinutes` |
 
@@ -130,7 +130,7 @@ Both tools have built-in caching to reduce duplicate requests:
 Clawdbot supports two search providers:
 
 | Provider | Advantages | Disadvantages | API Key |
-|----------|-----------|---------------|---------|
+|--- | --- | --- | ---|
 | **Brave** (default) | Fast, structured results, free tier | Traditional search results | `BRAVE_API_KEY` |
 | **Perplexity** | AI-synthesized answers, citations, real-time | Requires Perplexity or OpenRouter access | `OPENROUTER_API_KEY` or `PERPLEXITY_API_KEY` |
 
@@ -319,7 +319,7 @@ If you omit `baseUrl`, Clawdbot will auto-select based on API key prefix:
 #### 4.3 Choose Perplexity Model
 
 | Model | Description | Use Case |
-|------|-------------|----------|
+|--- | --- | ---|
 | `perplexity/sonar` | Fast Q&A + web search | Simple queries, quick lookups |
 | `perplexity/sonar-pro` (default) | Multi-step reasoning + web search | Complex questions, need reasoning |
 | `perplexity/sonar-reasoning-pro` | Chain-of-thought analysis | Deep research, need reasoning process |
@@ -554,7 +554,7 @@ web_fetch blocks intranet IPs by default to prevent SSRF attacks. If you really 
 > Last updated: 2026-01-27
 
 | Feature | File Path | Line |
-|---------|-----------|------|
+|--- | --- | ---|
 | web_search tool definition | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 409-483 |
 | web_fetch tool definition | [`src/agents/tools/web-fetch.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-fetch.ts) | 572-624 |
 | Brave Search API call | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 309-407 |

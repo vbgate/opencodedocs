@@ -131,7 +131,7 @@ graph LR
 Best times to use Agent Skills:
 
 | Scenario | Skill to Use | Example Trigger Prompt |
-| -------- | ------------ | ---------------------- |
+|--- | --- | ---|
 | Writing React components | react-best-practices | "Review this React component for performance issues" |
 | Optimizing Next.js pages | react-best-practices | "Help me optimize this Next.js page" |
 | Checking UI quality | web-design-guidelines | "Check accessibility of my site" |
@@ -190,7 +190,7 @@ Skills use an on-demand loading mechanism to reduce context usage. Once installe
 > Last updated: 2026-01-25
 
 | Feature | File Path | Line Numbers |
-| -------- | --------- | ------------ |
+|--- | --- | ---|
 | Skill pack list | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L7-L80) | 7-80 |
 | Skill structure explanation | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L103-L110) | 103-110 |
 | AGENTS.md specification | [`AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md) | Full text |
@@ -198,7 +198,7 @@ Skills use an on-demand loading mechanism to reduce context usage. Once installe
 | SKILL.md format | [`AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L29-L68) | 29-68 |
 | Skill packaging command | [`AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L93-L96) | 93-96 |
 | User installation method | [`AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L98-L110) | 98-110 |
-| On-demand loading mechanism | [`AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md#L72-L78) | 72-78 |
+|--- | --- | ---|
 | Build tool scripts | [`packages/react-best-practices-build/package.json`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/package.json) | Full text |
 
 **Key Constants**:

@@ -62,7 +62,7 @@ Si vous voulez faire correspondre le déclenchement de la compression à quel ty
 Cette conception de stabilité ne supprime pas directement tout l'historique, mais intervient couche par couche du coût le plus faible au plus élevé :
 
 | Couche | Point de déclenchement (configurable) | Ce qu'il fait | Coût/effets secondaires |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | Couche 1 | `proxy.experimental.context_compression_threshold_l1` (par défaut 0,4) | Identifier les tours d'outils, ne conserver que les N tours récents (5 dans le code), supprimer les paires tool_use/tool_result de tours antérieurs | Ne modifie pas le contenu des messages restants, plus amical pour Prompt Cache |
 | Couche 2 | `proxy.experimental.context_compression_threshold_l2` (par défaut 0,55) | Compresser l'ancien texte Thinking en `"..."`, mais conserver `signature`, et protéger les 4 derniers messages inchangés | Modifie le contenu historique, les commentaires indiquent clairement que cela break cache, mais peut préserver la chaîne de signatures |
 | Couche 3 | `proxy.experimental.context_compression_threshold_l3` (par défaut 0,7) | Appeler le modèle en arrière-plan pour générer un résumé XML, puis Fork une nouvelle séquence de messages pour continuer la conversation | Dépend de l'appel de modèle en arrière-plan ; en cas d'échec, renvoie 400 (avec message convivial) |
@@ -218,7 +218,7 @@ Mémorisez trois points principaux :
 ## Rappels sur les pièges
 
 | Phénomène | Cause possible | Ce que vous pouvez faire |
-| --- | --- | --- |
+|--- | --- | ---|
 | Après le déclenchement de la Couche 2, le contexte semble moins stable | La Couche 2 modifie le contenu historique, les commentaires indiquent clairement qu'elle break cache | Si vous dépendez de la cohérence de Prompt Cache, essayez de laisser la Couche 1 résoudre le problème d'abord, ou augmentez le seuil L2 |
 | Après le déclenchement de la Couche 3, 400 est renvoyé directement | Échec de l'appel de modèle en arrière-plan Fork + résumé (réseau/compte/erreur amont, etc.) | Suivez d'abord la suggestion dans l'erreur JSON avec `/compact` ou `/clear` ; vérifiez également la chaîne d'appel de modèle en arrière-plan |
 | Images/gros contenus dans la sortie d'outil ont disparu | tool_result supprime les images base64, tronque les sorties trop longues | Faites atterrir les contenus importants dans des fichiers locaux/liens puis référencez-les ; ne comptez pas insérer directement 100 000 lignes de texte dans la conversation |
@@ -244,20 +244,20 @@ Mémorisez trois points principaux :
 > Dernière mise à jour : 2026-01-23
 
 | Fonction | Chemin du fichier | Numéro de ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Configuration expérimentale : seuils de compression et valeurs par défaut des commutateurs | `src-tauri/src/proxy/config.rs` | 119-168 |
 | Estimation de contexte : estimation de caractères multilingues + 15% de marge | `src-tauri/src/proxy/mappers/context_manager.rs` | 9-37 |
 | Estimation de l'utilisation de Token : parcourir system/messages/tools/thinking | `src-tauri/src/proxy/mappers/context_manager.rs` | 103-198 |
 | Couche 1 : identifier les tours d'outils + rogner les anciens tours | `src-tauri/src/proxy/mappers/context_manager.rs` | 311-439 |
 | Couche 2 : compression Thinking mais conservation des signatures (protéger les N derniers) | `src-tauri/src/proxy/mappers/context_manager.rs` | 200-271 |
 | Auxiliaire Couche 3 : extraire la dernière signature valide | `src-tauri/src/proxy/mappers/context_manager.rs` | 73-109 |
-| Dégradation de tâches en arrière-plan : purification Aggressive des blocs Thinking | `src-tauri/src/proxy/handlers/claude.rs` | 540-583 |
+|--- | --- | ---|
 | Flux principal de compression à trois couches : estimation, calibration, déclenchement L1/L2/L3 par seuils | `src-tauri/src/proxy/handlers/claude.rs` | 379-731 |
 | Couche 3 : implémentation résumé XML + Fork session | `src-tauri/src/proxy/handlers/claude.rs` | 1560-1687 |
 | Cache de signatures : TTL/structure de cache à trois couches (Tool/Family/Session) | `src-tauri/src/proxy/signature_cache.rs` | 5-88 |
 | Cache de signatures : écriture/lecture de signature de Session | `src-tauri/src/proxy/signature_cache.rs` | 141-223 |
 | Analyse de flux SSE : cache de signature thinking/tool vers Session/Tool cache | `src-tauri/src/proxy/mappers/claude/streaming.rs` | 766-776 |
-| Analyse de flux SSE : tool_use cache tool_use_id -> signature | `src-tauri/src/proxy/mappers/claude/streaming.rs` | 958-975 |
+|--- | --- | ---|
 | Conversion de demandes : tool_use priorise la restauration de signature depuis Session/Tool cache | `src-tauri/src/proxy/mappers/claude/request.rs` | 1045-1142 |
 | Conversion de demandes : tool_result déclenche la compression des résultats d'outils | `src-tauri/src/proxy/mappers/claude/request.rs` | 1159-1225 |
 | Compression des résultats d'outils : entrée `compact_tool_result_text()` | `src-tauri/src/proxy/mappers/tool_result_compressor.rs` | 28-69 |

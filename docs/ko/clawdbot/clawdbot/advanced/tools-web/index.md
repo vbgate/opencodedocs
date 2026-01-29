@@ -46,7 +46,7 @@ AI 어시스턴트를 "인터넷 연결"하게 하고 싶지만 다음을 모릅
 
 ::: tip 도구 선택 가이드
 | 시나리오 | 권장 도구 | 이유 |
-|------|----------|------|
+|--- | --- | ---|
 | 여러 소스 검색 | web_search | 하나의 쿼리로 여러 결과 반환 |
 | 단일 페이지 콘텐츠 추출 | web_fetch | 전체 텍스트 가져오기, Markdown 지원 |
 | 동적 페이지/로그인 필요 | [browser](../tools-browser/) | JavaScript 실행 필요 |
@@ -111,7 +111,7 @@ web_search와 web_fetch는 **경량 도구**이며 JavaScript를 실행하지 �
 두 도구 모두 중복 요청을 줄이기 위해 내장 캐시를 제공합니다:
 
 | 도구 | 캐시 키 | 기본 TTL | 구성 항목 |
-|------|---------|----------|--------|
+|--- | --- | --- | ---|
 | web_search | `provider:query:count:country:search_lang:ui_lang:freshness` | 15분 | `tools.web.search.cacheTtlMinutes` |
 | web_fetch | `fetch:url:extractMode:maxChars` | 15분 | `tools.web.fetch.cacheTtlMinutes` |
 
@@ -128,7 +128,7 @@ web_search와 web_fetch는 **경량 도구**이며 JavaScript를 실행하지 �
 Clawdbot은 두 가지 검색 제공자를 지원합니다:
 
 | 제공자 | 장점 | 단점 | API 키 |
-|--------|------|--------|---------|
+|--- | --- | --- | ---|
 | **Brave**(기본값) | 빠름, 구조화된 결과, 무료 계층 | 기존 검색 결과 | `BRAVE_API_KEY` |
 | **Perplexity** | AI 합성 답변, 인용, 실시간 | Perplexity 또는 OpenRouter 액세스 필요 | `OPENROUTER_API_KEY` 또는 `PERPLEXITY_API_KEY` |
 
@@ -317,7 +317,7 @@ AI 합성 답변을 선호하는 경우 Perplexity를 사용할 수 있습니다
 #### 4.3 Perplexity 모델 선택
 
 | 모델 | 설명 | 적용 시나리오 |
-|------|------|----------|
+|--- | --- | ---|
 | `perplexity/sonar` | 빠른 Q&A + 웹 검색 | 간단한 쿼리, 빠른 검색 |
 | `perplexity/sonar-pro`(기본값) | 다단계 추론 + 웹 검색 | 복잡한 문제, 추론 필요 |
 | `perplexity/sonar-reasoning-pro` | 사고 체인 분석 | 심층 연구, 추론 프로세스 필요 |
@@ -552,7 +552,7 @@ web_fetch는 기본적으로 내부 네트워크 IP를 차단하여 SSRF 공격�
 > 업데이트 날짜: 2026-01-27
 
 | 기능 | 파일 경로 | 줄 번호 |
-|------|----------|------|
+|--- | --- | ---|
 | web_search 도구 정의 | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 409-483 |
 | web_fetch 도구 정의 | [`src/agents/tools/web-fetch.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-fetch.ts) | 572-624 |
 | Brave Search API 호출 | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 309-407 |

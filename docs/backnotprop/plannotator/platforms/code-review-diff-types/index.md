@@ -51,7 +51,7 @@ Git diff has many variants, each displaying different code scopes. Plannotator c
 ::: info Git Diff Types Quick Reference
 
 | diff type | scope | typical use case |
-|---------|---------|------------|
+|--- | --- | ---|
 | Uncommitted changes | working directory + staging area | Review all changes in current development |
 | Staged changes | staging area only | Review content before committing |
 | Unstaged changes | working directory only | Review changes not yet `git add`ed |
@@ -206,7 +206,7 @@ When switching diff types, Plannotator retains previous comments—they may stil
 The 5 diff types supported by Plannotator:
 
 | type | Git command | scenario |
-|-----|----------|-----|
+|--- | --- | ---|
 | Uncommitted | `git diff HEAD` | Review all changes in current development |
 | Staged | `git diff --staged` | Review staging area before committing |
 | Unstaged | `git diff` | Review working directory modifications |
@@ -234,7 +234,7 @@ Switching views doesn't lose comments—you can view the same or new comments fr
 > Updated: 2026-01-24
 
 | Feature | File Path | Line Numbers |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | Diff type definitions | [`packages/server/git.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/git.ts#L10-L15) | 10-15 |
 | Git context retrieval | [`packages/server/git.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/git.ts#L79-L96) | 79-96 |
 | Run Git Diff | [`packages/server/git.ts`](https://github.com/backnotprop/plannotator/blob/main/packages/server/git.ts#L101-L147) | 101-147 |

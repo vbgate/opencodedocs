@@ -51,7 +51,7 @@ order: 3
 **符号链接的适用场景**：
 
 | 场景 | 是否需要符号链接 | 示例 |
-| ---- | --------------- | ---- |
+|--- | --- | ---|
 | **本地技能开发** | ✅ 是 | 开发自定义技能，频繁修改和测试 |
 | **多项目共享技能** | ✅ 是 | 团队共享技能仓库，多个项目同时使用 |
 | **基于 git 的自动更新** | ✅ 是 | 技能仓库更新后，所有项目自动获得最新版本 |
@@ -573,7 +573,7 @@ npx openskills sync
 > 更新时间：2026-01-24
 
 | 功能            | 文件路径                                                                                              | 行号    |
-| --------------- | ----------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 符号链接检测    | [`src/utils/skills.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skills.ts#L10-L25)      | 10-25   |
 | 技能查找        | [`src/utils/skills.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skills.ts#L30-L64)      | 30-64   |
 | 单个技能查找    | [`src/utils/skills.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/skills.ts#L69-L84)      | 69-84   |

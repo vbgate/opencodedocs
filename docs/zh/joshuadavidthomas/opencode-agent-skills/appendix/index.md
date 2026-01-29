@@ -13,7 +13,7 @@ order: 5
 ## 本章内容
 
 | 页面 | 说明 |
-|-----|------|
+|--- | ---|
 | [技能开发最佳实践](./best-practices/) | 掌握编写高质量技能的技巧和规范，包括命名规范、描述编写、目录组织、脚本使用等 |
 | [API 工具参考](./api-reference/) | 查看所有可用工具的详细参数和返回值，包括 `get_available_skills`、`read_skill_file`、`run_skill_script`、`use_skill` |
 

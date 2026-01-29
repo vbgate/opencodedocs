@@ -404,7 +404,7 @@ Error: EACCES: permission denied
 ### 核心功能
 
 | 功能            | 文件路径                                                                                     | 行号      |
-| --------------- | -------------------------------------------------------------------------------------------- | --------- |
+|--- | --- | ---|
 | 安装技能        | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts) | 83-424    |
 | 同步到 AGENTS.md | [`src/commands/sync.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/sync.ts)     | 18-109    |
 | 列出技能        | [`src/commands/list.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/list.ts)     | 7-43      |

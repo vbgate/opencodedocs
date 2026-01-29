@@ -64,7 +64,7 @@ Agent Skills 是為 AI 編碼代理（如 Claude、Cursor、Copilot）提供的�
 React 效能優化不僅僅是用幾個 Hook，而是要從**架構層面**解決問題。Vercel 的 57 條規則按優先級分為 8 個類別：
 
 | 優先級 | 類別 | 關注點 | 典型收益 |
-| ------ | ---- | ---- | ---- |
+|--- | --- | --- | ---|
 | **CRITICAL** | 消除瀑布流 | 避免串行的 async 操作 | 2-10× 提升 |
 | **CRITICAL** | 打包優化 | 減少初始 bundle 大小 | TTI/LCP 顯著改善 |
 | **HIGH** | 服務端效能 | 優化資料獲取和快取 | 減少伺服器負載 |
@@ -379,7 +379,7 @@ Vercel 的 57 條規則覆蓋了從架構到微優化的所有場景，學會觸
 > 更新時間：2026-01-25
 
 | 功能 | 檔案路徑 | 行號 |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | React 最佳實踐技能定義 | [`skills/react-best-practices/SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/SKILL.md) | 全文 |
 | 完整規則文件 | [`skills/react-best-practices/AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/AGENTS.md) | 全文 |
 | 57 條規則檔案 | [`skills/react-best-practices/rules/*.md`](https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices/rules) | - |
@@ -390,7 +390,7 @@ Vercel 的 57 條規則覆蓋了從架構到微優化的所有場景，學會觸
 **關鍵檔案（CRITICAL 級別規則示例）**：
 
 | 規則 | 檔案路徑 | 說明 |
-| ---- | -------- | ---- |
+|--- | --- | ---|
 | Promise.all() 並行請求 | [`async-parallel.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/async-parallel.md) | 消除瀑布流 |
 | 動態導入大元件 | [`bundle-dynamic-imports.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/bundle-dynamic-imports.md) | 減少 Bundle 大小 |
 | Defer await | [`async-defer-await.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/react-best-practices/rules/async-defer-await.md) | 延遲執行非同步操作 |

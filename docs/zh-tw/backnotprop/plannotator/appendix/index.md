@@ -13,7 +13,7 @@ order: 5
 ## 本章內容
 
 | 頁面 | 說明 |
-| --- | --- |
+|--- | ---|
 | [API 參考](./api-reference/) | 查看 Plannotator 提供的所有 API 端點和請求/回應格式 |
 | [資料模型](./data-models/) | 瞭解 Plannotator 使用的資料模型，包括 Annotation、Block、CodeAnnotation 等 |
 | [授權條款](./license/) | 瞭解 Plannotator 的授權條款（BSL-1.1）和使用限制 |

@@ -172,7 +172,7 @@ curl.exe -i http://127.0.0.1:PORT/v1/images/generations `
 Вышестоящий уровень Imagen 3 принимает стандартизированное `aspectRatio`; вы просто напишете `size` как набор общих ширины и высоты, и сможете стабильно сопоставить со стандартным соотношением.
 
 | Вы передали size | aspectRatio, рассчитанный прокси |
-| --- | --- |
+|--- | ---|
 | `"1024x1024"` | `1:1` |
 | `"1920x1080"` / `"1280x720"` | `16:9` |
 | `"1080x1920"` / `"720x1280"` | `9:16` |
@@ -188,7 +188,7 @@ curl.exe -i http://127.0.0.1:PORT/v1/images/generations `
 Вам не нужно помнить внутренние поля Imagen 3, используйте только `quality` OpenAI Images, чтобы переключить уровень разрешения.
 
 | Вы передали quality | imageSize, записанный прокси |
-| --- | --- |
+|--- | ---|
 | `"standard"` | Не устанавливать (использовать по умолчанию вышестоящего уровня) |
 | `"medium"` | `"2K"` |
 | `"hd"` | `"4K"` |
@@ -201,7 +201,7 @@ curl.exe -i http://127.0.0.1:PORT/v1/images/generations `
 В этой реализации `response_format: "url"` не даст вам URL, доступный публично, а вернёт `data:<mime>;base64,...` Data URI; многие инструменты более подходят для прямого использования `b64_json`.
 
 | response_format | Поле data[] |
-| --- | --- |
+|--- | ---|
 | `"b64_json"` (по умолчанию) | `{ "b64_json": "..." }` |
 | `"url"` | `{ "url": "data:image/png;base64,..." }` |
 
@@ -219,7 +219,7 @@ curl.exe -i http://127.0.0.1:PORT/v1/images/generations `
 Здесь логика разбора `size` разделяется по `WIDTHxHEIGHT`; если `size` не такого формата, напрямую откатится к `1:1`.
 
 | Запись | Результат |
-| --- | --- |
+|--- | ---|
 | ✓ `"1920x1080"` | 16:9 |
 | ❌ `"16:9"` | Откат 1:1 |
 
@@ -254,12 +254,12 @@ curl.exe -i http://127.0.0.1:PORT/v1/images/generations `
 > Обновлено: 2026-01-23
 
 | Функция | Путь к файлу | Строки |
-| --- | --- | --- |
+|--- | --- | ---|
 | Экспозиция маршрута OpenAI Images | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L123-L146) | 123-146 |
 | Конечная точка генерации Images: разбор prompt/size/quality + сборка ответа OpenAI | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L1104-L1333) | 1104-1333 |
-| Разбор и сопоставление size/quality (size->aspectRatio, quality->imageSize) | [`src-tauri/src/proxy/mappers/common_utils.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/common_utils.rs#L19-L222) | 19-222 |
+|--- | --- | ---|
 | Объявление size/quality OpenAIRequest (для совместимости уровня протокола) | [`src-tauri/src/proxy/mappers/openai/models.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/models.rs#L6-L38) | 6-38 |
-| Преобразование запроса OpenAI->Gemini: передать size/quality в единую функцию разбора | [`src-tauri/src/proxy/mappers/openai/request.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/request.rs#L19-L27) | 19-27 |
+|--- | --- | ---|
 
 **Ключевые поля (из исходного кода)**:
 - `size`: анализируется как `aspectRatio` по `WIDTHxHEIGHT`

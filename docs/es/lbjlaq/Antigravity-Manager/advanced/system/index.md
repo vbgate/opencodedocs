@@ -226,7 +226,7 @@ Invoke-RestMethod "http://127.0.0.1:19527/logs?limit=50&offset=0&filter=&errors_
 > Hora de actualización: 2026-01-23
 
 | Tema | Ruta de archivo | Líneas |
-| --- | --- | --- |
+|--- | --- | ---|
 | Inicialización de i18n y fallback | [`src/i18n.ts`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/i18n.ts#L1-L67) | 1-67 |
 | Settings: idioma/tema/inicio automático/configuración de actualizaciones/configuración de HTTP API | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L16-L730) | 16-730 |
 | App: sincronizar idioma + activar verificación de actualizaciones al inicio | [`src/App.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/App.tsx#L52-L124) | 52-124 |

@@ -102,14 +102,14 @@ WhatsApp 渠道的核心架構：
 **欄位說明**：
 
 | 欄位 | 類型 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `dmPolicy` | string | `"pairing"` | DM 存取策略：`pairing`（配對）、`allowlist`（白名單）、`open`（公開）、`disabled`（停用） |
 | `allowFrom` | string[] | `[]` | 允許傳送者的電話號碼列表（E.164 格式，如 `+15551234567`） |
 
 **DM 策略對比**：
 
 | 策略 | 行為 | 適用場景 |
-|--------|------|----------|
+|--- | --- | ---|
 | `pairing` | 未知傳送者收到配對碼，需要手動批准 | **推薦**，平衡安全和便利性 |
 | `allowlist` | 只允許 `allowFrom` 列表中的號碼 | 嚴格控制，已知使用者 |
 | `open` | 任何人都可以傳送（需 `allowFrom` 包含 `"*"`） | 公開測試或社群服務 |
@@ -230,7 +230,7 @@ Gateway listening on ws://127.0.0.1:18789
 **欄位說明**：
 
 | 欄位 | 類型 | 預設值 | 說明 |
-|------|------|--------|------|
+|--- | --- | --- | ---|
 | `emoji` | string | - | 確認表情（如 `"👀"`、`"✅"`），空字串表示停用 |
 | `direct` | boolean | `true` | 是否在私聊中傳送確認 |
 | `group` | string | `"mentions"` | 群組行為：`"always"`（所有訊息）、`"mentions"`（僅 @ 提及）、`"never"`（從不） |
@@ -264,7 +264,7 @@ Gateway listening on ws://127.0.0.1:18789
 ```
 
 | 欄位 | 預設值 | 說明 |
-|------|--------|------|
+|--- | --- | ---|
 | `textChunkLimit` | 4000 | 單條文字訊息最大字元數 |
 | `mediaMaxMb` | 50 | 接收的媒體檔案最大大小（MB） |
 | `chunkMode` | `"length"` | 分塊模式：`"length"`（按長度）、`"newline"`（按段落） |
@@ -378,7 +378,7 @@ WhatsApp 渠道設定要點：
 > 更新時間：2026-01-27
 
 | 功能 | 檔案路徑 | 行號 |
-|------|----------|------|
+|--- | --- | ---|
 | WhatsApp 設定類型定義 | [`src/config/types.whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.whatsapp.ts) | 1-160 |
 | WhatsApp 設定 Schema | [`src/config/zod-schema.providers-whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-whatsapp.ts) | 13-100 |
 | WhatsApp 引導設定 | [`src/channels/plugins/onboarding/whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/whatsapp.ts) | 1-341 |

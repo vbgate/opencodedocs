@@ -97,7 +97,7 @@ Se o Agent disser "a senha é [REDACTED]", isso significa que o mecanismo de ano
 > Última atualização: 2026-01-23
 
 | Funcionalidade | Caminho do Arquivo | Linha |
-| --- | --- | --- |
+|--- | --- | ---|
 | Lógica de anonimização de privacidade | [`src/services/privacy.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/services/privacy.ts#L1-L13) | 1-13 |
 | Carregamento de API Key | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L90) | 90 |
 | Anonimização na chamada do plugin | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L282) | 282 |

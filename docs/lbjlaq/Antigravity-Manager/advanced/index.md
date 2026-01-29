@@ -13,14 +13,14 @@ This chapter dives deep into Antigravity Tools' advanced features: configuration
 ## In This Chapter
 
 | Tutorial | Description |
-|----------|-------------|
+|--- | ---|
 | [Configuration Guide](./config/) | Complete fields of AppConfig/ProxyConfig, disk persistence locations, and hot reload semantics |
 | [Security & Privacy](./security/) | `auth_mode`, `allow_lan_access`, and security baseline design |
 | [High-Availability Scheduling](./scheduling/) | Rotation, pinned accounts, sticky sessions, and failure retry mechanisms |
 | [Model Routing](./model-router/) | Custom mapping, wildcard priority, and preset strategies |
 | [Quota Management](./quota/) | Combination of Quota Protection + Smart Warmup |
 | [Proxy Monitor](./monitoring/) | Request logs, filtering, detail restoration, and export |
-| [Token Stats](./token-stats/) | Cost-based statistical metrics and chart interpretation |
+|--- | ---|
 | [Long Session Stability](./context-compression/) | Context compression, signature caching, and tool result compression |
 | [System Features](./system/) | Multi-language, themes, updates, startup items, and HTTP API Server |
 | [Server Deployment](./deployment/) | Docker noVNC vs Headless Xvfb selection and operations |
@@ -70,8 +70,8 @@ Solve hidden issues in long sessions, make the client more product-like, and fin
 **Quick Selection**:
 
 | Your Scenario | Start With |
-|---------------|------------|
-| Unstable multi-account rotation | [High-Availability Scheduling](./scheduling/) |
+|--- | ---|
+|--- | ---|
 | Want to pin a specific model name | [Model Routing](./model-router/) |
 | Always running out of quota | [Quota Management](./quota/) |
 | Want to view request logs | [Proxy Monitor](./monitoring/) |

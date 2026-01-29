@@ -57,7 +57,7 @@ O Clawdbot roteia mensagens para o agente correto com base na chave de sessão e
 O Clawdbot usa chaves de sessão estruturadas para identificar diferentes tipos de sessões:
 
 | Tipo de Sessão | Formato da Chave | Exemplo | Descrição |
-|---------|---------|-------|------|
+|--- | --- | --- | ---|
 | **Sessão Principal** | `agent:<agentId>:<mainKey>` | `agent:main:main` | Sessão principal padrão de cada agente |
 | **Mensagem Direta** | `agent:<agentId>:dm:<peerId>` | `agent:main:dm:+15551234567` | Isolado de acordo com a configuração `dmScope` |
 | **Grupo/Canal** | `agent:<agentId>:<channel>:group:<id>` | `agent:main:whatsapp:group:123` | Grupos e canais isolados automaticamente |
@@ -111,7 +111,7 @@ Cada agente possui seu próprio conjunto independente de:
 #### Por Que Múltiplos Agentes?
 
 | Cenário | Solução |
-|--------|---------|
+|--- | ---|
 | **Múltiplos usuários compartilhando servidor** | Cada usuário tem um agente independente, sessões completamente isoladas |
 | **Diferentes personalidades em diferentes canais** | WhatsApp usa agente de cotidiano, Telegram usa agente de trabalho profundo |
 | **Separação de permissões** | Agente familiar com ferramentas limitadas, agente pessoal com acesso completo |
@@ -183,7 +183,7 @@ Por exemplo, se você quiser rotear um DM específico para o agente `work` e out
 Use `session.dmScope` para controlar como as mensagens diretas são agrupadas:
 
 | Opção | Comportamento | Cenário de Uso |
-|------|-------|---------|
+|--- | --- | ---|
 | `main` (padrão) | Todos os DMs compartilham a sessão principal | Usuário único, múltiplos canais |
 | `per-peer` | Isolado por ID do remetente | Ambiente de múltiplos usuários |
 | `per-channel-peer` | Isolado por canal + remetente | Caixa de entrada compartilhada |
@@ -244,7 +244,7 @@ Use a ferramenta `sessions_spawn` para criar um sub-agente:
 Descrição dos parâmetros:
 
 | Parâmetro | Tipo | Obrigatório | Descrição |
-|------|------|-------|------|
+|--- | --- | --- | ---|
 | `task` | string | ✅ | Descrição da tarefa do sub-agente |
 | `label` | string | ❌ | Etiqueta legível da tarefa (para rastreamento) |
 | `agentId` | string | ❌ | ID do agente de destino (padrão é o agente atual) |
@@ -348,7 +348,7 @@ Isso guiará a IA a se concentrar em conteúdo específico ao resumir.
 ### Compressão vs Poda
 
 | Operação | Propósito | Persistência | Local |
-|------|-------|---------|------|
+|--- | --- | --- | ---|
 | **Compressão** | Resumir conversas antigas | ✅ | Escrever em JSONL |
 | **Poda** | Remover resultados de ferramentas antigas | ❌ | Apenas na memória |
 
@@ -490,7 +490,7 @@ Após concluir a configuração, verifique os seguintes pontos:
 ### Erros Comuns
 
 | Erro | Causa | Solução |
-|------|------|---------|
+|--- | --- | ---|
 | **Chamada entre agentes proibida** | `tools.agentToAgent.enabled` não está habilitado ou a lista `allow` não inclui o agente de destino | Verifique a configuração, certifique-se de que está habilitada e a lista permitida adicionada |
 | **Falha na criação de sub-agente** | Em chamadas entre agentes, o agente de destino não está na lista permitida | Verifique a configuração `tools.agentToAgent.allow` |
 | **Conflito de chave de sessão** | Ordem incorreta das regras de binding, regras mais específicas sobrescritas | Coloque as regras de peer antes das regras de canal |
@@ -533,13 +533,13 @@ Com uma configuração adequada de gerenciamento de sessões, você pode fazer o
 > Última atualização: 2026-01-27
 
 | Funcionalidade | Caminho do Arquivo | Número da Linha |
-|------|---------|------|
+|--- | --- | ---|
 | Análise de chave de sessão | [`src/routing/session-key.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/routing/session-key.ts) | 1-100 |
 | Esquema de configuração de sessão | [`src/config/zod-schema.session.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.session.ts) | 11-83 |
-| Ferramenta de geração de sub-agentes | [`src/agents/tools/sessions-spawn-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/sessions-spawn-tool.ts) | 28-269 |
+|--- | --- | ---|
 | Funções auxiliares de ferramentas de sessão | [`src/agents/tools/sessions-helpers.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/sessions-helpers.ts) | 1-328 |
 | Documentação de gerenciamento de sessões | [`docs/concepts/session.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/concepts/session.md) | 1-151 |
-| Documentação de roteamento multi-agente | [`docs/concepts/multi-agent.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/concepts/multi-agent.md) | 1-355 |
+|--- | --- | ---|
 | Documentação de compressão de contexto | [`docs/concepts/compaction.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/concepts/compaction.md) | 1-50 |
 
 **Constantes Chave**:

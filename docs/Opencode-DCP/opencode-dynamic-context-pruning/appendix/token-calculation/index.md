@@ -88,7 +88,7 @@ graph TD
 OpenCode API returns precise token statistics for each AI response:
 
 | Field                | Description                                     | Source             |
-| -------------------- | ----------------------------------------------- | ------------------ |
+|--- | --- | ---|
 | `tokens.input`       | Input token count for this request              | API exact value    |
 | `tokens.output`      | Output token count generated this request       | API exact value    |
 | `tokens.reasoning`   | Reasoning token count (e.g., Claude 3.5 thinking) | API exact value (if applicable) |
@@ -381,7 +381,7 @@ export const calculateTokensSaved = (
 ### Estimation Error Sources
 
 | Category   | Precision | Error Source                                | Impact   |
-| ---------- | --------- | ------------------------------------------- | -------- |
+|--- | --- | --- | ---|
 | Total      | 100%      | API exact value, no error                    | None     |
 | System     | 95-98%    | First user message token estimation has slight error | Very small |
 | User       | 90-95%    | Tokenizer may differ from actual model tokenization | Medium   |
@@ -424,7 +424,7 @@ Tools (45)      43.9% │██████████████████�
 **Meaning of each item**:
 
 | Item          | Description                                 | Normal Range |
-| ------------- | ------------------------------------------- | ------------ |
+|--- | --- | ---|
 | System        | System prompt tokens                        | 10-20%       |
 | User          | All user message tokens                     | 3-8%         |
 | Assistant     | Assistant text output + reasoning tokens    | 30-40%       |
@@ -442,7 +442,7 @@ Summary:
 **Meaning of each item**:
 
 | Item            | Calculation Method                                        | Description                                   |
-| --------------- | --------------------------------------------------------- | --------------------------------------------- |
+|--- | --- | ---|
 | Pruned          | `state.prune.toolIds.length` tool count + `prunedTokens`  | Number of pruned tools and saved token count  |
 | Current context | `breakdown.total` (API exact value)                       | Actual token count of current context        |
 | Without DCP     | `total + prunedTokens`                                    | Theoretical token count without DCP          |
@@ -624,7 +624,7 @@ DCP's token calculation uses a hybrid strategy:
 > Last updated: 2026-01-23
 
 | Feature              | File Path                                                                                                        | Line Range |
-| ------------------- | --------------------------------------------------------------------------------------------------------------- | ---------- |
+|--- | --- | ---|
 | countTokens function | [`lib/strategies/utils.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/utils.ts#L36-L43)       | 36-43      |
 | calculateTokensSaved | [`lib/strategies/utils.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/utils.ts#L49-L94) | 49-94      |
 | analyzeTokens function | [`lib/commands/context.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/commands/context.ts#L68-L174)   | 68-174     |

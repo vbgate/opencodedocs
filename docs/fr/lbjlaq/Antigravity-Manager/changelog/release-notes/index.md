@@ -84,7 +84,7 @@ Suivez le processus de **[Démarrer le proxy inverse local et connecter le premi
 ## Résumé des versions récentes (extrait du README)
 
 | Version | Date | Ce que vous devez surveiller |
-| --- | --- | --- |
+|--- | --- | ---|
 | `v3.3.49` | 2026-01-22 | Défense contre l'interruption de réflexion et 0 Token ; suppression de `gemini-2.5-flash-lite` et rappel de remplacer manuellement le mappage personnalisé ; langage/thème et autres paramètres prennent effet immédiatement ; renforcement du tableau de bord de surveillance ; amélioration de la compatibilité OAuth |
 | `v3.3.48` | 2026-01-21 | Processus en arrière-plan en mode silencieux sur Windows (correction du scintillement de la console) |
 | `v3.3.47` | 2026-01-21 | Renforcement du mappage des paramètres de génération d'images (`size`/`quality`) ; prise en charge du tunnel Cloudflared ; correction de l'échec de démarrage dû aux conflits de fusion ; compression contextuelle progressive en trois couches |
@@ -106,7 +106,7 @@ Priorisez ces deux types de phrases :
 > Dernière mise à jour : 2026-01-23
 
 | Contenu | Chemin du fichier | Numéros de ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Changelog intégré README (évolution des versions) | [`README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/README.md#L324-L455) | 324-455 |
 | Page About affiche le numéro de version et le bouton « Vérifier les mises à jour » | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L821-L954) | 821-954 |
 | Structure de retour de la commande « Vérifier les mises à jour » de la page About | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L187-L215) | 187-215 |

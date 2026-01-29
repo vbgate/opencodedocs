@@ -73,7 +73,7 @@ Invoke-WebRequest -UseBasicParsing http://127.0.0.1:8045/healthz | Select-Object
 Antigravity Tools のリバースプロキシルートは「全パスハードコード」です（`src-tauri/src/proxy/server.rs` 参照）。一般的なエントリーポイントは：
 
 | プロトコル | パス | 用途 |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI | `/v1/models` | モデル一覧 |
 | OpenAI | `/v1/chat/completions` | チャット補完 |
 | OpenAI | `/v1/responses` | Codex CLI 互換 |
@@ -122,7 +122,7 @@ Invoke-WebRequest -UseBasicParsing http://127.0.0.1:8045/v1beta/models | Select-
 Base URL の罠は本質的に「あなたが書いたパス」と「クライアントが連結するパス」が重なっていることです。
 
 | 使用しているもの | Base URL 推奨書き方 | 対象ルート |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI SDK（Python/Node など） | `http://127.0.0.1:8045/v1` | `/v1/chat/completions`、`/v1/models` |
 | Claude Code CLI（Anthropic） | `http://127.0.0.1:8045` | `/v1/messages` |
 | Gemini SDK / Gemini モードクライアント | `http://127.0.0.1:8045` | `/v1beta/models/*` |
@@ -170,7 +170,7 @@ http://127.0.0.1:8045/v1/chat/completions
 この表を使って、「最終リクエストパス」が Antigravity Tools にヒットする可能性があるかを素早く対照できます：
 
 | ログで見たパス | 結論 |
-| --- | --- |
+|--- | ---|
 | `/v1/` で始まる（`/v1/models`、`/v1/chat/completions` など） | OpenAI/Anthropic 互換ルート |
 | `/v1beta/` で始まる（`/v1beta/models/...` など） | Gemini ネイティブルート |
 | `/v1/v1/` が出現 | Base URL に `/v1` が含まれており、クライアントが再度連結した |
@@ -207,7 +207,7 @@ http://127.0.0.1:8045/v1/chat/completions
 ## レッスンまとめ
 
 | 現象 | 最も一般的な原因 | どう直すべきか |
-| --- | --- | --- |
+|--- | --- | ---|
 | 常に 404 | Base URL 連結間違い | まず curl で `/v1/models`/`/v1beta/models` が 404 でないことを検証 |
 | `/v1/v1/...` | `/v1` 重複 | OpenAI SDK の Base URL は `/v1` で終わるように保つ |
 | `/v1/chat/completions/responses` | クライアントパス重ね | Gemini プロトコルに切り替えるか、パス書き換え（初心者には非推奨） |
@@ -233,7 +233,7 @@ http://127.0.0.1:8045/v1/chat/completions
 > 更新時間：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | リバースプロキシルート定義（完全ルートテーブル） | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L193) | 120-193 |
 | `AxumServer::start()`（ルート構築エントリー） | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L79-L216) | 79-216 |
 | `health_check_handler()` | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L266-L272) | 266-272 |

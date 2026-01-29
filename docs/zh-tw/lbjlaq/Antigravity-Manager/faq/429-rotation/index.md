@@ -38,7 +38,7 @@ order: 3
 代理會從響應體裡嘗試解析 `error.details[0].reason` 或 `error.message`，把 429 粗分為幾類（實際以返回為準）：
 
 | 代理識別的類型 | 常見 reason / 線索 | 典型特徵 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **配額耗盡** | `QUOTA_EXHAUSTED` / 文字包含 `exhausted`、`quota` | 可能需要等到配額刷新 |
 | **速率限制** | `RATE_LIMIT_EXCEEDED` / 文字包含 `per minute`、`rate limit`、`too many requests` | 通常是幾十秒等級的冷卻 |
 | **模型容量不足** | `MODEL_CAPACITY_EXHAUSTED` / 文字包含 `model_capacity` | 常見是短暫過載，稍後可恢復 |
@@ -133,14 +133,14 @@ order: 3
 進入 **API Proxy** 頁面，查看調度策略：
 
 | 設定項 | 說明 | 預設值/建議 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **Scheduling Mode** | 調度模式 | `Balance`（預設） |
 | **Preferred Account** | 固定帳號模式 | 未選取（預設） |
 
 **調度模式對比**：
 
 | 模式 | 帳號複用策略 | 限流處理 | 適用場景 |
-| :--- | :--- | :--- | :--- |
+|--- | --- | --- | ---|
 | **CacheFirst** | 啟用黏性會話與 60s 視窗複用 | **優先等待**，極大提升 Prompt Caching 命中率 | 對話類/需要高快取命中率 |
 | **Balance** | 啟用黏性會話與 60s 視窗複用 | **立即切換**到備選帳號，兼顧成功率和效能 | 通用場景，預設 |
 | **PerformanceFirst** | 跳過黏性會話與 60s 視窗複用，純輪詢模式 | 立即切換，帳號負載最均衡 | 高併發、無狀態請求 |
@@ -294,7 +294,7 @@ All accounts are currently limited. Please wait 30s.
 A：不是。
 
 | 特性 | 配額保護 | 限流追蹤 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **觸發條件** | 模型配額低於閾值 | 收到 429 錯誤 |
 | **作用範圍** | 特定模型 | 整個帳號 |
 | **持續時間** | 直到配額恢復 | 由上游決定（通常幾秒到幾分鐘） |
@@ -336,7 +336,7 @@ A：可以從「讓下一次請求更容易換號」的角度入手：
 > 更新時間：2026-01-23
 
 | 功能 | 檔案路徑 | 行號 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | 429 重試延遲解析（RetryInfo / quotaResetDelay） | [`src-tauri/src/proxy/upstream/retry.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/upstream/retry.rs#L38-L67) | 38-67 |
 | Duration 解析工具 | [`src-tauri/src/proxy/upstream/retry.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/upstream/retry.rs#L11-L35) | 11-35 |
 | 調度模式列舉（CacheFirst/Balance/PerformanceFirst） | [`src-tauri/src/proxy/sticky_config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/sticky_config.rs#L3-L12) | 3-12 |

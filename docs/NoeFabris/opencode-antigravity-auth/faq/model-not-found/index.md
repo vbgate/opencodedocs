@@ -20,7 +20,7 @@ order: 3
 When using Antigravity models, you may encounter the following errors:
 
 | Error Message | Typical Symptoms |
-| ------------- | ---------------- |
+|--- | ---|
 | `Model not found` | Indicates model doesn't exist, cannot make requests |
 | `Invalid JSON payload received. Unknown name "parameters"` | 400 error, tool calls fail |
 | MCP server call errors | Specific MCP tools unavailable |
@@ -209,7 +209,7 @@ If the above methods don't work, force the use of `@ai-sdk/google` in the `googl
 The plugin automatically cleans the following incompatible features (source `src/plugin/request-helpers.ts:24-37`):
 
 | Feature | Conversion Method | Example |
-| ------- | ----------------- | ------- |
+|--- | --- | ---|
 | `const` | Convert to `enum` | `{ const: "text" }` → `{ enum: ["text"] }` |
 | `$ref` | Convert to description hint | `{ $ref: "#/$defs/Foo" }` → `{ type: "object", description: "See: Foo" }` |
 | `$defs` / `definitions` | Expand into schema | References no longer used |
@@ -325,7 +325,7 @@ opencode auth login
 > Last updated: 2026-01-23
 
 | Feature | File Path | Lines |
-| ------- | --------- | ----- |
+|--- | --- | ---|
 | JSON Schema cleanup main function | [`src/plugin/request-helpers.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request-helpers.ts) | 658-685 |
 | Convert const to enum | [`src/plugin/request-helpers.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request-helpers.ts) | 86-104 |
 | Convert $ref to hints | [`src/plugin/request-helpers.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/request-helpers.ts) | 55-80 |

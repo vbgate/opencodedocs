@@ -47,7 +47,7 @@ order: 5
 ## 엔드포인트 및 제한 개요
 
 | 항목 | 결론 | 코드 증거 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 엔트리 라우트 | `POST /v1/audio/transcriptions` | `src-tauri/src/proxy/server.rs` 라우트를 `handlers::audio::handle_audio_transcription`에 등록 |
 | 지원 형식 | 파일 확장명으로 식별: `mp3/wav/m4a/ogg/flac/aiff(aif)` | `src-tauri/src/proxy/audio/mod.rs` `detect_mime_type()` |
 | 파일 크기 | **15MB 하드 제한**(초과 시 413 + 텍스트 오류 메시지 반환) | `src-tauri/src/proxy/audio/mod.rs` `exceeds_size_limit()`; `src-tauri/src/proxy/handlers/audio.rs` |
@@ -140,7 +140,7 @@ print(transcript.text)
 Antigravity Tools는 파일 확장명으로 MIME 유형을 결정합니다(파일 내용 스니핑이 아님).
 
 | 형식 | MIME 유형 | 확장명 |
-| --- | --- | --- |
+|--- | --- | ---|
 | MP3 | `audio/mp3` | `.mp3` |
 | WAV | `audio/wav` | `.wav` |
 | AAC (M4A) | `audio/aac` | `.m4a` |
@@ -217,7 +217,7 @@ Response Body: {"text":"..."}
 이 엔드포인트는 3개의 폼 필드만 명시적으로 읽습니다:
 
 | 필드 | 필수 여부 | 기본값 | 처리 방식 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `file` | ✅ | 없음 | 반드시 제공해야 함. 누락 시 `400` + 텍스트 `오디오 파일 누락` 반환 |
 | `model` | ❌ | `gemini-2.0-flash-exp` | 문자열로 전달하며 토큰 획득에 참여(구체적인 업스트림 규칙은 실제 응답을 기준) |
 | `prompt` | ❌ | `Generate a transcript of the speech.` | 첫 번째 `text`로 업스트림에 전송하여 변환 안내에 사용 |
@@ -279,10 +279,10 @@ curl -sS -X POST http://127.0.0.1:8045/v1/audio/transcriptions \
 > 업데이트 시간: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 라우팅 등록(/v1/audio/transcriptions + body 제한) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
 | 오디오 변환 핸들러(multipart/15MB/inlineData) | [`src-tauri/src/proxy/handlers/audio.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/audio.rs#L16-L162) | 16-162 |
-| 지원 형식(확장명 -> MIME + 15MB) | [`src-tauri/src/proxy/audio/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/audio/mod.rs#L6-L35) | 6-35 |
+|--- | --- | ---|
 | Monitor 미들웨어(Binary Request Data) | [`src-tauri/src/proxy/middleware/monitor.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/monitor.rs#L13-L337) | 13-337 |
 
 **핵심 상수**:

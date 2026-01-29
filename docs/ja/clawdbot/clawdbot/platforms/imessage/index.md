@@ -71,7 +71,7 @@ sequenceDiagram
 **重要な概念**：
 
 | 概念 | 説明 |
-| ------ | ------ |
+|--- | ---|
 | **imsg CLI** | JSON-RPC over stdio を通じて Messages と対話するサードパーティツール |
 | **Full Disk Access** | Clawdbot が Messages の chat.db を読み取ることを許可する macOS 権限 |
 | **Automation 権限** | imsg が Automation API を通じてメッセージを送信することを許可する macOS 権限 |
@@ -409,7 +409,7 @@ exec ssh -T bot@mac-mini.tailnet-1234.ts.net imsg "$@"
 ### 基本設定
 
 | 設定項目 | 型 | デフォルト値 | 説明 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `enabled` | boolean | false | iMessage チャネルを有効にするか |
 | `cliPath` | string | "imsg" | imsg CLI パス（SSH wrapper も可） |
 | `dbPath` | string | - | Messages chat.db パス |
@@ -418,7 +418,7 @@ exec ssh -T bot@mac-mini.tailnet-1234.ts.net imsg "$@"
 ### DM ポリシー
 
 | 設定項目 | 型 | デフォルト値 | 説明 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `dmPolicy` | "pairing"|"allowlist"|"open"|"disabled" | "pairing" | DM アクセスポリシー |
 | `allowFrom` | array | [] | 許可された送信者リスト（handles、emails、E.164、`chat_id:*`） |
 
@@ -439,7 +439,7 @@ iMessage にはユーザー名の概念がなく、handles（電話番号また�
 ### グループポリシー
 
 | 設定項目 | 型 | デフォルト値 | 説明 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `groupPolicy` | "allowlist"|"open"|"disabled" | "allowlist" | グループアクセスポリシー |
 | `groupAllowFrom` | array | [] | グループで AI をトリガーできる送信者 |
 | `groups` | object | {} | chat_id によるグループ設定 |
@@ -466,7 +466,7 @@ iMessage にはユーザー名の概念がなく、handles（電話番号また�
 ### メディアとテキストの制限
 
 | 設定項目 | 型 | デフォルト値 | 説明 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `includeAttachments` | boolean | false | 添付ファイルをコンテキストに含めるか |
 | `mediaMaxMb` | number | 16 | 最大メディアファイルサイズ（MB） |
 | `textChunkLimit` | number | 4000 | 送信テキストのチャンクサイズ（文字数） |
@@ -475,7 +475,7 @@ iMessage にはユーザー名の概念がなく、handles（電話番号また�
 ### 履歴
 
 | 設定項目 | 型 | デフォルト値 | 説明 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `historyLimit` | number | - | グループの最大履歴メッセージ数（0 で無効化） |
 | `dmHistoryLimit` | number | - | DM 履歴メッセージ制限（ユーザー往復数） |
 | `dms["<handle>"].historyLimit` | number | - | handle による DM 履歴制限のオーバーライド |
@@ -569,7 +569,7 @@ iMessage にはユーザー名の概念がなく、handles（電話番号また�
 > 更新日時：2026-01-27
 
 | 機能 | ファイルパス | 行番号 |
-| ------ | --------- | ---- |
+|--- | --- | ---|
 | iMessage 設定型定義 | [`src/config/types.imessage.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.imessage.ts) | 1-80 |
 | iMessage アカウント解析 | [`src/imessage/accounts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/imessage/accounts.ts) | 1-83 |
 | iMessage プローブ | [`src/imessage/probe.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/imessage/probe.ts) | 1-92 |

@@ -32,7 +32,7 @@ Accounts are stored in `~/.config/opencode/antigravity-accounts.json` and manage
 Google Cloud Antigravity provides multiple models, and the plugin displays the 4 most commonly used:
 
 | Display Name | Model Key (Primary) | Model Key (Alternative) |
-| ------------ | ------------------- | ----------------------- |
+|--- | --- | ---|
 | G3 Pro       | `gemini-3-pro-high` | `gemini-3-pro-low`      |
 | G3 Image     | `gemini-3-pro-image` | -                       |
 | G3 Flash     | `gemini-3-flash`    | -                       |
@@ -230,9 +230,9 @@ Claude     1d 5h      ████████░░░░░░░░░░░ 
 > Last updated: 2026-01-23
 
 | Feature | File Path | Line |
-| --- | --- | --- |
+|--- | --- | ---|
 | Model configuration mapping | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 69-78 |
-| Parallel multi-account queries | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 327-334 |
+|--- | --- | ---|
 | Account filtering (must have email) | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 318 |
 | Project ID priority | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 231 |
 | Model quota extraction | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 132-157 |

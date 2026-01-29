@@ -50,7 +50,7 @@ DCP displays a Toast warning (after 7 seconds) when it detects configuration err
 **Common error types**:
 
 | Error Type | Description | Solution |
-|------------|-------------|----------|
+|--- | --- | ---|
 | Type error | `pruneNotification` should be `"off" | "minimal" | "detailed"` | Check enum value spelling |
 | Array error | `protectedFilePatterns` must be a string array | Ensure `["pattern1", "pattern2"]` format |
 | Unknown key | Configuration file contains unsupported keys | Delete or comment out unknown keys |
@@ -307,7 +307,7 @@ If the above methods cannot solve your problem:
 > Last updated: 2026-01-23
 
 | Feature        | File Path                                                                                      | Line Number |
-| -------------- | ------------------------------------------------------------------------------------------- | ----------- |
+|--- | --- | ---|
 | Configuration validation     | [`lib/config.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/config.ts#L147-375)  | 147-375    |
 | Configuration error handling | [`lib/config.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/config.ts#L391-421)  | 391-421    |
 | Logging system     | [`lib/logger.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/logger.ts#L6-109)      | 6-109      |

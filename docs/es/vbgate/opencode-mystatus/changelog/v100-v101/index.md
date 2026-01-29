@@ -52,7 +52,7 @@ npm update @vbgate/opencode-mystatus
 Soporta la consulta con un clic del uso de cuotas de las siguientes plataformas:
 
 | Plataforma | Tipos de suscripción soportados | Tipos de cuota |
-| ---- | -------------- | -------- |
+|--- | --- | ---|
 | OpenAI | Plus/Team/Pro | Límite de 3 horas, límite de 24 horas |
 | Zhipu AI | Coding Plan | Límite de token de 5 horas, cuota mensual de MCP |
 | Google Cloud | Antigravity | G3 Pro, G3 Image, G3 Flash, Claude |

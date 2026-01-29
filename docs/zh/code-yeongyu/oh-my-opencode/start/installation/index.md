@@ -316,7 +316,7 @@ opencode auth login
 当 GitHub Copilot 是最佳可用 provider 时，oh-my-opencode 使用以下模型分配：
 
 | 代理          | 模型                            |
-| ------------- | -------------------------------- |
+|--- | ---|
 | **Sisyphus**  | `github-copilot/claude-opus-4.5`  |
 | **Oracle**    | `github-copilot/gpt-5.2`         |
 | **Explore**   | `opencode/gpt-5-nano`             |
@@ -345,7 +345,7 @@ bunx oh-my-opencode install --no-tui \
 **参数说明**：
 
 | 参数              | 值            | 说明                               |
-| ----------------- | ------------- | ---------------------------------- |
+|--- | --- | ---|
 | `--no-tui`        | -             | 禁用交互式界面（必须指定其他参数） |
 | `--claude`         | `yes/no/max20` | Claude 订阅状态                          |
 | `--openai`         | `yes/no`       | OpenAI/ChatGPT 订阅（GPT-5.2 for Oracle） |
@@ -560,7 +560,7 @@ opencode auth login
 **解决**：确认配置文件位置
 
 | 配置类型 | 文件路径 | 优先级 |
-| --------- | --------- | -------- |
+|--- | --- | ---|
 | **用户配置** | `~/.config/opencode/oh-my-opencode.json` | 高 |
 | **项目配置** | `.opencode/oh-my-opencode.json` | 低 |
 
@@ -597,7 +597,7 @@ opencode auth login
 > 更新时间：2026-01-26
 
 | 功能              | 文件路径                                                                                               | 行号    |
-| ---------------- | ------------------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | CLI 安装入口      | [`src/cli/index.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/master/src/cli/index.ts)         | 22-60   |
 | 交互式安装器      | [`src/cli/install.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/master/src/cli/install.ts)         | 1-400+  |
 | 配置管理器        | [`src/cli/config-manager.ts`](https://github.com/code-yeongyu/oh-my-opencode/blob/master/src/cli/config-manager.ts) | 1-200+  |

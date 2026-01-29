@@ -28,7 +28,7 @@ opencode-mystatusは同時に複数のGoogle Cloud Antigravityアカウントを
 ### モデルマッピング関係
 
 | 表示名 | モデルKey（メイン） | モデルKey（サブ） |
-| -------- | -------------- | --------------- |
+|--- | --- | ---|
 | G3 Pro | `gemini-3-pro-high` | `gemini-3-pro-low` |
 | G3 Image | `gemini-3-pro-image` | - |
 | G3 Flash | `gemini-3-flash` | - |
@@ -78,7 +78,7 @@ opencode-mystatusは同時に複数のGoogle Cloud Antigravityアカウントを
 <summary><strong>クリックしてソースコードの場所を展開</strong></summary>
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | モデル設定マッピング | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 69-78 |
 | 複数アカウント並列クエリ | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 327-334 |
 

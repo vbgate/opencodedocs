@@ -47,7 +47,7 @@ order: 2
 **不同安装来源的适用场景**：
 
 | 安装来源 | 适用场景 | 示例 |
-| -------- | -------- | ---- |
+|--- | --- | ---|
 | **GitHub 仓库** | 使用开源社区的技能 | `openskills install anthropics/skills` |
 | **本地路径** | 开发和测试自己的技能 | `openskills install ./my-skill` |
 | **私有 Git 仓库** | 使用公司内部的技能 | `openskills install git@github.com:my-org/private-skills.git` |
@@ -171,9 +171,9 @@ Cloning repository...
 #### GitHub shorthand 规则（源码 `install.ts:131-143`）
 
 | 格式 | 示例 | 转换结果 |
-| ---- | ---- | -------- |
+|--- | --- | ---|
 | `owner/repo` | `anthropics/skills` | `https://github.com/anthropics/skills` |
-| `owner/repo/skill-name` | `my-org/skills/web-scraper` | URL: `https://github.com/my-org/skills` + subpath: `web-scraper` |
+|--- | --- | ---|
 
 ---
 
@@ -242,7 +242,7 @@ npx openskills install ./local-skills
 #### 本地路径支持的格式（源码 `install.ts:25-32`）
 
 | 格式 | 说明 | 示例 |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | `/absolute/path` | 绝对路径 | `/home/user/skills/my-skill` |
 | `./relative/path` | 当前目录的相对路径 | `./local-skills/my-skill` |
 | `../relative/path` | 父目录的相对路径 | `../shared-skills/common` |
@@ -348,7 +348,7 @@ npx openskills install https://bitbucket.org/owner/skills.git
 #### Git URL 识别规则（源码 `install.ts:37-45`）
 
 | 前缀/后缀 | 说明 | 示例 |
-| --------- | ---- | ---- |
+|--- | --- | ---|
 | `git@` | SSH 协议 | `git@github.com:owner/repo.git` |
 | `git://` | Git 协议 | `git://github.com/owner/repo.git` |
 | `http://` | HTTP 协议 | `http://github.com/owner/repo.git` |
@@ -471,7 +471,7 @@ Expected: owner/repo, owner/repo/skill-name, git URL, or local path
 **核心命令速查**：
 
 | 命令 | 作用 |
-| ---- | ---- |
+|--- | ---|
 | `npx openskills install owner/repo` | 从 GitHub 仓库安装（交互式选择） |
 | `npx openskills install owner/repo/skill-name` | 直接安装仓库中的某个技能 |
 | `npx openskills install ./local-skills/skill` | 从本地路径安装 |
@@ -502,7 +502,7 @@ Expected: owner/repo, owner/repo/skill-name, git URL, or local path
 > 更新时间：2026-01-24
 
 | 功能 | 文件路径 | 行号 |
-| ---- | --------- | ---- |
+|--- | --- | ---|
 | 安装命令入口 | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L83-L184) | 83-184 |
 | 本地路径判断 | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L25-L32) | 25-32 |
 | Git URL 判断 | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L37-L45) | 37-45 |

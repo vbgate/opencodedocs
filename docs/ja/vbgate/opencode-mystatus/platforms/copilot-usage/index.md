@@ -61,7 +61,7 @@ Premium RequestsはCopilotの主要なクォータ指標で、以下を含みま
 異なるサブスクリプションタイプには異なる月次クォータがあります：
 
 | サブスクリプションタイプ | 月次クォータ | 適用対象 |
-| ----------- | -------- | ---------------------- |
+|--- | --- | ---|
 | Free | 50回 | 個人開発者試用 |
 | Pro | 300回 | 個人開発者正式版 |
 | Pro+ | 1,500回 | ヘビーユーザー個人版 |
@@ -193,9 +193,9 @@ Premium Requests [████████░░░░░░░░░░] 40% (1
 > 更新日時：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| ---------------- | --------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Copilotクォータクエリ | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 481-524 |
-| Fine-grained PAT読み取り | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 122-151 |
+|--- | --- | ---|
 | Public Billing APIクエリ | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 157-177 |
 | Internal APIクエリ | [`plugin/lib/copilot.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/copilot.ts) | 242-304 |
 

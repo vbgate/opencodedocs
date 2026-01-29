@@ -60,7 +60,7 @@ opencode-notify 的工作原理很简单：监听 OpenCode 的事件，在关键
 opencode-notify 提供两种安装方式：
 
 | 方式 | 适用场景 | 优点 | 缺点 |
-| ---- | -------- | ---- | ---- |
+|--- | --- | --- | ---|
 | **OCX 包管理器** | 大多数用户 | 一键安装、自动更新、依赖管理完整 | 需要先安装 OCX |
 | **手动安装** | 特殊需求 | 完全控制、无需 OCX | 需手动管理依赖和更新 |
 
@@ -217,7 +217,7 @@ npm install node-notifier detect-terminal @opencode-ai/plugin @opencode-ai/sdk
 **解决方法**：
 
 | 平台 | 解决方法 |
-| ---- | -------- |
+|--- | ---|
 | macOS | 系统设置 → 通知 → OpenCode → 允许通知 |
 | Windows | 设置 → 系统 → 通知 → 打开通知 |
 | Linux | 安装 libnotify-bin：`sudo apt install libnotify-bin` |
@@ -274,12 +274,12 @@ npm install node-notifier detect-terminal @opencode-ai/plugin @opencode-ai/sdk
 > 更新时间：2026-01-27
 
 | 功能        | 文件路径                                                                                    | 行号    |
-| ----------- | ------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 插件主入口 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L1-L407) | 1-407   |
 | 配置加载 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L90-L114) | 90-114  |
-| 事件处理 - 会话空闲 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L215-L248) | 215-248 |
-| 事件处理 - 会话错误 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L251-L276) | 251-276 |
-| 事件处理 - 权限更新 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L311-L329) | 311-329 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | 通知发送 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L280-L308) | 280-308 |
 | 终端检测 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L145-L176) | 145-176 |
 | 静音时段检查 | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L181-L199) | 181-199 |

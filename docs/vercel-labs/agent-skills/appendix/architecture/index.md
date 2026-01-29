@@ -107,7 +107,7 @@ Validation logic is implemented in `validate.ts`, ensuring rule files meet speci
 **Validation Items**:
 
 | Check Item         | Description                                              | Error Output |
-| ------------------ | -------------------------------------------------------- | ------------ |
+|--- | --- | ---|
 | Title Not Empty    | Must have title (Frontmatter or `##` heading)           | `Missing or empty title` |
 | At Least One Example | `examples` array must not be empty                    | `At least one code example required` |
 | Impact Valid       | Must be a valid `ImpactLevel` enum value                 | `Invalid impact level` |
@@ -256,21 +256,21 @@ Type definitions are in `types.ts` (source location: `types.ts:1-54`).
 export type ImpactLevel =
   | 'CRITICAL'
   | 'HIGH'
-  | 'MEDIUM-HIGH'
+|---|
   | 'MEDIUM'
-  | 'LOW-MEDIUM'
+|---|
   | 'LOW'
 ```
 
 **Level Description**:
 
 | Level        | Impact                                    | Example Rule                  |
-| ------------ | ----------------------------------------- | ----------------------------- |
+|--- | --- | ---|
 | CRITICAL     | Critical bottleneck, must fix             | async-parallel                |
 | HIGH         | Important improvement, recommended priority | server-cache-react            |
-| MEDIUM-HIGH  | Medium-high priority                      | client-data-fetch             |
+|--- | --- | ---|
 | MEDIUM       | Medium improvement                        | rerender-memo                 |
-| LOW-MEDIUM   | Low-medium priority                       | js-use-memo                   |
+|--- | --- | ---|
 | LOW          | Incremental improvement, optional         | advanced-suspense-boundaries  |
 
 ### Rule Interface
@@ -442,7 +442,7 @@ detect_framework() {
 ### Supported Frameworks
 
 | Category      | Framework List                                                             | Detection Keywords               |
-| ------------- | -------------------------------------------------------------------------- | -------------------------------- |
+|--- | --- | ---|
 | React         | Next.js, Gatsby, Create React App, Remix, React Router, Blitz             | `next`, `gatsby`, `remix-run`    |
 | Vue           | Nuxt, Vitepress, Vuepress, Gridsome                                       | `nuxt`, `vitepress`              |
 | Svelte        | SvelteKit, Svelte, Sapper                                                 | `@sveltejs/kit`, `svelte`        |
@@ -534,7 +534,7 @@ After understanding the architecture, you can:
 > Last updated: 2026-01-25
 
 | Feature                  | File Path                                                                 | Line Numbers |
-| ------------------------ | ------------------------------------------------------------------------- | ------------ |
+|--- | --- | ---|
 | Type System              | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts) | 1-54         |
 | Path Configuration       | [`packages/react-best-practices-build/src/config.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/config.ts) | 1-18         |
 | Rule Parser              | [`packages/react-best-practices-build/src/parser.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/parser.ts) | 18-238       |

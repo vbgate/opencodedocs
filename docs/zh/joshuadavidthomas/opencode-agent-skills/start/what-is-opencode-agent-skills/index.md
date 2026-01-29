@@ -45,7 +45,7 @@ order: 1
 插件基于 TypeScript + Bun + Zod 开发，提供 4 个核心工具：
 
 | 工具 | 功能 |
-|------|------|
+|--- | ---|
 | `use_skill` | 将技能的 SKILL.md 内容注入到会话上下文 |
 | `read_skill_file` | 读取技能目录下的支持文件（文档、配置等） |
 | `run_skill_script` | 在技能目录上下文中执行可执行脚本 |
@@ -120,7 +120,7 @@ OPENCODE_AGENT_SKILLS_SUPERPOWERS_MODE=true opencode
 ## 与其他方案对比
 
 | 方案 | 特点 | 适用场景 |
-|------|------|----------|
+|--- | --- | ---|
 | **opencode-agent-skills** | 动态发现、压缩恢复、自动推荐 | 需要统一管理和自动推荐的场景 |
 | **opencode-skills** | 自动注册为 `skills_{{name}}` 工具 | 需要独立工具调用的场景 |
 | **superpowers** | 完整软件开发工作流 | 需要严格流程规范的项目 |
@@ -160,7 +160,7 @@ OpenCode Agent Skills 插件通过动态发现、上下文注入、压缩恢复�
 > 更新时间：2026-01-24
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | 插件入口和功能概述 | [`src/plugin.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/plugin.ts#L1-L12) | 1-12 |
 | 核心功能特性列表 | [`README.md`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/README.md#L5-L11) | 5-11 |
 | 技能发现优先级 | [`src/skills.ts`](https://github.com/joshuadavidthomas/opencode-agent-skills/blob/main/src/skills.ts#L241-L246) | 241-246 |

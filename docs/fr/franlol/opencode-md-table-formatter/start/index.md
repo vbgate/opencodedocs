@@ -24,7 +24,7 @@ Nous vous recommandons de suivre cet ordre d'apprentissage :
 ## Contenu de ce chapitre
 
 | Cours | Description | Temps d'apprentissage |
-|------|-------------|----------------------|
+|--- | --- | ---|
 | [Prise en main en une minute: Installation et configuration](./getting-started/) | Apprenez à installer le plugin et à configurer OpenCode, voyez immédiatement l'effet de formatage | 3 minutes |
 | [Vue d'ensemble des fonctionnalités: La magie du formatage automatique](./features/) | Comprenez les 8 fonctionnalités principales du plugin, maîtrisez ce qu'il peut et ne peut pas faire | 5 minutes |
 

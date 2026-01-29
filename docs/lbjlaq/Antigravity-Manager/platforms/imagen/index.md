@@ -172,7 +172,7 @@ curl.exe -i http://127.0.0.1:PORT/v1/images/generations `
 The Imagen 3 upstream receives standardized `aspectRatio`; as long as you write `size` as a common width-height pair, it will stably map to standard ratios.
 
 | Your size | Proxy-calculated aspectRatio |
-| --- | --- |
+|--- | ---|
 | `"1024x1024"` | `1:1` |
 | `"1920x1080"` / `"1280x720"` | `16:9` |
 | `"1080x1920"` / `"720x1280"` | `9:16` |
@@ -188,7 +188,7 @@ The Imagen 3 upstream receives standardized `aspectRatio`; as long as you write 
 You don't need to remember Imagen 3's internal fields; just use OpenAI Images' `quality` to switch resolution tiers.
 
 | Your quality | Proxy-written imageSize |
-| --- | --- |
+|--- | ---|
 | `"standard"` | Not set (uses upstream default) |
 | `"medium"` | `"2K"` |
 | `"hd"` | `"4K"` |
@@ -201,7 +201,7 @@ You don't need to remember Imagen 3's internal fields; just use OpenAI Images' `
 In this implementation, `response_format: "url"` doesn't give you a publicly accessible URL, but returns a Data URI in `data:<mime>;base64,...` format; many tools are better suited to use `b64_json` directly.
 
 | response_format | data[] field |
-| --- | --- |
+|--- | ---|
 | `"b64_json"` (default) | `{ "b64_json": "..." }` |
 | `"url"` | `{ "url": "data:image/png;base64,..." }` |
 
@@ -219,7 +219,7 @@ In this implementation, `response_format: "url"` doesn't give you a publicly acc
 Here's the `size` parsing logic: it splits by `WIDTHxHEIGHT`. If `size` isn't in this format, it falls back directly to `1:1`.
 
 | Writing style | Result |
-| --- | --- |
+|--- | ---|
 | ✓ `"1920x1080"` | 16:9 |
 | ❌ `"16:9"` | Falls back to 1:1 |
 
@@ -254,12 +254,12 @@ The implementation uses concurrent requests and merges results: if some requests
 > Last updated: 2026-01-23
 
 | Function | File Path | Lines |
-| --- | --- | --- |
+|--- | --- | ---|
 | Expose OpenAI Images route | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L123-L146) | 123-146 |
 | Images generation endpoint: parse prompt/size/quality + assemble OpenAI response | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L1104-L1333) | 1104-1333 |
-| size/quality parsing and mapping (size->aspectRatio, quality->imageSize) | [`src-tauri/src/proxy/mappers/common_utils.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/common_utils.rs#L19-L222) | 19-222 |
+|--- | --- | ---|
 | OpenAIRequest declaration for size/quality (for protocol layer compatibility) | [`src-tauri/src/proxy/mappers/openai/models.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/models.rs#L6-L38) | 6-38 |
-| OpenAI->Gemini request conversion: pass size/quality to unified parsing function | [`src-tauri/src/proxy/mappers/openai/request.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/mappers/openai/request.rs#L19-L27) | 19-27 |
+|--- | --- | ---|
 
 **Key fields (from source code)**:
 - `size`: Parsed as `WIDTHxHEIGHT` to `aspectRatio`

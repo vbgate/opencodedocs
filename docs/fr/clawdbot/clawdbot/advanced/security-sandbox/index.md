@@ -88,7 +88,7 @@ Cette conception en couches garantit que même si le modèle est manipulé, la p
 Clawdbot offre trois couches de contrôle d'accès :
 
 | Couche | Contenu protégé | Emplacement de configuration |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | **Authentification Gateway** | Connexion WebSocket | `gateway.auth` |
 | **Politique DM** | Messages privés | `channels.*.dmPolicy` |
 | **Politique Group** | Messages de groupe | `channels.*.groupPolicy` / `channels.*.groups` |
@@ -119,7 +119,7 @@ clawdbot security audit --fix
 L'outil d'audit vérifie les aspects suivants :
 
 | Catégorie de vérification | Éléments spécifiques | Niveau de risque |
-| --------- | ----- | ----- |
+|--- | --- | ---|
 | **Accès entrant** | Authentification Gateway, politique DM, politique Group | Critique / Avertissement |
 | **Accès aux outils** | Liste autorisée exec élevé, allow/deny des outils | Critique / Avertissement |
 | **Exposition réseau** | Mode de liaison Gateway, Tailscale Serve/Funnel | Critique / Info |
@@ -173,7 +173,7 @@ Par défaut, le Gateway nécessite une authentification pour accepter les connex
 **Modes d'authentification** :
 
 | Mode | Usage | Scénario recommandé |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `token` | Jeton bearer partagé | La plupart des cas, recommandé |
 | `password` | Authentification par mot de passe | Développement local, pratique pour tests rapides |
 | Tailscale Identity | Tailscale Serve | Accès à distance via Tailscale |
@@ -187,7 +187,7 @@ Par défaut, le Gateway nécessite une authentification pour accepter les connex
 La politique DM contrôle si les utilisateurs inconnus peuvent interagir directement avec votre assistant IA.
 
 | Politique | Comportement | Scénario recommandé |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `pairing` (défaut) | Expéditeur inconnu reçoit un code de couplage, aucun traitement avant couplage | Usage personnel, recommandé |
 | `allowlist` | Expéditeur inconnu est refusé | Environnement de confiance multi-utilisateurs |
 | `open` | Autorise tout le monde | Service public (nécessite `allowFrom` contenant `"*"`) |
@@ -228,7 +228,7 @@ clawdbot pairing approve whatsapp <pairing code>
 La politique Group détermine comment votre assistant IA répond aux messages dans les groupes.
 
 | Politique | Comportement | Emplacement de configuration |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `allowlist` | Accepte uniquement les groupes de la liste autorisée | `channels.whatsapp.groups` |
 | `disabled` | Ignore tous les messages de groupe | `channels.telegram.groups` |
 | `requireMention` | Répond uniquement lors d'une mention @ ou d'un déclencheur de commande | `channels.*.groups.*` |
@@ -307,7 +307,7 @@ Vous pouvez configurer globalement ou par Agent des listes blanches et noires d'
 ### Catégories d'outils courants
 
 | Catégorie d'outils | Outils spécifiques | Niveau de risque |
-| --------- | ----- | ----- |
+|--- | --- | ---|
 | **Opérations de fichiers** | `read`, `write`, `edit`, `apply_patch` | Moyen |
 | **Exécution Shell** | `exec`, `process` | Élevé |
 | **Contrôle du navigateur** | `browser` | Élevé |
@@ -353,7 +353,7 @@ L'isolement bac à sable fait fonctionner les outils dans des conteneurs Docker,
 ### Modes de bac à sable
 
 | Mode | Comportement | Scénario recommandé |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `off` | Tous les outils s'exécutent sur l'hôte | Environnement personnel de confiance |
 | `non-main` (recommandé) | Session principale sur l'hôte, autres sessions dans le bac à sable | Équilibre performance et sécurité |
 | `all` | Toutes les sessions dans le bac à sable | Environnement multi-utilisateurs, service public |
@@ -375,7 +375,7 @@ L'isolement bac à sable fait fonctionner les outils dans des conteneurs Docker,
 L'accès à l'espace de travail détermine quels répertoires de l'hôte le conteneur bac à sable peut voir.
 
 | Niveau d'accès | Comportement | Scénario recommandé |
-| --------- | ----- | ----- |
+|--- | --- | ---|
 | `none` (défaut) | Espace de travail bac à sable `~/.clawdbot/sandboxes` | Isolement maximum |
 | `ro` | Espace de travail de l'agent monté en lecture seule sur `/agent` | Lire mais ne pas écrire de fichiers |
 | `rw` | Espace de travail de l'agent monté en lecture/écriture sur `/workspace` | Agents nécessitant l'écriture de fichiers |
@@ -397,7 +397,7 @@ L'accès à l'espace de travail détermine quels répertoires de l'hôte le cont
 La portée du bac à sable détermine la granularité de l'isolement des conteneurs.
 
 | Portée | Comportement | Nombre de conteneurs |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | `session` (défaut) | Un conteneur par session | Plus de conteneurs, meilleur isolement |
 | `agent` | Un conteneur par Agent | Équilibre isolement et ressources |
 | `shared` | Toutes les sessions partagent un conteneur | Économise les ressources, isolement minimum |
@@ -696,7 +696,7 @@ Pour des instructions détaillées d'installation Docker, veuillez consulter : [
 ### Résumé des meilleures pratiques
 
 | Pratique | Raison |
-| ----- | ----- |
+|--- | ---|
 | Utiliser le mode `pairing` par défaut | Équilibre expérience utilisateur et sécurité |
 | Utiliser `requireMention` pour les messages de groupe | Éviter d'être manipulé |
 | Utiliser des listes blanches d'outils plutôt que des listes noires | Principe du moindre privilège |
@@ -746,7 +746,7 @@ Ce cours a présenté le modèle de sécurité et les fonctionnalités d'isoleme
 > Dernière mise à jour : 2026-01-27
 
 | Fonctionnalité | Chemin du fichier | Lignes |
-| ----- | ----- | ----- |
+|--- | --- | ---|
 | Audit de sécurité | [`src/security/audit.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/audit.ts#L1-L910) | 1-910 |
 | Correction de sécurité | [`src/security/fix.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/fix.ts#L1-L385) | 1-385 |
 | Vérification des permissions de fichiers | [`src/security/audit-fs.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/audit-fs.ts) | Fichier entier |

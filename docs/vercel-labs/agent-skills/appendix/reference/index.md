@@ -23,7 +23,7 @@ This page provides a complete API and commands reference for Agent Skills, inclu
 Impact levels identify the performance impact of rules, with 6 levels:
 
 | Value | Description | Use Cases |
-| --- | --- | --- |
+|--- | --- | ---|
 | `CRITICAL` | Critical bottleneck | Must fix, severely impacts user experience (e.g., waterfall requests, unoptimized bundle size) |
 | `HIGH` | Significant improvement | Major performance gains (e.g., server-side caching, duplicate props elimination) |
 | `MEDIUM-HIGH` | Medium-high priority | Noticeable performance gains (e.g., data fetching optimization) |
@@ -38,7 +38,7 @@ Impact levels identify the performance impact of rules, with 6 levels:
 Structure of code examples in rules:
 
 | Field | Type | Required | Description |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `label` | string | ✅ | Example label (e.g., "Incorrect", "Correct") |
 | `description` | string | ❌ | Label description (optional) |
 | `code` | string | ✅ | Code content |
@@ -52,7 +52,7 @@ Structure of code examples in rules:
 Complete structure of a single performance optimization rule:
 
 | Field | Type | Required | Description |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `id` | string | ✅ | Rule ID (auto-generated, e.g., "1.1", "2.3") |
 | `title` | string | ✅ | Rule title |
 | `section` | number | ✅ | Associated section (1-8) |
@@ -71,7 +71,7 @@ Complete structure of a single performance optimization rule:
 Rule section structure:
 
 | Field | Type | Required | Description |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `number` | number | ✅ | Section number (1-8) |
 | `title` | string | ✅ | Section title |
 | `impact` | ImpactLevel | ✅ | Overall impact level |
@@ -86,7 +86,7 @@ Rule section structure:
 Complete guideline document structure:
 
 | Field | Type | Required | Description |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `version` | string | ✅ | Version number |
 | `organization` | string | ✅ | Organization name |
 | `date` | string | ✅ | Date |
@@ -101,7 +101,7 @@ Complete guideline document structure:
 Test case structure extracted from rules:
 
 | Field | Type | Required | Description |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `ruleId` | string | ✅ | Rule ID |
 | `ruleTitle` | string | ✅ | Rule title |
 | `type` | 'bad' \| 'good' | ✅ | Test case type |
@@ -278,7 +278,7 @@ bash /mnt/skills/user/{skill-name}/scripts/{script}.sh [args]
 ### Required Fields
 
 | Field | Description | Example |
-| --- | --- | --- |
+|--- | --- | ---|
 | `name` | Skill name (directory name) | `vercel-deploy` |
 | `description` | One-sentence description with trigger phrases | `Deploy applications to Vercel when user requests "Deploy my app"` |
 | `title` | Skill title | `Vercel Deploy` |
@@ -294,7 +294,7 @@ bash /mnt/skills/user/{skill-name}/scripts/{script}.sh [args]
 ### Rule Filename Prefix → Section → Level
 
 | File Prefix | Section Number | Section Title | Default Level |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `async-` | 1 | Eliminate Waterfalls | CRITICAL |
 | `bundle-` | 2 | Bundle Optimization | CRITICAL |
 | `server-` | 3 | Server Performance | HIGH |
@@ -307,7 +307,7 @@ bash /mnt/skills/user/{skill-name}/scripts/{script}.sh [args]
 ### Sample Files
 
 | Filename | Auto-inferred Section | Auto-inferred Level |
-| --- | --- | --- |
+|--- | --- | ---|
 | `async-parallel.md` | 1 (Eliminate Waterfalls) | CRITICAL |
 | `bundle-dynamic-imports.md` | 2 (Bundle Optimization) | CRITICAL |
 | `server-cache-react.md` | 3 (Server Performance) | HIGH |
@@ -357,7 +357,7 @@ bash /mnt/skills/user/vercel-deploy/scripts/deploy.sh /path/to/project.tgz
 > Last updated: 2026-01-25
 
 | Feature | File Path | Lines |
-| ----------- | --------------------------------------------------------------------------------------------- | ----- |
+|--- | --- | ---|
 | ImpactLevel type | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts#L5) | 5     |
 | CodeExample interface | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts#L7-L13) | 7-13  |
 | Rule interface    | [`packages/react-best-practices-build/src/types.ts`](https://github.com/vercel-labs/agent-skills/blob/main/packages/react-best-practices-build/src/types.ts#L15-L26) | 15-26 |

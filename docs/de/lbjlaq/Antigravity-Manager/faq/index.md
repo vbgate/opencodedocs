@@ -13,7 +13,7 @@ In diesem Abschnitt finden Sie die am häufigsten auftretenden Fehlercodes und A
 ## In diesem Abschnitt
 
 | Problemtyp | Seite | Beschreibung |
-|-----------|------|-------------|
+|--- | --- | ---|
 | Konto inaktiv | [invalid_grant und automatische Kontosperrung](./invalid-grant/) | Konto plötzlich nicht mehr verfügbar? Erfahren Sie die Gründe für den Verfall von OAuth-Token und den Wiederherstellungsprozess |
 | Authentifizierungsfehler | [401/Authentifizierungsfehler](./auth-401/) | Anfrage abgelehnt? Überprüfen Sie die auth_mode-Konfiguration und das Header-Format |
 | Ratenbegrenzung | [429/Kapazitätsfehler](./429-rotation/) | Häufige 429-Fehler? Unterscheiden Sie zwischen Kontingentmangel und Upstream-Begrenzung und nutzen Sie Rotationsstrategien zur Verringerung der Auswirkungen |

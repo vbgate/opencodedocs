@@ -83,7 +83,7 @@ flowchart TD
 **核心区别**：
 
 | 功能 | 用途 | 支持平台 | 触发方式 | 对话轮次 |
-|-----|-------|----------|---------|---------|
+|--- | --- | --- | --- | ---|
 | **Voice Wake** | 单次语音命令 | macOS/iOS/Android | 唤醒词（如"clawd"） | 单次 |
 | **Talk Mode** | 持续语音对话 | iOS/Android | 手动开启 | 多轮（循环） |
 | **TTS** | 文本转语音 | 所有渠道 | AI 回复自动触发 | 无（被动） |
@@ -122,7 +122,7 @@ Talk Mode 是一个持续语音对话循环：
 **关键特性**：
 
 | 特性 | 描述 | 平台支持 |
-|-----|-------|---------|
+|--- | --- | ---|
 | **中断播放** | 用户说话时立即停止 TTS 播放 | iOS/Android |
 | **状态转换** | Listening → Thinking → Speaking 三态循环 | iOS/Android |
 | **JSON 指令** | AI 可在回复中嵌入 JSON 控制语音参数 | 所有 |
@@ -141,7 +141,7 @@ providers = ["elevenlabs", "openai", "edge"];
 ```
 
 | 提供商 | 质量 | 速度 | 成本 | API Key | 推荐场景 |
-|-------|-------|------|------|---------|---------|
+|--- | --- | --- | --- | --- | ---|
 | **ElevenLabs** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | 付费 | 高质量语音、Talk Mode（流式） |
 | **OpenAI** | ⭐⭐⭐⭐ | ⭐⭐⭐ | 付费 | 标准质量、稳定可靠 |
 | **Edge TTS** | ⭐⭐⭐ | ⭐⭐ | 免费 | 默认免费、测试、备用 |
@@ -155,7 +155,7 @@ Edge TTS 使用微软 Edge 在线神经 TTS 服务（通过 `node-edge-tts`）�
 TTS 输出格式由**目标渠道**决定，而非配置：
 
 | 渠道 | 输出格式 | 格式说明 | 原因 |
-|-------|---------|---------|------|
+|--- | --- | --- | ---|
 | **Telegram** | Opus (`opus_48000_64`) | 48kHz/64kbps | Telegram 语音消息要求 Opus |
 | **其他渠道** | MP3 (`mp3_44100_128`) | 44.1kHz/128kbps | 通用兼容性好 |
 | **Talk Mode** | PCM (`pcm_44100` / `pcm_24000`) | 原始音频流 | iOS/Android AudioTrack 播放 |
@@ -332,7 +332,7 @@ Talk Mode 提供真正的语音助手体验：持续对话、中断播放、实�
 
 ::: info Talk Mode 平台支持
 | 平台 | Talk Mode | Voice Wake |
-|-------|----------|------------|
+|--- | --- | ---|
 | macOS | ❌ 不支持 | ✅ 支持 |
 | iOS | ✅ 支持 | ✅ 支持 |
 | Android | ✅ 支持 | ✅ 支持 |
@@ -379,7 +379,7 @@ AI 可以在回复中嵌入 JSON 指令控制语音参数（源码：`docs/nodes
 **支持的参数**：
 
 | 参数 | 类型 | 说明 |
-|-----|------|------|
+|--- | --- | ---|
 | `voice` / `voice_id` | 字符串 | ElevenLabs Voice ID |
 | `model` / `model_id` | 字符串 | TTS 模型 ID |
 | `speed` | 数字 | 语速（0.5-2.0） |
@@ -408,7 +408,7 @@ messages:
 **TTS 自动模式**（源码：`docs/tts.md:198-203`）：
 
 | 模式 | 描述 | 使用场景 |
-|-----|-------|---------|
+|--- | --- | ---|
 | `off` | 关闭自动 TTS | 文本交互 |
 | `always` | 所有回复都转语音 | 语音助手 |
 | `inbound` | 仅回复语音消息时转语音 | 对话式语音 |
@@ -778,7 +778,7 @@ export CLAWDBOT_TTS_PREFS="~/.clawdbot/settings/tts.json"
 ### 如何选择 TTS 提供商？
 
 | 场景 | 推荐提供商 |
-|-------|-----------|
+|--- | ---|
 | **免费测试** | Edge TTS（无需 API Key） |
 | **高质量语音** | ElevenLabs（最佳表现力） |
 | **稳定可靠** | OpenAI（标准质量，API 稳定） |
@@ -808,7 +808,7 @@ Clawdbot 自动根据渠道选择格式，你无需手动配置（源码：`src/
 ### TTS 摘要多长时间？
 
 | 提供商 | 典型延迟 |
-|-------|----------|
+|--- | ---|
 | Edge TTS | 1-3 秒（取决于网络） |
 | OpenAI | 2-4 秒（标准 API） |
 | ElevenLabs（流式） | < 1 秒（Talk Mode 实时播放） |
@@ -884,7 +884,7 @@ TTS: skipped long text (2500 > 1500), summarization disabled
 > 更新时间：2026-01-27
 
 | 功能 | 文件路径 | 行号 |
-| ----- | --------- | ---- |
+|--- | --- | ---|
 | TTS 核心逻辑 | [`src/tts/tts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/tts/tts.ts) | 1-1472 |
 | TTS 配置解析 | [`src/tts/tts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/tts/tts.ts) | 248-303 |
 | ElevenLabs TTS | [`src/tts/tts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/tts/tts.ts) | 916-991 |

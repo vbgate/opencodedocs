@@ -49,8 +49,8 @@ Actually, OpenSkills provides two installation locations, allowing you to flexib
 **Applicable scenarios for two installation locations**:
 
 | Installation Location | Applicable Scenario | Example |
-| -------- | -------- | ---- |
-| **Project-local** (default) | Project-specific skills requiring version control | Team business rules, project-specific tools |
+|--- | --- | ---|
+|--- | --- | ---|
 | **Global installation** (`--global`) | Project-agnostic skills, no version control needed | Universal code generation tools, file format conversion |
 
 ::: tip Recommended Practices
@@ -400,7 +400,7 @@ npx openskills update codebase-reviewer  # Update project-local version
 > Last updated: 2026-01-24
 
 | Function      | File Path                                                                                          | Line Numbers |
-| ----------- | ------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | Installation location judgment | [`src/commands/install.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/install.ts#L84-L92) | 84-92   |
 | Directory path utilities | [`src/utils/dirs.ts`](https://github.com/numman-ali/openskills/blob/main/src/utils/dirs.ts#L7-L25)     | 7-25    |
 | Skill list display | [`src/commands/list.ts`](https://github.com/numman-ali/openskills/blob/main/src/commands/list.ts#L20-L43)   | 20-43   |

@@ -190,7 +190,7 @@ Cada conta tem dados completos armazenados independentemente no formato JSON no 
 ### Descrição de campos-chave
 
 | Campo | Tipo | Significado comercial | Condição de disparo |
-| ----- | ---- | -------- | -------- |
+|--- | --- | --- | ---|
 | `disabled` | bool | Conta totalmente desabilitada (como refresh_token expirado) | Quando `invalid_grant`, automaticamente definido para `true` |
 | `proxy_disabled` | bool | Apenas desabilitar função de proxy, não afeta uso de GUI | Desabilitação manual ou disparo de proteção de cota |
 | `protected_models` | string[] | Lista de modelos restritos de proteção de cota a nível de modelo | Atualizado por lógica de proteção de cota |
@@ -220,7 +220,7 @@ Biblioteca de estatística de Token registra consumo de Token de cada solicitaç
 #### token_usage (registros de uso originais)
 
 | Campo | Tipo | Descrição |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | id | INTEGER PRIMARY KEY AUTOINCREMENT | Chave primária auto-incremento |
 | timestamp | INTEGER | Timestamp da solicitação |
 | account_email | TEXT | Email da conta |
@@ -320,7 +320,7 @@ Biblioteca de logs de Proxy registra informações detalhadas de cada solicitaç
 ### Estrutura da tabela: request_logs
 
 | Campo | Tipo | Descrição |
-| ---- | ---- | ---- |
+|--- | --- | ---|
 | id | TEXT PRIMARY KEY | ID único da solicitação (UUID) |
 | timestamp | INTEGER | Timestamp da solicitação |
 | method | TEXT | Método HTTP (GET/POST) |
@@ -556,7 +556,7 @@ Se disparará "proteção de cota", decidido por `quota_protection.enabled/thres
 > Atualizado em: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Número da linha |
-| --- | --- | --- |
+|--- | --- | ---|
 | Diretório de dados (.antigravity_tools) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | Diretório de contas (accounts/) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L35-L46) | 35-46 |
 | Estrutura accounts.json | [`src-tauri/src/models/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/models/account.rs#L76-L92) | 76-92 |

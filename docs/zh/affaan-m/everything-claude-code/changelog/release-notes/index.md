@@ -86,7 +86,7 @@ order: 250
 ### 版本类型
 
 | 类型 | 说明 | 示例 |
-|-----|------|------|
+|--- | --- | ---|
 | **新功能** | 添加新功能或重大改进 | `feat: add new agent` |
 | **修复** | 修复 bug 或问题 | `fix: resolve hook loading issue` |
 | **文档** | 文档更新 | `docs: update README` |

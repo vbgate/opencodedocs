@@ -128,7 +128,7 @@ Agent가 특정 명령어를 인식하고 자동으로 메모리를 저장하도
 설정 파일 외에도, 환경 변수를 사용하여 민감한 정보를 관리하거나 기본 동작을 재정의할 수 있습니다.
 
 | 환경 변수 | 설명 | 우선순위 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | `SUPERMEMORY_API_KEY` | Supermemory API 키 | 설정 파일보다 낮음 |
 | `USER` 또는 `USERNAME` | 사용자 범위 Hash 생성 식별자 | 시스템 기본값 |
 
@@ -236,7 +236,7 @@ OpenCode를 재시작한 후, 대화에서 새로 정의한 트리거를 사용�
 > 업데이트: 2026-01-23
 
 | 기능 | 파일 경로 | 행 번호 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | 설정 인터페이스 정의 | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L12-L23) | 12-23 |
 | 기본값 정의 | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L44-L54) | 44-54 |
 | 기본 트리거 | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L25-L42) | 25-42 |

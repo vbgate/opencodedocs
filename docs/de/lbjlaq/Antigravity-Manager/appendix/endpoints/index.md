@@ -26,7 +26,7 @@ order: 1
 Der lokale Reverse-Proxy-Dienst von Antigravity Tools bietet folgende Endpunkttypen:
 
 | Protokollkategorie | Verwendung | Typische Clients |
-| --- | --- | --- |
+|--- | --- | ---|
 | **OpenAI-Protokoll** | Kompatibilität mit generischen KI-Anwendungen | OpenAI SDK / Kompatible Clients |
 | **Anthropic-Protokoll** | Aufrufe der Claude-Reihe | Claude Code / Anthropic SDK |
 | **Gemini-Protokoll** | Offizielle Google-SDKs | Google Gemini SDK |
@@ -40,7 +40,7 @@ Der lokale Reverse-Proxy-Dienst von Antigravity Tools bietet folgende Endpunktty
 Diese Endpunkte sind mit dem OpenAI-API-Format kompatibel und eignen sich für die meisten OpenAI-SDK-kompatiblen Clients.
 
 | Methode | Pfad | Routing-Einstieg (Rust-Handler) | Hinweis |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | GET | `/v1/models` | `handlers::openai::handle_list_models` | OpenAI-kompatibel: Modellliste |
 | POST | `/v1/chat/completions` | `handlers::openai::handle_chat_completions` | OpenAI-kompatibel: Chat Completions |
 | POST | `/v1/completions` | `handlers::openai::handle_completions` | OpenAI-kompatibel: Legacy Completions |
@@ -60,7 +60,7 @@ Der Endpunkt `/v1/responses` ist speziell für Codex CLI konzipiert und verwende
 Diese Endpunkte sind nach den Pfaden und Anfrageformaten der Anthropic-API organisiert und können von Claude Code / Anthropic SDK aufgerufen werden.
 
 | Methode | Pfad | Routing-Einstieg (Rust-Handler) | Hinweis |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | POST | `/v1/messages` | `handlers::claude::handle_messages` | Anthropic-kompatibel: Messages |
 | POST | `/v1/messages/count_tokens` | `handlers::claude::handle_count_tokens` | Anthropic-kompatibel: count_tokens |
 | GET | `/v1/models/claude` | `handlers::claude::handle_list_models` | Anthropic-kompatibel: Modellliste |
@@ -72,7 +72,7 @@ Diese Endpunkte sind nach den Pfaden und Anfrageformaten der Anthropic-API organ
 Diese Endpunkte sind mit dem Google Gemini API-Format kompatibel und können direkt mit den offiziellen Google SDKs verwendet werden.
 
 | Methode | Pfad | Routing-Einstieg (Rust-Handler) | Hinweis |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | GET | `/v1beta/models` | `handlers::gemini::handle_list_models` | Gemini-nativ: Modellliste |
 | GET | `/v1beta/models/:model` | `handlers::gemini::handle_get_model` | Gemini-nativ: GetModel |
 | POST | `/v1beta/models/:model` | `handlers::gemini::handle_generate` | Gemini-nativ: generateContent / streamGenerateContent |
@@ -89,7 +89,7 @@ Für `/v1beta/models/:model` sind sowohl GET als auch POST im gleichen Pfad regi
 MCP (Model Context Protocol) Endpunkte dienen dazu, „Werkzeugaufruf“-Schnittstellen nach außen verfügbar zu machen (verarbeitet durch `handlers::mcp::*`). Ob sie aktiviert sind und ihr spezifisches Verhalten richtet sich nach der Konfiguration; Details siehe [MCP-Endpunkte](../../platforms/mcp/).
 
 | Methode | Pfad | Routing-Einstieg (Rust-Handler) | Hinweis |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | ANY | `/mcp/web_search_prime/mcp` | `handlers::mcp::handle_web_search_prime` | MCP: Web Search Prime |
 | ANY | `/mcp/web_reader/mcp` | `handlers::mcp::handle_web_reader` | MCP: Web Reader |
 | ANY | `/mcp/zai-mcp-server/mcp` | `handlers::mcp::handle_zai_mcp_server` | MCP: z.ai MCP Server |
@@ -105,7 +105,7 @@ Informationen zum Umfang und den Grenzen von MCP finden Sie unter [Grenzen der z
 Diese Endpunkte dienen für interne Systemfunktionen und externe Überwachung.
 
 | Methode | Pfad | Routing-Einstieg (Rust-Handler) | Hinweis |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | POST | `/internal/warmup` | `handlers::warmup::handle_warmup` | Interner Warmup-Endpunkt |
 | POST | `/v1/api/event_logging` | `silent_ok_handler` | Telemetrie-Protokoll-Abfang: Gibt direkt 200 zurück |
 | POST | `/v1/api/event_logging/batch` | `silent_ok_handler` | Telemetrie-Protokoll-Abfang: Gibt direkt 200 zurück |
@@ -127,7 +127,7 @@ Mit Ausnahme von `GET /healthz`, das möglicherweise ausgenommen ist, hängt dav
 Der Zugriff auf alle Endpunkte wird durch `proxy.auth_mode` gesteuert:
 
 | Modus | Beschreibung | Erfordert `/healthz` Authentifizierung? | Andere Endpunkte erfordern Authentifizierung? |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | `off` | Vollständig offen | ❌ Nein | ❌ Nein |
 | `strict` | Alle erfordern Authentifizierung | ✅ Ja | ✅ Ja |
 | `all_except_health` | Nur Gesundheitsprüfung offen | ❌ Nein | ✅ Ja |
@@ -203,12 +203,12 @@ Antigravity Tools bietet einen vollständigen Satz an Multi-Protokoll-kompatible
 > Aktualisierungszeit: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
-| Routing-Registrierung (alle Endpunkte) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L194) | 120-194 |
-| Authentifizierungs-Middleware (Header-Kompatibilität + `/healthz`-Ausnahme + OPTIONS-Freigabe) | [`src-tauri/src/proxy/middleware/auth.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/middleware/auth.rs#L14-L78) | 14-78 |
-| auth_mode-Modi und auto-Ableitungsregeln | [`docs/proxy/auth.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/docs/proxy/auth.md#L9-L24) | 9-24 |
-| `/healthz`-Rückgabewert | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L266-L272) | 266-272 |
-| Telemetrie-Protokoll-Abfang (silent 200) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L274-L277) | 274-277 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Wichtige Funktionen**:
 - `AxumServer::start()`: Startet den Axum-Server und registriert Routen (Zeilen 79-254)

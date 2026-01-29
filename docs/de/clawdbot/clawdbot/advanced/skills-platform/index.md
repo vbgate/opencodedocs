@@ -393,12 +393,12 @@ Das Skill-System ist der zentrale Mechanismus zur Erweiterung der Fähigkeiten v
 > Aktualisierungsdatum: 2026-01-27
 
 | Funktion | Dateipfad | Zeilennummer |
-| --- | --- | --- |
+|--- | --- | ---|
 | Typdefinition der Skill-Konfiguration | [`src/config/types.skills.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.skills.ts) | 1-32 |
 | Dokumentation des Skill-Systems | [`docs/tools/skills.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/skills.md) | 1-260 |
-| Referenz zur Skill-Konfiguration | [`docs/tools/skills-config.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/skills-config.md) | 1-76 |
+|--- | --- | ---|
 | ClawdHub-Dokumentation | [`docs/tools/clawdhub.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/clawdhub.md) | 1-202 |
-| Leitfaden zur Skill-Erstellung | [`docs/tools/creating-skills.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/creating-skills.md) | 1-42 |
+|--- | --- | ---|
 | CLI-Befehle | [`docs/cli/skills.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/cli/skills.md) | 1-26 |
 
 **Wichtige Typen**:

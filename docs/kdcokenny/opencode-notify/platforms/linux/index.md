@@ -49,7 +49,7 @@ Linux and Windows have relatively basic system notification APIs. opencode-notif
 ## Linux Platform Feature Overview
 
 | Feature | Linux | Description |
-| ------- | ----- | ----------- |
+|--- | --- | ---|
 | **Native Notifications** | ✅ Supported | Send notifications via notify-send |
 | **Terminal Detection** | ✅ Supported | Automatically recognize 37+ terminal emulators |
 | **Focus Detection** | ❌ Not supported | Cannot detect if terminal is foreground window |
@@ -125,7 +125,7 @@ If auto-detection fails, you can manually specify the terminal type in the confi
 ## Platform Feature Comparison
 
 | Feature | macOS | Windows | Linux |
-| ------- | ----- | ------- | ----- |
+|--- | --- | --- | ---|
 | **Native Notifications** | ✅ Notification Center | ✅ Toast | ✅ notify-send |
 | **Custom Sounds** | ✅ System sound list | ❌ System default | ❌ System default |
 | **Focus Detection** | ✅ AppleScript API | ❌ Not supported | ❌ Not supported |
@@ -224,7 +224,7 @@ Since Linux doesn't support focus detection, it's recommended to adjust configur
 The following configuration items are ineffective on Linux:
 
 | Configuration Item | macOS Effect | Linux Effect |
-| ----------------- | ------------ | ------------ |
+|--- | --- | ---|
 | `sounds.idle` | Play Glass sound | Use system default sound |
 | `sounds.error` | Play Basso sound | Use system default sound |
 | `sounds.permission` | Play Submarine sound | Use system default sound |
@@ -434,13 +434,13 @@ In this lesson, we learned:
 > Last updated: 2026-01-27
 
 | Feature | File Path | Lines |
-| ------- | --------- | ----- |
+|--- | --- | ---|
 | Linux platform limitation check (osascript) | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L121-L133) | 121-133 |
 | Linux platform limitation check (focus detection) | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L166-L175) | 166-175 |
-| macOS-specific: Click to focus | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L238-L240) | 238-240 |
-| Notification sending (cross-platform) | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L227-L243) | 227-243 |
-| Terminal detection (cross-platform) | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L145-L164) | 145-164 |
-| Configuration loading (cross-platform) | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L90-L114) | 90-114 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **Key Functions**:
 - `runOsascript()`: Only executes on macOS, returns null on Linux

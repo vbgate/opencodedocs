@@ -39,7 +39,7 @@ You want to use Clawdbot but are unsure which deployment method to choose:
 ## When to Use This
 
 | Deployment Method | Use Case |
-|------------------|----------|
+|--- | ---|
 | **Local Installation** | Personal computer, development and testing, quick start |
 | **Docker** | Isolated environment, server deployment, quick rebuild |
 | **Nix** | Reproducible deployment, already using NixOS/Home Manager, need version rollback |
@@ -434,7 +434,7 @@ primary_region = "iad"
 **Key Settings Explanation**:
 
 | Setting | Reason |
-|---------|--------|
+|--- | ---|
 | `--bind lan` | Bind to `0.0.0.0` so Fly's proxy can access Gateway |
 | `--allow-unconfigured` | Start without a configuration file (you'll create one later) |
 | `internal_port = 3000` | Must match `--port 3000` (or `CLAWDBOT_GATEWAY_PORT`) for Fly health checks |
@@ -870,15 +870,15 @@ RUN apt-get update && apt-get install -y socat && rm -rf /var/lib/apt/lists/*
 
 # Example binary 1: Gmail CLI
 RUN curl -L https://github.com/steipete/gog/releases/latest/download/gog_Linux_x86_64.tar.gz \
-  | tar -xz -C /usr/local/bin && chmod +x /usr/local/bin/gog
+|---|
 
 # Example binary 2: Google Places CLI
 RUN curl -L https://github.com/steipete/goplaces/releases/latest/download/goplaces_Linux_x86_64.tar.gz \
-  | tar -xz -C /usr/local/bin && chmod +x /usr/local/bin/goplaces
+|---|
 
 # Example binary 3: WhatsApp CLI
 RUN curl -L https://github.com/steipete/wacli/releases/latest/download/wacli_Linux_x86_64.tar.gz \
-  | tar -xz -C /usr/local/bin && chmod +x /usr/local/bin/wacli
+|---|
 
 # Add more binaries below using the same pattern
 
@@ -953,7 +953,7 @@ Clawdbot runs in Docker, but Docker is not the source of truth.
 All long-running state must survive restarts, rebuilds, and reboots.
 
 | Component | Location | Persistence Mechanism | Notes |
-|---|---|---|---|
+|--- | --- | --- | ---|
 | Gateway config | `/home/node/.clawdbot/` | Host volume mount | Includes `clawdbot.json`, tokens |
 | Model auth profiles | `/home/node/.clawdbot/` | Host volume mount | OAuth tokens, API keys |
 | Skill configs | `/home/node/.clawdbot/skills/` | Host volume mount | Skill-level state |
@@ -1143,7 +1143,7 @@ See: [Updating](https://docs.clawd.bot/install/updating)
 ### Choose by Use Case
 
 | Scenario | Recommended Deployment | Reason |
-|----------|------------------------|--------|
+|--- | --- | ---|
 | **Personal use, quick start** | Local Installation | Simplest, no infrastructure needed |
 | **Multi-device access, occasional shutdown** | Fly.io | 24/7 online, accessible from anywhere |
 | **Full control, own infrastructure** | Hetzner VPS | Full control, persistent state, low cost |
@@ -1262,7 +1262,7 @@ When choosing a deployment method, consider your use case, technical skills, and
 > Last Updated: 2026-01-27
 
 | Feature/Section | File Path | Line Number |
-|-----------------|-----------|-------------|
+|--- | --- | ---|
 | Docker deployment script | [`docker-setup.sh`](https://github.com/clawdbot/clawdbot/blob/main/docker-setup.sh) | Full file |
 | Docker image definition | [`Dockerfile`](https://github.com/clawdbot/clawdbot/blob/main/Dockerfile) | Full file |
 | Docker Compose configuration | [`docker-compose.yml`](https://github.com/clawdbot/clawdbot/blob/main/docker-compose.yml) | Full file |

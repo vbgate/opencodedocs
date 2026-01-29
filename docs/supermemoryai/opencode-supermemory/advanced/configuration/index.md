@@ -128,7 +128,7 @@ When the session context becomes too long, the plugin automatically triggers a c
 In addition to configuration files, you can use environment variables to manage sensitive information or override default behaviors.
 
 | Environment Variable | Description | Priority |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | `SUPERMEMORY_API_KEY` | Supermemory API Key | Lower than config file |
 | `USER` or `USERNAME` | Identifier used to generate User Scope Hash | System default |
 
@@ -237,7 +237,7 @@ Memory saved: The API base path for this project is /api/v2
 > Last Updated: 2026-01-23
 
 | Feature | File Path | Line Number |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | Config Interface Definition | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L12-L23) | 12-23 |
 | Default Values | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L44-L54) | 44-54 |
 | Default Trigger Words | [`src/config.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/config.ts#L25-L42) | 25-42 |

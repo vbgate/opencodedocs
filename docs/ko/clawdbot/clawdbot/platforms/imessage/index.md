@@ -71,7 +71,7 @@ sequenceDiagram
 **핵심 개념**:
 
 | 개념 | 설명 |
-| ------ | ------ |
+|--- | ---|
 | **imsg CLI** | stdio를 통한 JSON-RPC로 Messages와 상호작용하는 제3자 도구 |
 | **전체 디스크 액세스** | Clawdbot이 Messages chat.db를 읽도록 허용하는 macOS 권한 |
 | **자동화 권한** | imsg가 자동화 API를 통해 메시지를 보낼 수 있도록 허용하는 macOS 권한 |
@@ -409,7 +409,7 @@ exec ssh -T bot@mac-mini.tailnet-1234.ts.net imsg "$@"
 ### 기본 구성
 
 | 구성 항목 | 타입 | 기본값 | 설명 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `enabled` | boolean | false | iMessage 채널 활성화 여부 |
 | `cliPath` | string | "imsg" | imsg CLI 경로(SSH wrapper 가능) |
 | `dbPath` | string | - | Messages chat.db 경로 |
@@ -418,7 +418,7 @@ exec ssh -T bot@mac-mini.tailnet-1234.ts.net imsg "$@"
 ### DM 정책
 
 | 구성 항목 | 타입 | 기본값 | 설명 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `dmPolicy` | "pairing"|"allowlist"|"open"|"disabled" | "pairing" | DM 액세스 정책 |
 | `allowFrom` | array | [] | 허용된 발신자 목록(handles, 이메일, E.164, `chat_id:*`) |
 
@@ -439,7 +439,7 @@ iMessage에는 사용자 이름 개념이 없으며 handles(전화번호 또는 
 ### 그룹 정책
 
 | 구성 항목 | 타입 | 기본값 | 설명 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `groupPolicy` | "allowlist"|"open"|"disabled" | "allowlist" | 그룹 액세스 정책 |
 | `groupAllowFrom` | array | [] | 그룹에서 AI를 트리거할 수 있는 발신자 |
 | `groups` | object | {} | chat_id별 그룹 구성 |
@@ -466,7 +466,7 @@ iMessage에는 사용자 이름 개념이 없으며 handles(전화번호 또는 
 ### 미디어 및 텍스트 제한
 
 | 구성 항목 | 타입 | 기본값 | 설명 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `includeAttachments` | boolean | false | 첨부 파일을 컨텍스트에 포함할지 여부 |
 | `mediaMaxMb` | number | 16 | 최대 미디어 파일 크기(MB) |
 | `textChunkLimit` | number | 4000 | 발신 텍스트 청크 크기(문자) |
@@ -475,7 +475,7 @@ iMessage에는 사용자 이름 개념이 없으며 handles(전화번호 또는 
 ### 기록
 
 | 구성 항목 | 타입 | 기본값 | 설명 |
-| -------- | ------ | -------- | ------ |
+|--- | --- | --- | ---|
 | `historyLimit` | number | - | 그룹 최대 기록 메시지 수(0은 비활성화) |
 | `dmHistoryLimit` | number | - | DM 기록 제한(사용자 턴 수) |
 | `dms["<handle>"].historyLimit` | number | - | handle별 DM 기록 제한 덮어쓰기 |
@@ -569,7 +569,7 @@ iMessage에는 사용자 이름 개념이 없으며 handles(전화번호 또는 
 > 업데이트 날짜: 2026-01-27
 
 | 기능 | 파일 경로 | 행 번호 |
-| ------ | --------- | ---- |
+|--- | --- | ---|
 | iMessage 구성 타입 정의 | [`src/config/types.imessage.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.imessage.ts) | 1-80 |
 | iMessage 계정 구문 분석 | [`src/imessage/accounts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/imessage/accounts.ts) | 1-83 |
 | iMessage 프로브 | [`src/imessage/probe.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/imessage/probe.ts) | 1-92 |

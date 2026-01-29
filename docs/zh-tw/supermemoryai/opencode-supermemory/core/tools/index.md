@@ -31,7 +31,7 @@ opencode-supermemory 並不是一個黑盒，它透過標準的 OpenCode Tool �
 外掛向 Agent 註冊了一個名為 `supermemory` 的工具，它就像一把瑞士軍刀，擁有 6 種模式：
 
 | 模式 | 作用 | 典型場景 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | **add** | 新增記憶 | "記住，這個專案必須用 Bun 執行" |
 | **search** | 搜尋記憶 | "我之前有沒有說過怎麼處理驗證？" |
 | **profile** | 使用者設定檔 | 查看 Agent 總結你的編碼習慣 |
@@ -187,7 +187,7 @@ A: 外掛會自動脫敏 `<private>` 標籤內的內容。但為了安全，建�
 > 更新時間：2026-01-23
 
 | 功能 | 檔案路徑 | 行號 |
-| :--- | :--- | :--- |
+|--- | --- | ---|
 | 工具定義 | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L183-L485) | 183-485 |
 | 關鍵詞偵測 | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L34-L37) | 34-37 |
 | 觸發提示詞 | [`src/index.ts`](https://github.com/supermemoryai/opencode-supermemory/blob/main/src/index.ts#L20-L28) | 20-28 |

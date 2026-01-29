@@ -62,7 +62,7 @@ const widthCache = new Map<string, number>()
 **Exemple** :
 
 | Texte original (Clé) | Largeur d'affichage (Valeur) | Explication |
-| -------------------- | --------------------------- | ----------- |
+|--- | --- | ---|
 | `**姓名**` | 4 | Largeur de 4 après suppression de `**` |
 | `*年龄*` | 4 | Largeur de 4 après suppression de `*` |
 | `` `status` `` | 8 | Les symboles de bloc de code sont également comptés dans la largeur |
@@ -120,7 +120,7 @@ graph TD
 **Analyse des étapes** :
 
 | Étape | Opération | Complexité temporelle |
-| ----- | --------- | --------------------- |
+|--- | --- | ---|
 | 1 | Vérifier `widthCache.has(text)` | O(1) |
 | 2 | Cache atteint → retour direct | O(1) |
 | 3 | Cache manqué → calculer la largeur | O(n) |
@@ -166,7 +166,7 @@ function cleanupCache() {
 **Conditions de déclenchement** (déclenchement si l'une quelconque est satisfaite) :
 
 | Condition | Seuil | Explication |
-| --------- | ----- | ----------- |
+|--- | --- | ---|
 | Nombre d'opérations | > 100 opérations de formatage | Éviter de déclencher le nettoyage trop fréquemment |
 | Entrées de cache | > 1000 cellules | Empêcher une occupation mémoire excessive |
 
@@ -192,7 +192,7 @@ Supposons un tableau de 5 colonnes × 10 lignes, où :
 **Effet du cache** :
 
 | Scénario | Sans cache | Avec cache | Amélioration des performances |
-| -------- | ---------- | ---------- | ----------------------------- |
+|--- | --- | --- | ---|
 | 5 colonnes × 10 lignes (sans répétition) | 50 calculs | 50 calculs | Aucune |
 | 5 colonnes × 10 lignes (en-tête répété) | 50 calculs | 10 calculs + 40 réussites de cache | ~80% |
 
@@ -207,7 +207,7 @@ Supposons un tableau de 5 colonnes × 10 lignes, où :
 **Scénarios d'exemple** :
 
 | Scénario | Effet du cache |
-| -------- | -------------- |
+|--- | ---|
 | Tableaux de comparaison générés par IA | ✅ Effet significatif (contenu répété dans plusieurs colonnes) |
 | Tableaux simples à une seule ligne | ⚪ Effet moyen (contenu unique) |
 | Tableaux imbriqués avec Markdown | ✅ Effet significatif (coût élevé de suppression des symboles) |
@@ -254,7 +254,7 @@ Ce mécanisme permet au plugin de rester fluide lors du traitement de tableaux c
 > Date de mise à jour : 2026-01-26
 
 | Fonctionnalité | Chemin du fichier | Numéros de ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Définition de widthCache | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L6) | 6 |
 | Définition de cacheOperationCount | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L7) | 7 |
 | Fonction calculateDisplayWidth | [`source/franlol/opencode-md-table-formatter/index.ts`](https://github.com/franlol/opencode-md-table-formatter/blob/main/index.ts#L151-L159) | 151-159 |

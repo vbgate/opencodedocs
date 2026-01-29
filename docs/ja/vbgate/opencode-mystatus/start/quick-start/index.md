@@ -115,7 +115,7 @@ code %APPDATA%\opencode\opencode.json
 **このように設定する理由**：
 
 | 設定項目 | 値 | 役割 |
-| ------------- | --------------------------------------- | ------------------------------------ |
+|--- | --- | ---|
 | `plugin` 配列 | `["opencode-mystatus"]` | OpenCodeにこのプラグインをロードさせる |
 | `description` | "Query quota usage for all AI accounts" | スラッシュコマンドリストに表示される説明 |
 | `template` | "Use the mystatus tool..." | OpenCodeにmystatusツールを呼び出す方法を指示する |
@@ -234,7 +234,7 @@ Supported account types:
 #### 5.2 出力の意味を理解する
 
 | 要素（日本語版） | 要素（英語版） | 意味 |
-| ------------------------- | ------------------------- | ---------------------- |
+|--- | --- | ---|
 | `## OpenAI アカウントクォータ` | `## OpenAI Account Quota` | プラットフォームタイトル |
 | `user@example.com (team)` | `user@example.com (team)` | アカウント情報（メールアドレスまたはチーム） |
 | `3時間制限` | `3-hour limit` | クォータタイプ（3時間制限） |
@@ -248,7 +248,7 @@ Supported account types:
 以下のステップが完了していることを確認してください：
 
 | ステップ | チェック方法 | 期待される結果 |
-| ------------- | --------------------------------------- | --------------------------------------- |
+|--- | --- | ---|
 | プラグインのインストール | `~/.config/opencode/opencode.json` を確認 | `plugin` 配列に `"opencode-mystatus"` が含まれている |
 | スラッシュコマンドの設定 | 同じファイルを確認 | `command` オブジェクトに `mystatus` 設定が含まれている |
 | OpenCodeの再起動 | OpenCodeプロセスを確認 | 再起動されている |
@@ -364,7 +364,7 @@ Supported account types:
 > 更新日時：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| ----------------- | -------------------------------------------------------------------------------------------------- | ----- |
+|--- | --- | ---|
 | プラグインエントリ | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 26-94 |
 | mystatusツール定義 | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 29-33 |
 | 認証ファイルの読み取り | [`plugin/mystatus.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/mystatus.ts) | 35-46 |

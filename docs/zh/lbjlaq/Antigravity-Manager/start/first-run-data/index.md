@@ -108,7 +108,7 @@ Get-ChildItem -Force $dataDir
 下面这些文件名来自项目源码，都是固定的：
 
 | 你会看到的内容 | 用途 | 你需要关心什么 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `accounts.json` | 账号索引（包含账号列表/当前账号） | 迁移账号时建议一起备份 |
 | `accounts/` | 每个账号一个 `*.json` 文件 | 这是账号数据主体 |
 | `logs/` | 应用日志目录 | 排障优先看这里 |
@@ -188,7 +188,7 @@ Antigravity Tools 默认启用托盘；你点窗口右上角关闭时，程序�
 
 ::: info 两类"自动启动"，别搞混
 | 名称 | 指的是什么 | 证据 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 开机自启 | 电脑启动后自动启动 Antigravity Tools（桌面应用本身） | 启动参数包含 `--minimized`，并提供 `toggle_auto_launch` 命令 |
 | 反代自动启动 | Antigravity Tools 启动后，如果配置 `proxy.auto_start=true`，会尝试自动启动本地反代服务 | 应用启动时读取配置并 `start_proxy_service(...)` |
 :::
@@ -204,7 +204,7 @@ Antigravity Tools 默认启用托盘；你点窗口右上角关闭时，程序�
 ## 踩坑提醒
 
 | 场景 | 你可能会怎么做（❌） | 推荐做法（✓） |
-| --- | --- | --- |
+|--- | --- | ---|
 | 找不到数据目录 | 在系统里乱搜 App 的安装目录 | 直接去 Settings -> Advanced 看"数据目录"并一键打开 |
 | 关掉窗口以为退出了 | 点窗口关闭后就去改配置/换端口 | 先看托盘图标是否还在；要退出用托盘 Quit |
 | 日志太多不好排查 | 一边复现问题一边翻旧日志 | 先"清理日志"，再复现一次，最后只看这次的日志文件 |
@@ -233,7 +233,7 @@ Antigravity Tools 默认启用托盘；你点窗口右上角关闭时，程序�
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 数据目录位置（`~/.antigravity_tools`） | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | 账号索引与账号文件目录（`accounts.json` / `accounts/`） | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L46) | 16-46 |
 | 日志目录与按天滚动（`logs/` + `app.log`） | [`src-tauri/src/modules/logger.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/logger.rs#L17-L83) | 17-83 |
@@ -242,8 +242,8 @@ Antigravity Tools 默认启用托盘；你点窗口右上角关闭时，程序�
 | 设置页一键清理日志（按钮 + 弹窗逻辑） | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L127-L135) | 127-135 |
 | 设置页一键清理日志（Advanced tab 按钮） | [`src/pages/Settings.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Settings.tsx#L732-L747) | 732-747 |
 | 托盘菜单与点击事件（切换账号/刷新/显示/退出） | [`src-tauri/src/modules/tray.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/tray.rs#L9-L158) | 9-158 |
-| 关闭窗口 -> 隐藏（最小化到托盘） | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L150-L160) | 150-160 |
-| 开机自启插件初始化（含 `--minimized`） | [`src-tauri/src/lib.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/lib.rs#L58-L66) | 58-66 |
+|--- | --- | ---|
+|--- | --- | ---|
 | 开机自启开关（`toggle_auto_launch` / `is_auto_launch_enabled`） | [`src-tauri/src/commands/autostart.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/autostart.rs#L4-L39) | 4-39 |
 | 一键打开数据目录 / 获取路径 / 清理日志命令 | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L578-L621) | 578-621 |
 | Token Stats 数据库文件名（`token_stats.db`） | [`src-tauri/src/modules/token_stats.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/token_stats.rs#L58-L61) | 58-61 |

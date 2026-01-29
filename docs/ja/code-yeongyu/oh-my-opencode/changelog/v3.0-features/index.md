@@ -42,7 +42,7 @@ Category は特定のドメイン向けに最適化された**エージェント
 ### 7 つの組み込み Categories
 
 | Category | デフォルトモデル | Temperature | 適用シナリオ |
-|-----------|-----------|-------------|----------|
+|--- | --- | --- | ---|
 | `visual-engineering` | `google/gemini-3-pro` | 0.7 | フロントエンド、UI/UX、デザイン、スタイル、アニメーション |
 | `ultrabrain` | `openai/gpt-5.2-codex` (xhigh) | 0.1 | 深い論理推論、大量の分析を必要とする複雑なアーキテクチャ決定 |
 | `artistry` | `google/gemini-3-pro` (max) | 0.7 | 高い創造性/芸術的タスク、新しいアイデア |
@@ -229,7 +229,7 @@ mcp:
 `oh-my-opencode.json` で Categories を微調整できます。
 
 | フィールド | 型 | 説明 |
-|------|------|------|
+|--- | --- | ---|
 | `description` | string | Category 目的の可読説明。delegate_task プロンプトに表示されます。 |
 | `model` | string | 使用する AI モデル ID（例：`anthropic/claude-opus-4-5`） |
 | `variant` | string | モデルバリアント（例：`max`、`xhigh`） |

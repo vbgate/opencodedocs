@@ -142,7 +142,7 @@ Different sounds let you roughly understand what happened without looking at not
 The `sounds` field in the configuration file has four options:
 
 | Field | Purpose | Default | Recommended Setting |
-| ----- | ------- | ------- | ------------------- |
+|--- | --- | --- | ---|
 | `idle` | Task completion sound | Glass | Glass (crisp) |
 | `error` | Error notification sound | Basso | Basso (low-pitched) |
 | `permission` | Permission request sound | Submarine | Submarine (alert) |
@@ -163,7 +163,7 @@ Knowing all available sounds helps you find the combination that best suits your
 **Available Sounds**
 
 | Sound Name | Characteristic | Use Case |
-| ---------- | -------------- | -------- |
+|--- | --- | ---|
 | Glass | Light, crisp | Task completion |
 | Basso | Low-pitched, warning | Error notification |
 | Submarine | Alert, gentle | Permission request |
@@ -319,7 +319,7 @@ If the terminal doesn't come to front after clicking notification, possible caus
 The macOS platform provides a complete notification experience:
 
 | Feature | Purpose | Platform Support |
-| ------- | ------- | ---------------- |
+|--- | --- | ---|
 | Native Notifications | Display system-level notifications | ✅ macOS<br>✅ Windows<br>✅ Linux |
 | Custom Sounds | Different sounds for different events | ✅ macOS |
 | Focus Detection | Avoid duplicate notifications | ✅ macOS |
@@ -360,7 +360,7 @@ The macOS platform provides a complete notification experience:
 > Last updated: 2026-01-27
 
 | Feature | File Path | Lines |
-| ------- | --------- | ----- |
+|--- | --- | ---|
 | Focus Detection | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L166-L175) | 166-175 |
 | Click to Focus | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L238-L240) | 238-240 |
 | Bundle ID Retrieval | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L135-L137) | 135-137 |

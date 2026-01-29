@@ -40,7 +40,7 @@ order: 240
 **Canvas + A2UI подходит для этих сценариев**:
 
 | Сценарий | Пример |
-| ------ | ------ |
+|--- | ---|
 | **Визуализация данных** | Отображение статистических диаграмм, индикаторов прогресса, временных шкал |
 | **Интерактивные формы** | Попросить пользователя подтвердить действия, выбрать параметры |
 | **Панели состояния** | Отображение прогресса задач в реальном времени, состояния системы |
@@ -334,7 +334,7 @@ clawdbot nodes canvas hide --node abc123-def456-ghi789
 **Проверить, что функции Canvas работают правильно**:
 
 | Элемент проверки | Метод проверки |
-| ------- | -------- |
+|--- | ---|
 | Canvas Host запущен | `lsof -i :18793` имеет вывод |
 | Возможность узла Canvas | `clawdbot nodes list` отображает `canvas` |
 | Страница успешно загружена | Узел отображает содержимое HTML |
@@ -400,7 +400,7 @@ clawdbot nodes canvas hide --node abc123-def456-ghi789
 > Дата обновления: 2026-01-27
 
 | Функция | Путь к файлу | Номер строки |
-| ----- | --------- | ---- |
+|--- | --- | ---|
 | Сервер Canvas Host | [`src/canvas-host/server.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/server.ts) | 372-441 |
 | Обработка протокола A2UI | [`src/canvas-host/a2ui.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/a2ui.ts) | 150-203 |
 | Определение инструмента Canvas | [`src/agents/tools/canvas-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/canvas-tool.ts) | 52-179 |

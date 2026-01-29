@@ -42,7 +42,7 @@ You've already started the Gateway and configured AI models, but browser tool us
 **Browser tool suitable scenarios**:
 
 | Scenario | Action | Example |
-|----------|--------|---------|
+|--- | --- | ---|
 | Automated Forms | `act` + `fill` | Fill registration forms, submit orders |
 | Web Scraping | `snapshot` | Extract web structure, scrape data |
 | Screenshot Saving | `screenshot` | Save web screenshots, save evidence |
@@ -79,7 +79,7 @@ Browser tools are built-in automation tools in Clawdbot that allow AI to control
 **Two Browser Modes**:
 
 | Mode | Profile | Driver | Description |
-|------|---------|--------|-------------|
+|--- | --- | --- | ---|
 | **Standalone Browser** | `clawd` (default) | clawd | Clawdbot launches a standalone Chrome/Chromium instance |
 | **Chrome Relay** | `chrome` | extension | Takes over your existing Chrome tabs (requires extension installation) |
 
@@ -212,7 +212,7 @@ Page snapshot:
 ::: tip Snapshot Format Selection
 
 | Format | Use Case | Features |
-|--------|----------|----------|
+|--- | --- | ---|
 | `ai` | Default, AI understanding | Good readability, suitable for AI parsing |
 | `aria` | Structured output | Suitable for scenarios requiring precise structure |
 | `refs="aria"` | Cross-call stable | Recommended for multi-step operations (snapshot → act) |
@@ -284,7 +284,7 @@ target: sandbox
 ::: tip Common UI Operations
 
 | Operation | Kind | Parameters |
-|-----------|------|------------|
+|--- | --- | ---|
 | Click | `click` | `ref`, `doubleClick`, `button`, `modifiers` |
 | Type Text | `type` | `ref`, `text`, `submit`, `slowly` |
 | Press Key | `press` | `key`, `targetId` |
@@ -333,7 +333,7 @@ type: jpeg
 ::: tip Screenshot Format
 
 | Format | Use Case |
-|--------|----------|
+|--- | ---|
 | `png` | Default, lossless compression, suitable for documentation |
 | `jpeg` | Lossy compression, smaller file size, suitable for storage |
 
@@ -534,7 +534,7 @@ In this lesson, you learned:
 **Quick Reference**:
 
 | Operation | Action | Key Parameters |
-|-----------|--------|----------------|
+|--- | --- | ---|
 | Start Browser | `start` | `profile` (clawd/chrome) |
 | Open Web Page | `open` | `targetUrl` |
 | Get Snapshot | `snapshot` | `targetId`, `snapshotFormat`, `refs` |
@@ -563,7 +563,7 @@ In this lesson, you learned:
 > Last updated: 2026-01-27
 
 | Function | File Path | Lines |
-|----------|-----------|-------|
+|--- | --- | ---|
 | Browser Tool Definition | [`src/agents/tools/browser-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/browser-tool.ts) | 269-791 |
 | Browser Schema | [`src/agents/tools/browser-tool.schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/browser-tool.schema.ts) | 1-115 |
 | Action Type Definition | [`src/browser/client-actions-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/browser/client-actions-core.ts) | 18-86 |

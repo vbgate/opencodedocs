@@ -42,7 +42,7 @@ order: 210
 Everything Claude Code 包含 11 个技能库，每套技能都有明确的目标和应用场景：
 
 | 技能库 | 目标 | 优先级 | 使用场景 |
-| ------- | ---- | ------ | -------- |
+|--- | --- | --- | ---|
 | **coding-standards** | 统一编码规范、最佳实践 | P0 | 通用编码、TypeScript/JavaScript/React |
 | **backend-patterns** | 后端架构模式、API 设计 | P0 | Node.js、Express、Next.js API 路由开发 |
 | **frontend-patterns** | 前端开发模式、性能优化 | P0 | React、Next.js、状态管理 |
@@ -2643,7 +2643,7 @@ test('enforces rate limits', async () => {
 ### 模式类型
 
 | 模式 | 描述 |
-|-------|------|
+|--- | ---|
 | `error_resolution` | 如何解决特定错误 |
 | `user_corrections` | 来自用户更正的模式 |
 | `workarounds` | 框架/库怪癖的解决方案 |
@@ -3570,18 +3570,18 @@ Everything Claude Code 的 11 个技能库为开发过程提供了全面的知�
 > 更新时间：2026-01-25
 
 | 技能库 | 文件路径 | 行号 |
-|-------|---------|------|
-| coding-standards | [`skills/coding-standards/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/coding-standards/SKILL.md) | 1-521 |
-| backend-patterns | [`skills/backend-patterns/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/backend-patterns/SKILL.md) | 1-583 |
-| frontend-patterns | [`skills/frontend-patterns/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/frontend-patterns/SKILL.md) | 1-632 |
-| continuous-learning | [`skills/continuous-learning/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/continuous-learning/SKILL.md) | 1-81 |
-| strategic-compact | [`skills/strategic-compact/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/strategic-compact/SKILL.md) | 1-64 |
-| tdd-workflow | [`skills/tdd-workflow/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/tdd-workflow/SKILL.md) | 1-410 |
-| security-review | [`skills/security-review/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/security-review/SKILL.md) | 1-495 |
-| eval-harness | [`skills/eval-harness/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/eval-harness/SKILL.md) | 1-222 |
-| verification-loop | [`skills/verification-loop/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/verification-loop/SKILL.md) | 1-121 |
-| project-guidelines-example | [`skills/project-guidelines-example/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/project-guidelines-example/SKILL.md) | 1-346 |
-| clickhouse-io | [`skills/clickhouse-io/SKILL.md`](https://github.com/affaan-m/everything-claude-code/blob/main/skills/clickhouse-io/SKILL.md) | 1-430 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 
 **关键原则**：
 - **coding-standards**: 不可变模式、文件 < 800 行、函数 < 50 行、80%+ 测试覆盖率

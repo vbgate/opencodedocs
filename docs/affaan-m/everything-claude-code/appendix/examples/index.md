@@ -40,7 +40,7 @@ This document provides complete configuration examples to help you quickly get s
 Everything Claude Code supports two configuration levels:
 
 | Config Type | Location | Scope | Typical Use Cases |
-| ----------- | -------- | ----- | ----------------- |
+|--- | --- | --- | ---|
 | **Project-Level Config** | Project root `CLAUDE.md` | Current project only | Project-specific rules, tech stack, file structure |
 | **User-Level Config** | `~/.claude/CLAUDE.md` | All projects | Personal coding preferences, universal rules, editor settings |
 
@@ -104,11 +104,11 @@ Save the following content to `CLAUDE.md` in the project root:
 
 ```
 src/
-|-- app/              # Next.js app router
-|-- components/       # Reusable UI components
-|-- hooks/            # Custom React hooks
-|-- lib/              # Utility libraries
-|-- types/            # TypeScript definitions
+|---|
+|---|
+|---|
+|---|
+|---|
 ```
 
 ## Key Patterns
@@ -178,7 +178,7 @@ Election Markets Platform - A prediction market platform for political events us
 This is the most important part, defining rules that the project must follow:
 
 | Rule Category | Description | Required |
-| ------------- | ----------- | -------- |
+|--- | --- | ---|
 | Code Organization | File organization principles | Yes |
 | Code Style | Coding style | Yes |
 | Testing | Testing requirements | Yes |
@@ -242,7 +242,7 @@ You are Claude Code. I use specialized agents and skills for complex tasks.
 Detailed guidelines are in `~/.claude/rules/`:
 
 | Rule File | Contents |
-|-----------|----------|
+|--- | ---|
 | security.md | Security checks, secret management |
 | coding-style.md | Immutability, file organization, error handling |
 | testing.md | TDD workflow, 80% coverage requirement |
@@ -258,10 +258,10 @@ Detailed guidelines are in `~/.claude/rules/`:
 Located in `~/.claude/agents/`:
 
 | Agent | Purpose |
-|-------|---------|
+|--- | ---|
 | planner | Feature implementation planning |
 | architect | System design and architecture |
-| tdd-guide | Test-driven development |
+|--- | ---|
 | code-reviewer | Code review for quality/security |
 | security-reviewer | Security vulnerability analysis |
 | build-error-resolver | Build error resolution |
@@ -342,7 +342,7 @@ Link to modular rule files to keep configuration concise:
 Detailed guidelines are in `~/.claude/rules/`:
 
 | Rule File | Contents |
-|-----------|----------|
+|--- | ---|
 | security.md | Security checks, secret management |
 | coding-style.md | Immutability, file organization, error handling |
 | testing.md | TDD workflow, 80% coverage requirement |
@@ -392,7 +392,7 @@ affoon:~/projects/myapp main* ctx:73% sonnet-4.5 14:30 todos:3
 ```
 
 | Component | Meaning | Example |
-| --------- | ------- | ------- |
+|--- | --- | ---|
 | `user` | Current username | `affoon` |
 | `path` | Current directory (~ abbreviation) | `~/projects/myapp` |
 | `branch*` | Git branch (* indicates uncommitted changes) | `main*` |
@@ -406,7 +406,7 @@ affoon:~/projects/myapp main* ctx:73% sonnet-4.5 14:30 todos:3
 The statusline uses ANSI color codes and can be customized:
 
 | Color Code | Variable | Purpose | RGB |
-| ---------- | -------- | ------- | --- |
+|--- | --- | --- | ---|
 | Blue | `B` | Directory path | 30,102,245 |
 | Green | `G` | Git branch | 64,160,43 |
 | Yellow | `Y` | Dirty status, time | 223,142,29 |

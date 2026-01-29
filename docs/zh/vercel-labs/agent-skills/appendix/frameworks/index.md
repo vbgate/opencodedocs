@@ -44,7 +44,7 @@ Vercel Deploy 技能通过扫描项目的 `package.json` 文件中的 `dependenc
 ### React 生态
 
 | 框架                 | 检测依赖         | 返回值             |
-| -------------------- | ---------------- | ------------------ |
+|--- | --- | ---|
 | **Next.js**          | `next`           | `nextjs`           |
 | **Gatsby**           | `gatsby`         | `gatsby`           |
 | **Remix**            | `@remix-run/`    | `remix`            |
@@ -57,7 +57,7 @@ Vercel Deploy 技能通过扫描项目的 `package.json` 文件中的 `dependenc
 ### Vue 生态
 
 | 框架          | 检测依赖    | 返回值      |
-| ------------- | ----------- | ----------- |
+|--- | --- | ---|
 | **Nuxt**      | `nuxt`      | `nuxtjs`    |
 | **VitePress** | `vitepress` | `vitepress` |
 | **VuePress**  | `vuepress`  | `vuepress`  |
@@ -66,7 +66,7 @@ Vercel Deploy 技能通过扫描项目的 `package.json` 文件中的 `dependenc
 ### Svelte 生态
 
 | 框架                | 检测依赖        | 返回值        |
-| ------------------- | --------------- | ------------- |
+|--- | --- | ---|
 | **SvelteKit**       | `@sveltejs/kit` | `sveltekit-1` |
 | **Svelte**          | `svelte`        | `svelte`      |
 | **Sapper** (legacy) | `sapper`        | `sapper`      |
@@ -74,14 +74,14 @@ Vercel Deploy 技能通过扫描项目的 `package.json` 文件中的 `dependenc
 ### Angular
 
 | 框架              | 检测依赖         | 返回值          |
-| ----------------- | ---------------- | --------------- |
+|--- | --- | ---|
 | **Angular**       | `@angular/core`  | `angular`       |
 | **Ionic Angular** | `@ionic/angular` | `ionic-angular` |
 
 ### 静态站点生成器
 
 | 框架           | 检测依赖           | 返回值         |
-| -------------- | ------------------ | -------------- |
+|--- | --- | ---|
 | **Astro**      | `astro`            | `astro`        |
 | **Docusaurus** | `@docusaurus/core` | `docusaurus-2` |
 | **Hexo**       | `hexo`             | `hexo`         |
@@ -91,7 +91,7 @@ Vercel Deploy 技能通过扫描项目的 `package.json` 文件中的 `dependenc
 ### Node.js 后端框架
 
 | 框架        | 检测依赖       | 返回值    |
-| ----------- | -------------- | --------- |
+|--- | --- | ---|
 | **Express** | `express`      | `express` |
 | **NestJS**  | `@nestjs/core` | `nestjs`  |
 | **Hono**    | `hono`         | `hono`    |
@@ -103,7 +103,7 @@ Vercel Deploy 技能通过扫描项目的 `package.json` 文件中的 `dependenc
 ### 其他框架
 
 | 框架                   | 检测依赖                    | 返回值                  |
-| ---------------------- | --------------------------- | ----------------------- |
+|--- | --- | ---|
 | **SolidStart**         | `@solidjs/start`            | `solidstart-1`          |
 | **Ember**              | `ember-cli`, `ember-source` | `ember`                 |
 | **Dojo**               | `@dojo/framework`           | `dojo`                  |
@@ -119,7 +119,7 @@ Vercel Deploy 技能通过扫描项目的 `package.json` 文件中的 `dependenc
 ### 构建工具
 
 | 框架       | 检测依赖 | 返回值   |
-| ---------- | -------- | -------- |
+|--- | --- | ---|
 | **Vite**   | `vite`   | `vite`   |
 | **Parcel** | `parcel` | `parcel` |
 
@@ -316,7 +316,7 @@ Agent Skills 的 Vercel Deploy 功能支持 **45+ 种框架**，覆盖主流前�
 > 更新时间：2026-01-25
 
 | 功能           | 文件路径                                                                                                                                                                         | 行号    |
-| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 框架检测逻辑   | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 11-156  |
 | 部署脚本入口   | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh)                                                  | 1-250   |
 | 静态 HTML 处理 | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh)                                                  | 192-205 |

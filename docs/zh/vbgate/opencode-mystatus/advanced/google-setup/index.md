@@ -32,7 +32,7 @@ opencode-mystatus 支持同时查询多个 Google Cloud Antigravity 账号。每
 Google Cloud Antigravity 提供多个模型，插件会显示其中 4 个最常用的：
 
 | 显示名称 | 模型 Key（主） | 模型 Key（备选） |
-| -------- | -------------- | --------------- |
+|--- | --- | ---|
 | G3 Pro | `gemini-3-pro-high` | `gemini-3-pro-low` |
 | G3 Image | `gemini-3-pro-image` | - |
 | G3 Flash | `gemini-3-flash` | - |
@@ -230,7 +230,7 @@ Claude     1d 5h      ████████░░░░░░░░░░░ 
 > 更新时间：2026-01-23
 
 | 功能 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 模型配置映射 | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 69-78 |
 | 多账号并行查询 | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 327-334 |
 | 账号过滤（必须有邮箱） | [`plugin/lib/google.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/google.ts) | 318 |

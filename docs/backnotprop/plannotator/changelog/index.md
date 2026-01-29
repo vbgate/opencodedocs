@@ -26,7 +26,7 @@ This chapter records Plannotator's version history, new feature releases, and bu
 The changelog is suitable for reading in the following scenarios:
 
 | Scenario | Recommendation |
-|----------|----------------|
+|--- | ---|
 | **Pre-upgrade check** | View new features and breaking changes in the target version |
 | **Feature exploration** | Understand what new features are added in the latest version |
 | **Troubleshooting** | Confirm if a bug has been fixed in a new version |

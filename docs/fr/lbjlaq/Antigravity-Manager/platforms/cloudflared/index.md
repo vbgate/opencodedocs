@@ -58,7 +58,7 @@ L'exposition publique comporte des risques ! Veuillez vous assurer de :
 La logique "téléchargement automatique + installation" intégrée au projet ne couvre que ces combinaisons OS/architecture (d'autres plates-formes signaleront `Unsupported platform`).
 
 | Système d'exploitation | Architecture | État de prise en charge |
-| --- | --- | --- |
+|--- | --- | ---|
 | macOS | Apple Silicon (arm64) | ✅ |
 | macOS | Intel (x86_64) | ✅ |
 | Linux | x86_64 | ✅ |
@@ -68,7 +68,7 @@ La logique "téléchargement automatique + installation" intégrée au projet ne
 ### Comparaison des deux modes
 
 | Caractéristique | Mode Quick | Mode Auth |
-| --- | --- | --- |
+|--- | --- | ---|
 | **Type d'URL** | `https://xxx.trycloudflare.com` (URL temporaire extraite des journaux) | L'application ne peut pas extraire automatiquement l'URL (dépend des journaux cloudflared) ; le nom de domaine d'entrée est basé sur votre configuration côté Cloudflare |
 | **Token requis** | ❌ Non requis | ✅ Requis (obtenu depuis la console Cloudflare) |
 | **Stabilité** | L'URL peut changer avec le redémarrage du processus | Dépend de votre configuration côté Cloudflare (l'application ne fait que démarrer le processus) |
@@ -138,7 +138,7 @@ Choisissez le mode approprié selon votre scénario d'utilisation.
 2. Cliquez pour choisir :
 
 | Mode | Description | Quand choisir |
-| --- | --- | --- |
+|--- | --- | ---|
 | **Quick Tunnel** | Génère automatiquement une URL temporaire (`*.trycloudflare.com`) | Test rapide, accès temporaire |
 | **Named Tunnel** | Utilise le compte Cloudflare et un nom de domaine personnalisé | Environnement de production, besoin de nom de domaine fixe |
 
@@ -378,12 +378,12 @@ Vous apprendrez :
 > Dernière mise à jour : 2026-01-23
 
 | Fonction | Chemin du fichier | Numéro de ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | Nom du répertoire de données (`.antigravity_tools`) | [`src-tauri/src/modules/account.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/account.rs#L16-L33) | 16-33 |
 | Structure de configuration et valeurs par défaut (`CloudflaredConfig`, `TunnelMode`) | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L16-L59) | 16-59 |
 | Règles d'URL de téléchargement automatique (OS/architecture pris en charge) | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L70-L88) | 70-88 |
 | Logique d'installation (téléchargement/écriture/extraction/autorisations) | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L147-L211) | 147-211 |
-| Paramètres de démarrage Quick/Auth (`tunnel --url` vs `tunnel run --token`) | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L233-L266) | 233-266 |
+|--- | --- | ---|
 | Règles d'extraction d'URL (identifie uniquement `*.trycloudflare.com`) | [`src-tauri/src/modules/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/cloudflared.rs#L390-L413) | 390-413 |
 | Interface de commande Tauri (check/install/start/stop/get_status) | [`src-tauri/src/commands/cloudflared.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/cloudflared.rs#L6-L118) | 6-118 |
 | Carte d'interface utilisateur (mode/Token/HTTP2/affichage et copie d'URL) | [`src/pages/ApiProxy.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/ApiProxy.tsx#L1597-L1753) | 1597-1753 |

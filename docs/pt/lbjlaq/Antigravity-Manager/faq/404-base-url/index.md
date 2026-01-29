@@ -73,7 +73,7 @@ Se você em modo `auth_mode=strict/all_except_health/auto(allow_lan_access=true)
 As rotas de proxy reverso do Antigravity Tools são "caminho completo codificado" (veja `src-tauri/src/proxy/server.rs`), entradas comuns são:
 
 | Protocolo | Rota | Finalidade |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI | `/v1/models` | Listar modelos |
 | OpenAI | `/v1/chat/completions` | Chat completions |
 | OpenAI | `/v1/responses` | Compatibilidade Codex CLI |
@@ -122,7 +122,7 @@ Invoke-WebRequest -UseBasicParsing http://127.0.0.1:8045/v1beta/models | Select-
 A armadilha de Base URL, essencialmente é "caminho que você escreveu" e "caminho que cliente adiciona" ficaram juntos.
 
 | Coisa que você está usando | Escrita recomendada de Base URL | Rota que você está alinhando |
-| --- | --- | --- |
+|--- | --- | ---|
 | OpenAI SDK (Python/Node, etc) | `http://127.0.0.1:8045/v1` | `/v1/chat/completions`, `/v1/models` |
 | Claude Code CLI (Anthropic) | `http://127.0.0.1:8045` | `/v1/messages` |
 | Gemini SDK / Cliente estilo Gemini | `http://127.0.0.1:8045` | `/v1beta/models/*` |
@@ -170,7 +170,7 @@ http://127.0.0.1:8045/v1/chat/completions
 Você pode usar esta tabela para verificar rapidamente se seu "caminho de solicitação final" pode atingir rotas do Antigravity Tools:
 
 | Caminho que você vê nos logs | Conclusão |
-| --- | --- |
+|--- | ---|
 | Começando com `/v1/` (ex: `/v1/models`, `/v1/chat/completions`) | Rotas compatíveis OpenAI/Anthropic |
 | Começando com `/v1beta/` (ex: `/v1beta/models/...`) | Rotas geradoras Gemini |
 | Aparecendo `/v1/v1/` | Base URL trouxe `/v1`, cliente concatenou novamente |
@@ -207,7 +207,7 @@ Você pode usar esta tabela para verificar rapidamente se seu "caminho de solici
 ## Resumo da lição
 
 | Fenômeno | Causa mais comum | Como você deve corrigir |
-| --- | --- | --- |
+|--- | --- | ---|
 | Sempre 404 | Conexão de Base URL errada | Primeiro verifique com curl `/v1/models`/`/v1beta/models` não é 404 |
 | `/v1/v1/...` | `/v1` duplicado | Base URL do OpenAI SDK mantenha até terminar em `/v1` |
 | `/v1/chat/completions/responses` | Cliente com caminho sobreposto | Mude para protocolo Gemini ou faça reescrita de caminho (não recomendado para iniciante) |
@@ -233,7 +233,7 @@ Você pode usar esta tabela para verificar rapidamente se seu "caminho de solici
 > Atualizado em: 2026-01-23
 
 | Funcionalidade | Caminho do arquivo | Linha |
-| --- | --- | --- |
+|--- | --- | ---|
 | Definição de rota de proxy reverso (tabela completa de rotas) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L120-L193) | 120-193 |
 | `AxumServer::start()` (entrada de construção de rota) | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L79-L216) | 79-216 |
 | `health_check_handler()` | [`src-tauri/src/proxy/server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/server.rs#L266-L272) | 266-272 |

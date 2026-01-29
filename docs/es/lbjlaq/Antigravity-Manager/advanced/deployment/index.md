@@ -61,7 +61,7 @@ Si vas a exponer 8045 a LAN/pública, primero consulta **[Seguridad y privacidad
 ## Guía rápida de selección: Docker vs Headless Xvfb
 
 | Lo que más te importa | Recomendado | Por qué |
-| --- | --- | --- |
+|--- | --- | ---|
 | Necesitas navegador para OAuth/autorización | Docker (noVNC) | El contenedor incluye Firefox ESR, puedes operar directamente desde el navegador (ver `deploy/docker/README.md`) |
 | Quieres gestión con systemd/registros en disco | Headless Xvfb | El script install instalará el servicio systemd y añadirá registros a `logs/app.log` (ver `deploy/headless-xvfb/install.sh`) |
 | Quieres aislamiento y límites de recursos | Docker | La forma compose proporciona aislamiento natural y facilita la configuración de límites de recursos (ver `deploy/docker/README.md`) |
@@ -222,7 +222,7 @@ sudo ./upgrade.sh
 ## Advertencia de errores comunes
 
 | Escenario | Error común (❌) | Enfoque recomendado (✓) |
-| --- | --- | --- |
+|--- | --- | ---|
 | Pérdida de cuenta/configuración | ❌ Solo te importa "que el programa se ejecute" | ✓ Primero confirma que `.antigravity_tools/` está persistido (volume o `/opt/antigravity`) |
 | Cambio de puerto noVNC no surte efecto | ❌ Solo cambias `NOVNC_PORT` | ✓ Mantén predeterminado 6080; si cambias, verifica simultáneamente el puerto `websockify` en `start.sh` |
 | Exponer 8045 a pública | ❌ No estableces `api_key`/no revisas auth_mode | ✓ Primero haz la línea base según **[Seguridad y privacidad](/es/lbjlaq/Antigravity-Manager/advanced/security/)**, luego considera túnel/proxy inverso |
@@ -249,7 +249,7 @@ sudo ./upgrade.sh
 > Última actualización: 2026-01-23
 
 | Función | Ruta de archivo | Línea |
-| --- | --- | --- |
+|--- | --- | ---|
 | Entrada de despliegue Docker y URL noVNC | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L5-L13) | 5-13 |
 | Descripción de variables de entorno de despliegue Docker (VNC_PASSWORD/RESOLUTION/NOVNC_PORT) | [`deploy/docker/README.md`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/README.md#L32-L39) | 32-39 |
 | Mapeo de puertos y volúmenes de datos de Docker compose (antigravity_data) | [`deploy/docker/docker-compose.yml`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/deploy/docker/docker-compose.yml#L1-L21) | 1-21 |

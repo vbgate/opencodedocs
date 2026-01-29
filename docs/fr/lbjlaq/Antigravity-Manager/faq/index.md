@@ -13,7 +13,7 @@ Ce chapitre recense les codes d'erreur et les scénarios d'exception les plus co
 ## Contenu de ce chapitre
 
 | Type de problème | Page | Description |
-|------------------|------|-------------|
+|--- | --- | ---|
 | Compte désactivé | [invalid_grant et désactivation automatique du compte](./invalid-grant/) | Compte soudainement indisponible ? Comprenez les causes de l'expiration du jeton OAuth et le processus de récupération |
 | Échec d'authentification | [401/Échec d'authentification](./auth-401/) | Requête rejetée ? Vérifiez la configuration auth_mode et le format des en-têtes |
 | Erreur de limitation | [429/Erreur de capacité](./429-rotation/) | 429 fréquent ? Distinguez le quota insuffisant de la limitation amont, utilisez la stratégie de rotation pour réduire l'impact |

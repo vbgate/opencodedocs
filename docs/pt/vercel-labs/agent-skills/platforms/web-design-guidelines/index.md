@@ -65,7 +65,7 @@ Antes de começar, certifique-se de que você:
 As diretrizes de design da web cobrem **17 categorias**, divididas em três grandes blocos por prioridade:
 
 | Bloco de Categorias    | Foco                 | Benefício Típico                      |
-| --------------------- | --------------------- | ------------------------------------- |
+|--- | --- | ---|
 | **Acessibilidade (Accessibility)** | Garante que todos os usuários possam usar (incluindo leitores de tela, usuários de teclado) | Atende aos padrões WCAG, amplia o público de usuários |
 | **Desempenho & UX (Performance & UX)** | Otimiza velocidade de carregamento, fluidez de animações, experiência de interação | Melhora retenção de usuários, reduz taxa de rejeição |
 | **Integridade & Detalhes (Completeness)** | Modo escuro, design responsivo, validação de formulários, tratamento de erros | Reduz reclamações de usuários, melhora imagem da marca |
@@ -73,7 +73,7 @@ As diretrizes de design da web cobrem **17 categorias**, divididas em três gran
 **17 Categorias de Regras**:
 
 | Categoria        | Regras Típicas                       | Prioridade |
-| ----------------- | -------------------------------------- | ---------- |
+|--- | --- | ---|
 | Accessibility    | aria-labels, HTML semântico, tratamento de teclado | ⭐⭐⭐ Mais alta |
 | Focus States    | Foco visível, :focus-visible em vez de :focus | ⭐⭐⭐ Mais alta |
 | Forms            | autocomplete, validação, tratamento de erros  | ⭐⭐⭐ Mais alta |
@@ -634,7 +634,7 @@ Você aprenderá:
 > Atualizado em: 2026-01-25
 
 | Função           | Caminho do Arquivo                                                                 | Número de Linha |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+|--- | --- | ---|
 | Definição de habilidade de Diretrizes de Design da Web | [`skills/web-design-guidelines/SKILL.md`](https://github.com/vercel-labs/agent-skills/blob/main/skills/web-design-guidelines/SKILL.md) | Total          |
 | Fonte de regras (100 regras) | [`https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md`](https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md) | Total          |
 | Visão geral README | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md) | 28-50          |
@@ -642,7 +642,7 @@ Você aprenderá:
 **17 Categorias de Regras**:
 
 | Categoria             | Quantidade de Regras | Regras Típicas                                    |
-| -------------------- | ------------------- | ----------------------------------------------------- |
+|--- | --- | ---|
 | Accessibility         | 10 regras         | aria-labels, HTML semântico, tratamento de teclado |
 | Focus States         | 4 regras          | Foco visível, :focus-visible                       |
 | Forms                | 11 regras         | autocomplete, validação, tratamento de erros          |

@@ -130,7 +130,7 @@ graph LR
 Agent Skills 사용을 위한 최적 시나리오:
 
 | 시나리오 | 사용할 스킬 | 프롬프트 예시 |
-| ---- | ---------- | -------------- |
+|--- | --- | ---|
 | React 컴포넌트 작성 | react-best-practices | "Review this React component for performance issues" |
 | Next.js 페이지 최적화 | react-best-practices | "Help me optimize this Next.js page" |
 | UI 품질 확인 | web-design-guidelines | "Check accessibility of my site" |
@@ -189,7 +189,7 @@ Agent Skills은 AI 코딩 에이전트를 위한 스킬 팩 시스템으로 제�
 > 업데이트 날짜: 2026-01-25
 
 | 기능        | 파일 경로                                                              | 행번호    |
-| ----------- | --------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | 스킬 팩 목록   | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L7-L80) | 7-80    |
 | 스킬 구조 설명 | [`README.md`](https://github.com/vercel-labs/agent-skills/blob/main/README.md#L103-L110) | 103-110 |
 | AGENTS.md 스펙 | [`AGENTS.md`](https://github.com/vercel-labs/agent-skills/blob/main/AGENTS.md) | 전체    |

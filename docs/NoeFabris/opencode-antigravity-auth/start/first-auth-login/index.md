@@ -131,7 +131,7 @@ https://accounts.google.com/o/oauth2/v2/auth?client_id=...&code_challenge=...
 The plugin automatically detects the runtime environment:
 
 | Environment | Bind Address | Reason |
-|-------------|--------------|--------|
+|--- | --- | ---|
 | Local macOS/Linux/Windows | `127.0.0.1` | Most secure, only accepts local connections |
 | WSL / Docker / SSH Remote | `0.0.0.0` | Allows browser access from host machine |
 
@@ -399,7 +399,7 @@ Using default project ID: rising-fact-p41fc
 The plugin will automatically refresh in the following situations:
 
 | Trigger Condition | Action | Source Location |
-|------------------|--------|-----------------|
+|--- | --- | ---|
 | Token expires in 60 seconds | Auto-refresh | `src/plugin/auth.ts:33` |
 | Receive 401 Unauthorized | Attempt refresh | `src/plugin/auth.ts:33` |
 | Refresh failed | Prompt user to re-login | `src/plugin.ts:995` |
@@ -446,12 +446,12 @@ You can now initiate your first model request!
 > Last updated: 2026-01-23
 
 | Feature | File Path | Lines |
-| ----------- | ---------------------------------------------------------------------------------------------- | ------- |
+|--- | --- | ---|
 | PKCE key generation | [`src/antigravity/oauth.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/antigravity/oauth.ts#L91-L113) | 91-113  |
 | Build authorization URL | [`src/antigravity/oauth.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/antigravity/oauth.ts#L91-L113) | 91-113  |
 | Exchange token | [`src/antigravity/oauth.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/antigravity/oauth.ts#L201-L270) | 201-270 |
 | Get user info | [`src/antigravity/oauth.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/antigravity/oauth.ts#L231-L242) | 231-242 |
-| Auto-fetch Project ID | [`src/antigravity/oauth.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/antigravity/oauth.ts#L131-L196) | 131-196 |
+|--- | --- | ---|
 | Environment detection | [`src/plugin/server.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/server.ts#L31-L134) | 31-134  |
 | OAuth callback server | [`src/plugin/server.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/server.ts#L140-L366) | 140-366 |
 | Token expiration check | [`src/plugin/auth.ts`](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/src/plugin/auth.ts#L33-L38) | 33-38   |

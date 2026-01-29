@@ -120,7 +120,7 @@ Copy-Item (Join-Path $HOME ".antigravity_tools\gui_config.json") (Join-Path $bac
 下面这些默认值来自后端 `AppConfig::new()` 和 `ProxyConfig::default()`：
 
 | 配置块 | 字段 | 默认值（源码） | 你需要记住的点 |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | AppConfig | `language` | `"zh"` | 默认中文 |
 | AppConfig | `theme` | `"system"` | 跟随系统 |
 | AppConfig | `auto_refresh` | `true` | 默认会自动刷新配额 |
@@ -270,7 +270,7 @@ Invoke-WebRequest -UseBasicParsing "http://127.0.0.1:8050/healthz" | Select-Obje
 > 更新时间：2026-01-24
 
 | 主题 | 文件路径 | 行号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | AppConfig 默认值（`AppConfig::new()`） | [`src-tauri/src/models/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/models/config.rs#L4-L158) | 4-158 |
 | ProxyConfig 默认值（端口/鉴权/监听地址） | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L74-L292) | 74-292 |
 | StickySessionConfig 默认值（调度） | [`src-tauri/src/proxy/sticky_config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/sticky_config.rs#L3-L36) | 3-36 |

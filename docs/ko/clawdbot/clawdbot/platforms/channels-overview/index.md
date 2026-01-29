@@ -73,7 +73,7 @@ Clawdbot의 채널 시스템은 **플러그인 아키텍처**를 채택합니다
 **핵심 개념**:
 
 | 개념         | 역할                         |
-| ------------ | ---------------------------- |
+|--- | ---|
 | **채널 플러그인** | 각 채널은 독립적인 플러그인으로 구현    |
 | **통합 인터페이스** | 모든 채널에서 동일한 API 사용        |
 | **DM 보호**   | 기본적으로 페어링 메커니즘 활성화, 알 수 없는 발신자 차단 |
@@ -88,7 +88,7 @@ Clawdbot은 **13개 이상의 통신 채널**을 지원하며, 두 가지 카테
 ### 핵심 채널(내장)
 
 | 채널           | 인증 방식             | 난이도 | 특징                              |
-| -------------- | -------------------- | ---- | --------------------------------- |
+|--- | --- | --- | ---|
 | **Telegram**   | Bot Token            | ⭐   | 가장 간단하고 빠름, 초보자 추천                |
 | **WhatsApp**   | QR Code / Phone Link | ⭐⭐  | 실제 번호 사용, 별도 휴대폰 + eSIM 추천 |
 | **Slack**      | Bot Token + App Token | ⭐⭐ | 업무 환경 최적, Socket Mode         |
@@ -100,7 +100,7 @@ Clawdbot은 **13개 이상의 통신 채널**을 지원하며, 두 가지 카테
 ### 확장 채널(외부 플러그인)
 
 | 채널             | 인증 방식             | 유형       | 특징                              |
-| ---------------- | -------------------- | ---------- | --------------------------------- |
+|--- | --- | --- | ---|
 | **WebChat**       | Gateway WebSocket     | 내장       | 타사 인증 불필요, 가장 간단            |
 | **LINE**          | Messaging API        | 외부 플러그인   | 아시아 사용자에게 인기                     |
 | **BlueBubbles**   | Private API         | 확장 플러그인   | iMessage 확장, 원격 장치 지원       |
@@ -606,7 +606,7 @@ channels:
 > 업데이트 시간: 2026-01-27
 
 | 기능            | 파일 경로                                                                                               | 행 번호    |
-| --------------- | ------------------------------------------------------------------------------------------------------ | ------- |
+|--- | --- | ---|
 | 채널 레지스트리       | [`src/channels/registry.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.ts) | 7-100   |
 | 채널 플러그인 디렉토리   | [`src/channels/plugins/`](https://github.com/clawdbot/clawdbot/tree/main/src/channels/plugins/) | 전체 디렉토리  |
 | 채널 메타데이터 유형   | [`src/channels/plugins/types.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/types.core.ts) | 74-93   |

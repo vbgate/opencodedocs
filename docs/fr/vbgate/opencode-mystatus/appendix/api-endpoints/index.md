@@ -39,7 +39,7 @@ Comprendre ces interfaces vous permet de :
 **Informations sur l'interface** :
 
 | Élément | Valeur |
-| ------- | ------ |
+|--- | ---|
 | URL | `https://chatgpt.com/backend-api/wham/usage` |
 | Méthode | GET |
 | Méthode d'authentification | Bearer Token (OAuth) |
@@ -91,7 +91,7 @@ ChatGPT-Account-Id: {team_account_id}  // Optionnel, nécessaire pour les compte
 **Informations sur l'interface** :
 
 | Élément | Valeur |
-| ------- | ------ |
+|--- | ---|
 | URL | `https://bigmodel.cn/api/monitor/usage/quota/limit` |
 | Méthode | GET |
 | Méthode d'authentification | API Key |
@@ -151,7 +151,7 @@ User-Agent: OpenCode-Status-Plugin/1.0
 **Informations sur l'interface** :
 
 | Élément | Valeur |
-| ------- | ------ |
+|--- | ---|
 | URL | `https://api.z.ai/api/monitor/usage/quota/limit` |
 | Méthode | GET |
 | Méthode d'authentification | API Key |
@@ -176,7 +176,7 @@ User-Agent: OpenCode-Status-Plugin/1.0
 **Informations sur l'interface** :
 
 | Élément | Valeur |
-| ------- | ------ |
+|--- | ---|
 | URL | `https://oauth2.googleapis.com/token` |
 | Méthode | POST |
 | Méthode d'authentification | OAuth Refresh Token |
@@ -218,7 +218,7 @@ client_id={client_id}
 **Informations sur l'interface** :
 
 | Élément | Valeur |
-| ------- | ------ |
+|--- | ---|
 | URL | `https://cloudcode-pa.googleapis.com/v1internal:fetchAvailableModels` |
 | Méthode | POST |
 | Méthode d'authentification | Bearer Token (OAuth) |
@@ -282,7 +282,7 @@ User-Agent: antigravity/1.11.9 windows/amd64
 **Informations sur l'interface** :
 
 | Élément | Valeur |
-| ------- | ------ |
+|--- | ---|
 | URL | `https://api.github.com/users/{username}/settings/billing/premium_request/usage` |
 | Méthode | GET |
 | Méthode d'authentification | Fine-grained PAT (Personal Access Token) |
@@ -350,7 +350,7 @@ Le Fine-grained PAT (Personal Access Token Fine-grained) est un nouveau type de 
 **Informations sur l'interface** :
 
 | Élément | Valeur |
-| ------- | ------ |
+|--- | ---|
 | URL | `https://api.github.com/copilot_internal/user` |
 | Méthode | GET |
 | Méthode d'authentification | Copilot Session Token |
@@ -416,7 +416,7 @@ Copilot-Integration-Id: vscode-chat
 **Informations sur l'interface** :
 
 | Élément | Valeur |
-| ------- | ------ |
+|--- | ---|
 | URL | `https://api.github.com/copilot_internal/v2/token` |
 | Méthode | POST |
 | Méthode d'authentification | Jeton OAuth (obtenu à partir d'OpenCode) |
@@ -461,7 +461,7 @@ Cette interface ne s'applique qu'au processus d'authentification OAuth de l'anci
 ## Comparaison des méthodes d'authentification
 
 | Plateforme | Méthode d'authentification | Source des identifiants | Fichier d'identifiants |
-| ---------- | -------------------------- | ----------------------- | ----------------------- |
+|--- | --- | --- | ---|
 | **OpenAI** | OAuth Bearer Token | OAuth OpenCode | `~/.local/share/opencode/auth.json` |
 | **Zhipu AI** | API Key | Configuration manuelle utilisateur | `~/.local/share/opencode/auth.json` |
 | **Z.ai** | API Key | Configuration manuelle utilisateur | `~/.local/share/opencode/auth.json` |
@@ -475,7 +475,7 @@ Cette interface ne s'applique qu'au processus d'authentification OAuth de l'anci
 Toutes les demandes API ont une limite de délai de 10 secondes pour éviter les attentes prolongées :
 
 | Configuration | Valeur | Emplacement du code source |
-| ------------- | ------ | ------------------------- |
+|--- | --- | ---|
 | Temps de délai | 10 secondes | `plugin/lib/types.ts:114` |
 | Implémentation du délai | Fonction `fetchWithTimeout` | `plugin/lib/utils.ts:84-100` |
 
@@ -511,7 +511,7 @@ maskString("sk-1234567890abcdef")  // "sk-1****cdef"
 Cette leçon a présenté toutes les interfaces API officielles appelées par le plugin opencode-mystatus :
 
 | Plateforme | Nombre d'API | Méthode d'authentification |
-| ---------- | ------------ | -------------------------- |
+|--- | --- | ---|
 | OpenAI | 1 | OAuth Bearer Token |
 | Zhipu AI | 1 | API Key |
 | Z.ai | 1 | API Key |
@@ -530,7 +530,7 @@ Toutes les interfaces sont des interfaces officielles de chaque plateforme, gara
 > Date de mise à jour : 2026-01-23
 
 | Fonction | Chemin du fichier | Ligne |
-| --- | --- | --- |
+|--- | --- | ---|
 | API d'interrogation de quota OpenAI | [`plugin/lib/openai.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/openai.ts#L127-L155) | 127-155 |
 | API d'interrogation de quota Zhipu AI | [`plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts#L62-L106) | 62-106 |
 | API d'interrogation de quota Z.ai | [`plugin/lib/zhipu.ts`](https://github.com/vbgate/opencode-mystatus/blob/main/plugin/lib/zhipu.ts#L64) | 64 (interface partagée) |

@@ -76,7 +76,7 @@ LINE 用户
 **关键概念**：
 
 | 概念 | 作用 |
-|------|------|
+|--- | ---|
 | **Channel Access Token** | 用于发送消息的认证令牌 |
 | **Channel Secret** | 用于验证 Webhook 签名的密钥 |
 | **Webhook URL** | Clawdbot 接收 LINE 事件的端点（必须 HTTPS） |
@@ -88,7 +88,7 @@ LINE 用户
 ### 需要的账号和工具
 
 | 项目 | 要求 | 获取方式 |
-|------|------|----------|
+|--- | --- | ---|
 | **LINE Developers 账号** | 免费注册 | https://developers.line.biz/console/ |
 | **LINE Provider** | 创建 Provider 和 Messaging API channel | LINE Console |
 | **HTTPS 服务器** | Webhook 必须是 HTTPS | ngrok、Cloudflare Tunnel、Tailscale Serve/Funnel |
@@ -155,7 +155,7 @@ clawdbot plugins install ./extensions/line
 3. 复制以下信息：
 
 | 项目 | 位置 | 示例 |
-|------|------|------|
+|--- | --- | ---|
 | **Channel Access Token** | Basic settings → Channel access token (long-lived) | `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...` |
 | **Channel Secret** | Basic settings → Channel secret | `1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7` |
 
@@ -261,7 +261,7 @@ ngrok http 18789
 在 Webhook settings 中，勾选以下事件：
 
 | 事件 | 用途 |
-|------|------|
+|--- | ---|
 | **Message event** | 接收用户发送的消息 |
 | **Follow event** | 用户添加 Bot 为好友 |
 | **Unfollow event** | 用户移除 Bot |
@@ -348,7 +348,7 @@ clawdbot pairing approve line ABC123
 验证你的配置是否正确：
 
 | 检查项 | 验证方法 | 预期结果 |
-|--------|----------|----------|
+|--- | --- | ---|
 | **插件已安装** | `clawdbot plugins list` | 看到 `@clawdbot/line` |
 | **配置有效** | `clawdbot doctor` | 无 LINE 相关错误 |
 | **Webhook 可达** | LINE Console 验证 | `✓ Verification succeeded` |
@@ -531,7 +531,7 @@ clawdbot line rich-menu set-default --rich-menu-id <MENU_ID>
 Clawdbot 会自动将 Markdown 格式转换为 LINE 支持的格式：
 
 | Markdown | LINE 转换结果 |
-|----------|---------------|
+|--- | ---|
 | 代码块 | Flex 卡片 |
 | 表格 | Flex 卡片 |
 | 链接 | 自动检测并转换为 Flex 卡片 |
@@ -577,7 +577,7 @@ LINE 渠道提供了丰富的消息类型和交互方式，非常适合在 LINE 
 > 更新时间：2026-01-27
 
 | 功能 | 文件路径 | 行号 |
-|------|---------|------|
+|--- | --- | ---|
 | LINE Bot 核心实现 | [`src/line/bot.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/bot.ts) | 27-83 |
 | 配置 Schema 定义 | [`src/line/config-schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/config-schema.ts) | 1-54 |
 | Webhook 事件处理器 | [`src/line/bot-handlers.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/bot-handlers.ts) | 1-100 |

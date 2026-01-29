@@ -104,7 +104,7 @@ OAuth フローは2つのパートに分かれます：ブラウザ認証で `co
 サポートされる入力形式（フロントエンドが解析して一括追加）：
 
 | 入力タイプ | 例 | 解析ロジック |
-| --- | --- | --- |
+|--- | --- | ---|
 | 純粋なトークンテキスト | `1//abc...` | 正規表現抽出：`/1\/\/[a-zA-Z0-9_\-]+/g`（`AddAccountDialog.tsx:213-220` を参照） |
 | 大きなテキストに含まれる | ログ/エクスポートテキストに複数の `1//...` が含まれる | 正規表現一括抽出と重複排除（`AddAccountDialog.tsx:213-224` を参照） |
 | JSON 配列 | `[{"refresh_token":"1//..."}]` | 配列を解析して `item.refresh_token` を取得（`AddAccountDialog.tsx:198-207` を参照） |
@@ -165,7 +165,7 @@ OAuth コールバックにはブラウザがローカルコールバックア�
 ### 4) Refresh Token の正しい/間違った例
 
 | 例 | 識別されるか | 理由 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `1//0gAbC...` | ✓ | `1//` 接頭辞ルールに適合（`AddAccountDialog.tsx:215-219` を参照） |
 | `ya29.a0...` | ✗ | フロントエンド抽出ルールに適合せず、無効な入力とみなされます |
 
@@ -191,7 +191,7 @@ OAuth コールバックにはブラウザがローカルコールバックア�
 > 更新日時：2026-01-23
 
 | 機能 | ファイルパス | 行番号 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Accounts ページに追加ダイアログをマウント | [`src/pages/Accounts.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Accounts.tsx#L267-L731) | 267-731 |
 | OAuth URL 事前生成 + コールバックイベント自動終了 | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L49-L125) | 49-125 |
 | OAuth コールバックイベントが `completeOAuthLogin()` をトリガー | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L67-L109) | 67-109 |
@@ -200,7 +200,7 @@ OAuth コールバックにはブラウザがローカルコールバックア�
 | バックエンド add_account：email を無視、refresh_token を使用して実際のメールアドレスを取得し保存 | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L19-L60) | 19-60 |
 | バックエンド OAuth：refresh_token 欠如をチェックし、認証取り消しソリューションを提供 | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L38-L79) | 38-79 |
 | OAuth コールバック server：IPv4/IPv6 を同時に監視し redirect_uri を選択 | [`src-tauri/src/modules/oauth_server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/oauth_server.rs#L43-L113) | 43-113 |
-| OAuth コールバックが `code` を解析し `oauth-callback-received` を発行 | [`src-tauri/src/modules/oauth_server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/oauth_server.rs#L140-L180) | 140-180 |
+|--- | --- | ---|
 
 **重要イベント名**：
 - `oauth-url-generated`：バックエンドが OAuth URL を生成した後、フロントエンドに送信（`oauth_server.rs:250-252` を参照）

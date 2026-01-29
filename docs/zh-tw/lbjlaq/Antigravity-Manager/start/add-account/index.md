@@ -104,7 +104,7 @@ OAuth 流程分兩段:瀏覽器授權得到 `code`,再由應用程式用 `code` 
 支援的輸入形式(前端會解析並批次新增):
 
 | 輸入類型 | 例子 | 解析邏輯 |
-| --- | --- | --- |
+|--- | --- | ---|
 | 純 token 文字 | `1//abc...` | 正規表示式提取:`/1\/\/[a-zA-Z0-9_\-]+/g`(見 `AddAccountDialog.tsx:213-220`) |
 | 夾在一大段文字裡 | 日誌/匯出文字裡包含多個 `1//...` | 正規表示式批次提取並去重(見 `AddAccountDialog.tsx:213-224`) |
 | JSON 陣列 | `[{"refresh_token":"1//..."}]` | 解析陣列並取 `item.refresh_token`(見 `AddAccountDialog.tsx:198-207`) |
@@ -165,7 +165,7 @@ OAuth 回呼需要瀏覽器請求本地回呼位址。為降低失敗率,後端�
 ### 4) Refresh Token 的正確/錯誤範例
 
 | 例子 | 是否會被識別 | 原因 |
-| --- | --- | --- |
+|--- | --- | ---|
 | `1//0gAbC...` | ✓ | 符合 `1//` 前綴規則(見 `AddAccountDialog.tsx:215-219`) |
 | `ya29.a0...` | ✗ | 不符合前端提取規則,會被當成無效輸入 |
 
@@ -191,7 +191,7 @@ OAuth 回呼需要瀏覽器請求本地回呼位址。為降低失敗率,後端�
 > 更新時間:2026-01-23
 
 | 功能 | 檔案路徑 | 行號 |
-| --- | --- | --- |
+|--- | --- | ---|
 | Accounts 頁面掛載新增彈窗 | [`src/pages/Accounts.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/pages/Accounts.tsx#L267-L731) | 267-731 |
 | OAuth URL 預產生 + 回呼事件自動收尾 | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L49-L125) | 49-125 |
 | OAuth 回呼事件觸發 `completeOAuthLogin()` | [`src/components/accounts/AddAccountDialog.tsx`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src/components/accounts/AddAccountDialog.tsx#L67-L109) | 67-109 |
@@ -200,7 +200,7 @@ OAuth 回呼需要瀏覽器請求本地回呼位址。為降低失敗率,後端�
 | 後端 add_account:忽略 email、用 refresh_token 取得真實信箱並落盤 | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L19-L60) | 19-60 |
 | 後端 OAuth:檢查 refresh_token 遺失並給出撤銷授權方案 | [`src-tauri/src/commands/mod.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/mod.rs#L38-L79) | 38-79 |
 | OAuth 回呼 server:同時監聽 IPv4/IPv6 並選擇 redirect_uri | [`src-tauri/src/modules/oauth_server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/oauth_server.rs#L43-L113) | 43-113 |
-| OAuth 回呼解析 `code` 並發出 `oauth-callback-received` | [`src-tauri/src/modules/oauth_server.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/modules/oauth_server.rs#L140-L180) | 140-180 |
+|--- | --- | ---|
 
 **關鍵事件名**:
 - `oauth-url-generated`:後端產生 OAuth URL 後發給前端(見 `oauth_server.rs:250-252`)

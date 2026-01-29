@@ -121,7 +121,7 @@ Muitos problemas de "como configurar tudo errado", na verdade são suas expectat
 Abaixo estes valores padrão vêm de `AppConfig::new()` e `ProxyConfig::default()` do backend:
 
 | Bloco de Configuração | Campo | Valor Padrão (Código-fonte) | O Que Você Precisa Lembrar |
-| --- | --- | --- | --- |
+|--- | --- | --- | ---|
 | AppConfig | `language` | `"zh"` | Padrão chinês |
 | AppConfig | `theme` | `"system"` | Seguir sistema |
 | AppConfig | `auto_refresh` | `true` | Padrão atualizará cota automaticamente |
@@ -271,7 +271,7 @@ Você pode usar esta regra para autodiagnóstico:
 > Última Atualização: 2026-01-24
 
 | Tópico | Caminho do Arquivo | Número da Linha |
-| --- | --- | --- |
+|--- | --- | ---|
 | Valores Padrão AppConfig (`AppConfig::new()`) | [`src-tauri/src/models/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/models/config.rs#L4-L158) | 4-158 |
 | Valores Padrão ProxyConfig (porta/autenticação/endereço de escuta) | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L74-L292) | 74-292 |
 | Valores Padrão StickySessionConfig (agendamento) | [`src-tauri/src/proxy/sticky_config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/sticky_config.rs#L3-L36) | 3-36 |

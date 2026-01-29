@@ -68,7 +68,7 @@ La protección de una sola capa es fácil de eludir o configurar incorrectamente
 ### Comparación de tres modos de ejecución
 
 | Modo de ejecución | Ubicación de ejecución | Nivel de seguridad | Escenarios típicos | ¿Requiere aprobación? |
-|------------------|----------------------|-------------------|-------------------|----------------------|
+|--- | --- | --- | --- | ---|
 | **sandbox** | Dentro de contenedores (ej. Docker) | Alto | Entorno aislado, pruebas | No |
 | **gateway** | La máquina donde se ejecuta el demonio Gateway | Medio | Desarrollo local, integración | Sí (allowlist + aprobación) |
 | **node** | Nodo del dispositivo emparejado (macOS/iOS/Android) | Medio | Operaciones locales del dispositivo | Sí (allowlist + aprobación) |
@@ -106,7 +106,7 @@ La herramienta exec admite los siguientes parámetros：
 **Descripción de parámetros**：
 
 | Parámetro | Tipo | Valor predeterminado | Descripción |
-|-----------|------|-------------------|-------------|
+|--- | --- | --- | ---|
 | `command` | string | Requerido | Comando de Shell a ejecutar |
 | `workdir` | string | Directorio de trabajo actual | Directorio de ejecución |
 | `env` | object | Heredar entorno | Sobrescritura de variables de entorno |
@@ -148,7 +148,7 @@ Edita `~/.clawdbot/clawdbot.json`：
 **Descripción de elementos de configuración**：
 
 | Elemento de configuración | Tipo | Valor predeterminado | Descripción |
-|---------------------------|------|-------------------|-------------|
+|--- | --- | --- | ---|
 | `host` | string | sandbox | Host de ejecución predeterminado |
 | `security` | string | deny (sandbox) / allowlist (gateway, node) | Política de seguridad predeterminada |
 | `ask` | string | on-miss | Política de aprobación predeterminada |
@@ -247,7 +247,7 @@ Edita `~/.clawdbot/exec-approvals.json`：
 allowlist utiliza **coincidencia de patrones glob** (sin distinción de mayúsculas/minúsculas)：
 
 | Patrón | Coincide | Descripción |
-|--------|---------|-------------|
+|--- | --- | ---|
 | `~/Projects/**/bin/*` | `/Users/user/Projects/any/bin/rg` | Coincide todos los subdirectorios |
 | `~/.local/bin/*` | `/Users/user/.local/bin/jq` | Coincide bin local |
 | `/opt/homebrew/bin/rg` | `/opt/homebrew/bin/rg` | Coincidencia de ruta absoluta |
@@ -318,7 +318,7 @@ Edita `~/.clawdbot/clawdbot.json`：
 **Descripción de elementos de configuración**：
 
 | Elemento de configuración | Descripción |
-|---------------------------|-------------|
+|--- | ---|
 | `enabled` | Si habilitar el reenvío de aprobaciones exec |
 | `mode` | `"session"` \| `"targets"` \| `"both"` - modo de objetivos de aprobación |
 | `agentFilter` | Solo procesar solicitudes de aprobación de agentes específicos |
@@ -363,7 +363,7 @@ Security: allowlist
 ### Errores comunes
 
 | Error | Causa | Solución |
-|-------|-------|----------|
+|--- | --- | ---|
 | `Command not allowed by exec policy` | `security=deny` o allowlist no coincide | Revisa `tools.exec.security` y configuración allowlist |
 | `Approval timeout` | UI no disponible, `askFallback=deny` | Establece `askFallback=allowlist` o habilita UI |
 | `Pattern does not resolve to binary` | Uso de nombre base en modo allowlist | Usa ruta completa (ej. `/opt/homebrew/bin/rg`) |
@@ -390,7 +390,7 @@ En modo `security=allowlist`, las siguientes características de Shell **no son 
 Los modos de ejecución manejan PATH de diferentes maneras：
 
 | Modo de ejecución | Manejo de PATH | Descripción |
-|------------------|---------------|-------------|
+|--- | --- | ---|
 | `sandbox` | Hereda shell login, puede ser restablecido por `/etc/profile` | `pathPrepend` se aplica después de profile |
 | `gateway` | Fusiona PATH del shell de login al entorno exec | El demonio mantiene PATH mínimo, pero exec hereda PATH del usuario |
 | `node` | Solo usa sobrescrituras de variables de entorno pasadas | Los nodos macOS descartan sobrescrituras de `PATH`, los nodos headless admiten prepend |
@@ -427,7 +427,7 @@ La herramienta exec permite que los asistentes de IA ejecuten comandos de Shell 
 > Última actualización：2026-01-27
 
 | Funcionalidad | Ruta de archivo | Número de línea |
-|--------------|---------------|----------------|
+|--- | --- | ---|
 | Definición de herramienta exec | [`src/agents/bash-tools.exec.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/bash-tools.exec.ts) | 1-500+ |
 | Lógica de aprobación exec | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 1-1268 |
 | Análisis de comandos de Shell | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 500-1100 |

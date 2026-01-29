@@ -43,7 +43,7 @@ La detección verifica simultáneamente `dependencies` y `devDependencies`, por 
 ### Ecosistema React
 
 | Marco | Dependencia de detección | Valor de retorno |
-|------|---------|--------|
+|--- | --- | ---|
 | **Next.js** | `next` | `nextjs` |
 | **Gatsby** | `gatsby` | `gatsby` |
 | **Remix** | `@remix-run/` | `remix` |
@@ -56,7 +56,7 @@ La detección verifica simultáneamente `dependencies` y `devDependencies`, por 
 ### Ecosistema Vue
 
 | Marco | Dependencia de detección | Valor de retorno |
-|------|---------|--------|
+|--- | --- | ---|
 | **Nuxt** | `nuxt` | `nuxtjs` |
 | **VitePress** | `vitepress` | `vitepress` |
 | **VuePress** | `vuepress` | `vuepress` |
@@ -65,7 +65,7 @@ La detección verifica simultáneamente `dependencies` y `devDependencies`, por 
 ### Ecosistema Svelte
 
 | Marco | Dependencia de detección | Valor de retorno |
-|------|---------|--------|
+|--- | --- | ---|
 | **SvelteKit** | `@sveltejs/kit` | `sveltekit-1` |
 | **Svelte** | `svelte` | `svelte` |
 | **Sapper** (legacy) | `sapper` | `sapper` |
@@ -73,14 +73,14 @@ La detección verifica simultáneamente `dependencies` y `devDependencies`, por 
 ### Angular
 
 | Marco | Dependencia de detección | Valor de retorno |
-|------|---------|--------|
+|--- | --- | ---|
 | **Angular** | `@angular/core` | `angular` |
 | **Ionic Angular** | `@ionic/angular` | `ionic-angular` |
 
 ### Generadores de sitios estáticos
 
 | Marco | Dependencia de detección | Valor de retorno |
-|------|---------|--------|
+|--- | --- | ---|
 | **Astro** | `astro` | `astro` |
 | **Docusaurus** | `@docusaurus/core` | `docusaurus-2` |
 | **Hexo** | `hexo` | `hexo` |
@@ -90,7 +90,7 @@ La detección verifica simultáneamente `dependencies` y `devDependencies`, por 
 ### Marcos de back-end Node.js
 
 | Marco | Dependencia de detección | Valor de retorno |
-|------|---------|--------|
+|--- | --- | ---|
 | **Express** | `express` | `express` |
 | **NestJS** | `@nestjs/core` | `nestjs` |
 | **Hono** | `hono` | `hono` |
@@ -102,7 +102,7 @@ La detección verifica simultáneamente `dependencies` y `devDependencies`, por 
 ### Otros marcos
 
 | Marco | Dependencia de detección | Valor de retorno |
-|------|---------|--------|
+|--- | --- | ---|
 | **SolidStart** | `@solidjs/start` | `solidstart-1` |
 | **Ember** | `ember-cli`, `ember-source` | `ember` |
 | **Dojo** | `@dojo/framework` | `dojo` |
@@ -118,7 +118,7 @@ La detección verifica simultáneamente `dependencies` y `devDependencies`, por 
 ### Herramientas de compilación
 
 | Marco | Dependencia de detección | Valor de retorno |
-|------|---------|--------|
+|--- | --- | ---|
 | **Vite** | `vite` | `vite` |
 | **Parcel** | `parcel` | `parcel` |
 
@@ -315,7 +315,7 @@ Ver [Tutorial de implementación con un clic en Vercel](../../platforms/vercel-d
 > Fecha de actualización: 2026-01-25
 
 | Función        | Ruta de archivo                                                                                             | Número de línea    |
-| ----------- | ---------------------------------------------------------------------------------------------------- | ----------------- |
+|--- | --- | ---|
 | Lógica de detección de marcos | [`skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 11-156  |
 | Entrada del script de implementación | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 1-250   |
 | Manejo de HTML estático | [`deploy.sh`](https://github.com/vercel-labs/agent-skills/blob/main/skills/claude.ai/vercel-deploy-claimable/scripts/deploy.sh) | 192-205 |

@@ -245,24 +245,24 @@ Wenn das Fixed Account als rate-limited markiert ist oder durch Quota-Schutz akt
 > Aktualisiert: 2026-01-23
 
 | Funktion | Dateipfad | Zeilennummern |
-| --- | --- | --- |
-| Scheduling-Modus und Konfigurationsstruktur (StickySessionConfig) | [`src-tauri/src/proxy/sticky_config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/sticky_config.rs#L1-L36) | 1-36 |
-| Session-Fingerprint-Generierung (Claude/OpenAI/Gemini) | [`src-tauri/src/proxy/session_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/session_manager.rs#L1-L159) | 1-159 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | TokenManager: Fixed Account Mode Felder und Initialisierung | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L27-L50) | 27-50 |
-| TokenManager: Kernlogik der Kontoauswahl (Fixed Account/Sticky Session/60s Fenster/Rotation/Quota-Schutz) | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L470-L940) | 470-940 |
+|--- | --- | ---|
 | TokenManager: invalid_grant automatisch deaktivieren und aus Pool entfernen | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L868-L878) | 868-878 |
-| TokenManager: Rate-Limit-Aufzeichnung und Erfolgsbereinigung API | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L1087-L1147) | 1087-1147 |
-| TokenManager: Scheduling-Konfiguration aktualisieren / Session-Bindungen bereinigen / Fixed Account Mode Setter | [`src-tauri/src/proxy/token_manager.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/token_manager.rs#L1419-L1461) | 1419-1461 |
-| ProxyConfig: scheduling-Felddefinition und Standardwerte | [`src-tauri/src/proxy/config.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/config.rs#L174-L257) | 174-257 |
-| Scheduling-Konfiguration beim Reverse-Proxy-Start synchronisieren | [`src-tauri/src/commands/proxy.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/proxy.rs#L70-L100) | 70-100 |
-| Scheduling-bezogene Tauri-Befehle (get/update/clear bindings/fixed account) | [`src-tauri/src/commands/proxy.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/commands/proxy.rs#L478-L551) | 478-551 |
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
+|--- | --- | ---|
 | OpenAI handler: session_id + erzwungene Rotation bei Retry | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L160-L182) | 160-182 |
-| OpenAI handler: 429/5xx Rate-Limit-Aufzeichnung + Retry delay parsen | [`src-tauri/src/proxy/handlers/openai.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/openai.rs#L349-L367) | 349-367 |
+|--- | --- | ---|
 | Gemini handler: session_id + erzwungene Rotation bei Retry | [`src-tauri/src/proxy/handlers/gemini.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/gemini.rs#L62-L88) | 62-88 |
-| Gemini handler: 429/5xx Rate-Limit-Aufzeichnung und Rotation | [`src-tauri/src/proxy/handlers/gemini.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/gemini.rs#L279-L299) | 279-299 |
+|--- | --- | ---|
 | Claude handler: session_id extrahieren und an TokenManager übergeben | [`src-tauri/src/proxy/handlers/claude.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/handlers/claude.rs#L517-L524) | 517-524 |
 | 429 retry delay Parsen (RetryInfo.retryDelay / quotaResetDelay) | [`src-tauri/src/proxy/upstream/retry.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/upstream/retry.rs#L37-L66) | 37-66 |
-| Rate-Limit-Grund-Erkennung und exponentielles Backoff (RateLimitTracker) | [`src-tauri/src/proxy/rate_limit.rs`](https://github.com/lbjlaq/Antigravity-Manager/blob/main/src-tauri/src/proxy/rate_limit.rs#L154-L279) | 154-279 |
+|--- | --- | ---|
 
 **Wichtige Strukturen**:
 - `StickySessionConfig`: Scheduling-Modus und Konfigurationsstruktur (`mode`, `max_wait_seconds`)
