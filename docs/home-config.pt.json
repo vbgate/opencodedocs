@@ -131,7 +131,7 @@
                 "repo": "https://github.com/NoeFabris/opencode-antigravity-auth",
                 "meta": {
                     "lessons": "33 Lições",
-                    "stars": "6.2k",
+                    "stars": "6.3k",
                     "difficulty": "Iniciante"
                 }
             },
@@ -142,7 +142,7 @@
                 "repo": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning",
                 "meta": {
                     "lessons": "22 Lições",
-                    "stars": "556",
+                    "stars": "560",
                     "difficulty": "Avançado"
                 }
             },
@@ -164,7 +164,7 @@
                 "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills",
                 "meta": {
                     "lessons": "24 Lições",
-                    "stars": "25",
+                    "stars": "26",
                     "difficulty": "Intermediário"
                 }
             },
@@ -175,8 +175,8 @@
                 "repo": "https://github.com/lbjlaq/Antigravity-Manager",
                 "meta": {
                     "lessons": "39 Lições",
-                    "stars": "17.8k",
-                    "difficulty": "Especialista"
+                    "stars": "18k",
+                    "difficulty": "Avançado"
                 }
             },
             {
@@ -186,7 +186,7 @@
                 "repo": "https://github.com/numman-ali/openskills",
                 "meta": {
                     "lessons": "35 Lições",
-                    "stars": "7k",
+                    "stars": "7.1k",
                     "difficulty": "Intermediário"
                 }
             },
@@ -197,8 +197,8 @@
                 "repo": "https://github.com/supermemoryai/opencode-supermemory",
                 "meta": {
                     "lessons": "13 Lições",
-                    "stars": "520",
-                    "difficulty": "Especialista"
+                    "stars": "522",
+                    "difficulty": "Avançado"
                 }
             },
             {
@@ -219,7 +219,7 @@
                 "repo": "https://github.com/franlol/opencode-md-table-formatter",
                 "meta": {
                     "lessons": "14 Lições",
-                    "stars": "--",
+                    "stars": "146",
                     "difficulty": "Iniciante"
                 }
             },
@@ -230,8 +230,19 @@
                 "repo": "https://github.com/code-yeongyu/oh-my-opencode",
                 "meta": {
                     "lessons": "26 Lições",
+                    "stars": "24.1k",
+                    "difficulty": "Avançado"
+                }
+            },
+            {
+                "title": "opencode-notify",
+                "desc": "Fornece notificações de desktop nativas para OpenCode AI, suporta detecção inteligente de foco, períodos de silêncio e foco ao clicar",
+                "link": "/pt/kdcokenny/opencode-notify/",
+                "repo": "https://github.com/kdcokenny/opencode-notify",
+                "meta": {
+                    "lessons": "21 Lições",
                     "stars": "--",
-                    "difficulty": "Especialista"
+                    "difficulty": "Intermediário"
                 }
             },
             {
@@ -241,8 +252,19 @@
                 "repo": "https://github.com/vercel-labs/agent-skills",
                 "meta": {
                     "lessons": "14 Lições",
-                    "stars": "--",
+                    "stars": "16.6k",
                     "difficulty": "Intermediário"
+                }
+            },
+            {
+                "title": "Clawdbot",
+                "desc": "Seu assistente de IA privado, disponível em qualquer lugar",
+                "link": "/pt/clawdbot/clawdbot/",
+                "repo": "https://github.com/clawdbot/clawdbot",
+                "meta": {
+                    "lessons": "43 Lições",
+                    "stars": "--",
+                    "difficulty": "Avançado"
                 }
             }
         ],

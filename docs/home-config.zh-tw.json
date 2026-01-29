@@ -31,15 +31,15 @@
                 },
                 {
                     "role": "ai",
-                    "text": "可以。安裝 'MyStatus' 插件後，輸入斜杠命令 /mystatus 即可一鍵查看。"
+                    "text": "可以。安裝 'MyStatus' 外掛後，輸入斜線指令 /mystatus 即可一鍵查看。"
                 },
                 {
                     "role": "user",
-                    "text": "只有命令列輸出嗎？"
+                    "text": "只有指令列輸出嗎？"
                 },
                 {
                     "role": "ai",
-                    "text": "不，它會提供視覺化進度條和重置倒數計時。支援 OpenAI、Copilot 等 5 大平台，完全本地運行，保護隱私。✅",
+                    "text": "不，它會提供視覺化進度條和重置倒數計時。支援 OpenAI、Copilot 等 5 大平台，完全本地執行，保護隱私。✅",
                     "status": "已驗證",
                     "meta": "opencode-mystatus"
                 }
@@ -48,11 +48,11 @@
     },
     "audience": {
         "title": "不管你是新手還是老鳥，<br class=\"sm:hidden\">都能找到你要的",
-        "subtitle": "分級教程體系，滿足不同階段的需求",
+        "subtitle": "分級教學體系，滿足不同階段的需求",
         "beginner": {
             "badge": "給 AI 工具新手",
-            "title": "裝不上？配不對？別急，<br>這裡有保姆級教程",
-            "description": "Claude Code 裝完不會用？Cursor 配置一堆看不懂？別慌，我們的教程從\"第一步\"開始講，<strong>每個步驟都有詳細拆解</strong>，跟著做就行。",
+            "title": "裝不上？配不對？別急，<br>這裡有保姆級教學",
+            "description": "Claude Code 裝完不會用？Cursor 設定一堆看不懂？別慌，我們的教學從「第一步」開始講，<strong>每個步驟都有詳細拆解</strong>，跟著做就行。",
             "tags": [
                 {
                     "icon": "ph-check-circle",
@@ -82,7 +82,7 @@
         "advanced": {
             "badge": "給進階使用者",
             "title": "不只是入門，<br>還有深度實踐",
-            "description": "多帳號輪換、Token 省錢技巧、Agent 自動化... 這些\"高級玩法\"，官方文檔不一定講。<strong>我們從源碼裡扒出來</strong>，讓你用得更爽。",
+            "description": "多帳號輪換、Token 省錢技巧、Agent 自動化... 這些「高級玩法」，官方文檔不一定講。<strong>我們從源碼裡扒出來</strong>，讓你用得更爽。",
             "tags": [
                 {
                     "icon": "ph-gear",
@@ -104,13 +104,13 @@
                 "icon": "ph-file-code",
                 "color": "brand",
                 "title": "源碼驗證",
-                "desc": "不是網上抄的，是從代碼裡推導的"
+                "desc": "不是網上抄的，是從程式碼裡推導的"
             },
             {
                 "icon": "ph-arrows-clockwise",
                 "color": "emerald",
                 "title": "持續更新",
-                "desc": "工具更新了，教程也會同步"
+                "desc": "工具更新了，教學也會同步"
             },
             {
                 "icon": "ph-book-open",
@@ -122,33 +122,33 @@
     },
     "tutorials": {
         "title": "選一個開始吧",
-        "subtitle": "每個教程都經過驗證，跟著做就能跑通",
+        "subtitle": "每個教學都經過驗證，跟著做就能跑通",
         "list": [
             {
                 "title": "Antigravity Auth",
-                "desc": "Google OAuth 認證插件，免費使用 Claude 和 Gemini 模型",
+                "desc": "Google OAuth 認證外掛，免費使用 Claude 和 Gemini 模型",
                 "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/",
                 "repo": "https://github.com/NoeFabris/opencode-antigravity-auth",
                 "meta": {
                     "lessons": "33 課時",
-                    "stars": "6.2k",
+                    "stars": "6.3k",
                     "difficulty": "入門"
                 }
             },
             {
                 "title": "Dynamic Context Pruning",
-                "desc": "自動降低 Token 使用量，智能移除冗餘上下文",
+                "desc": "自動降低 Token 使用量，智慧移除冗餘上下文",
                 "link": "/zh-tw/Opencode-DCP/opencode-dynamic-context-pruning/",
                 "repo": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning",
                 "meta": {
                     "lessons": "22 課時",
-                    "stars": "556",
+                    "stars": "560",
                     "difficulty": "進階"
                 }
             },
             {
                 "title": "Plannotator",
-                "desc": "AI 計劃與代碼審查工具，視覺化互動",
+                "desc": "AI 計畫與程式碼審查工具，視覺化互動",
                 "link": "/zh-tw/backnotprop/plannotator/",
                 "repo": "https://github.com/backnotprop/plannotator",
                 "meta": {
@@ -164,7 +164,7 @@
                 "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills",
                 "meta": {
                     "lessons": "24 課時",
-                    "stars": "25",
+                    "stars": "26",
                     "difficulty": "中級"
                 }
             },
@@ -175,7 +175,7 @@
                 "repo": "https://github.com/lbjlaq/Antigravity-Manager",
                 "meta": {
                     "lessons": "39 課時",
-                    "stars": "17.8k",
+                    "stars": "18k",
                     "difficulty": "高級"
                 }
             },
@@ -186,18 +186,18 @@
                 "repo": "https://github.com/numman-ali/openskills",
                 "meta": {
                     "lessons": "35 課時",
-                    "stars": "7k",
+                    "stars": "7.1k",
                     "difficulty": "中級"
                 }
             },
             {
                 "title": "Supermemory",
-                "desc": "記憶持久化插件，跨會話跨專案共享記憶",
+                "desc": "記憶持久化外掛，跨會話跨專案共享記憶",
                 "link": "/zh-tw/supermemoryai/opencode-supermemory/",
                 "repo": "https://github.com/supermemoryai/opencode-supermemory",
                 "meta": {
                     "lessons": "13 課時",
-                    "stars": "520",
+                    "stars": "522",
                     "difficulty": "高級"
                 }
             },
@@ -219,7 +219,7 @@
                 "repo": "https://github.com/franlol/opencode-md-table-formatter",
                 "meta": {
                     "lessons": "14 課時",
-                    "stars": "--",
+                    "stars": "146",
                     "difficulty": "入門"
                 }
             },
@@ -230,8 +230,41 @@
                 "repo": "https://github.com/code-yeongyu/oh-my-opencode",
                 "meta": {
                     "lessons": "26 課時",
-                    "stars": "--",
+                    "stars": "24.1k",
                     "difficulty": "高級"
+                }
+            },
+            {
+                "title": "opencode-notify",
+                "desc": "為 OpenCode AI 提供原生桌面通知，支援智慧焦點偵測、靜音時段和點擊聚焦",
+                "link": "/zh-tw/kdcokenny/opencode-notify/",
+                "repo": "https://github.com/kdcokenny/opencode-notify",
+                "meta": {
+                    "lessons": "21 課時",
+                    "stars": "--",
+                    "difficulty": "中級"
+                }
+            },
+            {
+                "title": "agent-skills",
+                "desc": "Vercel AI 編碼代理技能包，內建 React 效能優化與 Web 設計指南",
+                "link": "/zh-tw/vercel-labs/agent-skills/",
+                "repo": "https://github.com/vercel-labs/agent-skills",
+                "meta": {
+                    "lessons": "14 課時",
+                    "stars": "16.6k",
+                    "difficulty": "中級"
+                }
+            },
+            {
+                "title": "Clawdbot",
+                "desc": "你的私人 AI 助手，隨處可用",
+                "link": "/zh-tw/clawdbot/clawdbot/",
+                "repo": "https://github.com/clawdbot/clawdbot",
+                "meta": {
+                    "lessons": "43 課時",
+                    "stars": "--",
+                    "difficulty": "進階"
                 }
             }
         ],
@@ -240,7 +273,7 @@
             "steps": [
                 "提交 Issue",
                 "團隊審核",
-                "教程上線"
+                "教學上線"
             ],
             "repo_text": "Repo",
             "cta_text": "立即申請",
@@ -250,8 +283,8 @@
     },
     "cta_section": {
         "title": "開始你的 AI 之旅",
-        "subtitle": "從第一行程式碼到生產級應用，我們都有對應的教程",
-        "button_text": "瀏覽全部教程",
+        "subtitle": "從第一行程式碼到生產級應用，我們都有對應的教學",
+        "button_text": "瀏覽全部教學",
         "button_link": "#tutorials"
     },
     "footer": {
@@ -263,7 +296,7 @@
                 "link": "/zh-tw/about"
             },
             {
-                "text": "用戶協議",
+                "text": "使用者協議",
                 "link": "/zh-tw/terms"
             },
             {

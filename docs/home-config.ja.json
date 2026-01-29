@@ -1,14 +1,14 @@
 {
     "hero": {
-        "badge": "チュートリアルは検証済み、そのまま実行するだけで動きます",
+        "badge": "検証済みチュートリアル、そのまま実行すれば動きます",
         "title_prefix": "ソースコード駆動の",
         "title_main": "AI 全シーンチュートリアル",
         "typewriter_texts": [
-            "入門からエキスパートまで",
-            "すべてのステップが実行可能",
-            "学んだらすぐ使える"
+            "入門から上級まで",
+            "すべてのステップが動作確認済み",
+            "学んだらすぐ使えます"
         ],
-        "description": "AI ツールの進化は速すぎます。公式ドキュメントは遅れ、ネットのチュートリアルは古くなっています——<br class=\"hidden sm:inline\"><strong>私たちはこれを変えます。</strong>",
+        "description": "AI ツールの更新は超高速、公式ドキュメントは追いつけず、ネットのチュートリアルは古い——<br class=\"hidden sm:inline\"><strong>私たちがこれを変えます。</strong>",
         "primary_action": {
             "text": "学習を始める",
             "link": "#tutorials"
@@ -22,24 +22,24 @@
             "ui": {
                 "online_text": "オンライン",
                 "completed_text": "完了",
-                "input_placeholder": "AI にやりたいことを伝えてください..."
+                "input_placeholder": "AI にやりたいことを教えてください..."
             },
             "messages": [
                 {
                     "role": "user",
-                    "text": "OpenCode で OpenAI と Zhipu の残高を直接確認できますか？"
+                    "text": "OpenCode で OpenAI と智譜の API クオータを確認できますか？"
                 },
                 {
                     "role": "ai",
-                    "text": "はい。「MyStatus」プラグインをインストール後、スラッシュコマンド /mystatus を入力するだけで、ワンクリックで確認できます。"
+                    "text": "はい。MyStatus プラグインをインストール後、/mystatus と入力すればワンクリックで確認できます。"
                 },
                 {
                     "role": "user",
-                    "text": "コマンドライン出力だけですか？"
+                    "text": "視覚的なプログレスバーも見られますか？"
                 },
                 {
                     "role": "ai",
-                    "text": "いいえ、ビジュアルプログレスバーとリセットカウントダウンも提供します。OpenAI、Copilot など 5 つの主要プラットフォームをサポートし、完全にローカルで実行され、プライバシーを保護します。✅",
+                    "text": "はい。残りクオータをプログレスバーで表示し、リセット時間のカウントダウンも表示します。5 つの主要プラットフォームをサポートし、完全にローカルで動作します。✅",
                     "status": "検証済み",
                     "meta": "opencode-mystatus"
                 }
@@ -47,12 +47,12 @@
         }
     },
     "audience": {
-        "title": "初心者でも経験者でも、<br class=\"sm:hidden\">必要なものが見つかります",
-        "subtitle": "レベル別チュートリアルシステムで、異なる段階のニーズに対応",
+        "title": "初心者から上級者まで、<br class=\"sm:hidden\">あなたにぴったりのコンテンツが見つかります",
+        "subtitle": "レベル別チュートリアル体系で、各段階のニーズを満たします",
         "beginner": {
             "badge": "AI ツール初心者向け",
-            "title": "インストールできない？設定が合わない？焦らないで、<br>ここでは初心者向けのチュートリアルがあります",
-            "description": "Claude Code をインストールしたけど使い方がわからない？Cursor の設定が理解できない？慌てないで、私たちのチュートリアルは「最初の一歩」から説明し、<strong>すべてのステップを詳細に分解</strong>しています。従って進むだけでOKです。",
+            "title": "インストールできない？設定が分からない？焦らないで、<br>ここには初歩からのチュートリアルがあります",
+            "description": "Claude Code をインストールしたけど使い方が分からない？Cursor の設定が理解できない？慌てないで、私たちのチュートリアルは\"第一歩\"から始まり、<strong>各ステップを詳細に分解</strong>して、そのまま実行するだけで済みます。",
             "tags": [
                 {
                     "icon": "ph-check-circle",
@@ -63,7 +63,7 @@
                     "text": "コアコマンド"
                 }
             ],
-            "cta": "従って進むだけで、一度で成功、試行錯誤の必要なし",
+            "cta": "そのまま進めば、1 回で成功、試行錯誤不要",
             "terminal": {
                 "panic": [
                     "> npm install",
@@ -80,9 +80,9 @@
             }
         },
         "advanced": {
-            "badge": "上級ユーザー向け",
-            "title": "入門だけでなく、<br>ディープな実践もあります",
-            "description": "複数アカウントのローテーション、Token 節約テクニック、Agent 自動化... これらの「高度な活用法」は、公式ドキュメントでは必ずしも説明されていません。<strong>私たちはソースコードから解析し</strong>、より快適に使えるようにします。",
+            "badge": "中上級者向け",
+            "title": "入門だけでなく、<br>深い実践もあります",
+            "description": "複数アカウントのローテーション、Token 節約テクニック、Agent 自動化... これらの\"上級テクニック\"は公式ドキュメントでは必ずしも説明されていません。<strong>私たちはソースコードから掘り起こし</strong>、もっと快適に使えるようにします。",
             "tags": [
                 {
                     "icon": "ph-gear",
@@ -97,32 +97,32 @@
         }
     },
     "features": {
-        "title": "OpenCodeDocs を選ぶ理由は？",
-        "subtitle": "私たちには他にはない 3 つのものがあります",
+        "title": "なぜ OpenCodeDocs を選ぶのか？",
+        "subtitle": "他にはない 3 つの特徴があります",
         "list": [
             {
                 "icon": "ph-file-code",
                 "color": "brand",
                 "title": "ソースコード検証",
-                "desc": "ネットからコピーしたものではなく、コードから導き出しました"
+                "desc": "ネットからコピペしたものではなく、コードから導き出されたものです"
             },
             {
                 "icon": "ph-arrows-clockwise",
                 "color": "emerald",
                 "title": "継続的更新",
-                "desc": "ツールが更新されれば、チュートリアルも同期されます"
+                "desc": "ツールが更新されれば、チュートリアルも同期して更新されます"
             },
             {
                 "icon": "ph-book-open",
                 "color": "amber",
-                "title": "初心者にやさしい",
-                "desc": "ゼロからでも従って進められます。一歩ずつ確実に"
+                "title": "初心者に優しい",
+                "desc": "基礎知識ゼロでも従うだけで、ステップバイステップで進められます"
             }
         ]
     },
     "tutorials": {
-        "title": "選んで始めましょう",
-        "subtitle": "すべてのチュートリアルは検証済み、従って進むだけで実行可能",
+        "title": "1 つ選んで始めましょう",
+        "subtitle": "すべてのチュートリアルは検証済み、そのまま実行すれば動作します",
         "list": [
             {
                 "title": "Antigravity Auth",
@@ -131,24 +131,24 @@
                 "repo": "https://github.com/NoeFabris/opencode-antigravity-auth",
                 "meta": {
                     "lessons": "33 レッスン",
-                    "stars": "6.2k",
+                    "stars": "6.3k",
                     "difficulty": "入門"
                 }
             },
             {
                 "title": "Dynamic Context Pruning",
-                "desc": "Token 使用量を自動的に削減、冗長なコンテキストをインテリジェントに削除",
+                "desc": "Token 使用量を自動削減、冗長なコンテキストをインテリジェントに削除",
                 "link": "/ja/Opencode-DCP/opencode-dynamic-context-pruning/",
                 "repo": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning",
                 "meta": {
                     "lessons": "22 レッスン",
-                    "stars": "556",
-                    "difficulty": "上級"
+                    "stars": "560",
+                    "difficulty": "中級"
                 }
             },
             {
                 "title": "Plannotator",
-                "desc": "AI 計画とコードレビューツール、ビジュアルインタラクション",
+                "desc": "AI 計画とコードレビューツール、視覚的なインタラクション",
                 "link": "/ja/backnotprop/plannotator/",
                 "repo": "https://github.com/backnotprop/plannotator",
                 "meta": {
@@ -159,12 +159,12 @@
             },
             {
                 "title": "Agent Skills",
-                "desc": "スキルの動的検出と管理、Agent 効率を向上",
+                "desc": "スキルの動的検出と管理、Agent の効率を向上",
                 "link": "/ja/joshuadavidthomas/opencode-agent-skills/",
                 "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills",
                 "meta": {
                     "lessons": "24 レッスン",
-                    "stars": "25",
+                    "stars": "26",
                     "difficulty": "中級"
                 }
             },
@@ -175,35 +175,35 @@
                 "repo": "https://github.com/lbjlaq/Antigravity-Manager",
                 "meta": {
                     "lessons": "39 レッスン",
-                    "stars": "17.8k",
-                    "difficulty": "エキスパート"
+                    "stars": "18k",
+                    "difficulty": "上級"
                 }
             },
             {
                 "title": "OpenSkills",
-                "desc": "汎用スキールローダー、Claude Code 形式と互換",
+                "desc": "汎用スキルローダー、Claude Code フォーマットと互換",
                 "link": "/ja/numman-ali/openskills/",
                 "repo": "https://github.com/numman-ali/openskills",
                 "meta": {
                     "lessons": "35 レッスン",
-                    "stars": "7k",
+                    "stars": "7.1k",
                     "difficulty": "中級"
                 }
             },
             {
                 "title": "Supermemory",
-                "desc": "メモリ永続化プラグイン、セッション間・プロジェクト間でメモリを共有",
+                "desc": "メモリ永続化プラグイン、セッション・プロジェクトを超えてメモリを共有",
                 "link": "/ja/supermemoryai/opencode-supermemory/",
                 "repo": "https://github.com/supermemoryai/opencode-supermemory",
                 "meta": {
                     "lessons": "13 レッスン",
-                    "stars": "520",
-                    "difficulty": "エキスパート"
+                    "stars": "522",
+                    "difficulty": "上級"
                 }
             },
             {
                 "title": "MyStatus",
-                "desc": "AI アカウント残高をワンクリックで確認、複数プラットフォーム統合",
+                "desc": "AI アカウントクオータワンクリック確認、複数プラットフォーム統合",
                 "link": "/ja/vbgate/opencode-mystatus/",
                 "repo": "https://github.com/vbgate/opencode-mystatus",
                 "meta": {
@@ -214,12 +214,12 @@
             },
             {
                 "title": "OpenCode Markdown Table Formatter",
-                "desc": "OpenCode の隠しモードを最適化、Markdown 記号を隠してもテーブルを完璧に整列",
+                "desc": "OpenCode の非表示モードに最適化、Markdown 記号を非表示にしてもテーブルが完璧に整列",
                 "link": "/ja/franlol/opencode-md-table-formatter/",
                 "repo": "https://github.com/franlol/opencode-md-table-formatter",
                 "meta": {
                     "lessons": "14 レッスン",
-                    "stars": "--",
+                    "stars": "146",
                     "difficulty": "入門"
                 }
             },
@@ -230,13 +230,46 @@
                 "repo": "https://github.com/code-yeongyu/oh-my-opencode",
                 "meta": {
                     "lessons": "26 レッスン",
+                    "stars": "24.1k",
+                    "difficulty": "上級"
+                }
+            },
+            {
+                "title": "opencode-notify",
+                "desc": "OpenCode AI にネイティブデスクトップ通知を提供、スマートフォーカス検出、ミュート時間帯、クリックフォーカスをサポート",
+                "link": "/ja/kdcokenny/opencode-notify/",
+                "repo": "https://github.com/kdcokenny/opencode-notify",
+                "meta": {
+                    "lessons": "21 レッスン",
                     "stars": "--",
-                    "difficulty": "エキスパート"
+                    "difficulty": "中級"
+                }
+            },
+            {
+                "title": "agent-skills",
+                "desc": "Vercel AI コーディングエージェントスキルパック、React パフォーマンス最適化と Web デザインガイドを内蔵",
+                "link": "/ja/vercel-labs/agent-skills/",
+                "repo": "https://github.com/vercel-labs/agent-skills",
+                "meta": {
+                    "lessons": "14 レッスン",
+                    "stars": "16.6k",
+                    "difficulty": "中級"
+                }
+            },
+            {
+                "title": "Clawdbot",
+                "desc": "あなたのプライベート AI アシスタント、どこでも使用可能",
+                "link": "/ja/clawdbot/clawdbot/",
+                "repo": "https://github.com/clawdbot/clawdbot",
+                "meta": {
+                    "lessons": "43 レッスン",
+                    "stars": "--",
+                    "difficulty": "中級"
                 }
             }
         ],
         "apply_card": {
-            "title": "あなたのプロジェクトを収録に申請",
+            "title": "プロジェクトの掲載を申請",
             "steps": [
                 "Issue を提出",
                 "チームによる審査",
@@ -249,9 +282,9 @@
         }
     },
     "cta_section": {
-        "title": "あなたの AI の旅を始めましょう",
-        "subtitle": "最初のコードから本番レベルのアプリケーションまで、対応するチュートリアルがすべて揃っています",
-        "button_text": "すべてのチュートリアルを閲覧",
+        "title": "あなたの AI の旅を始めよう",
+        "subtitle": "最初の 1 行から本番レベルのアプリケーションまで、対応するチュートリアルがすべて揃っています",
+        "button_text": "すべてのチュートリアルを見る",
         "button_link": "#tutorials"
     },
     "footer": {

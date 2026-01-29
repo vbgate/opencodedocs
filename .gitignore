@@ -3,4 +3,8 @@ node_modules
 dist
 dist-deploy
 .vitepress/dist
-.vitepress/cache.vitepress/.temp
+.vitepress/cache
+.vitepress/.temp
+docs/.vitepress/dist
+docs/.vitepress/cache
+docs/.vitepress/.temp

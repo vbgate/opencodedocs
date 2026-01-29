@@ -1,16 +1,16 @@
 {
     "hero": {
         "badge": "Учебники проверены, просто следуйте инструкциям",
-        "title_prefix": "Основано на исходном коде",
-        "title_main": "Полный спектр учебников по ИИ",
+        "title_prefix": "Основанные на исходном коде,",
+        "title_main": "AI-уроки для всех сценариев",
         "typewriter_texts": [
-            "От новичка до эксперта",
-            "Каждый шаг работает",
-            "Выучил — сразу используй"
+            "от новичка до эксперта",
+            "каждый шаг работает",
+            "используйте после обучения"
         ],
-        "description": "Инструменты ИИ развиваются стремительно, официальная документация отстает, онлайн-учебники устаревают—<br class=\"hidden sm:inline\"><strong>Мы собираемся это изменить.</strong>",
+        "description": "Инструменты ИИ развиваются стремительно, официальная документация отстает, онлайн-учебники устаревают —<br class=\"hidden sm:inline\"><strong>мы меняем это.</strong>",
         "primary_action": {
-            "text": "Начать изучение",
+            "text": "Начать учиться",
             "link": "#tutorials"
         },
         "secondary_action": {
@@ -22,24 +22,24 @@
             "ui": {
                 "online_text": "В сети",
                 "completed_text": "Завершено",
-                "input_placeholder": "Скажите ИИ, что вы хотите сделать..."
+                "input_placeholder": "Расскажите ИИ, что вы хотите сделать..."
             },
             "messages": [
                 {
                     "role": "user",
-                    "text": "Можно ли в OpenCode напрямую узнать остаток средств на OpenAI и Zhipu?"
+                    "text": "В OpenCode можно проверить квоты API для OpenAI и Zhipu?"
                 },
                 {
                     "role": "ai",
-                    "text": "Да. После установки плагина 'MyStatus' введите команду /mystatus для мгновенного просмотра."
+                    "text": "Да. После установки плагина MyStatus введите /mystatus для мгновенного запроса."
                 },
                 {
                     "role": "user",
-                    "text": "Только вывод в командной строке?"
+                    "text": "Видно визуальную шкалу прогресса?"
                 },
                 {
                     "role": "ai",
-                    "text": "Нет, он предоставляет визуальный индикатор прогресса и обратный отсчет сброса. Поддерживает 5 платформ, включая OpenAI и Copilot, полностью работает локально, защищая конфиденциальность. ✅",
+                    "text": "Да. Он показывает оставшуюся квоту шкалой прогресса, отображает обратный отсчёт до сброса, поддерживает 5 платформ, работает полностью локально. ✅",
                     "status": "Проверено",
                     "meta": "opencode-mystatus"
                 }
@@ -131,7 +131,7 @@
                 "repo": "https://github.com/NoeFabris/opencode-antigravity-auth",
                 "meta": {
                     "lessons": "33 Уроков",
-                    "stars": "6.2k",
+                    "stars": "6.3k",
                     "difficulty": "Начинающий"
                 }
             },
@@ -142,7 +142,7 @@
                 "repo": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning",
                 "meta": {
                     "lessons": "22 Уроков",
-                    "stars": "556",
+                    "stars": "560",
                     "difficulty": "Продвинутый"
                 }
             },
@@ -164,7 +164,7 @@
                 "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills",
                 "meta": {
                     "lessons": "24 Уроков",
-                    "stars": "25",
+                    "stars": "26",
                     "difficulty": "Средний уровень"
                 }
             },
@@ -175,7 +175,7 @@
                 "repo": "https://github.com/lbjlaq/Antigravity-Manager",
                 "meta": {
                     "lessons": "39 Уроков",
-                    "stars": "17.8k",
+                    "stars": "18k",
                     "difficulty": "Эксперт"
                 }
             },
@@ -186,7 +186,7 @@
                 "repo": "https://github.com/numman-ali/openskills",
                 "meta": {
                     "lessons": "35 Уроков",
-                    "stars": "7k",
+                    "stars": "7.1k",
                     "difficulty": "Средний уровень"
                 }
             },
@@ -197,7 +197,7 @@
                 "repo": "https://github.com/supermemoryai/opencode-supermemory",
                 "meta": {
                     "lessons": "13 Уроков",
-                    "stars": "520",
+                    "stars": "522",
                     "difficulty": "Эксперт"
                 }
             },
@@ -219,7 +219,7 @@
                 "repo": "https://github.com/franlol/opencode-md-table-formatter",
                 "meta": {
                     "lessons": "14 Уроков",
-                    "stars": "--",
+                    "stars": "146",
                     "difficulty": "Начинающий"
                 }
             },
@@ -230,8 +230,19 @@
                 "repo": "https://github.com/code-yeongyu/oh-my-opencode",
                 "meta": {
                     "lessons": "26 Уроков",
-                    "stars": "--",
+                    "stars": "24.1k",
                     "difficulty": "Эксперт"
+                }
+            },
+            {
+                "title": "opencode-notify",
+                "desc": "Обеспечивает нативные уведомления рабочего стола для OpenCode AI, поддерживает интеллектуальное определение фокуса, беззвучные периоды и фокус при нажатии",
+                "link": "/ru/kdcokenny/opencode-notify/",
+                "repo": "https://github.com/kdcokenny/opencode-notify",
+                "meta": {
+                    "lessons": "21 Уроков",
+                    "stars": "--",
+                    "difficulty": "Средний уровень"
                 }
             },
             {
@@ -241,8 +252,19 @@
                 "repo": "https://github.com/vercel-labs/agent-skills",
                 "meta": {
                     "lessons": "14 Уроков",
-                    "stars": "--",
+                    "stars": "16.6k",
                     "difficulty": "Средний уровень"
+                }
+            },
+            {
+                "title": "Clawdbot",
+                "desc": "Ваш личный ИИ-помощник, доступен везде",
+                "link": "/ru/clawdbot/clawdbot/",
+                "repo": "https://github.com/clawdbot/clawdbot",
+                "meta": {
+                    "lessons": "43 Уроков",
+                    "stars": "--",
+                    "difficulty": "Продвинутый"
                 }
             }
         ],

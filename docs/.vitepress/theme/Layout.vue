@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useData, useRoute } from 'vitepress'
+import { useData, useRoute, useRouter, inBrowser } from 'vitepress'
 import { computed, provide, useSlots, watch } from 'vue'
 import VPBackdrop from 'vitepress/dist/client/theme-default/components/VPBackdrop.vue'
 import VPContent from 'vitepress/dist/client/theme-default/components/VPContent.vue'
@@ -28,6 +28,71 @@ const slots = useSlots()
 const heroImageSlotExists = computed(() => !!slots['home-hero-image'])
 
 provide('hero-image-slot-exists', heroImageSlotExists)
+
+
+
+
+
+const { lang } = useData()
+const router = useRouter()
+
+// 逻辑重构 (Refactored Logic)
+if (inBrowser) {
+  setTimeout(() => {
+    const path = window.location.pathname
+    
+    // 1. 非根目录：记录当前语言到 Cookie (Record lang on non-root pages)
+    if (path !== '/' && path !== '/index.html') {
+      document.cookie = `nf_lang=${lang.value}; expires=Mon, 1 Jan 2030 00:00:00 UTC; path=/`
+      return
+    }
+
+    // 2. 根目录：执行重定向 (Root path: Execute redirect)
+    // 优先级: Cookie > Browser Language
+    try {
+      let targetLang = ''
+      const cookieMatch = document.cookie.match(/nf_lang=([^;]+)/)
+      
+      if (cookieMatch) {
+         targetLang = cookieMatch[1]
+         console.log('[OpenCodeDocs] Found cookie lang:', targetLang)
+      } else {
+         const userLang = navigator.language.toLowerCase()
+         console.log('[OpenCodeDocs] Detect browser lang:', userLang)
+         
+         if (userLang.includes('zh')) {
+            // 简繁体处理
+            targetLang = (userLang.includes('tw') || userLang.includes('hk')) ? 'zh-tw' : 'zh'
+         } else if (userLang.startsWith('ja')) targetLang = 'ja'
+         else if (userLang.startsWith('ko')) targetLang = 'ko'
+         else if (userLang.startsWith('es')) targetLang = 'es'
+         else if (userLang.startsWith('fr')) targetLang = 'fr'
+         else if (userLang.startsWith('de')) targetLang = 'de'
+         else if (userLang.startsWith('pt')) targetLang = 'pt'
+         else if (userLang.startsWith('ru')) targetLang = 'ru'
+      }
+
+      // 执行跳转 (Execute Redirect)
+      // 只有当目标语言存在，且不是 'en' (默认页) 时才跳转
+      if (targetLang && targetLang !== 'en') {
+         const targetPath = `/${targetLang}/`
+         console.log('[OpenCodeDocs] Redirecting to:', targetPath)
+         window.location.replace(targetPath)
+      } else {
+         console.log('[OpenCodeDocs] Stay on English homepage')
+      }
+
+    } catch (e) {
+      console.error('Redirect error:', e)
+    }
+  }, 0)
+  
+  // 3. 监听语言切换 (Watch lang switch)
+  // 当用户在页面内手动切换语言时，更新 Cookie
+  watch(() => lang.value, (newLang) => {
+      document.cookie = `nf_lang=${newLang}; expires=Mon, 1 Jan 2030 00:00:00 UTC; path=/`
+  })
+}
 </script>
 
 <template>

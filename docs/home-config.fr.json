@@ -1,16 +1,16 @@
 {
     "hero": {
-        "badge": "Tutoriels vérifiés, suivez les étapes et ça fonctionne",
-        "title_prefix": "Basé sur le code source",
-        "title_main": "Tutoriels complets sur l'IA",
+        "badge": "Tutoriels vérifiés, chaque étape fonctionne",
+        "title_prefix": "Tutoriels IA",
+        "title_main": "basés sur le code source",
         "typewriter_texts": [
             "Du débutant à l'expert",
             "Chaque étape fonctionne",
-            "Apprenez et appliquez immédiatement"
+            "Prêt à l'emploi"
         ],
-        "description": "Les outils IA évoluent rapidement, la documentation officielle est à la traîne, les tutoriels en ligne sont obsolètes —<br class=\"hidden sm:inline\"><strong>Nous allons changer tout ça.</strong>",
+        "description": "Les outils IA évoluent rapidement, la documentation officielle est à la traîne, les tutoriels en ligne sont obsolètes —<br class=\"hidden sm:inline\"><strong>Nous allons changer tout cela.</strong>",
         "primary_action": {
-            "text": "Commencer à apprendre",
+            "text": "Commencer",
             "link": "#tutorials"
         },
         "secondary_action": {
@@ -27,19 +27,19 @@
             "messages": [
                 {
                     "role": "user",
-                    "text": "Puis-je vérifier directement le crédit restant d'OpenAI et Zhipu dans OpenCode ?"
+                    "text": "OpenCode peut-il vérifier les quotas API d'OpenAI et de Zhipu ?"
                 },
                 {
                     "role": "ai",
-                    "text": "Oui. Après avoir installé le plugin 'MyStatus', entrez la commande slash /mystatus pour consulter en un clic."
+                    "text": "Oui. Après avoir installé le plugin MyStatus, entrez /mystatus pour une consultation en un clic."
                 },
                 {
                     "role": "user",
-                    "text": "Y a-t-il uniquement une sortie en ligne de commande ?"
+                    "text": "Puis-je voir une barre de progression visuelle ?"
                 },
                 {
                     "role": "ai",
-                    "text": "Non, il offre une barre de progression visuelle et un compte à rebours de réinitialisation. Supporte 5 plateformes majeures comme OpenAI et Copilot, fonctionne entièrement en local et protège la vie privée. ✅",
+                    "text": "Oui. Il affiche le quota restant avec une barre de progression, le compte à rebours du temps de réinitialisation, prend en charge 5 plateformes et fonctionne entièrement localement. ✅",
                     "status": "Vérifié",
                     "meta": "opencode-mystatus"
                 }
@@ -47,12 +47,12 @@
         }
     },
     "audience": {
-        "title": "Que vous soyez débutant ou expert,<br class=\"sm:hidden\">trouvez ce dont vous avez besoin",
-        "subtitle": "Système de tutoriels par niveaux, répondant aux besoins de chaque étape",
+        "title": "Que vous soyez débutant ou expert,<br class=\"sm:hidden\">vous trouverez ce que vous cherchez",
+        "subtitle": "Système de tutoriels par niveau, adapté à chaque étape",
         "beginner": {
-            "badge": "Pour les nouveaux utilisateurs d'outils IA",
-            "title": "Installation échouée ? Configuration incorrecte ? Pas de panique,<br>voici des tutoriels détaillés",
-            "description": "Vous avez installé Claude Code mais ne savez pas l'utiliser ? Vous ne comprenez pas la configuration de Cursor ? Pas de panique, nos tutoriels commencent par la \"première étape\",<strong>chaque étape est détaillée</strong>, suivez simplement les instructions.",
+            "badge": "Pour les débutants des outils IA",
+            "title": "Impossible d'installer ? Configuration incorrecte ? Pas de panique,<br>voici des tutoriels pas à pas",
+            "description": "Claude Code installé mais vous ne savez pas l'utiliser ? Cursor configuré avec des options incompréhensibles ? Pas de souci, nos tutoriels commencent par la \"première étape\",<strong>chaque étape est détaillée</strong>, suivez simplement les instructions.",
             "tags": [
                 {
                     "icon": "ph-check-circle",
@@ -63,7 +63,7 @@
                     "text": "Commandes essentielles"
                 }
             ],
-            "cta": "Suivez les étapes, réussissez du premier coup",
+            "cta": "Suivez les étapes, ça marche du premier coup",
             "terminal": {
                 "panic": [
                     "> npm install",
@@ -81,8 +81,8 @@
         },
         "advanced": {
             "badge": "Pour les utilisateurs avancés",
-            "title": "Pas seulement pour débutants,<br>mais aussi pour la pratique approfondie",
-            "description": "Rotation multi-comptes, économies de Token, automatisation d'Agent... Ces \"astuces avancées\" ne sont pas toujours expliquées dans la documentation officielle.<strong>Nous les avons extraites du code source</strong> pour vous permettre de mieux les utiliser.",
+            "title": "Pas seulement pour débutants,<br>il y a aussi une pratique approfondie",
+            "description": "Rotation multi-comptes, économies de tokens, automatisation d'agents... Ces \"astuces avancées\" ne sont pas toujours documentées officiellement.<strong>Nous les extrayons du code source</strong> pour vous faire gagner en productivité.",
             "tags": [
                 {
                     "icon": "ph-gear",
@@ -93,7 +93,7 @@
                     "text": "Analyse du code source"
                 }
             ],
-            "cta": "Gagnez du temps et de l'argent, doublez votre efficacité"
+            "cta": "Gagnez du temps, économisez, doublez votre efficacité"
         }
     },
     "features": {
@@ -104,19 +104,19 @@
                 "icon": "ph-file-code",
                 "color": "brand",
                 "title": "Vérification du code source",
-                "desc": "Pas copié en ligne, mais dérivé du code"
+                "desc": "Pas copié en ligne, dérivé du code"
             },
             {
                 "icon": "ph-arrows-clockwise",
                 "color": "emerald",
                 "title": "Mises à jour continues",
-                "desc": "Les outils sont mis à jour, les tutoriels aussi"
+                "desc": "Les outils évoluent, les tutoriels aussi"
             },
             {
                 "icon": "ph-book-open",
                 "color": "amber",
-                "title": "Convivial pour les débutants",
-                "desc": "Zéro prérequis, suivez étape par étape"
+                "title": "Accessible aux débutants",
+                "desc": "Zéro prérequis, suivez simplement les étapes"
             }
         ]
     },
@@ -126,57 +126,57 @@
         "list": [
             {
                 "title": "Antigravity Auth",
-                "desc": "Plugin d'authentification Google OAuth, utilisez gratuitement les modèles Claude et Gemini",
+                "desc": "Plugin d'authentification Google OAuth, utilisation gratuite des modèles Claude et Gemini",
                 "link": "/fr/NoeFabris/opencode-antigravity-auth/",
                 "repo": "https://github.com/NoeFabris/opencode-antigravity-auth",
                 "meta": {
-                    "lessons": "33 Leçons",
-                    "stars": "6.2k",
+                    "lessons": "33 leçons",
+                    "stars": "6,3k",
                     "difficulty": "Débutant"
                 }
             },
             {
                 "title": "Dynamic Context Pruning",
-                "desc": "Réduisez automatiquement l'utilisation de Token, supprimez intelligemment le contexte redondant",
+                "desc": "Réduisez automatiquement l'utilisation des tokens, supprimez intelligemment le contexte redondant",
                 "link": "/fr/Opencode-DCP/opencode-dynamic-context-pruning/",
                 "repo": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning",
                 "meta": {
-                    "lessons": "22 Leçons",
-                    "stars": "556",
+                    "lessons": "22 leçons",
+                    "stars": "560",
                     "difficulty": "Avancé"
                 }
             },
             {
                 "title": "Plannotator",
-                "desc": "Outil de planification et de revue de code par IA, interaction visuelle",
+                "desc": "Outil de planification et de révision de code IA, interaction visuelle",
                 "link": "/fr/backnotprop/plannotator/",
                 "repo": "https://github.com/backnotprop/plannotator",
                 "meta": {
-                    "lessons": "27 Leçons",
-                    "stars": "1.4k",
+                    "lessons": "27 leçons",
+                    "stars": "1,4k",
                     "difficulty": "Intermédiaire"
                 }
             },
             {
                 "title": "Agent Skills",
-                "desc": "Découverte et gestion dynamique des compétences, améliorez l'efficacité des Agents",
+                "desc": "Découverte et gestion dynamique des compétences, améliorez l'efficacité des agents",
                 "link": "/fr/joshuadavidthomas/opencode-agent-skills/",
                 "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills",
                 "meta": {
-                    "lessons": "24 Leçons",
-                    "stars": "25",
+                    "lessons": "24 leçons",
+                    "stars": "26",
                     "difficulty": "Intermédiaire"
                 }
             },
             {
                 "title": "Antigravity Manager",
-                "desc": "Système de gestion de comptes IA locaux et de proxy inverse de protocole",
+                "desc": "Gestion locale des comptes IA et système de proxy inverse de protocole",
                 "link": "/fr/lbjlaq/Antigravity-Manager/",
                 "repo": "https://github.com/lbjlaq/Antigravity-Manager",
                 "meta": {
-                    "lessons": "39 Leçons",
-                    "stars": "17.8k",
-                    "difficulty": "Expert"
+                    "lessons": "39 leçons",
+                    "stars": "18k",
+                    "difficulty": "Avancé"
                 }
             },
             {
@@ -185,83 +185,105 @@
                 "link": "/fr/numman-ali/openskills/",
                 "repo": "https://github.com/numman-ali/openskills",
                 "meta": {
-                    "lessons": "35 Leçons",
-                    "stars": "7k",
+                    "lessons": "35 leçons",
+                    "stars": "7,1k",
                     "difficulty": "Intermédiaire"
                 }
             },
             {
                 "title": "Supermemory",
-                "desc": "Plugin de persistance de mémoire, partage de mémoire entre sessions et projets",
+                "desc": "Plugin de persistance de la mémoire, partage entre sessions et projets",
                 "link": "/fr/supermemoryai/opencode-supermemory/",
                 "repo": "https://github.com/supermemoryai/opencode-supermemory",
                 "meta": {
-                    "lessons": "13 Leçons",
-                    "stars": "520",
-                    "difficulty": "Expert"
+                    "lessons": "13 leçons",
+                    "stars": "522",
+                    "difficulty": "Avancé"
                 }
             },
             {
                 "title": "MyStatus",
-                "desc": "Consultation en un clic des quotas de comptes IA, intégration multi-plateforme",
+                "desc": "Consultation en un clic des quotas de comptes IA, intégration multi-plateformes",
                 "link": "/fr/vbgate/opencode-mystatus/",
                 "repo": "https://github.com/vbgate/opencode-mystatus",
                 "meta": {
-                    "lessons": "23 Leçons",
+                    "lessons": "23 leçons",
                     "stars": "161",
                     "difficulty": "Débutant"
                 }
             },
             {
                 "title": "OpenCode Markdown Table Formatter",
-                "desc": "Optimisé spécifiquement pour le mode masqué OpenCode, garantissant un alignement parfait des tableaux même en masquant les symboles Markdown",
+                "desc": "Optimisation du mode caché d'OpenCode, assure un alignement parfait des tableaux même en masquant les symboles Markdown",
                 "link": "/fr/franlol/opencode-md-table-formatter/",
                 "repo": "https://github.com/franlol/opencode-md-table-formatter",
                 "meta": {
-                    "lessons": "14 Leçons",
-                    "stars": "--",
+                    "lessons": "14 leçons",
+                    "stars": "146",
                     "difficulty": "Débutant"
                 }
             },
             {
                 "title": "oh-my-opencode",
-                "desc": "Orchestration d'agents IA multi-modèles, permet aux équipes de développement de travailler comme de vrais experts",
+                "desc": "Orchestration d'agents IA multi-modèles, faites travailler votre équipe de développement comme de vrais experts",
                 "link": "/fr/code-yeongyu/oh-my-opencode/",
                 "repo": "https://github.com/code-yeongyu/oh-my-opencode",
                 "meta": {
-                    "lessons": "26 Leçons",
+                    "lessons": "26 leçons",
+                    "stars": "24,1k",
+                    "difficulty": "Avancé"
+                }
+            },
+            {
+                "title": "opencode-notify",
+                "desc": "Fournit des notifications de bureau natives pour OpenCode AI, avec détection intelligente du focus, périodes de silence et focus au clic",
+                "link": "/fr/kdcokenny/opencode-notify/",
+                "repo": "https://github.com/kdcokenny/opencode-notify",
+                "meta": {
+                    "lessons": "21 leçons",
                     "stars": "--",
-                    "difficulty": "Expert"
+                    "difficulty": "Intermédiaire"
                 }
             },
             {
                 "title": "agent-skills",
-                "desc": "Pack de compétences pour l'agent de codage Vercel AI, optimisation des performances React et guide de conception Web intégrés",
+                "desc": "Pack de compétences pour l'agent de codage Vercel AI, avec optimisation des performances React et guide de design Web",
                 "link": "/fr/vercel-labs/agent-skills/",
                 "repo": "https://github.com/vercel-labs/agent-skills",
                 "meta": {
-                    "lessons": "14 Leçons",
-                    "stars": "--",
+                    "lessons": "14 leçons",
+                    "stars": "16,6k",
                     "difficulty": "Intermédiaire"
+                }
+            },
+            {
+                "title": "Clawdbot",
+                "desc": "Votre assistant IA privé, disponible partout",
+                "link": "/fr/clawdbot/clawdbot/",
+                "repo": "https://github.com/clawdbot/clawdbot",
+                "meta": {
+                    "lessons": "43 leçons",
+                    "stars": "--",
+                    "difficulty": "Avancé"
                 }
             }
         ],
         "apply_card": {
             "title": "Soumettez votre projet",
             "steps": [
-                "Soumettez un Issue",
-                "Révision par l'équipe",
+                "Soumettez une Issue",
+                "Examen par l'équipe",
                 "Mise en ligne du tutoriel"
             ],
             "repo_text": "Repo",
-            "cta_text": "Postuler maintenant",
+            "cta_text": "Appliquer maintenant",
             "link": "https://github.com/vbgate/opencodedocs/issues",
             "repo_link": "https://github.com/vbgate/opencodedocs"
         }
     },
     "cta_section": {
         "title": "Commencez votre voyage IA",
-        "subtitle": "De la première ligne de code à l'application de production, nous avons des tutoriels correspondants",
+        "subtitle": "De la première ligne de code aux applications de production, nous avons des tutoriels pour chaque étape",
         "button_text": "Voir tous les tutoriels",
         "button_link": "#tutorials"
     },

@@ -16,6 +16,34 @@ export default withMermaid(defineConfig({
   sitemap: {
     hostname: 'https://opencodedocs.com'
   },
+  
+  // SEO: 为每个页面生成 hreflang 标签
+  transformHead({ pageData }) {
+    const head: Array<[string, Record<string, string>]> = []
+    const hostname = 'https://opencodedocs.com'
+    const locales = ['zh', 'zh-tw', 'ja', 'ko', 'es', 'fr', 'de', 'pt', 'ru']
+    
+    // 获取当前页面路径 (去掉 .md 后缀，index.md 转为目录形式)
+    let pagePath = pageData.relativePath
+      .replace(/\.md$/, '')
+      .replace(/index$/, '')
+    
+    // 确保路径以 / 结尾（如果不是空）
+    if (pagePath && !pagePath.endsWith('/')) {
+      pagePath += '/'
+    }
+    
+    // 添加英文版 (作为 x-default)
+    head.push(['link', { rel: 'alternate', hreflang: 'en', href: `${hostname}/${pagePath}` }])
+    head.push(['link', { rel: 'alternate', hreflang: 'x-default', href: `${hostname}/${pagePath}` }])
+    
+    // 添加其他语言版本
+    for (const locale of locales) {
+      head.push(['link', { rel: 'alternate', hreflang: locale, href: `${hostname}/${locale}/${pagePath}` }])
+    }
+    
+    return head
+  },
   head: [
     ['meta', { name: 'author', content: 'OpenCodeDocs Team' }],
     ['meta', { name: 'keywords', content: '开源教程, 源码教程, OpenCode, 编程教程, 开发者文档' }],

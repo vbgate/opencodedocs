@@ -1,14 +1,14 @@
 {
     "hero": {
-        "badge": "검증된 튜토리얼, 따라 하면 바로 실행",
-        "title_prefix": "소스 코드 기반",
-        "title_main": "AI 전체 시나리오 튜토리얼",
+        "badge": "검증된 튜토리얼, 따라 하면 바로 실행 가능",
+        "title_prefix": "소스 코드 기반의",
+        "title_main": "AI 전 분야 튜토리얼",
         "typewriter_texts": [
             "입문부터 전문가까지",
             "모든 단계가 실행 가능",
-            "배우면 바로 사용 가능"
+            "학습 후 바로 적용 가능"
         ],
-        "description": "AI 도구는 빠르게 발전하는데, 공식 문서는 뒤처지고, 온라인 튜토리얼은 구식입니다.<br class=\"hidden sm:inline\"><strong>우리는 이 모든 것을 바꿉니다.</strong>",
+        "description": "AI 도구가 빠르게 변화하지만 공식 문서는 뒤처지고, 온라인 튜토리얼은 오래되었습니다—<br class=\"hidden sm:inline\"><strong>우리가 이 모든 것을 바꿉니다.</strong>",
         "primary_action": {
             "text": "학습 시작",
             "link": "#tutorials"
@@ -21,25 +21,25 @@
             "title": "OpenCodeDocs",
             "ui": {
                 "online_text": "온라인",
-                "completed_text": "완료됨",
-                "input_placeholder": "AI에게 원하는 것을 알려주세요..."
+                "completed_text": "완료",
+                "input_placeholder": "AI에 하고 싶은 것을 알려주세요..."
             },
             "messages": [
                 {
                     "role": "user",
-                    "text": "OpenCode에서 OpenAI와 지푸 잔액을 바로 조회할 수 있나요?"
+                    "text": "OpenCode에서 OpenAI와 Zhipu의 API 한도를 조회할 수 있나요?"
                 },
                 {
                     "role": "ai",
-                    "text": "네, 가능합니다. 'MyStatus' 플러그인을 설치한 후, 슬래시 명령어 /mystatus를 입력하면 한 번에 볼 수 있습니다."
+                    "text": "네 가능합니다. MyStatus 플러그인을 설치한 후 /mystatus를 입력하면 한 번에 조회할 수 있습니다."
                 },
                 {
                     "role": "user",
-                    "text": "명령줄 출력만 제공하나요?"
+                    "text": "시각적 진행률 표시줄도 볼 수 있나요?"
                 },
                 {
                     "role": "ai",
-                    "text": "아니요, 시각적 프로그레스 바와 리셋 카운트다운을 제공합니다. OpenAI, Copilot 등 5대 플랫폼을 지원하며, 완전히 로컬에서 실행되어 개인정보를 보호합니다.✅",
+                    "text": "네 가능합니다. 한도가 얼마나 남았는지 진행률 표시줄로 보여주고, 초기화까지 남은 시간도 표시하며, 5대 플랫폼을 지원하고 완전히 로컬에서 실행됩니다.✅",
                     "status": "검증됨",
                     "meta": "opencode-mystatus"
                 }
@@ -48,11 +48,11 @@
     },
     "audience": {
         "title": "초보자든 전문가든,<br class=\"sm:hidden\">원하는 것을 찾을 수 있습니다",
-        "subtitle": "레벨별 튜토리얼 시스템으로 각 단계의 요구사항 충족",
+        "subtitle": "레벨별 튜토리얼 시스템, 각 단계의 요구사항 충족",
         "beginner": {
-            "badge": "AI 도구 초보자용",
-            "title": "설치가 안 되나요? 설정이 어렵나요?<br>여기에 상세 튜토리얼이 있습니다",
-            "description": "Claude Code를 설치했는데 사용법을 모르시나요? Cursor 설정이 복잡하게 보이나요? 걱정하지 마세요, 우리 튜토리얼은 \"첫 번째 단계\"부터 시작해서 <strong>각 단계를 상세히 설명</strong>하니 따라 하기만 하면 됩니다.",
+            "badge": "AI 도구 초보자를 위해",
+            "title": "설치가 안 되나요? 설정이 어렵나요? 걱정 마세요,<br>여기에 상세한 튜토리얼이 있습니다",
+            "description": "Claude Code를 설치했지만 사용법을 모르나요? Cursor 설정이 이해가 안 가나요? 당황하지 마세요, 우리 튜토리얼은\"첫 번째 단계\"부터 설명하고,<strong>각 단계를 상세히 분석</strong>해서 따라 하기만 하면 됩니다.",
             "tags": [
                 {
                     "icon": "ph-check-circle",
@@ -80,75 +80,75 @@
             }
         },
         "advanced": {
-            "badge": "상급 사용자용",
-            "title": "기초를 넘어서,<br>심도 있는 실전 경험",
-            "description": "다중 계정 교체, Token 절약 기법, Agent 자동화... 이런 \"고급 사용법\"은 공식 문서에서 다루지 않을 수 있습니다. <strong>우리는 소스 코드에서 분석</strong>하여 더 편하게 사용할 수 있게 해드립니다.",
+            "badge": "고급 사용자를 위해",
+            "title": "입문만이 아니라,<br>심화 실습도 제공",
+            "description": "다중 계정 교체, Token 절약 기술, Agent 자동화... 이러한\"고급 기법\"은 공식 문서에서 설명하지 않을 수 있습니다.<strong>우리는 소스 코드에서 추출</strong>해서 더 편하게 사용할 수 있게 해줍니다.",
             "tags": [
                 {
                     "icon": "ph-gear",
-                    "text": "상급 기법"
+                    "text": "고급 기술"
                 },
                 {
                     "icon": "ph-code",
                     "text": "소스 코드 분석"
                 }
             ],
-            "cta": "시간과 비용 절약, 효율 2배"
+            "cta": "시간과 비용 절약, 효율성 2배"
         }
     },
     "features": {
-        "title": "왜 OpenCodeDocs인가요?",
-        "subtitle": "다른 곳에는 없는 세 가지 특징",
+        "title": "OpenCodeDocs를 선택해야 하는 이유?",
+        "subtitle": "우리는 남들이 갖지 못한 세 가지가 있습니다",
         "list": [
             {
                 "icon": "ph-file-code",
                 "color": "brand",
                 "title": "소스 코드 검증",
-                "desc": "온라인에서 복사한 것이 아니라, 코드에서 분석한 것입니다"
+                "desc": "온라인에서 복사한 것이 아니라 코드에서 유도한 것"
             },
             {
                 "icon": "ph-arrows-clockwise",
                 "color": "emerald",
                 "title": "지속 업데이트",
-                "desc": "도구가 업데이트되면 튜토리얼도 함께 업데이트됩니다"
+                "desc": "도구가 업데이트되면 튜토리얼도 동기화"
             },
             {
                 "icon": "ph-book-open",
                 "color": "amber",
                 "title": "초보자 친화적",
-                "desc": "기초 지식 없어도 따라 할 수 있습니다, 단계별로"
+                "desc": "기초 지식 없이도 따라 할 수 있고, 단계별로 진행"
             }
         ]
     },
     "tutorials": {
-        "title": "원하는 것을 선택하세요",
-        "subtitle": "모든 튜토리얼이 검증되어 있으며, 따라 하면 실행 가능합니다",
+        "title": "하나를 선택하여 시작하세요",
+        "subtitle": "모든 튜토리얼이 검증되었으며, 따라 하면 실행 가능",
         "list": [
             {
                 "title": "Antigravity Auth",
-                "desc": "Google OAuth 인증 플러그인으로 Claude 및 Gemini 모델을 무료로 사용",
+                "desc": "Google OAuth 인증 플러그인, Claude 및 Gemini 모델을 무료로 사용",
                 "link": "/ko/NoeFabris/opencode-antigravity-auth/",
                 "repo": "https://github.com/NoeFabris/opencode-antigravity-auth",
                 "meta": {
                     "lessons": "33 강의",
-                    "stars": "6.2k",
+                    "stars": "6.3k",
                     "difficulty": "입문"
                 }
             },
             {
                 "title": "Dynamic Context Pruning",
-                "desc": "Token 사용량 자동 절약, 중복 컨텍스트 지능형 제거",
+                "desc": "자동으로 Token 사용량 감소, 중복 컨텍스트를 지능적으로 제거",
                 "link": "/ko/Opencode-DCP/opencode-dynamic-context-pruning/",
                 "repo": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning",
                 "meta": {
                     "lessons": "22 강의",
-                    "stars": "556",
-                    "difficulty": "상급"
+                    "stars": "560",
+                    "difficulty": "심화"
                 }
             },
             {
                 "title": "Plannotator",
-                "desc": "AI 계획 및 코드 리뷰 도구, 시각적 인터랙션",
+                "desc": "AI 계획 및 코드 검토 도구, 시각적 상호작용",
                 "link": "/ko/backnotprop/plannotator/",
                 "repo": "https://github.com/backnotprop/plannotator",
                 "meta": {
@@ -159,51 +159,51 @@
             },
             {
                 "title": "Agent Skills",
-                "desc": "스킬 동적 발견 및 관리로 Agent 효율 향상",
+                "desc": "스킬 동적 발견 및 관리, Agent 효율성 향상",
                 "link": "/ko/joshuadavidthomas/opencode-agent-skills/",
                 "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills",
                 "meta": {
                     "lessons": "24 강의",
-                    "stars": "25",
+                    "stars": "26",
                     "difficulty": "중급"
                 }
             },
             {
                 "title": "Antigravity Manager",
-                "desc": "로컬 AI 계정 관리 및 프로토콜 역방향 프록시 시스템",
+                "desc": "로컬 AI 계정 관리 및 프로토콜 역프록시 시스템",
                 "link": "/ko/lbjlaq/Antigravity-Manager/",
                 "repo": "https://github.com/lbjlaq/Antigravity-Manager",
                 "meta": {
                     "lessons": "39 강의",
-                    "stars": "17.8k",
-                    "difficulty": "전문가"
+                    "stars": "18k",
+                    "difficulty": "고급"
                 }
             },
             {
                 "title": "OpenSkills",
-                "desc": "Claude Code 형식 호환 범용 스킬 로더",
+                "desc": "범용 스킬 로더, Claude Code 형식과 호환",
                 "link": "/ko/numman-ali/openskills/",
                 "repo": "https://github.com/numman-ali/openskills",
                 "meta": {
                     "lessons": "35 강의",
-                    "stars": "7k",
+                    "stars": "7.1k",
                     "difficulty": "중급"
                 }
             },
             {
                 "title": "Supermemory",
-                "desc": "메모리 지속성 플러그인으로 세션 및 프로젝트 간 메모리 공유",
+                "desc": "메모리 지속성 플러그인, 세션 및 프로젝트 간 메모리 공유",
                 "link": "/ko/supermemoryai/opencode-supermemory/",
                 "repo": "https://github.com/supermemoryai/opencode-supermemory",
                 "meta": {
                     "lessons": "13 강의",
-                    "stars": "520",
-                    "difficulty": "전문가"
+                    "stars": "522",
+                    "difficulty": "고급"
                 }
             },
             {
                 "title": "MyStatus",
-                "desc": "AI 계정 잔액 원클릭 조회, 다중 플랫폼 통합",
+                "desc": "AI 계정 한도 원클릭 조회, 다중 플랫폼 통합",
                 "link": "/ko/vbgate/opencode-mystatus/",
                 "repo": "https://github.com/vbgate/opencode-mystatus",
                 "meta": {
@@ -214,24 +214,57 @@
             },
             {
                 "title": "OpenCode Markdown Table Formatter",
-                "desc": "OpenCode 숨김 모드 최적화, Markdown 기호 숨김 시에도 완벽한 테이블 정렬",
+                "desc": "OpenCode 숨김 모드 전용 최적화, Markdown 기호 숨겨도 완벽한 정렬 유지",
                 "link": "/ko/franlol/opencode-md-table-formatter/",
                 "repo": "https://github.com/franlol/opencode-md-table-formatter",
                 "meta": {
                     "lessons": "14 강의",
-                    "stars": "--",
+                    "stars": "146",
                     "difficulty": "입문"
                 }
             },
             {
                 "title": "oh-my-opencode",
-                "desc": "다중 모델 AI 에이전트 오케스트레이션, 개발팀을 전문가처럼 작동시키다",
+                "desc": "다중 모델 AI 에이전트 오케스트레이션, 개발팀이 실제 전문가처럼 작동",
                 "link": "/ko/code-yeongyu/oh-my-opencode/",
                 "repo": "https://github.com/code-yeongyu/oh-my-opencode",
                 "meta": {
                     "lessons": "26 강의",
+                    "stars": "24.1k",
+                    "difficulty": "고급"
+                }
+            },
+            {
+                "title": "opencode-notify",
+                "desc": "OpenCode AI를 위한 네이티브 데스크톱 알림, 지능적 포커스 감지, 무음 기간 및 클릭 포커스 지원",
+                "link": "/ko/kdcokenny/opencode-notify/",
+                "repo": "https://github.com/kdcokenny/opencode-notify",
+                "meta": {
+                    "lessons": "21 강의",
                     "stars": "--",
-                    "difficulty": "전문가"
+                    "difficulty": "중급"
+                }
+            },
+            {
+                "title": "agent-skills",
+                "desc": "Vercel AI 코딩 에이전트 스킬 팩, React 성능 최적화 및 웹 디자인 가이드 내장",
+                "link": "/ko/vercel-labs/agent-skills/",
+                "repo": "https://github.com/vercel-labs/agent-skills",
+                "meta": {
+                    "lessons": "14 강의",
+                    "stars": "16.6k",
+                    "difficulty": "중급"
+                }
+            },
+            {
+                "title": "Clawdbot",
+                "desc": "당신의 개인 AI 어시스턴트, 어디서든 사용 가능",
+                "link": "/ko/clawdbot/clawdbot/",
+                "repo": "https://github.com/clawdbot/clawdbot",
+                "meta": {
+                    "lessons": "43 강의",
+                    "stars": "--",
+                    "difficulty": "심화"
                 }
             }
         ],
@@ -250,7 +283,7 @@
     },
     "cta_section": {
         "title": "AI 여정을 시작하세요",
-        "subtitle": "첫 번째 코드부터 프로덕션 레벨 애플리케이션까지, 모든 튜토리얼이 준비되어 있습니다",
+        "subtitle": "첫 줄의 코드부터 프로덕션 레벨 애플리케이션까지, 모든 단계에 해당 튜토리얼이 있습니다",
         "button_text": "모든 튜토리얼 보기",
         "button_link": "#tutorials"
     },
@@ -259,15 +292,15 @@
         "copyright": "© 2026 OpenCodeDocs",
         "links": [
             {
-                "text": "소개",
+                "text": "회사 소개",
                 "link": "/ko/about"
             },
             {
-                "text": "이용약관",
+                "text": "이용 약관",
                 "link": "/ko/terms"
             },
             {
-                "text": "개인정보처리방침",
+                "text": "개인정보 처리방침",
                 "link": "/ko/privacy"
             },
             {

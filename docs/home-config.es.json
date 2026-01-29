@@ -22,7 +22,7 @@
             "ui": {
                 "online_text": "En línea",
                 "completed_text": "Completado",
-                "input_placeholder": "Dile a la AI lo que quieres hacer..."
+                "input_placeholder": "Dile a la IA lo que quieres hacer..."
             },
             "messages": [
                 {
@@ -50,7 +50,7 @@
         "title": "Ya seas principiante o veterano,<br class=\"sm:hidden\">encontrarás lo que necesitas",
         "subtitle": "Sistema de tutoriales por niveles, satisface las necesidades de diferentes etapas",
         "beginner": {
-            "badge": "Para novatos en herramientas de AI",
+            "badge": "Para novatos en herramientas de IA",
             "title": "¿No puedes instalar? ¿Configuración incorrecta? No te preocupes,<br>aquí hay tutoriales paso a paso detallados",
             "description": "¿Claude Code instalado pero no sabes usarlo? ¿Configuración de Cursor que no entiendes? No entres en pánico, nuestros tutoriales comienzan desde el \"primer paso\",<strong>con desglose detallado de cada paso</strong>, solo sigue los pasos.",
             "tags": [
@@ -131,7 +131,7 @@
                 "repo": "https://github.com/NoeFabris/opencode-antigravity-auth",
                 "meta": {
                     "lessons": "33 Lecciones",
-                    "stars": "6.2k",
+                    "stars": "6.3k",
                     "difficulty": "Principiante"
                 }
             },
@@ -142,13 +142,13 @@
                 "repo": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning",
                 "meta": {
                     "lessons": "22 Lecciones",
-                    "stars": "556",
+                    "stars": "560",
                     "difficulty": "Avanzado"
                 }
             },
             {
                 "title": "Plannotator",
-                "desc": "Herramienta de planificación y revisión de código AI, interacción visual",
+                "desc": "Herramienta de planificación y revisión de código IA, interacción visual",
                 "link": "/es/backnotprop/plannotator/",
                 "repo": "https://github.com/backnotprop/plannotator",
                 "meta": {
@@ -164,18 +164,18 @@
                 "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills",
                 "meta": {
                     "lessons": "24 Lecciones",
-                    "stars": "25",
+                    "stars": "26",
                     "difficulty": "Intermedio"
                 }
             },
             {
                 "title": "Antigravity Manager",
-                "desc": "Sistema de gestión de cuentas AI locales y proxy inverso de protocolos",
+                "desc": "Sistema de gestión de cuentas IA locales y proxy inverso de protocolos",
                 "link": "/es/lbjlaq/Antigravity-Manager/",
                 "repo": "https://github.com/lbjlaq/Antigravity-Manager",
                 "meta": {
                     "lessons": "39 Lecciones",
-                    "stars": "17.8k",
+                    "stars": "18k",
                     "difficulty": "Experto"
                 }
             },
@@ -186,7 +186,7 @@
                 "repo": "https://github.com/numman-ali/openskills",
                 "meta": {
                     "lessons": "35 Lecciones",
-                    "stars": "7k",
+                    "stars": "7.1k",
                     "difficulty": "Intermedio"
                 }
             },
@@ -197,13 +197,13 @@
                 "repo": "https://github.com/supermemoryai/opencode-supermemory",
                 "meta": {
                     "lessons": "13 Lecciones",
-                    "stars": "520",
+                    "stars": "522",
                     "difficulty": "Experto"
                 }
             },
             {
                 "title": "MyStatus",
-                "desc": "Consulta de saldo de cuentas AI con un clic, integración de múltiples plataformas",
+                "desc": "Consulta de saldo de cuentas IA con un clic, integración de múltiples plataformas",
                 "link": "/es/vbgate/opencode-mystatus/",
                 "repo": "https://github.com/vbgate/opencode-mystatus",
                 "meta": {
@@ -219,19 +219,30 @@
                 "repo": "https://github.com/franlol/opencode-md-table-formatter",
                 "meta": {
                     "lessons": "14 Lecciones",
-                    "stars": "--",
+                    "stars": "146",
                     "difficulty": "Principiante"
                 }
             },
             {
                 "title": "oh-my-opencode",
-                "desc": "Orquestación de agentes AI multimodelo, permite que los equipos de desarrollo trabajen como expertos reales",
+                "desc": "Orquestación de agentes IA multimodelo, permite que los equipos de desarrollo trabajen como expertos reales",
                 "link": "/es/code-yeongyu/oh-my-opencode/",
                 "repo": "https://github.com/code-yeongyu/oh-my-opencode",
                 "meta": {
                     "lessons": "26 Lecciones",
-                    "stars": "--",
+                    "stars": "24.1k",
                     "difficulty": "Experto"
+                }
+            },
+            {
+                "title": "opencode-notify",
+                "desc": "Proporciona notificaciones de escritorio nativas para OpenCode AI, soporta detección inteligente de foco, horas silenciosas y clic para enfocar",
+                "link": "/es/kdcokenny/opencode-notify/",
+                "repo": "https://github.com/kdcokenny/opencode-notify",
+                "meta": {
+                    "lessons": "21 Lecciones",
+                    "stars": "--",
+                    "difficulty": "Intermedio"
                 }
             },
             {
@@ -241,8 +252,19 @@
                 "repo": "https://github.com/vercel-labs/agent-skills",
                 "meta": {
                     "lessons": "14 Lecciones",
-                    "stars": "--",
+                    "stars": "16.6k",
                     "difficulty": "Intermedio"
+                }
+            },
+            {
+                "title": "Clawdbot",
+                "desc": "Tu asistente IA privado, disponible en todas partes",
+                "link": "/es/clawdbot/clawdbot/",
+                "repo": "https://github.com/clawdbot/clawdbot",
+                "meta": {
+                    "lessons": "43 Lecciones",
+                    "stars": "--",
+                    "difficulty": "Avanzado"
                 }
             }
         ],
@@ -260,7 +282,7 @@
         }
     },
     "cta_section": {
-        "title": "Comienza tu viaje en AI",
+        "title": "Comienza tu viaje en IA",
         "subtitle": "Desde la primera línea de código hasta aplicaciones de producción, tenemos tutoriales correspondientes",
         "button_text": "Explorar todos los tutoriales",
         "button_link": "#tutorials"

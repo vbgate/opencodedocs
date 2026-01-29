@@ -27,19 +27,19 @@
             "messages": [
                 {
                     "role": "user",
-                    "text": "OpenCode 里能直接查 OpenAI 和 智谱 剩多少钱吗？"
+                    "text": "OpenCode 里能查 OpenAI 和智谱的 API 额度吗？"
                 },
                 {
                     "role": "ai",
-                    "text": "可以。安装 'MyStatus' 插件后，输入斜杠命令 /mystatus 即可一键查看。"
+                    "text": "可以。安装 MyStatus 插件后，输入 /mystatus 即可一键查询。"
                 },
                 {
                     "role": "user",
-                    "text": "只有命令行输出吗？"
+                    "text": "能看到可视化进度条吗？"
                 },
                 {
                     "role": "ai",
-                    "text": "不，它会提供可视化进度条和重置倒计时。支持 OpenAI、Copilot 等 5 大平台，完全本地运行，保护隐私。✅",
+                    "text": "可以。它会用进度条展示剩余额度，显示重置时间倒计时，支持 5 大平台，完全本地运行。✅",
                     "status": "已验证",
                     "meta": "opencode-mystatus"
                 }

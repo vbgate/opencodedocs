@@ -8,7 +8,7 @@
             "Jeder Schritt funktioniert",
             "Sofort anwendbar nach dem Lernen"
         ],
-        "description": "KI-Tools entwickeln sich rasend schnell, offizielle Dokumentation hinkt hinterher, Online-Tutorials sind veraltet——<strong>Wir wollen das ändern.</strong>",
+        "description": "KI-Tools entwickeln sich rasend schnell, offizielle Dokumentation hinkt hinterher, Online-Tutorials sind veraltet——<br class=\"hidden sm:inline\"><strong>Wir wollen das ändern.</strong>",
         "primary_action": {
             "text": "Starten zu lernen",
             "link": "#tutorials"
@@ -131,7 +131,7 @@
                 "repo": "https://github.com/NoeFabris/opencode-antigravity-auth",
                 "meta": {
                     "lessons": "33 Lektionen",
-                    "stars": "6.2k",
+                    "stars": "6.3k",
                     "difficulty": "Anfänger"
                 }
             },
@@ -142,8 +142,8 @@
                 "repo": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning",
                 "meta": {
                     "lessons": "22 Lektionen",
-                    "stars": "556",
-                    "difficulty": "Erweitert"
+                    "stars": "560",
+                    "difficulty": "Fortgeschritten"
                 }
             },
             {
@@ -154,7 +154,7 @@
                 "meta": {
                     "lessons": "27 Lektionen",
                     "stars": "1.4k",
-                    "difficulty": "Fortgeschritten"
+                    "difficulty": "Mittelstufe"
                 }
             },
             {
@@ -164,8 +164,8 @@
                 "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills",
                 "meta": {
                     "lessons": "24 Lektionen",
-                    "stars": "25",
-                    "difficulty": "Fortgeschritten"
+                    "stars": "26",
+                    "difficulty": "Mittelstufe"
                 }
             },
             {
@@ -175,7 +175,7 @@
                 "repo": "https://github.com/lbjlaq/Antigravity-Manager",
                 "meta": {
                     "lessons": "39 Lektionen",
-                    "stars": "17.8k",
+                    "stars": "18k",
                     "difficulty": "Experte"
                 }
             },
@@ -186,8 +186,8 @@
                 "repo": "https://github.com/numman-ali/openskills",
                 "meta": {
                     "lessons": "35 Lektionen",
-                    "stars": "7k",
-                    "difficulty": "Fortgeschritten"
+                    "stars": "7.1k",
+                    "difficulty": "Mittelstufe"
                 }
             },
             {
@@ -197,7 +197,7 @@
                 "repo": "https://github.com/supermemoryai/opencode-supermemory",
                 "meta": {
                     "lessons": "13 Lektionen",
-                    "stars": "520",
+                    "stars": "522",
                     "difficulty": "Experte"
                 }
             },
@@ -219,7 +219,7 @@
                 "repo": "https://github.com/franlol/opencode-md-table-formatter",
                 "meta": {
                     "lessons": "14 Lektionen",
-                    "stars": "--",
+                    "stars": "146",
                     "difficulty": "Anfänger"
                 }
             },
@@ -230,8 +230,19 @@
                 "repo": "https://github.com/code-yeongyu/oh-my-opencode",
                 "meta": {
                     "lessons": "26 Lektionen",
-                    "stars": "--",
+                    "stars": "24.1k",
                     "difficulty": "Experte"
+                }
+            },
+            {
+                "title": "opencode-notify",
+                "desc": "Native Desktop-Benachrichtigungen für OpenCode KI, mit intelligenter Fokus-Erkennung, Stumm-Phasen und Klick-Fokus",
+                "link": "/de/kdcokenny/opencode-notify/",
+                "repo": "https://github.com/kdcokenny/opencode-notify",
+                "meta": {
+                    "lessons": "21 Lektionen",
+                    "stars": "--",
+                    "difficulty": "Mittelstufe"
                 }
             },
             {
@@ -241,6 +252,17 @@
                 "repo": "https://github.com/vercel-labs/agent-skills",
                 "meta": {
                     "lessons": "14 Lektionen",
+                    "stars": "16.6k",
+                    "difficulty": "Mittelstufe"
+                }
+            },
+            {
+                "title": "Clawdbot",
+                "desc": "Dein privater KI-Assistent, überall verfügbar",
+                "link": "/de/clawdbot/clawdbot/",
+                "repo": "https://github.com/clawdbot/clawdbot",
+                "meta": {
+                    "lessons": "43 Lektionen",
                     "stars": "--",
                     "difficulty": "Fortgeschritten"
                 }
