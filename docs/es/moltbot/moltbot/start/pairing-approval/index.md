@@ -297,13 +297,13 @@ Recuerda: **el mecanismo de emparejamiento es la base de seguridad de Clawdbot**
 
 | Función | Ruta del archivo | Línea |
 |--- | --- | ---|
-| Generación de código de emparejamiento (8 caracteres, excluye caracteres confusos) | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L173-L181) | 173-181 |
-| Almacenamiento y TTL de solicitudes de emparejamiento (1 hora) | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L11-L14) | 11-14 |
-| Comando de aprobación de emparejamiento | [`src/cli/pairing-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/pairing-cli.ts#L107-L143) | 107-143 |
-| Generación de mensaje de código de emparejamiento | [`src/pairing/pairing-messages.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-messages.ts#L4-L20) | 4-20 |
-| Almacenamiento de lista de permitidos | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L457-L461) | 457-461 |
-| Lista de canales que admiten `pairing` | [`src/channels/plugins/pairing.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/pairing.ts#L11-L16) | 11-16 |
-| Política DM predeterminada (pairing) | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts#L93) | 93 |
+| Generación de código de emparejamiento (8 caracteres, excluye caracteres confusos) | [`src/pairing/pairing-store.ts`](https://github.com/moltbot/moltbot/blob/main/src/pairing/pairing-store.ts#L173-L181) | 173-181 |
+| Almacenamiento y TTL de solicitudes de emparejamiento (1 hora) | [`src/pairing/pairing-store.ts`](https://github.com/moltbot/moltbot/blob/main/src/pairing/pairing-store.ts#L11-L14) | 11-14 |
+| Comando de aprobación de emparejamiento | [`src/cli/pairing-cli.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/pairing-cli.ts#L107-L143) | 107-143 |
+| Generación de mensaje de código de emparejamiento | [`src/pairing/pairing-messages.ts`](https://github.com/moltbot/moltbot/blob/main/src/pairing/pairing-messages.ts#L4-L20) | 4-20 |
+| Almacenamiento de lista de permitidos | [`src/pairing/pairing-store.ts`](https://github.com/moltbot/moltbot/blob/main/src/pairing/pairing-store.ts#L457-L461) | 457-461 |
+| Lista de canales que admiten `pairing` | [`src/channels/plugins/pairing.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/pairing.ts#L11-L16) | 11-16 |
+| Política DM predeterminada (pairing) | [`src/config/zod-schema.providers-core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.providers-core.ts#L93) | 93 |
 
 **Constantes clave**:
 - `PAIRING_CODE_LENGTH = 8`: longitud del código de emparejamiento

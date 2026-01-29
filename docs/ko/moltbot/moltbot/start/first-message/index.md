@@ -544,13 +544,13 @@ clawdbot message send --target +15555550123 --message "Meeting at 3pm"
 
 | 기능                  | 파일 경로                                                                                             | 행 번호    |
 |--- | --- | ---|
-| CLI Agent 명령 등록  | [`src/cli/program/register.agent.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.agent.ts) | 20-82    |
-| Agent CLI 실행        | [`src/commands/agent-via-gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/agent-via-gateway.ts) | 82-184   |
-| CLI message send 등록 | [`src/cli/program/message/register.send.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/message/register.send.ts) | 1-30     |
-| Gateway chat.send 메서드 | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 296-380   |
-| WebChat 내부 메시지 처리 | [`src/gateway/server-chat.gateway-server-chat.e2e.test.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-chat.gateway-server-chat.e2e.test.ts) | 50-290    |
-| 메시지 채널 유형 정의   | [`src/gateway/protocol/client-info.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/client-info.ts) | 2-23     |
-| 채널 레지스트리         | [`src/channels/registry.js`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.js) | 전체 파일   |
+| CLI Agent 명령 등록  | [`src/cli/program/register.agent.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/register.agent.ts) | 20-82    |
+| Agent CLI 실행        | [`src/commands/agent-via-gateway.ts`](https://github.com/moltbot/moltbot/blob/main/src/commands/agent-via-gateway.ts) | 82-184   |
+| CLI message send 등록 | [`src/cli/program/message/register.send.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/message/register.send.ts) | 1-30     |
+| Gateway chat.send 메서드 | [`src/gateway/server-methods/chat.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-methods/chat.ts) | 296-380   |
+| WebChat 내부 메시지 처리 | [`src/gateway/server-chat.gateway-server-chat.e2e.test.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-chat.gateway-server-chat.e2e.test.ts) | 50-290    |
+| 메시지 채널 유형 정의   | [`src/gateway/protocol/client-info.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/protocol/client-info.ts) | 2-23     |
+| 채널 레지스트리         | [`src/channels/registry.js`](https://github.com/moltbot/moltbot/blob/main/src/channels/registry.js) | 전체 파일   |
 
 **주요 상수**:
 - `DEFAULT_CHAT_CHANNEL = "whatsapp"`: 기본 메시지 채널(`src/channels/registry.js`에서)

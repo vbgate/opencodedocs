@@ -517,14 +517,14 @@ clawdbot gateway --port 19001  # 使用不同連接埠
 
 | 功能                        | 檔案路徑                                                                                   | 行號     |
 |--- | --- | ---|
-| Gateway 啟動入口            | [`src/cli/gateway-cli/run.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/gateway-cli/run.ts) | 55-310   |
-| 守護程式服務抽象         | [`src/daemon/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/service.ts) | 66-155    |
-| 啟動側邊欄服務           | [`src/gateway/server-startup.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup.ts) | 26-160    |
-| Gateway 伺服器實作         | [`src/gateway/server.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server.ts) | 1-500     |
-| 程式參數解析             | [`src/daemon/program-args.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/program-args.ts) | 1-250     |
-| 啟動記錄檔輸出              | [`src/gateway/server-startup-log.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup-log.ts) | 7-40      |
-| 開發模式設定             | [`src/cli/gateway-cli/dev.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/gateway-cli/dev.ts) | 1-100     |
-| 連接埠釋放邏輯             | [`src/cli/ports.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/ports.ts) | 1-80      |
+| Gateway 啟動入口            | [`src/cli/gateway-cli/run.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/gateway-cli/run.ts) | 55-310   |
+| 守護程式服務抽象         | [`src/daemon/service.ts`](https://github.com/moltbot/moltbot/blob/main/src/daemon/service.ts) | 66-155    |
+| 啟動側邊欄服務           | [`src/gateway/server-startup.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-startup.ts) | 26-160    |
+| Gateway 伺服器實作         | [`src/gateway/server.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server.ts) | 1-500     |
+| 程式參數解析             | [`src/daemon/program-args.ts`](https://github.com/moltbot/moltbot/blob/main/src/daemon/program-args.ts) | 1-250     |
+| 啟動記錄檔輸出              | [`src/gateway/server-startup-log.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-startup-log.ts) | 7-40      |
+| 開發模式設定             | [`src/cli/gateway-cli/dev.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/gateway-cli/dev.ts) | 1-100     |
+| 連接埠釋放邏輯             | [`src/cli/ports.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/ports.ts) | 1-80      |
 
 **關鍵常數**：
 - 預設連接埠：`18789`（來源：`src/gateway/server.ts`）

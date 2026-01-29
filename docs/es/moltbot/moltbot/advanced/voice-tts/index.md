@@ -178,10 +178,10 @@ Toca el botón Talk en la aplicación iOS/Android para activar.
 
 | Función | Ruta de archivo | Número de línea |
 |--- | --- | ---|
-| Lógica central de TTS | [`src/tts/tts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/tts/tts.ts) | 1-1472 |
-| ElevenLabs TTS | [`src/tts/tts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/tts/tts.ts) | 916-991 |
-| OpenAI TTS | [`src/tts/tts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/tts/tts.ts) | 993-1037 |
-| Edge TTS | [`src/tts/tts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/tts/tts.ts) | 1050-1069 |
-| Gestión de configuración Voice Wake | [`src/infra/voicewake.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/voicewake.ts) | 1-91 |
+| Lógica central de TTS | [`src/tts/tts.ts`](https://github.com/moltbot/moltbot/blob/main/src/tts/tts.ts) | 1-1472 |
+| ElevenLabs TTS | [`src/tts/tts.ts`](https://github.com/moltbot/moltbot/blob/main/src/tts/tts.ts) | 916-991 |
+| OpenAI TTS | [`src/tts/tts.ts`](https://github.com/moltbot/moltbot/blob/main/src/tts/tts.ts) | 993-1037 |
+| Edge TTS | [`src/tts/tts.ts`](https://github.com/moltbot/moltbot/blob/main/src/tts/tts.ts) | 1050-1069 |
+| Gestión de configuración Voice Wake | [`src/infra/voicewake.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/voicewake.ts) | 1-91 |
 
 </details>

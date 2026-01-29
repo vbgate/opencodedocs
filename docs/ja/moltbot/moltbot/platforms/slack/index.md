@@ -599,10 +599,10 @@ AgentがSlack固有の操作を呼び出せるようにします：
 
 | 機能            | ファイルパス                                                                                               | 行番号       |
 |--- | --- | ---|
-| Slack設定タイプ | [`src/config/types.slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.slack.ts) | 1-150      |
-| Slack onboardingロジック | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/slack.ts) | 1-539      |
-| Slack Actionsツール | [`src/agents/tools/slack-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/slack-actions.ts) | 1-301      |
-| Slack公式ドキュメント | [`docs/channels/slack.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/slack.md) | 1-508      |
+| Slack設定タイプ | [`src/config/types.slack.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.slack.ts) | 1-150      |
+| Slack onboardingロジック | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/slack.ts) | 1-539      |
+| Slack Actionsツール | [`src/agents/tools/slack-actions.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/slack-actions.ts) | 1-301      |
+| Slack公式ドキュメント | [`docs/channels/slack.md`](https://github.com/moltbot/moltbot/blob/main/docs/channels/slack.md) | 1-508      |
 
 **重要な型定義**：
 - `SlackConfig`：Slackチャンネルメイン設定型

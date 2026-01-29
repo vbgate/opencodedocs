@@ -455,10 +455,10 @@ clawdbot nodes invoke --node "android-node" --command location.get
 
 | 기능        | 파일路径                                                                                    | 행번    |
 |--- | --- | ---|
-| 노드 명령 정책 | [`src/gateway/node-command-policy.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/node-command-policy.ts) | 1-112   |
-| 노드 프로토콜 스키마 | [`src/gateway/protocol/schema/nodes.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/schema/nodes.ts) | 1-103   |
-| Android 문서  | [`docs/platforms/android.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/android.md) | 1-142   |
-| 노드 CLI  | [`docs/cli/nodes.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/cli/nodes.md) | 1-69    |
+| 노드 명령 정책 | [`src/gateway/node-command-policy.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/node-command-policy.ts) | 1-112   |
+| 노드 프로토콜 스키마 | [`src/gateway/protocol/schema/nodes.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/protocol/schema/nodes.ts) | 1-103   |
+| Android 문서  | [`docs/platforms/android.md`](https://github.com/moltbot/moltbot/blob/main/docs/platforms/android.md) | 1-142   |
+| 노드 CLI  | [`docs/cli/nodes.md`](https://github.com/moltbot/moltbot/blob/main/docs/cli/nodes.md) | 1-69    |
 
 **핵심 상수**:
 - `PLATFORM_DEFAULTS`: 각 플랫폼에서 지원하는 명령 목록 정의(`node-command-policy.ts:32-58`)

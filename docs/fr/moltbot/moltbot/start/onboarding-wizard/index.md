@@ -680,14 +680,14 @@ L'assistant de configuration est la méthode recommandée pour configurer Clawdb
 
 | Fonctionnalité           | Chemin du Fichier                                                                                                  | Lignes      |
 |--- | --- | ---|
-| Flux principal de l'assistant     | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 87-452    |
-| Confirmation de l'avertissement de sécurité   | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 46-85     |
-| Configuration Gateway   | [`src/wizard/onboarding.gateway-config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.gateway-config.ts) | 28-249    |
-| Définition des interfaces de l'assistant   | [`src/wizard/prompts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/prompts.ts) | 36-52     |
-| Configuration des Canaux     | [`src/commands/onboard-channels.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/onboard-channels.ts) | -         |
-| Configuration des Compétences     | [`src/commands/onboard-skills.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/onboard-skills.ts) | -         |
-| Définition des Types de l'Assistant   | [`src/wizard/onboarding.types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.types.ts) | 1-26      |
-| Schéma de Configuration | [`src/config/zod-schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.ts) | -         |
+| Flux principal de l'assistant     | [`src/wizard/onboarding.ts`](https://github.com/moltbot/moltbot/blob/main/src/wizard/onboarding.ts) | 87-452    |
+| Confirmation de l'avertissement de sécurité   | [`src/wizard/onboarding.ts`](https://github.com/moltbot/moltbot/blob/main/src/wizard/onboarding.ts) | 46-85     |
+| Configuration Gateway   | [`src/wizard/onboarding.gateway-config.ts`](https://github.com/moltbot/moltbot/blob/main/src/wizard/onboarding.gateway-config.ts) | 28-249    |
+| Définition des interfaces de l'assistant   | [`src/wizard/prompts.ts`](https://github.com/moltbot/moltbot/blob/main/src/wizard/prompts.ts) | 36-52     |
+| Configuration des Canaux     | [`src/commands/onboard-channels.ts`](https://github.com/moltbot/moltbot/blob/main/src/commands/onboard-channels.ts) | -         |
+| Configuration des Compétences     | [`src/commands/onboard-skills.ts`](https://github.com/moltbot/moltbot/blob/main/src/commands/onboard-skills.ts) | -         |
+| Définition des Types de l'Assistant   | [`src/wizard/onboarding.types.ts`](https://github.com/moltbot/moltbot/blob/main/src/wizard/onboarding.types.ts) | 1-26      |
+| Schéma de Configuration | [`src/config/zod-schema.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.ts) | -         |
 
 **Types Clés** :
 - `WizardFlow` : `"quickstart" | "advanced"` - Type de mode de l'assistant

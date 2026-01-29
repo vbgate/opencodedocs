@@ -296,15 +296,15 @@ clawdbot message "Hello" --target=<your-channel>
 
 For more detailed version history and issue links, visit:
 
-- **GitHub Releases**: https://github.com/clawdbot/clawdbot/releases
+- **GitHub Releases**: https://github.com/moltbot/moltbot/releases
 - **Official Docs**: https://docs.clawd.bot
 
 ---
 
 ## Previous Versions
 
-To view earlier version updates, visit [GitHub Releases](https://github.com/clawdbot/clawdbot/releases) or [CHANGELOG.md](https://github.com/clawdbot/clawdbot/blob/main/CHANGELOG.md) in the project root.
+To view earlier version updates, visit [GitHub Releases](https://github.com/moltbot/moltbot/releases) or [CHANGELOG.md](https://github.com/moltbot/moltbot/blob/main/CHANGELOG.md) in the project root.
 
 ::: tip Contributing
-If you discover a bug or have a feature suggestion, please submit it in [GitHub Issues](https://github.com/clawdbot/clawdbot/issues).
+If you discover a bug or have a feature suggestion, please submit it in [GitHub Issues](https://github.com/moltbot/moltbot/issues).
 :::

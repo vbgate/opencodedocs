@@ -561,12 +561,12 @@ clawdbot gateway --port 18789 --verbose
 
 | 機能 | ファイルパス | 行番号 |
 |--- | --- | ---|
-| Discord Bot設定Schema | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts#L320-L427) | 320-427 |
-| Discordオンボーディングウィザード | [`src/channels/plugins/onboarding/discord.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/discord.ts) | 1-485 |
-| Discordツール操作 | [`src/agents/tools/discord-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/discord-actions.ts) | 1-72 |
-| Discordメッセージ操作 | [`src/agents/tools/discord-actions-messaging.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/discord-actions-messaging.ts) | - |
-| Discordサーバー操作 | [`src/agents/tools/discord-actions-guild.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/discord-actions-guild.ts) | - |
-| Discord公式ドキュメント | [`docs/channels/discord.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/discord.md) | 1-400 |
+| Discord Bot設定Schema | [`src/config/zod-schema.providers-core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.providers-core.ts#L320-L427) | 320-427 |
+| Discordオンボーディングウィザード | [`src/channels/plugins/onboarding/discord.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/discord.ts) | 1-485 |
+| Discordツール操作 | [`src/agents/tools/discord-actions.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/discord-actions.ts) | 1-72 |
+| Discordメッセージ操作 | [`src/agents/tools/discord-actions-messaging.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/discord-actions-messaging.ts) | - |
+| Discordサーバー操作 | [`src/agents/tools/discord-actions-guild.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/discord-actions-guild.ts) | - |
+| Discord公式ドキュメント | [`docs/channels/discord.md`](https://github.com/moltbot/moltbot/blob/main/docs/channels/discord.md) | 1-400 |
 
 **重要なSchemaフィールド**：
 - `DiscordAccountSchema`：Discordアカウント設定（token、guilds、dm、actionsなど）

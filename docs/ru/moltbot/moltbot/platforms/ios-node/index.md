@@ -389,13 +389,13 @@ clawdbot config set canvasHost "http://<gateway-host>:18793/__clawdbot__/canvas/
 
 | Функция | Путь к файлу | Номера строк |
 |--- | --- | ---|
-| Вход iOS приложения | [`apps/ios/Sources/ClawdbotApp.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/ClawdbotApp.swift) | 1-30 |
-| Рендеринг Canvas | [`apps/ios/Sources/RootCanvas.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/RootCanvas.swift) | 1-250 |
-| Подключение к Gateway | [`apps/ios/Sources/Gateway/`](https://github.com/clawdbot/clawdbot/blob/main/apps/ios/Sources/Gateway/) | - |
-| Runner протокола узла | [`src/node-host/runner.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/node-host/runner.ts) | 1-1100 |
-| Конфигурация узла | [`src/node-host/config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/node-host/config.ts) | 1-50 |
-| Документация по платформе iOS | [`docs/platforms/ios.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/ios.md) | 1-105 |
-| Документация по системе узлов | [`docs/nodes/index.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/nodes/index.md) | 1-306 |
+| Вход iOS приложения | [`apps/ios/Sources/ClawdbotApp.swift`](https://github.com/moltbot/moltbot/blob/main/apps/ios/Sources/ClawdbotApp.swift) | 1-30 |
+| Рендеринг Canvas | [`apps/ios/Sources/RootCanvas.swift`](https://github.com/moltbot/moltbot/blob/main/apps/ios/Sources/RootCanvas.swift) | 1-250 |
+| Подключение к Gateway | [`apps/ios/Sources/Gateway/`](https://github.com/moltbot/moltbot/blob/main/apps/ios/Sources/Gateway/) | - |
+| Runner протокола узла | [`src/node-host/runner.ts`](https://github.com/moltbot/moltbot/blob/main/src/node-host/runner.ts) | 1-1100 |
+| Конфигурация узла | [`src/node-host/config.ts`](https://github.com/moltbot/moltbot/blob/main/src/node-host/config.ts) | 1-50 |
+| Документация по платформе iOS | [`docs/platforms/ios.md`](https://github.com/moltbot/moltbot/blob/main/docs/platforms/ios.md) | 1-105 |
+| Документация по системе узлов | [`docs/nodes/index.md`](https://github.com/moltbot/moltbot/blob/main/docs/nodes/index.md) | 1-306 |
 
 **Ключевые константы**:
 - `GATEWAY_DEFAULT_PORT = 18789`: порт Gateway по умолчанию

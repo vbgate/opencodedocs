@@ -1,18 +1,18 @@
 {
   "project": {
-    "name": "clawdbot",
-    "tagline": "你的私有 AI 助手，随处可用",
+    "name": "Moltbot",
+    "tagline": "你的私有 AI 助手，随处可用 (原 Clawdbot)",
     "description": "在自有设备上运行你的 AI 助手，无缝连接 WhatsApp、Telegram、Slack 等 12+ 种渠道。支持浏览器自动化、多设备协同、语音交互，数据完全本地，隐私无忧。",
-    "github_url": "https://github.com/clawdbot/clawdbot"
+    "github_url": "https://github.com/moltbot/moltbot"
   },
   "hero": {
     "primary_action": {
       "text": "快速开始",
-      "link": "/zh/clawdbot/clawdbot/start/getting-started/"
+      "link": "/zh/moltbot/moltbot/start/getting-started/"
     }
   },
   "features": {
-    "title": "为什么选择 Clawdbot？",
+    "title": "为什么选择 Moltbot？",
     "subtitle": "功能强大、隐私安全、易于部署的个人 AI 助手",
     "list": [
       {
@@ -54,28 +54,28 @@
         "items": [
           {
             "title": "快速开始",
-            "desc": "引导用户完成首次安装、配置和启动 Clawdbot",
-            "link": "/zh/clawdbot/clawdbot/start/getting-started/"
+            "desc": "引导用户完成首次安装、配置和启动 Moltbot",
+            "link": "/zh/moltbot/moltbot/start/getting-started/"
           },
           {
             "title": "向导式配置",
             "desc": "通过交互式向导完成 Gateway、渠道、模型配置",
-            "link": "/zh/clawdbot/clawdbot/start/onboarding-wizard/"
+            "link": "/zh/moltbot/moltbot/start/onboarding-wizard/"
           },
           {
             "title": "启动 Gateway",
             "desc": "学习如何启动 Gateway 守护进程、不同模式（dev/production）",
-            "link": "/zh/clawdbot/clawdbot/start/gateway-startup/"
+            "link": "/zh/moltbot/moltbot/start/gateway-startup/"
           },
           {
             "title": "发送第一条消息",
             "desc": "通过 WebChat 或已配置渠道发送第一条消息给 AI 助手",
-            "link": "/zh/clawdbot/clawdbot/start/first-message/"
+            "link": "/zh/moltbot/moltbot/start/first-message/"
           },
           {
             "title": "DM 配对与访问控制",
             "desc": "了解默认的 DM 配对保护机制，如何批准陌生发送者",
-            "link": "/zh/clawdbot/clawdbot/start/pairing-approval/"
+            "link": "/zh/moltbot/moltbot/start/pairing-approval/"
           }
         ]
       },
@@ -84,68 +84,68 @@
         "items": [
           {
             "title": "多渠道系统概览",
-            "desc": "了解 Clawdbot 支持的所有通信渠道及其特点",
-            "link": "/zh/clawdbot/clawdbot/platforms/channels-overview/"
+            "desc": "了解 Moltbot 支持的所有通信渠道及其特点",
+            "link": "/zh/moltbot/moltbot/platforms/channels-overview/"
           },
           {
             "title": "WhatsApp 渠道",
             "desc": "配置和使用 WhatsApp 渠道（基于 Baileys）",
-            "link": "/zh/clawdbot/clawdbot/platforms/whatsapp/"
+            "link": "/zh/moltbot/moltbot/platforms/whatsapp/"
           },
           {
             "title": "Telegram 渠道",
             "desc": "配置和使用 Telegram 渠道（基于 grammY Bot API）",
-            "link": "/zh/clawdbot/clawdbot/platforms/telegram/"
+            "link": "/zh/moltbot/moltbot/platforms/telegram/"
           },
           {
             "title": "Slack 渠道",
             "desc": "配置和使用 Slack 渠道（基于 Bolt）",
-            "link": "/zh/clawdbot/clawdbot/platforms/slack/"
+            "link": "/zh/moltbot/moltbot/platforms/slack/"
           },
           {
             "title": "Discord 渠道",
             "desc": "配置和使用 Discord 渠道（基于 discord.js）",
-            "link": "/zh/clawdbot/clawdbot/platforms/discord/"
+            "link": "/zh/moltbot/moltbot/platforms/discord/"
           },
           {
             "title": "Google Chat 渠道",
             "desc": "配置和使用 Google Chat 渠道",
-            "link": "/zh/clawdbot/clawdbot/platforms/googlechat/"
+            "link": "/zh/moltbot/moltbot/platforms/googlechat/"
           },
           {
             "title": "Signal 渠道",
             "desc": "配置和使用 Signal 渠道（基于 signal-cli）",
-            "link": "/zh/clawdbot/clawdbot/platforms/signal/"
+            "link": "/zh/moltbot/moltbot/platforms/signal/"
           },
           {
             "title": "iMessage 渠道",
             "desc": "配置和使用 iMessage 渠道（macOS 专属）",
-            "link": "/zh/clawdbot/clawdbot/platforms/imessage/"
+            "link": "/zh/moltbot/moltbot/platforms/imessage/"
           },
           {
             "title": "LINE 渠道",
             "desc": "配置和使用 LINE 渠道（Messaging API）",
-            "link": "/zh/clawdbot/clawdbot/platforms/line/"
+            "link": "/zh/moltbot/moltbot/platforms/line/"
           },
           {
             "title": "WebChat 界面",
             "desc": "使用内置的 WebChat 界面与 AI 助手交互",
-            "link": "/zh/clawdbot/clawdbot/platforms/webchat/"
+            "link": "/zh/moltbot/moltbot/platforms/webchat/"
           },
           {
             "title": "macOS 应用",
             "desc": "了解 macOS 菜单栏应用的功能和 Voice Wake/Talk Mode",
-            "link": "/zh/clawdbot/clawdbot/platforms/macos-app/"
+            "link": "/zh/moltbot/moltbot/platforms/macos-app/"
           },
           {
             "title": "iOS 节点",
             "desc": "配置 iOS 节点以执行设备本地操作（Camera、Canvas、Voice Wake）",
-            "link": "/zh/clawdbot/clawdbot/platforms/ios-node/"
+            "link": "/zh/moltbot/moltbot/platforms/ios-node/"
           },
           {
             "title": "Android 节点",
             "desc": "配置 Android 节点以执行设备本地操作（Camera、Canvas）",
-            "link": "/zh/clawdbot/clawdbot/platforms/android-node/"
+            "link": "/zh/moltbot/moltbot/platforms/android-node/"
           }
         ]
       },
@@ -155,57 +155,57 @@
           {
             "title": "AI 模型与认证配置",
             "desc": "配置 AI 模型提供商（Anthropic、OpenAI、OpenRouter、Ollama 等）和认证方式",
-            "link": "/zh/clawdbot/clawdbot/advanced/models-auth/"
+            "link": "/zh/moltbot/moltbot/advanced/models-auth/"
           },
           {
             "title": "会话管理与多 Agent",
             "desc": "学习会话模型、会话隔离、子 Agent 协作、上下文压缩",
-            "link": "/zh/clawdbot/clawdbot/advanced/session-management/"
+            "link": "/zh/moltbot/moltbot/advanced/session-management/"
           },
           {
             "title": "浏览器自动化工具",
             "desc": "使用浏览器工具进行网页自动化、截图、操作表单等",
-            "link": "/zh/clawdbot/clawdbot/advanced/tools-browser/"
+            "link": "/zh/moltbot/moltbot/advanced/tools-browser/"
           },
           {
             "title": "命令执行工具与审批",
             "desc": "配置和使用 exec 工具，了解安全审批机制",
-            "link": "/zh/clawdbot/clawdbot/advanced/tools-exec/"
+            "link": "/zh/moltbot/moltbot/advanced/tools-exec/"
           },
           {
             "title": "Web 搜索与抓取工具",
             "desc": "使用 web_search 和 web_fetch 工具进行网络搜索和内容抓取",
-            "link": "/zh/clawdbot/clawdbot/advanced/tools-web/"
+            "link": "/zh/moltbot/moltbot/advanced/tools-web/"
           },
           {
             "title": "Canvas 可视化界面与 A2UI",
             "desc": "了解 Canvas A2UI 推送机制、可视化界面操作",
-            "link": "/zh/clawdbot/clawdbot/advanced/canvas/"
+            "link": "/zh/moltbot/moltbot/advanced/canvas/"
           },
           {
             "title": "语音唤醒与文本转语音",
             "desc": "配置 Voice Wake、Talk Mode 和 TTS 提供商",
-            "link": "/zh/clawdbot/clawdbot/advanced/voice-tts/"
+            "link": "/zh/moltbot/moltbot/advanced/voice-tts/"
           },
           {
             "title": "记忆系统与向量搜索",
             "desc": "配置和使用记忆系统（SQLite-vec、FTS5、混合搜索）",
-            "link": "/zh/clawdbot/clawdbot/advanced/memory-system/"
+            "link": "/zh/moltbot/moltbot/advanced/memory-system/"
           },
           {
             "title": "Cron 定时任务与 Webhook",
             "desc": "配置定时任务、Webhook 触发、Gmail Pub/Sub",
-            "link": "/zh/clawdbot/clawdbot/advanced/cron-automation/"
+            "link": "/zh/moltbot/moltbot/advanced/cron-automation/"
           },
           {
-            "title": "技能平台与 ClawdHub",
-            "desc": "了解技能系统、Bundled/Managed/Workspace 技能、ClawdHub 集成",
-            "link": "/zh/clawdbot/clawdbot/advanced/skills-platform/"
+            "title": "技能平台与 MoltHub",
+            "desc": "了解技能系统、Bundled/Managed/Workspace 技能、MoltHub 集成",
+            "link": "/zh/moltbot/moltbot/advanced/skills-platform/"
           },
           {
             "title": "安全与沙箱隔离",
             "desc": "了解安全模型、工具权限控制、Sandbox 隔离、Docker 化",
-            "link": "/zh/clawdbot/clawdbot/advanced/security-sandbox/"
+            "link": "/zh/moltbot/moltbot/advanced/security-sandbox/"
           }
         ]
       },
@@ -215,17 +215,17 @@
           {
             "title": "故障排除",
             "desc": "解决常见问题：Gateway 启动失败、渠道连接问题、认证错误、工具调用失败",
-            "link": "/zh/clawdbot/clawdbot/faq/troubleshooting/"
+            "link": "/zh/moltbot/moltbot/faq/troubleshooting/"
           },
           {
             "title": "CLI 命令参考",
             "desc": "完整的 CLI 命令列表和用法说明",
-            "link": "/zh/clawdbot/clawdbot/faq/cli-commands/"
+            "link": "/zh/moltbot/moltbot/faq/cli-commands/"
           },
           {
             "title": "性能优化",
             "desc": "优化 Gateway 性能、减少延迟、内存管理、并发控制",
-            "link": "/zh/clawdbot/clawdbot/faq/performance-optimization/"
+            "link": "/zh/moltbot/moltbot/faq/performance-optimization/"
           }
         ]
       }

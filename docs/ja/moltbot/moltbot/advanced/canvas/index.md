@@ -401,10 +401,10 @@ clawdbot nodes canvas hide --node abc123-def456-ghi789
 
 | 機能 | ファイルパス | 行番号 |
 |--- | --- | ---|
-| Canvas Hostサーバー | [`src/canvas-host/server.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/server.ts) | 372-441 |
-| A2UIプロトコル処理 | [`src/canvas-host/a2ui.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/a2ui.ts) | 150-203 |
-| Canvasツール定義 | [`src/agents/tools/canvas-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/canvas-tool.ts) | 52-179 |
-| Canvasパス定数 | [`src/canvas-host/a2ui.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/a2ui.ts) | 8-10 |
+| Canvas Hostサーバー | [`src/canvas-host/server.ts`](https://github.com/moltbot/moltbot/blob/main/src/canvas-host/server.ts) | 372-441 |
+| A2UIプロトコル処理 | [`src/canvas-host/a2ui.ts`](https://github.com/moltbot/moltbot/blob/main/src/canvas-host/a2ui.ts) | 150-203 |
+| Canvasツール定義 | [`src/agents/tools/canvas-tool.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/canvas-tool.ts) | 52-179 |
+| Canvasパス定数 | [`src/canvas-host/a2ui.ts`](https://github.com/moltbot/moltbot/blob/main/src/canvas-host/a2ui.ts) | 8-10 |
 
 **重要な定数**：
 - `A2UI_PATH = "/__clawdbot__/a2ui"`：A2UIホストパス

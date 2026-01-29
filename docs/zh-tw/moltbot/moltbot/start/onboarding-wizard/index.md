@@ -680,14 +680,14 @@ clawdbot onboard --mode reset
 
 | 功能           | 檔案路徑                                                                                                  | 行號      |
 |--- | --- | ---|
-| 精靈主流程     | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 87-452    |
-| 安全警告確認   | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 46-85     |
-| Gateway 配置   | [`src/wizard/onboarding.gateway-config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.gateway-config.ts) | 28-249    |
-| 精靈介面定義   | [`src/wizard/prompts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/prompts.ts) | 36-52     |
-| 渠道配置     | [`src/commands/onboard-channels.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/onboard-channels.ts) | -         |
-| 技能配置     | [`src/commands/onboard-skills.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/onboard-skills.ts) | -         |
-| 精靈型別定義   | [`src/wizard/onboarding.types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.types.ts) | 1-26      |
-| 設定檔 Schema | [`src/config/zod-schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.ts) | -         |
+| 精靈主流程     | [`src/wizard/onboarding.ts`](https://github.com/moltbot/moltbot/blob/main/src/wizard/onboarding.ts) | 87-452    |
+| 安全警告確認   | [`src/wizard/onboarding.ts`](https://github.com/moltbot/moltbot/blob/main/src/wizard/onboarding.ts) | 46-85     |
+| Gateway 配置   | [`src/wizard/onboarding.gateway-config.ts`](https://github.com/moltbot/moltbot/blob/main/src/wizard/onboarding.gateway-config.ts) | 28-249    |
+| 精靈介面定義   | [`src/wizard/prompts.ts`](https://github.com/moltbot/moltbot/blob/main/src/wizard/prompts.ts) | 36-52     |
+| 渠道配置     | [`src/commands/onboard-channels.ts`](https://github.com/moltbot/moltbot/blob/main/src/commands/onboard-channels.ts) | -         |
+| 技能配置     | [`src/commands/onboard-skills.ts`](https://github.com/moltbot/moltbot/blob/main/src/commands/onboard-skills.ts) | -         |
+| 精靈型別定義   | [`src/wizard/onboarding.types.ts`](https://github.com/moltbot/moltbot/blob/main/src/wizard/onboarding.types.ts) | 1-26      |
+| 設定檔 Schema | [`src/config/zod-schema.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.ts) | -         |
 
 **關鍵型別**：
 - `WizardFlow`：`"quickstart" | "advanced"` - 精靈模式型別

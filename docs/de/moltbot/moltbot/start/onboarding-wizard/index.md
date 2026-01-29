@@ -674,14 +674,14 @@ Die assistentenbasierte Konfiguration ist die empfohlene Methode zur Konfigurati
 
 | Funktion           | Dateipfad                                                                                                  | Zeilennummer      |
 |--- | --- | ---|
-| Hauptassistentenablauf     | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 87-452    |
-| Sicherheitswarnungsbestätigung   | [`src/wizard/onboarding.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.ts) | 46-85     |
+| Hauptassistentenablauf     | [`src/wizard/onboarding.ts`](https://github.com/moltbot/moltbot/blob/main/src/wizard/onboarding.ts) | 87-452    |
+| Sicherheitswarnungsbestätigung   | [`src/wizard/onboarding.ts`](https://github.com/moltbot/moltbot/blob/main/src/wizard/onboarding.ts) | 46-85     |
 |--- | --- | ---|
-| Assistenten-Schnittstellendefinition   | [`src/wizard/prompts.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/prompts.ts) | 36-52     |
-| Kanalkonfiguration     | [`src/commands/onboard-channels.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/onboard-channels.ts) | -         |
+| Assistenten-Schnittstellendefinition   | [`src/wizard/prompts.ts`](https://github.com/moltbot/moltbot/blob/main/src/wizard/prompts.ts) | 36-52     |
+| Kanalkonfiguration     | [`src/commands/onboard-channels.ts`](https://github.com/moltbot/moltbot/blob/main/src/commands/onboard-channels.ts) | -         |
 |--- | --- | ---|
-| Assistenten-Typdefinition   | [`src/wizard/onboarding.types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/wizard/onboarding.types.ts) | 1-26      |
-| Konfigurationsdatei Schema | [`src/config/zod-schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.ts) | -         |
+| Assistenten-Typdefinition   | [`src/wizard/onboarding.types.ts`](https://github.com/moltbot/moltbot/blob/main/src/wizard/onboarding.types.ts) | 1-26      |
+| Konfigurationsdatei Schema | [`src/config/zod-schema.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.ts) | -         |
 
 **Wichtige Typen**:
 - `WizardFlow`: `"quickstart" | "advanced"` - Assistentenmodus-Typ

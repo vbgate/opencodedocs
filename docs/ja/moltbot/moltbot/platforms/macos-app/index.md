@@ -118,7 +118,7 @@ brew install --cask clawdbot
 ```
 
 ```bash [.dmg を手動ダウンロード]
-# https://github.com/clawdbot/clawdbot/releases から最新の Clawdbot.app.dmg をダウンロード
+# https://github.com/moltbot/moltbot/releases から最新の Clawdbot.app.dmg をダウンロード
 # Applications フォルダにドラッグ
 ```
 
@@ -667,17 +667,17 @@ open 'clawdbot://agent?message=Automated%20task&key=secure-random-string'
 
 | 機能        | ファイルパス                                                                                    | 行番号    |
 |--- | --- | ---|
-| アプリエントリー     | [`apps/macos/Sources/Clawdbot/ClawdbotApp.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/ClawdbotApp.swift) | 全ファイル   |
-| Gateway 接続 | [`apps/macos/Sources/Clawdbot/GatewayConnection.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/GatewayConnection.swift) | 1-500   |
-| Voice Wake ランタイム | [`apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift) | 全ファイル   |
-| Talk Mode タイプ | [`apps/macos/Sources/Clawdbot/TalkModeTypes.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/TalkModeTypes.swift) | 全ファイル   |
-| Voice Wake オーバーレイ | [`apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift) | 全ファイル   |
-| ノードモードコーディネーター | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift) | 全ファイル   |
-| ノードランタイム | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift) | 全ファイル   |
-| 権限マネージャー | [`apps/macos/Sources/Clawdbot/PermissionManager.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/PermissionManager.swift) | 全ファイル   |
-| Exec Approvals | [`apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift) | 全ファイル   |
-| メニューバー | [`apps/macos/Sources/Clawdbot/MenuBar.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/MenuBar.swift) | 全ファイル   |
-| メニューインジェクター | [`apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift) | 全ファイル   |
+| アプリエントリー     | [`apps/macos/Sources/Clawdbot/ClawdbotApp.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/ClawdbotApp.swift) | 全ファイル   |
+| Gateway 接続 | [`apps/macos/Sources/Clawdbot/GatewayConnection.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/GatewayConnection.swift) | 1-500   |
+| Voice Wake ランタイム | [`apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift) | 全ファイル   |
+| Talk Mode タイプ | [`apps/macos/Sources/Clawdbot/TalkModeTypes.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/TalkModeTypes.swift) | 全ファイル   |
+| Voice Wake オーバーレイ | [`apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift) | 全ファイル   |
+| ノードモードコーディネーター | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift) | 全ファイル   |
+| ノードランタイム | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift) | 全ファイル   |
+| 権限マネージャー | [`apps/macos/Sources/Clawdbot/PermissionManager.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/PermissionManager.swift) | 全ファイル   |
+| Exec Approvals | [`apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift) | 全ファイル   |
+| メニューバー | [`apps/macos/Sources/Clawdbot/MenuBar.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/MenuBar.swift) | 全ファイル   |
+| メニューインジェクター | [`apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift) | 全ファイル   |
 
 **重要な定数**：
 - `GatewayConnection.shared`：シングルトン Gateway 接続マネージャー（`GatewayConnection.swift:48`）
@@ -697,9 +697,9 @@ open 'clawdbot://agent?message=Automated%20task&key=secure-random-string'
 - `ExecApprovalsGatewayPrompter.prompt()`：承認ダイアログを表示
 
 **ドキュメントの場所**：
-- [macOS アプリドキュメント](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/macos.md)
-- [Voice Wake ドキュメント](https://github.com/clawdbot/clawdbot/blob/main/docs/nodes/voicewake.md)
-- [Talk Mode ドキュメント](https://github.com/clawdbot/clawdbot/blob/main/docs/nodes/talk.md)
-- [ノードドキュメント](https://github.com/clawdbot/clawdbot/blob/main/docs/nodes/index.md)
+- [macOS アプリドキュメント](https://github.com/moltbot/moltbot/blob/main/docs/platforms/macos.md)
+- [Voice Wake ドキュメント](https://github.com/moltbot/moltbot/blob/main/docs/nodes/voicewake.md)
+- [Talk Mode ドキュメント](https://github.com/moltbot/moltbot/blob/main/docs/nodes/talk.md)
+- [ノードドキュメント](https://github.com/moltbot/moltbot/blob/main/docs/nodes/index.md)
 
 </details>

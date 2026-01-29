@@ -377,10 +377,10 @@ Wichtige Punkte zur WhatsApp-Konfiguration:
 
 | Funktion | Dateipfad | Zeilennummer |
 |--- | --- | ---|
-| WhatsApp-Konfigurationstypdefinition | [`src/config/types.whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.whatsapp.ts) | 1-160 |
+| WhatsApp-Konfigurationstypdefinition | [`src/config/types.whatsapp.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.whatsapp.ts) | 1-160 |
 |--- | --- | ---|
-| WhatsApp-Onboarding-Konfiguration | [`src/channels/plugins/onboarding/whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/whatsapp.ts) | 1-341 |
-| WhatsApp-Dokumentation | [`docs/channels/whatsapp.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/whatsapp.md) | 1-363 |
+| WhatsApp-Onboarding-Konfiguration | [`src/channels/plugins/onboarding/whatsapp.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/whatsapp.ts) | 1-341 |
+| WhatsApp-Dokumentation | [`docs/channels/whatsapp.md`](https://github.com/moltbot/moltbot/blob/main/docs/channels/whatsapp.md) | 1-363 |
 |--- | --- | ---|
 |--- | --- | ---|
 

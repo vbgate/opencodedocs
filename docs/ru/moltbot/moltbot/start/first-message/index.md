@@ -9,8 +9,8 @@ tags:
   - "Каналы"
   - "Сообщения"
 prerequisite:
-  - "/ru/clawdbot/clawdbot/start/getting-started/"
-  - "/ru/clawdbot/clawdbot/start/gateway-startup/"
+  - "/ru/moltbot/moltbot/start/getting-started/"
+  - "/ru/moltbot/moltbot/start/gateway-startup/"
 order: 40
 ---
 
@@ -62,8 +62,8 @@ order: 40
 
 ::: warning Предварительные курсы
 Этот урок предполагает, что вы уже завершили:
-- [Быстрый старт](/ru/clawdbot/clawdbot/start/getting-started/) - установка, настройка и запуск Clawdbot
-- [Запуск Gateway](/ru/clawdbot/clawdbot/start/gateway-startup/) - изучение различных режимов запуска Gateway
+- [Быстрый старт](/ru/moltbot/moltbot/start/getting-started/) - установка, настройка и запуск Clawdbot
+- [Запуск Gateway](/ru/moltbot/moltbot/start/gateway-startup/) - изучение различных режимов запуска Gateway
 
 Если ещё не завершили, вернитесь к этим урокам.
 :::
@@ -340,7 +340,7 @@ clawdbot pairing list
 clawdbot pairing approve <channel> <code>
 ```
 
-Подробности: [Сопряжение DM и контроль доступа](/ru/clawdbot/clawdbot/start/pairing-approval/)
+Подробности: [Сопряжение DM и контроль доступа](/ru/moltbot/moltbot/start/pairing-approval/)
 :::
 
 ---
@@ -518,15 +518,15 @@ clawdbot message send --target +15555550123 --message "Meeting at 3pm"
 
 **Дальнейшие шаги**:
 
-- Изучите [Сопряжение DM и контроль доступа](/ru/clawdbot/clawdbot/start/pairing-approval/), чтобы узнать, как безопасно управлять неизвестными отправителями
-- Изучите [Обзор многоканальной системы](/ru/clawdbot/clawdbot/platforms/channels-overview/), чтобы узнать все поддерживаемые каналы и их настройку
+- Изучите [Сопряжение DM и контроль доступа](/ru/moltbot/moltbot/start/pairing-approval/), чтобы узнать, как безопасно управлять неизвестными отправителями
+- Изучите [Обзор многоканальной системы](/ru/moltbot/moltbot/platforms/channels-overview/), чтобы узнать все поддерживаемые каналы и их настройку
 - Настройте больше каналов (WhatsApp, Telegram, Slack, Discord и другие), чтобы испытать межплатформенного ИИ-помощника
 
 ---
 
 ## Предпросмотр следующего урока
 
-> В следующем уроке мы изучим **[Сопряжение DM и контроль доступа](/ru/clawdbot/clawdbot/start/pairing-approval/)**.
+> В следующем уроке мы изучим **[Сопряжение DM и контроль доступа](/ru/moltbot/moltbot/start/pairing-approval/)**.
 >
 > Вы узнаете:
 > - Понимание механизма защиты сопряжения DM по умолчанию
@@ -544,13 +544,13 @@ clawdbot message send --target +15555550123 --message "Meeting at 3pm"
 
 | Функция                  | Путь к файлу                                                                                             | Строка    |
 |--- | --- | ---|
-| Регистрация команды CLI Agent  | [`src/cli/program/register.agent.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.agent.ts) | 20-82    |
-| Выполнение Agent CLI        | [`src/commands/agent-via-gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/agent-via-gateway.ts) | 82-184   |
-| Регистрация CLI message send | [`src/cli/program/message/register.send.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/message/register.send.ts) | 1-30     |
-| Метод Gateway chat.send | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 296-380   |
-| Обработка внутренних сообщений WebChat | [`src/gateway/server-chat.gateway-server-chat.e2e.test.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-chat.gateway-server-chat.e2e.test.ts) | 50-290    |
-| Определение типов каналов сообщений   | [`src/gateway/protocol/client-info.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/client-info.ts) | 2-23     |
-| Реестр каналов         | [`src/channels/registry.js`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.js) | весь файл   |
+| Регистрация команды CLI Agent  | [`src/cli/program/register.agent.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/register.agent.ts) | 20-82    |
+| Выполнение Agent CLI        | [`src/commands/agent-via-gateway.ts`](https://github.com/moltbot/moltbot/blob/main/src/commands/agent-via-gateway.ts) | 82-184   |
+| Регистрация CLI message send | [`src/cli/program/message/register.send.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/message/register.send.ts) | 1-30     |
+| Метод Gateway chat.send | [`src/gateway/server-methods/chat.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-methods/chat.ts) | 296-380   |
+| Обработка внутренних сообщений WebChat | [`src/gateway/server-chat.gateway-server-chat.e2e.test.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-chat.gateway-server-chat.e2e.test.ts) | 50-290    |
+| Определение типов каналов сообщений   | [`src/gateway/protocol/client-info.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/protocol/client-info.ts) | 2-23     |
+| Реестр каналов         | [`src/channels/registry.js`](https://github.com/moltbot/moltbot/blob/main/src/channels/registry.js) | весь файл   |
 
 **Ключевые константы**:
 - `DEFAULT_CHAT_CHANNEL = "whatsapp"`: канал сообщений по умолчанию (из `src/channels/registry.js`)

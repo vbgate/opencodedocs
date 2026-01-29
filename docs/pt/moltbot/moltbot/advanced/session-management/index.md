@@ -534,13 +534,13 @@ Com uma configuração adequada de gerenciamento de sessões, você pode fazer o
 
 | Funcionalidade | Caminho do Arquivo | Número da Linha |
 |--- | --- | ---|
-| Análise de chave de sessão | [`src/routing/session-key.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/routing/session-key.ts) | 1-100 |
-| Esquema de configuração de sessão | [`src/config/zod-schema.session.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.session.ts) | 11-83 |
+| Análise de chave de sessão | [`src/routing/session-key.ts`](https://github.com/moltbot/moltbot/blob/main/src/routing/session-key.ts) | 1-100 |
+| Esquema de configuração de sessão | [`src/config/zod-schema.session.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.session.ts) | 11-83 |
 |--- | --- | ---|
-| Funções auxiliares de ferramentas de sessão | [`src/agents/tools/sessions-helpers.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/sessions-helpers.ts) | 1-328 |
-| Documentação de gerenciamento de sessões | [`docs/concepts/session.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/concepts/session.md) | 1-151 |
+| Funções auxiliares de ferramentas de sessão | [`src/agents/tools/sessions-helpers.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/sessions-helpers.ts) | 1-328 |
+| Documentação de gerenciamento de sessões | [`docs/concepts/session.md`](https://github.com/moltbot/moltbot/blob/main/docs/concepts/session.md) | 1-151 |
 |--- | --- | ---|
-| Documentação de compressão de contexto | [`docs/concepts/compaction.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/concepts/compaction.md) | 1-50 |
+| Documentação de compressão de contexto | [`docs/concepts/compaction.md`](https://github.com/moltbot/moltbot/blob/main/docs/concepts/compaction.md) | 1-50 |
 
 **Constantes Chave**:
 - `SESSION_ID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i`: Regex do ID da sessão (`sessions-helpers.ts:96`)

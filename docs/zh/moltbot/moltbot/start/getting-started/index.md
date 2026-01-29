@@ -434,11 +434,11 @@ pnpm gateway:watch  # TS 文件改动时自动重载
 
 | 功能            | 文件路径                                                                                     | 行号    |
 |--- | --- | ---|
-| CLI 入口         | [`src/cli/run-main.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/run-main.ts) | 26-60   |
-| Onboarding 命令 | [`src/cli/program/register.onboard.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.onboard.ts) | 34-100  |
-| Daemon 安装     | [`src/cli/daemon-cli/install.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/daemon-cli/install.ts) | 15-100  |
-| Gateway 服务     | [`src/daemon/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/service.ts) | 全文件  |
-| 运行时检查       | [`src/infra/runtime-guard.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/runtime-guard.ts) | 全文件  |
+| CLI 入口         | [`src/cli/run-main.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/run-main.ts) | 26-60   |
+| Onboarding 命令 | [`src/cli/program/register.onboard.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/register.onboard.ts) | 34-100  |
+| Daemon 安装     | [`src/cli/daemon-cli/install.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/daemon-cli/install.ts) | 15-100  |
+| Gateway 服务     | [`src/daemon/service.ts`](https://github.com/moltbot/moltbot/blob/main/src/daemon/service.ts) | 全文件  |
+| 运行时检查       | [`src/infra/runtime-guard.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/runtime-guard.ts) | 全文件  |
 
 **关键常量**：
 - `DEFAULT_GATEWAY_DAEMON_RUNTIME = "node"`：默认守护进程运行时（来自 `src/commands/daemon-runtime.ts`）

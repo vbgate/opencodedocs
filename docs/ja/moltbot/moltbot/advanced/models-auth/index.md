@@ -633,12 +633,12 @@ clawdbot gateway restart
 
 | 機能 | ファイルパス | 行番号 |
 |--- | --- | ---|
-| 認証資格情報タイプ定義 | [`src/agents/auth-profiles/types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/types.ts) | 1-74 |
-| OAuthトークンの解析と更新 | [`src/agents/auth-profiles/oauth.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/oauth.ts) | 1-220 |
-| 認証設定ファイル管理 | [`src/agents/auth-profiles/profiles.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/profiles.ts) | 1-85 |
-| モデル設定タイプ | [`src/config/types.models.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.models.ts) | 1-60 |
-| モデル設定生成 | [`src/agents/models-config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/models-config.ts) | 1-139 |
-| Zodスキーマ設定 | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | 1-300+ |
+| 認証資格情報タイプ定義 | [`src/agents/auth-profiles/types.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/auth-profiles/types.ts) | 1-74 |
+| OAuthトークンの解析と更新 | [`src/agents/auth-profiles/oauth.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/auth-profiles/oauth.ts) | 1-220 |
+| 認証設定ファイル管理 | [`src/agents/auth-profiles/profiles.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/auth-profiles/profiles.ts) | 1-85 |
+| モデル設定タイプ | [`src/config/types.models.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.models.ts) | 1-60 |
+| モデル設定生成 | [`src/agents/models-config.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/models-config.ts) | 1-139 |
+| Zodスキーマ設定 | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts) | 1-300+ |
 
 **重要な型**：
 - `AuthProfileCredential`：認証資格情報の共用体型（`ApiKeyCredential | TokenCredential | OAuthCredential`）

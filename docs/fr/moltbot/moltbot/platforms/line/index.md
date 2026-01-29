@@ -578,15 +578,15 @@ Le canal LINE offre de riches types de messages et des méthodes d'interaction, 
 
 | Fonctionnalité | Chemin du fichier | Numéro de ligne |
 |--- | --- | ---|
-| Implémentation principale du LINE Bot | [`src/line/bot.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/bot.ts) | 27-83 |
-| Définition du schéma de configuration | [`src/line/config-schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/config-schema.ts) | 1-54 |
-| Gestionnaire d'événements Webhook | [`src/line/bot-handlers.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/bot-handlers.ts) | 1-100 |
-| Fonction d'envoi de messages | [`src/line/send.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/send.ts) | - |
-| Génération de modèles Flex | [`src/line/flex-templates.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/flex-templates.ts) | - |
-| Opérations Rich Menu | [`src/line/rich-menu.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/rich-menu.ts) | - |
-| Messages de modèle | [`src/line/template-messages.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/template-messages.ts) | - |
-| Markdown vers LINE | [`src/line/markdown-to-line.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/markdown-to-line.ts) | - |
-| Serveur Webhook | [`src/line/webhook.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/webhook.ts) | - |
+| Implémentation principale du LINE Bot | [`src/line/bot.ts`](https://github.com/moltbot/moltbot/blob/main/src/line/bot.ts) | 27-83 |
+| Définition du schéma de configuration | [`src/line/config-schema.ts`](https://github.com/moltbot/moltbot/blob/main/src/line/config-schema.ts) | 1-54 |
+| Gestionnaire d'événements Webhook | [`src/line/bot-handlers.ts`](https://github.com/moltbot/moltbot/blob/main/src/line/bot-handlers.ts) | 1-100 |
+| Fonction d'envoi de messages | [`src/line/send.ts`](https://github.com/moltbot/moltbot/blob/main/src/line/send.ts) | - |
+| Génération de modèles Flex | [`src/line/flex-templates.ts`](https://github.com/moltbot/moltbot/blob/main/src/line/flex-templates.ts) | - |
+| Opérations Rich Menu | [`src/line/rich-menu.ts`](https://github.com/moltbot/moltbot/blob/main/src/line/rich-menu.ts) | - |
+| Messages de modèle | [`src/line/template-messages.ts`](https://github.com/moltbot/moltbot/blob/main/src/line/template-messages.ts) | - |
+| Markdown vers LINE | [`src/line/markdown-to-line.ts`](https://github.com/moltbot/moltbot/blob/main/src/line/markdown-to-line.ts) | - |
+| Serveur Webhook | [`src/line/webhook.ts`](https://github.com/moltbot/moltbot/blob/main/src/line/webhook.ts) | - |
 
 **Champs de configuration clés** :
 - `channelAccessToken`: LINE Channel Access Token (`config-schema.ts:19`)

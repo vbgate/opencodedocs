@@ -519,14 +519,14 @@ In this lesson, we learned:
 
 | Function | File Path | Lines |
 |--- | --- | ---|
-| Gateway startup entry | [`src/cli/gateway-cli/run.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/gateway-cli/run.ts) | 55-310 |
-| Daemon service abstraction | [`src/daemon/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/service.ts) | 66-155 |
-| Sidebar service startup | [`src/gateway/server-startup.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup.ts) | 26-160 |
-| Gateway server implementation | [`src/gateway/server.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server.ts) | 1-500 |
-| Program argument parsing | [`src/daemon/program-args.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/program-args.ts) | 1-250 |
-| Startup log output | [`src/gateway/server-startup-log.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup-log.ts) | 7-40 |
-| Development mode config | [`src/cli/gateway-cli/dev.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/gateway-cli/dev.ts) | 1-100 |
-| Port release logic | [`src/cli/ports.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/ports.ts) | 1-80 |
+| Gateway startup entry | [`src/cli/gateway-cli/run.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/gateway-cli/run.ts) | 55-310 |
+| Daemon service abstraction | [`src/daemon/service.ts`](https://github.com/moltbot/moltbot/blob/main/src/daemon/service.ts) | 66-155 |
+| Sidebar service startup | [`src/gateway/server-startup.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-startup.ts) | 26-160 |
+| Gateway server implementation | [`src/gateway/server.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server.ts) | 1-500 |
+| Program argument parsing | [`src/daemon/program-args.ts`](https://github.com/moltbot/moltbot/blob/main/src/daemon/program-args.ts) | 1-250 |
+| Startup log output | [`src/gateway/server-startup-log.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-startup-log.ts) | 7-40 |
+| Development mode config | [`src/cli/gateway-cli/dev.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/gateway-cli/dev.ts) | 1-100 |
+| Port release logic | [`src/cli/ports.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/ports.ts) | 1-80 |
 
 **Key Constants**:
 - Default port: `18789` (source: `src/gateway/server.ts`)

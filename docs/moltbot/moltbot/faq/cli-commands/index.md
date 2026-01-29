@@ -1310,16 +1310,16 @@ This lesson provided a complete command reference for Clawdbot CLI, including:
 
 | Feature | File Path | Lines |
 |--- | --- | ---|
-| CLI Main Program | [`src/cli/program.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program.ts) | Full file |
-| Command Registration | [`src/cli/program/register.subclis.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.subclis.ts) | 30-225 |
-| Agent Commands | [`src/cli/program/register.agent.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.agent.ts) | 20-210 |
-| Message Commands | [`src/cli/program/register.message.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.message.ts) | 24-68 |
-| Models Commands | [`src/cli/models-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/models-cli.ts) | 38-150 |
-| Gateway Commands | [`src/cli/gateway-cli/register.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/gateway-cli/register.ts) | 98-150 |
-| Status/Health Commands | [`src/cli/program/register.status-health-sessions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.status-health-sessions.ts) | 27-100 |
-| Configure Commands | [`src/cli/program/register.configure.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.configure.ts) | 12-52 |
-| Skills Commands | [`src/cli/skills-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/skills-cli.ts) | 16-100 |
-| Nodes Commands | [`src/cli/nodes-cli/register.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/nodes-cli/register.ts) | 13-32 |
+| CLI Main Program | [`src/cli/program.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program.ts) | Full file |
+| Command Registration | [`src/cli/program/register.subclis.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/register.subclis.ts) | 30-225 |
+| Agent Commands | [`src/cli/program/register.agent.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/register.agent.ts) | 20-210 |
+| Message Commands | [`src/cli/program/register.message.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/register.message.ts) | 24-68 |
+| Models Commands | [`src/cli/models-cli.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/models-cli.ts) | 38-150 |
+| Gateway Commands | [`src/cli/gateway-cli/register.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/gateway-cli/register.ts) | 98-150 |
+| Status/Health Commands | [`src/cli/program/register.status-health-sessions.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/register.status-health-sessions.ts) | 27-100 |
+| Configure Commands | [`src/cli/program/register.configure.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/register.configure.ts) | 12-52 |
+| Skills Commands | [`src/cli/skills-cli.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/skills-cli.ts) | 16-100 |
+| Nodes Commands | [`src/cli/nodes-cli/register.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/nodes-cli/register.ts) | 13-32 |
 
 **Key Command Group Registration**:
 - 24 main command groups: gateway, daemon, logs, system, models, approvals, nodes, devices, node, sandbox, tui, cron, dns, docs, hooks, webhooks, pairing, plugins, channels, directory, security, skills, update, acp

@@ -607,17 +607,17 @@ En esta lección aprendiste:
 
 | Función            | Ruta del Archivo                                                                                               | Líneas |
 |--- | --- | ---|
-| Registro de Canales     | [`src/channels/registry.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.ts)       | 7-100  |
-| Directorio de Plugins de Canal | [`src/channels/plugins/`](https://github.com/clawdbot/clawdbot/tree/main/src/channels/plugins/) | Todo   |
-| Tipos de Metadatos de Canal   | [`src/channels/plugins/types.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/types.core.ts) | 74-93  |
-| Mecanismo de Emparejamiento DM     | [`src/channels/plugins/pairing.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/pairing.ts) | Todo   |
-| @mención en Grupos | [`src/channels/plugins/group-mentions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/group-mentions.ts) | Todo   |
-| Coincidencia de Lista Blanca     | [`src/channels/plugins/allowlist-match.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/allowlist-match.ts) | Todo   |
-| Configuración de Directorio de Canal   | [`src/channels/plugins/directory-config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/directory-config.ts) | Todo   |
-| Plugin WhatsApp | [`src/channels/plugins/onboarding/whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/whatsapp.ts) | Todo   |
-| Plugin Telegram | [`src/channels/plugins/onboarding/telegram.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/telegram.ts) | Todo   |
-| Plugin Slack     | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/slack.ts) | Todo   |
-| Plugin Discord   | [`src/channels/plugins/onboarding/discord.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/discord.ts) | Todo   |
+| Registro de Canales     | [`src/channels/registry.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/registry.ts)       | 7-100  |
+| Directorio de Plugins de Canal | [`src/channels/plugins/`](https://github.com/moltbot/moltbot/tree/main/src/channels/plugins/) | Todo   |
+| Tipos de Metadatos de Canal   | [`src/channels/plugins/types.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/types.core.ts) | 74-93  |
+| Mecanismo de Emparejamiento DM     | [`src/channels/plugins/pairing.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/pairing.ts) | Todo   |
+| @mención en Grupos | [`src/channels/plugins/group-mentions.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/group-mentions.ts) | Todo   |
+| Coincidencia de Lista Blanca     | [`src/channels/plugins/allowlist-match.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/allowlist-match.ts) | Todo   |
+| Configuración de Directorio de Canal   | [`src/channels/plugins/directory-config.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/directory-config.ts) | Todo   |
+| Plugin WhatsApp | [`src/channels/plugins/onboarding/whatsapp.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/whatsapp.ts) | Todo   |
+| Plugin Telegram | [`src/channels/plugins/onboarding/telegram.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/telegram.ts) | Todo   |
+| Plugin Slack     | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/slack.ts) | Todo   |
+| Plugin Discord   | [`src/channels/plugins/onboarding/discord.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/discord.ts) | Todo   |
 
 **Constantes Clave**:
 - `CHAT_CHANNEL_ORDER`: Array de orden de canales principales (de `src/channels/registry.ts:7-15`)

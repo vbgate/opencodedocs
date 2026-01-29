@@ -1310,16 +1310,16 @@ clawdbot models status --help # 显示 models status 子命令帮助
 
 | 功能        | 文件路径                                                                                    | 行号    |
 |--- | --- | ---|
-| CLI 主程序 | [`src/cli/program.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program.ts) | 全文    |
-| 命令注册   | [`src/cli/program/register.subclis.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.subclis.ts) | 30-225  |
-| Agent 命令 | [`src/cli/program/register.agent.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.agent.ts) | 20-210  |
-| Message 命令 | [`src/cli/program/register.message.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.message.ts) | 24-68   |
-| Models 命令 | [`src/cli/models-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/models-cli.ts) | 38-150  |
-| Gateway 命令 | [`src/cli/gateway-cli/register.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/gateway-cli/register.ts) | 98-150  |
-| Status/Health 命令 | [`src/cli/program/register.status-health-sessions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.status-health-sessions.ts) | 27-100  |
-| Configure 命令 | [`src/cli/program/register.configure.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.configure.ts) | 12-52   |
-| Skills 命令 | [`src/cli/skills-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/skills-cli.ts) | 16-100  |
-| Nodes 命令 | [`src/cli/nodes-cli/register.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/nodes-cli/register.ts) | 13-32   |
+| CLI 主程序 | [`src/cli/program.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program.ts) | 全文    |
+| 命令注册   | [`src/cli/program/register.subclis.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/register.subclis.ts) | 30-225  |
+| Agent 命令 | [`src/cli/program/register.agent.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/register.agent.ts) | 20-210  |
+| Message 命令 | [`src/cli/program/register.message.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/register.message.ts) | 24-68   |
+| Models 命令 | [`src/cli/models-cli.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/models-cli.ts) | 38-150  |
+| Gateway 命令 | [`src/cli/gateway-cli/register.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/gateway-cli/register.ts) | 98-150  |
+| Status/Health 命令 | [`src/cli/program/register.status-health-sessions.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/register.status-health-sessions.ts) | 27-100  |
+| Configure 命令 | [`src/cli/program/register.configure.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/register.configure.ts) | 12-52   |
+| Skills 命令 | [`src/cli/skills-cli.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/skills-cli.ts) | 16-100  |
+| Nodes 命令 | [`src/cli/nodes-cli/register.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/nodes-cli/register.ts) | 13-32   |
 
 **关键命令组注册**：
 - 24 个主要命令组：gateway, daemon, logs, system, models, approvals, nodes, devices, node, sandbox, tui, cron, dns, docs, hooks, webhooks, pairing, plugins, channels, directory, security, skills, update, acp

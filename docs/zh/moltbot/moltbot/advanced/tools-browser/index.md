@@ -565,13 +565,13 @@ Node browser proxy is disabled (gateway.nodes.browser.mode=off).
 
 | 功能 | 文件路径 | 行号 |
 |--- | --- | ---|
-| Browser 工具定义 | [`src/agents/tools/browser-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/browser-tool.ts) | 269-791 |
-| Browser Schema | [`src/agents/tools/browser-tool.schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/browser-tool.schema.ts) | 1-115 |
-| Action 类型定义 | [`src/browser/client-actions-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/browser/client-actions-core.ts) | 18-86 |
-| 浏览器配置解析 | [`src/browser/config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/browser/config.ts) | 140-231 |
-| 浏览器常量 | [`src/browser/constants.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/browser/constants.ts) | 1-9 |
-| CDP 客户端 | [`src/browser/cdp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/browser/cdp.ts) | 1-500 |
-| Chrome 执行文件检测 | [`src/browser/chrome.executables.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/browser/chrome.executables.ts) | 1-500 |
+| Browser 工具定义 | [`src/agents/tools/browser-tool.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/browser-tool.ts) | 269-791 |
+| Browser Schema | [`src/agents/tools/browser-tool.schema.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/browser-tool.schema.ts) | 1-115 |
+| Action 类型定义 | [`src/browser/client-actions-core.ts`](https://github.com/moltbot/moltbot/blob/main/src/browser/client-actions-core.ts) | 18-86 |
+| 浏览器配置解析 | [`src/browser/config.ts`](https://github.com/moltbot/moltbot/blob/main/src/browser/config.ts) | 140-231 |
+| 浏览器常量 | [`src/browser/constants.ts`](https://github.com/moltbot/moltbot/blob/main/src/browser/constants.ts) | 1-9 |
+| CDP 客户端 | [`src/browser/cdp.ts`](https://github.com/moltbot/moltbot/blob/main/src/browser/cdp.ts) | 1-500 |
+| Chrome 执行文件检测 | [`src/browser/chrome.executables.ts`](https://github.com/moltbot/moltbot/blob/main/src/browser/chrome.executables.ts) | 1-500 |
 
 **关键常量**：
 - `DEFAULT_CLAWD_BROWSER_CONTROL_URL = "http://127.0.0.1:18791"`：默认控制服务器地址（来源：`src/browser/constants.ts:2`）

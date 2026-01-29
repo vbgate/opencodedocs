@@ -736,7 +736,7 @@ tccutil reset All com.clawdbot.mac.debug
 
 **解決方案 2：強制新 Bundle ID**
 
-如果重置無效，更改 [`scripts/package-mac-app.sh`](https://github.com/clawdbot/clawdbot/blob/main/scripts/package-mac-app.sh) 中的 `BUNDLE_ID`（如添加 `.test` 後綴）並重新構建。這會強制 macOS 將其視為新應用。
+如果重置無效，更改 [`scripts/package-mac-app.sh`](https://github.com/moltbot/moltbot/blob/main/scripts/package-mac-app.sh) 中的 `BUNDLE_ID`（如添加 `.test` 後綴）並重新構建。這會強制 macOS 將其視為新應用。
 
 ---
 
@@ -790,7 +790,7 @@ npm install -g clawdbot@<version>
 如果以上方法都無法解決問題：
 
 1. **首先檢查日誌**：`/tmp/clawdbot/`（預設：`clawdbot-YYYY-MM-DD.log`，或你配置的 `logging.file`）
-2. **搜索現有 issues**：[GitHub Issues](https://github.com/clawdbot/clawdbot/issues)
+2. **搜索現有 issues**：[GitHub Issues](https://github.com/moltbot/moltbot/issues)
 3. **打開新 issue**時包含：
    - Clawdbot 版本（`clawdbot --version`）
    - 相關日誌片段
@@ -831,12 +831,12 @@ npm install -g clawdbot@<version>
 
 | 功能 | 文件路徑 | 行號 |
 |--- | --- | ---|
-| 故障排除命令 | [`src/commands/doctor.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/doctor.ts) | 全文 |
-| Gateway 健康檢查 | [`src/gateway/server-channels.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-channels.ts) | 93+ |
-| 日誌系統 | [`src/logging/index.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/logging/index.ts) | 全文 |
-| 認證處理 | [`src/agents/auth-profiles.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles.ts) | 全文 |
-| 配置驗證 | [`src/config/config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/config.ts) | 全文 |
-| 渠道狀態探測 | [`src/cli/commands/channels-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/commands/channels-cli.ts) | 全文 |
+| 故障排除命令 | [`src/commands/doctor.ts`](https://github.com/moltbot/moltbot/blob/main/src/commands/doctor.ts) | 全文 |
+| Gateway 健康檢查 | [`src/gateway/server-channels.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-channels.ts) | 93+ |
+| 日誌系統 | [`src/logging/index.ts`](https://github.com/moltbot/moltbot/blob/main/src/logging/index.ts) | 全文 |
+| 認證處理 | [`src/agents/auth-profiles.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/auth-profiles.ts) | 全文 |
+| 配置驗證 | [`src/config/config.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/config.ts) | 全文 |
+| 渠道狀態探測 | [`src/cli/commands/channels-cli.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/commands/channels-cli.ts) | 全文 |
 
 **關鍵常量**：
 - 預設 Gateway 端口：`18789` - Gateway WebSocket 服務端口

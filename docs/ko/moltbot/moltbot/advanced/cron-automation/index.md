@@ -804,16 +804,16 @@ Cron과 Webhook은 Clawdbot의 강력한 자동화 도구입니다:
 
 | 기능 | 파일 경로 | 행 번호 |
 |--- | --- | ---|
-| Cron 구성 유형 정의 | [`src/config/types.cron.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.cron.ts#L1-L6) | 1-6 |
-| Cron 핵심 유형 정의 | [`src/cron/types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/types.ts#L1-L95) | 1-95 |
-| Cron Service | [`src/cron/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/service.ts#L1-L49) | 1-49 |
-| Cron 작업 구현 | [`src/cron/service/ops.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/service/ops.ts#L1-L141) | 1-141 |
-| Cron 도구 구현 | [`src/agents/tools/cron-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/cron-tool.ts#L1-L291) | 1-291 |
-| Gateway Cron 메서드 | [`src/gateway/server-methods/cron.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/cron.ts#L1-L205) | 1-205 |
-| Hooks 구성 유형 정의 | [`src/config/types.hooks.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.hooks.ts#L1-L125) | 1-125 |
-| Hooks Gmail 도구 | [`src/hooks/gmail.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/hooks/gmail.ts#L1-L267) | 1-267 |
-| Hooks 내부 이벤트 | [`src/hooks/hooks.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/hooks/hooks.ts#L1-L15) | 1-15 |
-| Hooks CLI 명령 | [`src/cli/hooks-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/hooks-cli.ts#L1-L839) | 1-839 |
+| Cron 구성 유형 정의 | [`src/config/types.cron.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.cron.ts#L1-L6) | 1-6 |
+| Cron 핵심 유형 정의 | [`src/cron/types.ts`](https://github.com/moltbot/moltbot/blob/main/src/cron/types.ts#L1-L95) | 1-95 |
+| Cron Service | [`src/cron/service.ts`](https://github.com/moltbot/moltbot/blob/main/src/cron/service.ts#L1-L49) | 1-49 |
+| Cron 작업 구현 | [`src/cron/service/ops.ts`](https://github.com/moltbot/moltbot/blob/main/src/cron/service/ops.ts#L1-L141) | 1-141 |
+| Cron 도구 구현 | [`src/agents/tools/cron-tool.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/cron-tool.ts#L1-L291) | 1-291 |
+| Gateway Cron 메서드 | [`src/gateway/server-methods/cron.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-methods/cron.ts#L1-L205) | 1-205 |
+| Hooks 구성 유형 정의 | [`src/config/types.hooks.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.hooks.ts#L1-L125) | 1-125 |
+| Hooks Gmail 도구 | [`src/hooks/gmail.ts`](https://github.com/moltbot/moltbot/blob/main/src/hooks/gmail.ts#L1-L267) | 1-267 |
+| Hooks 내부 이벤트 | [`src/hooks/hooks.ts`](https://github.com/moltbot/moltbot/blob/main/src/hooks/hooks.ts#L1-L15) | 1-15 |
+| Hooks CLI 명령 | [`src/cli/hooks-cli.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/hooks-cli.ts#L1-L839) | 1-839 |
 
 **핵심 상수**:
 - `DEFAULT_GMAIL_LABEL = "INBOX"`: Gmail 기본 라벨

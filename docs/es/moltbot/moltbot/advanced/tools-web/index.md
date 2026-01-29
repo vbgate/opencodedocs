@@ -553,15 +553,15 @@ web_fetch por defecto bloquea IPs de red interna para evitar ataques SSRF. Si re
 
 | Función | Ruta de archivo | Número de línea |
 |--- | --- | ---|
-| Definición de herramienta web_search | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 409-483 |
-| Definición de herramienta web_fetch | [`src/agents/tools/web-fetch.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-fetch.ts) | 572-624 |
-| Llamada a API de Brave Search | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 309-407 |
-| Llamada a API de Perplexity | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 268-307 |
-| Extracción de contenido Readability | [`src/agents/tools/web-fetch-utils.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-fetch-utils.ts) | - |
-| Integración de Firecrawl | [`src/agents/tools/web-fetch.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-fetch.ts) | 257-330 |
-| Implementación de caché | [`src/agents/tools/web-shared.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-shared.ts) | - |
-| Protección SSRF | [`src/infra/net/ssrf.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/net/ssrf.ts) | - |
-| Schema de configuración | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | - |
+| Definición de herramienta web_search | [`src/agents/tools/web-search.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-search.ts) | 409-483 |
+| Definición de herramienta web_fetch | [`src/agents/tools/web-fetch.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-fetch.ts) | 572-624 |
+| Llamada a API de Brave Search | [`src/agents/tools/web-search.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-search.ts) | 309-407 |
+| Llamada a API de Perplexity | [`src/agents/tools/web-search.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-search.ts) | 268-307 |
+| Extracción de contenido Readability | [`src/agents/tools/web-fetch-utils.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-fetch-utils.ts) | - |
+| Integración de Firecrawl | [`src/agents/tools/web-fetch.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-fetch.ts) | 257-330 |
+| Implementación de caché | [`src/agents/tools/web-shared.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-shared.ts) | - |
+| Protección SSRF | [`src/infra/net/ssrf.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/net/ssrf.ts) | - |
+| Schema de configuración | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts) | - |
 
 **Constantes clave**:
 

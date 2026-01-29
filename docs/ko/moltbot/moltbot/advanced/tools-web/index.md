@@ -553,15 +553,15 @@ web_fetch는 기본적으로 내부 네트워크 IP를 차단하여 SSRF 공격�
 
 | 기능 | 파일 경로 | 줄 번호 |
 |--- | --- | ---|
-| web_search 도구 정의 | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 409-483 |
-| web_fetch 도구 정의 | [`src/agents/tools/web-fetch.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-fetch.ts) | 572-624 |
-| Brave Search API 호출 | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 309-407 |
-| Perplexity API 호출 | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 268-307 |
-| Readability 콘텐츠 추출 | [`src/agents/tools/web-fetch-utils.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-fetch-utils.ts) | - |
-| Firecrawl 통합 | [`src/agents/tools/web-fetch.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-fetch.ts) | 257-330 |
-| 캐시 구현 | [`src/agents/tools/web-shared.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-shared.ts) | - |
-| SSRF 보호 | [`src/infra/net/ssrf.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/net/ssrf.ts) | - |
-| 구성 Schema | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | - |
+| web_search 도구 정의 | [`src/agents/tools/web-search.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-search.ts) | 409-483 |
+| web_fetch 도구 정의 | [`src/agents/tools/web-fetch.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-fetch.ts) | 572-624 |
+| Brave Search API 호출 | [`src/agents/tools/web-search.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-search.ts) | 309-407 |
+| Perplexity API 호출 | [`src/agents/tools/web-search.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-search.ts) | 268-307 |
+| Readability 콘텐츠 추출 | [`src/agents/tools/web-fetch-utils.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-fetch-utils.ts) | - |
+| Firecrawl 통합 | [`src/agents/tools/web-fetch.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-fetch.ts) | 257-330 |
+| 캐시 구현 | [`src/agents/tools/web-shared.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-shared.ts) | - |
+| SSRF 보호 | [`src/infra/net/ssrf.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/net/ssrf.ts) | - |
+| 구성 Schema | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts) | - |
 
 **중요한 상수**:
 

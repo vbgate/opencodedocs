@@ -636,7 +636,7 @@ clawdbot gateway restart
 |--- | --- | ---|
 |--- | --- | ---|
 |--- | --- | ---|
-| Modellkonfigurations-Typen | [`src/config/types.models.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.models.ts) | 1-60 |
+| Modellkonfigurations-Typen | [`src/config/types.models.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.models.ts) | 1-60 |
 |--- | --- | ---|
 |--- | --- | ---|
 

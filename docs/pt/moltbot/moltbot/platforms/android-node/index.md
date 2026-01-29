@@ -455,10 +455,10 @@ Esta lição apresentou como configurar um nó Android para executar operações
 
 | Funcionalidade        | Caminho do arquivo                                                                                    | Número de linhas    |
 |--- | --- | ---|
-| Política de comandos de nó | [`src/gateway/node-command-policy.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/node-command-policy.ts) | 1-112   |
-| Schema do protocolo de nó | [`src/gateway/protocol/schema/nodes.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/schema/nodes.ts) | 1-103   |
-| Documentação do Android  | [`docs/platforms/android.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/android.md) | 1-142   |
-| CLI de nó  | [`docs/cli/nodes.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/cli/nodes.md) | 1-69    |
+| Política de comandos de nó | [`src/gateway/node-command-policy.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/node-command-policy.ts) | 1-112   |
+| Schema do protocolo de nó | [`src/gateway/protocol/schema/nodes.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/protocol/schema/nodes.ts) | 1-103   |
+| Documentação do Android  | [`docs/platforms/android.md`](https://github.com/moltbot/moltbot/blob/main/docs/platforms/android.md) | 1-142   |
+| CLI de nó  | [`docs/cli/nodes.md`](https://github.com/moltbot/moltbot/blob/main/docs/cli/nodes.md) | 1-69    |
 
 **Constantes principais**:
 - `PLATFORM_DEFAULTS`: Define a lista de comandos suportados por cada plataforma (`node-command-policy.ts:32-58`)

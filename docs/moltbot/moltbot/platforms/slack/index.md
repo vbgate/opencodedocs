@@ -597,10 +597,10 @@ Allow Agent to call Slack-specific operations:
 
 | Feature            | File Path                                                                                               | Line Number |
 |--- | --- | ---|
-| Slack Config Type | [`src/config/types.slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.slack.ts) | 1-150      |
-| Slack onboarding Logic | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/slack.ts) | 1-539      |
-| Slack Actions Tools | [`src/agents/tools/slack-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/slack-actions.ts) | 1-301      |
-| Slack Official Docs | [`docs/channels/slack.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/slack.md) | 1-508      |
+| Slack Config Type | [`src/config/types.slack.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.slack.ts) | 1-150      |
+| Slack onboarding Logic | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/slack.ts) | 1-539      |
+| Slack Actions Tools | [`src/agents/tools/slack-actions.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/slack-actions.ts) | 1-301      |
+| Slack Official Docs | [`docs/channels/slack.md`](https://github.com/moltbot/moltbot/blob/main/docs/channels/slack.md) | 1-508      |
 
 **Key Type Definitions**:
 - `SlackConfig`: Main Slack channel configuration type

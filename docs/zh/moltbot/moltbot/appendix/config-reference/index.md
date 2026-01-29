@@ -1570,15 +1570,15 @@ clawdbot doctor --yes
 
 | 配置节 | 文件路径 | 行号 |
 |--- | --- | ---|
-| 主 Schema | [`src/config/zod-schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.ts) | 1-556 |
-| 核心 Schema | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | 1-300 |
-| 代理 Schema | [`src/config/zod-schema.agents.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.agents.ts) | 1-54 |
-| 渠道 Schema | [`src/config/zod-schema.channels.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.channels.ts) | 1-11 |
-| 会话 Schema | [`src/config/zod-schema.session.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.session.ts) | - |
-| 工具 Schema | [`src/config/zod-schema.agent-runtime.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.agent-runtime.ts) | - |
-| Hooks Schema | [`src/config/zod-schema.hooks.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.hooks.ts) | - |
-| 提供商 Schema | [`src/config/zod-schema.providers.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers.ts) | - |
-| 配置文档 | [`docs/gateway/configuration.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/configuration.md) | - |
+| 主 Schema | [`src/config/zod-schema.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.ts) | 1-556 |
+| 核心 Schema | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts) | 1-300 |
+| 代理 Schema | [`src/config/zod-schema.agents.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.agents.ts) | 1-54 |
+| 渠道 Schema | [`src/config/zod-schema.channels.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.channels.ts) | 1-11 |
+| 会话 Schema | [`src/config/zod-schema.session.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.session.ts) | - |
+| 工具 Schema | [`src/config/zod-schema.agent-runtime.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.agent-runtime.ts) | - |
+| Hooks Schema | [`src/config/zod-schema.hooks.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.hooks.ts) | - |
+| 提供商 Schema | [`src/config/zod-schema.providers.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.providers.ts) | - |
+| 配置文档 | [`docs/gateway/configuration.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/configuration.md) | - |
 
 **关键常量**：
 - 默认端口：`18789`（`gateway.server-startup-log.ts`）

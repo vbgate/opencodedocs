@@ -165,12 +165,12 @@ This is an Agent Factory project. Use Cursor Composer to:
 
 虽然执行逻辑相同，但不同 AI 助手的指令格式有细微差异：
 
-| 操作               | Claude Code 格式        | Cursor 格式          | 通用格式                |
-| ------------------ | --------------------- | ------------------- | ----------------------- |
-| 读取文件           | `Read(filePath)`      | `@ReadFile filePath` | `Read filePath`         |
+| 操作               | Claude Code 格式         | Cursor 格式               | 其他 AI 助手（OpenCode 等） |
+| ------------------ | ----------------------- | ------------------------- | -------------------------- |
+| 读取文件           | `Read(filePath)`        | `@ReadFile filePath`       | `Read filePath`             |
 | 读取多个文件       | `Read(file1)`, `Read(file2)` | `@ReadFile file1`, `@ReadFile file2` | -                 |
-| 写入文件           | `Write(filePath, content)` | 直接写入           | -                       |
-| 执行 Bash 命令     | `Bash(command)`       | 直接执行           | -                       |
+| 写入文件           | `Write(filePath, content)` | 直接写入                  | -                       |
+| 执行 Bash 命令     | `Bash(command)`          | 直接执行                  | -                       |
 
 ::: tip Factory CLI 自动处理
 当你运行 `factory run` 时，CLI 会自动检测当前 AI 助手类型，并生成对应的指令格式。你只需要复制粘贴即可，无需手动转换。
@@ -211,9 +211,13 @@ Available stages:
   ○ preview
 ```
 
-### 第 5 步：使用 factory continue 节省 Token
+### 第 5 步：使用 factory continue 节省 Token（仅限 Claude Code）
 
-为了节省 Token 并避免上下文累积，Factory 支持分会话执行：
+::: warning 注意
+`factory continue` 命令目前仅支持 **Claude Code**。如果你使用 OpenCode 或 Cursor，请直接使用 `factory run` 手动启动新会话。
+:::
+
+为了节省 Token 并避免上下文累积，Claude Code 支持分会话执行：
 
 ```bash
 # 新开终端窗口，执行
@@ -222,8 +226,7 @@ factory continue
 
 **执行效果**：
 - 读取当前状态（`.factory/state.json`）
-- 重新生成 AI 助手指令
-- 启动新的 AI 助手窗口（自动初始化上下文）
+- 自动启动新的 Claude Code 窗口
 - 从上次暂停的阶段继续
 
 **适用场景**：
@@ -251,8 +254,10 @@ factory continue
 # macOS
 /Applications/OpenCode.app
 
-# Linux
-/usr/bin/opencode 或 /usr/local/bin/opencode
+# Linux（按优先级查找：先 /usr/bin/opencode，再 /usr/local/bin/opencode）
+/usr/bin/opencode
+# 如果上述路径不存在，尝试：
+/usr/local/bin/opencode
 ```
 
 然后手动复制提示词粘贴到 OpenCode。
@@ -328,7 +333,7 @@ factory run
 - ✅ Factory 支持多种 AI 助手（Claude Code、OpenCode、Cursor）
 - ✅ `factory init` 自动检测并启动可用的 AI 助手
 - ✅ `factory run` 根据当前 AI 助手生成对应指令
-- ✅ `factory continue` 支持分会话执行，节省 Token
+- ✅ `factory continue`（仅限 Claude Code）支持分会话执行，节省 Token
 - ✅ 所有 AI 助手遵循相同的执行逻辑，仅指令格式不同
 
 **关键文件**：

@@ -1572,15 +1572,15 @@ Ce tutoriel explique en détail le système complet de configuration de Clawdbot
 
 | Section de configuration | Chemin du fichier | Numéro de ligne |
 |--- | --- | ---|
-| Schema principal | [`src/config/zod-schema.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.ts) | 1-556 |
-| Schema central | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | 1-300 |
-| Schema des agents | [`src/config/zod-schema.agents.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.agents.ts) | 1-54 |
-| Schema des canaux | [`src/config/zod-schema.channels.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.channels.ts) | 1-11 |
-| Schema de session | [`src/config/zod-schema.session.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.session.ts) | - |
-| Schema des outils | [`src/config/zod-schema.agent-runtime.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.agent-runtime.ts) | - |
-| Schema des Hooks | [`src/config/zod-schema.hooks.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.hooks.ts) | - |
-| Schema des fournisseurs | [`src/config/zod-schema.providers.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers.ts) | - |
-| Documentation de configuration | [`docs/gateway/configuration.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/configuration.md) | - |
+| Schema principal | [`src/config/zod-schema.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.ts) | 1-556 |
+| Schema central | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts) | 1-300 |
+| Schema des agents | [`src/config/zod-schema.agents.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.agents.ts) | 1-54 |
+| Schema des canaux | [`src/config/zod-schema.channels.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.channels.ts) | 1-11 |
+| Schema de session | [`src/config/zod-schema.session.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.session.ts) | - |
+| Schema des outils | [`src/config/zod-schema.agent-runtime.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.agent-runtime.ts) | - |
+| Schema des Hooks | [`src/config/zod-schema.hooks.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.hooks.ts) | - |
+| Schema des fournisseurs | [`src/config/zod-schema.providers.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.providers.ts) | - |
+| Documentation de configuration | [`docs/gateway/configuration.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/configuration.md) | - |
 
 **Constantes clés** :
 - Port par défaut : `18789` (`gateway.server-startup-log.ts`)

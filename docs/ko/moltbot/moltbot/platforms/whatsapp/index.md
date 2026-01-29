@@ -379,12 +379,12 @@ WhatsApp 채널 구성 요점:
 
 | 기능 | 파일 경로 | 라인 번호 |
 |--- | --- | ---|
-| WhatsApp 구성 타입 정의 | [`src/config/types.whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.whatsapp.ts) | 1-160 |
-| WhatsApp 구성 Schema | [`src/config/zod-schema.providers-whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-whatsapp.ts) | 13-100 |
-| WhatsApp 온보딩 구성 | [`src/channels/plugins/onboarding/whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/whatsapp.ts) | 1-341 |
-| WhatsApp 문서 | [`docs/channels/whatsapp.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/whatsapp.md) | 1-363 |
-| WhatsApp 로그인 도구 | [`src/channels/plugins/agent-tools/whatsapp-login.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/agent-tools/whatsapp-login.ts) | 1-72 |
-| WhatsApp Actions 도구 | [`src/agents/tools/whatsapp-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/whatsapp-actions.ts) | 1-42 |
+| WhatsApp 구성 타입 정의 | [`src/config/types.whatsapp.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.whatsapp.ts) | 1-160 |
+| WhatsApp 구성 Schema | [`src/config/zod-schema.providers-whatsapp.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.providers-whatsapp.ts) | 13-100 |
+| WhatsApp 온보딩 구성 | [`src/channels/plugins/onboarding/whatsapp.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/whatsapp.ts) | 1-341 |
+| WhatsApp 문서 | [`docs/channels/whatsapp.md`](https://github.com/moltbot/moltbot/blob/main/docs/channels/whatsapp.md) | 1-363 |
+| WhatsApp 로그인 도구 | [`src/channels/plugins/agent-tools/whatsapp-login.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/agent-tools/whatsapp-login.ts) | 1-72 |
+| WhatsApp Actions 도구 | [`src/agents/tools/whatsapp-actions.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/whatsapp-actions.ts) | 1-42 |
 
 **핵심 구성 항목**:
 - `dmPolicy`: DM 접근 정책(`pairing`/`allowlist`/`open`/`disabled`)

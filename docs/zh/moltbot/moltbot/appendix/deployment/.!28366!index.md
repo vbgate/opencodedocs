@@ -1263,14 +1263,14 @@ ssh root@YOUR_VPS_IP "docker compose logs -f clawdbot-gateway"
 
 | 功能/章节 | 文件路径 | 行号 |
 |--- | --- | ---|
-| Docker 部署脚本 | [`docker-setup.sh`](https://github.com/clawdbot/clawdbot/blob/main/docker-setup.sh) | 全文 |
-| Docker 镜像定义 | [`Dockerfile`](https://github.com/clawdbot/clawdbot/blob/main/Dockerfile) | 全文 |
-| Docker Compose 配置 | [`docker-compose.yml`](https://github.com/clawdbot/clawdbot/blob/main/docker-compose.yml) | 全文 |
-| Fly.io 配置 | [`fly.toml`](https://github.com/clawdbot/clawdbot/blob/main/fly.toml) | 全文 |
-| Fly 私有配置 | [`fly.private.toml`](https://github.com/clawdbot/clawdbot/blob/main/fly.private.toml) | 全文 |
-| Docker 沙箱镜像 | [`Dockerfile.sandbox`](https://github.com/clawdbot/clawdbot/blob/main/Dockerfile.sandbox) | 全文 |
+| Docker 部署脚本 | [`docker-setup.sh`](https://github.com/moltbot/moltbot/blob/main/docker-setup.sh) | 全文 |
+| Docker 镜像定义 | [`Dockerfile`](https://github.com/moltbot/moltbot/blob/main/Dockerfile) | 全文 |
+| Docker Compose 配置 | [`docker-compose.yml`](https://github.com/moltbot/moltbot/blob/main/docker-compose.yml) | 全文 |
+| Fly.io 配置 | [`fly.toml`](https://github.com/moltbot/moltbot/blob/main/fly.toml) | 全文 |
+| Fly 私有配置 | [`fly.private.toml`](https://github.com/moltbot/moltbot/blob/main/fly.private.toml) | 全文 |
+| Docker 沙箱镜像 | [`Dockerfile.sandbox`](https://github.com/moltbot/moltbot/blob/main/Dockerfile.sandbox) | 全文 |
 | Nix 集成 | [`nix-clawdbot`](https://github.com/clawdbot/nix-clawdbot) | README |
-| 安装脚本 | [`scripts/package-mac-app.sh`](https://github.com/clawdbot/clawdbot/blob/main/scripts/package-mac-app.sh) | 全文 |
+| 安装脚本 | [`scripts/package-mac-app.sh`](https://github.com/moltbot/moltbot/blob/main/scripts/package-mac-app.sh) | 全文 |
 
 **关键配置文件**：
 - `~/.clawdbot/clawdbot.json`：主配置文件

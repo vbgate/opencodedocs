@@ -613,15 +613,15 @@ http://localhost:18789
 
 | Функция | Путь к файлу | Строка |
 |--- | --- | ---|
-| Объяснение принципа WebChat | [`docs/web/webchat.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/web/webchat.md) | Весь файл |
-| Gateway WebSocket API | [`src/gateway/protocol/`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/) | Весь каталог |
-| Метод chat.send | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 296-380 |
-| Метод chat.history | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 1-295 |
-| Метод chat.inject | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 381-450 |
-| Точка входа Web UI | [`ui/index.html`](https://github.com/clawdbot/clawdbot/blob/main/ui/index.html) | 1-15 |
-| Настройка аутентификации Gateway | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | 1-100 |
-| Интеграция Tailscale | [`src/gateway/server-startup-log.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup-log.ts) | Весь файл |
-| Интеграция macOS WebChat | [`apps/macos/`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/) | Весь каталог |
+| Объяснение принципа WebChat | [`docs/web/webchat.md`](https://github.com/moltbot/moltbot/blob/main/docs/web/webchat.md) | Весь файл |
+| Gateway WebSocket API | [`src/gateway/protocol/`](https://github.com/moltbot/moltbot/blob/main/src/gateway/protocol/) | Весь каталог |
+| Метод chat.send | [`src/gateway/server-methods/chat.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-methods/chat.ts) | 296-380 |
+| Метод chat.history | [`src/gateway/server-methods/chat.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-methods/chat.ts) | 1-295 |
+| Метод chat.inject | [`src/gateway/server-methods/chat.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-methods/chat.ts) | 381-450 |
+| Точка входа Web UI | [`ui/index.html`](https://github.com/moltbot/moltbot/blob/main/ui/index.html) | 1-15 |
+| Настройка аутентификации Gateway | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts) | 1-100 |
+| Интеграция Tailscale | [`src/gateway/server-startup-log.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-startup-log.ts) | Весь файл |
+| Интеграция macOS WebChat | [`apps/macos/`](https://github.com/moltbot/moltbot/blob/main/apps/macos/) | Весь каталог |
 
 **Ключевые константы**:
 - `INTERNAL_MESSAGE_CHANNEL = "webchat"`: идентификатор внутреннего канала сообщений WebChat (из `src/utils/message-channel.ts:17`)

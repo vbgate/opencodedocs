@@ -613,15 +613,15 @@ http://localhost:18789
 
 | 기능                  | 파일 경로                                                                                    | 행 번호    |
 |--- | --- | ---|
-| WebChat 원리 설명     | [`docs/web/webchat.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/web/webchat.md) | 전체 파일   |
-| Gateway WebSocket API | [`src/gateway/protocol/`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/) | 전체 디렉토리   |
-| chat.send 메서드        | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 296-380  |
-| chat.history 메서드     | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 1-295    |
-| chat.inject 메서드      | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 381-450  |
-| Web UI 진입점         | [`ui/index.html`](https://github.com/clawdbot/clawdbot/blob/main/ui/index.html) | 1-15     |
-| Gateway 인증 구성     | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | 1-100    |
-| Tailscale 통합       | [`src/gateway/server-startup-log.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup-log.ts) | 전체 파일   |
-| macOS WebChat 통합  | [`apps/macos/`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/) | 전체 디렉토리   |
+| WebChat 원리 설명     | [`docs/web/webchat.md`](https://github.com/moltbot/moltbot/blob/main/docs/web/webchat.md) | 전체 파일   |
+| Gateway WebSocket API | [`src/gateway/protocol/`](https://github.com/moltbot/moltbot/blob/main/src/gateway/protocol/) | 전체 디렉토리   |
+| chat.send 메서드        | [`src/gateway/server-methods/chat.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-methods/chat.ts) | 296-380  |
+| chat.history 메서드     | [`src/gateway/server-methods/chat.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-methods/chat.ts) | 1-295    |
+| chat.inject 메서드      | [`src/gateway/server-methods/chat.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-methods/chat.ts) | 381-450  |
+| Web UI 진입점         | [`ui/index.html`](https://github.com/moltbot/moltbot/blob/main/ui/index.html) | 1-15     |
+| Gateway 인증 구성     | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts) | 1-100    |
+| Tailscale 통합       | [`src/gateway/server-startup-log.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-startup-log.ts) | 전체 파일   |
+| macOS WebChat 통합  | [`apps/macos/`](https://github.com/moltbot/moltbot/blob/main/apps/macos/) | 전체 디렉토리   |
 
 **핵심 상수**:
 - `INTERNAL_MESSAGE_CHANNEL = "webchat"`: WebChat 내부 메시지 채널 식별자(`src/utils/message-channel.ts:17`에서)

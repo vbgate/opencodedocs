@@ -53,7 +53,7 @@ order: 300
 
 Перед началом убедитесь:
 
-- [ ] Выполнен курс **[Запуск Gateway](/ru/clawdbot/clawdbot/start/gateway-startup/)**
+- [ ] Выполнен курс **[Запуск Gateway](/ru/moltbot/moltbot/start/gateway-startup/)**
 - [ ] Базовое понимание SSH-команд (опционально, если используете SSH-туннели)
 - [ ] (Если используете Tailscale) Установлен Tailscale CLI и выполнен вход
 - [ ] Подготовлен удалённый сервер Linux или VPS (рекомендуется Ubuntu/Debian)
@@ -703,13 +703,13 @@ ssh -N -L 18790:127.0.0.1:18789 clawdbot-remote
 
 | Функция | Путь к файлу | Номер строки |
 |--- | --- | ---|
-| Schema конфигурации удалённого Gateway | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 200-220 |
-| Schema конфигурации Tailscale Gateway | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 150-180 |
-| Интеграция Tailscale | [`src/infra/tailscale.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/tailscale.ts) | 1-100 |
-| Документация удалённого Gateway | [`docs/gateway/remote.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/remote.md) | 1-123 |
-| Документация Tailscale | [`docs/gateway/tailscale.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/tailscale.md) | 1-147 |
-| Документация удалённого доступа macOS App | [`docs/gateway/remote-gateway-readme.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/remote-gateway-readme.md) | 1-154 |
-| Документация безопасности | [`docs/gateway/security.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/security.md) | 1-100 |
+| Schema конфигурации удалённого Gateway | [`src/config/types.gateway.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.gateway.ts) | 200-220 |
+| Schema конфигурации Tailscale Gateway | [`src/config/types.gateway.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.gateway.ts) | 150-180 |
+| Интеграция Tailscale | [`src/infra/tailscale.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/tailscale.ts) | 1-100 |
+| Документация удалённого Gateway | [`docs/gateway/remote.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/remote.md) | 1-123 |
+| Документация Tailscale | [`docs/gateway/tailscale.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/tailscale.md) | 1-147 |
+| Документация удалённого доступа macOS App | [`docs/gateway/remote-gateway-readme.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/remote-gateway-readme.md) | 1-154 |
+| Документация безопасности | [`docs/gateway/security.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/security.md) | 1-100 |
 
 **Ключевые поля конфигурации**:
 

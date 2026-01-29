@@ -553,15 +553,15 @@ web_fetch 默认阻止内网 IP 以防止 SSRF 攻击。如果确实需要访问
 
 | 功能 | 文件路径 | 行号 |
 |--- | --- | ---|
-| web_search 工具定义 | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 409-483 |
-| web_fetch 工具定义 | [`src/agents/tools/web-fetch.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-fetch.ts) | 572-624 |
-| Brave Search API 调用 | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 309-407 |
-| Perplexity API 调用 | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts) | 268-307 |
-| Readability 内容提取 | [`src/agents/tools/web-fetch-utils.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-fetch-utils.ts) | - |
-| Firecrawl 集成 | [`src/agents/tools/web-fetch.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-fetch.ts) | 257-330 |
-| 缓存实现 | [`src/agents/tools/web-shared.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-shared.ts) | - |
-| SSRF 保护 | [`src/infra/net/ssrf.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/net/ssrf.ts) | - |
-| 配置 Schema | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | - |
+| web_search 工具定义 | [`src/agents/tools/web-search.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-search.ts) | 409-483 |
+| web_fetch 工具定义 | [`src/agents/tools/web-fetch.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-fetch.ts) | 572-624 |
+| Brave Search API 调用 | [`src/agents/tools/web-search.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-search.ts) | 309-407 |
+| Perplexity API 调用 | [`src/agents/tools/web-search.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-search.ts) | 268-307 |
+| Readability 内容提取 | [`src/agents/tools/web-fetch-utils.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-fetch-utils.ts) | - |
+| Firecrawl 集成 | [`src/agents/tools/web-fetch.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-fetch.ts) | 257-330 |
+| 缓存实现 | [`src/agents/tools/web-shared.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-shared.ts) | - |
+| SSRF 保护 | [`src/infra/net/ssrf.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/net/ssrf.ts) | - |
+| 配置 Schema | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts) | - |
 
 **关键常量**：
 

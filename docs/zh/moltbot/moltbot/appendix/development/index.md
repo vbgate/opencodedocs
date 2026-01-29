@@ -289,7 +289,7 @@ Clawdbot 支持以下插件类型：
 - **Background Services**：后台任务
 - **Auto-reply Commands**：无需 AI 的快捷命令
 
-详见 [插件文档](https://github.com/clawdbot/clawdbot/blob/main/docs/plugin.md)。
+详见 [插件文档](https://github.com/moltbot/moltbot/blob/main/docs/plugin.md)。
 :::
 
 **检查点 ✅**
@@ -396,11 +396,11 @@ git push origin feature/my-feature
 
 | 功能 | 文件路径 | 行号 |
 |--- | --- | ---|
-| 构建脚本 | [`package.json`](https://github.com/clawdbot/clawdbot/blob/main/package.json) | 77-44 |
-| 从源码安装 | [`README.md`](https://github.com/clawdbot/clawdbot/blob/main/README.md) | 83-99 |
-| 插件文档 | [`docs/plugin.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/plugin.md) | 1-639 |
-| 贡献指南 | [`CONTRIBUTING.md`](https://github.com/clawdbot/clawdbot/blob/main/CONTRIBUTING.md) | 1-53 |
-| 架构文档 | [`docs/concepts/architecture.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/concepts/architecture.md) | 1-123 |
+| 构建脚本 | [`package.json`](https://github.com/moltbot/moltbot/blob/main/package.json) | 77-44 |
+| 从源码安装 | [`README.md`](https://github.com/moltbot/moltbot/blob/main/README.md) | 83-99 |
+| 插件文档 | [`docs/plugin.md`](https://github.com/moltbot/moltbot/blob/main/docs/plugin.md) | 1-639 |
+| 贡献指南 | [`CONTRIBUTING.md`](https://github.com/moltbot/moltbot/blob/main/CONTRIBUTING.md) | 1-53 |
+| 架构文档 | [`docs/concepts/architecture.md`](https://github.com/moltbot/moltbot/blob/main/docs/concepts/architecture.md) | 1-123 |
 
 **关键命令**：
 - `pnpm build` - 完整构建（package.json:85）

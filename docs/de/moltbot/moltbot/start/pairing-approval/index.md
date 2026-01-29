@@ -303,7 +303,7 @@ Denken Sie daran: **Der Pairing-Mechanismus ist das Sicherheitsfundament von Cla
 |--- | --- | ---|
 |--- | --- | ---|
 |--- | --- | ---|
-| Standard-DM-Policy (pairing) | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts#L93) | 93 |
+| Standard-DM-Policy (pairing) | [`src/config/zod-schema.providers-core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.providers-core.ts#L93) | 93 |
 
 **Wichtige Konstanten**:
 - `PAIRING_CODE_LENGTH = 8`: Länge des Pairing-Codes

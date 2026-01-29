@@ -750,18 +750,18 @@ Diese Lektion führte das Sicherheitsmodell und die Sandbox-Isolierungsfunktione
 
 | Funktion | Dateipfad | Zeilennummer |
 |--- | --- | ---|
-| Sicherheitsaudit | [`src/security/audit.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/audit.ts#L1-L910) | 1-910 |
-| Sicherheitsbehebung | [`src/security/fix.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/fix.ts#L1-L385) | 1-385 |
-| Dateiberechtigungsprüfung | [`src/security/audit-fs.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/security/audit-fs.ts) | Gesamte Datei |
-| Gateway-Konfigurations-Schema | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | Gesamte Datei |
+| Sicherheitsaudit | [`src/security/audit.ts`](https://github.com/moltbot/moltbot/blob/main/src/security/audit.ts#L1-L910) | 1-910 |
+| Sicherheitsbehebung | [`src/security/fix.ts`](https://github.com/moltbot/moltbot/blob/main/src/security/fix.ts#L1-L385) | 1-385 |
+| Dateiberechtigungsprüfung | [`src/security/audit-fs.ts`](https://github.com/moltbot/moltbot/blob/main/src/security/audit-fs.ts) | Gesamte Datei |
+| Gateway-Konfigurations-Schema | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts) | Gesamte Datei |
 |--- | --- | ---|
 |--- | --- | ---|
-| Sandbox-Verwaltung | [`src/agents/sandbox.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/sandbox.ts) | Gesamte Datei |
-| Sandbox-Konfigurationsanalyse | [`src/agents/sandbox/config.js`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/sandbox/config.js) | Gesamte Datei |
-| Docker-Setup | [`src/agents/sandbox/docker.js`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/sandbox/docker.js) | Gesamte Datei |
-| Sicherheitsdokumentation | [`docs/gateway/security.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/security.md) | Gesamte Datei |
-| Sandbox-Dokumentation | [`docs/gateway/sandboxing.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/sandboxing.md) | Gesamte Datei |
-| Sandbox-CLI | [`docs/cli/sandbox.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/cli/sandbox.md) | Gesamte Datei |
+| Sandbox-Verwaltung | [`src/agents/sandbox.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/sandbox.ts) | Gesamte Datei |
+| Sandbox-Konfigurationsanalyse | [`src/agents/sandbox/config.js`](https://github.com/moltbot/moltbot/blob/main/src/agents/sandbox/config.js) | Gesamte Datei |
+| Docker-Setup | [`src/agents/sandbox/docker.js`](https://github.com/moltbot/moltbot/blob/main/src/agents/sandbox/docker.js) | Gesamte Datei |
+| Sicherheitsdokumentation | [`docs/gateway/security.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/security.md) | Gesamte Datei |
+| Sandbox-Dokumentation | [`docs/gateway/sandboxing.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/sandboxing.md) | Gesamte Datei |
+| Sandbox-CLI | [`docs/cli/sandbox.md`](https://github.com/moltbot/moltbot/blob/main/docs/cli/sandbox.md) | Gesamte Datei |
 
 **Wichtige Konfigurationsfelder**:
 

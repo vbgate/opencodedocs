@@ -736,7 +736,7 @@ tccutil reset All com.clawdbot.mac.debug
 
 **해결 방법 2: 새 Bundle ID 강제**
 
-재설정이 효과가 없는 경우, [`scripts/package-mac-app.sh`](https://github.com/clawdbot/clawdbot/blob/main/scripts/package-mac-app.sh)의 `BUNDLE_ID` 변경(예: `.test` 접미사 추가) 및 재구축. 이렇게 하면 macOS가 새 앱으로 처리하도록 강제함.
+재설정이 효과가 없는 경우, [`scripts/package-mac-app.sh`](https://github.com/moltbot/moltbot/blob/main/scripts/package-mac-app.sh)의 `BUNDLE_ID` 변경(예: `.test` 접미사 추가) 및 재구축. 이렇게 하면 macOS가 새 앱으로 처리하도록 강제함.
 
 ---
 
@@ -790,7 +790,7 @@ npm install -g clawdbot@<version>
 위의 방법으로 문제를 해결할 수 없는 경우:
 
 1. **먼저 로그 확인**: `/tmp/clawdbot/`(기본값: `clawdbot-YYYY-MM-DD.log`, 또는 구성한 `logging.file`)
-2. **기존 issues 검색**: [GitHub Issues](https://github.com/clawdbot/clawdbot/issues)
+2. **기존 issues 검색**: [GitHub Issues](https://github.com/moltbot/moltbot/issues)
 3. **새 issue 열기** 시 포함:
    - Clawdbot 버전(`clawdbot --version`)
    - 관련 로그 스니펫
@@ -831,12 +831,12 @@ npm install -g clawdbot@<version>
 
 | 기능 | 파일 경로 | 행 번호 |
 |--- | --- | ---|
-| 문제 해결 명령 | [`src/commands/doctor.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/doctor.ts) | 전체 |
-| Gateway 헬스 체크 | [`src/gateway/server-channels.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-channels.ts) | 93+ |
-| 로그 시스템 | [`src/logging/index.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/logging/index.ts) | 전체 |
-| 인증 처리 | [`src/agents/auth-profiles.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles.ts) | 전체 |
-| 구성 검증 | [`src/config/config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/config.ts) | 전체 |
-| 채널 상태 프로브 | [`src/cli/commands/channels-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/commands/channels-cli.ts) | 전체 |
+| 문제 해결 명령 | [`src/commands/doctor.ts`](https://github.com/moltbot/moltbot/blob/main/src/commands/doctor.ts) | 전체 |
+| Gateway 헬스 체크 | [`src/gateway/server-channels.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-channels.ts) | 93+ |
+| 로그 시스템 | [`src/logging/index.ts`](https://github.com/moltbot/moltbot/blob/main/src/logging/index.ts) | 전체 |
+| 인증 처리 | [`src/agents/auth-profiles.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/auth-profiles.ts) | 전체 |
+| 구성 검증 | [`src/config/config.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/config.ts) | 전체 |
+| 채널 상태 프로브 | [`src/cli/commands/channels-cli.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/commands/channels-cli.ts) | 전체 |
 
 **중요한 상수**:
 - 기본 Gateway 포트: `18789` - Gateway WebSocket 서비스 포트

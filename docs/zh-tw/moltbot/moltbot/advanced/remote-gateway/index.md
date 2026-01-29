@@ -53,7 +53,7 @@ order: 300
 
 在開始前，請確認：
 
-- [ ] 已完成 **[啟動 Gateway](/zh-tw/clawdbot/clawdbot/start/gateway-startup/)** 課程
+- [ ] 已完成 **[啟動 Gateway](/zh-tw/moltbot/moltbot/start/gateway-startup/)** 課程
 - [ ] 了解基本的 SSH 指令（可選，如使用 SSH 隧道）
 - [ ] （如使用 Tailscale）已安裝 Tailscale CLI 並登入
 - [ ] 準備好遠端 Linux 伺服器或 VPS（推薦 Ubuntu/Debian）
@@ -703,13 +703,13 @@ ssh -N -L 18790:127.0.0.1:18789 clawdbot-remote
 
 | 功能 | 檔案路徑 | 行號 |
 |--- | --- | ---|
-| Gateway 遠端設定 Schema | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 200-220 |
-| Gateway Tailscale 設定 Schema | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 150-180 |
-| Tailscale 整合 | [`src/infra/tailscale.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/tailscale.ts) | 1-100 |
-| 遠端 Gateway 文件 | [`docs/gateway/remote.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/remote.md) | 1-123 |
-| Tailscale 文件 | [`docs/gateway/tailscale.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/tailscale.md) | 1-147 |
-| macOS App 遠端存取文件 | [`docs/gateway/remote-gateway-readme.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/remote-gateway-readme.md) | 1-154 |
-| 安全文件 | [`docs/gateway/security.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/security.md) | 1-100 |
+| Gateway 遠端設定 Schema | [`src/config/types.gateway.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.gateway.ts) | 200-220 |
+| Gateway Tailscale 設定 Schema | [`src/config/types.gateway.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.gateway.ts) | 150-180 |
+| Tailscale 整合 | [`src/infra/tailscale.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/tailscale.ts) | 1-100 |
+| 遠端 Gateway 文件 | [`docs/gateway/remote.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/remote.md) | 1-123 |
+| Tailscale 文件 | [`docs/gateway/tailscale.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/tailscale.md) | 1-147 |
+| macOS App 遠端存取文件 | [`docs/gateway/remote-gateway-readme.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/remote-gateway-readme.md) | 1-154 |
+| 安全文件 | [`docs/gateway/security.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/security.md) | 1-100 |
 
 **關鍵設定欄位**：
 

@@ -455,10 +455,10 @@ Ce cours a présenté comment configurer le nœud Android pour exécuter des op�
 
 | Fonctionnalité        | Chemin du fichier                                                                                    | Lignes    |
 |--- | --- | ---|
-| Stratégie de commandes nœud | [`src/gateway/node-command-policy.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/node-command-policy.ts) | 1-112   |
-| Schéma de protocole nœud | [`src/gateway/protocol/schema/nodes.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/schema/nodes.ts) | 1-103   |
-| Documentation Android  | [`docs/platforms/android.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/android.md) | 1-142   |
-| CLI Nœuds  | [`docs/cli/nodes.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/cli/nodes.md) | 1-69    |
+| Stratégie de commandes nœud | [`src/gateway/node-command-policy.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/node-command-policy.ts) | 1-112   |
+| Schéma de protocole nœud | [`src/gateway/protocol/schema/nodes.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/protocol/schema/nodes.ts) | 1-103   |
+| Documentation Android  | [`docs/platforms/android.md`](https://github.com/moltbot/moltbot/blob/main/docs/platforms/android.md) | 1-142   |
+| CLI Nœuds  | [`docs/cli/nodes.md`](https://github.com/moltbot/moltbot/blob/main/docs/cli/nodes.md) | 1-69    |
 
 **Constantes clés** :
 - `PLATFORM_DEFAULTS` : Définit la liste des commandes prises en charge par chaque plateforme (`node-command-policy.ts:32-58`)

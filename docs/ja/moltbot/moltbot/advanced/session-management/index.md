@@ -534,13 +534,13 @@ Agent は自動的に `sessions_spawn` ツールを呼び出し、次が表示�
 
 | 機能 | ファイルパス | 行番号 |
 |--- | --- | ---|
-| セッションキー解析 | [`src/routing/session-key.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/routing/session-key.ts) | 1-100 |
-| セッション設定 Schema | [`src/config/zod-schema.session.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.session.ts) | 11-83 |
-| サブ Agent 生成ツール | [`src/agents/tools/sessions-spawn-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/sessions-spawn-tool.ts) | 28-269 |
-| セッションツールヘルパー関数 | [`src/agents/tools/sessions-helpers.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/sessions-helpers.ts) | 1-328 |
-| セッション管理ドキュメント | [`docs/concepts/session.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/concepts/session.md) | 1-151 |
-| マルチ Agent ルーティングドキュメント | [`docs/concepts/multi-agent.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/concepts/multi-agent.md) | 1-355 |
-| コンテキスト圧縮ドキュメント | [`docs/concepts/compaction.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/concepts/compaction.md) | 1-50 |
+| セッションキー解析 | [`src/routing/session-key.ts`](https://github.com/moltbot/moltbot/blob/main/src/routing/session-key.ts) | 1-100 |
+| セッション設定 Schema | [`src/config/zod-schema.session.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.session.ts) | 11-83 |
+| サブ Agent 生成ツール | [`src/agents/tools/sessions-spawn-tool.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/sessions-spawn-tool.ts) | 28-269 |
+| セッションツールヘルパー関数 | [`src/agents/tools/sessions-helpers.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/sessions-helpers.ts) | 1-328 |
+| セッション管理ドキュメント | [`docs/concepts/session.md`](https://github.com/moltbot/moltbot/blob/main/docs/concepts/session.md) | 1-151 |
+| マルチ Agent ルーティングドキュメント | [`docs/concepts/multi-agent.md`](https://github.com/moltbot/moltbot/blob/main/docs/concepts/multi-agent.md) | 1-355 |
+| コンテキスト圧縮ドキュメント | [`docs/concepts/compaction.md`](https://github.com/moltbot/moltbot/blob/main/docs/concepts/compaction.md) | 1-50 |
 
 **重要な定数**：
 - `SESSION_ID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i`：セッション ID 正規表現（`sessions-helpers.ts:96`）

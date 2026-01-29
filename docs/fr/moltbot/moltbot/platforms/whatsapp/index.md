@@ -379,12 +379,12 @@ Points clés de la configuration du canal WhatsApp :
 
 | Fonctionnalité | Chemin du fichier | Lignes |
 |--- | --- | ---|
-| Définition des types de configuration WhatsApp | [`src/config/types.whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.whatsapp.ts) | 1-160 |
-| Schéma de configuration WhatsApp | [`src/config/zod-schema.providers-whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-whatsapp.ts) | 13-100 |
-| Configuration d'intégration WhatsApp | [`src/channels/plugins/onboarding/whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/whatsapp.ts) | 1-341 |
-| Documentation WhatsApp | [`docs/channels/whatsapp.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/whatsapp.md) | 1-363 |
-| Outil de connexion WhatsApp | [`src/channels/plugins/agent-tools/whatsapp-login.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/agent-tools/whatsapp-login.ts) | 1-72 |
-| Outil WhatsApp Actions | [`src/agents/tools/whatsapp-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/whatsapp-actions.ts) | 1-42 |
+| Définition des types de configuration WhatsApp | [`src/config/types.whatsapp.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.whatsapp.ts) | 1-160 |
+| Schéma de configuration WhatsApp | [`src/config/zod-schema.providers-whatsapp.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.providers-whatsapp.ts) | 13-100 |
+| Configuration d'intégration WhatsApp | [`src/channels/plugins/onboarding/whatsapp.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/whatsapp.ts) | 1-341 |
+| Documentation WhatsApp | [`docs/channels/whatsapp.md`](https://github.com/moltbot/moltbot/blob/main/docs/channels/whatsapp.md) | 1-363 |
+| Outil de connexion WhatsApp | [`src/channels/plugins/agent-tools/whatsapp-login.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/agent-tools/whatsapp-login.ts) | 1-72 |
+| Outil WhatsApp Actions | [`src/agents/tools/whatsapp-actions.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/whatsapp-actions.ts) | 1-42 |
 
 **Éléments de configuration clés** :
 - `dmPolicy` : Stratégie d'accès DM (`pairing`/`allowlist`/`open`/`disabled`)

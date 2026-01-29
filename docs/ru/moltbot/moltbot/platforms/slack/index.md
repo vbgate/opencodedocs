@@ -592,10 +592,10 @@ Bot нормально отвечает на ваши сообщения.
 
 | Функция            | Путь к файлу                                                                                               | Строка       |
 |--- | --- | ---|
-| Типы конфигурации Slack | [`src/config/types.slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.slack.ts) | 1-150        |
-| Логика onboarding Slack  | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/slack.ts) | 1-539        |
-| Инструменты Slack Actions | [`src/agents/tools/slack-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/slack-actions.ts) | 1-301        |
-| Официальная документация Slack | [`docs/channels/slack.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/slack.md) | 1-508        |
+| Типы конфигурации Slack | [`src/config/types.slack.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.slack.ts) | 1-150        |
+| Логика onboarding Slack  | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/slack.ts) | 1-539        |
+| Инструменты Slack Actions | [`src/agents/tools/slack-actions.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/slack-actions.ts) | 1-301        |
+| Официальная документация Slack | [`docs/channels/slack.md`](https://github.com/moltbot/moltbot/blob/main/docs/channels/slack.md) | 1-508        |
 
 **Ключевые определения типов**:
 - `SlackConfig`: основной тип конфигурации канала Slack

@@ -517,14 +517,14 @@ clawdbot gateway --port 19001  # 別のポートを使用
 
 | 機能                        | ファイルパス                                                                                   | 行号     |
 |--- | --- | ---|
-| Gateway 起動エントリー            | [`src/cli/gateway-cli/run.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/gateway-cli/run.ts) | 55-310   |
-| デーモンプロセスサービス抽象化         | [`src/daemon/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/service.ts) | 66-155    |
-| サーバー起動サイドバー           | [`src/gateway/server-startup.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup.ts) | 26-160    |
-| Gateway サーバー実装         | [`src/gateway/server.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server.ts) | 1-500     |
-| プログラム引数解析             | [`src/daemon/program-args.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/program-args.ts) | 1-250     |
-| 起動ログ出力              | [`src/gateway/server-startup-log.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup-log.ts) | 7-40      |
-| 開発モード設定             | [`src/cli/gateway-cli/dev.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/gateway-cli/dev.ts) | 1-100     |
-| ポート解放ロジック             | [`src/cli/ports.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/ports.ts) | 1-80      |
+| Gateway 起動エントリー            | [`src/cli/gateway-cli/run.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/gateway-cli/run.ts) | 55-310   |
+| デーモンプロセスサービス抽象化         | [`src/daemon/service.ts`](https://github.com/moltbot/moltbot/blob/main/src/daemon/service.ts) | 66-155    |
+| サーバー起動サイドバー           | [`src/gateway/server-startup.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-startup.ts) | 26-160    |
+| Gateway サーバー実装         | [`src/gateway/server.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server.ts) | 1-500     |
+| プログラム引数解析             | [`src/daemon/program-args.ts`](https://github.com/moltbot/moltbot/blob/main/src/daemon/program-args.ts) | 1-250     |
+| 起動ログ出力              | [`src/gateway/server-startup-log.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-startup-log.ts) | 7-40      |
+| 開発モード設定             | [`src/cli/gateway-cli/dev.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/gateway-cli/dev.ts) | 1-100     |
+| ポート解放ロジック             | [`src/cli/ports.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/ports.ts) | 1-80      |
 
 **主要定数**：
 - デフォルトポート：`18789`（出所：`src/gateway/server.ts`）

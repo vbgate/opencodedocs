@@ -1,18 +1,18 @@
 {
   "project": {
-    "name": "clawdbot",
-    "tagline": "Your Private AI Assistant, Available Anywhere",
+    "name": "Moltbot",
+    "tagline": "Your Private AI Assistant, Available Anywhere (formerly Clawdbot)",
     "description": "Run your personal AI assistant on your own devices, seamlessly connecting to WhatsApp, Telegram, Slack, and 12+ other channels. Features browser automation, multi-device collaboration, voice interaction, with all data staying local for complete privacy.",
-    "github_url": "https://github.com/clawdbot/clawdbot"
+    "github_url": "https://github.com/moltbot/moltbot"
   },
   "hero": {
     "primary_action": {
       "text": "Quick Start",
-      "link": "/clawdbot/clawdbot/start/getting-started/"
+      "link": "/moltbot/moltbot/start/getting-started/"
     }
   },
   "features": {
-    "title": "Why Choose Clawdbot?",
+    "title": "Why Choose Moltbot?",
     "subtitle": "Powerful, Private, and Easy-to-Deploy Personal AI Assistant",
     "list": [
       {
@@ -54,28 +54,28 @@
         "items": [
           {
             "title": "Quick Start",
-            "desc": "Guide users through first installation, configuration, and startup of Clawdbot",
-            "link": "/clawdbot/clawdbot/start/getting-started/"
+            "desc": "Guide users through first installation, configuration, and startup of Moltbot",
+            "link": "/moltbot/moltbot/start/getting-started/"
           },
           {
             "title": "Onboarding Wizard",
             "desc": "Complete Gateway, channel, and model configuration through interactive wizard",
-            "link": "/clawdbot/clawdbot/start/onboarding-wizard/"
+            "link": "/moltbot/moltbot/start/onboarding-wizard/"
           },
           {
             "title": "Starting Gateway",
             "desc": "Learn how to start the Gateway daemon, different modes (dev/production)",
-            "link": "/clawdbot/clawdbot/start/gateway-startup/"
+            "link": "/moltbot/moltbot/start/gateway-startup/"
           },
           {
             "title": "Send First Message",
             "desc": "Send your first message to the AI assistant via WebChat or configured channels",
-            "link": "/clawdbot/clawdbot/start/first-message/"
+            "link": "/moltbot/moltbot/start/first-message/"
           },
           {
             "title": "DM Pairing & Access Control",
             "desc": "Understand the default DM pairing protection mechanism, how to approve unknown senders",
-            "link": "/clawdbot/clawdbot/start/pairing-approval/"
+            "link": "/moltbot/moltbot/start/pairing-approval/"
           }
         ]
       },
@@ -84,68 +84,68 @@
         "items": [
           {
             "title": "Multi-Channel Overview",
-            "desc": "Learn about all communication channels supported by Clawdbot and their features",
-            "link": "/clawdbot/clawdbot/platforms/channels-overview/"
+            "desc": "Learn about all communication channels supported by Moltbot and their features",
+            "link": "/moltbot/moltbot/platforms/channels-overview/"
           },
           {
             "title": "WhatsApp Channel",
             "desc": "Configure and use WhatsApp channel (based on Baileys)",
-            "link": "/clawdbot/clawdbot/platforms/whatsapp/"
+            "link": "/moltbot/moltbot/platforms/whatsapp/"
           },
           {
             "title": "Telegram Channel",
             "desc": "Configure and use Telegram channel (based on grammY Bot API)",
-            "link": "/clawdbot/clawdbot/platforms/telegram/"
+            "link": "/moltbot/moltbot/platforms/telegram/"
           },
           {
             "title": "Slack Channel",
             "desc": "Configure and use Slack channel (based on Bolt)",
-            "link": "/clawdbot/clawdbot/platforms/slack/"
+            "link": "/moltbot/moltbot/platforms/slack/"
           },
           {
             "title": "Discord Channel",
             "desc": "Configure and use Discord channel (based on discord.js)",
-            "link": "/clawdbot/clawdbot/platforms/discord/"
+            "link": "/moltbot/moltbot/platforms/discord/"
           },
           {
             "title": "Google Chat Channel",
             "desc": "Configure and use Google Chat channel",
-            "link": "/clawdbot/clawdbot/platforms/googlechat/"
+            "link": "/moltbot/moltbot/platforms/googlechat/"
           },
           {
             "title": "Signal Channel",
             "desc": "Configure and use Signal channel (based on signal-cli)",
-            "link": "/clawdbot/clawdbot/platforms/signal/"
+            "link": "/moltbot/moltbot/platforms/signal/"
           },
           {
             "title": "iMessage Channel",
             "desc": "Configure and use iMessage channel (macOS exclusive)",
-            "link": "/clawdbot/clawdbot/platforms/imessage/"
+            "link": "/moltbot/moltbot/platforms/imessage/"
           },
           {
             "title": "LINE Channel",
             "desc": "Configure and use LINE channel (Messaging API)",
-            "link": "/clawdbot/clawdbot/platforms/line/"
+            "link": "/moltbot/moltbot/platforms/line/"
           },
           {
             "title": "WebChat Interface",
             "desc": "Use the built-in WebChat interface to interact with the AI assistant",
-            "link": "/clawdbot/clawdbot/platforms/webchat/"
+            "link": "/moltbot/moltbot/platforms/webchat/"
           },
           {
             "title": "macOS App",
             "desc": "Learn about the macOS menu bar app features and Voice Wake/Talk Mode",
-            "link": "/clawdbot/clawdbot/platforms/macos-app/"
+            "link": "/moltbot/moltbot/platforms/macos-app/"
           },
           {
             "title": "iOS Node",
             "desc": "Configure iOS node to execute device local operations (Camera, Canvas, Voice Wake)",
-            "link": "/clawdbot/clawdbot/platforms/ios-node/"
+            "link": "/moltbot/moltbot/platforms/ios-node/"
           },
           {
             "title": "Android Node",
             "desc": "Configure Android node to execute device local operations (Camera, Canvas)",
-            "link": "/clawdbot/clawdbot/platforms/android-node/"
+            "link": "/moltbot/moltbot/platforms/android-node/"
           }
         ]
       },
@@ -155,57 +155,57 @@
           {
             "title": "AI Models & Authentication",
             "desc": "Configure AI model providers (Anthropic, OpenAI, OpenRouter, Ollama, etc.) and authentication methods",
-            "link": "/clawdbot/clawdbot/advanced/models-auth/"
+            "link": "/moltbot/moltbot/advanced/models-auth/"
           },
           {
             "title": "Session Management & Multi-Agent",
             "desc": "Learn session model, session isolation, sub-agent collaboration, context compression",
-            "link": "/clawdbot/clawdbot/advanced/session-management/"
+            "link": "/moltbot/moltbot/advanced/session-management/"
           },
           {
             "title": "Browser Automation Tool",
             "desc": "Use browser tools for web automation, screenshots, form manipulation, etc.",
-            "link": "/clawdbot/clawdbot/advanced/tools-browser/"
+            "link": "/moltbot/moltbot/advanced/tools-browser/"
           },
           {
             "title": "Command Execution Tool & Approvals",
             "desc": "Configure and use exec tool, understand security approval mechanism",
-            "link": "/clawdbot/clawdbot/advanced/tools-exec/"
+            "link": "/moltbot/moltbot/advanced/tools-exec/"
           },
           {
             "title": "Web Search & Fetch Tools",
             "desc": "Use web_search and web_fetch tools for web searching and content scraping",
-            "link": "/clawdbot/clawdbot/advanced/tools-web/"
+            "link": "/moltbot/moltbot/advanced/tools-web/"
           },
           {
             "title": "Canvas Visual Interface & A2UI",
             "desc": "Understand Canvas A2UI push mechanism, visual interface operations",
-            "link": "/clawdbot/clawdbot/advanced/canvas/"
+            "link": "/moltbot/moltbot/advanced/canvas/"
           },
           {
             "title": "Voice Wake & Text-to-Speech",
             "desc": "Configure Voice Wake, Talk Mode, and TTS providers",
-            "link": "/clawdbot/clawdbot/advanced/voice-tts/"
+            "link": "/moltbot/moltbot/advanced/voice-tts/"
           },
           {
             "title": "Memory System & Vector Search",
             "desc": "Configure and use memory system (SQLite-vec, FTS5, hybrid search)",
-            "link": "/clawdbot/clawdbot/advanced/memory-system/"
+            "link": "/moltbot/moltbot/advanced/memory-system/"
           },
           {
             "title": "Cron Jobs & Webhook",
             "desc": "Configure cron jobs, webhook triggers, Gmail Pub/Sub",
-            "link": "/clawdbot/clawdbot/advanced/cron-automation/"
+            "link": "/moltbot/moltbot/advanced/cron-automation/"
           },
           {
-            "title": "Skills Platform & ClawdHub",
-            "desc": "Understand skill system, Bundled/Managed/Workspace skills, ClawdHub integration",
-            "link": "/clawdbot/clawdbot/advanced/skills-platform/"
+            "title": "Skills Platform & MoltHub",
+            "desc": "Understand skill system, Bundled/Managed/Workspace skills, MoltHub integration",
+            "link": "/moltbot/moltbot/advanced/skills-platform/"
           },
           {
             "title": "Security & Sandbox Isolation",
             "desc": "Understand security model, tool permission control, Sandbox isolation, Docker deployment",
-            "link": "/clawdbot/clawdbot/advanced/security-sandbox/"
+            "link": "/moltbot/moltbot/advanced/security-sandbox/"
           }
         ]
       },
@@ -215,17 +215,17 @@
           {
             "title": "Troubleshooting",
             "desc": "Solve common issues: Gateway startup failures, channel connection problems, authentication errors, tool invocation failures",
-            "link": "/clawdbot/clawdbot/faq/troubleshooting/"
+            "link": "/moltbot/moltbot/faq/troubleshooting/"
           },
           {
             "title": "CLI Commands Reference",
             "desc": "Complete CLI command list and usage documentation",
-            "link": "/clawdbot/clawdbot/faq/cli-commands/"
+            "link": "/moltbot/moltbot/faq/cli-commands/"
           },
           {
             "title": "Performance Optimization",
             "desc": "Optimize Gateway performance, reduce latency, memory management, concurrency control",
-            "link": "/clawdbot/clawdbot/faq/performance-optimization/"
+            "link": "/moltbot/moltbot/faq/performance-optimization/"
           }
         ]
       }

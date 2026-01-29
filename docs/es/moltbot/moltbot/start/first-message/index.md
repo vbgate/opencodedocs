@@ -544,13 +544,13 @@ En esta lección aprendiste:
 
 | Función | Ruta del archivo | Número de línea |
 |--- | --- | ---|
-| Registro del comando CLI Agent | [`src/cli/program/register.agent.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.agent.ts) | 20-82 |
-| Ejecución del CLI Agent | [`src/commands/agent-via-gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/agent-via-gateway.ts) | 82-184 |
-| Registro del CLI message send | [`src/cli/program/message/register.send.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/message/register.send.ts) | 1-30 |
-| Método Gateway chat.send | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 296-380 |
-| Procesamiento de mensajes internos de WebChat | [`src/gateway/server-chat.gateway-server-chat.e2e.test.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-chat.gateway-server-chat.e2e.test.ts) | 50-290 |
-| Definición de tipo de canal de mensajes | [`src/gateway/protocol/client-info.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/client-info.ts) | 2-23 |
-| Registro de canales | [`src/channels/registry.js`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.js) | Archivo completo |
+| Registro del comando CLI Agent | [`src/cli/program/register.agent.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/register.agent.ts) | 20-82 |
+| Ejecución del CLI Agent | [`src/commands/agent-via-gateway.ts`](https://github.com/moltbot/moltbot/blob/main/src/commands/agent-via-gateway.ts) | 82-184 |
+| Registro del CLI message send | [`src/cli/program/message/register.send.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/message/register.send.ts) | 1-30 |
+| Método Gateway chat.send | [`src/gateway/server-methods/chat.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-methods/chat.ts) | 296-380 |
+| Procesamiento de mensajes internos de WebChat | [`src/gateway/server-chat.gateway-server-chat.e2e.test.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-chat.gateway-server-chat.e2e.test.ts) | 50-290 |
+| Definición de tipo de canal de mensajes | [`src/gateway/protocol/client-info.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/protocol/client-info.ts) | 2-23 |
+| Registro de canales | [`src/channels/registry.js`](https://github.com/moltbot/moltbot/blob/main/src/channels/registry.js) | Archivo completo |
 
 **Constantes clave**:
 - `DEFAULT_CHAT_CHANNEL = "whatsapp"`: Canal de mensajes predeterminado (de `src/channels/registry.js`)

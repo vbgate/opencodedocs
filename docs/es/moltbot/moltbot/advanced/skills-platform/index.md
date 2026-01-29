@@ -394,12 +394,12 @@ El sistema de habilidades es el mecanismo fundamental para extender las capacida
 
 | Funcionalidad | Ruta del archivo | Número de línea |
 |--- | --- | ---|
-| Definición de tipo de configuración de habilidades | [`src/config/types.skills.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.skills.ts) | 1-32 |
-| Documentación del sistema de habilidades | [`docs/tools/skills.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/skills.md) | 1-260 |
-| Referencia de configuración de habilidades | [`docs/tools/skills-config.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/skills-config.md) | 1-76 |
-| Documentación de ClawdHub | [`docs/tools/clawdhub.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/clawdhub.md) | 1-202 |
-| Guía de creación de habilidades | [`docs/tools/creating-skills.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/creating-skills.md) | 1-42 |
-| Comandos CLI | [`docs/cli/skills.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/cli/skills.md) | 1-26 |
+| Definición de tipo de configuración de habilidades | [`src/config/types.skills.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.skills.ts) | 1-32 |
+| Documentación del sistema de habilidades | [`docs/tools/skills.md`](https://github.com/moltbot/moltbot/blob/main/docs/tools/skills.md) | 1-260 |
+| Referencia de configuración de habilidades | [`docs/tools/skills-config.md`](https://github.com/moltbot/moltbot/blob/main/docs/tools/skills-config.md) | 1-76 |
+| Documentación de ClawdHub | [`docs/tools/clawdhub.md`](https://github.com/moltbot/moltbot/blob/main/docs/tools/clawdhub.md) | 1-202 |
+| Guía de creación de habilidades | [`docs/tools/creating-skills.md`](https://github.com/moltbot/moltbot/blob/main/docs/tools/creating-skills.md) | 1-42 |
+| Comandos CLI | [`docs/cli/skills.md`](https://github.com/moltbot/moltbot/blob/main/docs/cli/skills.md) | 1-26 |
 
 **Tipos clave**:
 

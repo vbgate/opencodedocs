@@ -297,13 +297,13 @@ Failed to notify requester: <error details>
 
 | 功能 | 文件路径 | 行号 |
 |--- | --- | ---|
-| 配对代码生成（8 位，排除易混淆字符） | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L173-L181) | 173-181 |
-| 配对请求存储与 TTL（1 小时） | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L11-L14) | 11-14 |
-| 批准配对命令 | [`src/cli/pairing-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/pairing-cli.ts#L107-L143) | 107-143 |
-| 配对代码消息生成 | [`src/pairing/pairing-messages.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-messages.ts#L4-L20) | 4-20 |
-| 允许列表存储 | [`src/pairing/pairing-store.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/pairing/pairing-store.ts#L457-L461) | 457-461 |
-| 支持 `pairing` 的渠道列表 | [`src/channels/plugins/pairing.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/pairing.ts#L11-L16) | 11-16 |
-| 默认 DM 策略（pairing） | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts#L93) | 93 |
+| 配对代码生成（8 位，排除易混淆字符） | [`src/pairing/pairing-store.ts`](https://github.com/moltbot/moltbot/blob/main/src/pairing/pairing-store.ts#L173-L181) | 173-181 |
+| 配对请求存储与 TTL（1 小时） | [`src/pairing/pairing-store.ts`](https://github.com/moltbot/moltbot/blob/main/src/pairing/pairing-store.ts#L11-L14) | 11-14 |
+| 批准配对命令 | [`src/cli/pairing-cli.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/pairing-cli.ts#L107-L143) | 107-143 |
+| 配对代码消息生成 | [`src/pairing/pairing-messages.ts`](https://github.com/moltbot/moltbot/blob/main/src/pairing/pairing-messages.ts#L4-L20) | 4-20 |
+| 允许列表存储 | [`src/pairing/pairing-store.ts`](https://github.com/moltbot/moltbot/blob/main/src/pairing/pairing-store.ts#L457-L461) | 457-461 |
+| 支持 `pairing` 的渠道列表 | [`src/channels/plugins/pairing.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/pairing.ts#L11-L16) | 11-16 |
+| 默认 DM 策略（pairing） | [`src/config/zod-schema.providers-core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.providers-core.ts#L93) | 93 |
 
 **关键常量**：
 - `PAIRING_CODE_LENGTH = 8`：配对代码长度

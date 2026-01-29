@@ -435,11 +435,11 @@ pnpm gateway:watch  # TS 파일 변경 시 자동 리로드
 
 | 기능 | 파일 경로 | 라인 번호 |
 |--- | --- | ---|
-| CLI 진입점 | [`src/cli/run-main.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/run-main.ts) | 26-60 |
-| Onboarding 명령 | [`src/cli/program/register.onboard.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.onboard.ts) | 34-100 |
-| Daemon 설치 | [`src/cli/daemon-cli/install.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/daemon-cli/install.ts) | 15-100 |
-| Gateway 서비스 | [`src/daemon/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/service.ts) | 전체 파일 |
-| 런타임 검사 | [`src/infra/runtime-guard.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/runtime-guard.ts) | 전체 파일 |
+| CLI 진입점 | [`src/cli/run-main.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/run-main.ts) | 26-60 |
+| Onboarding 명령 | [`src/cli/program/register.onboard.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/register.onboard.ts) | 34-100 |
+| Daemon 설치 | [`src/cli/daemon-cli/install.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/daemon-cli/install.ts) | 15-100 |
+| Gateway 서비스 | [`src/daemon/service.ts`](https://github.com/moltbot/moltbot/blob/main/src/daemon/service.ts) | 전체 파일 |
+| 런타임 검사 | [`src/infra/runtime-guard.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/runtime-guard.ts) | 전체 파일 |
 
 **핵심 상수**:
 - `DEFAULT_GATEWAY_DAEMON_RUNTIME = "node"`: 기본 데몬 런타임 (`src/commands/daemon-runtime.ts`에서)

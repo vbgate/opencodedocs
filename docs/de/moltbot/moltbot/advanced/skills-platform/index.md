@@ -394,12 +394,12 @@ Das Skill-System ist der zentrale Mechanismus zur Erweiterung der Fähigkeiten v
 
 | Funktion | Dateipfad | Zeilennummer |
 |--- | --- | ---|
-| Typdefinition der Skill-Konfiguration | [`src/config/types.skills.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.skills.ts) | 1-32 |
-| Dokumentation des Skill-Systems | [`docs/tools/skills.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/skills.md) | 1-260 |
+| Typdefinition der Skill-Konfiguration | [`src/config/types.skills.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.skills.ts) | 1-32 |
+| Dokumentation des Skill-Systems | [`docs/tools/skills.md`](https://github.com/moltbot/moltbot/blob/main/docs/tools/skills.md) | 1-260 |
 |--- | --- | ---|
-| ClawdHub-Dokumentation | [`docs/tools/clawdhub.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/clawdhub.md) | 1-202 |
+| ClawdHub-Dokumentation | [`docs/tools/clawdhub.md`](https://github.com/moltbot/moltbot/blob/main/docs/tools/clawdhub.md) | 1-202 |
 |--- | --- | ---|
-| CLI-Befehle | [`docs/cli/skills.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/cli/skills.md) | 1-26 |
+| CLI-Befehle | [`docs/cli/skills.md`](https://github.com/moltbot/moltbot/blob/main/docs/cli/skills.md) | 1-26 |
 
 **Wichtige Typen**:
 

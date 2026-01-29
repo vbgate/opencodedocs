@@ -597,10 +597,10 @@ Agent가 Slack 특정 작업을 호출하도록 허용:
 
 | 기능            | 파일 경로                                                                                               | 행 번호       |
 |--- | --- | ---|
-| Slack 구성 타입 | [`src/config/types.slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.slack.ts) | 1-150      |
-| Slack 온보딩 로직  | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/slack.ts) | 1-539      |
-| Slack Actions 도구 | [`src/agents/tools/slack-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/slack-actions.ts) | 1-301      |
-| Slack 공식 문서 | [`docs/channels/slack.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/slack.md) | 1-508      |
+| Slack 구성 타입 | [`src/config/types.slack.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.slack.ts) | 1-150      |
+| Slack 온보딩 로직  | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/slack.ts) | 1-539      |
+| Slack Actions 도구 | [`src/agents/tools/slack-actions.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/slack-actions.ts) | 1-301      |
+| Slack 공식 문서 | [`docs/channels/slack.md`](https://github.com/moltbot/moltbot/blob/main/docs/channels/slack.md) | 1-508      |
 
 **핵심 타입 정의**:
 - `SlackConfig`: Slack 채널 메인 구성 타입

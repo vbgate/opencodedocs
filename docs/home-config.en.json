@@ -131,7 +131,7 @@
                 "repo": "https://github.com/NoeFabris/opencode-antigravity-auth",
                 "meta": {
                     "lessons": "33 lessons",
-                    "stars": "6.3k",
+                    "stars": "6.8k",
                     "difficulty": "Beginner"
                 }
             },
@@ -142,7 +142,7 @@
                 "repo": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning",
                 "meta": {
                     "lessons": "22 lessons",
-                    "stars": "560",
+                    "stars": "625",
                     "difficulty": "Advanced"
                 }
             },
@@ -153,7 +153,7 @@
                 "repo": "https://github.com/backnotprop/plannotator",
                 "meta": {
                     "lessons": "27 lessons",
-                    "stars": "1.4k",
+                    "stars": "1.5k",
                     "difficulty": "Intermediate"
                 }
             },
@@ -164,7 +164,7 @@
                 "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills",
                 "meta": {
                     "lessons": "24 lessons",
-                    "stars": "26",
+                    "stars": "28",
                     "difficulty": "Intermediate"
                 }
             },
@@ -175,7 +175,7 @@
                 "repo": "https://github.com/lbjlaq/Antigravity-Manager",
                 "meta": {
                     "lessons": "39 lessons",
-                    "stars": "18k",
+                    "stars": "19.3k",
                     "difficulty": "Advanced"
                 }
             },
@@ -186,7 +186,7 @@
                 "repo": "https://github.com/numman-ali/openskills",
                 "meta": {
                     "lessons": "35 lessons",
-                    "stars": "7.1k",
+                    "stars": "7.4k",
                     "difficulty": "Intermediate"
                 }
             },
@@ -197,7 +197,7 @@
                 "repo": "https://github.com/supermemoryai/opencode-supermemory",
                 "meta": {
                     "lessons": "13 lessons",
-                    "stars": "522",
+                    "stars": "545",
                     "difficulty": "Advanced"
                 }
             },
@@ -208,7 +208,7 @@
                 "repo": "https://github.com/vbgate/opencode-mystatus",
                 "meta": {
                     "lessons": "23 lessons",
-                    "stars": "161",
+                    "stars": "170",
                     "difficulty": "Beginner"
                 }
             },
@@ -219,7 +219,7 @@
                 "repo": "https://github.com/franlol/opencode-md-table-formatter",
                 "meta": {
                     "lessons": "14 lessons",
-                    "stars": "146",
+                    "stars": "156",
                     "difficulty": "Beginner"
                 }
             },
@@ -230,7 +230,7 @@
                 "repo": "https://github.com/code-yeongyu/oh-my-opencode",
                 "meta": {
                     "lessons": "26 lessons",
-                    "stars": "24.1k",
+                    "stars": "25.8k",
                     "difficulty": "Advanced"
                 }
             },
@@ -241,7 +241,7 @@
                 "repo": "https://github.com/kdcokenny/opencode-notify",
                 "meta": {
                     "lessons": "21 lessons",
-                    "stars": "--",
+                    "stars": "31",
                     "difficulty": "Intermediate"
                 }
             },
@@ -252,18 +252,18 @@
                 "repo": "https://github.com/vercel-labs/agent-skills",
                 "meta": {
                     "lessons": "14 lessons",
-                    "stars": "16.6k",
+                    "stars": "17.8k",
                     "difficulty": "Intermediate"
                 }
             },
             {
                 "title": "Clawdbot",
                 "desc": "Your private AI assistant, available everywhere",
-                "link": "/clawdbot/clawdbot/",
-                "repo": "https://github.com/clawdbot/clawdbot",
+                "link": "/moltbot/moltbot/",
+                "repo": "https://github.com/moltbot/moltbot",
                 "meta": {
                     "lessons": "43 lessons",
-                    "stars": "--",
+                    "stars": "101.4k",
                     "difficulty": "Advanced"
                 }
             }

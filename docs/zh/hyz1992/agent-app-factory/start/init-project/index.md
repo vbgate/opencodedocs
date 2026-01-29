@@ -158,7 +158,7 @@ ls -la
 - [ ] `.factory/config.yaml` 存在
 - [ ] `.factory/state.json` 存在
 - [ ] `.claude/settings.local.json` 存在
-- [ ] `.factory/agents/` 目录包含 8 个 `.agent.md` 文件
+- [ ] `.factory/agents/` 目录包含 7 个 `.agent.md` 文件
 - [ ] `.factory/skills/` 目录包含 6 个技能模块
 - [ ] `.factory/policies/` 目录包含 7 个策略文档
 
@@ -166,34 +166,23 @@ ls -la
 
 ### config.yaml：项目配置
 
-`config.yaml` 控制生成应用的技术栈和偏好设置：
+`config.yaml` 包含项目的基本信息和流水线状态：
 
 ```yaml
-# 技术栈偏好
-preferences:
-  backend:
-    language: typescript
-    framework: express
-    database: sqlite
-    orm: prisma
-  
-  frontend:
-    platform: react-native
-    state_management: context
-    styling: stylesheet
+project:
+  name: my-app                  # 项目名称
+  description: ""                # 项目描述
+  created_at: "2026-01-30T00:00:00.000Z"  # 创建时间
+  updated_at: "2026-01-30T00:00:00.000Z"  # 更新时间
 
-# MVP 约束
-mvp_constraints:
-  max_pages: 3
-  max_models: 10
-  enable_auth: false
+pipeline:
+  current_stage: null           # 当前执行阶段
+  completed_stages: []          # 已完成阶段列表
+  last_checkpoint: null         # 最近检查点
 
-# UI 设计偏好
-ui_preferences:
-  aesthetic: minimalism
-  color_scheme:
-    mode: auto
-    primary_hue: blue
+settings:
+  auto_save: true               # 自动保存
+  backup_on_error: true        # 出错时备份
 ```
 
 ::: tip 修改配置
@@ -213,13 +202,24 @@ ui_preferences:
   "current_stage": null,
   "completed_stages": [],
   "started_at": null,
-  "last_updated": "2026-01-29T13:00:00.000Z"
+  "last_updated": "2026-01-30T00:00:00.000Z"
 }
 ```
 
-- `status`：当前状态（idle、running、waiting_for_confirmation、paused、failed）
+- `status`：当前状态（初始化时为 `idle`，运行时会动态切换为 `running`、`waiting_for_confirmation`、`paused`、`failed`）
 - `current_stage`：正在执行的阶段
 - `completed_stages`：已完成的阶段列表
+
+::: info 状态说明
+
+流水线使用状态机运行，初始化时状态为 `idle`。其他状态值在流水线运行过程中动态设置：
+- `idle`：等待启动
+- `running`：正在执行某个阶段
+- `waiting_for_confirmation`：等待人工确认继续、重试或暂停
+- `paused`：人工暂停
+- `failed`：检测到失败，需要人工介入
+
+:::
 
 ::: warning 不要手动编辑
 

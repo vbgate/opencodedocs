@@ -1,5 +1,14 @@
-# agent-app-factory
+---
+layout: page
+pageClass: project-home-page
+sidebar: false
+title: "agent-app-factory"
+description: "1 Idea, 7 Steps to App"
+---
 
-hyz1992/agent-app-factory 的教程。
+<script setup>
+import data from './project.json'
+import ProjectHome from '../../../.vitepress/theme/components/ProjectHome.vue'
+</script>
 
-URL: https://github.com/hyz1992/agent-app-factory
+<ProjectHome :data="data" />

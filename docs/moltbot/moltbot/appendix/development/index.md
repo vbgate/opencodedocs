@@ -292,7 +292,7 @@ Clawdbot supports the following plugin types:
 - **Background Services**: Background tasks
 - **Auto-reply Commands**: Quick commands without AI
 
-See [Plugin Documentation](https://github.com/clawdbot/clawdbot/blob/main/docs/plugin.md) for details.
+See [Plugin Documentation](https://github.com/moltbot/moltbot/blob/main/docs/plugin.md) for details.
 :::
 
 **Checkpoint ✅**
@@ -399,11 +399,11 @@ Keep exploring and let Clawdbot work for you!
 
 | Feature | File Path | Lines |
 |--- | --- | ---|
-| Build scripts | [`package.json`](https://github.com/clawdbot/clawdbot/blob/main/package.json) | 77-44 |
-| Install from source | [`README.md`](https://github.com/clawdbot/clawdbot/blob/main/README.md) | 83-99 |
-| Plugin documentation | [`docs/plugin.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/plugin.md) | 1-639 |
-| Contributing guide | [`CONTRIBUTING.md`](https://github.com/clawdbot/clawdbot/blob/main/CONTRIBUTING.md) | 1-53 |
-| Architecture documentation | [`docs/concepts/architecture.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/concepts/architecture.md) | 1-123 |
+| Build scripts | [`package.json`](https://github.com/moltbot/moltbot/blob/main/package.json) | 77-44 |
+| Install from source | [`README.md`](https://github.com/moltbot/moltbot/blob/main/README.md) | 83-99 |
+| Plugin documentation | [`docs/plugin.md`](https://github.com/moltbot/moltbot/blob/main/docs/plugin.md) | 1-639 |
+| Contributing guide | [`CONTRIBUTING.md`](https://github.com/moltbot/moltbot/blob/main/CONTRIBUTING.md) | 1-53 |
+| Architecture documentation | [`docs/concepts/architecture.md`](https://github.com/moltbot/moltbot/blob/main/docs/concepts/architecture.md) | 1-123 |
 
 **Key commands**:
 - `pnpm build` - Full build (package.json:85)

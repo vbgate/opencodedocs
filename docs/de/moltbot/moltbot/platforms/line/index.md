@@ -578,15 +578,15 @@ Der LINE-Kanal bietet reichhaltige Nachrichtentypen und Interaktionsmöglichkeit
 
 | Funktion | Dateipfad | Zeilennummer |
 |--- | --- | ---|
-| LINE Bot Kernimplementierung | [`src/line/bot.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/bot.ts) | 27-83 |
+| LINE Bot Kernimplementierung | [`src/line/bot.ts`](https://github.com/moltbot/moltbot/blob/main/src/line/bot.ts) | 27-83 |
 |--- | --- | ---|
 |--- | --- | ---|
-| Nachrichtensendefunktion | [`src/line/send.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/send.ts) | - |
+| Nachrichtensendefunktion | [`src/line/send.ts`](https://github.com/moltbot/moltbot/blob/main/src/line/send.ts) | - |
 |--- | --- | ---|
 |--- | --- | ---|
 |--- | --- | ---|
-| Markdown zu LINE | [`src/line/markdown-to-line.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/markdown-to-line.ts) | - |
-| Webhook-Server | [`src/line/webhook.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/line/webhook.ts) | - |
+| Markdown zu LINE | [`src/line/markdown-to-line.ts`](https://github.com/moltbot/moltbot/blob/main/src/line/markdown-to-line.ts) | - |
+| Webhook-Server | [`src/line/webhook.ts`](https://github.com/moltbot/moltbot/blob/main/src/line/webhook.ts) | - |
 
 **Wichtige Konfigurationsfelder**:
 - `channelAccessToken`: LINE Channel Access Token (`config-schema.ts:19`)

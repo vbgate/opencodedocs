@@ -560,8 +560,8 @@ web_fetch blockiert standardmäßig interne Netzwerk-IPs, um SSRF-Angriffe zu ve
 |--- | --- | ---|
 |--- | --- | ---|
 |--- | --- | ---|
-| SSRF-Schutz | [`src/infra/net/ssrf.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/net/ssrf.ts) | - |
-| Konfigurationsschema | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | - |
+| SSRF-Schutz | [`src/infra/net/ssrf.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/net/ssrf.ts) | - |
+| Konfigurationsschema | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts) | - |
 
 **Wichtige Konstanten**:
 

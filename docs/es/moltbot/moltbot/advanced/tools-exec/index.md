@@ -428,14 +428,14 @@ La herramienta exec permite que los asistentes de IA ejecuten comandos de Shell 
 
 | Funcionalidad | Ruta de archivo | Número de línea |
 |--- | --- | ---|
-| Definición de herramienta exec | [`src/agents/bash-tools.exec.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/bash-tools.exec.ts) | 1-500+ |
-| Lógica de aprobación exec | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 1-1268 |
-| Análisis de comandos de Shell | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 500-1100 |
-| Coincidencia de Allowlist | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 507-521 |
-| Validación de Safe bins | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 836-873 |
-| Comunicación Socket de aprobaciones | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 1210-1267 |
-| Ejecución de procesos | [`src/process/exec.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/process/exec.ts) | 1-125 |
-| Schema de configuración de herramientas | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | - |
+| Definición de herramienta exec | [`src/agents/bash-tools.exec.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/bash-tools.exec.ts) | 1-500+ |
+| Lógica de aprobación exec | [`src/infra/exec-approvals.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/exec-approvals.ts) | 1-1268 |
+| Análisis de comandos de Shell | [`src/infra/exec-approvals.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/exec-approvals.ts) | 500-1100 |
+| Coincidencia de Allowlist | [`src/infra/exec-approvals.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/exec-approvals.ts) | 507-521 |
+| Validación de Safe bins | [`src/infra/exec-approvals.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/exec-approvals.ts) | 836-873 |
+| Comunicación Socket de aprobaciones | [`src/infra/exec-approvals.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/exec-approvals.ts) | 1210-1267 |
+| Ejecución de procesos | [`src/process/exec.ts`](https://github.com/moltbot/moltbot/blob/main/src/process/exec.ts) | 1-125 |
+| Schema de configuración de herramientas | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts) | - |
 
 **Tipos clave**：
 - `ExecHost`: `"sandbox" \| "gateway" \| "node"` - Tipo de host de ejecución

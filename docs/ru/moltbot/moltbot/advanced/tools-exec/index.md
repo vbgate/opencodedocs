@@ -428,14 +428,14 @@ Security: allowlist
 
 | Функциональность | Путь файла | Номер строки |
 |--- | --- | ---|
-| Определение инструмента exec | [`src/agents/bash-tools.exec.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/bash-tools.exec.ts) | 1-500+ |
-| Логика одобрения exec | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 1-1268 |
-| Анализ команд Shell | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 500-1100 |
-| Совпадение Allowlist | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 507-521 |
-| Проверка Safe bins | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 836-873 |
-| Сокетная коммуникация одобрений | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 1210-1267 |
-| Выполнение процессов | [`src/process/exec.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/process/exec.ts) | 1-125 |
-| Schema конфигурации инструментов | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | - |
+| Определение инструмента exec | [`src/agents/bash-tools.exec.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/bash-tools.exec.ts) | 1-500+ |
+| Логика одобрения exec | [`src/infra/exec-approvals.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/exec-approvals.ts) | 1-1268 |
+| Анализ команд Shell | [`src/infra/exec-approvals.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/exec-approvals.ts) | 500-1100 |
+| Совпадение Allowlist | [`src/infra/exec-approvals.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/exec-approvals.ts) | 507-521 |
+| Проверка Safe bins | [`src/infra/exec-approvals.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/exec-approvals.ts) | 836-873 |
+| Сокетная коммуникация одобрений | [`src/infra/exec-approvals.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/exec-approvals.ts) | 1210-1267 |
+| Выполнение процессов | [`src/process/exec.ts`](https://github.com/moltbot/moltbot/blob/main/src/process/exec.ts) | 1-125 |
+| Schema конфигурации инструментов | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts) | - |
 
 **Ключевые типы**：
 - `ExecHost`: `"sandbox" \| "gateway" \| "node"` - Тип хоста выполнения

@@ -538,9 +538,9 @@ Mit einer geeigneten Sitzungsverwaltungskonfiguration können Sie Clawdbot gleic
 |--- | --- | ---|
 |--- | --- | ---|
 |--- | --- | ---|
-| Sitzungsverwaltungs-Dokumentation | [`docs/concepts/session.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/concepts/session.md) | 1-151 |
+| Sitzungsverwaltungs-Dokumentation | [`docs/concepts/session.md`](https://github.com/moltbot/moltbot/blob/main/docs/concepts/session.md) | 1-151 |
 |--- | --- | ---|
-| Kontextkomprimierungs-Dokumentation | [`docs/concepts/compaction.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/concepts/compaction.md) | 1-50 |
+| Kontextkomprimierungs-Dokumentation | [`docs/concepts/compaction.md`](https://github.com/moltbot/moltbot/blob/main/docs/concepts/compaction.md) | 1-50 |
 
 **Wichtige Konstanten**:
 - `SESSION_ID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i`: Regex der Sitzungs-ID (`sessions-helpers.ts:96`)

@@ -118,7 +118,7 @@ brew install --cask clawdbot
 ```
 
 ```bash [Ручная загрузка .dmg]
-# Скачайте последний Clawdbot.app.dmg с https://github.com/clawdbot/clawdbot/releases
+# Скачайте последний Clawdbot.app.dmg с https://github.com/moltbot/moltbot/releases
 # Перетащите в папку Applications
 ```
 
@@ -667,17 +667,17 @@ open 'clawdbot://agent?message=Automated%20task&key=secure-random-string'
 
 | Функция        | Путь к файлу                                                                                    | Номер строки    |
 |--- | --- | ---|
-| Вход приложения     | [`apps/macos/Sources/Clawdbot/ClawdbotApp.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/ClawdbotApp.swift) | Весь файл   |
-| Подключение шлюза | [`apps/macos/Sources/Clawdbot/GatewayConnection.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/GatewayConnection.swift) | 1-500   |
-| Среда выполнения Voice Wake | [`apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift) | Весь файл   |
-| Типы Talk Mode | [`apps/macos/Sources/Clawdbot/TalkModeTypes.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/TalkModeTypes.swift) | Весь файл   |
-| Слой Voice Wake | [`apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift) | Весь файл   |
-| Координатор режима узла | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift) | Весь файл   |
-| Среда выполнения узла | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift) | Весь файл   |
-| Менеджер разрешений | [`apps/macos/Sources/Clawdbot/PermissionManager.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/PermissionManager.swift) | Весь файл   |
-| Exec Approvals | [`apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift) | Весь файл   |
-| Строка меню | [`apps/macos/Sources/Clawdbot/MenuBar.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/MenuBar.swift) | Весь файл   |
-| Инжектор меню | [`apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift) | Весь файл   |
+| Вход приложения     | [`apps/macos/Sources/Clawdbot/ClawdbotApp.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/ClawdbotApp.swift) | Весь файл   |
+| Подключение шлюза | [`apps/macos/Sources/Clawdbot/GatewayConnection.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/GatewayConnection.swift) | 1-500   |
+| Среда выполнения Voice Wake | [`apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift) | Весь файл   |
+| Типы Talk Mode | [`apps/macos/Sources/Clawdbot/TalkModeTypes.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/TalkModeTypes.swift) | Весь файл   |
+| Слой Voice Wake | [`apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift) | Весь файл   |
+| Координатор режима узла | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift) | Весь файл   |
+| Среда выполнения узла | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift) | Весь файл   |
+| Менеджер разрешений | [`apps/macos/Sources/Clawdbot/PermissionManager.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/PermissionManager.swift) | Весь файл   |
+| Exec Approvals | [`apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift) | Весь файл   |
+| Строка меню | [`apps/macos/Sources/Clawdbot/MenuBar.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/MenuBar.swift) | Весь файл   |
+| Инжектор меню | [`apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift) | Весь файл   |
 
 **Ключевые константы**:
 - `GatewayConnection.shared`：Синглтон-менеджер подключения к шлюзу (`GatewayConnection.swift:48`)
@@ -697,9 +697,9 @@ open 'clawdbot://agent?message=Automated%20task&key=secure-random-string'
 - `ExecApprovalsGatewayPrompter.prompt()`：Отобразить диалоговое окно одобрения
 
 **Места документации**:
-- [Документация приложения macOS](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/macos.md)
-- [Документация Voice Wake](https://github.com/clawdbot/clawdbot/blob/main/docs/nodes/voicewake.md)
-- [Документация Talk Mode](https://github.com/clawdbot/clawdbot/blob/main/docs/nodes/talk.md)
-- [Документация узлов](https://github.com/clawdbot/clawdbot/blob/main/docs/nodes/index.md)
+- [Документация приложения macOS](https://github.com/moltbot/moltbot/blob/main/docs/platforms/macos.md)
+- [Документация Voice Wake](https://github.com/moltbot/moltbot/blob/main/docs/nodes/voicewake.md)
+- [Документация Talk Mode](https://github.com/moltbot/moltbot/blob/main/docs/nodes/talk.md)
+- [Документация узлов](https://github.com/moltbot/moltbot/blob/main/docs/nodes/index.md)
 
 </details>

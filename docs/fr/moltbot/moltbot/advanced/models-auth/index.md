@@ -633,12 +633,12 @@ clawdbot gateway restart
 
 | Fonctionnalité | Chemin du fichier | Lignes |
 |--- | --- | ---|
-| Définition des types d'identifiants d'authentification | [`src/agents/auth-profiles/types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/types.ts) | 1-74 |
-| Analyse et actualisation des tokens OAuth | [`src/agents/auth-profiles/oauth.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/oauth.ts) | 1-220 |
-| Gestion des fichiers de configuration d'authentification | [`src/agents/auth-profiles/profiles.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/profiles.ts) | 1-85 |
-| Types de configuration des modèles | [`src/config/types.models.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.models.ts) | 1-60 |
-| Génération de la configuration des modèles | [`src/agents/models-config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/models-config.ts) | 1-139 |
-| Configuration du schéma Zod | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | 1-300+ |
+| Définition des types d'identifiants d'authentification | [`src/agents/auth-profiles/types.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/auth-profiles/types.ts) | 1-74 |
+| Analyse et actualisation des tokens OAuth | [`src/agents/auth-profiles/oauth.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/auth-profiles/oauth.ts) | 1-220 |
+| Gestion des fichiers de configuration d'authentification | [`src/agents/auth-profiles/profiles.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/auth-profiles/profiles.ts) | 1-85 |
+| Types de configuration des modèles | [`src/config/types.models.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.models.ts) | 1-60 |
+| Génération de la configuration des modèles | [`src/agents/models-config.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/models-config.ts) | 1-139 |
+| Configuration du schéma Zod | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts) | 1-300+ |
 
 **Types clés** :
 - `AuthProfileCredential` : type union d'identifiants d'authentification (`ApiKeyCredential | TokenCredential | OAuthCredential`)

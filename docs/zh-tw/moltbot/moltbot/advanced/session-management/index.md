@@ -534,13 +534,13 @@ Agent 應該自動呼叫 `sessions_spawn` 工具，你會看到：
 
 | 功能 | 檔案路徑 | 行號 |
 |--- | --- | ---|
-| 會話鍵解析 | [`src/routing/session-key.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/routing/session-key.ts) | 1-100 |
-| 會話設定 Schema | [`src/config/zod-schema.session.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.session.ts) | 11-83 |
-| 子 Agent 產生工具 | [`src/agents/tools/sessions-spawn-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/sessions-spawn-tool.ts) | 28-269 |
-| 會話工具輔助函數 | [`src/agents/tools/sessions-helpers.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/sessions-helpers.ts) | 1-328 |
-| 會話管理文件 | [`docs/concepts/session.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/concepts/session.md) | 1-151 |
-| 多 Agent 路由文件 | [`docs/concepts/multi-agent.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/concepts/multi-agent.md) | 1-355 |
-| 上下文壓縮文件 | [`docs/concepts/compaction.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/concepts/compaction.md) | 1-50 |
+| 會話鍵解析 | [`src/routing/session-key.ts`](https://github.com/moltbot/moltbot/blob/main/src/routing/session-key.ts) | 1-100 |
+| 會話設定 Schema | [`src/config/zod-schema.session.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.session.ts) | 11-83 |
+| 子 Agent 產生工具 | [`src/agents/tools/sessions-spawn-tool.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/sessions-spawn-tool.ts) | 28-269 |
+| 會話工具輔助函數 | [`src/agents/tools/sessions-helpers.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/sessions-helpers.ts) | 1-328 |
+| 會話管理文件 | [`docs/concepts/session.md`](https://github.com/moltbot/moltbot/blob/main/docs/concepts/session.md) | 1-151 |
+| 多 Agent 路由文件 | [`docs/concepts/multi-agent.md`](https://github.com/moltbot/moltbot/blob/main/docs/concepts/multi-agent.md) | 1-355 |
+| 上下文壓縮文件 | [`docs/concepts/compaction.md`](https://github.com/moltbot/moltbot/blob/main/docs/concepts/compaction.md) | 1-50 |
 
 **關鍵常數**：
 - `SESSION_ID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i`：會話 ID 正規表示式（`sessions-helpers.ts:96`）

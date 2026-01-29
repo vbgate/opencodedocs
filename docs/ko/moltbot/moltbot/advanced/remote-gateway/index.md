@@ -53,7 +53,7 @@ order: 300
 
 시작 전에 다음을 확인하세요:
 
-- [ ] **[Gateway 시작](/ko/clawdbot/clawdbot/start/gateway-startup/)** 과정 완료
+- [ ] **[Gateway 시작](/ko/moltbot/moltbot/start/gateway-startup/)** 과정 완료
 - [ ] 기본 SSH 명령 이해(SSH 터널 사용 시 선택 사항)
 - [ ] (Tailscale 사용 시) Tailscale CLI가 설치되고 로그인되어 있음
 - [ ] 원격 Linux 서버 또는 VPS 준비(Ubuntu/Debian 권장)
@@ -703,13 +703,13 @@ ssh -N -L 18790:127.0.0.1:18789 clawdbot-remote
 
 | 기능 | 파일 경로 | 행 번호 |
 |--- | --- | ---|
-| Gateway 원격 구성 스키마 | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 200-220 |
-| Gateway Tailscale 구성 스키마 | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 150-180 |
-| Tailscale 통합 | [`src/infra/tailscale.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/tailscale.ts) | 1-100 |
-| 원격 Gateway 문서 | [`docs/gateway/remote.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/remote.md) | 1-123 |
-| Tailscale 문서 | [`docs/gateway/tailscale.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/tailscale.md) | 1-147 |
-| macOS App 원격 액세스 문서 | [`docs/gateway/remote-gateway-readme.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/remote-gateway-readme.md) | 1-154 |
-| 보안 문서 | [`docs/gateway/security.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/security.md) | 1-100 |
+| Gateway 원격 구성 스키마 | [`src/config/types.gateway.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.gateway.ts) | 200-220 |
+| Gateway Tailscale 구성 스키마 | [`src/config/types.gateway.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.gateway.ts) | 150-180 |
+| Tailscale 통합 | [`src/infra/tailscale.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/tailscale.ts) | 1-100 |
+| 원격 Gateway 문서 | [`docs/gateway/remote.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/remote.md) | 1-123 |
+| Tailscale 문서 | [`docs/gateway/tailscale.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/tailscale.md) | 1-147 |
+| macOS App 원격 액세스 문서 | [`docs/gateway/remote-gateway-readme.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/remote-gateway-readme.md) | 1-154 |
+| 보안 문서 | [`docs/gateway/security.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/security.md) | 1-100 |
 
 **핵심 구성 필드**:
 

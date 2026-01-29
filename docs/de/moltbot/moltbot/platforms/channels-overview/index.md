@@ -607,17 +607,17 @@ In dieser Lektion haben Sie gelernt:
 
 | Funktion            | Dateipfad                                                                                               | Zeilen    |
 |--- | --- | ---|
-| Kanal-Register       | [`src/channels/registry.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.ts) | 7-100     |
-| Kanal-Plugin-Verzeichnis   | [`src/channels/plugins/`](https://github.com/clawdbot/clawdbot/tree/main/src/channels/plugins/) | Vollständiges Verzeichnis  |
-| Kanal-Metadatentyp   | [`src/channels/plugins/types.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/types.core.ts) | 74-93     |
-| DM-Pairing-Mechanismus     | [`src/channels/plugins/pairing.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/pairing.ts) | Vollständige Datei  |
-| Gruppen @mention | [`src/channels/plugins/group-mentions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/group-mentions.ts) | Vollständige Datei  |
-| Whitelist-Abgleich     | [`src/channels/plugins/allowlist-match.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/allowlist-match.ts) | Vollständige Datei  |
-| Kanal-Verzeichniskonfiguration   | [`src/channels/plugins/directory-config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/directory-config.ts) | Vollständige Datei  |
-| WhatsApp-Plugin | [`src/channels/plugins/onboarding/whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/whatsapp.ts) | Vollständige Datei  |
-| Telegram-Plugin | [`src/channels/plugins/onboarding/telegram.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/telegram.ts) | Vollständige Datei  |
-| Slack-Plugin     | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/slack.ts) | Vollständige Datei  |
-| Discord-Plugin   | [`src/channels/plugins/onboarding/discord.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/discord.ts) | Vollständige Datei  |
+| Kanal-Register       | [`src/channels/registry.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/registry.ts) | 7-100     |
+| Kanal-Plugin-Verzeichnis   | [`src/channels/plugins/`](https://github.com/moltbot/moltbot/tree/main/src/channels/plugins/) | Vollständiges Verzeichnis  |
+| Kanal-Metadatentyp   | [`src/channels/plugins/types.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/types.core.ts) | 74-93     |
+| DM-Pairing-Mechanismus     | [`src/channels/plugins/pairing.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/pairing.ts) | Vollständige Datei  |
+| Gruppen @mention | [`src/channels/plugins/group-mentions.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/group-mentions.ts) | Vollständige Datei  |
+| Whitelist-Abgleich     | [`src/channels/plugins/allowlist-match.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/allowlist-match.ts) | Vollständige Datei  |
+| Kanal-Verzeichniskonfiguration   | [`src/channels/plugins/directory-config.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/directory-config.ts) | Vollständige Datei  |
+| WhatsApp-Plugin | [`src/channels/plugins/onboarding/whatsapp.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/whatsapp.ts) | Vollständige Datei  |
+| Telegram-Plugin | [`src/channels/plugins/onboarding/telegram.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/telegram.ts) | Vollständige Datei  |
+| Slack-Plugin     | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/slack.ts) | Vollständige Datei  |
+| Discord-Plugin   | [`src/channels/plugins/onboarding/discord.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/discord.ts) | Vollständige Datei  |
 
 **Wichtige Konstanten**:
 - `CHAT_CHANNEL_ORDER`: Array der Kernkanalreihenfolge (aus `src/channels/registry.ts:7-15`)

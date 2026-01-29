@@ -455,10 +455,10 @@ clawdbot nodes invoke --node "android-node" --command location.get
 
 | 功能        | 檔案路徑                                                                                    | 行號    |
 |--- | --- | ---|
-| 節點指令策略 | [`src/gateway/node-command-policy.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/node-command-policy.ts) | 1-112   |
-| 節點通訊協定 Schema | [`src/gateway/protocol/schema/nodes.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/schema/nodes.ts) | 1-103   |
-| Android 文件  | [`docs/platforms/android.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/android.md) | 1-142   |
-| 節點 CLI  | [`docs/cli/nodes.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/cli/nodes.md) | 1-69    |
+| 節點指令策略 | [`src/gateway/node-command-policy.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/node-command-policy.ts) | 1-112   |
+| 節點通訊協定 Schema | [`src/gateway/protocol/schema/nodes.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/protocol/schema/nodes.ts) | 1-103   |
+| Android 文件  | [`docs/platforms/android.md`](https://github.com/moltbot/moltbot/blob/main/docs/platforms/android.md) | 1-142   |
+| 節點 CLI  | [`docs/cli/nodes.md`](https://github.com/moltbot/moltbot/blob/main/docs/cli/nodes.md) | 1-69    |
 
 **關鍵常數**：
 - `PLATFORM_DEFAULTS`：定義各平台支援的指令列表（`node-command-policy.ts:32-58`）

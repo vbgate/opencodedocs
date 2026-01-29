@@ -434,11 +434,11 @@ pnpm gateway:watch  # Recarga automática al modificar archivos TS
 
 | Función | Ruta del archivo | Número de línea |
 |--- | --- | ---|
-| Entrada CLI | [`src/cli/run-main.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/run-main.ts) | 26-60 |
-| Comando Onboarding | [`src/cli/program/register.onboard.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.onboard.ts) | 34-100 |
-| Instalación Daemon | [`src/cli/daemon-cli/install.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/daemon-cli/install.ts) | 15-100 |
-| Servicio Gateway | [`src/daemon/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/service.ts) | Archivo completo |
-| Comprobación de tiempo de ejecución | [`src/infra/runtime-guard.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/runtime-guard.ts) | Archivo completo |
+| Entrada CLI | [`src/cli/run-main.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/run-main.ts) | 26-60 |
+| Comando Onboarding | [`src/cli/program/register.onboard.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/register.onboard.ts) | 34-100 |
+| Instalación Daemon | [`src/cli/daemon-cli/install.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/daemon-cli/install.ts) | 15-100 |
+| Servicio Gateway | [`src/daemon/service.ts`](https://github.com/moltbot/moltbot/blob/main/src/daemon/service.ts) | Archivo completo |
+| Comprobación de tiempo de ejecución | [`src/infra/runtime-guard.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/runtime-guard.ts) | Archivo completo |
 
 **Constantes clave**:
 - `DEFAULT_GATEWAY_DAEMON_RUNTIME = "node"`: Entorno de ejecución del demonio por defecto (de `src/commands/daemon-runtime.ts`)

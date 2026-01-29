@@ -434,11 +434,11 @@ pnpm gateway:watch  # TypeScript ファイル変更時に自動リロード
 
 | 機能 | ファイルパス | 行番号 |
 |--- | --- | ---|
-| CLI エントリ | [`src/cli/run-main.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/run-main.ts) | 26-60 |
-| Onboarding コマンド | [`src/cli/program/register.onboard.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.onboard.ts) | 34-100 |
-| Daemon インストール | [`src/cli/daemon-cli/install.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/daemon-cli/install.ts) | 15-100 |
-| Gateway サービス | [`src/daemon/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/service.ts) | 全ファイル |
-| ランタイムチェック | [`src/infra/runtime-guard.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/runtime-guard.ts) | 全ファイル |
+| CLI エントリ | [`src/cli/run-main.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/run-main.ts) | 26-60 |
+| Onboarding コマンド | [`src/cli/program/register.onboard.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/register.onboard.ts) | 34-100 |
+| Daemon インストール | [`src/cli/daemon-cli/install.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/daemon-cli/install.ts) | 15-100 |
+| Gateway サービス | [`src/daemon/service.ts`](https://github.com/moltbot/moltbot/blob/main/src/daemon/service.ts) | 全ファイル |
+| ランタイムチェック | [`src/infra/runtime-guard.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/runtime-guard.ts) | 全ファイル |
 
 **重要な定数**：
 - `DEFAULT_GATEWAY_DAEMON_RUNTIME = "node"`：デフォルトのデーモンランタイム（`src/commands/daemon-runtime.ts` より）

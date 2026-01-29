@@ -561,12 +561,12 @@ clawdbot gateway --port 18789 --verbose
 
 | Función | Ruta de archivo | Número de líneas |
 |--- | --- | ---|
-| Schema de configuración de Bot de Discord | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts#L320-L427) | 320-427 |
-| Asistente de integración de Discord | [`src/channels/plugins/onboarding/discord.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/discord.ts) | 1-485 |
-| Operaciones de herramientas de Discord | [`src/agents/tools/discord-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/discord-actions.ts) | 1-72 |
-| Operaciones de mensajes de Discord | [`src/agents/tools/discord-actions-messaging.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/discord-actions-messaging.ts) | - |
-| Operaciones de servidor de Discord | [`src/agents/tools/discord-actions-guild.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/discord-actions-guild.ts) | - |
-| Documentación oficial de Discord | [`docs/channels/discord.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/discord.md) | 1-400 |
+| Schema de configuración de Bot de Discord | [`src/config/zod-schema.providers-core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.providers-core.ts#L320-L427) | 320-427 |
+| Asistente de integración de Discord | [`src/channels/plugins/onboarding/discord.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/discord.ts) | 1-485 |
+| Operaciones de herramientas de Discord | [`src/agents/tools/discord-actions.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/discord-actions.ts) | 1-72 |
+| Operaciones de mensajes de Discord | [`src/agents/tools/discord-actions-messaging.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/discord-actions-messaging.ts) | - |
+| Operaciones de servidor de Discord | [`src/agents/tools/discord-actions-guild.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/discord-actions-guild.ts) | - |
+| Documentación oficial de Discord | [`docs/channels/discord.md`](https://github.com/moltbot/moltbot/blob/main/docs/channels/discord.md) | 1-400 |
 
 **Campos clave del Schema**:
 - `DiscordAccountSchema`: Configuración de cuenta de Discord (token, guilds, dm, actions, etc.)

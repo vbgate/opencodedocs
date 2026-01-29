@@ -53,7 +53,7 @@ order: 300
 
 開始する前に、以下を確認してください：
 
-- [ ] **[Gateway の起動](/ja/clawdbot/clawdbot/start/gateway-startup/)** レッスンを完了している
+- [ ] **[Gateway の起動](/ja/moltbot/moltbot/start/gateway-startup/)** レッスンを完了している
 - [ ] 基本的な SSH コマンドを理解している（SSH トンネルを使用する場合、オプション）
 - [ ] （Tailscale を使用する場合）Tailscale CLI をインストール済みでログインしている
 - [ ] リモート Linux サーバーまたは VPS を準備している（推奨：Ubuntu/Debian）
@@ -703,13 +703,13 @@ ssh -N -L 18790:127.0.0.1:18789 clawdbot-remote
 
 | 機能 | ファイルパス | 行番号 |
 |--- | --- | ---|
-| Gateway リモート設定 Schema | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 200-220 |
-| Gateway Tailscale 設定 Schema | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 150-180 |
-| Tailscale インテグレーション | [`src/infra/tailscale.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/tailscale.ts) | 1-100 |
-| リモート Gateway ドキュメント | [`docs/gateway/remote.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/remote.md) | 1-123 |
-| Tailscale ドキュメント | [`docs/gateway/tailscale.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/tailscale.md) | 1-147 |
-| macOS App リモートアクセスドキュメント | [`docs/gateway/remote-gateway-readme.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/remote-gateway-readme.md) | 1-154 |
-| セキュリティドキュメント | [`docs/gateway/security.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/security.md) | 1-100 |
+| Gateway リモート設定 Schema | [`src/config/types.gateway.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.gateway.ts) | 200-220 |
+| Gateway Tailscale 設定 Schema | [`src/config/types.gateway.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.gateway.ts) | 150-180 |
+| Tailscale インテグレーション | [`src/infra/tailscale.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/tailscale.ts) | 1-100 |
+| リモート Gateway ドキュメント | [`docs/gateway/remote.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/remote.md) | 1-123 |
+| Tailscale ドキュメント | [`docs/gateway/tailscale.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/tailscale.md) | 1-147 |
+| macOS App リモートアクセスドキュメント | [`docs/gateway/remote-gateway-readme.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/remote-gateway-readme.md) | 1-154 |
+| セキュリティドキュメント | [`docs/gateway/security.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/security.md) | 1-100 |
 
 **重要な設定フィールド**：
 

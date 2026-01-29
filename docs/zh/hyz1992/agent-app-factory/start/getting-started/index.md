@@ -264,7 +264,7 @@ AI 助手会询问：
 #### 阶段 3: UI - 设计 UI 结构和原型
 
 **输入**：`artifacts/prd/prd.md`
-**输出**：`artifacts/ui/ui.md` + 可预览的 HTML 原型
+**输出**：`artifacts/ui/ui.schema.yaml` + 可预览的 HTML 原型
 
 **确认内容**：
 - 页面结构：有哪些页面？
@@ -322,7 +322,7 @@ AI 助手会询问：
 ✓ 已完成所有流水线阶段
 最终产物:
 - artifacts/prd/prd.md (产品需求文档)
-- artifacts/ui/ui.md (UI 设计)
+- artifacts/ui/ui.schema.yaml (UI 设计)
 - artifacts/tech/tech.md (技术架构)
 - artifacts/backend/ (后端代码)
 - artifacts/client/ (前端代码)

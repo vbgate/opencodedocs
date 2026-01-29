@@ -434,7 +434,7 @@ Das exec-Tool ermöglicht es KI-Assistenten, Shell-Befehle sicher auszuführen, 
 |--- | --- | ---|
 |--- | --- | ---|
 |--- | --- | ---|
-| Prozessausführung | [`src/process/exec.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/process/exec.ts) | 1-125 |
+| Prozessausführung | [`src/process/exec.ts`](https://github.com/moltbot/moltbot/blob/main/src/process/exec.ts) | 1-125 |
 |--- | --- | ---|
 
 **Wichtige Typen**：

@@ -394,12 +394,12 @@ The skill system is the core mechanism for extending Clawdbot capabilities. Mast
 
 | Feature | File Path | Line Numbers |
 |--- | --- | ---|
-| Skill Configuration Type Definitions | [`src/config/types.skills.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.skills.ts) | 1-32 |
-| Skill System Documentation | [`docs/tools/skills.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/skills.md) | 1-260 |
-| Skill Configuration Reference | [`docs/tools/skills-config.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/skills-config.md) | 1-76 |
-| ClawdHub Documentation | [`docs/tools/clawdhub.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/clawdhub.md) | 1-202 |
-| Creating Skills Guide | [`docs/tools/creating-skills.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/creating-skills.md) | 1-42 |
-| CLI Commands | [`docs/cli/skills.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/cli/skills.md) | 1-26 |
+| Skill Configuration Type Definitions | [`src/config/types.skills.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.skills.ts) | 1-32 |
+| Skill System Documentation | [`docs/tools/skills.md`](https://github.com/moltbot/moltbot/blob/main/docs/tools/skills.md) | 1-260 |
+| Skill Configuration Reference | [`docs/tools/skills-config.md`](https://github.com/moltbot/moltbot/blob/main/docs/tools/skills-config.md) | 1-76 |
+| ClawdHub Documentation | [`docs/tools/clawdhub.md`](https://github.com/moltbot/moltbot/blob/main/docs/tools/clawdhub.md) | 1-202 |
+| Creating Skills Guide | [`docs/tools/creating-skills.md`](https://github.com/moltbot/moltbot/blob/main/docs/tools/creating-skills.md) | 1-42 |
+| CLI Commands | [`docs/cli/skills.md`](https://github.com/moltbot/moltbot/blob/main/docs/cli/skills.md) | 1-26 |
 
 **Key Types**:
 

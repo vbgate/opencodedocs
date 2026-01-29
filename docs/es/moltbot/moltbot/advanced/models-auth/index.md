@@ -633,12 +633,12 @@ clawdbot gateway restart
 
 | Función | Ruta de archivo | Número de línea |
 |--- | --- | ---|
-| Definición de tipos de credenciales de autenticación | [`src/agents/auth-profiles/types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/types.ts) | 1-74 |
-| Análisis y actualización de token OAuth | [`src/agents/auth-profiles/oauth.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/oauth.ts) | 1-220 |
-| Gestión de archivo de configuración de autenticación | [`src/agents/auth-profiles/profiles.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/profiles.ts) | 1-85 |
-| Tipos de configuración de modelos | [`src/config/types.models.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.models.ts) | 1-60 |
-| Generación de configuración de modelos | [`src/agents/models-config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/models-config.ts) | 1-139 |
-| Configuración de esquema Zod | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | 1-300+ |
+| Definición de tipos de credenciales de autenticación | [`src/agents/auth-profiles/types.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/auth-profiles/types.ts) | 1-74 |
+| Análisis y actualización de token OAuth | [`src/agents/auth-profiles/oauth.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/auth-profiles/oauth.ts) | 1-220 |
+| Gestión de archivo de configuración de autenticación | [`src/agents/auth-profiles/profiles.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/auth-profiles/profiles.ts) | 1-85 |
+| Tipos de configuración de modelos | [`src/config/types.models.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.models.ts) | 1-60 |
+| Generación de configuración de modelos | [`src/agents/models-config.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/models-config.ts) | 1-139 |
+| Configuración de esquema Zod | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts) | 1-300+ |
 
 **Tipos clave**:
 - `AuthProfileCredential`: Tipo unión de credenciales de autenticación (`ApiKeyCredential | TokenCredential | OAuthCredential`)

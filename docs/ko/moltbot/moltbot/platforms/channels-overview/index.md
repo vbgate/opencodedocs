@@ -9,7 +9,7 @@ tags:
   - "다중 채널"
   - "입문"
 prerequisite:
-  - "/ko/clawdbot/clawdbot/start/getting-started"
+  - "/ko/moltbot/moltbot/start/getting-started"
 order: 60
 ---
 
@@ -607,17 +607,17 @@ channels:
 
 | 기능            | 파일 경로                                                                                               | 행 번호    |
 |--- | --- | ---|
-| 채널 레지스트리       | [`src/channels/registry.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.ts) | 7-100   |
-| 채널 플러그인 디렉토리   | [`src/channels/plugins/`](https://github.com/clawdbot/clawdbot/tree/main/src/channels/plugins/) | 전체 디렉토리  |
-| 채널 메타데이터 유형   | [`src/channels/plugins/types.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/types.core.ts) | 74-93   |
-| DM 페어링 메커니즘     | [`src/channels/plugins/pairing.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/pairing.ts) | 전체 파일  |
-| 그룹 @mention | [`src/channels/plugins/group-mentions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/group-mentions.ts) | 전체 파일  |
-| 허용 목록 매칭     | [`src/channels/plugins/allowlist-match.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/allowlist-match.ts) | 전체 파일  |
-| 채널 디렉토리 구성   | [`src/channels/plugins/directory-config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/directory-config.ts) | 전체 파일  |
-| WhatsApp 플러그인 | [`src/channels/plugins/onboarding/whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/whatsapp.ts) | 전체 파일  |
-| Telegram 플러그인 | [`src/channels/plugins/onboarding/telegram.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/telegram.ts) | 전체 파일  |
-| Slack 플러그인     | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/slack.ts) | 전체 파일  |
-| Discord 플러그인   | [`src/channels/plugins/onboarding/discord.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/discord.ts) | 전체 파일  |
+| 채널 레지스트리       | [`src/channels/registry.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/registry.ts) | 7-100   |
+| 채널 플러그인 디렉토리   | [`src/channels/plugins/`](https://github.com/moltbot/moltbot/tree/main/src/channels/plugins/) | 전체 디렉토리  |
+| 채널 메타데이터 유형   | [`src/channels/plugins/types.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/types.core.ts) | 74-93   |
+| DM 페어링 메커니즘     | [`src/channels/plugins/pairing.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/pairing.ts) | 전체 파일  |
+| 그룹 @mention | [`src/channels/plugins/group-mentions.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/group-mentions.ts) | 전체 파일  |
+| 허용 목록 매칭     | [`src/channels/plugins/allowlist-match.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/allowlist-match.ts) | 전체 파일  |
+| 채널 디렉토리 구성   | [`src/channels/plugins/directory-config.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/directory-config.ts) | 전체 파일  |
+| WhatsApp 플러그인 | [`src/channels/plugins/onboarding/whatsapp.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/whatsapp.ts) | 전체 파일  |
+| Telegram 플러그인 | [`src/channels/plugins/onboarding/telegram.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/telegram.ts) | 전체 파일  |
+| Slack 플러그인     | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/slack.ts) | 전체 파일  |
+| Discord 플러그인   | [`src/channels/plugins/onboarding/discord.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/discord.ts) | 전체 파일  |
 
 **핵심 상수**:
 - `CHAT_CHANNEL_ORDER`：핵심 채널 순서 배열(`src/channels/registry.ts:7-15`에서 가져옴)

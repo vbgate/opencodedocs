@@ -565,12 +565,12 @@ In this lesson, you learned:
 
 | Feature | File Path | Line |
 |--- | --- | ---|
-| Discord Bot Configuration Schema | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts#L320-L427) | 320-427 |
-| Discord Onboarding Wizard | [`src/channels/plugins/onboarding/discord.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/discord.ts) | 1-485 |
-| Discord Tool Operations | [`src/agents/tools/discord-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/discord-actions.ts) | 1-72 |
-| Discord Message Operations | [`src/agents/tools/discord-actions-messaging.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/discord-actions-messaging.ts) | - |
-| Discord Server Operations | [`src/agents/tools/discord-actions-guild.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/discord-actions-guild.ts) | - |
-| Discord Official Documentation | [`docs/channels/discord.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/discord.md) | 1-400 |
+| Discord Bot Configuration Schema | [`src/config/zod-schema.providers-core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.providers-core.ts#L320-L427) | 320-427 |
+| Discord Onboarding Wizard | [`src/channels/plugins/onboarding/discord.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/discord.ts) | 1-485 |
+| Discord Tool Operations | [`src/agents/tools/discord-actions.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/discord-actions.ts) | 1-72 |
+| Discord Message Operations | [`src/agents/tools/discord-actions-messaging.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/discord-actions-messaging.ts) | - |
+| Discord Server Operations | [`src/agents/tools/discord-actions-guild.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/discord-actions-guild.ts) | - |
+| Discord Official Documentation | [`docs/channels/discord.md`](https://github.com/moltbot/moltbot/blob/main/docs/channels/discord.md) | 1-400 |
 
 **Key Schema Fields**:
 - `DiscordAccountSchema`: Discord account configuration (token, guilds, dm, actions, etc.)

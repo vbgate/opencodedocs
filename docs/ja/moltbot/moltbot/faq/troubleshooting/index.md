@@ -736,7 +736,7 @@ tccutil reset All com.clawdbot.mac.debug
 
 **解決策2：新しいBundle IDを強制**
 
-リセットが無効な場合、[`scripts/package-mac-app.sh`](https://github.com/clawdbot/clawdbot/blob/main/scripts/package-mac-app.sh) の `BUNDLE_ID` を変更（`.test` サフィックスを追加など）し、再構築。これによりmacOSが新しいアプリとして扱うよう強制。
+リセットが無効な場合、[`scripts/package-mac-app.sh`](https://github.com/moltbot/moltbot/blob/main/scripts/package-mac-app.sh) の `BUNDLE_ID` を変更（`.test` サフィックスを追加など）し、再構築。これによりmacOSが新しいアプリとして扱うよう強制。
 
 ---
 
@@ -790,7 +790,7 @@ npm install -g clawdbot@<version>
 以上の方法で問題が解決できない場合：
 
 1. **まずログを確認**：`/tmp/clawdbot/`（デフォルト：`clawdbot-YYYY-MM-DD.log`、または設定した `logging.file`）
-2. **既存のissuesを検索**：[GitHub Issues](https://github.com/clawdbot/clawdbot/issues)
+2. **既存のissuesを検索**：[GitHub Issues](https://github.com/moltbot/moltbot/issues)
 3. **新しいissueを開く**際に含める：
    - Clawdbotバージョン（`clawdbot --version`）
    - 関連ログスニペット
@@ -831,12 +831,12 @@ npm install -g clawdbot@<version>
 
 | 機能 | ファイルパス | 行番号 |
 |--- | --- | ---|
-| トラブルシューティングコマンド | [`src/commands/doctor.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/doctor.ts) | 全文 |
-| Gatewayヘルスチェック | [`src/gateway/server-channels.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-channels.ts) | 93+ |
-| ログシステム | [`src/logging/index.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/logging/index.ts) | 全文 |
-| 認証処理 | [`src/agents/auth-profiles.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles.ts) | 全文 |
-| 設定検証 | [`src/config/config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/config.ts) | 全文 |
-| チャンネル状態プローブ | [`src/cli/commands/channels-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/commands/channels-cli.ts) | 全文 |
+| トラブルシューティングコマンド | [`src/commands/doctor.ts`](https://github.com/moltbot/moltbot/blob/main/src/commands/doctor.ts) | 全文 |
+| Gatewayヘルスチェック | [`src/gateway/server-channels.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-channels.ts) | 93+ |
+| ログシステム | [`src/logging/index.ts`](https://github.com/moltbot/moltbot/blob/main/src/logging/index.ts) | 全文 |
+| 認証処理 | [`src/agents/auth-profiles.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/auth-profiles.ts) | 全文 |
+| 設定検証 | [`src/config/config.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/config.ts) | 全文 |
+| チャンネル状態プローブ | [`src/cli/commands/channels-cli.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/commands/channels-cli.ts) | 全文 |
 
 **重要な定数**：
 - デフォルトGatewayポート：`18789` - Gateway WebSocketサービスポート

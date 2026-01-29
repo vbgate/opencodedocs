@@ -804,16 +804,16 @@ By properly configuring these features, you can build a fully automated AI assis
 
 | Function | File Path | Line Numbers |
 |--- | --- | ---|
-| Cron configuration type definitions | [`src/config/types.cron.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.cron.ts#L1-L6) | 1-6 |
-| Cron core type definitions | [`src/cron/types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/types.ts#L1-L95) | 1-95 |
-| Cron Service | [`src/cron/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/service.ts#L1-L49) | 1-49 |
-| Cron operation implementation | [`src/cron/service/ops.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/service/ops.ts#L1-L141) | 1-141 |
-| Cron tool implementation | [`src/agents/tools/cron-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/cron-tool.ts#L1-L291) | 1-291 |
-| Gateway Cron methods | [`src/gateway/server-methods/cron.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/cron.ts#L1-L205) | 1-205 |
-| Hooks configuration type definitions | [`src/config/types.hooks.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.hooks.ts#L1-L125) | 1-125 |
-| Hooks Gmail tool | [`src/hooks/gmail.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/hooks/gmail.ts#L1-L267) | 1-267 |
-| Hooks internal events | [`src/hooks/hooks.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/hooks/hooks.ts#L1-L15) | 1-15 |
-| Hooks CLI commands | [`src/cli/hooks-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/hooks-cli.ts#L1-L839) | 1-839 |
+| Cron configuration type definitions | [`src/config/types.cron.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.cron.ts#L1-L6) | 1-6 |
+| Cron core type definitions | [`src/cron/types.ts`](https://github.com/moltbot/moltbot/blob/main/src/cron/types.ts#L1-L95) | 1-95 |
+| Cron Service | [`src/cron/service.ts`](https://github.com/moltbot/moltbot/blob/main/src/cron/service.ts#L1-L49) | 1-49 |
+| Cron operation implementation | [`src/cron/service/ops.ts`](https://github.com/moltbot/moltbot/blob/main/src/cron/service/ops.ts#L1-L141) | 1-141 |
+| Cron tool implementation | [`src/agents/tools/cron-tool.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/cron-tool.ts#L1-L291) | 1-291 |
+| Gateway Cron methods | [`src/gateway/server-methods/cron.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-methods/cron.ts#L1-L205) | 1-205 |
+| Hooks configuration type definitions | [`src/config/types.hooks.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.hooks.ts#L1-L125) | 1-125 |
+| Hooks Gmail tool | [`src/hooks/gmail.ts`](https://github.com/moltbot/moltbot/blob/main/src/hooks/gmail.ts#L1-L267) | 1-267 |
+| Hooks internal events | [`src/hooks/hooks.ts`](https://github.com/moltbot/moltbot/blob/main/src/hooks/hooks.ts#L1-L15) | 1-15 |
+| Hooks CLI commands | [`src/cli/hooks-cli.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/hooks-cli.ts#L1-L839) | 1-839 |
 
 **Key Constants**:
 - `DEFAULT_GMAIL_LABEL = "INBOX"`: Gmail default label

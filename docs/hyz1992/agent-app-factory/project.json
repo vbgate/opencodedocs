@@ -1,0 +1,166 @@
+{
+  "project": {
+    "name": "agent-app-factory",
+    "tagline": "One Idea, 7 Steps to App",
+    "description": "Stop wasting time on repetitive coding. AI App Factory takes you from idea to running MVP with just 7 checkpoints. Automatically generates frontend and backend code, tests, documentation, and CI/CD configuration—production-grade quality.",
+    "github_url": "https://github.com/hyz1992/agent-app-factory"
+  },
+  "hero": {
+    "primary_action": {
+      "text": "Quick Start",
+      "link": "/hyz1992/agent-app-factory/start/getting-started/"
+    }
+  },
+  "features": {
+    "title": "Why Choose AI App Factory?",
+    "subtitle": "Turning ideas into runnable applications has never been easier",
+    "list": [
+      {
+        "title": "🚀 7-Step Pipeline",
+        "desc": "From idea to app, fully automated with zero wait time. Bootstrap → PRD → UI → Tech → Code → Validation → Preview"
+      },
+      {
+        "title": "✅ Quality Checkpoints",
+        "desc": "Pause to confirm after each phase, ensuring output meets expectations and preventing errors from accumulating beyond recovery"
+      },
+      {
+        "title": "🏭 Production-Grade Code",
+        "desc": "Automatically generates frontend and backend code, tests, documentation, and CI/CD configuration. Ready to use, ready to deploy"
+      },
+      {
+        "title": "⚡ Rapid Validation",
+        "desc": "Define clear scope boundaries to avoid over-engineering. Deliver verifiable prototypes quickly, validate the market, then iterate"
+      },
+      {
+        "title": "🔒 Data Privacy",
+        "desc": "Run locally with zero data uploads. Your ideas and code never leave your machine"
+      }
+    ]
+  },
+  "docs": {
+    "title": "Course Outline",
+    "subtitle": "4 chapters, 20 lessons",
+    "sections": [
+      {
+        "title": "Getting Started",
+        "items": [
+          {
+            "title": "Quick Start: From Idea to App",
+            "desc": "Learn the core value and prerequisites of AI App Factory, and complete your first project initialization",
+            "link": "/hyz1992/agent-app-factory/start/getting-started/"
+          },
+          {
+            "title": "Installation & Configuration",
+            "desc": "Install the CLI tool globally and configure AI assistants (Claude Code/OpenCode)",
+            "link": "/hyz1992/agent-app-factory/start/installation/"
+          },
+          {
+            "title": "Initialize Factory Project",
+            "desc": "Use the factory init command to initialize the directory and understand the generated project structure",
+            "link": "/hyz1992/agent-app-factory/start/init-project/"
+          },
+          {
+            "title": "7-Stage Pipeline Overview",
+            "desc": "Understand the complete pipeline flow from Bootstrap to Preview",
+            "link": "/hyz1992/agent-app-factory/start/pipeline-overview/"
+          }
+        ]
+      },
+      {
+        "title": "Platform Features",
+        "items": [
+          {
+            "title": "Claude Code Integration Guide",
+            "desc": "Learn how to run the pipeline with Claude Code, including permission configuration and best practices",
+            "link": "/hyz1992/agent-app-factory/platforms/claude-code/"
+          },
+          {
+            "title": "OpenCode and Other AI Assistants",
+            "desc": "Learn how to run the pipeline with AI assistants like OpenCode and Cursor",
+            "link": "/hyz1992/agent-app-factory/platforms/other-ai-assistants/"
+          },
+          {
+            "title": "Required Plugin Installation",
+            "desc": "Install superpowers and ui-ux-pro-max plugins to ensure the pipeline runs correctly",
+            "link": "/hyz1992/agent-app-factory/platforms/plugins/"
+          }
+        ]
+      },
+      {
+        "title": "Advanced Features",
+        "items": [
+          {
+            "title": "Stage 1: Bootstrap - Structure Your Idea",
+            "desc": "Learn how to use the Bootstrap Agent to transform your idea into structured documentation",
+            "link": "/hyz1992/agent-app-factory/advanced/stage-bootstrap/"
+          },
+          {
+            "title": "Stage 2: PRD - Generate Product Requirements",
+            "desc": "Generate MVP-level PRD with user stories, feature list, and non-goals",
+            "link": "/hyz1992/agent-app-factory/advanced/stage-prd/"
+          },
+          {
+            "title": "Stage 3: UI - Design Interface & Prototype",
+            "desc": "Design UI structure and previewable prototypes using the ui-ux-pro-max skill",
+            "link": "/hyz1992/agent-app-factory/advanced/stage-ui/"
+          },
+          {
+            "title": "Stage 4: Tech - Design Technical Architecture",
+            "desc": "Design minimum viable technical architecture and Prisma data model",
+            "link": "/hyz1992/agent-app-factory/advanced/stage-tech/"
+          },
+          {
+            "title": "Stage 5: Code - Generate Runnable Code",
+            "desc": "Generate frontend and backend code, tests, and configuration based on UI Schema and Tech design",
+            "link": "/hyz1992/agent-app-factory/advanced/stage-code/"
+          },
+          {
+            "title": "Stage 6: Validation - Verify Code Quality",
+            "desc": "Verify dependency installation, type checking, Prisma schema, and code quality",
+            "link": "/hyz1992/agent-app-factory/advanced/stage-validation/"
+          },
+          {
+            "title": "Stage 7: Preview - Generate Deployment Guide",
+            "desc": "Generate complete runtime documentation and deployment configuration",
+            "link": "/hyz1992/agent-app-factory/advanced/stage-preview/"
+          },
+          {
+            "title": "Sisyphus Orchestrator Explained",
+            "desc": "Understand how the orchestrator coordinates the pipeline, manages state, and executes permission checks",
+            "link": "/hyz1992/agent-app-factory/advanced/orchestrator/"
+          },
+          {
+            "title": "Context Optimization: Per-Session Execution",
+            "desc": "Learn how to use the factory continue command to save tokens and create new sessions for each stage",
+            "link": "/hyz1992/agent-app-factory/advanced/context-optimization/"
+          },
+          {
+            "title": "Permissions & Security Mechanisms",
+            "desc": "Understand the capability boundary matrix, escalation handling, and security check mechanisms",
+            "link": "/hyz1992/agent-app-factory/advanced/security-permissions/"
+          },
+          {
+            "title": "Failure Handling & Rollback",
+            "desc": "Learn failure detection, retry mechanisms, rollback strategies, and human intervention processes",
+            "link": "/hyz1992/agent-app-factory/advanced/failure-handling/"
+          }
+        ]
+      },
+      {
+        "title": "FAQ",
+        "items": [
+          {
+            "title": "Common Issues & Troubleshooting",
+            "desc": "Resolve common issues encountered during initialization, execution, and deployment",
+            "link": "/hyz1992/agent-app-factory/faq/troubleshooting/"
+          },
+          {
+            "title": "Best Practices",
+            "desc": "Learn techniques for providing clear product descriptions, leveraging checkpoints, controlling scope, and iterating incrementally",
+            "link": "/hyz1992/agent-app-factory/faq/best-practices/"
+          }
+        ]
+      }
+    ]
+  }
+}

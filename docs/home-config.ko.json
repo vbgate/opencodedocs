@@ -131,7 +131,7 @@
                 "repo": "https://github.com/NoeFabris/opencode-antigravity-auth",
                 "meta": {
                     "lessons": "33 강의",
-                    "stars": "6.3k",
+                    "stars": "6.8k",
                     "difficulty": "입문"
                 }
             },
@@ -142,7 +142,7 @@
                 "repo": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning",
                 "meta": {
                     "lessons": "22 강의",
-                    "stars": "560",
+                    "stars": "625",
                     "difficulty": "심화"
                 }
             },
@@ -153,7 +153,7 @@
                 "repo": "https://github.com/backnotprop/plannotator",
                 "meta": {
                     "lessons": "27 강의",
-                    "stars": "1.4k",
+                    "stars": "1.5k",
                     "difficulty": "중급"
                 }
             },
@@ -164,7 +164,7 @@
                 "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills",
                 "meta": {
                     "lessons": "24 강의",
-                    "stars": "26",
+                    "stars": "28",
                     "difficulty": "중급"
                 }
             },
@@ -175,7 +175,7 @@
                 "repo": "https://github.com/lbjlaq/Antigravity-Manager",
                 "meta": {
                     "lessons": "39 강의",
-                    "stars": "18k",
+                    "stars": "19.3k",
                     "difficulty": "고급"
                 }
             },
@@ -186,7 +186,7 @@
                 "repo": "https://github.com/numman-ali/openskills",
                 "meta": {
                     "lessons": "35 강의",
-                    "stars": "7.1k",
+                    "stars": "7.4k",
                     "difficulty": "중급"
                 }
             },
@@ -197,7 +197,7 @@
                 "repo": "https://github.com/supermemoryai/opencode-supermemory",
                 "meta": {
                     "lessons": "13 강의",
-                    "stars": "522",
+                    "stars": "545",
                     "difficulty": "고급"
                 }
             },
@@ -208,7 +208,7 @@
                 "repo": "https://github.com/vbgate/opencode-mystatus",
                 "meta": {
                     "lessons": "23 강의",
-                    "stars": "161",
+                    "stars": "170",
                     "difficulty": "입문"
                 }
             },
@@ -219,7 +219,7 @@
                 "repo": "https://github.com/franlol/opencode-md-table-formatter",
                 "meta": {
                     "lessons": "14 강의",
-                    "stars": "146",
+                    "stars": "156",
                     "difficulty": "입문"
                 }
             },
@@ -230,7 +230,7 @@
                 "repo": "https://github.com/code-yeongyu/oh-my-opencode",
                 "meta": {
                     "lessons": "26 강의",
-                    "stars": "24.1k",
+                    "stars": "25.8k",
                     "difficulty": "고급"
                 }
             },
@@ -241,7 +241,7 @@
                 "repo": "https://github.com/kdcokenny/opencode-notify",
                 "meta": {
                     "lessons": "21 강의",
-                    "stars": "--",
+                    "stars": "31",
                     "difficulty": "중급"
                 }
             },
@@ -252,18 +252,18 @@
                 "repo": "https://github.com/vercel-labs/agent-skills",
                 "meta": {
                     "lessons": "14 강의",
-                    "stars": "16.6k",
+                    "stars": "17.8k",
                     "difficulty": "중급"
                 }
             },
             {
                 "title": "Clawdbot",
                 "desc": "당신의 개인 AI 어시스턴트, 어디서든 사용 가능",
-                "link": "/ko/clawdbot/clawdbot/",
-                "repo": "https://github.com/clawdbot/clawdbot",
+                "link": "/ko/moltbot/moltbot/",
+                "repo": "https://github.com/moltbot/moltbot",
                 "meta": {
                     "lessons": "43 강의",
-                    "stars": "--",
+                    "stars": "101.4k",
                     "difficulty": "심화"
                 }
             }

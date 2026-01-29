@@ -569,11 +569,11 @@ Füge in `~/.clawdbot/clawdbot.json` Folgendes hinzu:
 
 | Funktion | Dateipfad | Zeilennummer |
 |--- | --- | ---|
-| Google Chat Konfigurationstyp-Definitionen | [`src/config/types.googlechat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.googlechat.ts) | 1-109 |
-| Google Chat Zod Schema | [`src/config/zod-schema.providers-core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-core.ts) | 273-341 |
-| Kanal-Registrierung | [`src/channels/registry.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.ts) | 61-67 |
+| Google Chat Konfigurationstyp-Definitionen | [`src/config/types.googlechat.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.googlechat.ts) | 1-109 |
+| Google Chat Zod Schema | [`src/config/zod-schema.providers-core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.providers-core.ts) | 273-341 |
+| Kanal-Registrierung | [`src/channels/registry.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/registry.ts) | 61-67 |
 |--- | --- | ---|
-| Google Chat Dokumentation | [`docs/channels/googlechat.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/googlechat.md) | 1-221 |
+| Google Chat Dokumentation | [`docs/channels/googlechat.md`](https://github.com/moltbot/moltbot/blob/main/docs/channels/googlechat.md) | 1-221 |
 
 **Wichtige Typen**:
 - `GoogleChatConfig`: Vollständige Google Chat-Konfigurationsschnittstelle

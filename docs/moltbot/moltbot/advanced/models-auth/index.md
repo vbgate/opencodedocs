@@ -635,12 +635,12 @@ clawdbot gateway restart
 
 | Feature | File Path | Line Numbers |
 |--- | --- | ---|
-| Authentication credential type definitions | [`src/agents/auth-profiles/types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/types.ts) | 1-74 |
-| OAuth token parsing and refresh | [`src/agents/auth-profiles/oauth.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/oauth.ts) | 1-220 |
-| Authentication profile management | [`src/agents/auth-profiles/profiles.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/profiles.ts) | 1-85 |
-| Model configuration types | [`src/config/types.models.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.models.ts) | 1-60 |
-| Model configuration generation | [`src/agents/models-config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/models-config.ts) | 1-139 |
-| Zod Schema configuration | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | 1-300+ |
+| Authentication credential type definitions | [`src/agents/auth-profiles/types.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/auth-profiles/types.ts) | 1-74 |
+| OAuth token parsing and refresh | [`src/agents/auth-profiles/oauth.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/auth-profiles/oauth.ts) | 1-220 |
+| Authentication profile management | [`src/agents/auth-profiles/profiles.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/auth-profiles/profiles.ts) | 1-85 |
+| Model configuration types | [`src/config/types.models.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.models.ts) | 1-60 |
+| Model configuration generation | [`src/agents/models-config.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/models-config.ts) | 1-139 |
+| Zod Schema configuration | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts) | 1-300+ |
 
 **Key Types**:
 - `AuthProfileCredential`: Authentication credential union type (`ApiKeyCredential | TokenCredential | OAuthCredential`)

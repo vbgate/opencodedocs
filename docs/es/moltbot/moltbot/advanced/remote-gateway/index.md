@@ -53,7 +53,7 @@ Si solo tienes un dispositivo y lo llevas contigo con frecuencia, **no necesitas
 
 Antes de empezar, confirma lo siguiente:
 
-- [ ] Has completado el curso **[Iniciar Gateway](/es/clawdbot/clawdbot/start/gateway-startup/)**
+- [ ] Has completado el curso **[Iniciar Gateway](/es/moltbot/moltbot/start/gateway-startup/)**
 - [ ] Conoces los comandos básicos de SSH (opcional, si usas tunnels SSH)
 - [ ] (Si usas Tailscale) Tienes instalado el CLI de Tailscale y has iniciado sesión
 - [ ] Tienes preparado un servidor Linux remoto o un VPS (se recomienda Ubuntu/Debian)
@@ -703,13 +703,13 @@ ssh -N -L 18790:127.0.0.1:18789 clawdbot-remote
 
 | Función | Ruta del archivo | Líneas |
 |--- | --- | ---|
-| Esquema de configuración remota de Gateway | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 200-220 |
-| Esquema de configuración de Tailscale de Gateway | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 150-180 |
-| Integración de Tailscale | [`src/infra/tailscale.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/tailscale.ts) | 1-100 |
-| Documentación de Gateway remoto | [`docs/gateway/remote.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/remote.md) | 1-123 |
-| Documentación de Tailscale | [`docs/gateway/tailscale.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/tailscale.md) | 1-147 |
-| Documentación de acceso remoto de macOS App | [`docs/gateway/remote-gateway-readme.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/remote-gateway-readme.md) | 1-154 |
-| Documentación de seguridad | [`docs/gateway/security.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/security.md) | 1-100 |
+| Esquema de configuración remota de Gateway | [`src/config/types.gateway.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.gateway.ts) | 200-220 |
+| Esquema de configuración de Tailscale de Gateway | [`src/config/types.gateway.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.gateway.ts) | 150-180 |
+| Integración de Tailscale | [`src/infra/tailscale.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/tailscale.ts) | 1-100 |
+| Documentación de Gateway remoto | [`docs/gateway/remote.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/remote.md) | 1-123 |
+| Documentación de Tailscale | [`docs/gateway/tailscale.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/tailscale.md) | 1-147 |
+| Documentación de acceso remoto de macOS App | [`docs/gateway/remote-gateway-readme.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/remote-gateway-readme.md) | 1-154 |
+| Documentación de seguridad | [`docs/gateway/security.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/security.md) | 1-100 |
 
 **Campos de configuración clave**:
 

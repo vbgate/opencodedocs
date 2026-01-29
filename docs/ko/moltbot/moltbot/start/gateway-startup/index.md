@@ -516,14 +516,14 @@ clawdbot gateway --port 19001  # 다른 포트 사용
 
 | 기능                        | 파일 경로                                                                                   | 라인 번호      |
 |--- | --- | ---|
-| Gateway 시작 입구            | [`src/cli/gateway-cli/run.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/gateway-cli/run.ts) | 55-310   |
-| 데몬 서비스 추상화         | [`src/daemon/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/service.ts) | 66-155    |
-| 사이드바 서비스 시작           | [`src/gateway/server-startup.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup.ts) | 26-160    |
-| Gateway 서버 구현         | [`src/gateway/server.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server.ts) | 1-500     |
-| 프로그램 매개변수 파싱             | [`src/daemon/program-args.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/program-args.ts) | 1-250     |
-| 시작 로그 출력              | [`src/gateway/server-startup-log.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup-log.ts) | 7-40      |
-| 개발 모드 구성             | [`src/cli/gateway-cli/dev.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/gateway-cli/dev.ts) | 1-100     |
-| 포트 해제 로직             | [`src/cli/ports.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/ports.ts) | 1-80      |
+| Gateway 시작 입구            | [`src/cli/gateway-cli/run.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/gateway-cli/run.ts) | 55-310   |
+| 데몬 서비스 추상화         | [`src/daemon/service.ts`](https://github.com/moltbot/moltbot/blob/main/src/daemon/service.ts) | 66-155    |
+| 사이드바 서비스 시작           | [`src/gateway/server-startup.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-startup.ts) | 26-160    |
+| Gateway 서버 구현         | [`src/gateway/server.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server.ts) | 1-500     |
+| 프로그램 매개변수 파싱             | [`src/daemon/program-args.ts`](https://github.com/moltbot/moltbot/blob/main/src/daemon/program-args.ts) | 1-250     |
+| 시작 로그 출력              | [`src/gateway/server-startup-log.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-startup-log.ts) | 7-40      |
+| 개발 모드 구성             | [`src/cli/gateway-cli/dev.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/gateway-cli/dev.ts) | 1-100     |
+| 포트 해제 로직             | [`src/cli/ports.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/ports.ts) | 1-80      |
 
 **핵심 상수**:
 - 기본 포트: `18789`(출처: `src/gateway/server.ts`)

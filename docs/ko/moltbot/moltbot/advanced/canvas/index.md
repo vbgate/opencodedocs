@@ -401,10 +401,10 @@ clawdbot nodes canvas hide --node abc123-def456-ghi789
 
 | 기능 | 파일 경로 | 줄 번호 |
 |--- | --- | ---|
-| Canvas Host 서버 | [`src/canvas-host/server.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/server.ts) | 372-441 |
-| A2UI 프로토콜 처리 | [`src/canvas-host/a2ui.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/a2ui.ts) | 150-203 |
-| Canvas 도구 정의 | [`src/agents/tools/canvas-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/canvas-tool.ts) | 52-179 |
-| Canvas 경로 상수 | [`src/canvas-host/a2ui.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/a2ui.ts) | 8-10 |
+| Canvas Host 서버 | [`src/canvas-host/server.ts`](https://github.com/moltbot/moltbot/blob/main/src/canvas-host/server.ts) | 372-441 |
+| A2UI 프로토콜 처리 | [`src/canvas-host/a2ui.ts`](https://github.com/moltbot/moltbot/blob/main/src/canvas-host/a2ui.ts) | 150-203 |
+| Canvas 도구 정의 | [`src/agents/tools/canvas-tool.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/canvas-tool.ts) | 52-179 |
+| Canvas 경로 상수 | [`src/canvas-host/a2ui.ts`](https://github.com/moltbot/moltbot/blob/main/src/canvas-host/a2ui.ts) | 8-10 |
 
 **주요 상수**:
 - `A2UI_PATH = "/__clawdbot__/a2ui"`: A2UI 호스트 경로

@@ -363,19 +363,32 @@ Permission denied: Skill(superpowers:brainstorming)
 
 **解决方案**：
 
-1. 在 Claude Code 中安装 superpowers 插件：
+1. 添加插件市场：
 
-```
-@superpowers install superpowers
-```
-
-2. 安装 ui-ux-pro-max 插件：
-
-```
-@ui-ux-pro-max install
+```bash
+# 添加 superpowers 插件市场
+claude plugin marketplace add obra/superpowers-marketplace
 ```
 
-3. 重新运行流水线。
+2. 安装 superpowers 插件：
+
+```bash
+claude plugin install superpowers@superpowers-marketplace
+```
+
+3. 添加 ui-ux-pro-max 插件市场：
+
+```bash
+claude plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill
+```
+
+4. 安装 ui-ux-pro-max 插件：
+
+```bash
+claude plugin install ui-ux-pro-max@ui-ux-pro-max-skill
+```
+
+5. 重新运行流水线。
 
 ::: info Factory 会自动尝试安装插件
 `factory init` 命令会自动尝试安装这些插件。如果失败，请手动安装。

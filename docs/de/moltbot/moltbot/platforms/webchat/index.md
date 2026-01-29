@@ -613,15 +613,15 @@ In dieser Lektion haben Sie gelernt:
 
 | Funktion                  | Dateipfad                                                                                    | Zeilennummer    |
 |--- | --- | ---|
-| WebChat-Prinzip-Erklärung     | [`docs/web/webchat.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/web/webchat.md) | Gesamte Datei   |
-| Gateway WebSocket API | [`src/gateway/protocol/`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/) | Gesamtes Verzeichnis   |
+| WebChat-Prinzip-Erklärung     | [`docs/web/webchat.md`](https://github.com/moltbot/moltbot/blob/main/docs/web/webchat.md) | Gesamte Datei   |
+| Gateway WebSocket API | [`src/gateway/protocol/`](https://github.com/moltbot/moltbot/blob/main/src/gateway/protocol/) | Gesamtes Verzeichnis   |
 |--- | --- | ---|
 |--- | --- | ---|
 |--- | --- | ---|
-| Web-UI-Eingang         | [`ui/index.html`](https://github.com/clawdbot/clawdbot/blob/main/ui/index.html) | 1-15     |
+| Web-UI-Eingang         | [`ui/index.html`](https://github.com/moltbot/moltbot/blob/main/ui/index.html) | 1-15     |
 |--- | --- | ---|
-| Tailscale-Integration       | [`src/gateway/server-startup-log.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup-log.ts) | Gesamte Datei   |
-| macOS WebChat-Integration  | [`apps/macos/`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/) | Gesamtes Verzeichnis   |
+| Tailscale-Integration       | [`src/gateway/server-startup-log.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-startup-log.ts) | Gesamte Datei   |
+| macOS WebChat-Integration  | [`apps/macos/`](https://github.com/moltbot/moltbot/blob/main/apps/macos/) | Gesamtes Verzeichnis   |
 
 **Wichtige Konstanten**:
 - `INTERNAL_MESSAGE_CHANNEL = "webchat"`: Interne WebChat-Nachrichtenkanal-Bezeichner (aus `src/utils/message-channel.ts:17`)

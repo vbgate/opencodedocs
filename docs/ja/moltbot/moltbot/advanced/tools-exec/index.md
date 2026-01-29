@@ -428,14 +428,14 @@ execツールは3層の保護仕組み（ツールポリシー、実行ホスト
 
 | 機能 | ファイルパス | 行番号 |
 |--- | --- | ---|
-| execツール定義 | [`src/agents/bash-tools.exec.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/bash-tools.exec.ts) | 1-500+ |
-| exec承認ロジック | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 1-1268 |
-| シェルコマンド分析 | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 500-1100 |
-| Allowlistマッチ | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 507-521 |
-| Safe bins検証 | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 836-873 |
-| 承認Socket通信 | [`src/infra/exec-approvals.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/exec-approvals.ts) | 1210-1267 |
-| プロセス実行 | [`src/process/exec.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/process/exec.ts) | 1-125 |
-| ツール設定Schema | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | - |
+| execツール定義 | [`src/agents/bash-tools.exec.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/bash-tools.exec.ts) | 1-500+ |
+| exec承認ロジック | [`src/infra/exec-approvals.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/exec-approvals.ts) | 1-1268 |
+| シェルコマンド分析 | [`src/infra/exec-approvals.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/exec-approvals.ts) | 500-1100 |
+| Allowlistマッチ | [`src/infra/exec-approvals.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/exec-approvals.ts) | 507-521 |
+| Safe bins検証 | [`src/infra/exec-approvals.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/exec-approvals.ts) | 836-873 |
+| 承認Socket通信 | [`src/infra/exec-approvals.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/exec-approvals.ts) | 1210-1267 |
+| プロセス実行 | [`src/process/exec.ts`](https://github.com/moltbot/moltbot/blob/main/src/process/exec.ts) | 1-125 |
+| ツール設定Schema | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts) | - |
 
 **重要なタイプ**：
 - `ExecHost`: `"sandbox" \| "gateway" \| "node"` - 実行ホストタイプ

@@ -100,7 +100,7 @@ npm install -g clawdbot@latest
 pnpm add -g clawdbot@latest
 ```
 
-**Related Docs**: [Quick Start](/clawdbot/clawdbot/start/getting-started/)
+**Related Docs**: [Quick Start](/moltbot/moltbot/start/getting-started/)
 
 ---
 
@@ -275,7 +275,7 @@ clawdbot models auth setup-token --provider anthropic
 clawdbot models status
 ```
 
-**Related Docs**: [AI Model and Authentication Configuration](/clawdbot/clawdbot/advanced/models-auth/)
+**Related Docs**: [AI Model and Authentication Configuration](/moltbot/moltbot/advanced/models-auth/)
 
 ---
 
@@ -384,7 +384,7 @@ clawdbot logs --follow
 tail -f "$(ls -t /tmp/clawdbot/clawdbot-*.log | head -1)" | grep "blocked\|skip\|unauthorized"
 ```
 
-**Related Docs**: [DM Pairing and Access Control](/clawdbot/clawdbot/start/pairing-approval/)
+**Related Docs**: [DM Pairing and Access Control](/moltbot/moltbot/start/pairing-approval/)
 
 ---
 
@@ -512,7 +512,7 @@ grep "media\|fetch\|download" \
    ```
 3. Choose supported model
 
-**Related Docs**: [AI Model and Authentication Configuration](/clawdbot/clawdbot/advanced/models-auth/)
+**Related Docs**: [AI Model and Authentication Configuration](/moltbot/moltbot/advanced/models-auth/)
 
 ---
 
@@ -549,14 +549,14 @@ clawdbot sandbox recreate --all
 
 **Solution**:
 
-1. Prefer HTTPS ([Tailscale Serve](/clawdbot/clawdbot/advanced/remote-gateway/))
+1. Prefer HTTPS ([Tailscale Serve](/moltbot/moltbot/advanced/remote-gateway/))
 2. Or open locally on Gateway host: `http://127.0.0.1:18789/`
 3. If must use HTTP, enable `gateway.controlUi.allowInsecureAuth: true` and use Gateway token (token only; no device identity/pairing):
    ```bash
    clawdbot config set gateway.controlUi.allowInsecureAuth true
    ```
 
-**Related Docs**: [Remote Gateway with Tailscale](/clawdbot/clawdbot/advanced/remote-gateway/)
+**Related Docs**: [Remote Gateway with Tailscale](/moltbot/moltbot/advanced/remote-gateway/)
 
 ---
 
@@ -736,7 +736,7 @@ tccutil reset All com.clawdbot.mac.debug
 
 **Solution 2: Force New Bundle ID**
 
-If reset doesn't work, change `BUNDLE_ID` in [`scripts/package-mac-app.sh`](https://github.com/clawdbot/clawdbot/blob/main/scripts/package-mac-app.sh) (e.g., add `.test` suffix) and rebuild. This forces macOS to treat it as a new app.
+If reset doesn't work, change `BUNDLE_ID` in [`scripts/package-mac-app.sh`](https://github.com/moltbot/moltbot/blob/main/scripts/package-mac-app.sh) (e.g., add `.test` suffix) and rebuild. This forces macOS to treat it as a new app.
 
 ---
 
@@ -790,7 +790,7 @@ npm install -g clawdbot@<version>
 If none of the above methods solve your problem:
 
 1. **First, check logs**: `/tmp/clawdbot/` (default: `clawdbot-YYYY-MM-DD.log`, or your configured `logging.file`)
-2. **Search existing issues**: [GitHub Issues](https://github.com/clawdbot/clawdbot/issues)
+2. **Search existing issues**: [GitHub Issues](https://github.com/moltbot/moltbot/issues)
 3. **When opening a new issue**, include:
    - Clawdbot version (`clawdbot --version`)
    - Relevant log snippets
@@ -813,7 +813,7 @@ Remember: Most problems have clear causes and solutions—systematic troubleshoo
 
 ## Next Lesson Preview
 
-> Next, we'll learn **[CLI Command Reference](/clawdbot/clawdbot/faq/cli-commands/)**.
+> Next, we'll learn **[CLI Command Reference](/moltbot/moltbot/faq/cli-commands/)**.
 >
 > You'll learn:
 > - Complete CLI command list and usage documentation
@@ -831,12 +831,12 @@ Remember: Most problems have clear causes and solutions—systematic troubleshoo
 
 | Feature | File Path | Line |
 |--- | --- | ---|
-| Troubleshooting commands | [`src/commands/doctor.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/commands/doctor.ts) | Full text |
-| Gateway health check | [`src/gateway/server-channels.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-channels.ts) | 93+ |
-| Logging system | [`src/logging/index.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/logging/index.ts) | Full text |
-| Authentication handling | [`src/agents/auth-profiles.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles.ts) | Full text |
-| Configuration validation | [`src/config/config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/config.ts) | Full text |
-| Channel status probing | [`src/cli/commands/channels-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/commands/channels-cli.ts) | Full text |
+| Troubleshooting commands | [`src/commands/doctor.ts`](https://github.com/moltbot/moltbot/blob/main/src/commands/doctor.ts) | Full text |
+| Gateway health check | [`src/gateway/server-channels.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-channels.ts) | 93+ |
+| Logging system | [`src/logging/index.ts`](https://github.com/moltbot/moltbot/blob/main/src/logging/index.ts) | Full text |
+| Authentication handling | [`src/agents/auth-profiles.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/auth-profiles.ts) | Full text |
+| Configuration validation | [`src/config/config.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/config.ts) | Full text |
+| Channel status probing | [`src/cli/commands/channels-cli.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/commands/channels-cli.ts) | Full text |
 
 **Key Constants**:
 - Default Gateway port: `18789` - Gateway WebSocket service port

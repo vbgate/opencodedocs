@@ -379,12 +379,12 @@ WhatsApp 渠道設定要點：
 
 | 功能 | 檔案路徑 | 行號 |
 |--- | --- | ---|
-| WhatsApp 設定類型定義 | [`src/config/types.whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.whatsapp.ts) | 1-160 |
-| WhatsApp 設定 Schema | [`src/config/zod-schema.providers-whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.providers-whatsapp.ts) | 13-100 |
-| WhatsApp 引導設定 | [`src/channels/plugins/onboarding/whatsapp.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/whatsapp.ts) | 1-341 |
-| WhatsApp 文件 | [`docs/channels/whatsapp.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/whatsapp.md) | 1-363 |
-| WhatsApp 登入工具 | [`src/channels/plugins/agent-tools/whatsapp-login.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/agent-tools/whatsapp-login.ts) | 1-72 |
-| WhatsApp Actions 工具 | [`src/agents/tools/whatsapp-actions.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/whatsapp-actions.ts) | 1-42 |
+| WhatsApp 設定類型定義 | [`src/config/types.whatsapp.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.whatsapp.ts) | 1-160 |
+| WhatsApp 設定 Schema | [`src/config/zod-schema.providers-whatsapp.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.providers-whatsapp.ts) | 13-100 |
+| WhatsApp 引導設定 | [`src/channels/plugins/onboarding/whatsapp.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/whatsapp.ts) | 1-341 |
+| WhatsApp 文件 | [`docs/channels/whatsapp.md`](https://github.com/moltbot/moltbot/blob/main/docs/channels/whatsapp.md) | 1-363 |
+| WhatsApp 登入工具 | [`src/channels/plugins/agent-tools/whatsapp-login.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/agent-tools/whatsapp-login.ts) | 1-72 |
+| WhatsApp Actions 工具 | [`src/agents/tools/whatsapp-actions.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/whatsapp-actions.ts) | 1-42 |
 
 **關鍵設定項**：
 - `dmPolicy`: DM 存取策略（`pairing`/`allowlist`/`open`/`disabled`）

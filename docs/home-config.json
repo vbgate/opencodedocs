@@ -131,7 +131,7 @@
                 "repo": "https://github.com/NoeFabris/opencode-antigravity-auth",
                 "meta": {
                     "lessons": "33 课时",
-                    "stars": "6.3k",
+                    "stars": "6.8k",
                     "difficulty": "入门"
                 }
             },
@@ -142,7 +142,7 @@
                 "repo": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning",
                 "meta": {
                     "lessons": "22 课时",
-                    "stars": "560",
+                    "stars": "625",
                     "difficulty": "进阶"
                 }
             },
@@ -153,7 +153,7 @@
                 "repo": "https://github.com/backnotprop/plannotator",
                 "meta": {
                     "lessons": "27 课时",
-                    "stars": "1.4k",
+                    "stars": "1.5k",
                     "difficulty": "中级"
                 }
             },
@@ -164,7 +164,7 @@
                 "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills",
                 "meta": {
                     "lessons": "24 课时",
-                    "stars": "26",
+                    "stars": "28",
                     "difficulty": "中级"
                 }
             },
@@ -175,7 +175,7 @@
                 "repo": "https://github.com/lbjlaq/Antigravity-Manager",
                 "meta": {
                     "lessons": "39 课时",
-                    "stars": "18k",
+                    "stars": "19.3k",
                     "difficulty": "高级"
                 }
             },
@@ -186,7 +186,7 @@
                 "repo": "https://github.com/numman-ali/openskills",
                 "meta": {
                     "lessons": "35 课时",
-                    "stars": "7.1k",
+                    "stars": "7.4k",
                     "difficulty": "中级"
                 }
             },
@@ -197,7 +197,7 @@
                 "repo": "https://github.com/supermemoryai/opencode-supermemory",
                 "meta": {
                     "lessons": "13 课时",
-                    "stars": "522",
+                    "stars": "545",
                     "difficulty": "高级"
                 }
             },
@@ -208,8 +208,19 @@
                 "repo": "https://github.com/vbgate/opencode-mystatus",
                 "meta": {
                     "lessons": "23 课时",
-                    "stars": "161",
+                    "stars": "170",
                     "difficulty": "入门"
+                }
+            },
+            {
+                "title": "Agent App Factory",
+                "desc": "AI 驱动的应用生成工厂，7 阶段流水线从想法到可运行应用",
+                "link": "/zh/hyz1992/agent-app-factory/",
+                "repo": "https://github.com/hyz1992/agent-app-factory",
+                "meta": {
+                    "lessons": "31 课时",
+                    "stars": "1",
+                    "difficulty": "进阶"
                 }
             },
             {
@@ -219,7 +230,7 @@
                 "repo": "https://github.com/franlol/opencode-md-table-formatter",
                 "meta": {
                     "lessons": "14 课时",
-                    "stars": "146",
+                    "stars": "156",
                     "difficulty": "入门"
                 }
             },
@@ -230,7 +241,7 @@
                 "repo": "https://github.com/code-yeongyu/oh-my-opencode",
                 "meta": {
                     "lessons": "26 课时",
-                    "stars": "24.1k",
+                    "stars": "25.8k",
                     "difficulty": "高级"
                 }
             },
@@ -241,7 +252,7 @@
                 "repo": "https://github.com/kdcokenny/opencode-notify",
                 "meta": {
                     "lessons": "21 课时",
-                    "stars": "--",
+                    "stars": "31",
                     "difficulty": "中级"
                 }
             },
@@ -252,18 +263,18 @@
                 "repo": "https://github.com/vercel-labs/agent-skills",
                 "meta": {
                     "lessons": "14 课时",
-                    "stars": "16.6k",
+                    "stars": "17.8k",
                     "difficulty": "中级"
                 }
             },
             {
                 "title": "Clawdbot",
                 "desc": "你的私有 AI 助手，随处可用",
-                "link": "/zh/clawdbot/clawdbot/",
-                "repo": "https://github.com/clawdbot/clawdbot",
+                "link": "/zh/moltbot/moltbot/",
+                "repo": "https://github.com/moltbot/moltbot",
                 "meta": {
                     "lessons": "43 课时",
-                    "stars": "--",
+                    "stars": "101.4k",
                     "difficulty": "进阶"
                 }
             }

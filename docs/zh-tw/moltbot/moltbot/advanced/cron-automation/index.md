@@ -804,16 +804,16 @@ Cron 和 Webhook 是 Clawdbot 的強大自動化工具：
 
 | 功能 | 檔案路徑 | 行號 |
 |--- | --- | ---|
-| Cron 設定型別定義 | [`src/config/types.cron.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.cron.ts#L1-L6) | 1-6 |
-| Cron 核心型別定義 | [`src/cron/types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/types.ts#L1-L95) | 1-95 |
-| Cron Service | [`src/cron/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/service.ts#L1-L49) | 1-49 |
-| Cron 操作實作 | [`src/cron/service/ops.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/service/ops.ts#L1-L141) | 1-141 |
-| Cron 工具實作 | [`src/agents/tools/cron-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/cron-tool.ts#L1-L291) | 1-291 |
-| Gateway Cron 方法 | [`src/gateway/server-methods/cron.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/cron.ts#L1-L205) | 1-205 |
-| Hooks 設定型別定義 | [`src/config/types.hooks.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.hooks.ts#L1-L125) | 1-125 |
-| Hooks Gmail 工具 | [`src/hooks/gmail.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/hooks/gmail.ts#L1-L267) | 1-267 |
-| Hooks 內部事件 | [`src/hooks/hooks.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/hooks/hooks.ts#L1-L15) | 1-15 |
-| Hooks CLI 命令 | [`src/cli/hooks-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/hooks-cli.ts#L1-L839) | 1-839 |
+| Cron 設定型別定義 | [`src/config/types.cron.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.cron.ts#L1-L6) | 1-6 |
+| Cron 核心型別定義 | [`src/cron/types.ts`](https://github.com/moltbot/moltbot/blob/main/src/cron/types.ts#L1-L95) | 1-95 |
+| Cron Service | [`src/cron/service.ts`](https://github.com/moltbot/moltbot/blob/main/src/cron/service.ts#L1-L49) | 1-49 |
+| Cron 操作實作 | [`src/cron/service/ops.ts`](https://github.com/moltbot/moltbot/blob/main/src/cron/service/ops.ts#L1-L141) | 1-141 |
+| Cron 工具實作 | [`src/agents/tools/cron-tool.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/cron-tool.ts#L1-L291) | 1-291 |
+| Gateway Cron 方法 | [`src/gateway/server-methods/cron.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-methods/cron.ts#L1-L205) | 1-205 |
+| Hooks 設定型別定義 | [`src/config/types.hooks.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.hooks.ts#L1-L125) | 1-125 |
+| Hooks Gmail 工具 | [`src/hooks/gmail.ts`](https://github.com/moltbot/moltbot/blob/main/src/hooks/gmail.ts#L1-L267) | 1-267 |
+| Hooks 內部事件 | [`src/hooks/hooks.ts`](https://github.com/moltbot/moltbot/blob/main/src/hooks/hooks.ts#L1-L15) | 1-15 |
+| Hooks CLI 命令 | [`src/cli/hooks-cli.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/hooks-cli.ts#L1-L839) | 1-839 |
 
 **關鍵常數**：
 - `DEFAULT_GMAIL_LABEL = "INBOX"`: Gmail 預設標籤

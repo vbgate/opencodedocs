@@ -42,7 +42,7 @@ Clawdbot поддерживает десятки провайдеров моде
 ## 🎒 Подготовка перед началом
 
 ::: warning Предварительная проверка
-В этом руководстве предполагается, что вы завершили [Быстрый запуск](/ru/clawdbot/clawdbot/start/getting-started/), установили и запустили Gateway.
+В этом руководстве предполагается, что вы завершили [Быстрый запуск](/ru/moltbot/moltbot/start/getting-started/), установили и запустили Gateway.
 :::
 
 - Убедитесь, что установлен Node ≥22
@@ -633,12 +633,12 @@ clawdbot gateway restart
 
 | Функция | Путь к файлу | Номер строки |
 |--- | --- | ---|
-| Определение типов учетных данных аутентификации | [`src/agents/auth-profiles/types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/types.ts) | 1-74 |
-| Разбор и обновление OAuth токена | [`src/agents/auth-profiles/oauth.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/oauth.ts) | 1-220 |
-| Управление файлом конфигурации аутентификации | [`src/agents/auth-profiles/profiles.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles/profiles.ts) | 1-85 |
-| Тип конфигурации моделей | [`src/config/types.models.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.models.ts) | 1-60 |
-| Генерация конфигурации моделей | [`src/agents/models-config.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/models-config.ts) | 1-139 |
-| Конфигурация Zod Schema | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | 1-300+ |
+| Определение типов учетных данных аутентификации | [`src/agents/auth-profiles/types.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/auth-profiles/types.ts) | 1-74 |
+| Разбор и обновление OAuth токена | [`src/agents/auth-profiles/oauth.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/auth-profiles/oauth.ts) | 1-220 |
+| Управление файлом конфигурации аутентификации | [`src/agents/auth-profiles/profiles.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/auth-profiles/profiles.ts) | 1-85 |
+| Тип конфигурации моделей | [`src/config/types.models.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.models.ts) | 1-60 |
+| Генерация конфигурации моделей | [`src/agents/models-config.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/models-config.ts) | 1-139 |
+| Конфигурация Zod Schema | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts) | 1-300+ |
 
 **Ключевые типы**:
 - `AuthProfileCredential`: объединенный тип учетных данных аутентификации (`ApiKeyCredential | TokenCredential | OAuthCredential`)

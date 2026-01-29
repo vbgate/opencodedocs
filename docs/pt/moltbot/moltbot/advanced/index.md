@@ -4,8 +4,8 @@ sidebarTitle: "Desbloqueie Superpoderes de IA"
 subtitle: "Funcionalidades Avançadas"
 description: "Aprenda a configuração avançada do Clawdbot, incluindo configuração de modelos de IA, colaboração de múltiplos agentes, automação de navegador, ferramentas de execução de comandos, ferramentas de busca na Web, interface visual Canvas, ativação de voz e TTS, sistema de memória, tarefas agendadas Cron, plataforma de habilidades, sandbox de segurança e Gateway remoto."
 prerequisite:
-  - "/pt/clawdbot/clawdbot/start/getting-started"
-  - "/pt/clawdbot/clawdbot/start/gateway-startup"
+  - "/pt/moltbot/moltbot/start/getting-started"
+  - "/pt/moltbot/moltbot/start/gateway-startup"
 order: 185
 ---
 

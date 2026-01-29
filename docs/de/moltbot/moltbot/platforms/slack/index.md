@@ -597,10 +597,10 @@ Erlauben Sie dem Agent, Slack-spezifische Operationen aufzurufen:
 
 | Funktion            | Dateipfad                                                                                               | Zeilennummer       |
 |--- | --- | ---|
-| Slack-Konfigurationstyp | [`src/config/types.slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.slack.ts) | 1-150      |
-| Slack-Onboarding-Logik | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/slack.ts) | 1-539      |
+| Slack-Konfigurationstyp | [`src/config/types.slack.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.slack.ts) | 1-150      |
+| Slack-Onboarding-Logik | [`src/channels/plugins/onboarding/slack.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/slack.ts) | 1-539      |
 |--- | --- | ---|
-| Slack-offizielle Dokumentation | [`docs/channels/slack.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/slack.md) | 1-508      |
+| Slack-offizielle Dokumentation | [`docs/channels/slack.md`](https://github.com/moltbot/moltbot/blob/main/docs/channels/slack.md) | 1-508      |
 
 **Wichtige Typdefinitionen**:
 - `SlackConfig`: Hauptkonfigurationstyp für Slack-Kanal

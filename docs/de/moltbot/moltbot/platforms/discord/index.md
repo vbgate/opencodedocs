@@ -562,11 +562,11 @@ clawdbot gateway --port 18789 --verbose
 | Funktion | Dateipfad | Zeilennummer |
 |--- | --- | ---|
 |--- | --- | ---|
-| Discord Onboarding-Assistent | [`src/channels/plugins/onboarding/discord.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/plugins/onboarding/discord.ts) | 1-485 |
+| Discord Onboarding-Assistent | [`src/channels/plugins/onboarding/discord.ts`](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/onboarding/discord.ts) | 1-485 |
 |--- | --- | ---|
-| Discord Nachrichtenaktionen | [`src/agents/tools/discord-actions-messaging.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/discord-actions-messaging.ts) | - |
-| Discord Serveraktionen | [`src/agents/tools/discord-actions-guild.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/discord-actions-guild.ts) | - |
-| Discord Offizielle Dokumentation | [`docs/channels/discord.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/channels/discord.md) | 1-400 |
+| Discord Nachrichtenaktionen | [`src/agents/tools/discord-actions-messaging.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/discord-actions-messaging.ts) | - |
+| Discord Serveraktionen | [`src/agents/tools/discord-actions-guild.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/discord-actions-guild.ts) | - |
+| Discord Offizielle Dokumentation | [`docs/channels/discord.md`](https://github.com/moltbot/moltbot/blob/main/docs/channels/discord.md) | 1-400 |
 
 **Wichtige Schema-Felder**:
 - ``DiscordAccountSchema``: Discord-Kontokonfiguration (token, guilds, dm, actions usw.)

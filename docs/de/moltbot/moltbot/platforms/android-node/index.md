@@ -9,8 +9,8 @@ tags:
   - "Camera"
   - "Canvas"
 prerequisite:
-  - "/de/clawdbot/clawdbot/start/getting-started/"
-  - "/de/clawdbot/clawdbot/start/gateway-startup/"
+  - "/de/moltbot/moltbot/start/getting-started/"
+  - "/de/moltbot/moltbot/start/gateway-startup/"
 order: 180
 ---
 
@@ -437,7 +437,7 @@ In dieser Lerneinheit haben Sie erfahren, wie Sie einen Android-Knoten für die 
 
 ## Ausblick auf die nächste Lerneinheit
 
-> In der nächsten Lerneinheit lernen wir **[Canvas-Visualisierung und A2UI](/de/clawdbot/clawdbot/advanced/canvas/)**.
+> In der nächsten Lerneinheit lernen wir **[Canvas-Visualisierung und A2UI](/de/moltbot/moltbot/advanced/canvas/)**.
 >
 > Sie lernen:
 > - Canvas A2UI-Push-Mechanismus
@@ -455,10 +455,10 @@ In dieser Lerneinheit haben Sie erfahren, wie Sie einen Android-Knoten für die 
 
 | Funktion        | Dateipfad                                                                                    | Zeile    |
 |--- | --- | ---|
-| Knotenbefehlsrichtlinie | [`src/gateway/node-command-policy.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/node-command-policy.ts) | 1-112   |
-| Knotenprotokoll-Schema | [`src/gateway/protocol/schema/nodes.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/schema/nodes.ts) | 1-103   |
-| Android-Dokumentation  | [`docs/platforms/android.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/android.md) | 1-142   |
-| Knoten-CLI  | [`docs/cli/nodes.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/cli/nodes.md) | 1-69    |
+| Knotenbefehlsrichtlinie | [`src/gateway/node-command-policy.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/node-command-policy.ts) | 1-112   |
+| Knotenprotokoll-Schema | [`src/gateway/protocol/schema/nodes.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/protocol/schema/nodes.ts) | 1-103   |
+| Android-Dokumentation  | [`docs/platforms/android.md`](https://github.com/moltbot/moltbot/blob/main/docs/platforms/android.md) | 1-142   |
+| Knoten-CLI  | [`docs/cli/nodes.md`](https://github.com/moltbot/moltbot/blob/main/docs/cli/nodes.md) | 1-69    |
 
 **Wichtige Konstanten**:
 - `PLATFORM_DEFAULTS`: Definiert die Liste der von jeder Plattform unterstützten Befehle (`node-command-policy.ts:32-58`)

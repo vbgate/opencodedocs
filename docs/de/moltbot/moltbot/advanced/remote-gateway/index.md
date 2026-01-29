@@ -53,7 +53,7 @@ Wenn du nur ein Gerät hast und es oft bei dir trägst, **brauchst du kein Remot
 
 Bitte stelle vor dem Start sicher:
 
-- [ ] Du hast den Kurs **[Gateway starten](/de/clawdbot/clawdbot/start/gateway-startup/)** abgeschlossen
+- [ ] Du hast den Kurs **[Gateway starten](/de/moltbot/moltbot/start/gateway-startup/)** abgeschlossen
 - [ ] Du kennst grundlegende SSH-Befehle (optional, falls du SSH-Tunnel verwendest)
 - [ ] (bei Verwendung von Tailscale) Tailscale CLI ist installiert und angemeldet
 - [ ] Remote-Linux-Server oder VPS bereit (Ubuntu/Debian empfohlen)
@@ -702,13 +702,13 @@ ssh -N -L 18790:127.0.0.1:18789 clawdbot-remote
 
 | Funktion | Dateipfad | Zeilen |
 |--- | --- | ---|
-| Gateway-Remote-Konfiguration Schema | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 200-220 |
-| Gateway-Tailscale-Konfiguration Schema | [`src/config/types.gateway.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.gateway.ts) | 150-180 |
-| Tailscale-Integration | [`src/infra/tailscale.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/tailscale.ts) | 1-100 |
-| Remote-Gateway-Dokumentation | [`docs/gateway/remote.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/remote.md) | 1-123 |
-| Tailscale-Dokumentation | [`docs/gateway/tailscale.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/tailscale.md) | 1-147 |
+| Gateway-Remote-Konfiguration Schema | [`src/config/types.gateway.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.gateway.ts) | 200-220 |
+| Gateway-Tailscale-Konfiguration Schema | [`src/config/types.gateway.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.gateway.ts) | 150-180 |
+| Tailscale-Integration | [`src/infra/tailscale.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/tailscale.ts) | 1-100 |
+| Remote-Gateway-Dokumentation | [`docs/gateway/remote.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/remote.md) | 1-123 |
+| Tailscale-Dokumentation | [`docs/gateway/tailscale.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/tailscale.md) | 1-147 |
 |--- | --- | ---|
-| Sicherheitsdokumentation | [`docs/gateway/security.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/gateway/security.md) | 1-100 |
+| Sicherheitsdokumentation | [`docs/gateway/security.md`](https://github.com/moltbot/moltbot/blob/main/docs/gateway/security.md) | 1-100 |
 
 **Wichtige Konfigurationsfelder**:
 

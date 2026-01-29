@@ -518,13 +518,13 @@ In dieser Lektion haben Sie gelernt:
 | Funktion                        | Dateipfad                                                                                   | Zeilennummer     |
 |--- | --- | ---|
 |--- | --- | ---|
-| Daemon-Dienst-Abstraktion         | [`src/daemon/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/service.ts) | 66-155    |
+| Daemon-Dienst-Abstraktion         | [`src/daemon/service.ts`](https://github.com/moltbot/moltbot/blob/main/src/daemon/service.ts) | 66-155    |
 |--- | --- | ---|
-| Gateway-Server-Implementierung         | [`src/gateway/server.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server.ts) | 1-500     |
+| Gateway-Server-Implementierung         | [`src/gateway/server.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server.ts) | 1-500     |
 |--- | --- | ---|
 |--- | --- | ---|
 |--- | --- | ---|
-| Port-Freigabe-Logik             | [`src/cli/ports.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/ports.ts) | 1-80      |
+| Port-Freigabe-Logik             | [`src/cli/ports.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/ports.ts) | 1-80      |
 
 **Wichtige Konstanten**:
 - Standardport: `18789` (Quelle: `src/gateway/server.ts`)

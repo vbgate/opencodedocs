@@ -394,12 +394,12 @@ ls -la <workspace>/skills/
 
 | 功能 | 文件路径 | 行号 |
 |--- | --- | ---|
-| 技能配置类型定义 | [`src/config/types.skills.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.skills.ts) | 1-32 |
-| 技能系统文档 | [`docs/tools/skills.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/skills.md) | 1-260 |
-| 技能配置参考 | [`docs/tools/skills-config.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/skills-config.md) | 1-76 |
-| ClawdHub 文档 | [`docs/tools/clawdhub.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/clawdhub.md) | 1-202 |
-| 创建技能指南 | [`docs/tools/creating-skills.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/tools/creating-skills.md) | 1-42 |
-| CLI 命令 | [`docs/cli/skills.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/cli/skills.md) | 1-26 |
+| 技能配置类型定义 | [`src/config/types.skills.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.skills.ts) | 1-32 |
+| 技能系统文档 | [`docs/tools/skills.md`](https://github.com/moltbot/moltbot/blob/main/docs/tools/skills.md) | 1-260 |
+| 技能配置参考 | [`docs/tools/skills-config.md`](https://github.com/moltbot/moltbot/blob/main/docs/tools/skills-config.md) | 1-76 |
+| ClawdHub 文档 | [`docs/tools/clawdhub.md`](https://github.com/moltbot/moltbot/blob/main/docs/tools/clawdhub.md) | 1-202 |
+| 创建技能指南 | [`docs/tools/creating-skills.md`](https://github.com/moltbot/moltbot/blob/main/docs/tools/creating-skills.md) | 1-42 |
+| CLI 命令 | [`docs/cli/skills.md`](https://github.com/moltbot/moltbot/blob/main/docs/cli/skills.md) | 1-26 |
 
 **关键类型**：
 

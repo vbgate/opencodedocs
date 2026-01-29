@@ -544,13 +544,13 @@ In dieser Lektion haben Sie gelernt:
 
 | Funktion                  | Dateipfad                                                                                             | Zeilennummer    |
 |--- | --- | ---|
-| CLI-Agent-Befehlsregistrierung  | [`src/cli/program/register.agent.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.agent.ts) | 20-82    |
+| CLI-Agent-Befehlsregistrierung  | [`src/cli/program/register.agent.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/register.agent.ts) | 20-82    |
 |--- | --- | ---|
-| CLI message send-Registrierung | [`src/cli/program/message/register.send.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/message/register.send.ts) | 1-30     |
+| CLI message send-Registrierung | [`src/cli/program/message/register.send.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/message/register.send.ts) | 1-30     |
 |--- | --- | ---|
 |--- | --- | ---|
-| Nachrichtenkanaltypendefinition   | [`src/gateway/protocol/client-info.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/client-info.ts) | 2-23     |
-| Kanalregistrierung         | [`src/channels/registry.js`](https://github.com/clawdbot/clawdbot/blob/main/src/channels/registry.js) | Gesamte Datei   |
+| Nachrichtenkanaltypendefinition   | [`src/gateway/protocol/client-info.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/protocol/client-info.ts) | 2-23     |
+| Kanalregistrierung         | [`src/channels/registry.js`](https://github.com/moltbot/moltbot/blob/main/src/channels/registry.js) | Gesamte Datei   |
 
 **Wichtige Konstanten**:
 - `DEFAULT_CHAT_CHANNEL = "whatsapp"`: Standardnachrichtenkanal (aus `src/channels/registry.js`)

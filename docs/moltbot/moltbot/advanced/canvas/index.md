@@ -401,10 +401,10 @@ In this lesson, you learned:
 
 | Function | File Path | Lines |
 |--- | --- | ---|
-| Canvas Host Server | [`src/canvas-host/server.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/server.ts) | 372-441 |
-| A2UI Protocol Handler | [`src/canvas-host/a2ui.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/a2ui.ts) | 150-203 |
-| Canvas Tool Definition | [`src/agents/tools/canvas-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/canvas-tool.ts) | 52-179 |
-| Canvas Path Constants | [`src/canvas-host/a2ui.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/a2ui.ts) | 8-10 |
+| Canvas Host Server | [`src/canvas-host/server.ts`](https://github.com/moltbot/moltbot/blob/main/src/canvas-host/server.ts) | 372-441 |
+| A2UI Protocol Handler | [`src/canvas-host/a2ui.ts`](https://github.com/moltbot/moltbot/blob/main/src/canvas-host/a2ui.ts) | 150-203 |
+| Canvas Tool Definition | [`src/agents/tools/canvas-tool.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/canvas-tool.ts) | 52-179 |
+| Canvas Path Constants | [`src/canvas-host/a2ui.ts`](https://github.com/moltbot/moltbot/blob/main/src/canvas-host/a2ui.ts) | 8-10 |
 
 **Key Constants**:
 - `A2UI_PATH = "/__clawdbot__/a2ui"`: A2UI host path

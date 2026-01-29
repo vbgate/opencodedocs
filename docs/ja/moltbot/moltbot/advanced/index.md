@@ -4,8 +4,8 @@ sidebarTitle: "AI の超能力をアンロック"
 subtitle: "高度な機能"
 description: "Clawdbot の高度な機能設定を学びます。AI モデル設定、マルチエージェント連携、ブラウザ自動化、コマンド実行ツール、Web 検索ツール、Canvas 可視化インターフェース、音声ウェイクアップと TTS、メモリシステム、Cron 定期タスク、スキルプラットフォーム、セキュリティサンドボックス、リモート Gateway を含みます。"
 prerequisite:
-  - "/ja/clawdbot/clawdbot/start/getting-started"
-  - "/ja/clawdbot/clawdbot/start/gateway-startup"
+  - "/ja/moltbot/moltbot/start/getting-started"
+  - "/ja/moltbot/moltbot/start/gateway-startup"
 order: 185
 ---
 

@@ -401,10 +401,10 @@ En esta lección aprendiste:
 
 | Función | Ruta de archivo | Número de línea |
 |--- | --- | ---|
-| Servidor Canvas Host | [`src/canvas-host/server.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/server.ts) | 372-441 |
-| Procesamiento de protocolo A2UI | [`src/canvas-host/a2ui.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/a2ui.ts) | 150-203 |
-| Definición de herramienta Canvas | [`src/agents/tools/canvas-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/canvas-tool.ts) | 52-179 |
-| Constantes de ruta Canvas | [`src/canvas-host/a2ui.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/canvas-host/a2ui.ts) | 8-10 |
+| Servidor Canvas Host | [`src/canvas-host/server.ts`](https://github.com/moltbot/moltbot/blob/main/src/canvas-host/server.ts) | 372-441 |
+| Procesamiento de protocolo A2UI | [`src/canvas-host/a2ui.ts`](https://github.com/moltbot/moltbot/blob/main/src/canvas-host/a2ui.ts) | 150-203 |
+| Definición de herramienta Canvas | [`src/agents/tools/canvas-tool.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/canvas-tool.ts) | 52-179 |
+| Constantes de ruta Canvas | [`src/canvas-host/a2ui.ts`](https://github.com/moltbot/moltbot/blob/main/src/canvas-host/a2ui.ts) | 8-10 |
 
 **Constantes clave**:
 - `A2UI_PATH = "/__clawdbot__/a2ui"`: Ruta del host A2UI

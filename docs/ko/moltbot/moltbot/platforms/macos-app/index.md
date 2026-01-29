@@ -10,7 +10,7 @@ tags:
   - "Talk Mode"
   - "노드 모드"
 prerequisite:
-  - "/ko/clawdbot/clawdbot/start/getting-started"
+  - "/ko/moltbot/moltbot/start/getting-started"
 order: 160
 ---
 
@@ -118,7 +118,7 @@ brew install --cask clawdbot
 ```
 
 ```bash [수동으로 .dmg 다운로드]
-# https://github.com/clawdbot/clawdbot/releases 에서 최신 Clawdbot.app.dmg 다운로드
+# https://github.com/moltbot/moltbot/releases 에서 최신 Clawdbot.app.dmg 다운로드
 # Applications 폴더로 드래그
 ```
 
@@ -667,17 +667,17 @@ open 'clawdbot://agent?message=Automated%20task&key=secure-random-string'
 
 | 기능        | 파일 경로                                                                                    | 행号    |
 |--- | --- | ---|
-| 앱 진입점     | [`apps/macos/Sources/Clawdbot/ClawdbotApp.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/ClawdbotApp.swift) | 전체 파일   |
-| Gateway 연결 | [`apps/macos/Sources/Clawdbot/GatewayConnection.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/GatewayConnection.swift) | 1-500   |
-| Voice Wake 런타임 | [`apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift) | 전체 파일   |
-| Talk Mode 타입 | [`apps/macos/Sources/Clawdbot/TalkModeTypes.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/TalkModeTypes.swift) | 전체 파일   |
-| Voice Wake 오버레이 | [`apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift) | 전체 파일   |
-| 노드 모드 코디네이터 | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift) | 전체 파일   |
-| 노드 런타임 | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift) | 전체 파일   |
-| 권한 관리자 | [`apps/macos/Sources/Clawdbot/PermissionManager.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/PermissionManager.swift) | 전체 파일   |
-| Exec Approvals | [`apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift) | 전체 파일   |
-| 메뉴 바 | [`apps/macos/Sources/Clawdbot/MenuBar.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/MenuBar.swift) | 전체 파일   |
-| 메뉴 인젝터 | [`apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift) | 전체 파일   |
+| 앱 진입점     | [`apps/macos/Sources/Clawdbot/ClawdbotApp.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/ClawdbotApp.swift) | 전체 파일   |
+| Gateway 연결 | [`apps/macos/Sources/Clawdbot/GatewayConnection.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/GatewayConnection.swift) | 1-500   |
+| Voice Wake 런타임 | [`apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift) | 전체 파일   |
+| Talk Mode 타입 | [`apps/macos/Sources/Clawdbot/TalkModeTypes.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/TalkModeTypes.swift) | 전체 파일   |
+| Voice Wake 오버레이 | [`apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift) | 전체 파일   |
+| 노드 모드 코디네이터 | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift) | 전체 파일   |
+| 노드 런타임 | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift) | 전체 파일   |
+| 권한 관리자 | [`apps/macos/Sources/Clawdbot/PermissionManager.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/PermissionManager.swift) | 전체 파일   |
+| Exec Approvals | [`apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift) | 전체 파일   |
+| 메뉴 바 | [`apps/macos/Sources/Clawdbot/MenuBar.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/MenuBar.swift) | 전체 파일   |
+| 메뉴 인젝터 | [`apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift) | 전체 파일   |
 
 **핵심 상수**:
 - `GatewayConnection.shared` - 싱글톤 Gateway 연결 관리자(`GatewayConnection.swift:48`)
@@ -697,9 +697,9 @@ open 'clawdbot://agent?message=Automated%20task&key=secure-random-string'
 - `ExecApprovalsGatewayPrompter.prompt()` - 승인 대화 상자 표시
 
 **문서 위치**:
-- [macOS 앱 문서](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/macos.md)
-- [Voice Wake 문서](https://github.com/clawdbot/clawdbot/blob/main/docs/nodes/voicewake.md)
-- [Talk Mode 문서](https://github.com/clawdbot/clawdbot/blob/main/docs/nodes/talk.md)
-- [노드 문서](https://github.com/clawdbot/clawdbot/blob/main/docs/nodes/index.md)
+- [macOS 앱 문서](https://github.com/moltbot/moltbot/blob/main/docs/platforms/macos.md)
+- [Voice Wake 문서](https://github.com/moltbot/moltbot/blob/main/docs/nodes/voicewake.md)
+- [Talk Mode 문서](https://github.com/moltbot/moltbot/blob/main/docs/nodes/talk.md)
+- [노드 문서](https://github.com/moltbot/moltbot/blob/main/docs/nodes/index.md)
 
 </details>

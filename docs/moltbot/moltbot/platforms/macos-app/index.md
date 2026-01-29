@@ -118,7 +118,7 @@ brew install --cask clawdbot
 ```
 
 ```bash [Manual download .dmg]
-# Download latest Clawdbot.app.dmg from https://github.com/clawdbot/clawdbot/releases
+# Download latest Clawdbot.app.dmg from https://github.com/moltbot/moltbot/releases
 # Drag to Applications folder
 ```
 
@@ -667,17 +667,17 @@ In this lesson, you learned:
 
 | Feature        | File Path                                                                                    | Line    |
 |--- | --- | ---|
-| App Entry     | [`apps/macos/Sources/Clawdbot/ClawdbotApp.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/ClawdbotApp.swift) | Entire file   |
-| Gateway Connection | [`apps/macos/Sources/Clawdbot/GatewayConnection.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/GatewayConnection.swift) | 1-500   |
-| Voice Wake Runtime | [`apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift) | Entire file   |
-| Talk Mode Types | [`apps/macos/Sources/Clawdbot/TalkModeTypes.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/TalkModeTypes.swift) | Entire file   |
-| Voice Wake Overlay | [`apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift) | Entire file   |
-| Node Mode Coordinator | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift) | Entire file   |
-| Node Runtime | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift) | Entire file   |
-| Permission Manager | [`apps/macos/Sources/Clawdbot/PermissionManager.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/PermissionManager.swift) | Entire file   |
-| Exec Approvals | [`apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift) | Entire file   |
-| Menu Bar | [`apps/macos/Sources/Clawdbot/MenuBar.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/MenuBar.swift) | Entire file   |
-| Menu Injector | [`apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift) | Entire file   |
+| App Entry     | [`apps/macos/Sources/Clawdbot/ClawdbotApp.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/ClawdbotApp.swift) | Entire file   |
+| Gateway Connection | [`apps/macos/Sources/Clawdbot/GatewayConnection.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/GatewayConnection.swift) | 1-500   |
+| Voice Wake Runtime | [`apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift) | Entire file   |
+| Talk Mode Types | [`apps/macos/Sources/Clawdbot/TalkModeTypes.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/TalkModeTypes.swift) | Entire file   |
+| Voice Wake Overlay | [`apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift) | Entire file   |
+| Node Mode Coordinator | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift) | Entire file   |
+| Node Runtime | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift) | Entire file   |
+| Permission Manager | [`apps/macos/Sources/Clawdbot/PermissionManager.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/PermissionManager.swift) | Entire file   |
+| Exec Approvals | [`apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift) | Entire file   |
+| Menu Bar | [`apps/macos/Sources/Clawdbot/MenuBar.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/MenuBar.swift) | Entire file   |
+| Menu Injector | [`apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift) | Entire file   |
 
 **Key Constants**:
 - `GatewayConnection.shared`: Singleton Gateway connection manager (`GatewayConnection.swift:48`)
@@ -697,9 +697,9 @@ In this lesson, you learned:
 - `ExecApprovalsGatewayPrompter.prompt()`: Display approval dialog
 
 **Documentation Locations**:
-- [macOS App Documentation](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/macos.md)
-- [Voice Wake Documentation](https://github.com/clawdbot/clawdbot/blob/main/docs/nodes/voicewake.md)
-- [Talk Mode Documentation](https://github.com/clawdbot/clawdbot/blob/main/docs/nodes/talk.md)
-- [Node Documentation](https://github.com/clawdbot/clawdbot/blob/main/docs/nodes/index.md)
+- [macOS App Documentation](https://github.com/moltbot/moltbot/blob/main/docs/platforms/macos.md)
+- [Voice Wake Documentation](https://github.com/moltbot/moltbot/blob/main/docs/nodes/voicewake.md)
+- [Talk Mode Documentation](https://github.com/moltbot/moltbot/blob/main/docs/nodes/talk.md)
+- [Node Documentation](https://github.com/moltbot/moltbot/blob/main/docs/nodes/index.md)
 
 </details>

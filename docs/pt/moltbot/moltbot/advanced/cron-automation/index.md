@@ -804,16 +804,16 @@ Ao configurar adequadamente essas funcionalidades, você pode construir um assis
 
 | Funcionalidade | Caminho do arquivo | Números de linha |
 |--- | --- | ---|
-| Definição de tipos de configuração Cron | [`src/config/types.cron.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.cron.ts#L1-L6) | 1-6 |
-| Definição de tipos centrais Cron | [`src/cron/types.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/types.ts#L1-L95) | 1-95 |
-| Cron Service | [`src/cron/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/service.ts#L1-L49) | 1-49 |
-| Implementação de operações Cron | [`src/cron/service/ops.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/service/ops.ts#L1-L141) | 1-141 |
-| Implementação de ferramenta Cron | [`src/agents/tools/cron-tool.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/cron-tool.ts#L1-L291) | 1-291 |
-| Métodos Cron de Gateway | [`src/gateway/server-methods/cron.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/cron.ts#L1-L205) | 1-205 |
-| Definição de tipos de configuração Hooks | [`src/config/types.hooks.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/types.hooks.ts#L1-L125) | 1-125 |
-| Ferramenta Gmail de Hooks | [`src/hooks/gmail.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/hooks/gmail.ts#L1-L267) | 1-267 |
-| Eventos internos de Hooks | [`src/hooks/hooks.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/hooks/hooks.ts#L1-L15) | 1-15 |
-| Comandos CLI de Hooks | [`src/cli/hooks-cli.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/hooks-cli.ts#L1-L839) | 1-839 |
+| Definição de tipos de configuração Cron | [`src/config/types.cron.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.cron.ts#L1-L6) | 1-6 |
+| Definição de tipos centrais Cron | [`src/cron/types.ts`](https://github.com/moltbot/moltbot/blob/main/src/cron/types.ts#L1-L95) | 1-95 |
+| Cron Service | [`src/cron/service.ts`](https://github.com/moltbot/moltbot/blob/main/src/cron/service.ts#L1-L49) | 1-49 |
+| Implementação de operações Cron | [`src/cron/service/ops.ts`](https://github.com/moltbot/moltbot/blob/main/src/cron/service/ops.ts#L1-L141) | 1-141 |
+| Implementação de ferramenta Cron | [`src/agents/tools/cron-tool.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/cron-tool.ts#L1-L291) | 1-291 |
+| Métodos Cron de Gateway | [`src/gateway/server-methods/cron.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-methods/cron.ts#L1-L205) | 1-205 |
+| Definição de tipos de configuração Hooks | [`src/config/types.hooks.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/types.hooks.ts#L1-L125) | 1-125 |
+| Ferramenta Gmail de Hooks | [`src/hooks/gmail.ts`](https://github.com/moltbot/moltbot/blob/main/src/hooks/gmail.ts#L1-L267) | 1-267 |
+| Eventos internos de Hooks | [`src/hooks/hooks.ts`](https://github.com/moltbot/moltbot/blob/main/src/hooks/hooks.ts#L1-L15) | 1-15 |
+| Comandos CLI de Hooks | [`src/cli/hooks-cli.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/hooks-cli.ts#L1-L839) | 1-839 |
 
 **Constantes chave**:
 - `DEFAULT_GMAIL_LABEL = "INBOX"`: Etiqueta padrão do Gmail

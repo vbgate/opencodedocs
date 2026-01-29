@@ -806,7 +806,7 @@ Durch ordnungsgemäße Konfiguration dieser Funktionen können Sie einen vollst�
 |--- | --- | ---|
 |--- | --- | ---|
 |--- | --- | ---|
-| Cron Service | [`src/cron/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cron/service.ts#L1-L49) | 1-49 |
+| Cron Service | [`src/cron/service.ts`](https://github.com/moltbot/moltbot/blob/main/src/cron/service.ts#L1-L49) | 1-49 |
 |--- | --- | ---|
 |--- | --- | ---|
 |--- | --- | ---|

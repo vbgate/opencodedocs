@@ -435,10 +435,10 @@ pnpm gateway:watch  # Automatisches Neuladen bei Änderungen an TS-Dateien
 | Funktion | Dateipfad | Zeilennummer |
 |--- | --- | ---|
 |--- | --- | ---|
-| Onboarding-Befehl | [`src/cli/program/register.onboard.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/cli/program/register.onboard.ts) | 34-100 |
+| Onboarding-Befehl | [`src/cli/program/register.onboard.ts`](https://github.com/moltbot/moltbot/blob/main/src/cli/program/register.onboard.ts) | 34-100 |
 |--- | --- | ---|
-| Gateway-Service | [`src/daemon/service.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/daemon/service.ts) | Gesamte Datei |
-| Laufzeitprüfung | [`src/infra/runtime-guard.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/infra/runtime-guard.ts) | Gesamte Datei |
+| Gateway-Service | [`src/daemon/service.ts`](https://github.com/moltbot/moltbot/blob/main/src/daemon/service.ts) | Gesamte Datei |
+| Laufzeitprüfung | [`src/infra/runtime-guard.ts`](https://github.com/moltbot/moltbot/blob/main/src/infra/runtime-guard.ts) | Gesamte Datei |
 
 **Wichtige Konstanten**:
 - `DEFAULT_GATEWAY_DAEMON_RUNTIME = "node"`: Standard-Daemon-Laufzeit (aus `src/commands/daemon-runtime.ts`)

@@ -255,6 +255,15 @@ claude plugin install <插件 ID>
 }
 ```
 
+::: info 完整权限配置
+这是最小权限配置示例。Factory 的 `init` 命令会自动生成完整的权限配置文件（包括 `Skill(superpowers:brainstorm)` 和其他必要权限），通常不需要手动编辑。
+
+如果需要重新生成权限配置，可以在项目根目录执行：
+```bash
+factory init --force-permissions
+```
+:::
+
 参考 [Claude Code 集成指南](../claude-code/) 重新生成权限配置。
 
 ### ❌ 市场添加失败

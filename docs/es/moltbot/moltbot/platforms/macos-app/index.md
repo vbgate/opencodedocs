@@ -121,7 +121,7 @@ brew install --cask clawdbot
 ```
 
 ```bash [Descarga manual .dmg]
-# Descargar Clawdbot.app.dmg más reciente desde https://github.com/clawdbot/clawdbot/releases
+# Descargar Clawdbot.app.dmg más reciente desde https://github.com/moltbot/moltbot/releases
 # Arrastrar a la carpeta Aplicaciones
 ```
 
@@ -670,17 +670,17 @@ En esta lección aprendiste:
 
 | Función        | Ruta del archivo                                                                                    | Número de líneas    |
 |--- | --- | ---|
-| Punto de entrada de la aplicación     | [`apps/macos/Sources/Clawdbot/ClawdbotApp.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/ClawdbotApp.swift) | Archivo completo   |
-| Conexión a Gateway | [`apps/macos/Sources/Clawdbot/GatewayConnection.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/GatewayConnection.swift) | 1-500   |
-| Runtime de Voice Wake | [`apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift) | Archivo completo   |
-| Tipos de Talk Mode | [`apps/macos/Sources/Clawdbot/TalkModeTypes.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/TalkModeTypes.swift) | Archivo completo   |
-| Superposición de Voice Wake | [`apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift) | Archivo completo   |
-| Coordinador de modo de nodo | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift) | Archivo completo   |
-| Runtime de nodo | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift) | Archivo completo   |
-| Gestor de permisos | [`apps/macos/Sources/Clawdbot/PermissionManager.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/PermissionManager.swift) | Archivo completo   |
-| Exec Approvals | [`apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift) | Archivo completo   |
-| Barra de menús | [`apps/macos/Sources/Clawdbot/MenuBar.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/MenuBar.swift) | Archivo completo   |
-| Inyector de menú | [`apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift) | Archivo completo   |
+| Punto de entrada de la aplicación     | [`apps/macos/Sources/Clawdbot/ClawdbotApp.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/ClawdbotApp.swift) | Archivo completo   |
+| Conexión a Gateway | [`apps/macos/Sources/Clawdbot/GatewayConnection.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/GatewayConnection.swift) | 1-500   |
+| Runtime de Voice Wake | [`apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift) | Archivo completo   |
+| Tipos de Talk Mode | [`apps/macos/Sources/Clawdbot/TalkModeTypes.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/TalkModeTypes.swift) | Archivo completo   |
+| Superposición de Voice Wake | [`apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift) | Archivo completo   |
+| Coordinador de modo de nodo | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift) | Archivo completo   |
+| Runtime de nodo | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift) | Archivo completo   |
+| Gestor de permisos | [`apps/macos/Sources/Clawdbot/PermissionManager.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/PermissionManager.swift) | Archivo completo   |
+| Exec Approvals | [`apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift) | Archivo completo   |
+| Barra de menús | [`apps/macos/Sources/Clawdbot/MenuBar.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/MenuBar.swift) | Archivo completo   |
+| Inyector de menú | [`apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift) | Archivo completo   |
 
 **Constantes clave**:
 - `GatewayConnection.shared`: gestor de conexión a Gateway singleton (`GatewayConnection.swift:48`)
@@ -700,9 +700,9 @@ En esta lección aprendiste:
 - `ExecApprovalsGatewayPrompter.prompt()`: mostrar diálogo de aprobación
 
 **Ubicación de documentos**:
-- [Documentación de la app macOS](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/macos.md)
-- [Documentación de Voice Wake](https://github.com/clawdbot/clawdbot/blob/main/docs/nodes/voicewake.md)
-- [Documentación de Talk Mode](https://github.com/clawdbot/clawdbot/blob/main/docs/nodes/talk.md)
-- [Documentación de nodos](https://github.com/clawdbot/clawdbot/blob/main/docs/nodes/index.md)
+- [Documentación de la app macOS](https://github.com/moltbot/moltbot/blob/main/docs/platforms/macos.md)
+- [Documentación de Voice Wake](https://github.com/moltbot/moltbot/blob/main/docs/nodes/voicewake.md)
+- [Documentación de Talk Mode](https://github.com/moltbot/moltbot/blob/main/docs/nodes/talk.md)
+- [Documentación de nodos](https://github.com/moltbot/moltbot/blob/main/docs/nodes/index.md)
 
 </details>

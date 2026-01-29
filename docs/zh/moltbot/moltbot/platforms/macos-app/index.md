@@ -118,7 +118,7 @@ brew install --cask clawdbot
 ```
 
 ```bash [手动下载 .dmg]
-# 从 https://github.com/clawdbot/clawdbot/releases 下载最新的 Clawdbot.app.dmg
+# 从 https://github.com/moltbot/moltbot/releases 下载最新的 Clawdbot.app.dmg
 # 拖动到 Applications 文件夹
 ```
 
@@ -667,17 +667,17 @@ open 'clawdbot://agent?message=Automated%20task&key=secure-random-string'
 
 | 功能        | 文件路径                                                                                    | 行号    |
 |--- | --- | ---|
-| 应用入口     | [`apps/macos/Sources/Clawdbot/ClawdbotApp.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/ClawdbotApp.swift) | 全文件   |
-| Gateway 连接 | [`apps/macos/Sources/Clawdbot/GatewayConnection.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/GatewayConnection.swift) | 1-500   |
-| Voice Wake 运行时 | [`apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift) | 全文件   |
-| Talk Mode 类型 | [`apps/macos/Sources/Clawdbot/TalkModeTypes.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/TalkModeTypes.swift) | 全文件   |
-| Voice Wake 叠加层 | [`apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift) | 全文件   |
-| 节点模式协调器 | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift) | 全文件   |
-| 节点运行时 | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift) | 全文件   |
-| 权限管理器 | [`apps/macos/Sources/Clawdbot/PermissionManager.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/PermissionManager.swift) | 全文件   |
-| Exec Approvals | [`apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift) | 全文件   |
-| 菜单栏 | [`apps/macos/Sources/Clawdbot/MenuBar.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/MenuBar.swift) | 全文件   |
-| 菜单注入器 | [`apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift) | 全文件   |
+| 应用入口     | [`apps/macos/Sources/Clawdbot/ClawdbotApp.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/ClawdbotApp.swift) | 全文件   |
+| Gateway 连接 | [`apps/macos/Sources/Clawdbot/GatewayConnection.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/GatewayConnection.swift) | 1-500   |
+| Voice Wake 运行时 | [`apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeRuntime.swift) | 全文件   |
+| Talk Mode 类型 | [`apps/macos/Sources/Clawdbot/TalkModeTypes.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/TalkModeTypes.swift) | 全文件   |
+| Voice Wake 叠加层 | [`apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/VoiceWakeOverlayView.swift) | 全文件   |
+| 节点模式协调器 | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeModeCoordinator.swift) | 全文件   |
+| 节点运行时 | [`apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/NodeMode/MacNodeRuntime.swift) | 全文件   |
+| 权限管理器 | [`apps/macos/Sources/Clawdbot/PermissionManager.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/PermissionManager.swift) | 全文件   |
+| Exec Approvals | [`apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/ExecApprovalsGatewayPrompter.swift) | 全文件   |
+| 菜单栏 | [`apps/macos/Sources/Clawdbot/MenuBar.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/MenuBar.swift) | 全文件   |
+| 菜单注入器 | [`apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift`](https://github.com/moltbot/moltbot/blob/main/apps/macos/Sources/Clawdbot/MenuSessionsInjector.swift) | 全文件   |
 
 **关键常量**：
 - `GatewayConnection.shared`：单例 Gateway 连接管理器（`GatewayConnection.swift:48`）
@@ -697,9 +697,9 @@ open 'clawdbot://agent?message=Automated%20task&key=secure-random-string'
 - `ExecApprovalsGatewayPrompter.prompt()`：显示审批对话框
 
 **文档位置**：
-- [macOS 应用文档](https://github.com/clawdbot/clawdbot/blob/main/docs/platforms/macos.md)
-- [Voice Wake 文档](https://github.com/clawdbot/clawdbot/blob/main/docs/nodes/voicewake.md)
-- [Talk Mode 文档](https://github.com/clawdbot/clawdbot/blob/main/docs/nodes/talk.md)
-- [节点文档](https://github.com/clawdbot/clawdbot/blob/main/docs/nodes/index.md)
+- [macOS 应用文档](https://github.com/moltbot/moltbot/blob/main/docs/platforms/macos.md)
+- [Voice Wake 文档](https://github.com/moltbot/moltbot/blob/main/docs/nodes/voicewake.md)
+- [Talk Mode 文档](https://github.com/moltbot/moltbot/blob/main/docs/nodes/talk.md)
+- [节点文档](https://github.com/moltbot/moltbot/blob/main/docs/nodes/index.md)
 
 </details>

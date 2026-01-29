@@ -647,16 +647,16 @@ clawdbot models status --provider anthropic
 
 | 功能                    | 文件路径                                                                                                       | 行号      |
 |--- | --- | ---|
-| Session Pruning         | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts#L1750-L1800) | 1750-1800 |
-| Compaction             | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts#L1830-L1900) | 1830-1900 |
-| Memory Flush            | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts#L1840-L1870) | 1840-1870 |
-| Queue + Concurrency   | [`src/gateway/server-lanes.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-lanes.ts#L1-L78)           | 1-78     |
-| Prompt Cache          | [`src/agents/auth-profiles.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/auth-profiles.ts#L1-L500)   | 1-500     |
-| Logging               | [`src/logging/index.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/logging/index.ts#L1-L200)             | 1-200     |
-| Diagnostics + OpenTelemetry | [`src/diagnostics/index.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/diagnostics/index.ts#L1-L300)   | 1-300     |
-| Web Search Cache      | [`src/agents/tools/web-search.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-search.ts#L1-L200)     | 1-200     |
-| Web Fetch Cache       | [`src/agents/tools/web-fetch.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/agents/tools/web-fetch.ts#L1-L150)       | 1-150     |
-| Browser Concurrency     | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts#L1970-L1980) | 1970-1980 |
+| Session Pruning         | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts#L1750-L1800) | 1750-1800 |
+| Compaction             | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts#L1830-L1900) | 1830-1900 |
+| Memory Flush            | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts#L1840-L1870) | 1840-1870 |
+| Queue + Concurrency   | [`src/gateway/server-lanes.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-lanes.ts#L1-L78)           | 1-78     |
+| Prompt Cache          | [`src/agents/auth-profiles.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/auth-profiles.ts#L1-L500)   | 1-500     |
+| Logging               | [`src/logging/index.ts`](https://github.com/moltbot/moltbot/blob/main/src/logging/index.ts#L1-L200)             | 1-200     |
+| Diagnostics + OpenTelemetry | [`src/diagnostics/index.ts`](https://github.com/moltbot/moltbot/blob/main/src/diagnostics/index.ts#L1-L300)   | 1-300     |
+| Web Search Cache      | [`src/agents/tools/web-search.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-search.ts#L1-L200)     | 1-200     |
+| Web Fetch Cache       | [`src/agents/tools/web-fetch.ts`](https://github.com/moltbot/moltbot/blob/main/src/agents/tools/web-fetch.ts#L1-L150)       | 1-150     |
+| Browser Concurrency     | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts#L1970-L1980) | 1970-1980 |
 
 **关键配置常量**：
 - `DEFAULT_MAX_CONCURRENT = 4`：全局最大併發数

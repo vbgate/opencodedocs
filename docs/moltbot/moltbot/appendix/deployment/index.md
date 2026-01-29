@@ -1263,14 +1263,14 @@ When choosing a deployment method, consider your use case, technical skills, and
 
 | Feature/Section | File Path | Line Number |
 |--- | --- | ---|
-| Docker deployment script | [`docker-setup.sh`](https://github.com/clawdbot/clawdbot/blob/main/docker-setup.sh) | Full file |
-| Docker image definition | [`Dockerfile`](https://github.com/clawdbot/clawdbot/blob/main/Dockerfile) | Full file |
-| Docker Compose configuration | [`docker-compose.yml`](https://github.com/clawdbot/clawdbot/blob/main/docker-compose.yml) | Full file |
-| Fly.io configuration | [`fly.toml`](https://github.com/clawdbot/clawdbot/blob/main/fly.toml) | Full file |
-| Fly private configuration | [`fly.private.toml`](https://github.com/clawdbot/clawdbot/blob/main/fly.private.toml) | Full file |
-| Docker sandbox image | [`Dockerfile.sandbox`](https://github.com/clawdbot/clawdbot/blob/main/Dockerfile.sandbox) | Full file |
+| Docker deployment script | [`docker-setup.sh`](https://github.com/moltbot/moltbot/blob/main/docker-setup.sh) | Full file |
+| Docker image definition | [`Dockerfile`](https://github.com/moltbot/moltbot/blob/main/Dockerfile) | Full file |
+| Docker Compose configuration | [`docker-compose.yml`](https://github.com/moltbot/moltbot/blob/main/docker-compose.yml) | Full file |
+| Fly.io configuration | [`fly.toml`](https://github.com/moltbot/moltbot/blob/main/fly.toml) | Full file |
+| Fly private configuration | [`fly.private.toml`](https://github.com/moltbot/moltbot/blob/main/fly.private.toml) | Full file |
+| Docker sandbox image | [`Dockerfile.sandbox`](https://github.com/moltbot/moltbot/blob/main/Dockerfile.sandbox) | Full file |
 | Nix integration | [`nix-clawdbot`](https://github.com/clawdbot/nix-clawdbot) | README |
-| Installation script | [`scripts/package-mac-app.sh`](https://github.com/clawdbot/clawdbot/blob/main/scripts/package-mac-app.sh) | Full file |
+| Installation script | [`scripts/package-mac-app.sh`](https://github.com/moltbot/moltbot/blob/main/scripts/package-mac-app.sh) | Full file |
 
 **Key Configuration Files**:
 - `~/.clawdbot/clawdbot.json`: Main configuration file

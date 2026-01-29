@@ -131,7 +131,7 @@
                 "repo": "https://github.com/NoeFabris/opencode-antigravity-auth",
                 "meta": {
                     "lessons": "33 Уроков",
-                    "stars": "6.3k",
+                    "stars": "6.8k",
                     "difficulty": "Начинающий"
                 }
             },
@@ -142,7 +142,7 @@
                 "repo": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning",
                 "meta": {
                     "lessons": "22 Уроков",
-                    "stars": "560",
+                    "stars": "625",
                     "difficulty": "Продвинутый"
                 }
             },
@@ -153,7 +153,7 @@
                 "repo": "https://github.com/backnotprop/plannotator",
                 "meta": {
                     "lessons": "27 Уроков",
-                    "stars": "1.4k",
+                    "stars": "1.5k",
                     "difficulty": "Средний уровень"
                 }
             },
@@ -164,7 +164,7 @@
                 "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills",
                 "meta": {
                     "lessons": "24 Уроков",
-                    "stars": "26",
+                    "stars": "28",
                     "difficulty": "Средний уровень"
                 }
             },
@@ -175,7 +175,7 @@
                 "repo": "https://github.com/lbjlaq/Antigravity-Manager",
                 "meta": {
                     "lessons": "39 Уроков",
-                    "stars": "18k",
+                    "stars": "19.3k",
                     "difficulty": "Эксперт"
                 }
             },
@@ -186,7 +186,7 @@
                 "repo": "https://github.com/numman-ali/openskills",
                 "meta": {
                     "lessons": "35 Уроков",
-                    "stars": "7.1k",
+                    "stars": "7.4k",
                     "difficulty": "Средний уровень"
                 }
             },
@@ -197,7 +197,7 @@
                 "repo": "https://github.com/supermemoryai/opencode-supermemory",
                 "meta": {
                     "lessons": "13 Уроков",
-                    "stars": "522",
+                    "stars": "545",
                     "difficulty": "Эксперт"
                 }
             },
@@ -208,7 +208,7 @@
                 "repo": "https://github.com/vbgate/opencode-mystatus",
                 "meta": {
                     "lessons": "23 Уроков",
-                    "stars": "161",
+                    "stars": "170",
                     "difficulty": "Начинающий"
                 }
             },
@@ -219,7 +219,7 @@
                 "repo": "https://github.com/franlol/opencode-md-table-formatter",
                 "meta": {
                     "lessons": "14 Уроков",
-                    "stars": "146",
+                    "stars": "156",
                     "difficulty": "Начинающий"
                 }
             },
@@ -230,7 +230,7 @@
                 "repo": "https://github.com/code-yeongyu/oh-my-opencode",
                 "meta": {
                     "lessons": "26 Уроков",
-                    "stars": "24.1k",
+                    "stars": "25.8k",
                     "difficulty": "Эксперт"
                 }
             },
@@ -241,7 +241,7 @@
                 "repo": "https://github.com/kdcokenny/opencode-notify",
                 "meta": {
                     "lessons": "21 Уроков",
-                    "stars": "--",
+                    "stars": "31",
                     "difficulty": "Средний уровень"
                 }
             },
@@ -252,18 +252,18 @@
                 "repo": "https://github.com/vercel-labs/agent-skills",
                 "meta": {
                     "lessons": "14 Уроков",
-                    "stars": "16.6k",
+                    "stars": "17.8k",
                     "difficulty": "Средний уровень"
                 }
             },
             {
                 "title": "Clawdbot",
                 "desc": "Ваш личный ИИ-помощник, доступен везде",
-                "link": "/ru/clawdbot/clawdbot/",
-                "repo": "https://github.com/clawdbot/clawdbot",
+                "link": "/ru/moltbot/moltbot/",
+                "repo": "https://github.com/moltbot/moltbot",
                 "meta": {
                     "lessons": "43 Уроков",
-                    "stars": "--",
+                    "stars": "101.4k",
                     "difficulty": "Продвинутый"
                 }
             }

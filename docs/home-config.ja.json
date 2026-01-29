@@ -131,7 +131,7 @@
                 "repo": "https://github.com/NoeFabris/opencode-antigravity-auth",
                 "meta": {
                     "lessons": "33 レッスン",
-                    "stars": "6.3k",
+                    "stars": "6.8k",
                     "difficulty": "入門"
                 }
             },
@@ -142,7 +142,7 @@
                 "repo": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning",
                 "meta": {
                     "lessons": "22 レッスン",
-                    "stars": "560",
+                    "stars": "625",
                     "difficulty": "中級"
                 }
             },
@@ -153,7 +153,7 @@
                 "repo": "https://github.com/backnotprop/plannotator",
                 "meta": {
                     "lessons": "27 レッスン",
-                    "stars": "1.4k",
+                    "stars": "1.5k",
                     "difficulty": "中級"
                 }
             },
@@ -164,7 +164,7 @@
                 "repo": "https://github.com/joshuadavidthomas/opencode-agent-skills",
                 "meta": {
                     "lessons": "24 レッスン",
-                    "stars": "26",
+                    "stars": "28",
                     "difficulty": "中級"
                 }
             },
@@ -175,7 +175,7 @@
                 "repo": "https://github.com/lbjlaq/Antigravity-Manager",
                 "meta": {
                     "lessons": "39 レッスン",
-                    "stars": "18k",
+                    "stars": "19.3k",
                     "difficulty": "上級"
                 }
             },
@@ -186,7 +186,7 @@
                 "repo": "https://github.com/numman-ali/openskills",
                 "meta": {
                     "lessons": "35 レッスン",
-                    "stars": "7.1k",
+                    "stars": "7.4k",
                     "difficulty": "中級"
                 }
             },
@@ -197,7 +197,7 @@
                 "repo": "https://github.com/supermemoryai/opencode-supermemory",
                 "meta": {
                     "lessons": "13 レッスン",
-                    "stars": "522",
+                    "stars": "545",
                     "difficulty": "上級"
                 }
             },
@@ -208,7 +208,7 @@
                 "repo": "https://github.com/vbgate/opencode-mystatus",
                 "meta": {
                     "lessons": "23 レッスン",
-                    "stars": "161",
+                    "stars": "170",
                     "difficulty": "入門"
                 }
             },
@@ -219,7 +219,7 @@
                 "repo": "https://github.com/franlol/opencode-md-table-formatter",
                 "meta": {
                     "lessons": "14 レッスン",
-                    "stars": "146",
+                    "stars": "156",
                     "difficulty": "入門"
                 }
             },
@@ -230,7 +230,7 @@
                 "repo": "https://github.com/code-yeongyu/oh-my-opencode",
                 "meta": {
                     "lessons": "26 レッスン",
-                    "stars": "24.1k",
+                    "stars": "25.8k",
                     "difficulty": "上級"
                 }
             },
@@ -241,7 +241,7 @@
                 "repo": "https://github.com/kdcokenny/opencode-notify",
                 "meta": {
                     "lessons": "21 レッスン",
-                    "stars": "--",
+                    "stars": "31",
                     "difficulty": "中級"
                 }
             },
@@ -252,18 +252,18 @@
                 "repo": "https://github.com/vercel-labs/agent-skills",
                 "meta": {
                     "lessons": "14 レッスン",
-                    "stars": "16.6k",
+                    "stars": "17.8k",
                     "difficulty": "中級"
                 }
             },
             {
                 "title": "Clawdbot",
                 "desc": "あなたのプライベート AI アシスタント、どこでも使用可能",
-                "link": "/ja/clawdbot/clawdbot/",
-                "repo": "https://github.com/clawdbot/clawdbot",
+                "link": "/ja/moltbot/moltbot/",
+                "repo": "https://github.com/moltbot/moltbot",
                 "meta": {
                     "lessons": "43 レッスン",
-                    "stars": "--",
+                    "stars": "101.4k",
                     "difficulty": "中級"
                 }
             }

@@ -613,15 +613,15 @@ En esta lección has aprendido:
 
 | Función                  | Ruta de archivo                                                                                    | Número de línea    |
 |--- | --- | ---|
-| Explicación del principio de WebChat     | [`docs/web/webchat.md`](https://github.com/clawdbot/clawdbot/blob/main/docs/web/webchat.md) | Archivo completo   |
-| API WebSocket de Gateway | [`src/gateway/protocol/`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/protocol/) | Directorio completo   |
-| Método chat.send        | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 296-380  |
-| Método chat.history     | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 1-295    |
-| Método chat.inject      | [`src/gateway/server-methods/chat.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-methods/chat.ts) | 381-450  |
-| Entrada de Web UI         | [`ui/index.html`](https://github.com/clawdbot/clawdbot/blob/main/ui/index.html) | 1-15     |
-| Configuración de autenticación de Gateway     | [`src/config/zod-schema.core.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/config/zod-schema.core.ts) | 1-100    |
-| Integración de Tailscale       | [`src/gateway/server-startup-log.ts`](https://github.com/clawdbot/clawdbot/blob/main/src/gateway/server-startup-log.ts) | Archivo completo   |
-| Integración de WebChat de macOS  | [`apps/macos/`](https://github.com/clawdbot/clawdbot/blob/main/apps/macos/) | Directorio completo   |
+| Explicación del principio de WebChat     | [`docs/web/webchat.md`](https://github.com/moltbot/moltbot/blob/main/docs/web/webchat.md) | Archivo completo   |
+| API WebSocket de Gateway | [`src/gateway/protocol/`](https://github.com/moltbot/moltbot/blob/main/src/gateway/protocol/) | Directorio completo   |
+| Método chat.send        | [`src/gateway/server-methods/chat.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-methods/chat.ts) | 296-380  |
+| Método chat.history     | [`src/gateway/server-methods/chat.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-methods/chat.ts) | 1-295    |
+| Método chat.inject      | [`src/gateway/server-methods/chat.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-methods/chat.ts) | 381-450  |
+| Entrada de Web UI         | [`ui/index.html`](https://github.com/moltbot/moltbot/blob/main/ui/index.html) | 1-15     |
+| Configuración de autenticación de Gateway     | [`src/config/zod-schema.core.ts`](https://github.com/moltbot/moltbot/blob/main/src/config/zod-schema.core.ts) | 1-100    |
+| Integración de Tailscale       | [`src/gateway/server-startup-log.ts`](https://github.com/moltbot/moltbot/blob/main/src/gateway/server-startup-log.ts) | Archivo completo   |
+| Integración de WebChat de macOS  | [`apps/macos/`](https://github.com/moltbot/moltbot/blob/main/apps/macos/) | Directorio completo   |
 
 **Constantes clave**:
 - `INTERNAL_MESSAGE_CHANNEL = "webchat"`: identificador del canal de mensajes interno de WebChat (de `src/utils/message-channel.ts:17`)

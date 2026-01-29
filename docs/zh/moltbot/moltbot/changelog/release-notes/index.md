@@ -296,15 +296,15 @@ clawdbot message "Hello" --target=<your-channel>
 
 要查看更详细的版本历史和 issue 链接，请访问：
 
-- **GitHub Releases**：https://github.com/clawdbot/clawdbot/releases
+- **GitHub Releases**：https://github.com/moltbot/moltbot/releases
 - **官方文档**：https://docs.clawd.bot
 
 ---
 
 ## 历史版本
 
-查看更早的版本更新，请访问 [GitHub Releases](https://github.com/clawdbot/clawdbot/releases) 或项目根目录的 [CHANGELOG.md](https://github.com/clawdbot/clawdbot/blob/main/CHANGELOG.md)。
+查看更早的版本更新，请访问 [GitHub Releases](https://github.com/moltbot/moltbot/releases) 或项目根目录的 [CHANGELOG.md](https://github.com/moltbot/moltbot/blob/main/CHANGELOG.md)。
 
 ::: tip 参与贡献
-如果你发现了 bug 或有功能建议，欢迎在 [GitHub Issues](https://github.com/clawdbot/clawdbot/issues) 中提交。
+如果你发现了 bug 或有功能建议，欢迎在 [GitHub Issues](https://github.com/moltbot/moltbot/issues) 中提交。
 :::

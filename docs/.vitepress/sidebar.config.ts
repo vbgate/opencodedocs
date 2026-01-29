@@ -16,7 +16,7 @@ import { generateSidebar, VitePressSidebarOptions } from 'vitepress-sidebar'
 // 项目列表
 const projects = [
   'backnotprop/plannotator',
-  'clawdbot/clawdbot',
+  'moltbot/moltbot',
   'code-yeongyu/oh-my-opencode',
   'joshuadavidthomas/opencode-agent-skills',
   'kdcokenny/opencode-notify',
@@ -27,6 +27,7 @@ const projects = [
   'vbgate/opencode-mystatus',
   'lbjlaq/Antigravity-Manager',
   'franlol/opencode-md-table-formatter',
+  'hyz1992/agent-app-factory',
   'vercel-labs/agent-skills',
 ]
 
