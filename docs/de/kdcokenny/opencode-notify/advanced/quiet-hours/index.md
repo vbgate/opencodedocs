@@ -1,54 +1,54 @@
 ---
-title: "Ruhezeiten im Detail: Übergreifende Mitternachtszeiten konfigurieren | opencode-notify Tutorial"
-sidebarTitle: "Keine nächtlichen Störungen"
-subtitle: "Ruhezeiten im Detail: Vermeidung von Störungen zu bestimmten Zeiten"
-description: "Lernen Sie, wie Sie Ruhezeiten in opencode-notify konfigurieren. Unterstützung für übergreifende Mitternachtszeiten (z.B. 22:00-08:00). Verstehen Sie die Funktionsweise von Ruhezeiten, Konfigurationsmethoden und die Interaktion mit intelligenten Filtermechanismen. Beherrschen Sie Zeitformat-Spezifikationen und vermeiden Sie häufige Fehler, um Störungen während der Ruhezeit oder konzentrierter Arbeit zu vermeiden und die Effizienz zu steigern."
+title: "Ruhezeiten im Detail: Konfiguration von Uhrzeiten über Mitternacht für ungestörte Ruhe | opencode-notify Tutorial"
+sidebarTitle: "Keine nächtliche Störungen"
+subtitle: "Ruhezeiten im Detail: Störungen in bestimmten Zeiträumen vermeiden"
+description: "Lerne, wie du Ruhezeiten in opencode-notify konfigurierst, mit Unterstützung für Uhrzeiten über Mitternacht (z. B. 22:00-08:00). Verstehe die Funktionsweise, Konfigurationsmethoden und die Interaktion mit intelligenten Filtermechanismen. Beherrsche Zeitformate und vermeide häufige Fehler, um während der Ruhezeit oder konzentrierter Arbeit ungestört zu bleiben und die Effizienz zu steigern."
 tags:
   - "Konfiguration"
   - "Ruhezeiten"
-  - "Arbeitszeit-Management"
+  - "Arbeitszeitmanagement"
 prerequisite:
   - "start-quick-start"
   - "start-how-it-works"
 order: 80
 ---
 
-# Ruhezeiten im Detail: Vermeidung von Störungen zu bestimmten Zeiten
+# Ruhezeiten im Detail: Störungen in bestimmten Zeiträumen vermeiden
 
-## Was Sie nach diesem Tutorial können
+## Was du lernen wirst
 
-- Ruhezeiten in der Konfigurationsdatei aktivieren, um Störungen während der Ruhezeit zu vermeiden
-- Die Funktionsweise und Zeitberechnungslogik von Ruhezeiten verstehen
-- Übergreifende Mitternachtszeiten konfigurieren (z.B. 22:00 - 08:00)
+- Ruhezeiten in der Konfigurationsdatei aktivieren, um während der Ruhezeit nicht gestört zu werden
+- Die Funktionsweise der Ruhezeiten und die Logik der Zeitberechnung verstehen
+- Uhrzeiten über Mitternacht konfigurieren (z. B. 22:00 - 08:00)
 - Die Prioritätsbeziehung zwischen Ruhezeiten und anderen intelligenten Filtermechanismen verstehen
 
-## Ihr aktuelles Dilemma
+## Dein aktuelles Problem
 
-Möglicherweise haben Sie diese Situation schon erlebt: Sie haben um 22 Uhr eine Aufgabe an die KI delegiert und sich dann zur Ruhe gelegt. Um 2 Uhr nachts beendet die KI die Aufgabe und ein "Ding"-Benachrichtigungsgeräusch weckt Sie. Oder Sie lassen die KI während der Mittagspause einige Dateien verarbeiten, und um 12:05 Uhr ertönt die Benachrichtigung und unterbricht Ihre Pause.
+Vielleicht kennst du diese Situation: Du hast um 22 Uhr eine Aufgabe an die KI delegiert und bist dann zur Ruhe gegangen. Um 2 Uhr nachts hat die KI die Aufgabe abgeschlossen und ein "Ding"-Geräusch hat dich geweckt. Oder du hast der KI während deiner Mittagspause einige Dateien bearbeiten lassen, und um 12:05 Uhr hat die Benachrichtigung deine Pause unterbrochen.
 
-::: info Was sind Ruhezeiten?
-Ruhezeiten sind eine Zeitraum-Konfiguration, innerhalb derer opencode-notify alle Benachrichtigungen stoppt, um Erinnerungen zu vermeiden, die zu Zeiten eintreffen, zu denen Sie nicht gestört werden möchten.
+::: info Was sind Ruhezeiten
+Ruhezeiten sind eine Zeitraum-Konfiguration. In diesen Zeiträumen stoppt opencode-notify das Senden aller Benachrichtigungen, um zu vermeiden, dass du in Zeiten, in denen du nicht gestört werden möchtest, Erinnerungen erhältst.
 :::
 
-## Wann sollten Sie diese Funktion nutzen?
+## Wann du diese Lösung brauchst
 
-- **Nächtliche Ruhe**: 22:00 - 08:00 einstellen, um Störungen während des Schlafens zu vermeiden
-- **Mittagspause**: 12:00 - 13:00 einstellen, um Störungen während der Mittagspause zu vermeiden
-- **Konzentrierte Arbeitszeit**: 09:00 - 12:00 einstellen, um Unterbrechungen durch Benachrichtigungen während von Meetings zu vermeiden
+- **Nachtruhe**: 22:00 - 08:00 einstellen, um nicht im Schlaf gestört zu werden
+- **Mittagspause**: 12:00 - 13:00 einstellen, um während der Mittagspause nicht gestört zu werden
+- **Fokussierte Arbeitszeit**: 09:00 - 12:00 einstellen, um während Meetings nicht durch Benachrichtigungen unterbrochen zu werden
 - **Keine Arbeit am Wochenende**: Das gesamte Wochenende als Ruhezeit einstellen
 
-Ruhezeiten eignen sich am besten zum Schützen Ihrer Ruhe- oder konzentrierten Arbeitszeiten, damit die KI Aufgaben im Hintergrund still erledigen kann, während Sie bereit sind, die Ergebnisse zu überprüfen.
+Ruhezeiten eignen sich am besten, um deine Ruhezeit oder konzentrierte Arbeitszeit zu schützen. Die KI kann die Aufgaben im Hintergrund erledigen, und du kannst die Ergebnisse überprüfen, wenn du bereit bist.
 
-## Kernkonzept
+## Das Konzept
 
-Die Funktionsweise von Ruhezeiten ist einfach:
+Die Funktionsweise der Ruhezeiten ist einfach:
 
-1. **Zeitüberprüfung**: Vor jedem Benachrichtigungsversuch prüft das Plugin, ob die aktuelle Zeit innerhalb der konfigurierten Ruhezeit liegt
-2. **Zeitraum-Unterstützung**: Unterstützt beliebige Zeiträume, einschließlich übergreifender Mitternachtszeiträume (z.B. 22:00 - 08:00)
-3. **Mittlere Priorität**: Die Priorität der Ruhezeit-Überprüfung liegt unter der Eltern-Sitzungs-Überprüfung, aber über der Terminal-Fokus-Erkennung. Wenn es sich um eine untergeordnete Sitzung handelt und `notifyChildSessions` auf false gesetzt ist, wird die Ruhezeit-Überprüfung übersprungen.
+1. **Zeitprüfung**: Bevor eine Benachrichtigung gesendet wird, prüft das Plugin, ob die aktuelle Zeit innerhalb der konfigurierten Ruhezeit liegt
+2. **Unterstützung für Zeiträume**: Unterstützung für beliebige Zeiträume, einschließlich Uhrzeiten über Mitternacht (z. B. 22:00 - 08:00)
+3. **Mittlere Priorität**: Die Prüfung der Ruhezeiten hat eine niedrigere Priorität als die Prüfung der Parent-Sessions, aber eine höhere als die Erkennung des Terminalfokus. Wenn es sich um eine Child-Session handelt und `notifyChildSessions` false ist, wird die Prüfung der Ruhezeiten übersprungen.
 
-::: tip Ruhezeiten vs. Temporäre Deaktivierung
-Ruhezeiten sind **regelmäßig wiederkehrende** Zeitkonfigurationen, wie jeden Abend von 22:00 bis 08:00 Uhr. Wenn Sie Benachrichtigungen **temporär deaktivieren** möchten (z.B. für die nächste Stunde), können Sie `"enabled": false` in der Konfigurationsdatei setzen oder die Konfigurationsdatei löschen, um die Standardwerte zurückzusetzen.
+::: tip Ruhezeiten vs. temporäres Deaktivieren
+Ruhezeiten sind eine **regelmäßig wiederkehrende** Zeitkonfiguration, z. B. jeden Abend von 22 bis 8 Uhr. Wenn du Benachrichtigungen **temporär deaktivieren** möchtest (z. B. die nächste Stunde keine Benachrichtigungen), kannst du `"enabled": false` in der Konfigurationsdatei festlegen oder die Konfigurationsdatei löschen, um zu den Standardwerten zurückzukehren.
 :::
 
 ## Schritt-für-Schritt-Anleitung
@@ -57,7 +57,7 @@ Ruhezeiten sind **regelmäßig wiederkehrende** Zeitkonfigurationen, wie jeden A
 
 Die Konfigurationsdatei befindet sich unter: `~/.config/opencode/kdco-notify.json`
 
-Wenn die Datei nicht existiert, können Sie sie zuerst erstellen:
+Wenn die Datei nicht existiert, kannst du sie zuerst erstellen:
 
 ::: code-group
 
@@ -71,11 +71,11 @@ notepad $env:USERPROFILE\.config\opencode\kdco-notify.json
 
 :::
 
-Sie sollten den Inhalt der Konfigurationsdatei sehen (falls vorhanden) oder eine leere Datei.
+Du solltest den Inhalt der Konfigurationsdatei sehen (wenn sie existiert) oder eine leere Datei.
 
-### Schritt 2: Ruhezeit-Konfiguration hinzufügen
+### Schritt 2: Ruhezeiten-Konfiguration hinzufügen
 
-Fügen Sie den `quietHours`-Abschnitt zur Konfigurationsdatei hinzu oder bearbeiten Sie ihn:
+Füge oder ändere den Abschnitt `quietHours` in der Konfigurationsdatei:
 
 ```json
 {
@@ -87,51 +87,51 @@ Fügen Sie den `quietHours`-Abschnitt zur Konfigurationsdatei hinzu oder bearbei
 }
 ```
 
-**Konfigurationsoptionen-Erklärung**:
+**Erklärung der Konfigurationsoptionen**:
 
-| Option | Typ | Standard | Beschreibung |
+| Option | Typ | Standardwert | Beschreibung |
 | --- | --- | --- | --- |
 | `enabled` | boolean | `false` | Ob Ruhezeiten aktiviert sind |
-| `start` | string | `"22:00"` | Ruhezeit-Startzeit im Format `"HH:MM"` |
-| `end` | string | `"08:00"` | Ruhezeit-Endzeit im Format `"HH:MM"` |
+| `start` | string | `"22:00"` | Ruhezeit-Startzeit, Format `"HH:MM"` |
+| `end` | string | `"08:00"` | Ruhezeit-Endzeit, Format `"HH:MM"` |
 
 ### Schritt 3: Konfigurationsdatei speichern
 
-Speichern Sie die Datei und beenden Sie den Editor.
+Speichere die Datei und beende den Editor.
 
-**Kontrollpunkt ✅**: Führen Sie den folgenden Befehl aus, um zu überprüfen, ob das Format der Konfigurationsdatei korrekt ist:
+**Kontrollpunkt ✅**: Führe den folgenden Befehl aus, um zu überprüfen, ob das Format der Konfigurationsdatei korrekt ist:
 
 ```bash
 cat ~/.config/opencode/kdco-notify.json | jq .
 ```
 
-Sie sollten formatierte JSON-Inhalte sehen, ohne Fehlermeldungen.
+Du solltest formatierten JSON-Inhalt ohne Fehlermeldungen sehen.
 
 ::: tip jq nicht installiert?
-Wenn der Befehl `jq` nicht auf Ihrem System vorhanden ist, können Sie diese Überprüfung überspringen oder den JSON-Inhalt in einen [JSON-Validator](https://jsonlint.com/) im Browser kopieren.
+Wenn das System den Befehl `jq` nicht hat, kannst du diese Überprüfung überspringen oder den JSON-Inhalt in einen [JSON-Validator](https://jsonlint.com/) im Browser kopieren, um ihn zu überprüfen.
 :::
 
 ### Schritt 4: OpenCode neu starten
 
-Nach Änderungen an der Konfigurationsdatei müssen Sie OpenCode neu starten, damit die Änderungen wirksam werden.
+Nach dem Ändern der Konfigurationsdatei musst du OpenCode neu starten, damit die Änderungen wirksam werden.
 
 **Kontrollpunkt ✅**: Nach dem Neustart lädt OpenCode die Konfiguration automatisch neu.
 
 ### Schritt 5: Ruhezeiten testen
 
-Um zu überprüfen, ob die Ruhezeiten funktionieren, können Sie:
+Um zu überprüfen, ob die Ruhezeiten wirksam sind, kannst du:
 
-1. `start` und `end` auf Werte in der Nähe der aktuellen Zeit setzen (z.B. wenn es jetzt 14:00 Uhr ist, auf 13:55 - 14:05 setzen)
-2. Eine einfache Aufgabe an die KI delegieren
-3. Auf die Aufgabenabschluss warten
+1. `start` und `end` auf Werte in der Nähe der aktuellen Zeit einstellen (z. B. wenn es jetzt 14:00 Uhr ist, auf 13:55 - 14:05 einstellen)
+2. Der KI eine einfache Aufgabe delegieren
+3. Warten, bis die Aufgabe abgeschlossen ist
 
-Sie sollten sehen: **Während der Ruhezeit werden keine Benachrichtigungen gesendet**.
+Du solltest sehen: **Während der Ruhezeit erhältst du keine Benachrichtigungen**.
 
-**Hinweis**: Wenn die aktuelle Zeit nicht innerhalb der Ruhezeit liegt oder `enabled` auf `false` gesetzt ist, werden Benachrichtigungen normal empfangen.
+**Hinweis**: Wenn die aktuelle Zeit nicht innerhalb der Ruhezeit liegt oder `enabled` auf `false` gesetzt ist, erhältst du normalerweise Benachrichtigungen.
 
 ### Schritt 6: Auf häufige Konfiguration zurücksetzen
 
-Nach Abschluss des Tests setzen Sie die Konfiguration auf die gewünschte Zeit zurück (z.B. 22:00 - 08:00 Uhr):
+Nach dem Testen ändere die Konfiguration zurück auf häufig verwendete Zeiträume (z. B. 22:00 - 08:00):
 
 ```json
 {
@@ -143,17 +143,17 @@ Nach Abschluss des Tests setzen Sie die Konfiguration auf die gewünschte Zeit z
 }
 ```
 
-Speichern Sie die Konfigurationsdatei und starten Sie OpenCode neu.
+Speichere die Konfigurationsdatei und starte OpenCode neu.
 
-## Fehlerbehebung
+## Häufige Fehler
 
-### Häufiger Fehler 1: Ruhezeiten nicht aktiviert
+### Häufiger Fehler 1: Ruhezeiten vergessen zu aktivieren
 
-**Problem**: `start` und `end` sind konfiguriert, aber Benachrichtigungen werden weiterhin empfangen.
+**Problem**: `start` und `end` sind konfiguriert, aber du erhältst weiterhin Benachrichtigungen.
 
-**Ursache**: Das Feld `enabled` ist auf `false` gesetzt oder nicht vorhanden.
+**Ursache**: Das Feld `enabled` ist `false` oder nicht gesetzt.
 
-**Lösung**: Stellen Sie sicher, dass `enabled` auf `true` gesetzt ist:
+**Lösung**: Stelle sicher, dass `enabled` auf `true` gesetzt ist:
 
 ```json
 {
@@ -167,58 +167,58 @@ Speichern Sie die Konfigurationsdatei und starten Sie OpenCode neu.
 
 ### Häufiger Fehler 2: Falsches Zeitformat
 
-**Problem**: Konfiguration funktioniert nicht oder es gibt Fehler beim Start.
+**Problem**: Die Konfiguration wirkt sich nicht aus, oder beim Starten tritt ein Fehler auf.
 
-**Ursache**: Zeitformat ist nicht `"HH:MM"`, oder es wird das 12-Stunden-Format (AM/PM) verwendet.
+**Ursache**: Das Zeitformat ist nicht `"HH:MM"` oder verwendet das 12-Stunden-Format (AM/PM).
 
 **Falsches Beispiel**:
 ```json
 {
   "start": "10 PM",  // ❌ Fehler: AM/PM nicht unterstützt
-  "end": "8:00"      // ⚠️ Funktioniert, aber "08:00" für Konsistenz empfohlen
+  "end": "8:00"      // ⚠️ Funktioniert, aber empfiehlt "08:00" für Konsistenz
 }
 ```
 
 **Richtiges Beispiel**:
 ```json
 {
-  "start": "22:00",  // ✅ Richtig: 24-Stunden-Format, führende Nullen empfohlen
-  "end": "08:00"     // ✅ Richtig: 24-Stunden-Format, führende Nullen empfohlen
+  "start": "22:00",  // ✅ Korrekt: 24-Stunden-Format, führende Nullen empfohlen
+  "end": "08:00"     // ✅ Korrekt: 24-Stunden-Format, führende Nullen empfohlen
 }
 ```
 
-### Häufiger Fehler 3: Missverständnis bei übergreifenden Mitternachtszeiten
+### Häufiger Fehler 3: Missverständnis von Uhrzeiten über Mitternacht
 
-**Problem**: 22:00 - 08:00 ist eingestellt, aber tagsüber werden bestimmte Zeiträume ebenfalls stumm geschaltet.
+**Problem**: 22:00 - 08:00 sind eingestellt, aber bestimmte Tageszeiten werden ebenfalls stummgeschaltet.
 
-**Ursache**: Irrtümliche Annahme, dass `start` kleiner als `end` sein muss, führt zu Fehlern bei der Zeitraumberechnung.
+**Ursache**: Falsche Annahme, dass `start` kleiner als `end` sein muss, was zu falscher Zeitraum-Berechnung führt.
 
 **Richtiges Verständnis**:
-- 22:00 - 08:00 bedeutet: **22:00 Uhr abends bis 08:00 Uhr morgens am nächsten Tag**
-- Dies ist ein übergreifender Mitternachtszeitraum, das Plugin erkennt dies automatisch
-- Nicht 08:00 - 22:00 (bei dieser Einstellung würde der gesamte Tag stumm geschaltet)
+- 22:00 - 08:00 bedeutet: **22 Uhr abends bis 8 Uhr morgens am nächsten Tag**
+- Dies ist ein Zeitraum über Mitternacht, den das Plugin automatisch erkennt
+- Nicht 08:00 - 22:00 (wenn du so einstellst, wird der gesamte Tag stummgeschaltet)
 
-::: tip Überprüfung übergreifender Mitternachtszeiträume
-Wenn Sie überprüfen möchten, ob übergreifende Mitternachtszeiträume korrekt konfiguriert sind, können Sie in der Konfigurationsdatei einen kurzen Testzeitraum (z.B. 10 Minuten) einstellen und beobachten, ob innerhalb des erwarteten Zeitraums keine Benachrichtigungen empfangen werden.
+::: tip Überprüfung von Uhrzeiten über Mitternacht
+Wenn du überprüfen möchtest, ob Uhrzeiten über Mitternacht korrekt konfiguriert sind, kannst du einen kurzen Testzeitraum in der Konfigurationsdatei festlegen (z. B. 10 Minuten) und dann beobachten, ob du keine Benachrichtigungen im erwarteten Zeitraum erhältst.
 :::
 
 ### Häufiger Fehler 4: OpenCode nicht neu gestartet
 
-**Problem**: Nach Änderungen an der Konfigurationsdatei arbeiten Ruhezeiten weiterhin mit der alten Konfiguration.
+**Problem**: Nach dem Ändern der Konfigurationsdatei arbeiten die Ruhezeiten weiterhin mit der alten Konfiguration.
 
-**Ursache**: Die Konfigurationsdatei wird einmal beim Plugin-Start geladen und überwacht keine Echtzeit-Änderungen der Datei.
+**Ursache**: Die Konfigurationsdatei wird beim Start des Plugins einmal geladen und überwacht keine Dateiänderungen in Echtzeit.
 
-**Lösung**: Nach jeder Änderung der Konfigurationsdatei muss OpenCode neu gestartet werden, damit die Änderungen wirksam werden.
+**Lösung**: Nach jedem Ändern der Konfigurationsdatei musst du OpenCode neu starten, damit die Änderungen wirksam werden.
 
 ## Beziehung zwischen Ruhezeiten und anderen Filtermechanismen
 
-Die Position von Ruhezeiten im intelligenten Filtermechanismus:
+Die Position der Ruhezeiten im intelligenten Filtermechanismus:
 
 ```mermaid
 graph TD
-    A[OpenCode Ereignis ausgelöst] --> B{Ist Eltern-Sitzung?}
+    A[OpenCode-Event ausgelöst] --> B{Ist es eine Parent-Session?}
     B -->|Nein| C[🚫 Keine Benachrichtigung]
-    B -->|Ja| D{Ist Ruhezeit?}
+    B -->|Ja| D{Ist es Ruhezeit?}
     D -->|Ja| C
     D -->|Nein| E{Ist Terminal fokussiert?}
     E -->|Ja| C
@@ -227,19 +227,19 @@ graph TD
 
 **Wichtige Punkte**:
 
-1. **Mittlere Priorität der Ruhezeit**: Die Eltern-Sitzungs-Überprüfung hat die höchste Priorität, gefolgt von der Ruhezeit. Wenn es sich um eine untergeordnete Sitzung handelt und `notifyChildSessions` auf false gesetzt ist, wird die Ruhezeit-Überprüfung übersprungen. Nach bestandener Eltern-Sitzungs-Überprüfung wird keine Benachrichtigung gesendet, unabhängig davon, ob das Terminal fokussiert ist, solange es sich in der Ruhezeit befindet.
-2. **Unabhängig von Terminal-Fokus-Erkennung**: Selbst wenn das Terminal nicht fokussiert ist, werden innerhalb der Ruhezeit keine Benachrichtigungen gesendet
-3. **Ausführungsreihenfolge**: Die Eltern-Sitzungs-Überprüfung erfolgt vor der Ruhezeit. Wenn die Eltern-Sitzungs-Überprüfung bestanden ist (d.h. es handelt sich um eine Eltern-Sitzung oder `notifyChildSessions` ist auf true gesetzt), wird die Ruhezeit-Überprüfung fortgesetzt.
+1. **Mittlere Priorität der Ruhezeiten**: Die Prüfung der Parent-Sessions hat die höchste Priorität, gefolgt von den Ruhezeiten. Wenn es sich um eine Child-Session handelt und `notifyChildSessions` false ist, wird die Prüfung der Ruhezeiten übersprungen. Nach Bestehen der Parent-Sessions-Prüfung werden jedoch keine Benachrichtigungen gesendet, egal ob das Terminal fokussiert ist oder nicht, solange es sich um Ruhezeiten handelt.
+2. **Unabhängig von Terminalfokus-Erkennung**: Auch wenn das Terminal nicht fokussiert ist, werden während der Ruhezeiten keine Benachrichtigungen gesendet
+3. **Ausführungsreihenfolge**: Die Prüfung der Parent-Sessions wird vor der Prüfung der Ruhezeiten ausgeführt. Nur wenn die Prüfung der Parent-Sessions bestanden ist (d. h. es handelt sich um eine Parent-Session oder `notifyChildSessions` ist true), wird die Prüfung der Ruhezeiten fortgesetzt.
 
-::: warning Besonderer Fall: Berechtigungsanfragen und Fragen
-Berechtigungsanfragen (`permission.updated`) und Fragen (`tool.execute.before`) werden im Quellcode **ebenfalls durch Ruhezeiten eingeschränkt**. Dies bedeutet, dass innerhalb der Ruhezeit keine Benachrichtigungen gesendet werden, auch wenn die KI auf Ihre Autorisierung oder Antwort wartet.
+::: warning Sonderfall: Berechtigungsanfragen und Fragen
+Berechtigungsanfragen (`permission.updated`) und Fragen (`tool.execute.before`) werden im Quellcode **ebenfalls durch Ruhezeiten eingeschränkt**. Das bedeutet, dass während der Ruhezeiten auch dann keine Benachrichtigungen gesendet werden, wenn die KI blockiert ist und auf deine Autorisierung oder Antwort wartet.
 :::
 
 ## Häufige Konfigurationsbeispiele
 
-### Beispiel 1: Nächtliche Ruhe
+### Beispiel 1: Nachtruhe
 
-Konfigurieren Sie 22:00 Uhr bis 08:00 Uhr als Ruhezeit:
+Konfiguriere Ruhezeiten von 22 Uhr abends bis 8 Uhr morgens:
 
 ```json
 {
@@ -253,7 +253,7 @@ Konfigurieren Sie 22:00 Uhr bis 08:00 Uhr als Ruhezeit:
 
 ### Beispiel 2: Mittagspause
 
-Konfigurieren Sie 12:00 Uhr bis 13:00 Uhr als Ruhezeit:
+Konfiguriere Ruhezeiten von 12 Uhr mittags bis 13 Uhr nachmittags:
 
 ```json
 {
@@ -265,9 +265,9 @@ Konfigurieren Sie 12:00 Uhr bis 13:00 Uhr als Ruhezeit:
 }
 ```
 
-### Beispiel 3: Konzentrierte Arbeitszeit
+### Beispiel 3: Fokussierte Arbeitszeit
 
-Konfigurieren Sie 09:00 Uhr bis 12:00 Uhr als Ruhezeit (z.B. um während Meetings nicht durch Benachrichtigungen unterbrochen zu werden):
+Konfiguriere Ruhezeiten von 9 Uhr morgens bis 12 Uhr mittags (z. B. um während Meetings nicht durch Benachrichtigungen gestört zu werden):
 
 ```json
 {
@@ -281,7 +281,7 @@ Konfigurieren Sie 09:00 Uhr bis 12:00 Uhr als Ruhezeit (z.B. um während Meeting
 
 ### Beispiel 4: Vollständige Konfiguration
 
-Verwendung von Ruhezeiten zusammen mit anderen Konfigurationsoptionen:
+Ruhezeiten zusammen mit anderen Konfigurationsoptionen verwenden:
 
 ```json
 {
@@ -304,66 +304,66 @@ Verwendung von Ruhezeiten zusammen mit anderen Konfigurationsoptionen:
 
 ## Zusammenfassung
 
-Ruhezeiten sind eine wichtige Funktion von opencode-notify, um Störungen zu bestimmten Zeiten zu vermeiden:
+Ruhezeiten sind eine wichtige Funktion von opencode-notify, um Störungen in bestimmten Zeiträumen zu vermeiden:
 
-1. **Konfigurationsmethode**: Konfigurieren Sie den `quietHours`-Abschnitt in `~/.config/opencode/kdco-notify.json`
-2. **Zeitformat**: Verwenden Sie das 24-Stunden-Format `"HH:MM"`, z.B. `"22:00"` und `"08:00"`
-3. **Übergreifende Mitternachts-Unterstützung**: Unterstützung für übergreifende Mitternachtszeiträume, z.B. `"22:00" - "08:00"` bedeutet 22:00 Uhr abends bis 08:00 Uhr am nächsten Morgen
-4. **Ausführungsreihenfolge**: Eltern-Sitzungs-Überprüfung → Ruhezeit → Terminal-Fokus-Erkennung. Ruhezeiten werden erst wirksam, nachdem die Eltern-Sitzungs-Überprüfung bestanden wurde
-5. **Neustart erforderlich**: Nach Änderungen an der Konfigurationsdatei muss OpenCode neu gestartet werden, damit die Änderungen wirksam werden
+1. **Konfigurationsmethode**: Konfiguriere den Abschnitt `quietHours` in `~/.config/opencode/kdco-notify.json`
+2. **Zeitformat**: Verwende das 24-Stunden-Format `"HH:MM"`, z. B. `"22:00"` und `"08:00"`
+3. **Unterstützung über Mitternacht**: Unterstützung für Zeiträume über Mitternacht, z. B. `"22:00" - "08:00"` bedeutet 22 Uhr abends bis 8 Uhr morgens am nächsten Tag
+4. **Ausführungsreihenfolge**: Parent-Sessions-Prüfung → Ruhezeiten → Terminalfokus-Erkennung. Ruhezeiten werden erst nach Bestehen der Parent-Sessions-Prüfung wirksam
+5. **Neustart erforderlich**: Nach dem Ändern der Konfigurationsdatei muss OpenCode neu gestartet werden, damit die Änderungen wirksam werden
 
-Durch eine sinnvolle Konfiguration der Ruhezeiten können Sie die KI während der Ruhezeit oder konzentrierter Arbeit im Hintergrund still ihre Aufgaben erledigen lassen, und die Ergebnisse überprüfen, wenn Sie bereit sind.
+Durch eine angemessene Konfiguration der Ruhezeiten kannst du die KI während der Ruhezeit oder konzentrierter Arbeit im Hintergrund Aufgaben erledigen lassen und die Ergebnisse überprüfen, wenn du bereit bist.
 
-## Nächste Lektion
+## Vorschau auf die nächste Lektion
 
-> In der nächsten Lektion lernen Sie **[Terminal-Erkennungsprinzip](../terminal-detection/)**.
+> In der nächsten Lektion lernen wir die **[Terminalerkennungs-Prinzipien](../terminal-detection/)**.
 >
-> Sie werden lernen:
-> - Wie opencode-notify automatisch Ihr verwendetes Terminal erkennt
+> Du wirst lernen:
+> - Wie opencode-notify automatisch dein verwendetes Terminal erkennt
 > - Die Liste der unterstützten 37+ Terminal-Emulatoren
-> - Methoden zur manuellen Angabe des Terminal-Typs
-> - Das Implementierungsprinzip der macOS-Fokus-Erkennung
+> - Die Methode zum manuellen Festlegen des Terminal-Typs
+> - Die Implementierungsprinzipien der macOS-Fokus-Erkennung
 
 ---
 
 ## Anhang: Quellcode-Referenz
 
 <details>
-<summary><strong>Klicken Sie zum Aufklappen, um die Quellcode-Position anzuzeigen</strong></summary>
+<summary><strong>Klicken zum Anzeigen der Quellcode-Pfade</strong></summary>
 
-> Aktualisiert am: 2026-01-27
+> Aktualisiert: 2026-01-27
 
-| Funktion | Dateipfad | Zeilennummer |
+| Funktion | Dateipfad | Zeilen |
 | --- | --- | --- |
-| Ruhezeit-Überprüfung | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L181-L199) | 181-199 |
-| Konfigurations-Schnittstellen-Definition | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L30-L48) | 30-48 |
-| Standard-Konfiguration | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L56-L68) | 56-68 |
-| Ruhezeit-Überprüfung bei Aufgabenabschluss | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L262) | 262 |
-| Ruhezeit-Überprüfung bei Fehlerbenachrichtigung | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L300) | 300 |
-| Ruhezeit-Überprüfung bei Berechtigungsanfrage | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L323) | 323 |
-| Ruhezeit-Überprüfung bei Fragen | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L341) | 341 |
+| Ruhezeiten-Prüfung | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L181-L199) | 181-199 |
+| Konfigurationsschnittstellen-Definition | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L30-L48) | 30-48 |
+| Standardkonfiguration | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L56-L68) | 56-68 |
+| Ruhezeiten-Prüfung in Aufgabenabschluss-Behandlung | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L262) | 262 |
+| Ruhezeiten-Prüfung in Fehlerbenachrichtigungs-Behandlung | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L300) | 300 |
+| Ruhezeiten-Prüfung in Berechtigungsanfragen-Behandlung | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L323) | 323 |
+| Ruhezeiten-Prüfung in Fragen-Behandlung | [`src/notify.ts`](https://github.com/kdcokenny/opencode-notify/blob/main/src/notify.ts#L341) | 341 |
 
 **Wichtige Konstanten**:
 
-- `DEFAULT_CONFIG.quietHours`: Standard-Ruhezeit-Konfiguration (Zeilen 63-67)
-  - `enabled: false`: Ruhezeiten standardmäßig deaktiviert
+- `DEFAULT_CONFIG.quietHours`: Standardkonfiguration für Ruhezeiten (Zeilen 63-67)
+  - `enabled: false`: Ruhezeiten standardmäßig nicht aktiviert
   - `start: "22:00"`: Standard-Ruhezeit-Startzeit
   - `end: "08:00"`: Standard-Ruhezeit-Endzeit
 
 **Wichtige Funktionen**:
 
-- `isQuietHours(config: NotifyConfig): boolean`: Überprüft, ob die aktuelle Zeit innerhalb der Ruhezeit liegt (Zeilen 181-199)
-  - Überprüft zunächst, ob `config.quietHours.enabled` auf `true` gesetzt ist
+- `isQuietHours(config: NotifyConfig): boolean`: Prüft, ob die aktuelle Zeit innerhalb der Ruhezeiten liegt (Zeilen 181-199)
+  - Prüft zuerst, ob `config.quietHours.enabled` `true` ist
   - Konvertiert die aktuelle Zeit in Minuten
   - Konvertiert Start- und Endzeit in Minuten
-  - Verarbeitet übergreifende Mitternachtszeiträume (`startMinutes > endMinutes`)
-  - Gibt `true` zurück, wenn innerhalb der Ruhezeit, `false` wenn nicht
+  - Verarbeitet Zeiträume über Mitternacht (`startMinutes > endMinutes`)
+  - Gibt `true` zurück, wenn die Zeit innerhalb der Ruhezeiten liegt, `false` wenn nicht
 
 **Geschäftsregeln**:
 
-- BR-1-3: Keine Benachrichtigungen während der Ruhezeit (`notify.ts:262`)
-- BR-3-2: Ruhezeiten unterstützen übergreifende Mitternachtszeiträume (z.B. 22:00-08:00) (`notify.ts:193-196`)
-- BR-4-1: Keine Benachrichtigung, wenn die aktuelle Zeit innerhalb der Ruhezeit liegt (`notify.ts:182-198`)
-- BR-4-2: Unterstützung für übergreifende Mitternachtszeiträume (z.B. 22:00-08:00) (`notify.ts:194-196`)
+- BR-1-3: Keine Benachrichtigungen während Ruhezeiten (`notify.ts:262`)
+- BR-3-2: Ruhezeiten unterstützen Zeiträume über Mitternacht (z. B. 22:00-08:00) (`notify.ts:193-196`)
+- BR-4-1: Keine Benachrichtigungen, wenn aktuelle Zeit in Ruhezeiten liegt (`notify.ts:182-198`)
+- BR-4-2: Unterstützung für Zeiträume über Mitternacht (z. B. 22:00-08:00) (`notify.ts:194-196`)
 
 </details>

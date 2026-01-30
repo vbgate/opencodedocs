@@ -616,3 +616,168 @@ const finalConfig = {
 | ui | Уведомления пользователя | state, logger, prompts | strategies, commands |
 | prompts | Управление промптами | - | hooks, messages, strategies |
 | logger | Система логирования | - | index, config, hooks, strategies, state, ui, commands |
+
+## Полная цепочка вызовов
+
+### Процесс автоматической обрезки
+
+```mermaid
+sequenceDiagram
+    participant User as Пользователь
+    participant OC as OpenCode
+    participant Hook as Message Transform Hook
+    participant State as State Manager
+    participant Cache as Tool Cache
+    participant Dedup as Deduplication
+    participant SupW as SupersedeWrites
+    participant Purge as PurgeErrors
+    participant Pruner as Message Pruner
+    participant Inject as Context Injector
+    participant LLM as LLM
+
+    User->>OC: Отправка сообщения
+    OC->>Hook: Срабатывание experimental.chat.messages.transform
+    Hook->>State: Проверка сессии
+    Hook->>Cache: Синхронизация кэша инструментов
+    Cache->>Cache: Сканирование сообщений, запись метаданных
+    Hook->>Dedup: Выполнение дедупликации
+    Dedup->>Dedup: Группировка по сигнатуре, пометка старых вызовов
+    Hook->>SupW: Выполнение замещения записей
+    SupW->>SupW: Обнаружение записи, перезаписанной чтением, пометка операции записи
+    Hook->>Purge: Выполнение очистки ошибок
+    Purge->>Purge: Обнаружение устаревших ошибок, пометка для обрезки
+    Hook->>Pruner: Обрезка содержимого
+    Pruner->>Pruner: Замена на плейсхолдеры
+    Hook->>Inject: Инъекция списка инструментов
+    Inject->>Inject: Генерация <prunable-tools>
+    Hook->>OC: Возврат трансформированных сообщений
+    OC->>LLM: Отправка оптимизированного контекста
+    LLM->>OC: Возврат ответа
+```
+
+### Процесс обрезки, управляемой LLM
+
+```mermaid
+sequenceDiagram
+    participant AI as AI Assistant
+    participant Tool as DCP Tools
+    participant State as State Manager
+    participant Inject as Context Injector
+    participant UI as UI Notification
+
+    AI->>AI: Чтение <prunable-tools> в контексте
+    AI->>Tool: Вызов discard({ids: ["completion", 0, 1]})
+    Tool->>State: Валидация ID, обновление prune.toolIds
+    Tool->>State: Накопление статистики токенов
+    Tool->>UI: Отправка ignored message
+    UI->>UI: Отображение результата обрезки
+    Tool->>State: Персистентность состояния
+    Tool->>AI: Возврат успеха
+
+    Note over AI: Следующий ход диалога
+    Inject->>Inject: Инъекция сообщения о периоде ожидания
+    AI->>AI: Получение подсказки о периоде ожидания, избежание последовательной обрезки
+```
+
+## Соображения производительности
+
+### Ограничения кэша инструментов
+
+- Максимальная ёмкость: 1000 записей (`MAX_TOOL_CACHE_SIZE`)
+- Стратегия очистки: FIFO (первым пришёл — первым ушёл)
+- Условие срабатывания: Проверка размера после каждой синхронизации
+
+### Система логирования
+
+- Отладочные логи: `~/.config/opencode/logs/dcp/daily/YYYY-MM-DD.log`
+- Снимки контекста: `~/.config/opencode/logs/dcp/context/{sessionId}/`
+- Уровень логирования: Настраиваемый (`config.debug`)
+
+### Обнаружение субагента
+
+- Метод обнаружения: Проверка наличия `session.parentID`
+- Стратегия обработки: Пропуск всех операций обрезки (избежание повторной обрезки)
+
+## Итоги урока
+
+Архитектура DCP построена вокруг концепции «трансформации сообщений» и бесшовно интегрируется с потоком диалога через систему хуков OpenCode. Система использует модульную архитектуру с чётким разделением ответственности:
+
+- **Точка входа плагина** (`index.ts`) отвечает за регистрацию хуков и инструментов
+- **Система хуков** (`hooks.ts`) отвечает за диспетчеризацию и планирование событий
+- **Управление состоянием** (`state/`) отвечает за состояние на уровне сессии и персистентность
+- **Обработка сообщений** (`messages/`) отвечает за фактическую обрезку и инъекцию
+- **Стратегии обрезки** (`strategies/`) определяют правила автоматической очистки
+- **Командная система** (`commands/`) предоставляет ручное управление
+- **Система конфигурации** (`config.ts`) поддерживает многоуровневую конфигурацию
+
+Весь процесс выполняется в хуке `experimental.chat.messages.transform`: синхронизация кэша инструментов → выполнение автоматических стратегий → обрезка содержимого → инъекция списка инструментов. Такой дизайн гарантирует, что DCP завершает оптимизацию до того, как LLM увидит контекст, сохраняя при этом поддерживаемость и расширяемость плагина.
+
+---
+
+## Приложение: Справочник по исходному коду
+
+<details>
+<summary><strong>Нажмите, чтобы развернуть расположение исходного кода</strong></summary>
+
+> Дата обновления: 2026-01-23
+
+| Функциональность | Путь к файлу | Строки |
+| --- | --- | --- |
+| Точка входа плагина и регистрация хуков | [`index.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/index.ts) | 12-102 |
+| Хук инъекции системного промпта | [`lib/hooks.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/hooks.ts) | 20-53 |
+| Хук трансформации сообщений | [`lib/hooks.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/hooks.ts) | 55-82 |
+| Хук перехвата команд | [`lib/hooks.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/hooks.ts) | 84-156 |
+| Управление состоянием сессии | [`lib/state/state.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/state/state.ts) | 7-143 |
+| Синхронизация кэша инструментов | [`lib/state/tool-cache.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/state/tool-cache.ts) | 11-86 |
+| Персистентность состояния | [`lib/state/persistence.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/state/persistence.ts) | - |
+| Обрезка сообщений | [`lib/messages/prune.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/messages/prune.ts) | 11-106 |
+| Инъекция контекста | [`lib/messages/inject.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/messages/inject.ts) | 102-157 |
+| Стратегия дедупликации | [`lib/strategies/deduplication.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/deduplication.ts) | 13-83 |
+| Стратегия замещения записей | [`lib/strategies/supersede-writes.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/supersede-writes.ts) | - |
+| Стратегия очистки ошибок | [`lib/strategies/purge-errors.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/purge-errors.ts) | - |
+| Инструменты, управляемые LLM | [`lib/strategies/tools.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/strategies/tools.ts) | - |
+| Команда Context | [`lib/commands/context.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/commands/context.ts) | - |
+| Команда Stats | [`lib/commands/stats.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/commands/stats.ts) | - |
+| Команда Sweep | [`lib/commands/sweep.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/commands/sweep.ts) | - |
+| Управление конфигурацией | [`lib/config.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/config.ts) | - |
+| Система логирования | [`lib/logger.ts`](https://github.com/Opencode-DCP/opencode-dynamic-context-pruning/blob/main/lib/logger.ts) | - |
+
+**Ключевые константы**:
+- `MAX_TOOL_CACHE_SIZE = 1000`: Максимальная ёмкость кэша инструментов, предотвращает неограниченный рост памяти (`lib/state/tool-cache.ts:6`)
+
+**Ключевые функции**:
+- `createSystemPromptHandler()`: Создаёт хук инъекции системного промпта, отвечает за описание доступных инструментов обрезки для AI (`lib/hooks.ts:20-53`)
+- `createChatMessageTransformHandler()`: Создаёт хук трансформации сообщений, является центральным диспетчером DCP, координирует управление состоянием, выполнение стратегий, обрезку сообщений и инъекцию контекста (`lib/hooks.ts:55-82`)
+- `syncToolCache()`: Синхронизирует кэш параметров инструментов, записывает метаданные каждого вызова инструмента (callID, параметры, статус, номер хода) для последующих стратегий обрезки (`lib/state/tool-cache.ts:11-86`)
+- `deduplicate()`: Стратегия дедупликации, идентифицирует повторяющиеся вызовы инструментов по сигнатуре, сохраняет самый новый (`lib/strategies/deduplication.ts:13-83`)
+- `supersedeWrites()`: Стратегия замещения записей, очищает входные данные операций записи, перезаписанных последующим чтением (`lib/strategies/supersede-writes.ts`)
+- `purgeErrors()`: Стратегия очистки ошибок, очищает входные параметры устаревших ошибочных инструментов (`lib/strategies/purge-errors.ts`)
+- `prune()`: Главная функция обрезки сообщений, вызывает три подфункции для обрезки выходных данных инструментов, входных данных инструментов и ошибочных входных данных соответственно (`lib/messages/prune.ts:11-20`)
+- `insertPruneToolContext()`: Инъектирует список `<prunable-tools>` в контекст, предоставляя AI информацию об инструментах, доступных для обрезки (`lib/messages/inject.ts:102-157`)
+- `createDiscardTool()`: Создаёт спецификацию инструмента discard, позволяет AI удалять выходные данные завершённых задач или шумовых инструментов (`lib/strategies/tools.ts`)
+- `createExtractTool()`: Создаёт спецификацию инструмента extract, позволяет AI извлекать ключевые находки и затем удалять исходные выходные данные инструментов (`lib/strategies/tools.ts`)
+- `createSessionState()`: Создаёт новый объект состояния сессии, инициализирует все поля состояния (`lib/state/state.ts:42-60`)
+- `ensureSessionInitialized()`: Обеспечивает инициализацию сессии, обрабатывает переключение сессии, обнаружение субагента, загрузку состояния (`lib/state/state.ts:80-116`)
+
+**Ключевые структуры данных**:
+- `SessionState`: Runtime-состояние на уровне сессии, содержит sessionId, список обрезки, статистику, кэш инструментов, счётчик ходов и т.д. (`lib/state/types.ts:27-38`)
+- `ToolParameterEntry`: Кэш метаданных отдельного вызова инструмента, содержит имя инструмента, параметры, статус, сообщение об ошибке, номер хода (`lib/state/types.ts:10-16`)
+- `Prune`: Состояние обрезки, записывает список ID вызовов инструментов, помеченных для обрезки (`lib/state/types.ts:23-25`)
+- `SessionStats`: Статистика сессии, содержит количество обрезанных токенов в текущей сессии и накопленное количество за всё время (`lib/state/types.ts:18-21`)
+
+**Ключевые определения типов**:
+- `ToolStatus`: Перечисление статусов выполнения инструмента, включает pending (ожидание выполнения), running (выполняется), completed (завершён), error (ошибка) (`lib/state/types.ts:8`)
+
+</details>
+
+---
+
+## Анонс следующего урока
+
+> В следующем уроке мы изучим **[Принципы расчёта токенов](../token-calculation/)**.
+>
+> Вы узнаете:
+> - Как DCP точно рассчитывает использование токенов
+> - Методы расчёта для разных типов сообщений (System, User, Assistant, Tools)
+> - Механизм накопления статистики экономии токенов
+> - Как отлаживать проблемы с расчётом токенов

@@ -1,8 +1,8 @@
 ---
-title: "Compatibilité des plugins : Résoudre les conflits courants | Antigravity Auth"
-sidebarTitle: "Que faire en cas de conflit"
+title: "Compatibilité des plugins : résoudre les conflits courants | Antigravity Auth"
+sidebarTitle: "Que faire en cas de conflits de plugins"
 subtitle: "Résoudre les problèmes de compatibilité avec d'autres plugins"
-description: "Apprenez à résoudre les problèmes de compatibilité d'Antigravity Auth avec oh-my-opencode, DCP et autres plugins. Configurez l'ordre correct des plugins et désactivez les méthodes d'authentification conflictuelles."
+description: "Apprenez à résoudre les problèmes de compatibilité entre Antigravity Auth et des plugins comme oh-my-opencode, DCP, etc. Configurez l'ordre correct des plugins et désactivez les méthodes d'authentification en conflit."
 tags:
   - "FAQ"
   - "Configuration des plugins"
@@ -19,10 +19,10 @@ order: 4
 
 La **compatibilité des plugins** est un problème courant lors de l'utilisation d'Antigravity Auth. Différents plugins peuvent entrer en conflit, entraînant des échecs d'authentification, la perte de thinking blocks ou des erreurs de format de requête. Ce tutoriel vous aide à résoudre les problèmes de compatibilité avec oh-my-opencode, DCP et autres plugins.
 
-## Ce que vous apprendrez
+## Ce que vous pourrez faire après avoir appris
 
 - Configurer correctement l'ordre de chargement des plugins pour éviter les problèmes avec DCP
-- Désactiver les méthodes d'authentification conflictuelles dans oh-my-opencode
+- Désactiver les méthodes d'authentification en conflit dans oh-my-opencode
 - Identifier et supprimer les plugins inutiles
 - Activer le décalage PID pour les scénarios d'agents parallèles
 
@@ -58,7 +58,7 @@ oh-my-opencode intercepte toutes les requêtes de modèles Google et utilise sa 
 
 **Explication de la configuration** :
 
-| Option | Valeur | Description |
+| Paramètre | Valeur | Description |
 | --- | --- | --- |
 | `google_auth` | `false` | Désactive l'authentification Google intégrée d'oh-my-opencode |
 | `agents.<agent-name>.model` | `google/antigravity-*` | Remplace le modèle Agent par un modèle Antigravity |
@@ -175,8 +175,8 @@ Vérifiez régulièrement la liste des plugins dans `config.json` et supprimez l
 
 | Type de plugin | Exemple | Raison |
 | --- | --- | --- |
-| **Plugins gemini-auth** | `opencode-gemini-auth`, `@username/gemini-auth` | Antigravity Auth gère déjà tous les OAuth Google |
-| **Plugins d'authentification Claude** | `opencode-claude-auth` | Antigravity Auth n'utilise pas l'authentification Claude |
+| **Plugin gemini-auth** | `opencode-gemini-auth`, `@username/gemini-auth` | Antigravity Auth gère déjà tous les OAuth Google |
+| **Plugin d'authentification Claude** | `opencode-claude-auth` | Antigravity Auth n'utilise pas l'authentification Claude |
 
 **Solution** :
 
