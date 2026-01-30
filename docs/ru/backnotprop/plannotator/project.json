@@ -1,0 +1,150 @@
+{
+    "project": {
+        "name": "plannotator",
+        "tagline": "Инструмент проверки планов и кода с ИИ",
+        "description": "Интерактивные инструменты проверки планов и кода для Claude Code и OpenCode с поддержкой визуальных комментариев, командной работы, обмена по URL и интеграцией со сторонними приложениями для заметок. Локальная работа, безопасность данных, обмен содержимым без сервера.",
+        "github_url": "https://github.com/backnotprop/plannotator"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Быстрый старт",
+            "link": "/ru/backnotprop/plannotator/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "Почему Plannotator?",
+        "subtitle": "Визуальная проверка планов и кода, генерируемых ИИ, точная обратная связь, командная работа.",
+        "list": [
+            {
+                "title": "Визуальная проверка планов",
+                "desc": "Просматривайте планы, сгенерированные ИИ, в браузере, давайте точную обратную связь с помощью комментариев на удаление, замену, вставку и обсуждение."
+            },
+            {
+                "title": "Визуализация проверки кода",
+                "desc": "Git diff side-by-side или unified представление, поддержка комментариев на уровне строк и предложений кода."
+            },
+            {
+                "title": "Мультиплатформенная поддержка",
+                "desc": "Поддержка Claude Code и OpenCode, бесшовная интеграция в существующий рабочий процесс разработки."
+            },
+            {
+                "title": "Обмен по URL без бэкенда",
+                "desc": "Сжатие в URL hash, возможность обмена содержимым проверки с членами команды без сервера."
+            },
+            {
+                "title": "Инструменты аннотирования изображений",
+                "desc": "Прикрепляйте изображения и используйте кисть, стрелки, круг для аннотирования, усиливая выражение обратной связи."
+            },
+            {
+                "title": "Интеграция со сторонними заметками",
+                "desc": "Утверждённые планы автоматически сохраняются в Obsidian или Bear с frontmatter и тегами."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Содержание курса",
+        "subtitle": "4 главы, 17 уроков",
+        "sections": [
+            {
+                "title": "Быстрый старт",
+                "items": [
+                    {
+                        "title": "Быстрый старт",
+                        "desc": "Узнайте, что такое Plannotator, и выполните первое использование за 5 минут",
+                        "link": "/ru/backnotprop/plannotator/start/getting-started/"
+                    },
+                    {
+                        "title": "Установка плагина Claude Code",
+                        "desc": "Установка и настройка плагина Plannotator в Claude Code",
+                        "link": "/ru/backnotprop/plannotator/start/installation-claude-code/"
+                    },
+                    {
+                        "title": "Установка плагина OpenCode",
+                        "desc": "Установка и настройка плагина Plannotator в OpenCode",
+                        "link": "/ru/backnotprop/plannotator/start/installation-opencode/"
+                    }
+                ]
+            },
+            {
+                "title": "Основные функции",
+                "items": [
+                    {
+                        "title": "Основы проверки планов",
+                        "desc": "Визуальная проверка планов, генерируемых ИИ, одобрение или отклонение",
+                        "link": "/ru/backnotprop/plannotator/platforms/plan-review-basics/"
+                    },
+                    {
+                        "title": "Добавление комментариев к плану",
+                        "desc": "Добавление различных типов комментариев: удаление, замена, вставка, обсуждение",
+                        "link": "/ru/backnotprop/plannotator/platforms/plan-review-annotations/"
+                    },
+                    {
+                        "title": "Добавление аннотаций к изображениям",
+                        "desc": "Прикрепление изображений и использование кисти, стрелки, круга для аннотирования",
+                        "link": "/ru/backnotprop/plannotator/platforms/plan-review-images/"
+                    },
+                    {
+                        "title": "Основы проверки кода",
+                        "desc": "Проверка git diff с помощью /plannotator-review",
+                        "link": "/ru/backnotprop/plannotator/platforms/code-review-basics/"
+                    },
+                    {
+                        "title": "Добавление комментариев к коду",
+                        "desc": "Добавление комментариев на уровне строк (comment/suggestion/concern)",
+                        "link": "/ru/backnotprop/plannotator/platforms/code-review-annotations/"
+                    },
+                    {
+                        "title": "Переключение представления Diff",
+                        "desc": "Переключение между типами diff: uncommitted/staged/last commit/branch и др.",
+                        "link": "/ru/backnotprop/plannotator/platforms/code-review-diff-types/"
+                    }
+                ]
+            },
+            {
+                "title": "Расширенные функции",
+                "items": [
+                    {
+                        "title": "Обмен по URL",
+                        "desc": "Обмен планами и комментариями по URL, командная работа без бэкенда",
+                        "link": "/ru/backnotprop/plannotator/advanced/url-sharing/"
+                    },
+                    {
+                        "title": "Интеграция с Obsidian",
+                        "desc": "Автоматическое сохранение утверждённых планов в vault Obsidian",
+                        "link": "/ru/backnotprop/plannotator/advanced/obsidian-integration/"
+                    },
+                    {
+                        "title": "Интеграция с Bear",
+                        "desc": "Сохранение планов в Bear через x-callback-url",
+                        "link": "/ru/backnotprop/plannotator/advanced/bear-integration/"
+                    },
+                    {
+                        "title": "Режим удалённого доступа/Devcontainer",
+                        "desc": "Использование Plannotator в SSH, devcontainer, WSL",
+                        "link": "/ru/backnotprop/plannotator/advanced/remote-mode/"
+                    },
+                    {
+                        "title": "Настройка переменных окружения",
+                        "desc": "Узнайте о всех доступных переменных окружения и их назначении",
+                        "link": "/ru/backnotprop/plannotator/advanced/environment-variables/"
+                    }
+                ]
+            },
+            {
+                "title": "Часто задаваемые вопросы",
+                "items": [
+                    {
+                        "title": "Часто задаваемые вопросы",
+                        "desc": "Проблемы с занятыми портами, браузером не открывается, план не отображается и др.",
+                        "link": "/ru/backnotprop/plannotator/faq/common-problems/"
+                    },
+                    {
+                        "title": "Устранение неполадок",
+                        "desc": "Просмотр логов, обработка ошибок и советы по отладке",
+                        "link": "/ru/backnotprop/plannotator/faq/troubleshooting/"
+                    }
+                ]
+            }
+        ]
+    }
+}

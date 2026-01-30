@@ -1,0 +1,210 @@
+{
+    "project": {
+        "name": "Antigravity Auth",
+        "tagline": "Outil d'authentification Claude & Gemini",
+        "description": "Accédez directement à Claude Opus 4.5, Sonnet 4.5 et Gemini 3 Pro/Flash via les identifiants Google OAuth, sans clé API. Prise en charge de l'équilibrage de charge multi-comptes et de la récupération automatique de session.",
+        "github_url": "https://github.com/NoeFabris/opencode-antigravity-auth"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Démarrage rapide",
+            "link": "/fr/NoeFabris/opencode-antigravity-auth/start/quick-install/"
+        }
+    },
+    "features": {
+        "title": "Pourquoi choisir Antigravity Auth ?",
+        "subtitle": "Résolvez les tracas de configuration manuelle des clés API, gérez automatiquement les quotas, conçu pour le développement à haute concurrence.",
+        "list": [
+            {
+                "title": "Sans clé API",
+                "desc": "Pas besoin de demander des clés API coûteuses, utilisez directement les identifiants de compte Google, autorisation et connexion en un clic."
+            },
+            {
+                "title": "Équilibrage de charge multi-comptes",
+                "desc": "Prise en charge de la rotation automatique jusqu'à 10 comptes Google, distribution intelligente des requêtes, dites adieu aux limites de débit."
+            },
+            {
+                "title": "Prise en charge des modèles Thinking",
+                "desc": "Prise en charge complète des modes de réflexion de Claude et Gemini 3, Budget configurable, déverrouillez les capacités de raisonnement profond."
+            },
+            {
+                "title": "Récupération automatique de session",
+                "desc": "Échec d'appel d'outil ? Interruption de session ? Le plugin réessayera automatiquement et récupérera le contexte, sans intervention manuelle."
+            },
+            {
+                "title": "Compatibilité des plugins",
+                "desc": "Intégration transparente avec les plugins populaires comme oh-my-opencode, DCP."
+            },
+            {
+                "title": "Système de double quota",
+                "desc": "Maximisez l'utilisation des pools de quotas gratuits et payants fournis par Google."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Plan de cours",
+        "subtitle": "6 chapitres, 26 leçons",
+        "sections": [
+            {
+                "title": "Guide de démarrage (Start)",
+                "items": [
+                    {
+                        "title": "Qu'est-ce qu'Antigravity Auth",
+                        "desc": "Comprendre la valeur fondamentale, les scénarios applicables et les avertissements de risque du plugin",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/start/what-is-antigravity-auth/"
+                    },
+                    {
+                        "title": "Installation rapide",
+                        "desc": "Installation rapide du plugin et première authentification en 5 minutes",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/start/quick-install/"
+                    },
+                    {
+                        "title": "Première authentification",
+                        "desc": "Comprendre le flux d'authentification OAuth 2.0 PKCE, terminer la première connexion",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/start/first-auth-login/"
+                    },
+                    {
+                        "title": "Première requête",
+                        "desc": "Envoyer la première requête modèle, vérifier que l'installation réussit",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/start/first-request/"
+                    }
+                ]
+            },
+            {
+                "title": "Fonctionnalités des plateformes (Platforms)",
+                "items": [
+                    {
+                        "title": "Modèles disponibles",
+                        "desc": "Découvrir tous les modèles disponibles et leurs configurations de variantes",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/platforms/available-models/"
+                    },
+                    {
+                        "title": "Modèles Thinking",
+                        "desc": "Maîtriser la configuration et l'utilisation des modèles Thinking Claude et Gemini 3",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/platforms/thinking-models/"
+                    },
+                    {
+                        "title": "Google Search Grounding",
+                        "desc": "Activer Google Search pour les modèles Gemini, améliorer la précision factuelle",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/platforms/google-search-grounding/"
+                    },
+                    {
+                        "title": "Système de double quota",
+                        "desc": "Comprendre le fonctionnement des pools de quotas doubles Antigravity et Gemini CLI",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/platforms/dual-quota-system/"
+                    }
+                ]
+            },
+            {
+                "title": "Fonctionnalités avancées (Advanced)",
+                "items": [
+                    {
+                        "title": "Configuration multi-comptes",
+                        "desc": "Configurer plusieurs comptes Google, réaliser la poolification des quotas et l'équilibrage de charge",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/advanced/multi-account-setup/"
+                    },
+                    {
+                        "title": "Stratégies de sélection de compte",
+                        "desc": "Maîtriser les meilleures pratiques des trois stratégies sticky, round-robin, hybrid",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/advanced/account-selection-strategies/"
+                    },
+                    {
+                        "title": "Gestion des limites de débit",
+                        "desc": "Comprendre la détection des limites de débit, la nouvelle tentative automatique et le mécanisme de changement de compte",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/advanced/rate-limit-handling/"
+                    },
+                    {
+                        "title": "Récupération de session",
+                        "desc": "Comprendre le mécanisme de récupération de session, gérer automatiquement les échecs d'appel d'outil et les interruptions",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/advanced/session-recovery/"
+                    },
+                    {
+                        "title": "Transformation de requêtes",
+                        "desc": "Comprendre en profondeur le mécanisme de transformation de requêtes, assurer la compatibilité des différences de protocole des modèles d'IA",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/advanced/request-transformation/"
+                    },
+                    {
+                        "title": "Guide de configuration",
+                        "desc": "Maîtriser toutes les options de configuration, personnaliser le comportement du plugin selon les besoins",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/advanced/configuration-guide/"
+                    },
+                    {
+                        "title": "Optimisation des agents parallèles",
+                        "desc": "Optimiser l'allocation des comptes pour les scénarios d'agents parallèles, activer le décalage PID",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/advanced/parallel-agents/"
+                    },
+                    {
+                        "title": "Journaux de débogage",
+                        "desc": "Activer les journaux de débogage, diagnostiquer les problèmes et surveiller l'état d'exécution",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/advanced/debug-logging/"
+                    }
+                ]
+            },
+            {
+                "title": "FAQ",
+                "items": [
+                    {
+                        "title": "Problèmes d'authentification",
+                        "desc": "Résoudre les problèmes courants d'authentification OAuth, de rafraîchissement de jeton et de compte",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/faq/common-auth-issues/"
+                    },
+                    {
+                        "title": "Modèle non trouvé",
+                        "desc": "Résoudre les problèmes liés aux modèles non trouvés, erreurs 400, etc.",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/faq/model-not-found/"
+                    },
+                    {
+                        "title": "Compatibilité des plugins",
+                        "desc": "Résoudre les problèmes de compatibilité avec les plugins oh-my-opencode, dcp, etc.",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/faq/plugin-compatibility/"
+                    },
+                    {
+                        "title": "Guide de migration",
+                        "desc": "Migrer des comptes entre différentes machines, gérer les mises à niveau de version",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/faq/migration-guide/"
+                    },
+                    {
+                        "title": "Avertissement de risque",
+                        "desc": "Comprendre les risques d'utilisation, éviter la suspension de compte",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/faq/tos-warning/"
+                    }
+                ]
+            },
+            {
+                "title": "Annexe (Appendix)",
+                "items": [
+                    {
+                        "title": "Vue d'ensemble de l'architecture",
+                        "desc": "Comprendre l'architecture modulaire du plugin et le flux d'appel",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/appendix/architecture-overview/"
+                    },
+                    {
+                        "title": "Spécification API",
+                        "desc": "Spécification interne de l'API Antigravity et détails techniques",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/appendix/api-spec/"
+                    },
+                    {
+                        "title": "Format de stockage",
+                        "desc": "Comprendre le format de fichier de stockage des comptes et la gestion de version",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/appendix/storage-schema/"
+                    },
+                    {
+                        "title": "Référence de configuration",
+                        "desc": "Manuel de référence complet pour toutes les options de configuration",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/appendix/all-config-options/"
+                    }
+                ]
+            },
+            {
+                "title": "Journal des modifications (Changelog)",
+                "items": [
+                    {
+                        "title": "Historique des versions",
+                        "desc": "Historique des versions et changements importants",
+                        "link": "/fr/NoeFabris/opencode-antigravity-auth/changelog/version-history/"
+                    }
+                ]
+            }
+        ]
+    }
+}

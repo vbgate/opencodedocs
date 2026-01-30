@@ -1,0 +1,145 @@
+{
+    "project": {
+        "name": "opencode-agent-skills",
+        "tagline": "OpenCode AI Skills dynamisches Verwaltungs-Plugin",
+        "description": "Ein Plugin-System, das OpenCode dynamische Skill-Entdeckungs- und -Verwaltungsfähigkeiten bietet, mit Unterstützung für AI Agents, um wiederverwendbare Skill-Bibliotheken zu laden und zu verwenden. Ermöglicht projekt- und sitzungsübergreifende Wiederverwendung von Skills mit automatischer Empfehlung relevanter Skills basierend auf semantischer Ähnlichkeit.",
+        "github_url": "https://github.com/joshuadavidthomas/opencode-agent-skills"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Schnellstart",
+            "link": "/de/joshuadavidthomas/opencode-agent-skills/start/installation/"
+        }
+    },
+    "features": {
+        "title": "Warum OpenCode Agent Skills?",
+        "subtitle": "Bietet OpenCode dynamische Skill-Entdeckungs- und -Verwaltungsfähigkeiten für projekt- und sitzungsübergreifende Skill-Wiederverwendung.",
+        "list": [
+            {
+                "title": "Dynamische Skill-Entdeckung",
+                "desc": "Automatisches Entdecken von Skills aus Projekt-, Benutzer- und Plugin-Verzeichnissen mit Unterstützung für das Scannen von 6 Positionen und Rückgabe des ersten passenden Skills nach Priorität."
+            },
+            {
+                "title": "Claude Code Kompatibilität",
+                "desc": "Unterstützt vorhandene Claude Code Skills und Plugin-Formate, reduziert Migrationskosten und ermöglicht die Wiederverwendung vorhandener Ressourcen."
+            },
+            {
+                "title": "Semantische Übereinstimmungsempfehlung",
+                "desc": "Verwendet HuggingFace Embedding-Modelle zur Ähnlichkeitsberechnung und empfiehlt automatisch relevante Skills basierend auf Benutzereingaben."
+            },
+            {
+                "title": "Kontext-Injektion",
+                "desc": "Skill-Inhalte werden im XML-Format in den Sitzungskontext injiziert, wobei der AI den Skill-Anweisungen folgt, um qualitativ hochwertige Ergebnisse zu erzeugen."
+            },
+            {
+                "title": "Wiederherstellung nach Komprimierung",
+                "desc": "Automatisches erneutes Injizieren der Skill-Liste nach Sitzungskomprimierung, um die dauerhafte Verfügbarkeit von Skills in langen Sitzungen zu gewährleisten."
+            },
+            {
+                "title": "Skriptausführungsunterstützung",
+                "desc": "Skill-Verzeichnisse können ausführbare Skripte enthalten, die im Skill-Verzeichniskontext zur Ausführung automatisierter Aufgaben genutzt werden."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Lehrplan",
+        "subtitle": "4 Kapitel mit 15 Lektionen",
+        "sections": [
+            {
+                "title": "Erste Schritte (Start)",
+                "items": [
+                    {
+                        "title": "Was sind OpenCode Agent Skills?",
+                        "desc": "Verstehen Sie den Kernwert und die Funktionseigenschaften des Plugins",
+                        "link": "/de/joshuadavidthomas/opencode-agent-skills/start/what-is-opencode-agent-skills/"
+                    },
+                    {
+                        "title": "OpenCode Agent Skills installieren",
+                        "desc": "Plugin installieren und Betrieb verifizieren",
+                        "link": "/de/joshuadavidthomas/opencode-agent-skills/start/installation/"
+                    },
+                    {
+                        "title": "Erstellen Sie Ihren ersten Skill",
+                        "desc": "Meistern Sie die Skill-Verzeichnisstruktur und das SKILL.md-Format",
+                        "link": "/de/joshuadavidthomas/opencode-agent-skills/start/creating-your-first-skill/"
+                    }
+                ]
+            },
+            {
+                "title": "Kernfunktionen (Platforms)",
+                "items": [
+                    {
+                        "title": "Skill-Entdeckungsmechanismus erklärt",
+                        "desc": "Verstehen Sie, wie das Plugin automatisch Skills aus mehreren Positionen entdeckt",
+                        "link": "/de/joshuadavidthomas/opencode-agent-skills/platforms/skill-discovery-mechanism/"
+                    },
+                    {
+                        "title": "Verfügbare Skills abfragen und auflisten",
+                        "desc": "Lernen Sie das get_available_skills-Tool und Namespaces kennen",
+                        "link": "/de/joshuadavidthomas/opencode-agent-skills/platforms/listing-available-skills/"
+                    },
+                    {
+                        "title": "Skills in den Sitzungskontext laden",
+                        "desc": "Meistern Sie die Nutzung des use_skill-Tools und den XML-Inhalts-Injektionsmechanismus",
+                        "link": "/de/joshuadavidthomas/opencode-agent-skills/platforms/loading-skills-into-context/"
+                    },
+                    {
+                        "title": "Automatische Skill-Empfehlung: Prinzip der semantischen Übereinstimmung",
+                        "desc": "Verstehen Sie, wie das Plugin automatisch relevante Skills basierend auf semantischer Ähnlichkeit empfiehlt",
+                        "link": "/de/joshuadavidthomas/opencode-agent-skills/platforms/automatic-skill-matching/"
+                    },
+                    {
+                        "title": "Skill-Skripte ausführen",
+                        "desc": "Lernen Sie das run_skill_script-Tool kennen, um automatisierte Skripte im Skill-Verzeichnis auszuführen",
+                        "link": "/de/joshuadavidthomas/opencode-agent-skills/platforms/executing-skill-scripts/"
+                    },
+                    {
+                        "title": "Skill-Dateien lesen",
+                        "desc": "Verwenden Sie das read_skill_file-Tool, um auf Skill-Dokumentation, Konfigurationen und andere Unterstützungsdateien zuzugreifen",
+                        "link": "/de/joshuadavidthomas/opencode-agent-skills/platforms/reading-skill-files/"
+                    }
+                ]
+            },
+            {
+                "title": "Erweiterte Funktionen (Advanced)",
+                "items": [
+                    {
+                        "title": "Claude Code Skill-Kompatibilität",
+                        "desc": "Erfahren Sie, wie das Plugin mit dem Claude Code Skill- und Plugin-System kompatibel ist",
+                        "link": "/de/joshuadavidthomas/opencode-agent-skills/advanced/claude-code-compatibility/"
+                    },
+                    {
+                        "title": "Superpowers Workflow-Integration",
+                        "desc": "Konfigurieren und nutzen Sie den Superpowers-Modus für strikte Workflow-Anleitung",
+                        "link": "/de/joshuadavidthomas/opencode-agent-skills/advanced/superpowers-integration/"
+                    },
+                    {
+                        "title": "Namespaces und Skill-Priorität",
+                        "desc": "Verstehen Sie das Namespace-System und die Entdeckungsprioritätsregeln für Skills",
+                        "link": "/de/joshuadavidthomas/opencode-agent-skills/advanced/namespaces-and-priority/"
+                    },
+                    {
+                        "title": "Kontext-Komprimierungs-Wiederherstellungsmechanismus",
+                        "desc": "Erfahren Sie, wie Skills in langen Sitzungen verfügbar bleiben",
+                        "link": "/de/joshuadavidthomas/opencode-agent-skills/advanced/context-compaction-resilience/"
+                    }
+                ]
+            },
+            {
+                "title": "Häufig gestellte Fragen (FAQ)",
+                "items": [
+                    {
+                        "title": "Fehlerbehebung",
+                        "desc": "Lösen Sie häufige Probleme bei der Verwendung des Plugins",
+                        "link": "/de/joshuadavidthomas/opencode-agent-skills/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "Sicherheitshinweise",
+                        "desc": "Verstehen Sie die Sicherheitsmechanismen und bewährten Praktiken des Plugins",
+                        "link": "/de/joshuadavidthomas/opencode-agent-skills/faq/security-considerations/"
+                    }
+                ]
+            }
+        ]
+    }
+}

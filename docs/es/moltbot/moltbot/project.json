@@ -1,0 +1,234 @@
+{
+  "project": {
+    "name": "Moltbot",
+    "tagline": "Tu asistente de IA privado, disponible en cualquier lugar (antes Clawdbot)",
+    "description": "Ejecuta tu asistente de IA en tu propio dispositivo, con conexión sin problemas a 12+ canales como WhatsApp, Telegram, Slack y más. Soporta automatización del navegador, colaboración multi-dispositivo, interacción por voz, y datos completamente locales sin preocupaciones de privacidad.",
+    "github_url": "https://github.com/moltbot/moltbot"
+  },
+  "hero": {
+    "primary_action": {
+      "text": "Inicio Rápido",
+      "link": "/es/moltbot/moltbot/start/getting-started/"
+    }
+  },
+  "features": {
+    "title": "¿Por qué elegir Moltbot?",
+    "subtitle": "Un asistente de IA potente, seguro y fácil de desplegar",
+    "list": [
+      {
+        "title": "🌐 Canales Unificados",
+        "desc": "Una sola configuración para gestionar simultáneamente 12+ plataformas de mensajería como WhatsApp, Telegram, Slack y más"
+      },
+      {
+        "title": "🔒 Primero Local",
+        "desc": "Todos los datos y el tiempo de ejecución de IA están en tu dispositivo, sin filtraciones de privacidad"
+      },
+      {
+        "title": "🛠️ Cadena de Herramientas Potente",
+        "desc": "Capacidades de extensión como automatización del navegador, tareas programadas, Webhook y más"
+      },
+      {
+        "title": "📱 Colaboración Multi-Dispositivo",
+        "desc": "Nodos macOS/iOS/Android pueden conectarse para ejecutar operaciones locales"
+      },
+      {
+        "title": "🎤 Interacción por Voz",
+        "desc": "Soporta Voice Wake, Talk Mode y múltiples motores TTS"
+      },
+      {
+        "title": "🧠 Sistema de Memoria",
+        "desc": "Almacenamiento vectorial y búsqueda semántica, permitiendo que la IA recuerde todas las conversaciones"
+      },
+      {
+        "title": "🔐 Aislamiento Seguro",
+        "desc": "Aislamiento Sandbox, protección de emparejamiento DM, control de permisos de herramientas"
+      }
+    ]
+  },
+  "docs": {
+    "title": "Programa de Cursos",
+    "subtitle": "4 capítulos, 32 lecciones",
+    "sections": [
+      {
+        "title": "Guía de Inicio (Start)",
+        "items": [
+          {
+            "title": "Inicio Rápido",
+            "desc": "Guía a los usuarios para completar la primera instalación, configuración y puesta en marcha de Moltbot",
+            "link": "/es/moltbot/moltbot/start/getting-started/"
+          },
+          {
+            "title": "Configuración Asistida",
+            "desc": "Completa la configuración de Gateway, canales y modelos a través de un asistente interactivo",
+            "link": "/es/moltbot/moltbot/start/onboarding-wizard/"
+          },
+          {
+            "title": "Iniciar Gateway",
+            "desc": "Aprende cómo iniciar el demonio Gateway, diferentes modos (desarrollo/producción)",
+            "link": "/es/moltbot/moltbot/start/gateway-startup/"
+          },
+          {
+            "title": "Enviar el Primer Mensaje",
+            "desc": "Envía el primer mensaje al asistente de IA a través de WebChat o canales configurados",
+            "link": "/es/moltbot/moltbot/start/first-message/"
+          },
+          {
+            "title": "Emparejamiento DM y Control de Acceso",
+            "desc": "Entiende el mecanismo de protección de emparejamiento DM por defecto, cómo aprobar remitentes desconocidos",
+            "link": "/es/moltbot/moltbot/start/pairing-approval/"
+          }
+        ]
+      },
+      {
+        "title": "Funciones de Plataforma (Platforms)",
+        "items": [
+          {
+            "title": "Descripción General del Sistema Multi-Canal",
+            "desc": "Conoce todos los canales de comunicación soportados por Moltbot y sus características",
+            "link": "/es/moltbot/moltbot/platforms/channels-overview/"
+          },
+          {
+            "title": "Canal de WhatsApp",
+            "desc": "Configurar y usar el canal de WhatsApp (basado en Baileys)",
+            "link": "/es/moltbot/moltbot/platforms/whatsapp/"
+          },
+          {
+            "title": "Canal de Telegram",
+            "desc": "Configurar y usar el canal de Telegram (basado en grammY Bot API)",
+            "link": "/es/moltbot/moltbot/platforms/telegram/"
+          },
+          {
+            "title": "Canal de Slack",
+            "desc": "Configurar y usar el canal de Slack (basado en Bolt)",
+            "link": "/es/moltbot/moltbot/platforms/slack/"
+          },
+          {
+            "title": "Canal de Discord",
+            "desc": "Configurar y usar el canal de Discord (basado en discord.js)",
+            "link": "/es/moltbot/moltbot/platforms/discord/"
+          },
+          {
+            "title": "Canal de Google Chat",
+            "desc": "Configurar y usar el canal de Google Chat",
+            "link": "/es/moltbot/moltbot/platforms/googlechat/"
+          },
+          {
+            "title": "Canal de Signal",
+            "desc": "Configurar y usar el canal de Signal (basado en signal-cli)",
+            "link": "/es/moltbot/moltbot/platforms/signal/"
+          },
+          {
+            "title": "Canal de iMessage",
+            "desc": "Configurar y usar el canal de iMessage (exclusivo de macOS)",
+            "link": "/es/moltbot/moltbot/platforms/imessage/"
+          },
+          {
+            "title": "Canal de LINE",
+            "desc": "Configurar y usar el canal de LINE (Messaging API)",
+            "link": "/es/moltbot/moltbot/platforms/line/"
+          },
+          {
+            "title": "Interfaz WebChat",
+            "desc": "Usa la interfaz WebChat integrada para interactuar con el asistente de IA",
+            "link": "/es/moltbot/moltbot/platforms/webchat/"
+          },
+          {
+            "title": "Aplicación macOS",
+            "desc": "Conoce las funciones de la aplicación de barra de menú de macOS, Voice Wake y Talk Mode",
+            "link": "/es/moltbot/moltbot/platforms/macos-app/"
+          },
+          {
+            "title": "Nodo iOS",
+            "desc": "Configura el nodo iOS para ejecutar operaciones locales del dispositivo (Camera, Canvas, Voice Wake)",
+            "link": "/es/moltbot/moltbot/platforms/ios-node/"
+          },
+          {
+            "title": "Nodo Android",
+            "desc": "Configura el nodo Android para ejecutar operaciones locales del dispositivo (Camera, Canvas)",
+            "link": "/es/moltbot/moltbot/platforms/android-node/"
+          }
+        ]
+      },
+      {
+        "title": "Funciones Avanzadas (Advanced)",
+        "items": [
+          {
+            "title": "Modelos de IA y Configuración de Autenticación",
+            "desc": "Configura proveedores de modelos de IA (Anthropic, OpenAI, OpenRouter, Ollama, etc.) y métodos de autenticación",
+            "link": "/es/moltbot/moltbot/advanced/models-auth/"
+          },
+          {
+            "title": "Gestión de Sesiones y Multi-Agent",
+            "desc": "Aprende sobre el modelo de sesiones, aislamiento de sesiones, colaboración de sub-agentes, compresión de contexto",
+            "link": "/es/moltbot/moltbot/advanced/session-management/"
+          },
+          {
+            "title": "Herramientas de Automatización del Navegador",
+            "desc": "Usa herramientas del navegador para automatización web, capturas de pantalla, operación de formularios, etc.",
+            "link": "/es/moltbot/moltbot/advanced/tools-browser/"
+          },
+          {
+            "title": "Herramientas de Ejecución de Comandos y Aprobación",
+            "desc": "Configura y usa la herramienta exec, entiende el mecanismo de aprobación de seguridad",
+            "link": "/es/moltbot/moltbot/advanced/tools-exec/"
+          },
+          {
+            "title": "Herramientas de Búsqueda y Scraping Web",
+            "desc": "Usa las herramientas web_search y web_fetch para búsqueda web y scraping de contenido",
+            "link": "/es/moltbot/moltbot/advanced/tools-web/"
+          },
+          {
+            "title": "Interfaz Visual Canvas y A2UI",
+            "desc": "Entiende el mecanismo de push Canvas A2UI, operación de interfaz visual",
+            "link": "/es/moltbot/moltbot/advanced/canvas/"
+          },
+          {
+            "title": "Activación de Voz y Texto a Voz",
+            "desc": "Configura Voice Wake, Talk Mode y proveedores TTS",
+            "link": "/es/moltbot/moltbot/advanced/voice-tts/"
+          },
+          {
+            "title": "Sistema de Memoria y Búsqueda Vectorial",
+            "desc": "Configura y usa el sistema de memoria (SQLite-vec, FTS5, búsqueda híbrida)",
+            "link": "/es/moltbot/moltbot/advanced/memory-system/"
+          },
+          {
+            "title": "Tareas Cron y Webhook",
+            "desc": "Configura tareas programadas, activadores Webhook, Gmail Pub/Sub",
+            "link": "/es/moltbot/moltbot/advanced/cron-automation/"
+          },
+          {
+            "title": "Plataforma de Habilidades y MoltHub",
+            "desc": "Entiende el sistema de habilidades, habilidades Bundled/Managed/Workspace, integración MoltHub",
+            "link": "/es/moltbot/moltbot/advanced/skills-platform/"
+          },
+          {
+            "title": "Seguridad y Aislamiento Sandbox",
+            "desc": "Entiende el modelo de seguridad, control de permisos de herramientas, aislamiento Sandbox, contenedorización Docker",
+            "link": "/es/moltbot/moltbot/advanced/security-sandbox/"
+          }
+        ]
+      },
+      {
+        "title": "Preguntas Frecuentes (FAQ)",
+        "items": [
+          {
+            "title": "Solución de Problemas",
+            "desc": "Resuelve problemas comunes: fallo al iniciar Gateway, problemas de conexión de canales, errores de autenticación, fallos al invocar herramientas",
+            "link": "/es/moltbot/moltbot/faq/troubleshooting/"
+          },
+          {
+            "title": "Referencia de Comandos CLI",
+            "desc": "Lista completa de comandos CLI y descripciones de uso",
+            "link": "/es/moltbot/moltbot/faq/cli-commands/"
+          },
+          {
+            "title": "Optimización de Rendimiento",
+            "desc": "Optimiza el rendimiento de Gateway, reduce latencia, gestión de memoria, control de concurrencia",
+            "link": "/es/moltbot/moltbot/faq/performance-optimization/"
+          }
+        ]
+      }
+    ]
+  }
+}

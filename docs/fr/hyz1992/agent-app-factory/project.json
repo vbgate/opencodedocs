@@ -1,0 +1,166 @@
+{
+  "project": {
+    "name": "agent-app-factory",
+    "tagline": "1 Idée, 7 Étapes vers une App",
+    "description": "Ne perdez plus votre temps à coder de manière répétitive. AI App Factory vous permet de passer d'une idée à un MVP fonctionnel en seulement 7 points de contrôle. Génération automatique du code frontend et backend, des tests, de la documentation et de la configuration CI/CD, qualité de production.",
+    "github_url": "https://github.com/hyz1992/agent-app-factory"
+  },
+  "hero": {
+    "primary_action": {
+      "text": "Démarrage Rapide",
+      "link": "/fr/hyz1992/agent-app-factory/start/getting-started/"
+    }
+  },
+  "features": {
+    "title": "Pourquoi choisir AI App Factory ?",
+    "subtitle": "Transformer des idées en applications fonctionnelles n'a jamais été aussi simple",
+    "list": [
+      {
+        "title": "🚀 Pipeline en 7 étapes",
+        "desc": "De l'idée à l'app, entièrement automatisé, zéro attente. Bootstrap → PRD → UI → Tech → Code → Validation → Preview"
+      },
+      {
+        "title": "✅ Points de contrôle qualité",
+        "desc": "Pause et confirmation après chaque étape pour s'assurer que la sortie correspond aux attentes, évitant l'accumulation d'erreurs irréparables"
+      },
+      {
+        "title": "🏭 Code de production",
+        "desc": "Génération automatique du code frontend et backend, des tests, de la documentation et de la configuration CI/CD. Prêt à l'emploi, déployable immédiatement"
+      },
+      {
+        "title": "⚡ Validation rapide",
+        "desc": "Délimitation claire de la portée, évitant la surconception. Livraison rapide de prototypes vérifiables, valider le marché d'abord puis itérer"
+      },
+      {
+        "title": "🔒 Confidentialité des données",
+        "desc": "Exécution locale, zéro téléchargement de données. Vos idées et votre code ne quitteront jamais votre machine"
+      }
+    ]
+  },
+  "docs": {
+    "title": "Programme du cours",
+    "subtitle": "4 chapitres, 20 leçons",
+    "sections": [
+      {
+        "title": "Guide de démarrage (Start)",
+        "items": [
+          {
+            "title": "Démarrage rapide : de l'idée à l'application",
+            "desc": "Comprendre la valeur centrale d'AI App Factory, les prérequis, et initialiser le premier projet",
+            "link": "/fr/hyz1992/agent-app-factory/start/getting-started/"
+          },
+          {
+            "title": "Installation et configuration",
+            "desc": "Installation globale de l'outil CLI, configuration des assistants IA (Claude Code/OpenCode)",
+            "link": "/fr/hyz1992/agent-app-factory/start/installation/"
+          },
+          {
+            "title": "Initialiser un projet Factory",
+            "desc": "Utiliser la commande factory init pour initialiser le répertoire, comprendre la structure du projet généré",
+            "link": "/fr/hyz1992/agent-app-factory/start/init-project/"
+          },
+          {
+            "title": "Vue d'ensemble du pipeline en 7 étapes",
+            "desc": "Comprendre le processus complet du pipeline de Bootstrap à Preview",
+            "link": "/fr/hyz1992/agent-app-factory/start/pipeline-overview/"
+          }
+        ]
+      },
+      {
+        "title": "Fonctionnalités de plateforme (Platforms)",
+        "items": [
+          {
+            "title": "Guide d'intégration Claude Code",
+            "desc": "Apprendre à utiliser Claude Code pour exécuter le pipeline, incluant la configuration des autorisations et les meilleures pratiques",
+            "link": "/fr/hyz1992/agent-app-factory/platforms/claude-code/"
+          },
+          {
+            "title": "OpenCode et autres assistants IA",
+            "desc": "Comprendre comment utiliser OpenCode, Cursor et autres assistants IA pour exécuter le pipeline",
+            "link": "/fr/hyz1992/agent-app-factory/platforms/other-ai-assistants/"
+          },
+          {
+            "title": "Installation des plugins requis",
+            "desc": "Installer les plugins superpowers et ui-ux-pro-max pour assurer le bon fonctionnement du pipeline",
+            "link": "/fr/hyz1992/agent-app-factory/platforms/plugins/"
+          }
+        ]
+      },
+      {
+        "title": "Fonctionnalités avancées (Advanced)",
+        "items": [
+          {
+            "title": "Étape 1 : Bootstrap - Structurer l'idée produit",
+            "desc": "Apprendre à utiliser l'agent Bootstrap pour transformer une idée en un document structuré",
+            "link": "/fr/hyz1992/agent-app-factory/advanced/stage-bootstrap/"
+          },
+          {
+            "title": "Étape 2 : PRD - Générer le document de spécifications produit",
+            "desc": "Générer un PRD de niveau MVP, incluant les user stories, la liste des fonctionnalités et les non-objectifs",
+            "link": "/fr/hyz1992/agent-app-factory/advanced/stage-prd/"
+          },
+          {
+            "title": "Étape 3 : UI - Concevoir l'interface et le prototype",
+            "desc": "Utiliser la compétence ui-ux-pro-max pour concevoir la structure UI et un prototype prévisualisable",
+            "link": "/fr/hyz1992/agent-app-factory/advanced/stage-ui/"
+          },
+          {
+            "title": "Étape 4 : Tech - Concevoir l'architecture technique",
+            "desc": "Concevoir une architecture technique minimale viable et les modèles de données Prisma",
+            "link": "/fr/hyz1992/agent-app-factory/advanced/stage-tech/"
+          },
+          {
+            "title": "Étape 5 : Code - Générer du code fonctionnel",
+            "desc": "Générer le code frontend et backend, les tests et la configuration basés sur le Schéma UI et la conception Tech",
+            "link": "/fr/hyz1992/agent-app-factory/advanced/stage-code/"
+          },
+          {
+            "title": "Étape 6 : Validation - Valider la qualité du code",
+            "desc": "Valider l'installation des dépendances, la vérification des types, le schéma Prisma et la qualité du code",
+            "link": "/fr/hyz1992/agent-app-factory/advanced/stage-validation/"
+          },
+          {
+            "title": "Étape 7 : Preview - Générer le guide de déploiement",
+            "desc": "Générer la documentation complète d'exécution et la configuration de déploiement",
+            "link": "/fr/hyz1992/agent-app-factory/advanced/stage-preview/"
+          },
+          {
+            "title": "Détails du planificateur Sisyphus",
+            "desc": "Comprendre comment le planificateur coordonne le pipeline, gère l'état et exécute les vérifications d'autorisation",
+            "link": "/fr/hyz1992/agent-app-factory/advanced/orchestrator/"
+          },
+          {
+            "title": "Optimisation du contexte : exécution multi-session",
+            "desc": "Apprendre à utiliser la commande factory continue pour économiser des tokens, en créant une nouvelle session à chaque étape",
+            "link": "/fr/hyz1992/agent-app-factory/advanced/context-optimization/"
+          },
+          {
+            "title": "Autorisations et mécanismes de sécurité",
+            "desc": "Comprendre la matrice des capacités, le traitement des violations d'autorisation et les mécanismes de vérification de sécurité",
+            "link": "/fr/hyz1992/agent-app-factory/advanced/security-permissions/"
+          },
+          {
+            "title": "Gestion des échecs et rollback",
+            "desc": "Apprendre l'identification des échecs, les mécanismes de réessai, les stratégies de rollback et les processus d'intervention manuelle",
+            "link": "/fr/hyz1992/agent-app-factory/advanced/failure-handling/"
+          }
+        ]
+      },
+      {
+        "title": "FAQ (FAQ)",
+        "items": [
+          {
+            "title": "Questions fréquentes et dépannage",
+            "desc": "Résoudre les problèmes courants rencontrés lors de l'initialisation, de l'exécution et du déploiement",
+            "link": "/fr/hyz1992/agent-app-factory/faq/troubleshooting/"
+          },
+          {
+            "title": "Meilleures pratiques",
+            "desc": "Apprendre les techniques : fournir une description claire du produit, utiliser les points de contrôle, contrôler la portée, itérer progressivement",
+            "link": "/fr/hyz1992/agent-app-factory/faq/best-practices/"
+          }
+        ]
+      }
+    ]
+  }
+}

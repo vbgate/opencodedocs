@@ -1,0 +1,210 @@
+{
+    "project": {
+        "name": "Antigravity Auth",
+        "tagline": "Claude & Gemini 認証の決定版",
+        "description": "APIキーは不要。Google OAuth認証情報を使用して、Claude Opus 4.5、Sonnet 4.5、Gemini 3 Pro/Flashに直接アクセスできます。マルチアカウントの負荷分散とセッションの自動復元をサポート。",
+        "github_url": "https://github.com/NoeFabris/opencode-antigravity-auth"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "クイックスタート",
+            "link": "/ja/NoeFabris/opencode-antigravity-auth/start/quick-install/"
+        }
+    },
+    "features": {
+        "title": "Antigravity Authを選ぶ理由",
+        "subtitle": "APIキーの手動設定の悩みを解決し、クォータを自動管理。高並列処理向けに設計されています。",
+        "list": [
+            {
+                "title": "APIキー不要",
+                "desc": "高価なAPIキーを申請する必要がなく、Googleアカウントの認証情報を直接使用して、ワンクリックで認証ログインできます。"
+            },
+            {
+                "title": "マルチアカウントの負荷分散",
+                "desc": "最大10個のGoogleアカウントの自動ローテーションをサポートし、リクエストをインテリジェントに分散して、レート制限を完全に解消します。"
+            },
+            {
+                "title": "Thinkingモデルのサポート",
+                "desc": "ClaudeとGemini 3の思考モードを完璧にサポートし、Budgetを設定して深い推論能力をアンロックできます。"
+            },
+            {
+                "title": "セッションの自動復元",
+                "desc": "ツール呼び出しの失敗？セッションの中断？プラグインが自動的に再試行してコンテキストを復元するため、手動での介入は不要です。"
+            },
+            {
+                "title": "プラグインの互換性",
+                "desc": "oh-my-opencode、DCPなどの主流プラグインとシームレスに統合できます。"
+            },
+            {
+                "title": "デュアルクォータシステム",
+                "desc": "Googleが提供する無料と有料のクォータプールを最大限に活用します。"
+            }
+        ]
+    },
+    "docs": {
+        "title": "カリキュラム",
+        "subtitle": "全6章、26講座",
+        "sections": [
+            {
+                "title": "入門ガイド (Start)",
+                "items": [
+                    {
+                        "title": "Antigravity Authとは",
+                        "desc": "プラグインのコアバリュー、適用シーン、およびリスク警告を理解する",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/start/what-is-antigravity-auth/"
+                    },
+                    {
+                        "title": "クイックインストール",
+                        "desc": "5分でプラグインのインストールと初回認証を完了する",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/start/quick-install/"
+                    },
+                    {
+                        "title": "初回認証ログイン",
+                        "desc": "OAuth 2.0 PKCE認証フローを理解し、初回ログインを完了する",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/start/first-auth-login/"
+                    },
+                    {
+                        "title": "最初のリクエストを送信",
+                        "desc": "最初のモデルリクエストを送信し、インストールの成功を確認する",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/start/first-request/"
+                    }
+                ]
+            },
+            {
+                "title": "プラットフォーム機能 (Platforms)",
+                "items": [
+                    {
+                        "title": "利用可能なモデル",
+                        "desc": "利用可能なすべてのモデルとそのバリエーション設定を理解する",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/platforms/available-models/"
+                    },
+                    {
+                        "title": "Thinkingモデル",
+                        "desc": "ClaudeとGemini 3 Thinkingモデルの設定と使い方をマスターする",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/platforms/thinking-models/"
+                    },
+                    {
+                        "title": "Google Search Grounding",
+                        "desc": "GeminiモデルでGoogle Searchを有効にして、事実の正確性を向上させる",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/platforms/google-search-grounding/"
+                    },
+                    {
+                        "title": "デュアルクォータシステム",
+                        "desc": "AntigravityとGemini CLIのデュアルクォータプールの仕組みを理解する",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/platforms/dual-quota-system/"
+                    }
+                ]
+            },
+            {
+                "title": "高度な機能 (Advanced)",
+                "items": [
+                    {
+                        "title": "マルチアカウント設定",
+                        "desc": "複数のGoogleアカウントを設定し、クォータプールと負荷分散を実現する",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/advanced/multi-account-setup/"
+                    },
+                    {
+                        "title": "アカウント選択戦略",
+                        "desc": "sticky、round-robin、hybridの3つの戦略のベストプラクティスをマスターする",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/advanced/account-selection-strategies/"
+                    },
+                    {
+                        "title": "レート制限の処理",
+                        "desc": "レート制限の検出、自動再試行、アカウント切替の仕組みを理解する",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/advanced/rate-limit-handling/"
+                    },
+                    {
+                        "title": "セッション復元",
+                        "desc": "セッション復元の仕組みを理解し、ツール呼び出しの失敗と中断を自動的に処理する",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/advanced/session-recovery/"
+                    },
+                    {
+                        "title": "リクエスト変換",
+                        "desc": "リクエスト変換の仕組みを深く理解し、異なるAIモデルのプロトコル差異を互換させる",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/advanced/request-transformation/"
+                    },
+                    {
+                        "title": "設定ガイド",
+                        "desc": "すべての設定オプションをマスターし、ニーズに合わせてプラグインの挙動をカスタマイズする",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/advanced/configuration-guide/"
+                    },
+                    {
+                        "title": "並列エージェントの最適化",
+                        "desc": "並列エージェントシーン向けにアカウント割り当てを最適化し、PIDオフセットを有効にする",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/advanced/parallel-agents/"
+                    },
+                    {
+                        "title": "デバッグログ",
+                        "desc": "デバッグログを有効にして、問題のトラブルシューティングと実行状態の監視を行う",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/advanced/debug-logging/"
+                    }
+                ]
+            },
+            {
+                "title": "よくある質問 (FAQ)",
+                "items": [
+                    {
+                        "title": "認証の問題",
+                        "desc": "OAuth認証、トークン更新、アカウント関連のよくある問題を解決する",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/faq/common-auth-issues/"
+                    },
+                    {
+                        "title": "モデルが見つからない",
+                        "desc": "モデルが見つからない、400エラーなどのモデル関連の問題を解決する",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/faq/model-not-found/"
+                    },
+                    {
+                        "title": "プラグインの互換性",
+                        "desc": "oh-my-opencode、dcpなどのプラグインとの互換性の問題を解決する",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/faq/plugin-compatibility/"
+                    },
+                    {
+                        "title": "移行ガイド",
+                        "desc": "異なるマシン間でアカウントを移行し、バージョンアップグレードを処理する",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/faq/migration-guide/"
+                    },
+                    {
+                        "title": "リスク警告",
+                        "desc": "使用上のリスクを理解し、アカウントの停止を回避する",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/faq/tos-warning/"
+                    }
+                ]
+            },
+            {
+                "title": "付録 (Appendix)",
+                "items": [
+                    {
+                        "title": "アーキテクチャ概要",
+                        "desc": "プラグインのモジュールアーキテクチャと呼び出しチェーンを理解する",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/appendix/architecture-overview/"
+                    },
+                    {
+                        "title": "API仕様",
+                        "desc": "Antigravity APIの内部仕様と技術詳細",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/appendix/api-spec/"
+                    },
+                    {
+                        "title": "保存形式",
+                        "desc": "アカウント保存ファイルの形式とバージョン管理を理解する",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/appendix/storage-schema/"
+                    },
+                    {
+                        "title": "設定リファレンス",
+                        "desc": "すべての設定オプションの完全なリファレンスマニュアル",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/appendix/all-config-options/"
+                    }
+                ]
+            },
+            {
+                "title": "更新履歴 (Changelog)",
+                "items": [
+                    {
+                        "title": "バージョン履歴",
+                        "desc": "バージョン履歴と重要な変更点",
+                        "link": "/ja/NoeFabris/opencode-antigravity-auth/changelog/version-history/"
+                    }
+                ]
+            }
+        ]
+    }
+}

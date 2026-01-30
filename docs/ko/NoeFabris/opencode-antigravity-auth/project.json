@@ -1,0 +1,210 @@
+{
+    "project": {
+        "name": "Antigravity Auth",
+        "tagline": "Claude & Gemini 인증의 핵심",
+        "description": "API Key 없이 Google OAuth 자격 증명을 통해 Claude Opus 4.5, Sonnet 4.5 및 Gemini 3 Pro/Flash에 직접 액세스하세요. 다중 계정 부하 분산 및 세션 자동 복구를 지원합니다.",
+        "github_url": "https://github.com/NoeFabris/opencode-antigravity-auth"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "빠른 시작",
+            "link": "/ko/NoeFabris/opencode-antigravity-auth/start/quick-install/"
+        }
+    },
+    "features": {
+        "title": "왜 Antigravity Auth인가요?",
+        "subtitle": "API Key 수동 구성의 번거로움을 해결하고, 자동화된 할당량 관리와 높은 동시성 개발에 최적화되었습니다.",
+        "list": [
+            {
+                "title": "API Key 없음",
+                "desc": "비싼 API Key를 신청할 필요 없이 Google 계정 자격 증명을 직접 사용하여 원클릭 인증 로그인을 완료하세요."
+            },
+            {
+                "title": "다중 계정 부하 분산",
+                "desc": "최대 10개의 Google 계정 자동 로테이션을 지원하고, 요청을 지능적으로 할당하여 속도 제한을 완전히 해결하세요."
+            },
+            {
+                "title": "Thinking 모델 지원",
+                "desc": "Claude 및 Gemini 3의 Thinking 모드를 완벽하게 지원하고, Budget을 구성하여 심층 추론 능력을 잠금 해제하세요."
+            },
+            {
+                "title": "세션 자동 복구",
+                "desc": "도구 호출 실패? 세션 중단? 플러그인이 자동으로 재시도하고 컨텍스트를 복구하므로 수동 개입이 필요 없습니다."
+            },
+            {
+                "title": "플러그인 호환성",
+                "desc": "oh-my-opencode, DCP 등 주요 플러그인과 완벽하게 통합됩니다."
+            },
+            {
+                "title": "이중 할당량 시스템",
+                "desc": "Google에서 제공하는 무료 및 유료 할당량 풀을 최대한 활용하세요."
+            }
+        ]
+    },
+    "docs": {
+        "title": "강의 개요",
+        "subtitle": "총 6개 챕터, 26개 강의",
+        "sections": [
+            {
+                "title": "시작하기 (Start)",
+                "items": [
+                    {
+                        "title": "Antigravity Auth란?",
+                        "desc": "플러그인의 핵심 가치, 사용 시나리오 및 위험 경고 이해",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/start/what-is-antigravity-auth/"
+                    },
+                    {
+                        "title": "빠른 설치",
+                        "desc": "5분 만에 플러그인 설치 및 첫 인증 완료",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/start/quick-install/"
+                    },
+                    {
+                        "title": "첫 인증 로그인",
+                        "desc": "OAuth 2.0 PKCE 인증 흐름 이해 및 첫 로그인 완료",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/start/first-auth-login/"
+                    },
+                    {
+                        "title": "첫 요청 보내기",
+                        "desc": "첫 모델 요청을 보내고 설치 성공 확인",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/start/first-request/"
+                    }
+                ]
+            },
+            {
+                "title": "플랫폼 기능 (Platforms)",
+                "items": [
+                    {
+                        "title": "사용 가능한 모델",
+                        "desc": "모든 사용 가능한 모델 및 변형 구성 이해",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/platforms/available-models/"
+                    },
+                    {
+                        "title": "Thinking 모델",
+                        "desc": "Claude 및 Gemini 3 Thinking 모델의 구성 및 사용 마스터",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/platforms/thinking-models/"
+                    },
+                    {
+                        "title": "Google Search Grounding",
+                        "desc": "Gemini 모델에 Google Search를 활성화하여 사실 정확성 향상",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/platforms/google-search-grounding/"
+                    },
+                    {
+                        "title": "이중 할당량 시스템",
+                        "desc": "Antigravity 및 Gemini CLI 이중 할당량 풀의 작동 원리 이해",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/platforms/dual-quota-system/"
+                    }
+                ]
+            },
+            {
+                "title": "고급 기능 (Advanced)",
+                "items": [
+                    {
+                        "title": "다중 계정 설정",
+                        "desc": "여러 Google 계정을 구성하여 할당량 풀링 및 부하 분산 구현",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/advanced/multi-account-setup/"
+                    },
+                    {
+                        "title": "계정 선택 전략",
+                        "desc": "sticky, round-robin, hybrid 세 가지 전략의 모범 사례 마스터",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/advanced/account-selection-strategies/"
+                    },
+                    {
+                        "title": "속도 제한 처리",
+                        "desc": "속도 제한 감지, 자동 재시도 및 계정 전환 메커니즘 이해",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/advanced/rate-limit-handling/"
+                    },
+                    {
+                        "title": "세션 복구",
+                        "desc": "세션 복구 메커니즘 이해, 도구 호출 실패 및 중단 자동 처리",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/advanced/session-recovery/"
+                    },
+                    {
+                        "title": "요청 변환",
+                        "desc": "요청 변환 메커니즘 심층 이해, 다양한 AI 모델의 프로토콜 차이 호환",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/advanced/request-transformation/"
+                    },
+                    {
+                        "title": "구성 가이드",
+                        "desc": "모든 구성 옵션 마스터, 필요에 따라 플러그인 동작 사용자 정의",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/advanced/configuration-guide/"
+                    },
+                    {
+                        "title": "병렬 에이전트 최적화",
+                        "desc": "병렬 에이전트 시나리오를 위해 계정 할당 최적화, PID 오프셋 활성화",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/advanced/parallel-agents/"
+                    },
+                    {
+                        "title": "디버깅 로그",
+                        "desc": "디버깅 로그를 활성화하여 문제 해결 및 실행 상태 모니터링",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/advanced/debug-logging/"
+                    }
+                ]
+            },
+            {
+                "title": "자주 묻는 질문 (FAQ)",
+                "items": [
+                    {
+                        "title": "인증 문제",
+                        "desc": "OAuth 인증, 토큰 새로 고침 및 계정 관련 일반적인 문제 해결",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/faq/common-auth-issues/"
+                    },
+                    {
+                        "title": "모델을 찾을 수 없음",
+                        "desc": "모델을 찾을 수 없음, 400 오류 등 모델 관련 문제 해결",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/faq/model-not-found/"
+                    },
+                    {
+                        "title": "플러그인 호환성",
+                        "desc": "oh-my-opencode, dcp 등 플러그인과의 호환성 문제 해결",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/faq/plugin-compatibility/"
+                    },
+                    {
+                        "title": "마이그레이션 가이드",
+                        "desc": "다른 머신 간에 계정 마이그레이션, 버전 업그레이드 처리",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/faq/migration-guide/"
+                    },
+                    {
+                        "title": "위험 경고",
+                        "desc": "사용 위험 이해, 계정 차단 방지",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/faq/tos-warning/"
+                    }
+                ]
+            },
+            {
+                "title": "부록 (Appendix)",
+                "items": [
+                    {
+                        "title": "아키텍처 개요",
+                        "desc": "플러그인의 모듈 아키텍처 및 호출 체인 이해",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/appendix/architecture-overview/"
+                    },
+                    {
+                        "title": "API 사양",
+                        "desc": "Antigravity API 내부 사양 및 기술 세부사항",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/appendix/api-spec/"
+                    },
+                    {
+                        "title": "저장소 형식",
+                        "desc": "계정 저장소 파일 형식 및 버전 관리 이해",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/appendix/storage-schema/"
+                    },
+                    {
+                        "title": "구성 참조",
+                        "desc": "모든 구성 옵션의 완전한 참조 매뉴얼",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/appendix/all-config-options/"
+                    }
+                ]
+            },
+            {
+                "title": "업데이트 로그 (Changelog)",
+                "items": [
+                    {
+                        "title": "버전 기록",
+                        "desc": "버전 기록 및 중요한 변경 사항",
+                        "link": "/ko/NoeFabris/opencode-antigravity-auth/changelog/version-history/"
+                    }
+                ]
+            }
+        ]
+    }
+}

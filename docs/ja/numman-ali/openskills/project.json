@@ -1,0 +1,185 @@
+{
+    "project": {
+        "name": "openskills",
+        "tagline": "AIコーディングエージェントの汎用スキルローダー",
+        "description": "Claude Code、Cursor、Windsurf、Aider など、あらゆる AI コーディングエージェントで標準の SKILL.md 形式スキルを使用可能にします。統一された標準、漸進的ロード、マルチエージェント対応。",
+        "github_url": "https://github.com/numman-ali/openskills"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "クイックスタート",
+            "link": "/ja/numman-ali/openskills/start/quick-start/"
+        }
+    },
+    "features": {
+        "title": "なぜ OpenSkills を選ぶのか？",
+        "subtitle": "統一されたスキルフォーマットにより、あらゆるエージェントでスキルが利用可能になり、プラットフォームロックインから解放されます。",
+        "list": [
+            {
+                "title": "Claude Code 完全互換",
+                "desc": "同じプロンプト形式、同じ marketplace、同じフォルダ構造でシームレスに移行できます。"
+            },
+            {
+                "title": "マルチエージェント対応",
+                "desc": "AGENTS.md を読み取れるすべてのエージェント（Claude Code、Cursor、Windsurf、Aider、Codex など）をサポートします。"
+            },
+            {
+                "title": "漸進的ロード",
+                "desc": "必要なスキルのみをロードし、エージェントのコンテキストをシンプルに保ち、コンテキスト汚染を防ぎます。"
+            },
+            {
+                "title": "柔軟なインストール元",
+                "desc": "GitHub、ローカルパス、プライベート Git リポジトリからスキルをインストールでき、あらゆる使用シーンに対応します。"
+            },
+            {
+                "title": "Universal モード",
+                "desc": "1セットのスキルで複数のエージェントに対応し、Claude Code との競合を回避し、スキル管理を統一します。"
+            },
+            {
+                "title": "完全ローカル実行",
+                "desc": "CLI ツールはサーバー不要ですべての操作がローカルファイルシステムで完結し、プライバシーと安全性を確保します。"
+            }
+        ]
+    },
+    "docs": {
+        "title": "コース概要",
+        "subtitle": "全4章、23レッスン",
+        "sections": [
+            {
+                "title": "入門ガイド (Start)",
+                "items": [
+                    {
+                        "title": "クイックスタート",
+                        "desc": "5 分で OpenSkills を使い始め、インストール、スキルインストール、同期を完了します",
+                        "link": "/ja/numman-ali/openskills/start/quick-start/"
+                    },
+                    {
+                        "title": "OpenSkills とは",
+                        "desc": "コア概念、Claude Code との関係、このツールが必要な理由を理解します",
+                        "link": "/ja/numman-ali/openskills/start/what-is-openskills/"
+                    },
+                    {
+                        "title": "OpenSkills のインストール",
+                        "desc": "npm/npx で OpenSkills をインストールし、Node.js と Git 環境を確認します",
+                        "link": "/ja/numman-ali/openskills/start/installation/"
+                    },
+                    {
+                        "title": "最初のスキルをインストール",
+                        "desc": "Anthropic 公式リポジトリからスキルをインストールし、対話的な選択を体験します",
+                        "link": "/ja/numman-ali/openskills/start/first-skill/"
+                    },
+                    {
+                        "title": "スキルを AGENTS.md に同期",
+                        "desc": "AGENTS.md ファイルを生成し、AI エージェントに利用可能なスキルを認識させます",
+                        "link": "/ja/numman-ali/openskills/start/sync-to-agents/"
+                    },
+                    {
+                        "title": "スキルを使用する",
+                        "desc": "AI エージェントが read コマンドでスキルコンテンツを読み込む方法を学びます",
+                        "link": "/ja/numman-ali/openskills/start/read-skills/"
+                    }
+                ]
+            },
+            {
+                "title": "プラットフォーム機能 (Platforms)",
+                "items": [
+                    {
+                        "title": "コマンド詳細",
+                        "desc": "すべてのコマンド、引数、フラグを網羅し、コマンド早見表を提供します",
+                        "link": "/ja/numman-ali/openskills/platforms/cli-commands/"
+                    },
+                    {
+                        "title": "インストール元詳細",
+                        "desc": "GitHub、ローカルパス、プライベートリポジトリの3つのインストール元を詳細に説明します",
+                        "link": "/ja/numman-ali/openskills/platforms/install-sources/"
+                    },
+                    {
+                        "title": "グローバルインストール vs プロジェクトローカルインストール",
+                        "desc": "--global とデフォルトインストールの違いを理解し、適切なインストール場所を選びます",
+                        "link": "/ja/numman-ali/openskills/platforms/global-vs-project/"
+                    },
+                    {
+                        "title": "インストール済みスキルの一覧表示",
+                        "desc": "list コマンドでインストール済みスキルを確認し、ロケーションタグを理解します",
+                        "link": "/ja/numman-ali/openskills/platforms/list-skills/"
+                    },
+                    {
+                        "title": "スキルの更新",
+                        "desc": "update コマンドでインストール済みスキルを更新し、一括更新をサポートします",
+                        "link": "/ja/numman-ali/openskills/platforms/update-skills/"
+                    },
+                    {
+                        "title": "スキルの削除",
+                        "desc": "対話的な manage とスクリプト化された remove の2つの削除方法を紹介します",
+                        "link": "/ja/numman-ali/openskills/platforms/remove-skills/"
+                    }
+                ]
+            },
+            {
+                "title": "高度な機能 (Advanced)",
+                "items": [
+                    {
+                        "title": "Universal モード",
+                        "desc": "マルチエージェント環境での競合を回避し、スキル管理を統一します",
+                        "link": "/ja/numman-ali/openskills/advanced/universal-mode/"
+                    },
+                    {
+                        "title": "カスタム出力パス",
+                        "desc": "スキルをカスタム .md ファイルに同期します",
+                        "link": "/ja/numman-ali/openskills/advanced/custom-output-path/"
+                    },
+                    {
+                        "title": "シンボリックリンク対応",
+                        "desc": "symlink を通じて Git ベースのスキル更新とローカル開発を実現します",
+                        "link": "/ja/numman-ali/openskills/advanced/symlink-support/"
+                    },
+                    {
+                        "title": "カスタムスキルの作成",
+                        "desc": "ゼロから独自のスキルを作成し、SKILL.md 形式を理解します",
+                        "link": "/ja/numman-ali/openskills/advanced/create-skills/"
+                    },
+                    {
+                        "title": "スキル構造詳細",
+                        "desc": "SKILL.md 形式と bundled resources のベストプラクティスを深く解説します",
+                        "link": "/ja/numman-ali/openskills/advanced/skill-structure/"
+                    },
+                    {
+                        "title": "CI/CD 連携",
+                        "desc": "CI/CD 環境で非対話的なスキルインストールと同期を行います",
+                        "link": "/ja/numman-ali/openskills/advanced/ci-integration/"
+                    },
+                    {
+                        "title": "セキュリティについて",
+                        "desc": "パストラバーサル対策、シンボリックリンク解決、YAML セキュリティなどの機能を理解します",
+                        "link": "/ja/numman-ali/openskills/advanced/security/"
+                    },
+                    {
+                        "title": "ベストプラクティス",
+                        "desc": "プロジェクト設定、スキル管理、チームコラボレーションなどのベストプラクティスを紹介します",
+                        "link": "/ja/numman-ali/openskills/advanced/best-practices/"
+                    }
+                ]
+            },
+            {
+                "title": "よくある質問 (FAQ)",
+                "items": [
+                    {
+                        "title": "よくある質問",
+                        "desc": "インストール、使用、設定などのよくある質問への回答",
+                        "link": "/ja/numman-ali/openskills/faq/faq/"
+                    },
+                    {
+                        "title": "トラブルシューティング",
+                        "desc": "パスエラー、クローン失敗、無効な SKILL.md などの一般的なエラーの解決策",
+                        "link": "/ja/numman-ali/openskills/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "なぜ CLI であって MCP ではないのか",
+                        "desc": "OpenSkills が MCP ではなく CLI を選択した設計理由を理解します",
+                        "link": "/ja/numman-ali/openskills/faq/why-cli-not-mcp/"
+                    }
+                ]
+            }
+        ]
+    }
+}

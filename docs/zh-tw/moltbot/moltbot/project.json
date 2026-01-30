@@ -1,0 +1,234 @@
+{
+  "project": {
+    "name": "Moltbot",
+    "tagline": "你的私有 AI 助手，隨處可用 (原 Clawdbot)",
+    "description": "在自有裝置上執行你的 AI 助手，無縫連線 WhatsApp、Telegram、Slack 等 12+ 種管道。支援瀏覽器自動化、多裝置協同、語音互動，資料完全本地，隱私無憂。",
+    "github_url": "https://github.com/moltbot/moltbot"
+  },
+  "hero": {
+    "primary_action": {
+      "text": "快速開始",
+      "link": "/zh-tw/moltbot/moltbot/start/getting-started/"
+    }
+  },
+  "features": {
+    "title": "為什麼選擇 Moltbot？",
+    "subtitle": "功能強大、隱私安全、易於部署的個人 AI 助手",
+    "list": [
+      {
+        "title": "🌐 多管道統一",
+        "desc": "一套設定同時管理 WhatsApp、Telegram、Slack 等 12+ 種訊息平台"
+      },
+      {
+        "title": "🔒 本地優先",
+        "desc": "所有資料和 AI 執行時都在你的裝置上，零隱私洩漏"
+      },
+      {
+        "title": "🛠️ 強大工具鏈",
+        "desc": "瀏覽器自動化、定時任務、Webhook 等擴充能力"
+      },
+      {
+        "title": "📱 多裝置協同",
+        "desc": "macOS/iOS/Android 節點可連線執行本地操作"
+      },
+      {
+        "title": "🎤 語音互動",
+        "desc": "支援 Voice Wake、Talk Mode 和多種 TTS 引擎"
+      },
+      {
+        "title": "🧠 記憶系統",
+        "desc": "向量化儲存和語義搜尋，讓 AI 記得所有對話"
+      },
+      {
+        "title": "🔐 安全隔離",
+        "desc": "Sandbox 隔離、DM 配對保護、工具權限控制"
+      }
+    ]
+  },
+  "docs": {
+    "title": "課程大綱",
+    "subtitle": "共 4 個章節，32 節課程",
+    "sections": [
+      {
+        "title": "入門指南 (Start)",
+        "items": [
+          {
+            "title": "快速開始",
+            "desc": "引導使用者完成首次安裝、設定和啟動 Moltbot",
+            "link": "/zh-tw/moltbot/moltbot/start/getting-started/"
+          },
+          {
+            "title": "嚮導式設定",
+            "desc": "透過互動式嚮導完成 Gateway、管道、模型設定",
+            "link": "/zh-tw/moltbot/moltbot/start/onboarding-wizard/"
+          },
+          {
+            "title": "啟動 Gateway",
+            "desc": "學習如何啟動 Gateway 常駐程式、不同模式（dev/production）",
+            "link": "/zh-tw/moltbot/moltbot/start/gateway-startup/"
+          },
+          {
+            "title": "傳送第一條訊息",
+            "desc": "透過 WebChat 或已設定管道傳送第一條訊息給 AI 助手",
+            "link": "/zh-tw/moltbot/moltbot/start/first-message/"
+          },
+          {
+            "title": "DM 配對與存取控制",
+            "desc": "了解預設的 DM 配對保護機制，如何批准陌生傳送者",
+            "link": "/zh-tw/moltbot/moltbot/start/pairing-approval/"
+          }
+        ]
+      },
+      {
+        "title": "平台功能 (Platforms)",
+        "items": [
+          {
+            "title": "多管道系統概覽",
+            "desc": "了解 Moltbot 支援的所有通訊管道及其特點",
+            "link": "/zh-tw/moltbot/moltbot/platforms/channels-overview/"
+          },
+          {
+            "title": "WhatsApp 管道",
+            "desc": "設定和使用 WhatsApp 管道（基於 Baileys）",
+            "link": "/zh-tw/moltbot/moltbot/platforms/whatsapp/"
+          },
+          {
+            "title": "Telegram 管道",
+            "desc": "設定和使用 Telegram 管道（基於 grammY Bot API）",
+            "link": "/zh-tw/moltbot/moltbot/platforms/telegram/"
+          },
+          {
+            "title": "Slack 管道",
+            "desc": "設定和使用 Slack 管道（基於 Bolt）",
+            "link": "/zh-tw/moltbot/moltbot/platforms/slack/"
+          },
+          {
+            "title": "Discord 管道",
+            "desc": "設定和使用 Discord 管道（基於 discord.js）",
+            "link": "/zh-tw/moltbot/moltbot/platforms/discord/"
+          },
+          {
+            "title": "Google Chat 管道",
+            "desc": "設定和使用 Google Chat 管道",
+            "link": "/zh-tw/moltbot/moltbot/platforms/googlechat/"
+          },
+          {
+            "title": "Signal 管道",
+            "desc": "設定和使用 Signal 管道（基於 signal-cli）",
+            "link": "/zh-tw/moltbot/moltbot/platforms/signal/"
+          },
+          {
+            "title": "iMessage 管道",
+            "desc": "設定和使用 iMessage 管道（macOS 專屬）",
+            "link": "/zh-tw/moltbot/moltbot/platforms/imessage/"
+          },
+          {
+            "title": "LINE 管道",
+            "desc": "設定和使用 LINE 管道（Messaging API）",
+            "link": "/zh-tw/moltbot/moltbot/platforms/line/"
+          },
+          {
+            "title": "WebChat 介面",
+            "desc": "使用內建的 WebChat 介面與 AI 助手互動",
+            "link": "/zh-tw/moltbot/moltbot/platforms/webchat/"
+          },
+          {
+            "title": "macOS 應用程式",
+            "desc": "了解 macOS 選單列應用程式的功能和 Voice Wake/Talk Mode",
+            "link": "/zh-tw/moltbot/moltbot/platforms/macos-app/"
+          },
+          {
+            "title": "iOS 節點",
+            "desc": "設定 iOS 節點以執行裝置本地操作（Camera、Canvas、Voice Wake）",
+            "link": "/zh-tw/moltbot/moltbot/platforms/ios-node/"
+          },
+          {
+            "title": "Android 節點",
+            "desc": "設定 Android 節點以執行裝置本地操作（Camera、Canvas）",
+            "link": "/zh-tw/moltbot/moltbot/platforms/android-node/"
+          }
+        ]
+      },
+      {
+        "title": "進階功能 (Advanced)",
+        "items": [
+          {
+            "title": "AI 模型與認證設定",
+            "desc": "設定 AI 模型提供商（Anthropic、OpenAI、OpenRouter、Ollama 等）和認證方式",
+            "link": "/zh-tw/moltbot/moltbot/advanced/models-auth/"
+          },
+          {
+            "title": "工作階段管理與多 Agent",
+            "desc": "學習工作階段模型、工作階段隔離、子 Agent 協作、上下文壓縮",
+            "link": "/zh-tw/moltbot/moltbot/advanced/session-management/"
+          },
+          {
+            "title": "瀏覽器自動化工具",
+            "desc": "使用瀏覽器工具進行網頁自動化、截圖、操作表單等",
+            "link": "/zh-tw/moltbot/moltbot/advanced/tools-browser/"
+          },
+          {
+            "title": "命令執行工具與審批",
+            "desc": "設定和使用 exec 工具，了解安全審批機制",
+            "link": "/zh-tw/moltbot/moltbot/advanced/tools-exec/"
+          },
+          {
+            "title": "Web 搜尋與抓取工具",
+            "desc": "使用 web_search 和 web_fetch 工具進行網路搜尋和內容抓取",
+            "link": "/zh-tw/moltbot/moltbot/advanced/tools-web/"
+          },
+          {
+            "title": "Canvas 視覺化介面與 A2UI",
+            "desc": "了解 Canvas A2UI 推送機制、視覺化介面操作",
+            "link": "/zh-tw/moltbot/moltbot/advanced/canvas/"
+          },
+          {
+            "title": "語音喚醒與文字轉語音",
+            "desc": "設定 Voice Wake、Talk Mode 和 TTS 提供商",
+            "link": "/zh-tw/moltbot/moltbot/advanced/voice-tts/"
+          },
+          {
+            "title": "記憶系統與向量搜尋",
+            "desc": "設定和使用記憶系統（SQLite-vec、FTS5、混合搜尋）",
+            "link": "/zh-tw/moltbot/moltbot/advanced/memory-system/"
+          },
+          {
+            "title": "Cron 定時任務與 Webhook",
+            "desc": "設定定時任務、Webhook 觸發、Gmail Pub/Sub",
+            "link": "/zh-tw/moltbot/moltbot/advanced/cron-automation/"
+          },
+          {
+            "title": "技能平台與 MoltHub",
+            "desc": "了解技能系統、Bundled/Managed/Workspace 技能、MoltHub 整合",
+            "link": "/zh-tw/moltbot/moltbot/advanced/skills-platform/"
+          },
+          {
+            "title": "安全與沙箱隔離",
+            "desc": "了解安全模型、工具權限控制、Sandbox 隔離、Docker 化",
+            "link": "/zh-tw/moltbot/moltbot/advanced/security-sandbox/"
+          }
+        ]
+      },
+      {
+        "title": "常見問題 (FAQ)",
+        "items": [
+          {
+            "title": "故障排除",
+            "desc": "解決常見問題：Gateway 啟動失敗、管道連線問題、認證錯誤、工具呼叫失敗",
+            "link": "/zh-tw/moltbot/moltbot/faq/troubleshooting/"
+          },
+          {
+            "title": "CLI 命令參考",
+            "desc": "完整的 CLI 命令列表和用法說明",
+            "link": "/zh-tw/moltbot/moltbot/faq/cli-commands/"
+          },
+          {
+            "title": "效能最佳化",
+            "desc": "最佳化 Gateway 效能、減少延遲、記憶體管理、並行控制",
+            "link": "/zh-tw/moltbot/moltbot/faq/performance-optimization/"
+          }
+        ]
+      }
+    ]
+  }
+}

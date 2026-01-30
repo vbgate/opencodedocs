@@ -1,0 +1,125 @@
+{
+    "project": {
+        "name": "opencode-dynamic-context-pruning",
+        "tagline": "Plugin für intelligente Token-Optimierung",
+        "description": "OpenCode-Plugin, das durch intelligentes Entfernen von redundanten Tool-Aufrufen aus dem Gesprächsverlauf die Token-Nutzung automatisch reduziert. Unterstützt drei Strategien: automatische Deduplizierung, Erkennung von Überschreibvorgängen und Fehlerbereinigung sowie KI-gesteuerte discard/extract-Tools, die dem Modell die autonome Entscheidung über den Zeitpunkt der Kontextbereinigung ermöglichen.",
+        "github_url": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Schnellstart",
+            "link": "/de/Opencode-DCP/opencode-dynamic-context-pruning/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "Warum DCP wählen?",
+        "subtitle": "In langen Gesprächen viele Token sparen, LLM-Nutzungskosten senken und die Antwortqualität des Modells verbessern.",
+        "list": [
+            {
+                "title": "Automatische Deduplizierung",
+                "desc": "Erkennt Aufrufe mit demselben Tool-Namen und denselben Parametern, behält automatisch den neuesten bei, ohne manuellen Eingriff."
+            },
+            {
+                "title": "Erkennung von Überschreibvorgängen",
+                "desc": "Verfolgt die zeitliche Reihenfolge von Schreib- und Lesevorgängen in Dateien und bereinigt automatisch Schreibvorgänge, die durch nachfolgende Lesevorgänge überschrieben wurden."
+            },
+            {
+                "title": "Fehlerbereinigungsstrategie",
+                "desc": "Beschneidet automatisch fehlerhafte Tool-Eingaben, die über eine angegebene Anzahl an Runden hinausgehen, behält jedoch die Fehlermeldungen zur Fehlersuche bei."
+            },
+            {
+                "title": "KI-gesteuerte Beschneidung",
+                "desc": "Stellt discard- und extract-Tools zur Verfügung, die der KI die autonome Entscheidung über den Zeitpunkt der Kontextbereinigung ermöglichen und eine Optimierung auf semantischer Ebene realisieren."
+            },
+            {
+                "title": "Transparent und steuerbar",
+                "desc": "Ermöglicht die Anzeige der Token-Nutzung und kumulierten Statistiken über den /dcp-Befehl sowie die manuelle Auslösung der Beschneidung."
+            },
+            {
+                "title": "Zustandspersistenz",
+                "desc": "Behält Beschneidungszustände und Statistiken sitzungsübergreifend bei und ermöglicht die langfristige Verfolgung der Token-Einsparungseffekte."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Lehrplan",
+        "subtitle": "Insgesamt 4 Kapitel, 11 Lektionen",
+        "sections": [
+            {
+                "title": "Erste Schritte (Start)",
+                "items": [
+                    {
+                        "title": "Installation und Schnellstart",
+                        "desc": "Installieren des DCP-Plugins in 5 Minuten und sehen der Ergebnisse",
+                        "link": "/de/Opencode-DCP/opencode-dynamic-context-pruning/start/getting-started/"
+                    },
+                    {
+                        "title": "Umfassende Konfiguration",
+                        "desc": "Verstehen Sie das mehrstufige Konfigurationssystem und die Funktion aller Konfigurationselemente",
+                        "link": "/de/Opencode-DCP/opencode-dynamic-context-pruning/start/configuration/"
+                    }
+                ]
+            },
+            {
+                "title": "Kernfunktionen (Platforms)",
+                "items": [
+                    {
+                        "title": "Detaillierte Erläuterung der automatischen Beschneidungsstrategien",
+                        "desc": "Gehen Sie tief auf die drei automatischen Strategien ein: Deduplizierung, Überschreiberkennung und Fehlerbereinigung",
+                        "link": "/de/Opencode-DCP/opencode-dynamic-context-pruning/platforms/auto-pruning/"
+                    },
+                    {
+                        "title": "LLM-gesteuerte Beschneidungs-Tools",
+                        "desc": "Verstehen Sie, wie die KI die discard- und extract-Tools autonom nutzt, um den Kontext zu optimieren",
+                        "link": "/de/Opencode-DCP/opencode-dynamic-context-pruning/platforms/llm-tools/"
+                    },
+                    {
+                        "title": "Nutzung von Slash-Befehlen",
+                        "desc": "Beherrschen Sie die /dcp context-, stats- und sweep-Befehle zur Überwachung und manuellen Beschneidung",
+                        "link": "/de/Opencode-DCP/opencode-dynamic-context-pruning/platforms/commands/"
+                    }
+                ]
+            },
+            {
+                "title": "Erweiterte Funktionen (Advanced)",
+                "items": [
+                    {
+                        "title": "Schutzmechanismen",
+                        "desc": "Verstehen Sie den Rundenschutz, geschützte Tools und geschützte Dateimuster",
+                        "link": "/de/Opencode-DCP/opencode-dynamic-context-pruning/advanced/protection/"
+                    },
+                    {
+                        "title": "Zustandspersistenz",
+                        "desc": "Verstehen Sie, wie DCP Beschneidungszustände und Statistiken sitzungsübergreifend speichert",
+                        "link": "/de/Opencode-DCP/opencode-dynamic-context-pruning/advanced/state-persistence/"
+                    },
+                    {
+                        "title": "Auswirkungen auf den Prompt-Cache",
+                        "desc": "Verstehen Sie, wie DCP den Prompt-Cache beeinflusst, und treffen Sie eine Abwägung der Cache-Trefferquote",
+                        "link": "/de/Opencode-DCP/opencode-dynamic-context-pruning/advanced/prompt-caching/"
+                    },
+                    {
+                        "title": "Subagent-Verarbeitung",
+                        "desc": "Verstehen Sie das Verhalten und die Einschränkungen von DCP in Subagent-Sitzungen",
+                        "link": "/de/Opencode-DCP/opencode-dynamic-context-pruning/advanced/subagent-handling/"
+                    }
+                ]
+            },
+            {
+                "title": "Häufig gestellte Fragen (FAQ)",
+                "items": [
+                    {
+                        "title": "Häufige Probleme und Fehlerbehebung",
+                        "desc": "Lösen Sie häufige Probleme bei der Verwendung von DCP",
+                        "link": "/de/Opencode-DCP/opencode-dynamic-context-pruning/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "Best Practices",
+                        "desc": "Best Practices für die Verwendung von DCP, um die Token-Einsparungseffekte zu maximieren",
+                        "link": "/de/Opencode-DCP/opencode-dynamic-context-pruning/faq/best-practices/"
+                    }
+                ]
+            }
+        ]
+    }
+}

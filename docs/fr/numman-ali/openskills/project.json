@@ -1,0 +1,185 @@
+{
+    "project": {
+        "name": "openskills",
+        "tagline": "Chargeur de compétences universel pour les agents IA de codage",
+        "description": "Permet à tous les agents IA de codage (Claude Code, Cursor, Windsurf, Aider, etc.) d'utiliser des compétences au format SKILL.md standard. Standard unifié, chargement progressif, support multi-agents.",
+        "github_url": "https://github.com/numman-ali/openskills"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Démarrage rapide",
+            "link": "/fr/numman-ali/openskills/start/quick-start/"
+        }
+    },
+    "features": {
+        "title": "Pourquoi OpenSkills ?",
+        "subtitle": "Format de compétences unifié, rendant les compétences disponibles dans n'importe quel agent, dites adieu au verrouillage de plateforme.",
+        "list": [
+            {
+                "title": "Entièrement compatible avec Claude Code",
+                "desc": "Même format de prompt, même marketplace, même structure de dossiers, migration transparente."
+            },
+            {
+                "title": "Support multi-agents",
+                "desc": "Supporte tous les agents capables de lire AGENTS.md : Claude Code, Cursor, Windsurf, Aider, Codex, etc."
+            },
+            {
+                "title": "Chargement progressif",
+                "desc": "Chargez les compétences à la demande, gardez le contexte de l'agent concis et ciblé, évitez la pollution du contexte."
+            },
+            {
+                "title": "Sources d'installation flexibles",
+                "desc": "Supporte l'installation de compétences depuis GitHub, chemins locaux, dépôts git privés, adapté à divers scénarios d'utilisation."
+            },
+            {
+                "title": "Mode Universal",
+                "desc": "Un ensemble de compétences pour plusieurs agents, évite les conflits avec Claude Code, gestion de compétences unifiée."
+            },
+            {
+                "title": "Exécution entièrement locale",
+                "desc": "Outil CLI sans serveur, toutes les opérations complétées dans le système de fichiers local, garantissant la confidentialité et la sécurité."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Programme du cours",
+        "subtitle": "4 chapitres, 23 leçons",
+        "sections": [
+            {
+                "title": "Guide de démarrage (Start)",
+                "items": [
+                    {
+                        "title": "Démarrage rapide",
+                        "desc": "Prise en main d'OpenSkills en 5 minutes, installation, installation de compétences et synchronisation",
+                        "link": "/fr/numman-ali/openskills/start/quick-start/"
+                    },
+                    {
+                        "title": "Qu'est-ce qu'OpenSkills",
+                        "desc": "Comprendre les concepts de base, la relation avec Claude Code, et pourquoi cet outil est nécessaire",
+                        "link": "/fr/numman-ali/openskills/start/what-is-openskills/"
+                    },
+                    {
+                        "title": "Installer OpenSkills",
+                        "desc": "Installer OpenSkills via npm/npx, vérifier les environnements Node.js et Git",
+                        "link": "/fr/numman-ali/openskills/start/installation/"
+                    },
+                    {
+                        "title": "Installer la première compétence",
+                        "desc": "Installer des compétences depuis le dépôt officiel Anthropic, expérimenter la sélection interactive",
+                        "link": "/fr/numman-ali/openskills/start/first-skill/"
+                    },
+                    {
+                        "title": "Synchroniser les compétences vers AGENTS.md",
+                        "desc": "Générer le fichier AGENTS.md, faire connaître les compétences disponibles aux agents IA",
+                        "link": "/fr/numman-ali/openskills/start/sync-to-agents/"
+                    },
+                    {
+                        "title": "Utiliser les compétences",
+                        "desc": "Comprendre comment les agents IA chargent le contenu des compétences via la commande read",
+                        "link": "/fr/numman-ali/openskills/start/read-skills/"
+                    }
+                ]
+            },
+            {
+                "title": "Fonctionnalités de la plateforme (Platforms)",
+                "items": [
+                    {
+                        "title": "Détails des commandes",
+                        "desc": "Présentation complète de toutes les commandes, paramètres et drapeaux, table de référence des commandes",
+                        "link": "/fr/numman-ali/openskills/platforms/cli-commands/"
+                    },
+                    {
+                        "title": "Détails des sources d'installation",
+                        "desc": "Explication détaillée des trois sources d'installation : GitHub, chemins locaux, dépôts privés",
+                        "link": "/fr/numman-ali/openskills/platforms/install-sources/"
+                    },
+                    {
+                        "title": "Installation globale vs locale au projet",
+                        "desc": "Comprendre la différence entre --global et l'installation par défaut, choisir l'emplacement d'installation approprié",
+                        "link": "/fr/numman-ali/openskills/platforms/global-vs-project/"
+                    },
+                    {
+                        "title": "Lister les compétences installées",
+                        "desc": "Utiliser la commande list pour voir les compétences installées, comprendre les étiquettes d'emplacement",
+                        "link": "/fr/numman-ali/openskills/platforms/list-skills/"
+                    },
+                    {
+                        "title": "Mettre à jour les compétences",
+                        "desc": "Utiliser la commande update pour rafraîchir les compétences installées, supporte la mise à jour par lots",
+                        "link": "/fr/numman-ali/openskills/platforms/update-skills/"
+                    },
+                    {
+                        "title": "Supprimer des compétences",
+                        "desc": "Présenter deux méthodes de suppression : interactive manage et scriptée remove",
+                        "link": "/fr/numman-ali/openskills/platforms/remove-skills/"
+                    }
+                ]
+            },
+            {
+                "title": "Fonctionnalités avancées (Advanced)",
+                "items": [
+                    {
+                        "title": "Mode Universal",
+                        "desc": "Éviter les conflits dans un environnement multi-agents, gestion de compétences unifiée",
+                        "link": "/fr/numman-ali/openskills/advanced/universal-mode/"
+                    },
+                    {
+                        "title": "Chemin de sortie personnalisé",
+                        "desc": "Synchroniser les compétences vers un fichier .md personnalisé",
+                        "link": "/fr/numman-ali/openskills/advanced/custom-output-path/"
+                    },
+                    {
+                        "title": "Support des liens symboliques",
+                        "desc": "Réaliser des mises à jour de compétences basées sur git et le développement local via symlink",
+                        "link": "/fr/numman-ali/openskills/advanced/symlink-support/"
+                    },
+                    {
+                        "title": "Créer des compétences personnalisées",
+                        "desc": "Créer vos propres compétences à partir de zéro, comprendre le format SKILL.md",
+                        "link": "/fr/numman-ali/openskills/advanced/create-skills/"
+                    },
+                    {
+                        "title": "Détails de la structure des compétences",
+                        "desc": "Approfondir le format SKILL.md et les meilleures pratiques des bundled resources",
+                        "link": "/fr/numman-ali/openskills/advanced/skill-structure/"
+                    },
+                    {
+                        "title": "Intégration CI/CD",
+                        "desc": "Utiliser l'installation et la synchronisation de compétences non interactives dans les environnements CI/CD",
+                        "link": "/fr/numman-ali/openskills/advanced/ci-integration/"
+                    },
+                    {
+                        "title": "Notes de sécurité",
+                        "desc": "Comprendre les fonctionnalités de protection contre le parcours de chemin, la déréférenciation des liens symboliques, la sécurité YAML, etc.",
+                        "link": "/fr/numman-ali/openskills/advanced/security/"
+                    },
+                    {
+                        "title": "Meilleures pratiques",
+                        "desc": "Meilleures pratiques en matière de configuration de projet, gestion des compétences, collaboration d'équipe, etc.",
+                        "link": "/fr/numman-ali/openskills/advanced/best-practices/"
+                    }
+                ]
+            },
+            {
+                "title": "Questions fréquentes (FAQ)",
+                "items": [
+                    {
+                        "title": "Questions fréquentes",
+                        "desc": "Réponses aux questions fréquentes sur l'installation, l'utilisation, la configuration, etc.",
+                        "link": "/fr/numman-ali/openskills/faq/faq/"
+                    },
+                    {
+                        "title": "Dépannage",
+                        "desc": "Solutions aux erreurs courantes : erreurs de chemin, échec de clonage, SKILL.md invalide, etc.",
+                        "link": "/fr/numman-ali/openskills/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "Pourquoi CLI et pas MCP",
+                        "desc": "Comprendre les raisons de conception d'OpenSkills choisissant CLI plutôt que MCP",
+                        "link": "/fr/numman-ali/openskills/faq/why-cli-not-mcp/"
+                    }
+                ]
+            }
+        ]
+    }
+}

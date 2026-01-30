@@ -1,0 +1,125 @@
+{
+    "project": {
+        "name": "opencode-dynamic-context-pruning",
+        "tagline": "インテリジェントな Token 最適化プラグイン",
+        "description": "OpenCode プラグイン。会話履歴から冗長なツール呼び出しをインテリジェントに削除することで、自動的に Token 使用量を削減します。自動重複排除、上書き書き込み検出、エラー除去の3つの戦略に加え、AI 主導の discard/extract ツールを提供し、モデルがいつコンテキストをクリアするかを自主的に決定できます。",
+        "github_url": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "クイックスタート",
+            "link": "/ja/Opencode-DCP/opencode-dynamic-context-pruning/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "なぜ DCP を選ぶのか？",
+        "subtitle": "長い会話で大量の Token を節約し、LLM のコストを削減し、モデルの応答品質を向上させます。",
+        "list": [
+            {
+                "title": "自動重複排除戦略",
+                "desc": "同じツール名とパラメータの呼び出しを検出し、最新の呼び出しを自動的に保持します。手動での操作は不要です。"
+            },
+            {
+                "title": "上書き書き込み検出",
+                "desc": "ファイルの書き込み操作と読み込み操作の時系列を追跡し、後続の読み込みで上書きされた書き込み操作を自動的にクリアします。"
+            },
+            {
+                "title": "エラー除去戦略",
+                "desc": "指定されたターン数を超えたエラーツール入力を自動的にプルーニングし、デバッグ用にエラーメッセージを保持します。"
+            },
+            {
+                "title": "AI 主導のプルーニング",
+                "desc": "discard と extract ツールを提供し、AI がいつコンテキストをクリアするかを自主的に決定できるようにし、意味レベルでの最適化を実現します。"
+            },
+            {
+                "title": "透明性と制御可能性",
+                "desc": "/dcp コマンドで Token 使用状況と累積統計を表示し、手動トリガーによるプルーニングをサポートします。"
+            },
+            {
+                "title": "状態の永続化",
+                "desc": "プルーニング状態と統計データをセッション間で保持し、長期的な Token 節約効果を追跡します。"
+            }
+        ]
+    },
+    "docs": {
+        "title": "コース概要",
+        "subtitle": "全4章、11レッスン",
+        "sections": [
+            {
+                "title": "入門ガイド (Start)",
+                "items": [
+                    {
+                        "title": "インストールとクイックスタート",
+                        "desc": "5分以内に DCP プラグインをインストールして効果を確認",
+                        "link": "/ja/Opencode-DCP/opencode-dynamic-context-pruning/start/getting-started/"
+                    },
+                    {
+                        "title": "設定の完全解説",
+                        "desc": "マルチレベル設定システムとすべての設定項目の役割を理解する",
+                        "link": "/ja/Opencode-DCP/opencode-dynamic-context-pruning/start/configuration/"
+                    }
+                ]
+            },
+            {
+                "title": "コア機能 (Platforms)",
+                "items": [
+                    {
+                        "title": "自動プルーニング戦略の詳細",
+                        "desc": "重複排除、上書き書き込み、エラー除去の3つの自動戦略を深く理解する",
+                        "link": "/ja/Opencode-DCP/opencode-dynamic-context-pruning/platforms/auto-pruning/"
+                    },
+                    {
+                        "title": "LLM 主導のプルーニングツール",
+                        "desc": "AI が discard および extract ツールを自主的に呼び出してコンテキストを最適化する仕組みを理解する",
+                        "link": "/ja/Opencode-DCP/opencode-dynamic-context-pruning/platforms/llm-tools/"
+                    },
+                    {
+                        "title": "スラッシュコマンドの使用",
+                        "desc": "/dcp context、stats、sweep コマンドをマスターし、監視と手動プルーニングを行う",
+                        "link": "/ja/Opencode-DCP/opencode-dynamic-context-pruning/platforms/commands/"
+                    }
+                ]
+            },
+            {
+                "title": "高度な機能 (Advanced)",
+                "items": [
+                    {
+                        "title": "保護メカニズム",
+                        "desc": "ターン保護、保護ツール、保護ファイルパターンを理解する",
+                        "link": "/ja/Opencode-DCP/opencode-dynamic-context-pruning/advanced/protection/"
+                    },
+                    {
+                        "title": "状態の永続化",
+                        "desc": "DCP がセッション間でプルーニング状態と統計データを保持する仕組みを理解する",
+                        "link": "/ja/Opencode-DCP/opencode-dynamic-context-pruning/advanced/state-persistence/"
+                    },
+                    {
+                        "title": "プロンプトキャッシュへの影響",
+                        "desc": "DCP がプロンプトキャッシュにどのように影響するかを理解し、キャッシュヒット率とのトレードオフを考慮する",
+                        "link": "/ja/Opencode-DCP/opencode-dynamic-context-pruning/advanced/prompt-caching/"
+                    },
+                    {
+                        "title": "サブエージェントの処理",
+                        "desc": "DCP がサブエージェントセッション内でどのように動作し、どのような制限があるかを理解する",
+                        "link": "/ja/Opencode-DCP/opencode-dynamic-context-pruning/advanced/subagent-handling/"
+                    }
+                ]
+            },
+            {
+                "title": "よくある質問 (FAQ)",
+                "items": [
+                    {
+                        "title": "よくある質問とトラブルシューティング",
+                        "desc": "DCP 使用中によく遭遇する問題を解決する",
+                        "link": "/ja/Opencode-DCP/opencode-dynamic-context-pruning/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "ベストプラクティス",
+                        "desc": "DCP を使用する際のベストプラクティスと Token 節約効果を最大化する方法",
+                        "link": "/ja/Opencode-DCP/opencode-dynamic-context-pruning/faq/best-practices/"
+                    }
+                ]
+            }
+        ]
+    }
+}

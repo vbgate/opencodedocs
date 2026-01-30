@@ -1,0 +1,145 @@
+{
+    "project": {
+        "name": "opencode-agent-skills",
+        "tagline": "OpenCode AI 스킬 동적 관리 플러그인",
+        "description": "OpenCode에 동적 스킬 발견 및 관리 기능을 제공하는 플러그인 시스템입니다. AI 에이전트가 재사용 가능한 스킬 라이브러리를 로드하고 사용할 수 있도록 지원합니다. 프로젝트 및 세션 간 스킬 재사용을 구현하며, 의미적 유사도를 기반으로 관련 스킬을 자동 추천합니다.",
+        "github_url": "https://github.com/joshuadavidthomas/opencode-agent-skills"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "빠른 시작",
+            "link": "/ko/joshuadavidthomas/opencode-agent-skills/start/installation/"
+        }
+    },
+    "features": {
+        "title": "왜 OpenCode Agent Skills를 선택해야 할까요?",
+        "subtitle": "OpenCode에 동적 스킬 발견 및 관리 기능을 제공하여, 프로젝트 및 세션 간 스킬 재사용을 구현합니다.",
+        "list": [
+            {
+                "title": "동적 스킬 발견",
+                "desc": "프로젝트, 사용자, 플러그인 디렉토리에서 자동으로 스킬을 발견합니다. 6개 위치를 스캔하고 우선순위에 따라 첫 번째 일치하는 스킬을 반환합니다."
+            },
+            {
+                "title": "Claude Code 호환",
+                "desc": "기존 Claude Code 스킬 및 플러그인 형식을 지원하여 마이그레이션 비용을 줄이고 기존 리소스를 재사용할 수 있습니다."
+            },
+            {
+                "title": "의미론적 매칭 추천",
+                "desc": "HuggingFace 임베딩 모델을 사용하여 유사도를 계산하고, 사용자 입력을 기반으로 관련 스킬을 자동으로 추천합니다."
+            },
+            {
+                "title": "컨텍스트 주입",
+                "desc": "스킬 내용이 XML 형식으로 세션 컨텍스트에 주입되어, AI가 스킬 가이드를 따라 고품질 결과를 출력합니다."
+            },
+            {
+                "title": "압축 후 복구",
+                "desc": "세션이 압축된 후 스킬 목록을 자동으로 다시 주입하여, 장시간 세션에서 스킬을 지속적으로 사용할 수 있습니다."
+            },
+            {
+                "title": "스크립트 실행 지원",
+                "desc": "스킬 디렉토리에 실행 가능한 스크립트를 포함할 수 있으며, 스킬 디렉토리 컨텍스트 내에서 자동화 작업을 실행할 수 있습니다."
+            }
+        ]
+    },
+    "docs": {
+        "title": "과정 개요",
+        "subtitle": "총 4개 장, 15개 수업",
+        "sections": [
+            {
+                "title": "입문 가이드 (Start)",
+                "items": [
+                    {
+                        "title": "OpenCode Agent Skills란 무엇인가요?",
+                        "desc": "플러그인의 핵심 가치와 기능적 특성을 이해합니다.",
+                        "link": "/ko/joshuadavidthomas/opencode-agent-skills/start/what-is-opencode-agent-skills/"
+                    },
+                    {
+                        "title": "OpenCode Agent Skills 설치",
+                        "desc": "플러그인 설치를 완료하고 실행을 검증합니다.",
+                        "link": "/ko/joshuadavidthomas/opencode-agent-skills/start/installation/"
+                    },
+                    {
+                        "title": "첫 번째 스킬 만들기",
+                        "desc": "스킬 디렉토리 구조와 SKILL.md 형식 사양을 마스터합니다.",
+                        "link": "/ko/joshuadavidthomas/opencode-agent-skills/start/creating-your-first-skill/"
+                    }
+                ]
+            },
+            {
+                "title": "핵심 기능 (Platforms)",
+                "items": [
+                    {
+                        "title": "스킬 발견 메커니즘 상세 설명",
+                        "desc": "여러 위치에서 자동으로 스킬을 발견하는 방법을 이해합니다.",
+                        "link": "/ko/joshuadavidthomas/opencode-agent-skills/platforms/skill-discovery-mechanism/"
+                    },
+                    {
+                        "title": "사용 가능한 스킬 쿼리 및 나열",
+                        "desc": "get_available_skills 도구 및 네임스페이스를 사용하는 방법을 배웁니다.",
+                        "link": "/ko/joshuadavidthomas/opencode-agent-skills/platforms/listing-available-skills/"
+                    },
+                    {
+                        "title": "세션 컨텍스트에 스킬 로드",
+                        "desc": "use_skill 도구 사용과 XML 컨텐츠 주입 메커니즘을 마스터합니다.",
+                        "link": "/ko/joshuadavidthomas/opencode-agent-skills/platforms/loading-skills-into-context/"
+                    },
+                    {
+                        "title": "자동 스킬 추천: 의미론적 매칭 원리",
+                        "desc": "의미적 유사도를 기반으로 관련 스킬을 자동으로 추천하는 방법을 이해합니다.",
+                        "link": "/ko/joshuadavidthomas/opencode-agent-skills/platforms/automatic-skill-matching/"
+                    },
+                    {
+                        "title": "스킬 스크립트 실행",
+                        "desc": "run_skill_script 도구를 사용하여 스킬 디렉토리에서 자동화 스크립트를 실행하는 방법을 배웁니다.",
+                        "link": "/ko/joshuadavidthomas/opencode-agent-skills/platforms/executing-skill-scripts/"
+                    },
+                    {
+                        "title": "스킬 파일 읽기",
+                        "desc": "read_skill_file 도구를 사용하여 스킬의 문서, 구성 등 지원 파일에 액세스합니다.",
+                        "link": "/ko/joshuadavidthomas/opencode-agent-skills/platforms/reading-skill-files/"
+                    }
+                ]
+            },
+            {
+                "title": "고급 기능 (Advanced)",
+                "items": [
+                    {
+                        "title": "Claude Code 스킬 호환성",
+                        "desc": "플러그인이 Claude Code의 스킬 및 플러그인 시스템과 호환되는 방식을 이해합니다.",
+                        "link": "/ko/joshuadavidthomas/opencode-agent-skills/advanced/claude-code-compatibility/"
+                    },
+                    {
+                        "title": "Superpowers 워크플로우 통합",
+                        "desc": "Superpowers 모드를 구성하고 사용하여 엄격한 워크플로우 가이드를 얻습니다.",
+                        "link": "/ko/joshuadavidthomas/opencode-agent-skills/advanced/superpowers-integration/"
+                    },
+                    {
+                        "title": "네임스페이스 및 스킬 우선순위",
+                        "desc": "스킬의 네임스페이스 시스템과 발견 우선순위 규칙을 이해합니다.",
+                        "link": "/ko/joshuadavidthomas/opencode-agent-skills/advanced/namespaces-and-priority/"
+                    },
+                    {
+                        "title": "컨텍스트 압축 복구 메커니즘",
+                        "desc": "긴 세션에서 스킬의 가용성을 유지하는 방법을 이해합니다.",
+                        "link": "/ko/joshuadavidthomas/opencode-agent-skills/advanced/context-compaction-resilience/"
+                    }
+                ]
+            },
+            {
+                "title": "자주 묻는 질문 (FAQ)",
+                "items": [
+                    {
+                        "title": "일반적인 문제 해결",
+                        "desc": "플러그인 사용 중 발생하는 일반적인 문제를 해결합니다.",
+                        "link": "/ko/joshuadavidthomas/opencode-agent-skills/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "보안 고려사항",
+                        "desc": "플러그인의 보안 메커니즘과 모범 사례를 이해합니다.",
+                        "link": "/ko/joshuadavidthomas/opencode-agent-skills/faq/security-considerations/"
+                    }
+                ]
+            }
+        ]
+    }
+}

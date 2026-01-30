@@ -1,0 +1,210 @@
+{
+    "project": {
+        "name": "Everything Claude Code",
+        "tagline": "Проверенные в бою конфигурации плагинов для Claude Code",
+        "description": "Полная коллекция конфигураций плагинов для Claude Code от победителя хакатона Anthropic. Предоставляет 9 агентов, 14 команд, 8 наборов правил, 11 навыков и 15+ хуков для повышения эффективности разработки с AI. Поддержка кросс-платформенных Node.js-скриптов для Windows, macOS и Linux.",
+        "github_url": "https://github.com/affaan-m/everything-claude-code"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Быстрый старт",
+            "link": "/ru/affaan-m/everything-claude-code/start/quickstart/"
+        }
+    },
+    "features": {
+        "title": "Почему выбирают Everything Claude Code?",
+        "subtitle": "Начните с готовой конфигурации. Получите настройки, отточенные за 10+ месяцев ежедневного использования.",
+        "list": [
+            {
+                "title": "Проверено в бою",
+                "desc": "От победителя хакатона Anthropic, 10+ месяцев ежедневного использования, создание реальных продуктов."
+            },
+            {
+                "title": "Полная конфигурация",
+                "desc": "9 агентов, 14 команд, 8 наборов правил, 11 навыков, 15+ хуков — покрывают все сценарии разработки."
+            },
+            {
+                "title": "Кросс-платформа",
+                "desc": "Все хуки и скрипты переписаны на Node.js, бесшовная работа на Windows, macOS и Linux."
+            },
+            {
+                "title": "Умный менеджер пакетов",
+                "desc": "Автоопределение npm, pnpm, yarn или bun, поддержка 6 уровней приоритета настройки, без ручной конфигурации."
+            },
+            {
+                "title": "Непрерывное обучение",
+                "desc": "Автоматическое извлечение повторяемых паттернов из сессий и сохранение как learned skills."
+            },
+            {
+                "title": "Гарантия качества кода",
+                "desc": "TDD-процессы, code review, аудит безопасности, обеспечение 80%+ покрытия тестами."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Программа курса",
+        "subtitle": "6 разделов, 27 уроков",
+        "sections": [
+            {
+                "title": "Быстрый старт",
+                "items": [
+                    {
+                        "title": "Быстрый старт",
+                        "desc": "Установите и используйте Everything Claude Code за 5 минут",
+                        "link": "/ru/affaan-m/everything-claude-code/start/quickstart/"
+                    },
+                    {
+                        "title": "Руководство по установке",
+                        "desc": "Подробные шаги для установки из маркетплейса vs ручной установки",
+                        "link": "/ru/affaan-m/everything-claude-code/start/installation/"
+                    },
+                    {
+                        "title": "Настройка менеджера пакетов",
+                        "desc": "Настройка определения npm, pnpm, yarn или bun",
+                        "link": "/ru/affaan-m/everything-claude-code/start/package-manager-setup/"
+                    },
+                    {
+                        "title": "Настройка MCP-серверов",
+                        "desc": "Настройка 15+ MCP-серверов: GitHub, Supabase, Vercel и др.",
+                        "link": "/ru/affaan-m/everything-claude-code/start/mcp-setup/"
+                    }
+                ]
+            },
+            {
+                "title": "Основные функции",
+                "items": [
+                    {
+                        "title": "Обзор команд",
+                        "desc": "Освойте 14 слэш-команд для рабочих процессов разработки",
+                        "link": "/ru/affaan-m/everything-claude-code/platforms/commands-overview/"
+                    },
+                    {
+                        "title": "Обзор агентов",
+                        "desc": "Узнайте о 9 специализированных суб-агентах и сценариях их использования",
+                        "link": "/ru/affaan-m/everything-claude-code/platforms/agents-overview/"
+                    },
+                    {
+                        "title": "TDD-рабочий процесс",
+                        "desc": "Разработка через тестирование с командой /tdd",
+                        "link": "/ru/affaan-m/everything-claude-code/platforms/tdd-workflow/"
+                    },
+                    {
+                        "title": "Рабочий процесс code review",
+                        "desc": "Автоматизация code review и аудита безопасности",
+                        "link": "/ru/affaan-m/everything-claude-code/platforms/code-review-workflow/"
+                    }
+                ]
+            },
+            {
+                "title": "Расширенные функции",
+                "items": [
+                    {
+                        "title": "Пользовательские правила",
+                        "desc": "Создание и управление специфичными для проекта правилами",
+                        "link": "/ru/affaan-m/everything-claude-code/advanced/custom-rules/"
+                    },
+                    {
+                        "title": "Динамические контексты",
+                        "desc": "Переключение между режимами разработки, review и исследований",
+                        "link": "/ru/affaan-m/everything-claude-code/advanced/dynamic-contexts/"
+                    },
+                    {
+                        "title": "Автоматизация хуков",
+                        "desc": "Углублённое изучение 15+ автоматизационных хуков",
+                        "link": "/ru/affaan-m/everything-claude-code/advanced/hooks-automation/"
+                    },
+                    {
+                        "title": "Оптимизация токенов",
+                        "desc": "Управление контекстным окном и снижение использования токенов",
+                        "link": "/ru/affaan-m/everything-claude-code/advanced/token-optimization/"
+                    },
+                    {
+                        "title": "Циклы проверки",
+                        "desc": "Чекпоинты vs непрерывная оценка и метрики pass@k",
+                        "link": "/ru/affaan-m/everything-claude-code/advanced/verification-loop/"
+                    },
+                    {
+                        "title": "Непрерывное обучение",
+                        "desc": "Автоматическое извлечение паттернов из сессий и сохранение как skills",
+                        "link": "/ru/affaan-m/everything-claude-code/advanced/continuous-learning/"
+                    }
+                ]
+            },
+            {
+                "title": "FAQ",
+                "items": [
+                    {
+                        "title": "Устранение неполадок MCP",
+                        "desc": "Решение проблем подключения и конфигурации MCP-серверов",
+                        "link": "/ru/affaan-m/everything-claude-code/faq/troubleshooting-mcp/"
+                    },
+                    {
+                        "title": "Устранение неполадок агентов",
+                        "desc": "Исправление проблем делегирования агентов и качества ответов",
+                        "link": "/ru/affaan-m/everything-claude-code/faq/troubleshooting-agents/"
+                    },
+                    {
+                        "title": "Устранение неполадок хуков",
+                        "desc": "Отладка выполнения хуков и ошибок скриптов",
+                        "link": "/ru/affaan-m/everything-claude-code/faq/troubleshooting-hooks/"
+                    },
+                    {
+                        "title": "Советы по оптимизации производительности",
+                        "desc": "Оптимизация контекстного окна и повышение скорости ответов",
+                        "link": "/ru/affaan-m/everything-claude-code/faq/performance-tips/"
+                    }
+                ]
+            },
+            {
+                "title": "Приложения",
+                "items": [
+                    {
+                        "title": "Справочник по конфигурации",
+                        "desc": "Полный справочник по файлам конфигурации",
+                        "link": "/ru/affaan-m/everything-claude-code/appendix/config-reference/"
+                    },
+                    {
+                        "title": "Справочник по правилам",
+                        "desc": "Подробное описание 8 встроенных наборов правил",
+                        "link": "/ru/affaan-m/everything-claude-code/appendix/rules-reference/"
+                    },
+                    {
+                        "title": "Справочник по Skills",
+                        "desc": "11 skills и сценарии их использования",
+                        "link": "/ru/affaan-m/everything-claude-code/appendix/skills-reference/"
+                    },
+                    {
+                        "title": "API скриптов",
+                        "desc": "Утилиты Node.js и скрипты хуков",
+                        "link": "/ru/affaan-m/everything-claude-code/appendix/scripts-api/"
+                    },
+                    {
+                        "title": "Примеры",
+                        "desc": "Примеры конфигураций из реального мира",
+                        "link": "/ru/affaan-m/everything-claude-code/appendix/examples/"
+                    },
+                    {
+                        "title": "Тестовый набор",
+                        "desc": "Запуск и расширение тестового набора",
+                        "link": "/ru/affaan-m/everything-claude-code/appendix/test-suite/"
+                    },
+                    {
+                        "title": "Руководство по внесению вклада",
+                        "desc": "Как внести свой вклад в agents, skills и хуки",
+                        "link": "/ru/affaan-m/everything-claude-code/appendix/contributing/"
+                    }
+                ]
+            },
+            {
+                "title": "История изменений",
+                "items": [
+                    {
+                        "title": "Примечания к выпуску",
+                        "desc": "История версий и критические изменения",
+                        "link": "/ru/affaan-m/everything-claude-code/changelog/release-notes/"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,166 @@
+{
+  "project": {
+    "name": "agent-app-factory",
+    "tagline": "1 個想法，7 步變 App",
+    "description": "別再把時間浪費在重複編碼上了。AI App Factory 讓你從想法到可執行 MVP，只需 7 個檢查點。自動生成前後端程式碼、測試、文件和 CI/CD 設定，生產級品質。",
+    "github_url": "https://github.com/hyz1992/agent-app-factory"
+  },
+  "hero": {
+    "primary_action": {
+      "text": "快速開始",
+      "link": "/zh-tw/hyz1992/agent-app-factory/start/getting-started/"
+    }
+  },
+  "features": {
+    "title": "為什麼選擇 AI App Factory？",
+    "subtitle": "將想法轉化為可執行應用程式，從沒這麼簡單",
+    "list": [
+      {
+        "title": "🚀 7 步流水線",
+        "desc": "從想法到 App，全自動化零等待。Bootstrap → PRD → UI → Tech → Code → Validation → Preview"
+      },
+      {
+        "title": "✅ 品質檢查點",
+        "desc": "每個階段完成後暫停確認，確保輸出符合預期，避免錯誤累積到後期無法挽回"
+      },
+      {
+        "title": "🏭 生產級程式碼",
+        "desc": "自動生成前後端程式碼、測試、文件和 CI/CD 設定。開箱即用，拿來就能上線"
+      },
+      {
+        "title": "⚡ 快速驗證",
+        "desc": "明確範圍邊界，避免過度設計。快速交付可驗證的原型，先驗證市場再疊代"
+      },
+      {
+        "title": "🔒 資料隱私",
+        "desc": "本機執行，零資料上傳。你的想法和程式碼永遠不會離開你的機器"
+      }
+    ]
+  },
+  "docs": {
+    "title": "課程大綱",
+    "subtitle": "共 4 個章節，20 節課程",
+    "sections": [
+      {
+        "title": "入門指南 (Start)",
+        "items": [
+          {
+            "title": "快速開始：從想法到應用程式",
+            "desc": "了解 AI App Factory 的核心價值、前置要求，並完成第一個專案的初始化",
+            "link": "/zh-tw/hyz1992/agent-app-factory/start/getting-started/"
+          },
+          {
+            "title": "安裝與設定",
+            "desc": "全域安裝 CLI 工具，設定 AI 助手（Claude Code/OpenCode）",
+            "link": "/zh-tw/hyz1992/agent-app-factory/start/installation/"
+          },
+          {
+            "title": "初始化 Factory 專案",
+            "desc": "使用 factory init 指令初始化目錄，了解生成的專案結構",
+            "link": "/zh-tw/hyz1992/agent-app-factory/start/init-project/"
+          },
+          {
+            "title": "7 階段流水線概覽",
+            "desc": "理解從 Bootstrap 到 Preview 的完整流水線流程",
+            "link": "/zh-tw/hyz1992/agent-app-factory/start/pipeline-overview/"
+          }
+        ]
+      },
+      {
+        "title": "平台功能 (Platforms)",
+        "items": [
+          {
+            "title": "Claude Code 整合指南",
+            "desc": "學習如何使用 Claude Code 執行流水線，包括權限設定和最佳實務",
+            "link": "/zh-tw/hyz1992/agent-app-factory/platforms/claude-code/"
+          },
+          {
+            "title": "OpenCode 與其他 AI 助手",
+            "desc": "了解如何使用 OpenCode、Cursor 等 AI 助手執行流水線",
+            "link": "/zh-tw/hyz1992/agent-app-factory/platforms/other-ai-assistants/"
+          },
+          {
+            "title": "必要外掛安裝",
+            "desc": "安裝 superpowers 和 ui-ux-pro-max 外掛，確保流水線正常執行",
+            "link": "/zh-tw/hyz1992/agent-app-factory/platforms/plugins/"
+          }
+        ]
+      },
+      {
+        "title": "進階功能 (Advanced)",
+        "items": [
+          {
+            "title": "階段 1：Bootstrap - 結構化產品想法",
+            "desc": "學習如何使用 Bootstrap Agent 將想法轉化為結構化文件",
+            "link": "/zh-tw/hyz1992/agent-app-factory/advanced/stage-bootstrap/"
+          },
+          {
+            "title": "階段 2：PRD - 產生產品需求文件",
+            "desc": "產生 MVP 級 PRD，包含使用者故事、功能清單和非目標",
+            "link": "/zh-tw/hyz1992/agent-app-factory/advanced/stage-prd/"
+          },
+          {
+            "title": "階段 3：UI - 設計介面與原型",
+            "desc": "使用 ui-ux-pro-max 技能設計 UI 結構和可預覽原型",
+            "link": "/zh-tw/hyz1992/agent-app-factory/advanced/stage-ui/"
+          },
+          {
+            "title": "階段 4：Tech - 設計技術架構",
+            "desc": "設計最小可行的技術架構和 Prisma 資料模型",
+            "link": "/zh-tw/hyz1992/agent-app-factory/advanced/stage-tech/"
+          },
+          {
+            "title": "階段 5：Code - 產生可執行程式碼",
+            "desc": "根據 UI Schema 和 Tech 設計產生前後端程式碼、測試和設定",
+            "link": "/zh-tw/hyz1992/agent-app-factory/advanced/stage-code/"
+          },
+          {
+            "title": "階段 6：Validation - 驗證程式碼品質",
+            "desc": "驗證相依套件安裝、型別檢查、Prisma schema 和程式碼品質",
+            "link": "/zh-tw/hyz1992/agent-app-factory/advanced/stage-validation/"
+          },
+          {
+            "title": "階段 7：Preview - 產生部署指南",
+            "desc": "產生完整的執行說明文件和部署設定",
+            "link": "/zh-tw/hyz1992/agent-app-factory/advanced/stage-preview/"
+          },
+          {
+            "title": "Sisyphus 排程器詳解",
+            "desc": "理解排程器如何協調流水線、管理狀態和執行權限檢查",
+            "link": "/zh-tw/hyz1992/agent-app-factory/advanced/orchestrator/"
+          },
+          {
+            "title": "情境最佳化：分會話執行",
+            "desc": "學習如何使用 factory continue 指令節省 Token，在每個階段新建會話",
+            "link": "/zh-tw/hyz1992/agent-app-factory/advanced/context-optimization/"
+          },
+          {
+            "title": "權限與安全機制",
+            "desc": "理解能力邊界矩陣、越權處理和安全檢查機制",
+            "link": "/zh-tw/hyz1992/agent-app-factory/advanced/security-permissions/"
+          },
+          {
+            "title": "失敗處理與回復",
+            "desc": "學習失敗識別、重試機制、回復策略和人工介入流程",
+            "link": "/zh-tw/hyz1992/agent-app-factory/advanced/failure-handling/"
+          }
+        ]
+      },
+      {
+        "title": "常見問題 (FAQ)",
+        "items": [
+          {
+            "title": "常見問題與故障排除",
+            "desc": "解決初始化、執行和部署過程中遇到的常見問題",
+            "link": "/zh-tw/hyz1992/agent-app-factory/faq/troubleshooting/"
+          },
+          {
+            "title": "最佳實務",
+            "desc": "學習提供清晰產品描述、利用檢查點、控制範圍、逐步疊代等技巧",
+            "link": "/zh-tw/hyz1992/agent-app-factory/faq/best-practices/"
+          }
+        ]
+      }
+    ]
+  }
+}

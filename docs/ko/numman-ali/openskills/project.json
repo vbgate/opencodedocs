@@ -1,0 +1,185 @@
+{
+    "project": {
+        "name": "openskills",
+        "tagline": "AI 코딩 에이전트를 위한 범용 스킬 로더",
+        "description": "모든 AI 코딩 에이전트(Claude Code, Cursor, Windsurf, Aider 등)가 표준 SKILL.md 형식의 스킬을 사용할 수 있도록 합니다. 통합된 표준, 점진적 로딩, 다중 에이전트 지원.",
+        "github_url": "https://github.com/numman-ali/openskills"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "빠르게 시작하기",
+            "link": "/ko/numman-ali/openskills/start/quick-start/"
+        }
+    },
+    "features": {
+        "title": "OpenSkills를 선택해야 하는 이유?",
+        "subtitle": "통합된 스킬 형식으로 스킬을 모든 에이전트에서 사용할 수 있어, 플랫폼 종속 문제를 해결합니다.",
+        "list": [
+            {
+                "title": "Claude Code 완전 호환",
+                "desc": "동일한 프롬프트 형식, 동일한 marketplace, 동일한 폴더 구조로 원활하게 마이그레이션할 수 있습니다."
+            },
+            {
+                "title": "다중 에이전트 지원",
+                "desc": "AGENTS.md를 읽을 수 있는 모든 에이전트(Claude Code, Cursor, Windsurf, Aider, Codex 등)를 지원합니다."
+            },
+            {
+                "title": "점진적 로딩",
+                "desc": "필요에 따라 스킬을 로드하여 에이전트 컨텍스트를 간결하고 집중된 상태로 유지하고, 컨텍스트 오염을 방지합니다."
+            },
+            {
+                "title": "유연한 설치 소스",
+                "desc": "GitHub, 로컬 경로, 프라이빗 git 저장소에서 스킬을 설치하여 다양한 사용 시나리오에 대응합니다."
+            },
+            {
+                "title": "Universal 모드",
+                "desc": "하나의 스킬 세트로 여러 에이전트를 지원하여 Claude Code와의 충돌을 방지하고, 통합된 스킬 관리를 제공합니다."
+            },
+            {
+                "title": "완전한 로컬 실행",
+                "desc": "CLI 도구는 서버가 필요 없으며, 모든 작업이 로컬 파일 시스템에서 완료되어 개인정보 보안을 보장합니다."
+            }
+        ]
+    },
+    "docs": {
+        "title": "커리큘럼",
+        "subtitle": "총 4개의 챕터, 23개의 레슨",
+        "sections": [
+            {
+                "title": "입문 가이드 (Start)",
+                "items": [
+                    {
+                        "title": "빠르게 시작하기",
+                        "desc": "5분 만에 OpenSkills를 시작하고, 설치, 스킬 설치 및 동기화를 완료합니다.",
+                        "link": "/ko/numman-ali/openskills/start/quick-start/"
+                    },
+                    {
+                        "title": "OpenSkills란?",
+                        "desc": "핵심 개념, Claude Code와의 관계, 그리고 이 도구가 필요한 이유를 알아봅니다.",
+                        "link": "/ko/numman-ali/openskills/start/what-is-openskills/"
+                    },
+                    {
+                        "title": "OpenSkills 설치",
+                        "desc": "npm/npx로 OpenSkills를 설치하고, Node.js 및 Git 환경을 확인합니다.",
+                        "link": "/ko/numman-ali/openskills/start/installation/"
+                    },
+                    {
+                        "title": "첫 번째 스킬 설치",
+                        "desc": "Anthropic 공식 저장소에서 스킬을 설치하고, 대화형 선택을 경험합니다.",
+                        "link": "/ko/numman-ali/openskills/start/first-skill/"
+                    },
+                    {
+                        "title": "스킬을 AGENTS.md로 동기화",
+                        "desc": "AGENTS.md 파일을 생성하여 AI 에이전트가 사용 가능한 스킬을 인식하도록 합니다.",
+                        "link": "/ko/numman-ali/openskills/start/sync-to-agents/"
+                    },
+                    {
+                        "title": "스킬 사용",
+                        "desc": "AI 에이전트가 read 명령을 통해 스킬 내용을 로드하는 방법을 알아봅니다.",
+                        "link": "/ko/numman-ali/openskills/start/read-skills/"
+                    }
+                ]
+            },
+            {
+                "title": "플랫폼 기능 (Platforms)",
+                "items": [
+                    {
+                        "title": "명령 상세",
+                        "desc": "모든 명령, 매개변수 및 플래그를 완전히 소개하고 명령 요약표를 제공합니다.",
+                        "link": "/ko/numman-ali/openskills/platforms/cli-commands/"
+                    },
+                    {
+                        "title": "설치 소스 상세",
+                        "desc": "GitHub, 로컬 경로, 프라이빗 저장소 세 가지 설치 소스를 상세히 설명합니다.",
+                        "link": "/ko/numman-ali/openskills/platforms/install-sources/"
+                    },
+                    {
+                        "title": "전역 설치 vs 프로젝트 로컬 설치",
+                        "desc": "--global과 기본 설치의 차이를 이해하고, 적절한 설치 위치를 선택합니다.",
+                        "link": "/ko/numman-ali/openskills/platforms/global-vs-project/"
+                    },
+                    {
+                        "title": "설치된 스킬 목록",
+                        "desc": "list 명령을 사용하여 설치된 스킬을 확인하고, 위치 태그를 이해합니다.",
+                        "link": "/ko/numman-ali/openskills/platforms/list-skills/"
+                    },
+                    {
+                        "title": "스킬 업데이트",
+                        "desc": "update 명령을 사용하여 설치된 스킬을 새로고침하고, 일괄 업데이트를 지원합니다.",
+                        "link": "/ko/numman-ali/openskills/platforms/update-skills/"
+                    },
+                    {
+                        "title": "스킬 삭제",
+                        "desc": "대화형 manage와 스크립트형 remove 두 가지 삭제 방식을 소개합니다.",
+                        "link": "/ko/numman-ali/openskills/platforms/remove-skills/"
+                    }
+                ]
+            },
+            {
+                "title": "고급 기능 (Advanced)",
+                "items": [
+                    {
+                        "title": "Universal 모드",
+                        "desc": "다중 에이전트 환경에서 충돌을 방지하고 통합된 스킬 관리를 제공합니다.",
+                        "link": "/ko/numman-ali/openskills/advanced/universal-mode/"
+                    },
+                    {
+                        "title": "사용자 정의 출력 경로",
+                        "desc": "스킬을 사용자 정의 .md 파일로 동기화합니다.",
+                        "link": "/ko/numman-ali/openskills/advanced/custom-output-path/"
+                    },
+                    {
+                        "title": "심볼릭 링크 지원",
+                        "desc": "symlink를 통해 git 기반의 스킬 업데이트와 로컬 개발을 구현합니다.",
+                        "link": "/ko/numman-ali/openskills/advanced/symlink-support/"
+                    },
+                    {
+                        "title": "사용자 정의 스킬 생성",
+                        "desc": "처음부터 자신만의 스킬을 만들고, SKILL.md 형식을 이해합니다.",
+                        "link": "/ko/numman-ali/openskills/advanced/create-skills/"
+                    },
+                    {
+                        "title": "스킬 구조 상세",
+                        "desc": "SKILL.md 형식과 bundled resources 모범 사례를 심도 있게 설명합니다.",
+                        "link": "/ko/numman-ali/openskills/advanced/skill-structure/"
+                    },
+                    {
+                        "title": "CI/CD 통합",
+                        "desc": "CI/CD 환경에서 비대화형 스킬 설치 및 동기화를 사용합니다.",
+                        "link": "/ko/numman-ali/openskills/advanced/ci-integration/"
+                    },
+                    {
+                        "title": "보안 설명",
+                        "desc": "경로 순회 보호, 심볼릭 링크 역참조, YAML 보안 등 기능을 이해합니다.",
+                        "link": "/ko/numman-ali/openskills/advanced/security/"
+                    },
+                    {
+                        "title": "모범 사례",
+                        "desc": "프로젝트 구성, 스킬 관리, 팀 협업 등의 모범 사례를 알아봅니다.",
+                        "link": "/ko/numman-ali/openskills/advanced/best-practices/"
+                    }
+                ]
+            },
+            {
+                "title": "자주 묻는 질문 (FAQ)",
+                "items": [
+                    {
+                        "title": "자주 묻는 질문",
+                        "desc": "설치, 사용, 구성 등에 관한 일반적인 질문에 대한 답변입니다.",
+                        "link": "/ko/numman-ali/openskills/faq/faq/"
+                    },
+                    {
+                        "title": "문제 해결",
+                        "desc": "경로 오류, 클론 실패, SKILL.md 유효하지 않음 등 일반적인 오류 해결 방법.",
+                        "link": "/ko/numman-ali/openskills/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "CLI가 아니라 MCP인 이유",
+                        "desc": "OpenSkills가 CLI가 아닌 MCP를 선택한 설계 이유를 알아봅니다.",
+                        "link": "/ko/numman-ali/openskills/faq/why-cli-not-mcp/"
+                    }
+                ]
+            }
+        ]
+    }
+}

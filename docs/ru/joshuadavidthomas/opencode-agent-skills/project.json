@@ -1,0 +1,145 @@
+{
+    "project": {
+        "name": "opencode-agent-skills",
+        "tagline": "Плагин динамического управления навыками для OpenCode AI",
+        "description": "Система плагинов для динамического обнаружения и управления навыками в OpenCode, позволяющая AI-агентам загружать и использовать переиспользуемые библиотеки навыков. Реализует переиспользование навыков между проектами и сессиями с автоматическими рекомендациями на основе семантического сходства.",
+        "github_url": "https://github.com/joshuadavidthomas/opencode-agent-skills"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Быстрый старт",
+            "link": "/ru/joshuadavidthomas/opencode-agent-skills/start/installation/"
+        }
+    },
+    "features": {
+        "title": "Почему OpenCode Agent Skills?",
+        "subtitle": "Динамическое обнаружение и управление навыками для OpenCode с переиспользованием между проектами и сессиями.",
+        "list": [
+            {
+                "title": "Динамическое обнаружение навыков",
+                "desc": "Автоматическое обнаружение навыков из проектных, пользовательских и плагин-директорий. Поддержка сканирования 6 локаций с возвратом первого совпадения по приоритету."
+            },
+            {
+                "title": "Совместимость с Claude Code",
+                "desc": "Поддержка существующих навыков и форматов плагинов Claude Code. Снижение затрат на миграцию и переиспользование существующих ресурсов."
+            },
+            {
+                "title": "Семантические рекомендации",
+                "desc": "Использование embedding-моделей HuggingFace для вычисления сходства. Автоматические рекомендации релевантных навыков на основе пользовательского ввода."
+            },
+            {
+                "title": "Инъекция контекста",
+                "desc": "Содержимое навыков инъецируется в контекст сессии в XML-формате. AI следует руководству навыка для получения качественных результатов."
+            },
+            {
+                "title": "Восстановление после сжатия",
+                "desc": "Автоматическая повторная инъекция списка навыков после сжатия сессии. Навыки остаются доступными в длительных сессиях."
+            },
+            {
+                "title": "Поддержка выполнения скриптов",
+                "desc": "Директория навыка может содержать исполняемые скрипты. Выполнение автоматизированных задач в контексте директории навыка."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Программа курса",
+        "subtitle": "4 раздела, 15 уроков",
+        "sections": [
+            {
+                "title": "Начало работы (Start)",
+                "items": [
+                    {
+                        "title": "Что такое OpenCode Agent Skills?",
+                        "desc": "Узнайте о ключевых возможностях и функциях плагина",
+                        "link": "/ru/joshuadavidthomas/opencode-agent-skills/start/what-is-opencode-agent-skills/"
+                    },
+                    {
+                        "title": "Установка OpenCode Agent Skills",
+                        "desc": "Установите плагин и проверьте его работу",
+                        "link": "/ru/joshuadavidthomas/opencode-agent-skills/start/installation/"
+                    },
+                    {
+                        "title": "Создание первого навыка",
+                        "desc": "Освойте структуру директории навыка и формат SKILL.md",
+                        "link": "/ru/joshuadavidthomas/opencode-agent-skills/start/creating-your-first-skill/"
+                    }
+                ]
+            },
+            {
+                "title": "Основные функции (Platforms)",
+                "items": [
+                    {
+                        "title": "Механизм обнаружения навыков",
+                        "desc": "Поймите, как плагин автоматически обнаруживает навыки из разных локаций",
+                        "link": "/ru/joshuadavidthomas/opencode-agent-skills/platforms/skill-discovery-mechanism/"
+                    },
+                    {
+                        "title": "Запрос и список доступных навыков",
+                        "desc": "Научитесь использовать инструмент get_available_skills и пространства имён",
+                        "link": "/ru/joshuadavidthomas/opencode-agent-skills/platforms/listing-available-skills/"
+                    },
+                    {
+                        "title": "Загрузка навыков в контекст сессии",
+                        "desc": "Освойте инструмент use_skill и механизм XML-инъекции контента",
+                        "link": "/ru/joshuadavidthomas/opencode-agent-skills/platforms/loading-skills-into-context/"
+                    },
+                    {
+                        "title": "Автоматические рекомендации: принцип семантического сопоставления",
+                        "desc": "Поймите, как плагин автоматически рекомендует навыки на основе семантического сходства",
+                        "link": "/ru/joshuadavidthomas/opencode-agent-skills/platforms/automatic-skill-matching/"
+                    },
+                    {
+                        "title": "Выполнение скриптов навыков",
+                        "desc": "Научитесь использовать run_skill_script для выполнения автоматизированных скриптов в директории навыка",
+                        "link": "/ru/joshuadavidthomas/opencode-agent-skills/platforms/executing-skill-scripts/"
+                    },
+                    {
+                        "title": "Чтение файлов навыков",
+                        "desc": "Используйте read_skill_file для доступа к документации, конфигурации и другим файлам навыка",
+                        "link": "/ru/joshuadavidthomas/opencode-agent-skills/platforms/reading-skill-files/"
+                    }
+                ]
+            },
+            {
+                "title": "Продвинутые функции (Advanced)",
+                "items": [
+                    {
+                        "title": "Совместимость с навыками Claude Code",
+                        "desc": "Узнайте, как плагин совместим с системой навыков и плагинов Claude Code",
+                        "link": "/ru/joshuadavidthomas/opencode-agent-skills/advanced/claude-code-compatibility/"
+                    },
+                    {
+                        "title": "Интеграция с Superpowers",
+                        "desc": "Настройте и используйте режим Superpowers для строгого руководства рабочим процессом",
+                        "link": "/ru/joshuadavidthomas/opencode-agent-skills/advanced/superpowers-integration/"
+                    },
+                    {
+                        "title": "Пространства имён и приоритет навыков",
+                        "desc": "Поймите систему пространств имён и правила приоритета обнаружения навыков",
+                        "link": "/ru/joshuadavidthomas/opencode-agent-skills/advanced/namespaces-and-priority/"
+                    },
+                    {
+                        "title": "Механизм восстановления после сжатия контекста",
+                        "desc": "Узнайте, как навыки остаются доступными в длительных сессиях",
+                        "link": "/ru/joshuadavidthomas/opencode-agent-skills/advanced/context-compaction-resilience/"
+                    }
+                ]
+            },
+            {
+                "title": "Часто задаваемые вопросы (FAQ)",
+                "items": [
+                    {
+                        "title": "Устранение неполадок",
+                        "desc": "Решение типичных проблем при использовании плагина",
+                        "link": "/ru/joshuadavidthomas/opencode-agent-skills/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "Безопасность",
+                        "desc": "Узнайте о механизмах безопасности и лучших практиках плагина",
+                        "link": "/ru/joshuadavidthomas/opencode-agent-skills/faq/security-considerations/"
+                    }
+                ]
+            }
+        ]
+    }
+}

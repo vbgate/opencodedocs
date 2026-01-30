@@ -1,0 +1,185 @@
+{
+    "project": {
+        "name": "openskills",
+        "tagline": "Универсальный загрузчик навыков для ИИ-агентов по кодированию",
+        "description": "Позволяет любому ИИ-агенту по кодированию (Claude Code, Cursor, Windsurf, Aider и др.) использовать навыки в стандартном формате SKILL.md. Единый стандарт, прогрессивная загрузка, поддержка нескольких агентов.",
+        "github_url": "https://github.com/numman-ali/openskills"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Быстрый старт",
+            "link": "/ru/numman-ali/openskills/start/quick-start/"
+        }
+    },
+    "features": {
+        "title": "Почему OpenSkills?",
+        "subtitle": "Единый формат навыков, позволяющий использовать навыки в любом агенте, без привязки к платформе.",
+        "list": [
+            {
+                "title": "Полная совместимость с Claude Code",
+                "desc": "Тот же формат промптов, та же маркетплейс, та же структура папок — без проблемная миграция."
+            },
+            {
+                "title": "Поддержка нескольких агентов",
+                "desc": "Поддерживает все агенты, которые могут читать AGENTS.md: Claude Code, Cursor, Windsurf, Aider, Codex и другие."
+            },
+            {
+                "title": "Прогрессивная загрузка",
+                "desc": "Загружайте навыки по требованию, сохраняете контекст агента сфокусированным и чистым, избегая загрязнения контекста."
+            },
+            {
+                "title": "Гибкие источники установки",
+                "desc": "Поддерживает установку навыков из GitHub, локальных путей и частных git-репозиториев, адаптируясь к различным сценариям использования."
+            },
+            {
+                "title": "Режим Universal",
+                "desc": "Набор навыков для нескольких агентов, избегая конфликтов с Claude Code, унифицированное управление навыками."
+            },
+            {
+                "title": "Полностью локальная работа",
+                "desc": "CLI-инструмент не требует сервера, все операции выполняются в локальной файловой системе, обеспечивая конфиденциальность и безопасность."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Содержание курса",
+        "subtitle": "4 главы, 23 урока",
+        "sections": [
+            {
+                "title": "Введение (Start)",
+                "items": [
+                    {
+                        "title": "Быстрый старт",
+                        "desc": "Начните работу с OpenSkills за 5 минут: установка, установка навыков и синхронизация",
+                        "link": "/ru/numman-ali/openskills/start/quick-start/"
+                    },
+                    {
+                        "title": "Что такое OpenSkills",
+                        "desc": "Понимание основных концепций, связи с Claude Code и причины создания этого инструмента",
+                        "link": "/ru/numman-ali/openskills/start/what-is-openskills/"
+                    },
+                    {
+                        "title": "Установка OpenSkills",
+                        "desc": "Установка OpenSkills через npm/npx, проверка окружения Node.js и Git",
+                        "link": "/ru/numman-ali/openskills/start/installation/"
+                    },
+                    {
+                        "title": "Установка первого навыка",
+                        "desc": "Установка навыка из официального репозитория Anthropic, опыт интерактивного выбора",
+                        "link": "/ru/numman-ali/openskills/start/first-skill/"
+                    },
+                    {
+                        "title": "Синхронизация навыков с AGENTS.md",
+                        "desc": "Генерация файла AGENTS.md, чтобы ИИ-агенты знали о доступных навыках",
+                        "link": "/ru/numman-ali/openskills/start/sync-to-agents/"
+                    },
+                    {
+                        "title": "Использование навыков",
+                        "desc": "Понимание того, как ИИ-агенты загружают содержимое навыков через команду read",
+                        "link": "/ru/numman-ali/openskills/start/read-skills/"
+                    }
+                ]
+            },
+            {
+                "title": "Функции платформы (Platforms)",
+                "items": [
+                    {
+                        "title": "Подробное описание команд",
+                        "desc": "Полное описание всех команд, параметров и флагов, справочник по командам",
+                        "link": "/ru/numman-ali/openskills/platforms/cli-commands/"
+                    },
+                    {
+                        "title": "Подробное описание источников установки",
+                        "desc": "Подробное объяснение трёх источников установки: GitHub, локальные пути, частные репозитории",
+                        "link": "/ru/numman-ali/openskills/platforms/install-sources/"
+                    },
+                    {
+                        "title": "Глобальная установка vs Локальная установка проекта",
+                        "desc": "Понимание различий между --global и установкой по умолчанию, выбор подходящего места установки",
+                        "link": "/ru/numman-ali/openskills/platforms/global-vs-project/"
+                    },
+                    {
+                        "title": "Список установленных навыков",
+                        "desc": "Использование команды list для просмотра установленных навыков, понимание меток расположения",
+                        "link": "/ru/numman-ali/openskills/platforms/list-skills/"
+                    },
+                    {
+                        "title": "Обновление навыков",
+                        "desc": "Использование команды update для обновления установленных навыков, поддержка пакетного обновления",
+                        "link": "/ru/numman-ali/openskills/platforms/update-skills/"
+                    },
+                    {
+                        "title": "Удаление навыков",
+                        "desc": "Описание двух способов удаления: интерактивный manage и скриптовый remove",
+                        "link": "/ru/numman-ali/openskills/platforms/remove-skills/"
+                    }
+                ]
+            },
+            {
+                "title": "Расширенные функции (Advanced)",
+                "items": [
+                    {
+                        "title": "Режим Universal",
+                        "desc": "Избегание конфликтов в многоагентной среде, унифицированное управление навыками",
+                        "link": "/ru/numman-ali/openskills/advanced/universal-mode/"
+                    },
+                    {
+                        "title": "Настраиваемый путь вывода",
+                        "desc": "Синхронизация навыков в настраиваемый .md файл",
+                        "link": "/ru/numman-ali/openskills/advanced/custom-output-path/"
+                    },
+                    {
+                        "title": "Поддержка символических ссылок",
+                        "desc": "Обновление навыков на основе git и локальная разработка через символические ссылки",
+                        "link": "/ru/numman-ali/openskills/advanced/symlink-support/"
+                    },
+                    {
+                        "title": "Создание пользовательских навыков",
+                        "desc": "Создание собственных навыков с нуля, понимание формата SKILL.md",
+                        "link": "/ru/numman-ali/openskills/advanced/create-skills/"
+                    },
+                    {
+                        "title": "Подробное описание структуры навыков",
+                        "desc": "Глубокое изучение формата SKILL.md и лучших практик для bundled resources",
+                        "link": "/ru/numman-ali/openskills/advanced/skill-structure/"
+                    },
+                    {
+                        "title": "Интеграция с CI/CD",
+                        "desc": "Использование неинтерактивной установки и синхронизации навыков в среде CI/CD",
+                        "link": "/ru/numman-ali/openskills/advanced/ci-integration/"
+                    },
+                    {
+                        "title": "Примечания по безопасности",
+                        "desc": "Понимание защиты от обхода пути, разыменования символических ссылок, безопасности YAML и других функций",
+                        "link": "/ru/numman-ali/openskills/advanced/security/"
+                    },
+                    {
+                        "title": "Лучшие практики",
+                        "desc": "Лучшие практики по конфигурации проекта, управлению навыками, командной работе и другим аспектам",
+                        "link": "/ru/numman-ali/openskills/advanced/best-practices/"
+                    }
+                ]
+            },
+            {
+                "title": "Часто задаваемые вопросы (FAQ)",
+                "items": [
+                    {
+                        "title": "Часто задаваемые вопросы",
+                        "desc": "Ответы на вопросы по установке, использованию, конфигурации и другим темам",
+                        "link": "/ru/numman-ali/openskills/faq/faq/"
+                    },
+                    {
+                        "title": "Устранение неполадок",
+                        "desc": "Решения для распространённых ошибок: ошибки пути, ошибки клонирования, недействительный SKILL.md и другие",
+                        "link": "/ru/numman-ali/openskills/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "Почему CLI, а не MCP",
+                        "desc": "Понимание причин выбора CLI вместо MCP в OpenSkills",
+                        "link": "/ru/numman-ali/openskills/faq/why-cli-not-mcp/"
+                    }
+                ]
+            }
+        ]
+    }
+}

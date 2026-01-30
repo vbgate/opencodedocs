@@ -1,0 +1,138 @@
+{
+  "project": {
+    "name": "opencode-notify",
+    "tagline": "OpenCode AI가 집중하는 동안 부드럽게 알려드립니다",
+    "description": "창 전환의 불안을 떠나보내세요. opencode-notify는 OpenCode AI를 위한 네이티브 데스크톱 알림을 제공하며, 스마트 포커스 감지, 무음 시간대, 클릭 시 포커스(macOS) 기능을 지원하여 집중해서 작업하고 AI가 필요할 때만 정확하게 알림을 받을 수 있게 해줍니다.",
+    "github_url": "https://github.com/kdcokenny/opencode-notify"
+  },
+  "hero": {
+    "primary_action": {
+      "text": "빠른 시작",
+      "link": "/ko/kdcokenny/opencode-notify/start/quick-start/"
+    }
+  },
+  "features": {
+    "title": "왜 opencode-notify를 선택하나요?",
+    "subtitle": "집중 작업, 스마트 알림",
+    "list": [
+      {
+        "title": "🔔 네이티브 데스크톱 알림",
+        "desc": "운영 체제의 네이티브 알림 시스템(macOS 알림 센터, Windows Toast, Linux notify-send)을 사용하여 워크플로우에 완벽하게 통합됩니다."
+      },
+      {
+        "title": "🧠 스마트 포커스 감지",
+        "desc": "터미널 창 포커스를 자동으로 감지하여 중복 알림을 방지합니다. 기본적으로 부모 세션에만 알림을 보내고 하위 작업의 노이즈를 필터링하여 진정으로 중요한 정보에 집중할 수 있게 해줍니다."
+      },
+      {
+        "title": "⏰ 무음 시간대 설정",
+        "desc": "무음 시간대(예: 22:00-08:00)를 설정하여 야간에 자동으로 알림을 억제하고, 자정을 넘는 시간대도 지원하여 휴식 시간을 보장합니다."
+      },
+      {
+        "title": "🖱️ 클릭 시 터미널 포커스(macOS)",
+        "desc": "macOS 사용자는 알림을 클릭하면 터미널 창이 자동으로 포커스되어 앱 전환 시간을 절약하고 작업 효율성을 두 배로 높일 수 있습니다."
+      },
+      {
+        "title": "🎨 커스텀 사운드(macOS)",
+        "desc": "다양한 유형의 이벤트에 고유한 사운드(Glass, Basso, Submarine 등)를 설정하여 사운드로 알림 유형을 빠르게 식별할 수 있습니다."
+      },
+      {
+        "title": "💻 37+ 터미널 지원",
+        "desc": "Ghostty, iTerm2, WezTerm, VS Code 통합 터미널 등 37개 이상의 터미널 에뮬레이터를 지원하며 터미널 유형을 자동으로 인식합니다."
+      },
+      {
+        "title": "🔒 로컬 실행, 제로 프라이버시 리스크",
+        "desc": "모든 알림이 로컬에서 생성되며 데이터가 클라우드에 업로드되지 않아 작업 내용이 완전히 비공개이고 안전합니다."
+      },
+      {
+        "title": "⚡ 경량 플러그인",
+        "desc": "TypeScript + Bun 기반으로 구축되어 설치 후 바로 사용할 수 있으며, 구성 파일이 간결하고 복잡한 구성을 배울 필요가 없습니다."
+      }
+    ]
+  },
+  "docs": {
+    "title": "강의 개요",
+    "subtitle": "총 4개 챕터, 12개 강의",
+    "sections": [
+      {
+        "title": "시작 가이드 (Start)",
+        "items": [
+          {
+            "title": "빠른 시작",
+            "desc": "5분 안에 설치를 완료하고 첫 번째 알림을 경험하도록 도와줍니다",
+            "link": "/ko/kdcokenny/opencode-notify/start/quick-start/"
+          },
+          {
+            "title": "작동 원리",
+            "desc": "플러그인의 핵심 기능, 스마트 필터링 메커니즘 및 알림 트리거 조건을 설명합니다",
+            "link": "/ko/kdcokenny/opencode-notify/start/how-it-works/"
+          }
+        ]
+      },
+      {
+        "title": "플랫폼 기능 (Platforms)",
+        "items": [
+          {
+            "title": "macOS 플랫폼 기능",
+            "desc": "macOS 플랫폼의 전체 기능(포커스 감지, 클릭 시 포커스, 커스텀 사운드)을 소개합니다",
+            "link": "/ko/kdcokenny/opencode-notify/platforms/macos/"
+          },
+          {
+            "title": "Windows 플랫폼 기능",
+            "desc": "Windows 플랫폼의 기능(네이티브 알림, 터미널 감지)을 소개합니다",
+            "link": "/ko/kdcokenny/opencode-notify/platforms/windows/"
+          },
+          {
+            "title": "Linux 플랫폼 기능",
+            "desc": "Linux 플랫폼의 기능(네이티브 알림, 터미널 감지)을 소개합니다",
+            "link": "/ko/kdcokenny/opencode-notify/platforms/linux/"
+          },
+          {
+            "title": "지원되는 터미널",
+            "desc": "지원되는 모든 터미널 에뮬레이터(37개 이상)를 나열합니다",
+            "link": "/ko/kdcokenny/opencode-notify/platforms/terminals/"
+          }
+        ]
+      },
+      {
+        "title": "고급 기능 (Advanced)",
+        "items": [
+          {
+            "title": "구성 참조",
+            "desc": "완전한 구성 항목 설명과 예제를 제공합니다",
+            "link": "/ko/kdcokenny/opencode-notify/advanced/config-reference/"
+          },
+          {
+            "title": "무음 시간대 상세 설명",
+            "desc": "특정 시간대의 방해를 피하기 위해 무음 시간대를 설정하는 방법을 설명합니다",
+            "link": "/ko/kdcokenny/opencode-notify/advanced/quiet-hours/"
+          },
+          {
+            "title": "터미널 감지 원리",
+            "desc": "터미널 자동 감지 메커니즘과 터미널 유형을 수동으로 지정하는 방법을 설명합니다",
+            "link": "/ko/kdcokenny/opencode-notify/advanced/terminal-detection/"
+          },
+          {
+            "title": "고급 사용법",
+            "desc": "구성 팁과 모범 사례를 제공합니다",
+            "link": "/ko/kdcokenny/opencode-notify/advanced/advanced-usage/"
+          }
+        ]
+      },
+      {
+        "title": "자주 묻는 질문 (FAQ)",
+        "items": [
+          {
+            "title": "문제 해결",
+            "desc": "일반적인 문제(알림이 표시되지 않음, 포커스 감지 실패, 구성 오류 등)를 해결합니다",
+            "link": "/ko/kdcokenny/opencode-notify/faq/troubleshooting/"
+          },
+          {
+            "title": "자주 묻는 질문",
+            "desc": "사용자의 일반적인 질문(성능 영향, 프라이버시 보안, 플러그인 충돌 등)에 답변합니다",
+            "link": "/ko/kdcokenny/opencode-notify/faq/common-questions/"
+          }
+        ]
+      }
+    ]
+  }
+}
