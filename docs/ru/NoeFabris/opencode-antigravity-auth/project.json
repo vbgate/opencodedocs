@@ -1,0 +1,210 @@
+{
+    "project": {
+        "name": "Antigravity Auth",
+        "tagline": "Ключ к аутентификации Claude & Gemini",
+        "description": "Доступ к Claude Opus 4.5, Sonnet 4.5 и Gemini 3 Pro/Flash без API Key напрямую через Google OAuth. Поддержка балансировки нагрузки между несколькими аккаунтами и автоматического восстановления сессий.",
+        "github_url": "https://github.com/NoeFabris/opencode-antigravity-auth"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Быстрый старт",
+            "link": "/ru/NoeFabris/opencode-antigravity-auth/start/quick-install/"
+        }
+    },
+    "features": {
+        "title": "Почему Antigravity Auth?",
+        "subtitle": "Решение проблем ручной настройки API Key, автоматическое управление квотами, создано для высоконагруженной разработки.",
+        "list": [
+            {
+                "title": "Без API Key",
+                "desc": "Не нужно получать дорогой API Key, просто используйте Google OAuth для входа в один клик."
+            },
+            {
+                "title": "Балансировка нагрузки",
+                "desc": "Поддержка до 10 Google аккаунтов с автоматической ротацией и интеллектуальным распределением запросов — навсегда забудьте о лимитах."
+            },
+            {
+                "title": "Поддержка Thinking моделей",
+                "desc": "Полная поддержка режима размышлений Claude и Gemini 3 с настраиваемым Budget для раскрытия глубоких возможностей рассуждения."
+            },
+            {
+                "title": "Автовосстановление сессий",
+                "desc": "Ошибка вызова инструмента? Прерывание сессии? Плагин автоматически повторяет попытку и восстанавливает контекст без вмешательства человека."
+            },
+            {
+                "title": "Совместимость",
+                "desc": "Бесшовная интеграция с oh-my-opencode, DCP и другими популярными плагинами."
+            },
+            {
+                "title": "Двойная квота",
+                "desc": "Максимальное использование бесплатных и платных пулов квот от Google."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Программа курса",
+        "subtitle": "6 разделов, 26 уроков",
+        "sections": [
+            {
+                "title": "Начало работы (Start)",
+                "items": [
+                    {
+                        "title": "Что такое Antigravity Auth",
+                        "desc": "Понимание основной ценности, сценариев применения и предупреждений о рисках",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/start/what-is-antigravity-auth/"
+                    },
+                    {
+                        "title": "Быстрая установка",
+                        "desc": "Быстрая установка плагина и первая аутентификация за 5 минут",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/start/quick-install/"
+                    },
+                    {
+                        "title": "Первая аутентификация",
+                        "desc": "Понимание потока OAuth 2.0 PKCE и завершение первого входа",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/start/first-auth-login/"
+                    },
+                    {
+                        "title": "Первый запрос",
+                        "desc": "Отправка первого запроса к модели для проверки успешной установки",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/start/first-request/"
+                    }
+                ]
+            },
+            {
+                "title": "Платформы (Platforms)",
+                "items": [
+                    {
+                        "title": "Доступные модели",
+                        "desc": "Обзор всех доступных моделей и их вариантов конфигурации",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/platforms/available-models/"
+                    },
+                    {
+                        "title": "Thinking модели",
+                        "desc": "Освоение настройки и использования Thinking моделей Claude и Gemini 3",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/platforms/thinking-models/"
+                    },
+                    {
+                        "title": "Google Search Grounding",
+                        "desc": "Включение Google Search для моделей Gemini для улучшения фактической точности",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/platforms/google-search-grounding/"
+                    },
+                    {
+                        "title": "Двойная квота",
+                        "desc": "Понимание работы двойного пула квот Antigravity и Gemini CLI",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/platforms/dual-quota-system/"
+                    }
+                ]
+            },
+            {
+                "title": "Расширенные возможности (Advanced)",
+                "items": [
+                    {
+                        "title": "Настройка нескольких аккаунтов",
+                        "desc": "Настройка нескольких Google-аккаунтов для пулинга квот и балансировки нагрузки",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/advanced/multi-account-setup/"
+                    },
+                    {
+                        "title": "Стратегии выбора аккаунтов",
+                        "desc": "Освоение лучших практик sticky, round-robin и hybrid стратегий",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/advanced/account-selection-strategies/"
+                    },
+                    {
+                        "title": "Обработка ограничений",
+                        "desc": "Понимание обнаружения ограничений, автоматических повторных попыток и переключения аккаунтов",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/advanced/rate-limit-handling/"
+                    },
+                    {
+                        "title": "Восстановление сессий",
+                        "desc": "Понимание механизма восстановления сессий для автоматической обработки сбоев вызовов инструментов",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/advanced/session-recovery/"
+                    },
+                    {
+                        "title": "Трансформация запросов",
+                        "desc": "Глубокое понимание механизма трансформации запросов для совместимости с разными протоколами AI моделей",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/advanced/request-transformation/"
+                    },
+                    {
+                        "title": "Руководство по конфигурации",
+                        "desc": "Освоение всех параметров конфигурации для настройки поведения плагина",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/advanced/configuration-guide/"
+                    },
+                    {
+                        "title": "Оптимизация параллельных агентов",
+                        "desc": "Оптимизация распределения аккаунтов для параллельных агентов с включением смещения PID",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/advanced/parallel-agents/"
+                    },
+                    {
+                        "title": "Отладочные логи",
+                        "desc": "Включение отладочных логов для диагностики проблем и мониторинга состояния",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/advanced/debug-logging/"
+                    }
+                ]
+            },
+            {
+                "title": "Частые вопросы (FAQ)",
+                "items": [
+                    {
+                        "title": "Проблемы аутентификации",
+                        "desc": "Решение проблем OAuth, обновления токенов и аккаунтов",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/faq/common-auth-issues/"
+                    },
+                    {
+                        "title": "Модель не найдена",
+                        "desc": "Решение ошибок 404 и 400, связанных с моделями",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/faq/model-not-found/"
+                    },
+                    {
+                        "title": "Совместимость плагинов",
+                        "desc": "Решение проблем совместимости с oh-my-opencode, dcp и другими плагинами",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/faq/plugin-compatibility/"
+                    },
+                    {
+                        "title": "Руководство по миграции",
+                        "desc": "Миграция аккаунтов между машинами, обработка обновлений",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/faq/migration-guide/"
+                    },
+                    {
+                        "title": "Предупреждение о рисках",
+                        "desc": "Понимание рисков использования, избежание блокировки аккаунтов",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/faq/tos-warning/"
+                    }
+                ]
+            },
+            {
+                "title": "Приложение (Appendix)",
+                "items": [
+                    {
+                        "title": "Обзор архитектуры",
+                        "desc": "Понимание модульной архитектуры и цепочки вызовов плагина",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/appendix/architecture-overview/"
+                    },
+                    {
+                        "title": "Спецификация API",
+                        "desc": "Внутренняя спецификация Antigravity API и технические детали",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/appendix/api-spec/"
+                    },
+                    {
+                        "title": "Формат хранения",
+                        "desc": "Понимание формата файлов хранения аккаунтов и управления версиями",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/appendix/storage-schema/"
+                    },
+                    {
+                        "title": "Справочник конфигурации",
+                        "desc": "Полное справочное руководство по всем параметрам конфигурации",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/appendix/all-config-options/"
+                    }
+                ]
+            },
+            {
+                "title": "История изменений (Changelog)",
+                "items": [
+                    {
+                        "title": "История версий",
+                        "desc": "История версий и важные изменения",
+                        "link": "/ru/NoeFabris/opencode-antigravity-auth/changelog/version-history/"
+                    }
+                ]
+            }
+        ]
+    }
+}

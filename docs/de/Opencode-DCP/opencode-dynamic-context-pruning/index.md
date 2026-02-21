@@ -10,7 +10,7 @@ description: "Lernen Sie die Funktionsweise und Anwendung des opencode-dynamic-c
 
 <script setup>
 import data from './project.json'
-import ProjectHome from '../../.vitepress/theme/components/ProjectHome.vue'
+import ProjectHome from '../../../.vitepress/theme/components/ProjectHome.vue'
 </script>
 
 <ProjectHome :data="data" />

@@ -10,7 +10,7 @@ description: "Aprenda os princípios e métodos de uso do plugin opencode-dynami
 
 <script setup>
 import data from './project.json'
-import ProjectHome from '../../.vitepress/theme/components/ProjectHome.vue'
+import ProjectHome from '../../../.vitepress/theme/components/ProjectHome.vue'
 </script>
 
 <ProjectHome :data="data" />

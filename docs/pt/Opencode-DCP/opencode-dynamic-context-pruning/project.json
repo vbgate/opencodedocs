@@ -1,0 +1,125 @@
+{
+    "project": {
+        "name": "opencode-dynamic-context-pruning",
+        "tagline": "Plugin de Otimização Inteligente de Token",
+        "description": "Plugin do OpenCode que reduz automaticamente o uso de Tokens ao remover chamadas de ferramentas redundantes do histórico da conversa. Suporta três estratégias: deduplicação automática, detecção de sobrescrita e limpeza de erros, além de ferramentas discard/extract impulsionadas por IA, permitindo que o modelo decida autonomamente quando limpar o contexto.",
+        "github_url": "https://github.com/Opencode-DCP/opencode-dynamic-context-pruning"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Início Rápido",
+            "link": "/pt/Opencode-DCP/opencode-dynamic-context-pruning/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "Por que escolher o DCP?",
+        "subtitle": "Economize muitos Tokens em conversas longas, reduza os custos de uso de LLM e melhore a qualidade da resposta do modelo.",
+        "list": [
+            {
+                "title": "Estratégia de Deduplicação Automática",
+                "desc": "Detecta chamadas com o mesmo nome de ferramenta e parâmetros, mantendo automaticamente a mais recente, sem necessidade de intervenção manual."
+            },
+            {
+                "title": "Detecção de Sobrescrita",
+                "desc": "Rastreia a ordem cronológica de operações de escrita e leitura em arquivos, limpando automaticamente operações de escrita que foram sobrescritas por leituras subsequentes."
+            },
+            {
+                "title": "Estratégia de Limpeza de Erros",
+                "desc": "Remove automaticamente entradas de ferramentas com erros que excedem um número especificado de turnos, mantendo mensagens de erro para facilitar a depuração."
+            },
+            {
+                "title": "Poda Impulsionada por IA",
+                "desc": "Fornece ferramentas discard e extract, permitindo que a IA decida autonomamente quando limpar o contexto, alcançando otimização em nível semântico."
+            },
+            {
+                "title": "Transparente e Controlável",
+                "desc": "Visualize o uso de Tokens e estatísticas acumuladas através do comando /dcp, com suporte para disparar manualmente a poda."
+            },
+            {
+                "title": "Persistência de Estado",
+                "desc": "Mantém o estado de poda e estatísticas entre sessões, permitindo rastrear os benefícios de economia de Tokens a longo prazo."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Roteiro do Curso",
+        "subtitle": "Total de 4 capítulos, 11 aulas",
+        "sections": [
+            {
+                "title": "Guia de Início (Start)",
+                "items": [
+                    {
+                        "title": "Instalação e Início Rápido",
+                        "desc": "Instale o plugin DCP e veja os resultados em 5 minutos",
+                        "link": "/pt/Opencode-DCP/opencode-dynamic-context-pruning/start/getting-started/"
+                    },
+                    {
+                        "title": "Configuração Completa",
+                        "desc": "Entenda o sistema de configuração de múltiplos níveis e o propósito de todos os itens de configuração",
+                        "link": "/pt/Opencode-DCP/opencode-dynamic-context-pruning/start/configuration/"
+                    }
+                ]
+            },
+            {
+                "title": "Funcionalidades Principais (Platforms)",
+                "items": [
+                    {
+                        "title": "Estratégias de Poda Automática Explicadas",
+                        "desc": "Compreenda profundamente as três estratégias automáticas: deduplicação, sobrescrita e limpeza de erros",
+                        "link": "/pt/Opencode-DCP/opencode-dynamic-context-pruning/platforms/auto-pruning/"
+                    },
+                    {
+                        "title": "Ferramentas de Poda Impulsionadas por LLM",
+                        "desc": "Entenda como a IA chama autonomamente as ferramentas discard e extract para otimizar o contexto",
+                        "link": "/pt/Opencode-DCP/opencode-dynamic-context-pruning/platforms/llm-tools/"
+                    },
+                    {
+                        "title": "Uso de Comandos Slash",
+                        "desc": "Domine os comandos /dcp context, stats, sweep para monitoramento e poda manual",
+                        "link": "/pt/Opencode-DCP/opencode-dynamic-context-pruning/platforms/commands/"
+                    }
+                ]
+            },
+            {
+                "title": "Funcionalidades Avançadas (Advanced)",
+                "items": [
+                    {
+                        "title": "Mecanismos de Proteção",
+                        "desc": "Entenda proteção de turnos, ferramentas protegidas e padrões de arquivos protegidos",
+                        "link": "/pt/Opencode-DCP/opencode-dynamic-context-pruning/advanced/protection/"
+                    },
+                    {
+                        "title": "Persistência de Estado",
+                        "desc": "Entenda como o DCP mantém o estado de poda e estatísticas entre sessões",
+                        "link": "/pt/Opencode-DCP/opencode-dynamic-context-pruning/advanced/state-persistence/"
+                    },
+                    {
+                        "title": "Impacto no Cache de Prompt",
+                        "desc": "Entenda como o DCP afeta o Prompt Caching e faça a compensação da taxa de acerto do cache",
+                        "link": "/pt/Opencode-DCP/opencode-dynamic-context-pruning/advanced/prompt-caching/"
+                    },
+                    {
+                        "title": "Tratamento de Subagentes",
+                        "desc": "Entenda o comportamento e limitações do DCP em sessões de subagentes",
+                        "link": "/pt/Opencode-DCP/opencode-dynamic-context-pruning/advanced/subagent-handling/"
+                    }
+                ]
+            },
+            {
+                "title": "Perguntas Frequentes (FAQ)",
+                "items": [
+                    {
+                        "title": "Perguntas Frequentes e Solução de Problemas",
+                        "desc": "Resolva problemas comuns encontrados ao usar o DCP",
+                        "link": "/pt/Opencode-DCP/opencode-dynamic-context-pruning/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "Melhores Práticas",
+                        "desc": "Sugestões de melhores práticas para usar o DCP e maximizar a economia de Tokens",
+                        "link": "/pt/Opencode-DCP/opencode-dynamic-context-pruning/faq/best-practices/"
+                    }
+                ]
+            }
+        ]
+    }
+}

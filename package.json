@@ -6,7 +6,7 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "dev": "vitepress dev docs",
-    "docs:build": "NODE_OPTIONS='--max-old-space-size=8192' vitepress build docs",
+    "docs:build": "NODE_OPTIONS='--max-old-space-size=12288' vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "deploy:prepare": "rm -rf dist-deploy && mkdir -p dist-deploy && cp -r docs/.vitepress/dist/* dist-deploy/",
     "deploy": "npm run deploy:prepare && wrangler pages deploy dist-deploy --project-name=opencodedocs"

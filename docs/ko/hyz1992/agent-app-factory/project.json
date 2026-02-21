@@ -1,0 +1,166 @@
+{
+  "project": {
+    "name": "agent-app-factory",
+    "tagline": "1개의 아이디어를 7단계로 앱으로 변환",
+    "description": "반복적인 코딩에 시간을 낭비하지 마세요. AI App Factory는 아이디어에서 실행 가능한 MVP까지 7개의 체크포인트만으로 제작합니다. 프론트엔드 및 백엔드 코드, 테스트, 문서 및 CI/CD 구성을 자동으로 생성하여 프로덕션급 품질을 제공합니다.",
+    "github_url": "https://github.com/hyz1992/agent-app-factory"
+  },
+  "hero": {
+    "primary_action": {
+      "text": "빠른 시작",
+      "link": "/ko/hyz1992/agent-app-factory/start/getting-started/"
+    }
+  },
+  "features": {
+    "title": "왜 AI App Factory를 선택해야 하나요?",
+    "subtitle": "아이디어를 실행 가능한 애플리케이션으로 변환하는 것이 이보다 쉬운 적이 없었습니다",
+    "list": [
+      {
+        "title": "🚀 7단계 파이프라인",
+        "desc": "아이디어에서 앱까지, 완전 자동화된 대기 없는 프로세스. Bootstrap → PRD → UI → Tech → Code → Validation → Preview"
+      },
+      {
+        "title": "✅ 품질 체크포인트",
+        "desc": "각 단계 완료 후 일시 중지하여 확인, 예상대로 출력되는지 확인하고 오류가 후기에 누적되어 복구 불가능해지는 것을 방지"
+      },
+      {
+        "title": "🏭 프로덕션급 코드",
+        "desc": "프론트엔드 및 백엔드 코드, 테스트, 문서 및 CI/CD 구성을 자동으로 생성. 즉시 사용 가능하여 바로 프로덕션 배포 가능"
+      },
+      {
+        "title": "⚡ 빠른 검증",
+        "desc": "명확한 범위 경계 설정, 과도한 설계 방지. 검증 가능한 프로토타입을 빠르게 전달하여 시장을 먼저 검증하고 반복 개선"
+      },
+      {
+        "title": "🔒 데이터 개인정보 보호",
+        "desc": "로컬에서 실행, 데이터 업로드 없음. 귀하의 아이디어와 코드는 귀하의 기기를 절대 떠나지 않습니다"
+      }
+    ]
+  },
+  "docs": {
+    "title": "코스 커리큘럼",
+    "subtitle": "총 4개 섹션, 20개 레슨",
+    "sections": [
+      {
+        "title": "시작 가이드 (Start)",
+        "items": [
+          {
+            "title": "빠른 시작: 아이디어에서 앱까지",
+            "desc": "AI App Factory의 핵심 가치와 사전 요구사항을 이해하고 첫 번째 프로젝트를 초기화합니다",
+            "link": "/ko/hyz1992/agent-app-factory/start/getting-started/"
+          },
+          {
+            "title": "설치 및 구성",
+            "desc": "CLI 도구를 전역으로 설치하고 AI 어시스턴트(Claude Code/OpenCode)를 구성합니다",
+            "link": "/ko/hyz1992/agent-app-factory/start/installation/"
+          },
+          {
+            "title": "Factory 프로젝트 초기화",
+            "desc": "factory init 명령을 사용하여 디렉토리를 초기화하고 생성된 프로젝트 구조를 파악합니다",
+            "link": "/ko/hyz1992/agent-app-factory/start/init-project/"
+          },
+          {
+            "title": "7단계 파이프라인 개요",
+            "desc": "Bootstrap에서 Preview까지의 완전한 파이프라인 흐름을 이해합니다",
+            "link": "/ko/hyz1992/agent-app-factory/start/pipeline-overview/"
+          }
+        ]
+      },
+      {
+        "title": "플랫폼 기능 (Platforms)",
+        "items": [
+          {
+            "title": "Claude Code 통합 가이드",
+            "desc": "권한 구성과 모범 사례를 포함하여 Claude Code로 파이프라인을 실행하는 방법을 배웁니다",
+            "link": "/ko/hyz1992/agent-app-factory/platforms/claude-code/"
+          },
+          {
+            "title": "OpenCode 및 기타 AI 어시스턴트",
+            "desc": "OpenCode, Cursor 등의 AI 어시스턴트로 파이프라인을 실행하는 방법을 배웁니다",
+            "link": "/ko/hyz1992/agent-app-factory/platforms/other-ai-assistants/"
+          },
+          {
+            "title": "필수 플러그인 설치",
+            "desc": "superpowers 및 ui-ux-pro-max 플러그인을 설치하여 파이프라인이 정상적으로 실행되도록 합니다",
+            "link": "/ko/hyz1992/agent-app-factory/platforms/plugins/"
+          }
+        ]
+      },
+      {
+        "title": "고급 기능 (Advanced)",
+        "items": [
+          {
+            "title": "단계 1: Bootstrap - 제품 아이디어 구조화",
+            "desc": "Bootstrap Agent를 사용하여 아이디어를 구조화된 문서로 변환하는 방법을 배웁니다",
+            "link": "/ko/hyz1992/agent-app-factory/advanced/stage-bootstrap/"
+          },
+          {
+            "title": "단계 2: PRD - 제품 요구사항 문서 생성",
+            "desc": "사용자 스토리, 기능 목록 및 비목표를 포함한 MVP급 PRD를 생성합니다",
+            "link": "/ko/hyz1992/agent-app-factory/advanced/stage-prd/"
+          },
+          {
+            "title": "단계 3: UI - 인터페이스 및 프로토타입 디자인",
+            "desc": "ui-ux-pro-max 스킬을 사용하여 UI 구조 및 미리보기 가능한 프로토타입을 디자인합니다",
+            "link": "/ko/hyz1992/agent-app-factory/advanced/stage-ui/"
+          },
+          {
+            "title": "단계 4: Tech - 기술 아키텍처 설계",
+            "desc": "최소 실행 가능한 기술 아키텍처 및 Prisma 데이터 모델을 설계합니다",
+            "link": "/ko/hyz1992/agent-app-factory/advanced/stage-tech/"
+          },
+          {
+            "title": "단계 5: Code - 실행 가능한 코드 생성",
+            "desc": "UI Schema 및 Tech 설계에 따라 프론트엔드 및 백엔드 코드, 테스트 및 구성을 생성합니다",
+            "link": "/ko/hyz1992/agent-app-factory/advanced/stage-code/"
+          },
+          {
+            "title": "단계 6: Validation - 코드 품질 검증",
+            "desc": "종속성 설치, 유형 검사, Prisma 스키마 및 코드 품질을 검증합니다",
+            "link": "/ko/hyz1992/agent-app-factory/advanced/stage-validation/"
+          },
+          {
+            "title": "단계 7: Preview - 배포 가이드 생성",
+            "desc": "완전한 실행 지침 문서 및 배포 구성을 생성합니다",
+            "link": "/ko/hyz1992/agent-app-factory/advanced/stage-preview/"
+          },
+          {
+            "title": "Sisyphus 오케스트레이터 상세 설명",
+            "desc": "오케스트레이터가 파이프라인을 조정하고 상태를 관리하며 권한 검사를 실행하는 방법을 이해합니다",
+            "link": "/ko/hyz1992/agent-app-factory/advanced/orchestrator/"
+          },
+          {
+            "title": "컨텍스트 최적화: 분할 세션 실행",
+            "desc": "Token을 절약하기 위해 factory continue 명령을 사용하고 각 단계에서 새로운 세션을 만드는 방법을 배웁니다",
+            "link": "/ko/hyz1992/agent-app-factory/advanced/context-optimization/"
+          },
+          {
+            "title": "권한 및 보안 메커니즘",
+            "desc": "능력 경계 매트릭스, 권한 초과 처리 및 보안 검사 메커니즘을 이해합니다",
+            "link": "/ko/hyz1992/agent-app-factory/advanced/security-permissions/"
+          },
+          {
+            "title": "실패 처리 및 롤백",
+            "desc": "실패 식별, 재시도 메커니즘, 롤백 전략 및 수동 개입 프로세스를 배웁니다",
+            "link": "/ko/hyz1992/agent-app-factory/advanced/failure-handling/"
+          }
+        ]
+      },
+      {
+        "title": "자주 묻는 질문 (FAQ)",
+        "items": [
+          {
+            "title": "자주 묻는 질문 및 문제 해결",
+            "desc": "초기화, 실행 및 배포 프로세스에서 발생하는 일반적인 문제를 해결합니다",
+            "link": "/ko/hyz1992/agent-app-factory/faq/troubleshooting/"
+          },
+          {
+            "title": "모범 사례",
+            "desc": "명확한 제품 설명 제공, 체크포인트 활용, 범위 제어, 점진적 반복과 같은 팁을 배웁니다",
+            "link": "/ko/hyz1992/agent-app-factory/faq/best-practices/"
+          }
+        ]
+      }
+    ]
+  }
+}

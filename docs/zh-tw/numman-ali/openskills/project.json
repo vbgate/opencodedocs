@@ -1,0 +1,185 @@
+{
+    "project": {
+        "name": "openskills",
+        "tagline": "AI 編碼代理的通用技能載入器",
+        "description": "讓任何 AI 編碼代理（Claude Code、Cursor、Windsurf、Aider 等）都能使用標準的 SKILL.md 格式技能。統一標準、漸進式載入、多代理支援。",
+        "github_url": "https://github.com/numman-ali/openskills"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "快速開始",
+            "link": "/zh-tw/numman-ali/openskills/start/quick-start/"
+        }
+    },
+    "features": {
+        "title": "為什麼選擇 OpenSkills？",
+        "subtitle": "統一的技能格式，讓技能在任何代理中可用，告別平台鎖定。",
+        "list": [
+            {
+                "title": "Claude Code 完全相容",
+                "desc": "相同的提示格式、相同的 marketplace、相同的資料夾結構，無縫遷移。"
+            },
+            {
+                "title": "多代理支援",
+                "desc": "支援 Claude Code、Cursor、Windsurf、Aider、Codex 等所有可讀取 AGENTS.md 的代理。"
+            },
+            {
+                "title": "漸進式載入",
+                "desc": "按需載入技能，保持代理上下文精簡和聚焦，避免上下文污染。"
+            },
+            {
+                "title": "靈活的安裝來源",
+                "desc": "支援從 GitHub、本地路徑、私有 git 倉庫安裝技能，適應各種使用場景。"
+            },
+            {
+                "title": "Universal 模式",
+                "desc": "一套技能服務多個代理，避免與 Claude Code 衝突，統一技能管理。"
+            },
+            {
+                "title": "純本地運行",
+                "desc": "CLI 工具無需伺服器，所有操作在本地檔案系統完成，確保隱私安全。"
+            }
+        ]
+    },
+    "docs": {
+        "title": "課程大綱",
+        "subtitle": "共 4 個章節，23 節課程",
+        "sections": [
+            {
+                "title": "入門指南 (Start)",
+                "items": [
+                    {
+                        "title": "快速開始",
+                        "desc": "5 分鐘上手 OpenSkills，完成安裝、技能安裝和同步",
+                        "link": "/zh-tw/numman-ali/openskills/start/quick-start/"
+                    },
+                    {
+                        "title": "什麼是 OpenSkills",
+                        "desc": "了解核心概念、與 Claude Code 的關係、以及為什麼需要這個工具",
+                        "link": "/zh-tw/numman-ali/openskills/start/what-is-openskills/"
+                    },
+                    {
+                        "title": "安裝 OpenSkills",
+                        "desc": "透過 npm/npx 安裝 OpenSkills，檢查 Node.js 和 Git 環境",
+                        "link": "/zh-tw/numman-ali/openskills/start/installation/"
+                    },
+                    {
+                        "title": "安裝第一個技能",
+                        "desc": "從 Anthropic 官方倉庫安裝技能，體驗互動式選擇",
+                        "link": "/zh-tw/numman-ali/openskills/start/first-skill/"
+                    },
+                    {
+                        "title": "同步技能到 AGENTS.md",
+                        "desc": "生成 AGENTS.md 檔案，讓 AI 代理知道可用技能",
+                        "link": "/zh-tw/numman-ali/openskills/start/sync-to-agents/"
+                    },
+                    {
+                        "title": "使用技能",
+                        "desc": "了解 AI 代理如何透過 read 指令載入技能內容",
+                        "link": "/zh-tw/numman-ali/openskills/start/read-skills/"
+                    }
+                ]
+            },
+            {
+                "title": "平台功能 (Platforms)",
+                "items": [
+                    {
+                        "title": "命令詳解",
+                        "desc": "完整介紹所有命令、參數和旗標，提供命令速查表",
+                        "link": "/zh-tw/numman-ali/openskills/platforms/cli-commands/"
+                    },
+                    {
+                        "title": "安裝來源詳解",
+                        "desc": "詳細講解 GitHub、本地路徑、私有倉庫三種安裝來源",
+                        "link": "/zh-tw/numman-ali/openskills/platforms/install-sources/"
+                    },
+                    {
+                        "title": "全域安裝 vs 專案本地安裝",
+                        "desc": "了解 --global 和預設安裝的區別，選擇合適的安裝位置",
+                        "link": "/zh-tw/numman-ali/openskills/platforms/global-vs-project/"
+                    },
+                    {
+                        "title": "列出已安裝技能",
+                        "desc": "使用 list 命令查看已安裝技能，理解位置標籤",
+                        "link": "/zh-tw/numman-ali/openskills/platforms/list-skills/"
+                    },
+                    {
+                        "title": "更新技能",
+                        "desc": "使用 update 命令重新整理已安裝技能，支援批次更新",
+                        "link": "/zh-tw/numman-ali/openskills/platforms/update-skills/"
+                    },
+                    {
+                        "title": "刪除技能",
+                        "desc": "介紹互動式 manage 和腳本化 remove 兩種刪除方式",
+                        "link": "/zh-tw/numman-ali/openskills/platforms/remove-skills/"
+                    }
+                ]
+            },
+            {
+                "title": "進階功能 (Advanced)",
+                "items": [
+                    {
+                        "title": "Universal 模式",
+                        "desc": "多代理環境下避免衝突，統一技能管理",
+                        "link": "/zh-tw/numman-ali/openskills/advanced/universal-mode/"
+                    },
+                    {
+                        "title": "自訂輸出路徑",
+                        "desc": "將技能同步到自訂 .md 檔案",
+                        "link": "/zh-tw/numman-ali/openskills/advanced/custom-output-path/"
+                    },
+                    {
+                        "title": "符號連結支援",
+                        "desc": "透過 symlink 實現基於 git 的技能更新和本地開發",
+                        "link": "/zh-tw/numman-ali/openskills/advanced/symlink-support/"
+                    },
+                    {
+                        "title": "建立自訂技能",
+                        "desc": "從零開始建立自有的技能，理解 SKILL.md 格式",
+                        "link": "/zh-tw/numman-ali/openskills/advanced/create-skills/"
+                    },
+                    {
+                        "title": "技能結構詳解",
+                        "desc": "深入講解 SKILL.md 格式和 bundled resources 最佳實務",
+                        "link": "/zh-tw/numman-ali/openskills/advanced/skill-structure/"
+                    },
+                    {
+                        "title": "CI/CD 整合",
+                        "desc": "在 CI/CD 環境中使用非互動式技能安裝和同步",
+                        "link": "/zh-tw/numman-ali/openskills/advanced/ci-integration/"
+                    },
+                    {
+                        "title": "安全性說明",
+                        "desc": "了解路徑遍歷防護、符號連結解引用、YAML 安全等特性",
+                        "link": "/zh-tw/numman-ali/openskills/advanced/security/"
+                    },
+                    {
+                        "title": "最佳實務",
+                        "desc": "專案配置、技能管理、團隊協作等方面的最佳實務",
+                        "link": "/zh-tw/numman-ali/openskills/advanced/best-practices/"
+                    }
+                ]
+            },
+            {
+                "title": "常見問題 (FAQ)",
+                "items": [
+                    {
+                        "title": "常見問題",
+                        "desc": "安裝、使用、配置等方面的常見問題解答",
+                        "link": "/zh-tw/numman-ali/openskills/faq/faq/"
+                    },
+                    {
+                        "title": "疑難排解",
+                        "desc": "路徑錯誤、複製失敗、SKILL.md 無效等常見錯誤的解決方案",
+                        "link": "/zh-tw/numman-ali/openskills/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "為什麼是 CLI 而不是 MCP",
+                        "desc": "了解 OpenSkills 選擇 CLI 而非 MCP 的設計理由",
+                        "link": "/zh-tw/numman-ali/openskills/faq/why-cli-not-mcp/"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,210 @@
+{
+    "project": {
+        "name": "Everything Claude Code",
+        "tagline": "Une collection de configurations Claude Code éprouvées en production",
+        "description": "Une collection complète de configurations de plugins Claude Code du gagnant de l'Anthropic hackathon. Offre 9 agents, 14 commandes, 8 jeux de règles, 11 skills et 15+ hooks pour améliorer l'efficacité du développement assisté par IA. Prend en charge les scripts Node.js multiplateformes Windows, macOS et Linux.",
+        "github_url": "https://github.com/affaan-m/everything-claude-code"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Démarrage Rapide",
+            "link": "/fr/affaan-m/everything-claude-code/start/quickstart/"
+        }
+    },
+    "features": {
+        "title": "Pourquoi Choisir Everything Claude Code ?",
+        "subtitle": "Plus besoin de configurer à partir de zéro. Obtenez une configuration éprouvée affinée sur 10+ mois d'utilisation quotidienne.",
+        "list": [
+            {
+                "title": "Éprouvé en Production",
+                "desc": "Du gagnant de l'Anthropic hackathon, affiné sur 10+ mois d'utilisation quotidienne pour construire de vrais produits."
+            },
+            {
+                "title": "Configuration Complète",
+                "desc": "9 agents, 14 commandes, 8 jeux de règles, 11 skills, 15+ hooks couvrant tous les scénarios de développement."
+            },
+            {
+                "title": "Support Multiplateforme",
+                "desc": "Tous les hooks et scripts réécrits en Node.js, s'exécutant de manière transparente sur Windows, macOS et Linux."
+            },
+            {
+                "title": "Gestionnaire de Paquets Intelligent",
+                "desc": "Détection automatique de npm, pnpm, yarn ou bun avec 6 configurations de priorité, sans réglage manuel requis."
+            },
+            {
+                "title": "Apprentissage Continu",
+                "desc": "Extraction automatique de patterns réutilisables des sessions, sauvegardés comme skills appris."
+            },
+            {
+                "title": "Garantie de Qualité du Code",
+                "desc": "Processus TDD, revues de code, audits de sécurité assurant 80%+ de couverture de tests."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Plan du Cours",
+        "subtitle": "6 chapitres, 27 leçons",
+        "sections": [
+            {
+                "title": "Démarrage Rapide",
+                "items": [
+                    {
+                        "title": "Démarrage Rapide",
+                        "desc": "Installer et utiliser Everything Claude Code en 5 minutes",
+                        "link": "/fr/affaan-m/everything-claude-code/start/quickstart/"
+                    },
+                    {
+                        "title": "Guide d'Installation",
+                        "desc": "Installation via Marketplace vs étapes d'installation manuelle",
+                        "link": "/fr/affaan-m/everything-claude-code/start/installation/"
+                    },
+                    {
+                        "title": "Configuration du Gestionnaire de Paquets",
+                        "desc": "Configurer la détection npm, pnpm, yarn ou bun",
+                        "link": "/fr/affaan-m/everything-claude-code/start/package-manager-setup/"
+                    },
+                    {
+                        "title": "Configuration des Serveurs MCP",
+                        "desc": "Configurer GitHub, Supabase, Vercel et 15+ serveurs MCP",
+                        "link": "/fr/affaan-m/everything-claude-code/start/mcp-setup/"
+                    }
+                ]
+            },
+            {
+                "title": "Fonctionnalités Clés",
+                "items": [
+                    {
+                        "title": "Aperçu des Commandes",
+                        "desc": "Maîtriser 14 commandes slash de workflow de développement",
+                        "link": "/fr/affaan-m/everything-claude-code/platforms/commands-overview/"
+                    },
+                    {
+                        "title": "Aperçu des Agents",
+                        "desc": "Comprendre 9 sous-agents spécialisés et leurs cas d'utilisation",
+                        "link": "/fr/affaan-m/everything-claude-code/platforms/agents-overview/"
+                    },
+                    {
+                        "title": "Workflow TDD",
+                        "desc": "Utiliser la commande /tdd pour le développement piloté par les tests",
+                        "link": "/fr/affaan-m/everything-claude-code/platforms/tdd-workflow/"
+                    },
+                    {
+                        "title": "Workflow de Revue de Code",
+                        "desc": "Revue de code automatisée et audit de sécurité",
+                        "link": "/fr/affaan-m/everything-claude-code/platforms/code-review-workflow/"
+                    }
+                ]
+            },
+            {
+                "title": "Fonctionnalités Avancées",
+                "items": [
+                    {
+                        "title": "Règles Personnalisées",
+                        "desc": "Créer et gérer des règles spécifiques au projet",
+                        "link": "/fr/affaan-m/everything-claude-code/advanced/custom-rules/"
+                    },
+                    {
+                        "title": "Contextes Dynamiques",
+                        "desc": "Basculer entre les modes développement, revue et recherche",
+                        "link": "/fr/affaan-m/everything-claude-code/advanced/dynamic-contexts/"
+                    },
+                    {
+                        "title": "Automatisation des Hooks",
+                        "desc": "Comprendre en profondeur 15+ hooks d'automatisation",
+                        "link": "/fr/affaan-m/everything-claude-code/advanced/hooks-automation/"
+                    },
+                    {
+                        "title": "Optimisation des Tokens",
+                        "desc": "Gérer la fenêtre de contexte et réduire l'utilisation des tokens",
+                        "link": "/fr/affaan-m/everything-claude-code/advanced/token-optimization/"
+                    },
+                    {
+                        "title": "Boucle de Vérification",
+                        "desc": "Points de contrôle vs évaluation continue et métriques pass@k",
+                        "link": "/fr/affaan-m/everything-claude-code/advanced/verification-loop/"
+                    },
+                    {
+                        "title": "Apprentissage Continu",
+                        "desc": "Extraire automatiquement les patterns des sessions et les sauvegarder comme skills",
+                        "link": "/fr/affaan-m/everything-claude-code/advanced/continuous-learning/"
+                    }
+                ]
+            },
+            {
+                "title": "FAQ",
+                "items": [
+                    {
+                        "title": "Dépannage MCP",
+                        "desc": "Résoudre les problèmes de connexion et de configuration des serveurs MCP",
+                        "link": "/fr/affaan-m/everything-claude-code/faq/troubleshooting-mcp/"
+                    },
+                    {
+                        "title": "Dépannage Agents",
+                        "desc": "Réparer les problèmes de délégation des agents et de qualité des réponses",
+                        "link": "/fr/affaan-m/everything-claude-code/faq/troubleshooting-agents/"
+                    },
+                    {
+                        "title": "Dépannage Hooks",
+                        "desc": "Déboguer l'exécution des hooks et les erreurs de script",
+                        "link": "/fr/affaan-m/everything-claude-code/faq/troubleshooting-hooks/"
+                    },
+                    {
+                        "title": "Conseils de Performance",
+                        "desc": "Optimiser la fenêtre de contexte et augmenter la vitesse de réponse",
+                        "link": "/fr/affaan-m/everything-claude-code/faq/performance-tips/"
+                    }
+                ]
+            },
+            {
+                "title": "Annexes",
+                "items": [
+                    {
+                        "title": "Référence de Configuration",
+                        "desc": "Référence complète des fichiers de configuration",
+                        "link": "/fr/affaan-m/everything-claude-code/appendix/config-reference/"
+                    },
+                    {
+                        "title": "Référence des Règles",
+                        "desc": "Détails des 8 jeux de règles intégrés",
+                        "link": "/fr/affaan-m/everything-claude-code/appendix/rules-reference/"
+                    },
+                    {
+                        "title": "Référence des Skills",
+                        "desc": "11 skills et leurs cas d'utilisation",
+                        "link": "/fr/affaan-m/everything-claude-code/appendix/skills-reference/"
+                    },
+                    {
+                        "title": "API des Scripts",
+                        "desc": "Fonctions utilitaires Node.js et scripts de hooks",
+                        "link": "/fr/affaan-m/everything-claude-code/appendix/scripts-api/"
+                    },
+                    {
+                        "title": "Exemples",
+                        "desc": "Exemples de configuration du monde réel",
+                        "link": "/fr/affaan-m/everything-claude-code/appendix/examples/"
+                    },
+                    {
+                        "title": "Suite de Tests",
+                        "desc": "Exécuter et étendre la suite de tests",
+                        "link": "/fr/affaan-m/everything-claude-code/appendix/test-suite/"
+                    },
+                    {
+                        "title": "Guide de Contribution",
+                        "desc": "Comment contribuer avec des agents, skills et hooks",
+                        "link": "/fr/affaan-m/everything-claude-code/appendix/contributing/"
+                    }
+                ]
+            },
+            {
+                "title": "Journal des Modifications",
+                "items": [
+                    {
+                        "title": "Notes de Version",
+                        "desc": "Historique des versions et changements breaking",
+                        "link": "/fr/affaan-m/everything-claude-code/changelog/release-notes/"
+                    }
+                ]
+            }
+        ]
+    }
+}

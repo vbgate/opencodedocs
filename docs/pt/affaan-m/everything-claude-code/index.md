@@ -10,7 +10,7 @@ description: "Aprenda os métodos de configuração e técnicas práticas do Eve
 
 <script setup>
 import data from './project.json'
-import ProjectHome from '../../.vitepress/theme/components/ProjectHome.vue'
+import ProjectHome from '../../../.vitepress/theme/components/ProjectHome.vue'
 </script>
 
 <ProjectHome :data="data" />

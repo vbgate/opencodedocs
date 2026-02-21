@@ -234,7 +234,7 @@ pnpm dev
 
 各Claude.ai Skillには`SKILL.md`ファイルを含める必要があります：
 
-```markdown
+````markdown
 ---
 name: {skill-name}
 description: {このスキルを使うタイミングを説明する1文。「Deploy my app」「Check logs」などのトリガーフレーズを含めること}
@@ -271,7 +271,7 @@ bash /mnt/skills/user/{skill-name}/scripts/{script}.sh [args]
 ## トラブルシューティング
 
 {一般的な問題と解決策、特にネットワーク/権限エラー}
-```
+````
 
 **ソース位置**：`AGENTS.md:29-69`
 

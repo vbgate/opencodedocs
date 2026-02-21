@@ -10,7 +10,7 @@ description: "Maîtrisez la fonction de révision de plans de backnotprop. Outil
 
 <script setup>
 import data from './project.json'
-import ProjectHome from '../../.vitepress/theme/components/ProjectHome.vue'
+import ProjectHome from '../../../.vitepress/theme/components/ProjectHome.vue'
 </script>
 
 <ProjectHome :data="data" />

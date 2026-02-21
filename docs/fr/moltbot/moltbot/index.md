@@ -9,7 +9,7 @@ description: "Votre assistant IA privé, disponible partout"
 
 <script setup>
 import data from './project.json'
-import ProjectHome from '../../.vitepress/theme/components/ProjectHome.vue'
+import ProjectHome from '../../../.vitepress/theme/components/ProjectHome.vue'
 </script>
 
 <ProjectHome :data="data" />

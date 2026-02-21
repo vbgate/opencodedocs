@@ -1,0 +1,145 @@
+{
+    "project": {
+        "name": "opencode-agent-skills",
+        "tagline": "Plugin de Gerenciamento Dinâmico de Skills para OpenCode AI",
+        "description": "Um sistema de plugin que fornece ao OpenCode capacidades dinâmicas de descoberta e gerenciamento de skills, permitindo que AI Agents carreguem e utilizem bibliotecas de skills reutilizáveis. Implementa a reutilização de skills entre projetos e sessões, com recomendação automática de skills relacionadas baseada em similaridade semântica.",
+        "github_url": "https://github.com/joshuadavidthomas/opencode-agent-skills"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Início Rápido",
+            "link": "/pt/joshuadavidthomas/opencode-agent-skills/start/installation/"
+        }
+    },
+    "features": {
+        "title": "Por que escolher o OpenCode Agent Skills?",
+        "subtitle": "Forneça ao OpenCode capacidades dinâmicas de descoberta e gerenciamento de skills, realizando a reutilização de skills entre projetos e sessões.",
+        "list": [
+            {
+                "title": "Descoberta Dinâmica de Skills",
+                "desc": "Descobre automaticamente skills de diretórios de projeto, usuário e plugin, com suporte a escaneamento em 6 locais diferentes, retornando a primeira skill correspondente por prioridade."
+            },
+            {
+                "title": "Compatibilidade com Claude Code",
+                "desc": "Suporta o formato de skills e plugins existentes do Claude Code, reduzindo custos de migração e permitindo a reutilização de recursos existentes."
+            },
+            {
+                "title": "Recomendação por Similaridade Semântica",
+                "desc": "Utiliza modelos de embedding do HuggingFace para calcular similaridade, recomendando automaticamente skills relacionadas baseado na entrada do usuário."
+            },
+            {
+                "title": "Injeção de Contexto",
+                "desc": "O conteúdo das skills é injetado no contexto da sessão em formato XML, permitindo que a AI siga as instruções das skills para produzir resultados de alta qualidade."
+            },
+            {
+                "title": "Recuperação Pós-Compactação",
+                "desc": "Reinjeta automaticamente a lista de skills após a compactação da sessão, mantendo as skills disponíveis em sessões longas."
+            },
+            {
+                "title": "Suporte a Execução de Scripts",
+                "desc": "Diretórios de skills podem conter scripts executáveis, permitindo a execução de tarefas de automação no contexto do diretório da skill."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Estrutura do Curso",
+        "subtitle": "4 Capítulos, 15 Aulas",
+        "sections": [
+            {
+                "title": "Guia de Introdução (Start)",
+                "items": [
+                    {
+                        "title": "O que é o OpenCode Agent Skills?",
+                        "desc": "Entenda o valor central e as funcionalidades do plugin",
+                        "link": "/pt/joshuadavidthomas/opencode-agent-skills/start/what-is-opencode-agent-skills/"
+                    },
+                    {
+                        "title": "Instalando o OpenCode Agent Skills",
+                        "desc": "Complete a instalação do plugin e verifique se está funcionando",
+                        "link": "/pt/joshuadavidthomas/opencode-agent-skills/start/installation/"
+                    },
+                    {
+                        "title": "Criando sua Primeira Skill",
+                        "desc": "Domine a estrutura de diretórios de skills e as especificações de formato SKILL.md",
+                        "link": "/pt/joshuadavidthomas/opencode-agent-skills/start/creating-your-first-skill/"
+                    }
+                ]
+            },
+            {
+                "title": "Funcionalidades Principais (Platforms)",
+                "items": [
+                    {
+                        "title": "Detalhes do Mecanismo de Descoberta de Skills",
+                        "desc": "Entenda como o plugin descobre automaticamente skills de múltiplos locais",
+                        "link": "/pt/joshuadavidthomas/opencode-agent-skills/platforms/skill-discovery-mechanism/"
+                    },
+                    {
+                        "title": "Consultar e Listar Skills Disponíveis",
+                        "desc": "Aprenda a usar a ferramenta get_available_skills e namespaces",
+                        "link": "/pt/joshuadavidthomas/opencode-agent-skills/platforms/listing-available-skills/"
+                    },
+                    {
+                        "title": "Carregar Skills no Contexto da Sessão",
+                        "desc": "Domine o uso da ferramenta use_skill e o mecanismo de injeção de conteúdo XML",
+                        "link": "/pt/joshuadavidthomas/opencode-agent-skills/platforms/loading-skills-into-context/"
+                    },
+                    {
+                        "title": "Recomendação Automática de Skills: Princípios de Similaridade Semântica",
+                        "desc": "Entenda como o plugin recomenda automaticamente skills relacionadas baseado em similaridade semântica",
+                        "link": "/pt/joshuadavidthomas/opencode-agent-skills/platforms/automatic-skill-matching/"
+                    },
+                    {
+                        "title": "Executar Scripts de Skill",
+                        "desc": "Aprenda a usar a ferramenta run_skill_script para executar scripts de automação no diretório da skill",
+                        "link": "/pt/joshuadavidthomas/opencode-agent-skills/platforms/executing-skill-scripts/"
+                    },
+                    {
+                        "title": "Ler Arquivos de Skill",
+                        "desc": "Use a ferramenta read_skill_file para acessar documentação de skills, configurações e outros arquivos de suporte",
+                        "link": "/pt/joshuadavidthomas/opencode-agent-skills/platforms/reading-skill-files/"
+                    }
+                ]
+            },
+            {
+                "title": "Funcionalidades Avançadas (Advanced)",
+                "items": [
+                    {
+                        "title": "Compatibilidade com Skills do Claude Code",
+                        "desc": "Entenda como o plugin é compatível com o sistema de skills e plugins do Claude Code",
+                        "link": "/pt/joshuadavidthomas/opencode-agent-skills/advanced/claude-code-compatibility/"
+                    },
+                    {
+                        "title": "Integração com Superpowers Workflow",
+                        "desc": "Configure e use o modo Superpowers para obter orientação estrita de workflow",
+                        "link": "/pt/joshuadavidthomas/opencode-agent-skills/advanced/superpowers-integration/"
+                    },
+                    {
+                        "title": "Namespaces e Prioridade de Skills",
+                        "desc": "Entenda o sistema de namespaces de skills e as regras de prioridade de descoberta",
+                        "link": "/pt/joshuadavidthomas/opencode-agent-skills/advanced/namespaces-and-priority/"
+                    },
+                    {
+                        "title": "Mecanismo de Recuperação Após Compactação de Contexto",
+                        "desc": "Entenda como as skills permanecem disponíveis em sessões longas",
+                        "link": "/pt/joshuadavidthomas/opencode-agent-skills/advanced/context-compaction-resilience/"
+                    }
+                ]
+            },
+            {
+                "title": "Perguntas Frequentes (FAQ)",
+                "items": [
+                    {
+                        "title": "Solução de Problemas Comuns",
+                        "desc": "Resolva problemas comuns ao usar o plugin",
+                        "link": "/pt/joshuadavidthomas/opencode-agent-skills/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "Considerações de Segurança",
+                        "desc": "Entenda os mecanismos de segurança do plugin e as melhores práticas",
+                        "link": "/pt/joshuadavidthomas/opencode-agent-skills/faq/security-considerations/"
+                    }
+                ]
+            }
+        ]
+    }
+}

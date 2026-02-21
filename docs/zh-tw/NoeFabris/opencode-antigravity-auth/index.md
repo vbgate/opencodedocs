@@ -10,7 +10,7 @@ description: "學習 opencode-antigravity-auth 插件的使用方法。透過 Go
 
 <script setup>
 import data from './project.json'
-import ProjectHome from '../../../../.vitepress/theme/components/ProjectHome.vue'
+import ProjectHome from '../../../.vitepress/theme/components/ProjectHome.vue'
 </script>
 
 <ProjectHome :data="data" />

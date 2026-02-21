@@ -1,0 +1,171 @@
+{
+  "project": {
+    "name": "superpowers",
+    "tagline": "Enforce Best Practices for AI Coding Agents",
+    "description": "Don't let AI be lazy. Superpowers provides 14 composable skills that enforce systematic design, TDD development, and code review for AI agents, ensuring production-quality delivery every time. Supports Claude Code, OpenCode, and Codex platforms.",
+    "github_url": "https://github.com/obra/superpowers"
+  },
+  "hero": {
+    "primary_action": {
+      "text": "Quick Start",
+      "link": "/obra/superpowers/start/superpowers-intro/"
+    }
+  },
+  "features": {
+    "title": "Why Choose Superpowers?",
+    "subtitle": "Inject Software Engineering Discipline into AI Coding Agents",
+    "list": [
+      {
+        "title": "🎯 Enforce Design Dialogue",
+        "desc": "Before AI writes the first line of code, enforce requirement clarification and architecture design to avoid rework caused by over-rationalization."
+      },
+      {
+        "title": "🧪 TDD Discipline Enforcement",
+        "desc": "No code without tests, enforcing the RED-GREEN-REFACTOR cycle to ensure test coverage and code maintainability."
+      },
+      {
+        "title": "🔍 Systematic Debugging",
+        "desc": "Four-stage debugging workflow (Observe → Hypothesize → Verify → Fix), rejecting blind guesses and random fixes."
+      },
+      {
+        "title": "👥 Sub-Agent Driven Development",
+        "desc": "Specialized division of labor for rapid iteration. Utilize multiple sub-agents to execute tasks in parallel, with automatic code review for every step."
+      },
+      {
+        "title": "🔀 Git Worktree Isolation",
+        "desc": "Create isolated environments for each feature, keeping the main branch clean and enabling conflict-free parallel development."
+      },
+      {
+        "title": "⚡ Concurrent Agent Dispatch",
+        "desc": "When facing multiple independent tasks, dispatch multiple sub-agents in parallel to significantly improve development efficiency."
+      },
+      {
+        "title": "📋 Code Review Workflow",
+        "desc": "Automatically trigger code review after each task completion, maintaining code quality and catching issues early."
+      },
+      {
+        "title": "🛡 Evidence-First Verification",
+        "desc": "Require genuine verification before claiming completion (passing tests, successful builds, updated docs), eliminating half-finished deliveries."
+      },
+      {
+        "title": "🔌 Three Platform Support",
+        "desc": "Seamless integration with Claude Code, OpenCode, and Codex AI coding platforms, with automatic skill loading."
+      },
+      {
+        "title": "✨ Extensible Skill System",
+        "desc": "Write custom skills and create specialized workflows. Skills are stored as files, making them easy to version control and share."
+      }
+    ]
+  },
+  "docs": {
+    "title": "Course Outline",
+    "subtitle": "4 Chapters, 17 Lessons",
+    "sections": [
+      {
+        "title": "Getting Started (Start)",
+        "items": [
+          {
+            "title": "What is Superpowers",
+            "desc": "Introduces Superpowers' core value, use cases, and working principles",
+            "link": "/obra/superpowers/start/superpowers-intro/"
+          },
+          {
+            "title": "Quick Start: Get Started in 5 Minutes",
+            "desc": "Guide users to experience Superpowers' core features in the shortest time",
+            "link": "/obra/superpowers/start/quick-start/"
+          },
+          {
+            "title": "Installation Guide",
+            "desc": "Detailed installation steps covering Claude Code, OpenCode, and Codex platforms",
+            "link": "/obra/superpowers/start/installation/"
+          },
+          {
+            "title": "Verify Installation",
+            "desc": "Teach users how to verify Superpowers is correctly installed and loaded",
+            "link": "/obra/superpowers/start/verification/"
+          },
+          {
+            "title": "How to Use Skills",
+            "desc": "Explain the core concepts of the skill system, skill priorities, and invocation rules",
+            "link": "/obra/superpowers/start/using-skills/"
+          }
+        ]
+      },
+      {
+        "title": "Platform Features (Platforms)",
+        "items": [
+          {
+            "title": "Claude Code Platform",
+            "desc": "Detailed guide on using Superpowers in Claude Code, including commands and the hook system",
+            "link": "/obra/superpowers/platforms/claude-code/"
+          },
+          {
+            "title": "OpenCode Platform",
+            "desc": "Detailed guide on using Superpowers in OpenCode, including plugin installation and skill discovery",
+            "link": "/obra/superpowers/platforms/opencode/"
+          },
+          {
+            "title": "Codex Platform",
+            "desc": "Detailed guide on using Superpowers in Codex, including CLI tools and skill loading",
+            "link": "/obra/superpowers/platforms/codex/"
+          },
+          {
+            "title": "Platform Comparison & Selection",
+            "desc": "Compare feature differences and use cases of the three platforms to help users choose",
+            "link": "/obra/superpowers/platforms/platform-comparison/"
+          }
+        ]
+      },
+      {
+        "title": "Advanced Features (Advanced)",
+        "items": [
+          {
+            "title": "Sub-Agent Driven Development",
+            "desc": "Advanced workflow utilizing sub-agents for rapid iteration and automatic review",
+            "link": "/obra/superpowers/advanced/subagent-development/"
+          },
+          {
+            "title": "Code Review Workflow",
+            "desc": "Teach users how to request and receive code reviews to maintain code quality",
+            "link": "/obra/superpowers/advanced/code-review-workflow/"
+          },
+          {
+            "title": "Git Worktree Isolation",
+            "desc": "Use Git worktrees to create isolated development environments, keeping the main branch clean",
+            "link": "/obra/superpowers/advanced/git-worktrees/"
+          },
+          {
+            "title": "Concurrent Agent Dispatch",
+            "desc": "How to dispatch multiple sub-agents concurrently to improve efficiency when facing multiple independent problems",
+            "link": "/obra/superpowers/advanced/parallel-agents/"
+          },
+          {
+            "title": "Branch Completion Workflow",
+            "desc": "Guide users through merging, PR creation, or cleanup after completing development branches",
+            "link": "/obra/superpowers/advanced/branch-completion/"
+          },
+          {
+            "title": "Complete Development Workflow in Practice",
+            "desc": "Combine all skills to demonstrate the complete development workflow from design to deployment",
+            "link": "/obra/superpowers/advanced/complete-workflow/"
+          }
+        ]
+      },
+      {
+        "title": "FAQ (FAQ)",
+        "items": [
+          {
+            "title": "Common Issues & Troubleshooting",
+            "desc": "Collect common questions, error messages, and their solutions",
+            "link": "/obra/superpowers/faq/troubleshooting/"
+          },
+          {
+            "title": "Best Practices & Pitfall Guide",
+            "desc": "Summarize best practices for using Superpowers and avoiding common pitfalls",
+            "link": "/obra/superpowers/faq/best-practices/"
+          }
+        ]
+      }
+    ]
+  }
+}

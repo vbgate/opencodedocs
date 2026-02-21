@@ -1,0 +1,155 @@
+{
+  "project": {
+    "name": "OpenClaw",
+    "tagline": "Run a personal AI assistant on your device, unifying all communication channels",
+    "description": "Stop letting your data flow into cloud black holes. OpenClaw is a local-first multi-channel AI gateway that lets you deploy a private AI assistant on your own device. Supports 12+ platforms including WhatsApp, Telegram, Slack, and Discord, with 60+ built-in skills. Make your AI truly yours.",
+    "github_url": "https://github.com/openclaw/openclaw"
+  },
+  "hero": {
+    "primary_action": {
+      "text": "Quick Start",
+      "link": "/openclaw/openclaw/start/onboard/"
+    }
+  },
+  "features": {
+    "title": "Why OpenClaw?",
+    "subtitle": "Local-first, privacy-centric, powerful personal AI infrastructure",
+    "list": [
+      {
+        "title": "🏠 AI That Truly Belongs to You",
+        "desc": "Local-first architecture keeps all data on your device. No more privacy concerns—your conversations belong only to you."
+      },
+      {
+        "title": "📱 One-Stop Messaging Hub",
+        "desc": "Unified access to 12+ communication platforms including WhatsApp, Telegram, Slack, Discord, and Signal. One AI assistant manages all your channels."
+      },
+      {
+        "title": "🤖 Powerful Agent Runtime",
+        "desc": "Built on Pi Agent's RPC architecture, supporting multi-model configuration, failover, and session isolation—enterprise-grade stability."
+      },
+      {
+        "title": "🛠️ 60+ Ready-to-Use Skills",
+        "desc": "GitHub, Spotify, Notion, 1Password, weather, image generation... A rich skill ecosystem to extend AI capabilities with one click."
+      },
+      {
+        "title": "🌐 Browser Automation",
+        "desc": "Built-in Chrome/Chromium CDP control, enabling AI to operate browsers, scrape web pages, and execute automation tasks."
+      },
+      {
+        "title": "🔒 Enterprise-Grade Security",
+        "desc": "DM pairing mechanism, token/password authentication, Docker sandbox execution, and rate limiting—multi-layer protection ensures system security."
+      }
+    ]
+  },
+  "docs": {
+    "title": "Course Outline",
+    "subtitle": "4 Chapters, 17 Lessons",
+    "sections": [
+      {
+        "title": "Getting Started",
+        "items": [
+          {
+            "title": "Onboarding - Deploy OpenClaw from Scratch",
+            "desc": "Guide users through first-time installation and understanding OpenClaw's core concepts and architecture",
+            "link": "/openclaw/openclaw/start/onboard/"
+          },
+          {
+            "title": "Gateway Quick Start - Launch Your AI Assistant Service",
+            "desc": "Guide users to start the Gateway service and understand the WebSocket control plane concept",
+            "link": "/openclaw/openclaw/start/gateway-quickstart/"
+          },
+          {
+            "title": "Send Your First Message - First Conversation with AI",
+            "desc": "Demonstrate how to have your first conversation with the Agent via CLI or channel",
+            "link": "/openclaw/openclaw/start/first-message/"
+          },
+          {
+            "title": "Configuration Basics - Understanding openclaw.json Structure",
+            "desc": "Introduce configuration file structure, environment variables, and key configuration items",
+            "link": "/openclaw/openclaw/start/configuration-basics/"
+          }
+        ]
+      },
+      {
+        "title": "Platforms",
+        "items": [
+          {
+            "title": "Channels Overview - Supported Communication Platforms",
+            "desc": "Introduce the 12+ messaging channels supported by OpenClaw and their features",
+            "link": "/openclaw/openclaw/platforms/channels-overview/"
+          },
+          {
+            "title": "WhatsApp Integration - Configure Baileys Connection",
+            "desc": "Detailed guidance on WhatsApp channel configuration, pairing process, and security settings",
+            "link": "/openclaw/openclaw/platforms/whatsapp-setup/"
+          },
+          {
+            "title": "Telegram Integration - Configure Bot and Group Support",
+            "desc": "Guide to creating a Telegram Bot, configuring tokens, and group management",
+            "link": "/openclaw/openclaw/platforms/telegram-setup/"
+          },
+          {
+            "title": "Slack & Discord Integration - Workspace Bot Configuration",
+            "desc": "Configure Slack Bolt and Discord.js bots, understand OAuth flow",
+            "link": "/openclaw/openclaw/platforms/slack-discord-setup/"
+          },
+          {
+            "title": "Other Channel Configurations - Signal, BlueBubbles, Teams, etc.",
+            "desc": "Introduction to configuring other channels: Signal, BlueBubbles (iMessage), MS Teams, Matrix, Zalo",
+            "link": "/openclaw/openclaw/platforms/other-channels/"
+          }
+        ]
+      },
+      {
+        "title": "Advanced",
+        "items": [
+          {
+            "title": "Model Configuration - Multi-Provider & Failover",
+            "desc": "Configure multiple model providers (Anthropic, OpenAI, vLLM, etc.) and set up model fallback strategies",
+            "link": "/openclaw/openclaw/advanced/models-configuration/"
+          },
+          {
+            "title": "Browser Control - Automate Chrome/Chromium",
+            "desc": "Configure browser control, understand CDP protocol, and automate web page operations",
+            "link": "/openclaw/openclaw/advanced/browser-control/"
+          },
+          {
+            "title": "Skills System - Extend Agent Capabilities",
+            "desc": "Understand the skills system architecture, install built-in skills, and create custom skills",
+            "link": "/openclaw/openclaw/advanced/skills-system/"
+          },
+          {
+            "title": "Scheduled Tasks - Cron & Automation Workflows",
+            "desc": "Configure Cron jobs, schedule Agent triggers, and automation workflows",
+            "link": "/openclaw/openclaw/advanced/cron-automation/"
+          },
+          {
+            "title": "Tailscale Remote Access - Securely Expose Gateway",
+            "desc": "Configure Tailscale Serve/Funnel to achieve secure remote access",
+            "link": "/openclaw/openclaw/advanced/tailscale-remote/"
+          }
+        ]
+      },
+      {
+        "title": "FAQ",
+        "items": [
+          {
+            "title": "Troubleshooting - Common Issues & Solutions",
+            "desc": "Provide diagnosis and fixes for common errors",
+            "link": "/openclaw/openclaw/faq/troubleshooting/"
+          },
+          {
+            "title": "Security Guide - Protect Your AI Assistant",
+            "desc": "Deep dive into security model, DM pairing, sandbox execution, and access control",
+            "link": "/openclaw/openclaw/faq/security-guide/"
+          },
+          {
+            "title": "CLI Command Reference - Complete Command Manual",
+            "desc": "Detailed explanation and usage examples for all CLI commands",
+            "link": "/openclaw/openclaw/faq/commands-reference/"
+          }
+        ]
+      }
+    ]
+  }
+}

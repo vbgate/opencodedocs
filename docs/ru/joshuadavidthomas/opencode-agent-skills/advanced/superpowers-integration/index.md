@@ -1,4 +1,10 @@
 ---
+title: "Интеграция Superpowers | opencode-agent-skills"
+sidebarTitle: "Интеграция Superpowers"
+subtitle: "Интеграция Superpowers"
+description: "Справочник исходного кода для интеграции Superpowers в OpenCode Agent Skills."
+order: 2
+---
 
 ## Приложение: справочник исходного кода
 

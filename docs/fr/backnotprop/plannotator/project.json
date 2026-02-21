@@ -1,0 +1,150 @@
+{
+    "project": {
+        "name": "plannotator",
+        "tagline": "Outil de planification et de revue de code basé sur l'IA",
+        "description": "Fournit des outils de revue de plan et de code interactifs pour Claude Code et OpenCode, avec support pour les annotations visuelles, la collaboration d'équipe, le partage d'URL et l'intégration avec des applications de notes tierces. Fonctionne localement, sécurité des données, partage de revues sans serveur.",
+        "github_url": "https://github.com/backnotprop/plannotator"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Démarrage rapide",
+            "link": "/fr/backnotprop/plannotator/start/getting-started/"
+        }
+    },
+    "features": {
+        "title": "Pourquoi choisir Plannotator ?",
+        "subtitle": "Révisez visuellement les plans et le code générés par l'IA, retours précis, collaboration d'équipe.",
+        "list": [
+            {
+                "title": "Revue de plan visuelle",
+                "desc": "Consultez les plans générés par l'IA dans le navigateur, ajoutez des annotations de suppression, remplacement, insertion et commentaires pour un retour précis."
+            },
+            {
+                "title": "Revue de code visuelle",
+                "desc": "Vue côte à côte ou unifiée des diff Git, support pour les annotations au niveau des lignes et les suggestions de code."
+            },
+            {
+                "title": "Support multi-plateforme",
+                "desc": "Compatible avec Claude Code et OpenCode, s'intègre de manière transparente dans les flux de travail de développement existants."
+            },
+            {
+                "title": "Partage d'URL sans backend",
+                "desc": "Compression dans le hash d'URL, partagez le contenu de revue avec les membres de l'équipe sans serveur."
+            },
+            {
+                "title": "Outils d'annotation d'images",
+                "desc": "Joignez des images et utilisez des outils de pinceau, flèche et cercle pour annoter, améliorant l'expression des retours."
+            },
+            {
+                "title": "Intégration avec notes tierces",
+                "desc": "Les plans approuvés sont automatiquement enregistrés dans Obsidian ou Bear, avec frontmatter et étiquettes."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Plan de cours",
+        "subtitle": "4 chapitres, 17 leçons",
+        "sections": [
+            {
+                "title": "Démarrage rapide",
+                "items": [
+                    {
+                        "title": "Démarrage rapide",
+                        "desc": "Découvrez ce qu'est Plannotator, terminez la première utilisation en 5 minutes",
+                        "link": "/fr/backnotprop/plannotator/start/getting-started/"
+                    },
+                    {
+                        "title": "Installation du plugin Claude Code",
+                        "desc": "Installez et configurez le plugin Plannotator dans Claude Code",
+                        "link": "/fr/backnotprop/plannotator/start/installation-claude-code/"
+                    },
+                    {
+                        "title": "Installation du plugin OpenCode",
+                        "desc": "Installez et configurez le plugin Plannotator dans OpenCode",
+                        "link": "/fr/backnotprop/plannotator/start/installation-opencode/"
+                    }
+                ]
+            },
+            {
+                "title": "Fonctionnalités principales",
+                "items": [
+                    {
+                        "title": "Bases de la revue de plan",
+                        "desc": "Révisez visuellement les plans générés par l'IA, approuvez ou refusez",
+                        "link": "/fr/backnotprop/plannotator/platforms/plan-review-basics/"
+                    },
+                    {
+                        "title": "Ajouter des annotations de plan",
+                        "desc": "Ajoutez différents types d'annotations : suppression, remplacement, insertion, commentaire",
+                        "link": "/fr/backnotprop/plannotator/platforms/plan-review-annotations/"
+                    },
+                    {
+                        "title": "Ajouter des annotations d'images",
+                        "desc": "Joignez des images et utilisez des outils de pinceau, flèche, cercle pour annoter",
+                        "link": "/fr/backnotprop/plannotator/platforms/plan-review-images/"
+                    },
+                    {
+                        "title": "Bases de la revue de code",
+                        "desc": "Utilisez /plannotator-review pour réviser le git diff",
+                        "link": "/fr/backnotprop/plannotator/platforms/code-review-basics/"
+                    },
+                    {
+                        "title": "Ajouter des annotations de code",
+                        "desc": "Ajoutez des annotations au niveau des lignes (comment/suggestion/concern)",
+                        "link": "/fr/backnotprop/plannotator/platforms/code-review-annotations/"
+                    },
+                    {
+                        "title": "Changer de vue Diff",
+                        "desc": "Changez les types de diff : uncommitted/staged/last commit/branch, etc.",
+                        "link": "/fr/backnotprop/plannotator/platforms/code-review-diff-types/"
+                    }
+                ]
+            },
+            {
+                "title": "Fonctionnalités avancées",
+                "items": [
+                    {
+                        "title": "Partage d'URL",
+                        "desc": "Partagez des plans et annotations via URL, collaboration d'équipe sans backend",
+                        "link": "/fr/backnotprop/plannotator/advanced/url-sharing/"
+                    },
+                    {
+                        "title": "Intégration Obsidian",
+                        "desc": "Enregistrez automatiquement les plans approuvés dans le vault Obsidian",
+                        "link": "/fr/backnotprop/plannotator/advanced/obsidian-integration/"
+                    },
+                    {
+                        "title": "Intégration Bear",
+                        "desc": "Enregistrez des plans dans Bear via x-callback-url",
+                        "link": "/fr/backnotprop/plannotator/advanced/bear-integration/"
+                    },
+                    {
+                        "title": "Mode remote/Devcontainer",
+                        "desc": "Utilisez Plannotator dans SSH, devcontainer, WSL",
+                        "link": "/fr/backnotprop/plannotator/advanced/remote-mode/"
+                    },
+                    {
+                        "title": "Configuration des variables d'environnement",
+                        "desc": "Découvrez toutes les variables d'environnement disponibles et leurs usages",
+                        "link": "/fr/backnotprop/plannotator/advanced/environment-variables/"
+                    }
+                ]
+            },
+            {
+                "title": "FAQ",
+                "items": [
+                    {
+                        "title": "Questions fréquentes",
+                        "desc": "Problèmes d'occupation de port, navigateur ne s'ouvre pas, plan ne s'affiche pas, etc.",
+                        "link": "/fr/backnotprop/plannotator/faq/common-problems/"
+                    },
+                    {
+                        "title": "Dépannage",
+                        "desc": "Consultation des logs, gestion des erreurs et techniques de débogage",
+                        "link": "/fr/backnotprop/plannotator/faq/troubleshooting/"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,166 @@
+{
+  "project": {
+    "name": "agent-app-factory",
+    "tagline": "1つのアイデア、7ステップでアプリに",
+    "description": "繰り返しのコーディングに時間を浪費するのはやめましょう。AI App Factoryなら、アイデアから実行可能なMVPまで、7つのチェックポイントで実現します。フロントエンド・バックエンドのコード、テスト、ドキュメント、CI/CD設定を自動生成し、本番品質の成果物を提供します。",
+    "github_url": "https://github.com/hyz1992/agent-app-factory"
+  },
+  "hero": {
+    "primary_action": {
+      "text": "クイックスタート",
+      "link": "/ja/hyz1992/agent-app-factory/start/getting-started/"
+    }
+  },
+  "features": {
+    "title": "なぜAI App Factoryを選ぶのか？",
+    "subtitle": "アイデアを実行可能なアプリに変換するのが、こんなに簡単になることはありません",
+    "list": [
+      {
+        "title": "🚀 7ステップパイプライン",
+        "desc": "アイデアからアプリへ、フルオートメーションで待ち時間なし。Bootstrap → PRD → UI → Tech → Code → Validation → Preview"
+      },
+      {
+        "title": "✅ 品質チェックポイント",
+        "desc": "各ステージ完了後に一時停止して確認し、期待通りの出力を保証。後段で挽回できないエラーの蓄積を防止"
+      },
+      {
+        "title": "🏭 本番級コード",
+        "desc": "フロントエンド・バックエンドのコード、テスト、ドキュメント、CI/CD設定を自動生成。すぐに本番投入可能な品質"
+      },
+      {
+        "title": "⚡ 迅速な検証",
+        "desc": "明確なスコープ境界設定で過剰設計を回避。検証可能なプロトタイプを迅速に提供し、市場検証後にイテレーション"
+      },
+      {
+        "title": "🔒 データプライバシー",
+        "desc": "ローカル実行、データは一切アップロードされません。あなたのアイデアとコードは決してマシンを離れません"
+      }
+    ]
+  },
+  "docs": {
+    "title": "コースアウトライン",
+    "subtitle": "全4章、20コース構成",
+    "sections": [
+      {
+        "title": "入門ガイド (Start)",
+        "items": [
+          {
+            "title": "クイックスタート：アイデアからアプリへ",
+            "desc": "AI App Factoryのコアバリュー、前提条件を理解し、初めてのプロジェクトを初期化",
+            "link": "/ja/hyz1992/agent-app-factory/start/getting-started/"
+          },
+          {
+            "title": "インストールと設定",
+            "desc": "CLIツールのグローバルインストール、AIアシスタント（Claude Code/OpenCode）の設定",
+            "link": "/ja/hyz1992/agent-app-factory/start/installation/"
+          },
+          {
+            "title": "Factoryプロジェクトの初期化",
+            "desc": "factory initコマンドでディレクトリを初期化、生成されるプロジェクト構造の理解",
+            "link": "/ja/hyz1992/agent-app-factory/start/init-project/"
+          },
+          {
+            "title": "7ステージパイプライン概要",
+            "desc": "BootstrapからPreviewまでの完全パイプラインフローの理解",
+            "link": "/ja/hyz1992/agent-app-factory/start/pipeline-overview/"
+          }
+        ]
+      },
+      {
+        "title": "プラットフォーム機能 (Platforms)",
+        "items": [
+          {
+            "title": "Claude Code統合ガイド",
+            "desc": "Claude Codeでパイプラインを実行する方法、権限設定とベストプラクティス",
+            "link": "/ja/hyz1992/agent-app-factory/platforms/claude-code/"
+          },
+          {
+            "title": "OpenCodeとその他のAIアシスタント",
+            "desc": "OpenCode、Cursor等のAIアシスタントでパイプラインを実行する方法",
+            "link": "/ja/hyz1992/agent-app-factory/platforms/other-ai-assistants/"
+          },
+          {
+            "title": "必須プラグインインストール",
+            "desc": "superpowersとui-ux-pro-maxプラグインのインストール、パイプラインの正常な実行を保証",
+            "link": "/ja/hyz1992/agent-app-factory/platforms/plugins/"
+          }
+        ]
+      },
+      {
+        "title": "高度な機能 (Advanced)",
+        "items": [
+          {
+            "title": "ステージ1：Bootstrap - プロダクトアイデアの構造化",
+            "desc": "Bootstrap Agentでアイデアを構造化されたドキュメントに変換する方法",
+            "link": "/ja/hyz1992/agent-app-factory/advanced/stage-bootstrap/"
+          },
+          {
+            "title": "ステージ2：PRD - 製品要件文書の生成",
+            "desc": "MVPレベルのPRD生成、ユーザストーリー、機能リスト、非目標の含む",
+            "link": "/ja/hyz1992/agent-app-factory/advanced/stage-prd/"
+          },
+          {
+            "title": "ステージ3：UI - インターフェースとプロトタイプの設計",
+            "desc": "ui-ux-pro-maxスキルでUI構造とプレビュー可能なプロトタイプを設計",
+            "link": "/ja/hyz1992/agent-app-factory/advanced/stage-ui/"
+          },
+          {
+            "title": "ステージ4：Tech - 技術アーキテクチャの設計",
+            "desc": "最小限で実行可能な技術アーキテクチャとPrismaデータモデルの設計",
+            "link": "/ja/hyz1992/agent-app-factory/advanced/stage-tech/"
+          },
+          {
+            "title": "ステージ5：Code - 実行可能なコードの生成",
+            "desc": "UI SchemaとTech設計に基づいてフロントエンド・バックエンドコード、テスト、設定を生成",
+            "link": "/ja/hyz1992/agent-app-factory/advanced/stage-code/"
+          },
+          {
+            "title": "ステージ6：Validation - コード品質の検証",
+            "desc": "依存関係インストール、型チェック、Prisma schema、コード品質の検証",
+            "link": "/ja/hyz1992/agent-app-factory/advanced/stage-validation/"
+          },
+          {
+            "title": "ステージ7：Preview - デプロイガイドの生成",
+            "desc": "完全な実行説明文書とデプロイ設定を生成",
+            "link": "/ja/hyz1992/agent-app-factory/advanced/stage-preview/"
+          },
+          {
+            "title": "Sisyphus オーケストレーターの詳細解説",
+            "desc": "オーケストレーターがパイプラインを調整、状態を管理、権限チェックを実行する仕組みを理解する",
+            "link": "/ja/hyz1992/agent-app-factory/advanced/orchestrator/"
+          },
+          {
+            "title": "コンテキスト最適化：分割セッション実行",
+            "desc": "factory continueコマンドでTokenを節約し、各ステージで新規セッションを作成する方法",
+            "link": "/ja/hyz1992/agent-app-factory/advanced/context-optimization/"
+          },
+          {
+            "title": "権限とセキュリティメカニズム",
+            "desc": "機能境界マトリックス、越権処理、セキュリティチェックメカニズムを理解する",
+            "link": "/ja/hyz1992/agent-app-factory/advanced/security-permissions/"
+          },
+          {
+            "title": "失敗処理とロールバック",
+            "desc": "失敗認識、リトライメカニズム、ロールバック戦略、手動介入フローを学ぶ",
+            "link": "/ja/hyz1992/agent-app-factory/advanced/failure-handling/"
+          }
+        ]
+      },
+      {
+        "title": "よくある質問 (FAQ)",
+        "items": [
+          {
+            "title": "よくある質問とトラブルシューティング",
+            "desc": "初期化、実行、デプロイ時のよくある問題の解決方法",
+            "link": "/ja/hyz1992/agent-app-factory/faq/troubleshooting/"
+          },
+          {
+            "title": "ベストプラクティス",
+            "desc": "明確な製品説明の提供、チェックポイントの活用、スコープ管理、段階的イテレーションなどのテクニック",
+            "link": "/ja/hyz1992/agent-app-factory/faq/best-practices/"
+          }
+        ]
+      }
+    ]
+  }
+}

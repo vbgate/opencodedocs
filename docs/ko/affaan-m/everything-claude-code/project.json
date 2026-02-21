@@ -1,0 +1,210 @@
+{
+    "project": {
+        "name": "Everything Claude Code",
+        "tagline": "실전에서 검증된 Claude Code 플러그인 설정 모음",
+        "description": "Anthropic 해커톤 우승팀이 제공하는 완전한 Claude Code 플러그인 설정 모음. 9개의 agents, 14개의 commands, 8개의 rules 세트, 11개의 skills, 그리고 15개 이상의 hooks를 제공하여 AI 기반 개발 효율성을 향상시킵니다. Windows, macOS 및 Linux 크로스 플랫폼 Node.js 스크립트 지원.",
+        "github_url": "https://github.com/affaan-m/everything-claude-code"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "빠른 시작",
+            "link": "/ko/affaan-m/everything-claude-code/start/quickstart/"
+        }
+    },
+    "features": {
+        "title": "왜 Everything Claude Code를 선택해야 할까요?",
+        "subtitle": "처음부터 설정할 필요가 없습니다. 10개월 이상 일상적인 사용을 통해 다듬어진 실전 검증 설정을 받아보세요.",
+        "list": [
+            {
+                "title": "실전 검증",
+                "desc": "Anthropic 해커톤 우승팀, 10개월 이상 일상 사용으로 다듬어짐, 실제 제품 구축 경험."
+            },
+            {
+                "title": "완전한 설정",
+                "desc": "9개의 agents, 14개의 commands, 8개의 rules 세트, 11개의 skills, 15개 이상의 hooks, 모든 개발 시나리오 커버."
+            },
+            {
+                "title": "크로스 플랫폼 지원",
+                "desc": "모든 hooks 및 스크립트가 Node.js로 재작성됨, Windows, macOS, Linux에서 원활하게 실행."
+            },
+            {
+                "title": "스마트 패키지 매니저",
+                "desc": "npm, pnpm, yarn, bun 자동 감지, 6가지 우선순위 설정 지원, 수동 설정 불필요."
+            },
+            {
+                "title": "지속적 학습",
+                "desc": "세션에서 자동으로 재사용 가능한 패턴을 추출하여 learned skills로 저장."
+            },
+            {
+                "title": "코드 품질 보장",
+                "desc": "TDD 프로세스, 코드 리뷰, 보안 감사, 80%+ 테스트 커버리지 보장."
+            }
+        ]
+    },
+    "docs": {
+        "title": "과정 개요",
+        "subtitle": "6개 섹션, 27개 강의",
+        "sections": [
+            {
+                "title": "빠른 시작",
+                "items": [
+                    {
+                        "title": "빠른 시작",
+                        "desc": "5분 안에 Everything Claude Code 설치 및 사용",
+                        "link": "/ko/affaan-m/everything-claude-code/start/quickstart/"
+                    },
+                    {
+                        "title": "설치 가이드",
+                        "desc": "마켓플레이스 설치 vs 수동 설치 상세 단계",
+                        "link": "/ko/affaan-m/everything-claude-code/start/installation/"
+                    },
+                    {
+                        "title": "패키지 매니저 설정",
+                        "desc": "npm, pnpm, yarn 또는 bun 감지 설정",
+                        "link": "/ko/affaan-m/everything-claude-code/start/package-manager-setup/"
+                    },
+                    {
+                        "title": "MCP 서버 설정",
+                        "desc": "GitHub, Supabase, Vercel 등 15개 이상의 MCP 서버 설정",
+                        "link": "/ko/affaan-m/everything-claude-code/start/mcp-setup/"
+                    }
+                ]
+            },
+            {
+                "title": "핵심 기능",
+                "items": [
+                    {
+                        "title": "명령어 개요",
+                        "desc": "14개 개발 워크플로우 슬래시 명령어 마스터",
+                        "link": "/ko/affaan-m/everything-claude-code/platforms/commands-overview/"
+                    },
+                    {
+                        "title": "Agents 개요",
+                        "desc": "9개 전문 서브 에이전트 및 사용 시나리오 이해",
+                        "link": "/ko/affaan-m/everything-claude-code/platforms/agents-overview/"
+                    },
+                    {
+                        "title": "TDD 워크플로우",
+                        "desc": "/tdd 명령어로 테스트 주도 개발 수행",
+                        "link": "/ko/affaan-m/everything-claude-code/platforms/tdd-workflow/"
+                    },
+                    {
+                        "title": "코드 리뷰 워크플로우",
+                        "desc": "자동화된 코드 리뷰 및 보안 감사",
+                        "link": "/ko/affaan-m/everything-claude-code/platforms/code-review-workflow/"
+                    }
+                ]
+            },
+            {
+                "title": "고급 기능",
+                "items": [
+                    {
+                        "title": "사용자 정의 규칙",
+                        "desc": "프로젝트별 규칙 생성 및 관리",
+                        "link": "/ko/affaan-m/everything-claude-code/advanced/custom-rules/"
+                    },
+                    {
+                        "title": "동적 컨텍스트",
+                        "desc": "개발, 리뷰, 리서치 모드 간 전환",
+                        "link": "/ko/affaan-m/everything-claude-code/advanced/dynamic-contexts/"
+                    },
+                    {
+                        "title": "Hooks 자동화",
+                        "desc": "15개 이상의 자동화 hook 심층 이해",
+                        "link": "/ko/affaan-m/everything-claude-code/advanced/hooks-automation/"
+                    },
+                    {
+                        "title": "Token 최적화",
+                        "desc": "컨텍스트 윈도우 관리 및 token 사용량 감소",
+                        "link": "/ko/affaan-m/everything-claude-code/advanced/token-optimization/"
+                    },
+                    {
+                        "title": "검증 루프",
+                        "desc": "체크포인트 vs 지속적 평가 및 pass@k 메트릭",
+                        "link": "/ko/affaan-m/everything-claude-code/advanced/verification-loop/"
+                    },
+                    {
+                        "title": "지속적 학습",
+                        "desc": "세션에서 자동으로 패턴 추출하여 skills로 저장",
+                        "link": "/ko/affaan-m/everything-claude-code/advanced/continuous-learning/"
+                    }
+                ]
+            },
+            {
+                "title": "자주 묻는 질문",
+                "items": [
+                    {
+                        "title": "MCP 문제 해결",
+                        "desc": "MCP 서버 연결 및 설정 문제 해결",
+                        "link": "/ko/affaan-m/everything-claude-code/faq/troubleshooting-mcp/"
+                    },
+                    {
+                        "title": "Agents 문제 해결",
+                        "desc": "에이전트 위임 및 응답 품질 문제 해결",
+                        "link": "/ko/affaan-m/everything-claude-code/faq/troubleshooting-agents/"
+                    },
+                    {
+                        "title": "Hooks 문제 해결",
+                        "desc": "hook 실행 및 스크립트 오류 디버깅",
+                        "link": "/ko/affaan-m/everything-claude-code/faq/troubleshooting-hooks/"
+                    },
+                    {
+                        "title": "성능 최적화 팁",
+                        "desc": "컨텍스트 윈도우 최적화 및 응답 속도 향상",
+                        "link": "/ko/affaan-m/everything-claude-code/faq/performance-tips/"
+                    }
+                ]
+            },
+            {
+                "title": "부록",
+                "items": [
+                    {
+                        "title": "설정 참고",
+                        "desc": "완전한 설정 파일 참고",
+                        "link": "/ko/affaan-m/everything-claude-code/appendix/config-reference/"
+                    },
+                    {
+                        "title": "규칙 참고",
+                        "desc": "8개 내장 규칙 세트 상세 설명",
+                        "link": "/ko/affaan-m/everything-claude-code/appendix/rules-reference/"
+                    },
+                    {
+                        "title": "Skills 참고",
+                        "desc": "11개의 skills 및 사용 시나리오",
+                        "link": "/ko/affaan-m/everything-claude-code/appendix/skills-reference/"
+                    },
+                    {
+                        "title": "스크립트 API",
+                        "desc": "Node.js 유틸리티 함수 및 hook 스크립트",
+                        "link": "/ko/affaan-m/everything-claude-code/appendix/scripts-api/"
+                    },
+                    {
+                        "title": "예제",
+                        "desc": "실제 세계 설정 예제",
+                        "link": "/ko/affaan-m/everything-claude-code/appendix/examples/"
+                    },
+                    {
+                        "title": "테스트 스위트",
+                        "desc": "테스트 스위트 실행 및 확장",
+                        "link": "/ko/affaan-m/everything-claude-code/appendix/test-suite/"
+                    },
+                    {
+                        "title": "기여 가이드",
+                        "desc": "agents, skills 및 hooks 기여 방법",
+                        "link": "/ko/affaan-m/everything-claude-code/appendix/contributing/"
+                    }
+                ]
+            },
+            {
+                "title": "변경 로그",
+                "items": [
+                    {
+                        "title": "버전 릴리스 노트",
+                        "desc": "버전 히스토리 및 주요 변경 사항",
+                        "link": "/ko/affaan-m/everything-claude-code/changelog/release-notes/"
+                    }
+                ]
+            }
+        ]
+    }
+}

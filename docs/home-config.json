@@ -180,6 +180,17 @@
                 }
             },
             {
+                "title": "OpenClaw",
+                "desc": "在你的设备上运行个人 AI 助手，统一接管所有通讯频道",
+                "link": "/zh/openclaw/openclaw/",
+                "repo": "https://github.com/openclaw/openclaw",
+                "meta": {
+                    "lessons": "19 课时",
+                    "stars": "--",
+                    "difficulty": "中级"
+                }
+            },
+            {
                 "title": "OpenSkills",
                 "desc": "通用技能加载器，兼容 Claude Code 格式",
                 "link": "/zh/numman-ali/openskills/",
@@ -191,25 +202,14 @@
                 }
             },
             {
-                "title": "Supermemory",
-                "desc": "记忆持久化插件，跨会话跨项目共享记忆",
-                "link": "/zh/supermemoryai/opencode-supermemory/",
-                "repo": "https://github.com/supermemoryai/opencode-supermemory",
+                "title": "superpowers",
+                "desc": "为 AI 编码代理提供完整的软件开发生命周期工作流，强制遵循 TDD、系统化调试、代码审查等最佳实践",
+                "link": "/zh/obra/superpowers/",
+                "repo": "https://github.com/obra/superpowers",
                 "meta": {
-                    "lessons": "13 课时",
-                    "stars": "545",
-                    "difficulty": "高级"
-                }
-            },
-            {
-                "title": "MyStatus",
-                "desc": "AI 账号额度一键查询，多平台整合",
-                "link": "/zh/vbgate/opencode-mystatus/",
-                "repo": "https://github.com/vbgate/opencode-mystatus",
-                "meta": {
-                    "lessons": "23 课时",
-                    "stars": "170",
-                    "difficulty": "入门"
+                    "lessons": "36 课时",
+                    "stars": "41030",
+                    "difficulty": "进阶"
                 }
             },
             {

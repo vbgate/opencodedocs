@@ -1,0 +1,185 @@
+{
+    "project": {
+        "name": "openskills",
+        "tagline": "Cargador de habilidades universal para agentes de codificación AI",
+        "description": "Permite que cualquier agente de codificación AI (Claude Code, Cursor, Windsurf, Aider, etc.) utilice habilidades en formato estándar SKILL.md. Unifica estándares, carga progresiva, soporte multi-agente.",
+        "github_url": "https://github.com/numman-ali/openskills"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "Comienza Rápido",
+            "link": "/es/numman-ali/openskills/start/quick-start/"
+        }
+    },
+    "features": {
+        "title": "¿Por qué OpenSkills?",
+        "subtitle": "Un formato de habilidades unificado, disponible en cualquier agente, eliminando el bloqueo de plataforma.",
+        "list": [
+            {
+                "title": "Totalmente Compatible con Claude Code",
+                "desc": "Mismo formato de prompts, mismo marketplace, misma estructura de carpetas, migración sin fricciones."
+            },
+            {
+                "title": "Soporte Multi-Agente",
+                "desc": "Admite Claude Code, Cursor, Windsurf, Aider, Codex y cualquier agente que pueda leer AGENTS.md."
+            },
+            {
+                "title": "Carga Progresiva",
+                "desc": "Carga habilidades bajo demanda, manteniendo el contexto del agente limpio y enfocado, evitando la contaminación de contexto."
+            },
+            {
+                "title": "Fuentes de Instalación Flexibles",
+                "desc": "Admite la instalación de habilidades desde GitHub, rutas locales y repositorios git privados, adaptándose a diversos escenarios de uso."
+            },
+            {
+                "title": "Modo Universal",
+                "desc": "Un conjunto de habilidades sirve a múltiples agentes, evitando conflictos con Claude Code, gestión de habilidades unificada."
+            },
+            {
+                "title": "Ejecución 100% Local",
+                "desc": "La herramienta CLI no requiere servidor, todas las operaciones se completan en el sistema de archivos local, garantizando la seguridad de la privacidad."
+            }
+        ]
+    },
+    "docs": {
+        "title": "Currículo del Curso",
+        "subtitle": "4 capítulos, 23 lecciones",
+        "sections": [
+            {
+                "title": "Guía de Inicio (Start)",
+                "items": [
+                    {
+                        "title": "Comienza Rápido",
+                        "desc": "Comienza con OpenSkills en 5 minutos, completa la instalación, instalación de habilidades y sincronización",
+                        "link": "/es/numman-ali/openskills/start/quick-start/"
+                    },
+                    {
+                        "title": "¿Qué es OpenSkills?",
+                        "desc": "Conoce los conceptos básicos, la relación con Claude Code, y por qué se necesita esta herramienta",
+                        "link": "/es/numman-ali/openskills/start/what-is-openskills/"
+                    },
+                    {
+                        "title": "Instalación de OpenSkills",
+                        "desc": "Instala OpenSkills a través de npm/npx, verifica el entorno de Node.js y Git",
+                        "link": "/es/numman-ali/openskills/start/installation/"
+                    },
+                    {
+                        "title": "Instala tu Primera Habilidad",
+                        "desc": "Instala habilidades desde el repositorio oficial de Anthropic, experimenta la selección interactiva",
+                        "link": "/es/numman-ali/openskills/start/first-skill/"
+                    },
+                    {
+                        "title": "Sincronizar Habilidades a AGENTS.md",
+                        "desc": "Genera el archivo AGENTS.md, para que los agentes AI conozcan las habilidades disponibles",
+                        "link": "/es/numman-ali/openskills/start/sync-to-agents/"
+                    },
+                    {
+                        "title": "Usar Habilidades",
+                        "desc": "Conoce cómo los agentes AI cargan el contenido de habilidades a través del comando read",
+                        "link": "/es/numman-ali/openskills/start/read-skills/"
+                    }
+                ]
+            },
+            {
+                "title": "Funciones de la Plataforma (Platforms)",
+                "items": [
+                    {
+                        "title": "Comandos Detallados",
+                        "desc": "Introducción completa a todos los comandos, parámetros y flags, proporciona una tabla de referencia rápida",
+                        "link": "/es/numman-ali/openskills/platforms/cli-commands/"
+                    },
+                    {
+                        "title": "Fuentes de Instalación Detalladas",
+                        "desc": "Explica en detalle las tres fuentes de instalación: GitHub, ruta local y repositorio privado",
+                        "link": "/es/numman-ali/openskills/platforms/install-sources/"
+                    },
+                    {
+                        "title": "Instalación Global vs Local del Proyecto",
+                        "desc": "Conoce la diferencia entre --global y la instalación por defecto, elige la ubicación de instalación adecuada",
+                        "link": "/es/numman-ali/openskills/platforms/global-vs-project/"
+                    },
+                    {
+                        "title": "Listar Habilidades Instaladas",
+                        "desc": "Usa el comando list para ver las habilidades instaladas, entiende las etiquetas de ubicación",
+                        "link": "/es/numman-ali/openskills/platforms/list-skills/"
+                    },
+                    {
+                        "title": "Actualizar Habilidades",
+                        "desc": "Usa el comando update para refrescar las habilidades instaladas, admite actualizaciones en lote",
+                        "link": "/es/numman-ali/openskills/platforms/update-skills/"
+                    },
+                    {
+                        "title": "Eliminar Habilidades",
+                        "desc": "Introduce dos métodos de eliminación: gestión interactiva manage y eliminación por script remove",
+                        "link": "/es/numman-ali/openskills/platforms/remove-skills/"
+                    }
+                ]
+            },
+            {
+                "title": "Funciones Avanzadas (Advanced)",
+                "items": [
+                    {
+                        "title": "Modo Universal",
+                        "desc": "Evita conflictos en entornos multi-agente, gestión de habilidades unificada",
+                        "link": "/es/numman-ali/openskills/advanced/universal-mode/"
+                    },
+                    {
+                        "title": "Ruta de Salida Personalizada",
+                        "desc": "Sincroniza habilidades a un archivo .md personalizado",
+                        "link": "/es/numman-ali/openskills/advanced/custom-output-path/"
+                    },
+                    {
+                        "title": "Soporte de Enlaces Simbólicos",
+                        "desc": "Actualización basada en git de habilidades a través de symlink y desarrollo local",
+                        "link": "/es/numman-ali/openskills/advanced/symlink-support/"
+                    },
+                    {
+                        "title": "Crear Habilidades Personalizadas",
+                        "desc": "Crea tus propias habilidades desde cero, entiende el formato SKILL.md",
+                        "link": "/es/numman-ali/openskills/advanced/create-skills/"
+                    },
+                    {
+                        "title": "Estructura de Habilidades Detallada",
+                        "desc": "Explicación detallada del formato SKILL.md y mejores prácticas de bundled resources",
+                        "link": "/es/numman-ali/openskills/advanced/skill-structure/"
+                    },
+                    {
+                        "title": "Integración CI/CD",
+                        "desc": "Uso de instalación de habilidades no interactiva y sincronización en entornos CI/CD",
+                        "link": "/es/numman-ali/openskills/advanced/ci-integration/"
+                    },
+                    {
+                        "title": "Notas de Seguridad",
+                        "desc": "Conoce características de protección contra path traversal, desreferenciación de symlinks, seguridad YAML",
+                        "link": "/es/numman-ali/openskills/advanced/security/"
+                    },
+                    {
+                        "title": "Mejores Prácticas",
+                        "desc": "Mejores prácticas para configuración de proyectos, gestión de habilidades, colaboración en equipo",
+                        "link": "/es/numman-ali/openskills/advanced/best-practices/"
+                    }
+                ]
+            },
+            {
+                "title": "Preguntas Frecuentes (FAQ)",
+                "items": [
+                    {
+                        "title": "Preguntas Frecuentes",
+                        "desc": "Respuestas a preguntas comunes sobre instalación, uso, configuración",
+                        "link": "/es/numman-ali/openskills/faq/faq/"
+                    },
+                    {
+                        "title": "Resolución de Problemas",
+                        "desc": "Soluciones para errores de ruta, fallas de clonación, SKILL.md inválido",
+                        "link": "/es/numman-ali/openskills/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "¿Por qué CLI en lugar de MCP?",
+                        "desc": "Comprende las razones de diseño detrás de la elección de CLI sobre MCP en OpenSkills",
+                        "link": "/es/numman-ali/openskills/faq/why-cli-not-mcp/"
+                    }
+                ]
+            }
+        ]
+    }
+}

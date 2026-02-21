@@ -282,7 +282,7 @@ OpenSkills propose deux méthodes de suppression de compétences :
 - ✅ **Avantage** : Intuitive, pas de suppression par erreur, prévisualisation possible
 - ⚠️ **Attention** : Aucune compétence n'est sélectionnée par défaut, nécessite une sélection manuelle
 
-### Suppression scriptée : `openskills remove <name>
+### Suppression scriptée : `openskills remove <name>`
 
 - 🎯 **Cas d'utilisation** : Scripts, automatisation, suppression précise
 - ✅ **Avantage** : Rapide, sans interaction

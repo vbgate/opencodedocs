@@ -1,0 +1,210 @@
+{
+    "project": {
+        "name": "Antigravity Auth",
+        "tagline": "Claude & Gemini 認證神器",
+        "description": "無需 API Key，透過 Google OAuth 憑證直接存取 Claude Opus 4.5、Sonnet 4.5 和 Gemini 3 Pro/Flash。支援多帳戶負載平衡與會話自動恢復。",
+        "github_url": "https://github.com/NoeFabris/opencode-antigravity-auth"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "快速開始",
+            "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/start/quick-install/"
+        }
+    },
+    "features": {
+        "title": "為什麼選擇 Antigravity Auth？",
+        "subtitle": "解決手動設定 API Key 的煩惱，自動化管理配額，專為高並行開發設計。",
+        "list": [
+            {
+                "title": "免 API Key",
+                "desc": "無需申請昂貴的 API Key，直接使用 Google 帳戶憑證，一鍵授權登入。"
+            },
+            {
+                "title": "多帳戶負載平衡",
+                "desc": "支援多達 10 個 Google 帳戶自動輪換，智慧分配請求，徹底告別速率限制。"
+            },
+            {
+                "title": "Thinking 模型支援",
+                "desc": "完美支援 Claude 和 Gemini 3 的思考模式，可設定 Budget，解鎖深度推理能力。"
+            },
+            {
+                "title": "會話自動恢復",
+                "desc": "工具呼叫失敗？會話中斷？外掛會自動重試並恢復上下文，無需人工干預。"
+            },
+            {
+                "title": "外掛相容性",
+                "desc": "與 oh-my-opencode、DCP 等主流外掛無縫整合。"
+            },
+            {
+                "title": "雙配額系統",
+                "desc": "最大限度利用 Google 提供的免費與付費配額池。"
+            }
+        ]
+    },
+    "docs": {
+        "title": "課程大綱",
+        "subtitle": "共 6 個章節，26 節課程",
+        "sections": [
+            {
+                "title": "入門指南 (Start)",
+                "items": [
+                    {
+                        "title": "什麼是 Antigravity Auth",
+                        "desc": "瞭解外掛的核心價值、適用場景和風險提示",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/start/what-is-antigravity-auth/"
+                    },
+                    {
+                        "title": "快速安裝",
+                        "desc": "5 分鐘快速完成外掛安裝和首次認證",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/start/quick-install/"
+                    },
+                    {
+                        "title": "首次認證登入",
+                        "desc": "理解 OAuth 2.0 PKCE 認證流程，完成首次登入",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/start/first-auth-login/"
+                    },
+                    {
+                        "title": "發起第一個請求",
+                        "desc": "發起第一個模型請求，驗證安裝成功",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/start/first-request/"
+                    }
+                ]
+            },
+            {
+                "title": "平台功能 (Platforms)",
+                "items": [
+                    {
+                        "title": "可用模型",
+                        "desc": "瞭解所有可用的模型及其變體設定",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/platforms/available-models/"
+                    },
+                    {
+                        "title": "Thinking 模型",
+                        "desc": "掌握 Claude 和 Gemini 3 Thinking 模型的設定和使用",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/platforms/thinking-models/"
+                    },
+                    {
+                        "title": "Google Search Grounding",
+                        "desc": "為 Gemini 模型啟用 Google Search，提升事實準確性",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/platforms/google-search-grounding/"
+                    },
+                    {
+                        "title": "雙配額系統",
+                        "desc": "理解 Antigravity 和 Gemini CLI 雙配額池的工作原理",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/platforms/dual-quota-system/"
+                    }
+                ]
+            },
+            {
+                "title": "進階功能 (Advanced)",
+                "items": [
+                    {
+                        "title": "多帳戶設定",
+                        "desc": "設定多個 Google 帳戶，實現配額池化和負載平衡",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/advanced/multi-account-setup/"
+                    },
+                    {
+                        "title": "帳戶選擇策略",
+                        "desc": "掌握 sticky、round-robin、hybrid 三種策略的最佳實踐",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/advanced/account-selection-strategies/"
+                    },
+                    {
+                        "title": "速率限制處理",
+                        "desc": "理解速率限制檢測、自動重試和帳戶切換機制",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/advanced/rate-limit-handling/"
+                    },
+                    {
+                        "title": "會話恢復",
+                        "desc": "瞭解會話恢復機制，自動處理工具呼叫失敗和中斷",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/advanced/session-recovery/"
+                    },
+                    {
+                        "title": "請求轉換",
+                        "desc": "深入理解請求轉換機制，相容不同 AI 模型的協定差異",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/advanced/request-transformation/"
+                    },
+                    {
+                        "title": "設定指南",
+                        "desc": "掌握所有設定選項，按需定製外掛行為",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/advanced/configuration-guide/"
+                    },
+                    {
+                        "title": "並行代理最佳化",
+                        "desc": "為並行代理場景最佳化帳戶分配，啟用 PID 偏移",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/advanced/parallel-agents/"
+                    },
+                    {
+                        "title": "除錯日誌",
+                        "desc": "啟用除錯日誌，排查問題和監控執行狀態",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/advanced/debug-logging/"
+                    }
+                ]
+            },
+            {
+                "title": "常見問題 (FAQ)",
+                "items": [
+                    {
+                        "title": "認證問題",
+                        "desc": "解決 OAuth 認證、權杖重新整理和帳戶相關常見問題",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/faq/common-auth-issues/"
+                    },
+                    {
+                        "title": "模型未找到",
+                        "desc": "解決模型未找到、400 錯誤等模型相關問題",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/faq/model-not-found/"
+                    },
+                    {
+                        "title": "外掛相容性",
+                        "desc": "解決與 oh-my-opencode、dcp 等外掛的相容性問題",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/faq/plugin-compatibility/"
+                    },
+                    {
+                        "title": "遷移指南",
+                        "desc": "在不同機器間遷移帳戶，處理版本升級",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/faq/migration-guide/"
+                    },
+                    {
+                        "title": "風險提示",
+                        "desc": "理解使用風險，避免帳戶被封禁",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/faq/tos-warning/"
+                    }
+                ]
+            },
+            {
+                "title": "附錄 (Appendix)",
+                "items": [
+                    {
+                        "title": "架構概覽",
+                        "desc": "瞭解外掛的模組架構和呼叫鏈路",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/appendix/architecture-overview/"
+                    },
+                    {
+                        "title": "API 規範",
+                        "desc": "Antigravity API 內部規範和技術細節",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/appendix/api-spec/"
+                    },
+                    {
+                        "title": "儲存格式",
+                        "desc": "瞭解帳戶儲存檔案格式和版本管理",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/appendix/storage-schema/"
+                    },
+                    {
+                        "title": "設定參考",
+                        "desc": "所有設定選項的完整參考手冊",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/appendix/all-config-options/"
+                    }
+                ]
+            },
+            {
+                "title": "更新日誌 (Changelog)",
+                "items": [
+                    {
+                        "title": "版本歷史",
+                        "desc": "版本歷史和重要變更",
+                        "link": "/zh-tw/NoeFabris/opencode-antigravity-auth/changelog/version-history/"
+                    }
+                ]
+            }
+        ]
+    }
+}

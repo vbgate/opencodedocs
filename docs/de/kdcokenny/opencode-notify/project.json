@@ -1,0 +1,138 @@
+{
+  "project": {
+    "name": "opencode-notify",
+    "tagline": "Lassen Sie OpenCode AI Sie sanft erinnern, wenn Sie fokussiert sind",
+    "description": "Verabschieden Sie sich von der Angst, ständig Fenster wechseln zu müssen. opencode-notify bietet native Desktop-Benachrichtigungen für Ihren OpenCode AI mit intelligenter Fokuserkennung, lautlosen Zeiten und Klick-zum-Fokus (macOS), damit Sie konzentriert arbeiten und nur dann präzise benachrichtigt werden, wenn die AI Sie braucht.",
+    "github_url": "https://github.com/kdcokenny/opencode-notify"
+  },
+  "hero": {
+    "primary_action": {
+      "text": "Schnellstart",
+      "link": "/de/kdcokenny/opencode-notify/start/quick-start/"
+    }
+  },
+  "features": {
+    "title": "Warum opencode-notify?",
+    "subtitle": "Fokussierte Arbeit, intelligente Erinnerungen",
+    "list": [
+      {
+        "title": "🔔 Native Desktop-Benachrichtigungen",
+        "desc": "Nutzt das native Benachrichtigungssystem des Betriebssystems (macOS Notification Center, Windows Toast, Linux notify-send) und integriert sich nahtlos in Ihren Workflow."
+      },
+      {
+        "title": "🧠 Intelligente Fokuserkennung",
+        "desc": "Erkennt automatisch den Fokus des Terminalfensters, um doppelte Benachrichtigungen zu vermeiden. Standardmäßig nur für übergeordnete Sitzungen, Filterung von Unterprozess-Rauschen, damit Sie sich auf die wirklich wichtigen Informationen konzentrieren können."
+      },
+      {
+        "title": "⏰ Lautlose Zeiten konfigurieren",
+        "desc": "Legen Sie lautlose Zeitfenster fest (z.B. 22:00-08:00), unterdrückt Benachrichtigungen nachts automatisch, unterstützt Zeiträume über Mitternacht hinweg, um Ihre Ruhezeiten zu schützen."
+      },
+      {
+        "title": "🖱️ Klick-zum-Fokus Terminal (macOS)",
+        "desc": "macOS-Benutzer können das Terminalfenster automatisch fokussieren, indem sie auf die Benachrichtigung klicken, sparen Zeit beim Wechseln zwischen Anwendungen und verdoppeln die Arbeitseffizienz."
+      },
+      {
+        "title": "🎨 Benutzerdefinierte Soundeffekte (macOS)",
+        "desc": "Legen Sie exklusive Soundeffekte für verschiedene Ereignistypen fest (Glass, Basso, Submarine usw.), identifizieren Sie Benachrichtigungstypen schnell durch den Klang."
+      },
+      {
+        "title": "💻 37+ Terminal-Unterstützung",
+        "desc": "Unterstützt Ghostty, iTerm2, WezTerm, VS Code integriertes Terminal und mehr als 37 Terminal-Emulatoren, erkennt Ihren Terminaltyp automatisch."
+      },
+      {
+        "title": "🔒 Lokal ausgeführt, null Datenschutzrisiko",
+        "desc": "Alle Benachrichtigungen werden lokal generiert, keine Daten werden in die Cloud hochgeladen, Ihre Arbeitsinhalte bleiben vollständig privat und sicher."
+      },
+      {
+        "title": "⚡ Leichtgewichtiges Plugin",
+        "desc": "Aufgebaut mit TypeScript + Bun, installierbar und sofort einsatzbereit, schlanke Konfigurationsdatei, keine komplexe Konfiguration erforderlich."
+      }
+    ]
+  },
+  "docs": {
+    "title": "Kursplan",
+    "subtitle": "4 Kapitel, 12 Lektionen",
+    "sections": [
+      {
+        "title": "Einstiegshilfe (Start)",
+        "items": [
+          {
+            "title": "Schnellstart",
+            "desc": "Hilft Benutzern, die Installation innerhalb von 5 Minuten abzuschließen und die erste Benachrichtigung zu erleben",
+            "link": "/de/kdcokenny/opencode-notify/start/quick-start/"
+          },
+          {
+            "title": "Funktionsweise",
+            "desc": "Erklärt die Kernfunktionen des Plugins, den intelligenten Filtermechanismus und die Benachrichtigungsauslösebedingungen",
+            "link": "/de/kdcokenny/opencode-notify/start/how-it-works/"
+          }
+        ]
+      },
+      {
+        "title": "Plattformfunktionen (Platforms)",
+        "items": [
+          {
+            "title": "macOS-Plattformfunktionen",
+            "desc": "Stellt die vollständigen Funktionen der macOS-Plattform vor (Fokuserkennung, Klick-zum-Fokus, benutzerdefinierte Soundeffekte)",
+            "link": "/de/kdcokenny/opencode-notify/platforms/macos/"
+          },
+          {
+            "title": "Windows-Plattformfunktionen",
+            "desc": "Stellt die Funktionen der Windows-Plattform vor (native Benachrichtigungen, Terminal-Erkennung)",
+            "link": "/de/kdcokenny/opencode-notify/platforms/windows/"
+          },
+          {
+            "title": "Linux-Plattformfunktionen",
+            "desc": "Stellt die Funktionen der Linux-Plattform vor (native Benachrichtigungen, Terminal-Erkennung)",
+            "link": "/de/kdcokenny/opencode-notify/platforms/linux/"
+          },
+          {
+            "title": "Unterstützte Terminals",
+            "desc": "Listet alle unterstützten Terminal-Emulatoren auf (37+ Terminals)",
+            "link": "/de/kdcokenny/opencode-notify/platforms/terminals/"
+          }
+        ]
+      },
+      {
+        "title": "Erweiterte Funktionen (Advanced)",
+        "items": [
+          {
+            "title": "Konfigurationsreferenz",
+            "desc": "Bietet eine vollständige Erläuterung aller Konfigurationsoptionen und Beispiele",
+            "link": "/de/kdcokenny/opencode-notify/advanced/config-reference/"
+          },
+          {
+            "title": "Lautlose Zeiten im Detail",
+            "desc": "Erklärt, wie lautlose Zeiten eingerichtet werden, um Störungen zu bestimmten Zeiten zu vermeiden",
+            "link": "/de/kdcokenny/opencode-notify/advanced/quiet-hours/"
+          },
+          {
+            "title": "Terminal-Erkennungsprinzip",
+            "desc": "Erklärt den Mechanismus der automatischen Terminal-Erkennung und wie der Terminaltyp manuell angegeben werden kann",
+            "link": "/de/kdcokenny/opencode-notify/advanced/terminal-detection/"
+          },
+          {
+            "title": "Erweiterte Anwendung",
+            "desc": "Bietet Konfigurationstipps und Best Practices",
+            "link": "/de/kdcokenny/opencode-notify/advanced/advanced-usage/"
+          }
+        ]
+      },
+      {
+        "title": "Häufige Fragen (FAQ)",
+        "items": [
+          {
+            "title": "Fehlerbehebung",
+            "desc": "Löst häufige Probleme (Benachrichtigungen werden nicht angezeigt, Fokuserkennung funktioniert nicht, Konfigurationsfehler usw.)",
+            "link": "/de/kdcokenny/opencode-notify/faq/troubleshooting/"
+          },
+          {
+            "title": "Häufige Fragen",
+            "desc": "Beantwortet häufige Benutzerfragen (Leistungsauswirkungen, Datenschutz, Plugin-Konflikte usw.)",
+            "link": "/de/kdcokenny/opencode-notify/faq/common-questions/"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,145 @@
+{
+    "project": {
+        "name": "opencode-agent-skills",
+        "tagline": "OpenCode AI Skills Dynamic Management Plugin",
+        "description": "OpenCode の AI Agent が再利用可能なスキルライブラリを動的に検出・管理するためのプラグインシステム。プロジェクト間・セッション間でのスキル再利用を実現し、意味的類似度に基づいて関連スキルを自動推薦します。",
+        "github_url": "https://github.com/joshuadavidthomas/opencode-agent-skills"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "クイックスタート",
+            "link": "/ja/joshuadavidthomas/opencode-agent-skills/start/installation/"
+        }
+    },
+    "features": {
+        "title": "なぜ OpenCode Agent Skills を選ぶのか？",
+        "subtitle": "OpenCode に動的なスキル検出・管理能力を提供し、プロジェクト間・セッション間でのスキル再利用を実現します。",
+        "list": [
+            {
+                "title": "動的スキル検出",
+                "desc": "プロジェクト、ユーザー、プラグインディレクトリからスキルを自動検出。6つの位置をスキャンし、優先度に基づいて最初に一致するスキルを返します。"
+            },
+            {
+                "title": "Claude Code 互換性",
+                "desc": "既存の Claude Code スキル・プラグイン形式をサポートし、移行コストを削減、既存リソースを再利用可能にします。"
+            },
+            {
+                "title": "意味マッチ推薦",
+                "desc": "HuggingFace embedding モデルを使用して類似度を計算し、ユーザーの入力に基づいて関連スキルを自動推薦します。"
+            },
+            {
+                "title": "コンテキスト注入",
+                "desc": "スキル内容を XML 形式でセッションコンテキストに注入し、AI がスキルガイダンスに従って高品質な結果を出力します。"
+            },
+            {
+                "title": "圧縮後復元",
+                "desc": "セッション圧縮後、スキルリストを自動的に再注入し、長時間セッション中もスキルを持続的に利用可能にします。"
+            },
+            {
+                "title": "スクリプト実行サポート",
+                "desc": "スキルディレクトリ内に実行可能スクリプトを含めることができ、スキルディレクトリのコンテキストで自動化タスクを実行します。"
+            }
+        ]
+    },
+    "docs": {
+        "title": "コース概要",
+        "subtitle": "全 4 チャプター、15 レッスン",
+        "sections": [
+            {
+                "title": "入門ガイド (Start)",
+                "items": [
+                    {
+                        "title": "OpenCode Agent Skills とは？",
+                        "desc": "プラグインのコアバリューと機能特性を理解する",
+                        "link": "/ja/joshuadavidthomas/opencode-agent-skills/start/what-is-opencode-agent-skills/"
+                    },
+                    {
+                        "title": "OpenCode Agent Skills のインストール",
+                        "desc": "プラグインをインストールし、動作を確認する",
+                        "link": "/ja/joshuadavidthomas/opencode-agent-skills/start/installation/"
+                    },
+                    {
+                        "title": "はじめてのスキル作成",
+                        "desc": "スキルディレクトリ構造と SKILL.md 形式規約を習得する",
+                        "link": "/ja/joshuadavidthomas/opencode-agent-skills/start/creating-your-first-skill/"
+                    }
+                ]
+            },
+            {
+                "title": "コア機能 (Platforms)",
+                "items": [
+                    {
+                        "title": "スキル検出メカニズムの詳細",
+                        "desc": "プラグインが複数の位置からスキルを自動検出する仕組みを理解する",
+                        "link": "/ja/joshuadavidthomas/opencode-agent-skills/platforms/skill-discovery-mechanism/"
+                    },
+                    {
+                        "title": "利用可能なスキルのクエリと一覧表示",
+                        "desc": "get_available_skills ツールとネームスペースの使用方法を習得する",
+                        "link": "/ja/joshuadavidthomas/opencode-agent-skills/platforms/listing-available-skills/"
+                    },
+                    {
+                        "title": "スキルをセッションコンテキストにロード",
+                        "desc": "use_skill ツールの使用と XML コンテンツ注入メカニズムを習得する",
+                        "link": "/ja/joshuadavidthomas/opencode-agent-skills/platforms/loading-skills-into-context/"
+                    },
+                    {
+                        "title": "自動スキル推薦：セマンティックマッチングの原理",
+                        "desc": "プラグインがセマンティック類似度に基づいて関連スキルを自動推薦する仕組みを理解する",
+                        "link": "/ja/joshuadavidthomas/opencode-agent-skills/platforms/automatic-skill-matching/"
+                    },
+                    {
+                        "title": "スキルスクリプトの実行",
+                        "desc": "run_skill_script ツールを使用してスキルディレクトリ下で自動化スクリプトを実行する方法を習得する",
+                        "link": "/ja/joshuadavidthomas/opencode-agent-skills/platforms/executing-skill-scripts/"
+                    },
+                    {
+                        "title": "スキルファイルの読み取り",
+                        "desc": "read_skill_file ツールを使用してスキルのドキュメントや設定などのサポートファイルにアクセスする",
+                        "link": "/ja/joshuadavidthomas/opencode-agent-skills/platforms/reading-skill-files/"
+                    }
+                ]
+            },
+            {
+                "title": "高度な機能 (Advanced)",
+                "items": [
+                    {
+                        "title": "Claude Code スキル互換性",
+                        "desc": "プラグインが Claude Code のスキルおよびプラグインシステムと互換性を持つ方法を理解する",
+                        "link": "/ja/joshuadavidthomas/opencode-agent-skills/advanced/claude-code-compatibility/"
+                    },
+                    {
+                        "title": "Superpowers ワークフロー統合",
+                        "desc": "Superpowers モードを設定・使用し、厳格なワークフローガイダンスを得る",
+                        "link": "/ja/joshuadavidthomas/opencode-agent-skills/advanced/superpowers-integration/"
+                    },
+                    {
+                        "title": "ネームスペースとスキル優先順位",
+                        "desc": "スキルのネームスペースシステムと検出優先順位ルールを理解する",
+                        "link": "/ja/joshuadavidthomas/opencode-agent-skills/advanced/namespaces-and-priority/"
+                    },
+                    {
+                        "title": "コンテキスト圧縮復元メカニズム",
+                        "desc": "スキルが長時間セッションで利用可能な状態を維持する方法を理解する",
+                        "link": "/ja/joshuadavidthomas/opencode-agent-skills/advanced/context-compaction-resilience/"
+                    }
+                ]
+            },
+            {
+                "title": "よくある質問 (FAQ)",
+                "items": [
+                    {
+                        "title": "よくある問題のトラブルシューティング",
+                        "desc": "プラグイン使用時によくある問題を解決する",
+                        "link": "/ja/joshuadavidthomas/opencode-agent-skills/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "セキュリティに関する説明",
+                        "desc": "プラグインのセキュリティメカニズムとベストプラクティスを理解する",
+                        "link": "/ja/joshuadavidthomas/opencode-agent-skills/faq/security-considerations/"
+                    }
+                ]
+            }
+        ]
+    }
+}

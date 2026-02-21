@@ -1,0 +1,138 @@
+{
+  "project": {
+    "name": "opencode-notify",
+    "tagline": "讓 OpenCode AI 在你專注時溫柔提醒你",
+    "description": "告別頻繁切換視窗的焦慮。opencode-notify 為你的 OpenCode AI 提供原生桌面通知，支援智慧焦點檢測、靜音時段和點擊聚焦（macOS），讓你專注工作，只在 AI 需要你時被精準喚醒。",
+    "github_url": "https://github.com/kdcokenny/opencode-notify"
+  },
+  "hero": {
+    "primary_action": {
+      "text": "快速開始",
+      "link": "/zh-tw/kdcokenny/opencode-notify/start/quick-start/"
+    }
+  },
+  "features": {
+    "title": "為何選擇 opencode-notify？",
+    "subtitle": "專注工作，智慧提醒",
+    "list": [
+      {
+        "title": "🔔 原生桌面通知",
+        "desc": "使用作業系統原生通知系統（macOS Notification Center、Windows Toast、Linux notify-send），無縫融入你的工作流。"
+      },
+      {
+        "title": "🧠 智慧焦點檢測",
+        "desc": "自動檢測終端機視窗焦點，避免重複通知。預設只通知父會話，過濾掉子任務的雜訊，讓你專注於真正重要的資訊。"
+      },
+      {
+        "title": "⏰ 靜音時段設定",
+        "desc": "設定靜音時段（如 22:00-08:00），夜間自動抑制通知，支援跨午夜時段，保障你的休息時間。"
+      },
+      {
+        "title": "🖱️ 點擊聚焦終端機（macOS）",
+        "desc": "macOS 使用者點擊通知即可自動聚焦終端機視窗，節省切換應用程式的時間，工作效率倍增。"
+      },
+      {
+        "title": "🎨 自訂音效（macOS）",
+        "desc": "為不同類型事件設定專屬音效（Glass、Basso、Submarine 等），透過聲音快速識別通知類型。"
+      },
+      {
+        "title": "💻 37+ 終端機支援",
+        "desc": "支援 Ghostty、iTerm2、WezTerm、VS Code 整合終端機等 37+ 終端機模擬器，自動識別你的終端機類型。"
+      },
+      {
+        "title": "🔒 本地執行，零隱私風險",
+        "desc": "所有通知在本地生成，無資料上傳雲端，你的工作內容完全私密安全。"
+      },
+      {
+        "title": "⚡ 輕量級外掛",
+        "desc": "基於 TypeScript + Bun 建構，安裝即用，設定檔簡潔，無需學習複雜設定。"
+      }
+    ]
+  },
+  "docs": {
+    "title": "課程大綱",
+    "subtitle": "共 4 個章節，12 節課程",
+    "sections": [
+      {
+        "title": "入門指南 (Start)",
+        "items": [
+          {
+            "title": "快速開始",
+            "desc": "幫助使用者在 5 分鐘內完成安裝並體驗第一個通知",
+            "link": "/zh-tw/kdcokenny/opencode-notify/start/quick-start/"
+          },
+          {
+            "title": "運作原理",
+            "desc": "解釋外掛的核心功能、智慧過濾機制和通知觸發條件",
+            "link": "/zh-tw/kdcokenny/opencode-notify/start/how-it-works/"
+          }
+        ]
+      },
+      {
+        "title": "平台功能 (Platforms)",
+        "items": [
+          {
+            "title": "macOS 平台特性",
+            "desc": "介紹 macOS 平台的完整功能（焦點檢測、點擊聚焦、自訂音效）",
+            "link": "/zh-tw/kdcokenny/opencode-notify/platforms/macos/"
+          },
+          {
+            "title": "Windows 平台特性",
+            "desc": "介紹 Windows 平台的功能（原生通知、終端機檢測）",
+            "link": "/zh-tw/kdcokenny/opencode-notify/platforms/windows/"
+          },
+          {
+            "title": "Linux 平台特性",
+            "desc": "介紹 Linux 平台的功能（原生通知、終端機檢測）",
+            "link": "/zh-tw/kdcokenny/opencode-notify/platforms/linux/"
+          },
+          {
+            "title": "支援的終端機",
+            "desc": "列出所有支援的終端機模擬器（37+ 終端機）",
+            "link": "/zh-tw/kdcokenny/opencode-notify/platforms/terminals/"
+          }
+        ]
+      },
+      {
+        "title": "進階功能 (Advanced)",
+        "items": [
+          {
+            "title": "設定參考",
+            "desc": "提供完整的設定項說明和範例",
+            "link": "/zh-tw/kdcokenny/opencode-notify/advanced/config-reference/"
+          },
+          {
+            "title": "靜音時段詳解",
+            "desc": "解釋如何設定靜音時段以避免特定時段干擾",
+            "link": "/zh-tw/kdcokenny/opencode-notify/advanced/quiet-hours/"
+          },
+          {
+            "title": "終端機檢測原理",
+            "desc": "解釋終端機自動檢測的機制和如何手動指定終端機類型",
+            "link": "/zh-tw/kdcokenny/opencode-notify/advanced/terminal-detection/"
+          },
+          {
+            "title": "進階用法",
+            "desc": "提供設定技巧和最佳實踐",
+            "link": "/zh-tw/kdcokenny/opencode-notify/advanced/advanced-usage/"
+          }
+        ]
+      },
+      {
+        "title": "常見問題 (FAQ)",
+        "items": [
+          {
+            "title": "故障排除",
+            "desc": "解決常見問題（通知不顯示、焦點檢測失效、設定錯誤等）",
+            "link": "/zh-tw/kdcokenny/opencode-notify/faq/troubleshooting/"
+          },
+          {
+            "title": "常見問題",
+            "desc": "回答使用者常見疑問（效能影響、隱私安全、外掛衝突等）",
+            "link": "/zh-tw/kdcokenny/opencode-notify/faq/common-questions/"
+          }
+        ]
+      }
+    ]
+  }
+}

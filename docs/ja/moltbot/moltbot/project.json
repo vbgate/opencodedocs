@@ -1,0 +1,234 @@
+{
+  "project": {
+    "name": "Moltbot",
+    "tagline": "あなたのプライベート AI アシスタント、どこでも使える（旧 Clawdbot）",
+    "description": "自分のデバイス上で AI アシスタントを実行し、WhatsApp、Telegram、Slack など 12 以上のチャンネルとシームレスに連携。ブラウザ自動化、マルチデバイス協調、音声インタラクションをサポート。データは完全にローカルで、プライバシーに安心。",
+    "github_url": "https://github.com/moltbot/moltbot"
+  },
+  "hero": {
+    "primary_action": {
+      "text": "クイックスタート",
+      "link": "/ja/moltbot/moltbot/start/getting-started/"
+    }
+  },
+  "features": {
+    "title": "なぜ Moltbot を選ぶのか？",
+    "subtitle": "機能が充実し、プライバシーが安全で、展開しやすいパーソナル AI アシスタント",
+    "list": [
+      {
+        "title": "🌐 マルチチャンネル統合",
+        "desc": "一つの設定で WhatsApp、Telegram、Slack など 12 以上のメッセージングプラットフォームを同時に管理"
+      },
+      {
+        "title": "🔒 ローカルファースト",
+        "desc": "すべてのデータと AI ランタイムはあなたのデバイス上で、プライバシー漏洩ゼロ"
+      },
+      {
+        "title": "🛠️ 強力なツールチェーン",
+        "desc": "ブラウザ自動化、スケジュールタスク、Webhook などの拡張機能"
+      },
+      {
+        "title": "📱 マルチデバイス協調",
+        "desc": "macOS/iOS/Android ノードを接続してローカル操作を実行"
+      },
+      {
+        "title": "🎤 音声インタラクション",
+        "desc": "Voice Wake、Talk Mode、および複数の TTS エンジンをサポート"
+      },
+      {
+        "title": "🧠 メモリーシステム",
+        "desc": "ベクトルストレージとセマンティック検索により、AI はすべての会話を覚える"
+      },
+      {
+        "title": "🔐 セキュリティ隔離",
+        "desc": "Sandbox 隔離、DM ペアリング保護、ツール権限制御"
+      }
+    ]
+  },
+  "docs": {
+    "title": "カリキュラム",
+    "subtitle": "全 4 章、32 レッスン",
+    "sections": [
+      {
+        "title": "入門ガイド (Start)",
+        "items": [
+          {
+            "title": "クイックスタート",
+            "desc": "初回インストール、設定、Moltbot の起動をガイド",
+            "link": "/ja/moltbot/moltbot/start/getting-started/"
+          },
+          {
+            "title": "ウィザード形式設定",
+            "desc": "インタラクティブウィザードで Gateway、チャンネル、モデル設定を完了",
+            "link": "/ja/moltbot/moltbot/start/onboarding-wizard/"
+          },
+          {
+            "title": "Gateway の起動",
+            "desc": "Gateway デーモンの起動方法、各モード（dev/production）の違いを学習",
+            "link": "/ja/moltbot/moltbot/start/gateway-startup/"
+          },
+          {
+            "title": "初回メッセージの送信",
+            "desc": "WebChat または設定済みチャンネルから AI アシスタントに初回メッセージを送信",
+            "link": "/ja/moltbot/moltbot/start/first-message/"
+          },
+          {
+            "title": "DM ペアリングとアクセス制御",
+            "desc": "デフォルトの DM ペアリング保護メカニズムと、未知の送信者を承認する方法を理解",
+            "link": "/ja/moltbot/moltbot/start/pairing-approval/"
+          }
+        ]
+      },
+      {
+        "title": "プラットフォーム機能 (Platforms)",
+        "items": [
+          {
+            "title": "マルチチャンネルシステム概要",
+            "desc": "Moltbot がサポートするすべての通信チャンネルとその特徴を理解",
+            "link": "/ja/moltbot/moltbot/platforms/channels-overview/"
+          },
+          {
+            "title": "WhatsApp チャンネル",
+            "desc": "WhatsApp チャンネルの設定と使用（Baileys ベース）",
+            "link": "/ja/moltbot/moltbot/platforms/whatsapp/"
+          },
+          {
+            "title": "Telegram チャンネル",
+            "desc": "Telegram チャンネルの設定と使用（grammY Bot API ベース）",
+            "link": "/ja/moltbot/moltbot/platforms/telegram/"
+          },
+          {
+            "title": "Slack チャンネル",
+            "desc": "Slack チャンネルの設定と使用（Bolt ベース）",
+            "link": "/ja/moltbot/moltbot/platforms/slack/"
+          },
+          {
+            "title": "Discord チャンネル",
+            "desc": "Discord チャンネルの設定と使用（discord.js ベース）",
+            "link": "/ja/moltbot/moltbot/platforms/discord/"
+          },
+          {
+            "title": "Google Chat チャンネル",
+            "desc": "Google Chat チャンネルの設定と使用",
+            "link": "/ja/moltbot/moltbot/platforms/googlechat/"
+          },
+          {
+            "title": "Signal チャンネル",
+            "desc": "Signal チャンネルの設定と使用（signal-cli ベース）",
+            "link": "/ja/moltbot/moltbot/platforms/signal/"
+          },
+          {
+            "title": "iMessage チャンネル",
+            "desc": "iMessage チャンネルの設定と使用（macOS 専用）",
+            "link": "/ja/moltbot/moltbot/platforms/imessage/"
+          },
+          {
+            "title": "LINE チャンネル",
+            "desc": "LINE チャンネルの設定と使用（Messaging API）",
+            "link": "/ja/moltbot/moltbot/platforms/line/"
+          },
+          {
+            "title": "WebChat インターフェース",
+            "desc": "組み込みの WebChat インターフェースを使用して AI アシスタントと対話",
+            "link": "/ja/moltbot/moltbot/platforms/webchat/"
+          },
+          {
+            "title": "macOS アプリ",
+            "desc": "macOS メニューバーアプリの機能と Voice Wake/Talk Mode について理解",
+            "link": "/ja/moltbot/moltbot/platforms/macos-app/"
+          },
+          {
+            "title": "iOS ノード",
+            "desc": "iOS ノードを設定してデバイスローカル操作を実行（Camera、Canvas、Voice Wake）",
+            "link": "/ja/moltbot/moltbot/platforms/ios-node/"
+          },
+          {
+            "title": "Android ノード",
+            "desc": "Android ノードを設定してデバイスローカル操作を実行（Camera、Canvas）",
+            "link": "/ja/moltbot/moltbot/platforms/android-node/"
+          }
+        ]
+      },
+      {
+        "title": "高度な機能 (Advanced)",
+        "items": [
+          {
+            "title": "AI モデルと認証設定",
+            "desc": "AI モデルプロバイダー（Anthropic、OpenAI、OpenRouter、Ollama など）と認証方法を設定",
+            "link": "/ja/moltbot/moltbot/advanced/models-auth/"
+          },
+          {
+            "title": "セッション管理とマルチ Agent",
+            "desc": "セッションモデル、セッション分離、サブ Agent 協調、コンテキスト圧縮を学習",
+            "link": "/ja/moltbot/moltbot/advanced/session-management/"
+          },
+          {
+            "title": "ブラウザ自動化ツール",
+            "desc": "ブラウザツールを使用してウェブ自動化、スクリーンショット、フォーム操作などを実行",
+            "link": "/ja/moltbot/moltbot/advanced/tools-browser/"
+          },
+          {
+            "title": "コマンド実行ツールと承認",
+            "desc": "exec ツールを設定・使用し、セキュリティ承認メカニズムを理解",
+            "link": "/ja/moltbot/moltbot/advanced/tools-exec/"
+          },
+          {
+            "title": "ウェブ検索とクロールツール",
+            "desc": "web_search と web_fetch ツールを使用してウェブ検索とコンテンツクロールを実行",
+            "link": "/ja/moltbot/moltbot/advanced/tools-web/"
+          },
+          {
+            "title": "Canvas 可視化インターフェースと A2UI",
+            "desc": "Canvas A2UI プッシュメカニズム、可視化インターフェース操作を理解",
+            "link": "/ja/moltbot/moltbot/advanced/canvas/"
+          },
+          {
+            "title": "音声ウェイクアップとテキスト読み上げ",
+            "desc": "Voice Wake、Talk Mode、TTS プロバイダーを設定",
+            "link": "/ja/moltbot/moltbot/advanced/voice-tts/"
+          },
+          {
+            "title": "メモリーシステムとベクトル検索",
+            "desc": "メモリーシステム（SQLite-vec、FTS5、ハイブリッド検索）を設定・使用",
+            "link": "/ja/moltbot/moltbot/advanced/memory-system/"
+          },
+          {
+            "title": "Cron 定期タスクと Webhook",
+            "desc": "定期タスク、Webhook トリガー、Gmail Pub/Sub を設定",
+            "link": "/ja/moltbot/moltbot/advanced/cron-automation/"
+          },
+          {
+            "title": "スキルプラットフォームと MoltHub",
+            "desc": "スキルシステム、Bundled/Managed/Workspace スキル、MoltHub 統合を理解",
+            "link": "/ja/moltbot/moltbot/advanced/skills-platform/"
+          },
+          {
+            "title": "セキュリティとサンドボックス隔離",
+            "desc": "セキュリティモデル、ツール権限制御、Sandbox 隔離、Docker 化を理解",
+            "link": "/ja/moltbot/moltbot/advanced/security-sandbox/"
+          }
+        ]
+      },
+      {
+        "title": "よくある質問 (FAQ)",
+        "items": [
+          {
+            "title": "トラブルシューティング",
+            "desc": "よくある問題を解決：Gateway 起動失敗、チャンネル接続問題、認証エラー、ツール呼び出し失敗",
+            "link": "/ja/moltbot/moltbot/faq/troubleshooting/"
+          },
+          {
+            "title": "CLI コマンドリファレンス",
+            "desc": "CLI コマンドの完全なリストと使い方の説明",
+            "link": "/ja/moltbot/moltbot/faq/cli-commands/"
+          },
+          {
+            "title": "パフォーマンス最適化",
+            "desc": "Gateway パフォーマンスの最適化、レイテンシー削減、メモリ管理、並行制御",
+            "link": "/ja/moltbot/moltbot/faq/performance-optimization/"
+          }
+        ]
+      }
+    ]
+  }
+}

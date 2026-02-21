@@ -1,0 +1,145 @@
+{
+    "project": {
+        "name": "opencode-agent-skills",
+        "tagline": "OpenCode AI 技能動態管理外掛",
+        "description": "為 OpenCode 提供動態技能發現和管理能力的外掛系統，支援 AI Agent 載入和使用可重複使用的技能庫。實現跨專案、跨會話的技能重複使用，基於語義相似度自動推薦相關技能。",
+        "github_url": "https://github.com/joshuadavidthomas/opencode-agent-skills"
+    },
+    "hero": {
+        "primary_action": {
+            "text": "快速開始",
+            "link": "/zh-tw/joshuadavidthomas/opencode-agent-skills/start/installation/"
+        }
+    },
+    "features": {
+        "title": "為什麼選擇 OpenCode Agent Skills？",
+        "subtitle": "為 OpenCode 提供動態技能發現和管理能力，實現跨專案、跨會話的技能重複使用。",
+        "list": [
+            {
+                "title": "動態技能發現",
+                "desc": "自動從專案、使用者、外掛目錄發現技能，支援 6 個位置掃描，按優先順序返回首個匹配技能。"
+            },
+            {
+                "title": "Claude Code 相容",
+                "desc": "支援現有 Claude Code 技能和外掛格式，降低遷移成本，重複使用現有資源。"
+            },
+            {
+                "title": "語義匹配推薦",
+                "desc": "使用 HuggingFace embedding 模型計算相似度，基於使用者輸入自動推薦相關技能。"
+            },
+            {
+                "title": "上下文注入",
+                "desc": "技能內容以 XML 格式注入到會話上下文，AI 遵循技能指導輸出高品質結果。"
+            },
+            {
+                "title": "壓縮後恢復",
+                "desc": "會話壓縮後自動重新注入技能清單，長時間會話中保持技能持久可用。"
+            },
+            {
+                "title": "指令碼執行支援",
+                "desc": "技能目錄下可包含可執行指令碼，在技能目錄上下文中執行自動化任務。"
+            }
+        ]
+    },
+    "docs": {
+        "title": "課程大綱",
+        "subtitle": "共 4 個章節，15 節課程",
+        "sections": [
+            {
+                "title": "入門指南 (Start)",
+                "items": [
+                    {
+                        "title": "什麼是 OpenCode Agent Skills？",
+                        "desc": "了解外掛的核心價值和功能特性",
+                        "link": "/zh-tw/joshuadavidthomas/opencode-agent-skills/start/what-is-opencode-agent-skills/"
+                    },
+                    {
+                        "title": "安裝 OpenCode Agent Skills",
+                        "desc": "完成外掛安裝並驗證執行",
+                        "link": "/zh-tw/joshuadavidthomas/opencode-agent-skills/start/installation/"
+                    },
+                    {
+                        "title": "建立你的第一個技能",
+                        "desc": "掌握技能目錄結構和 SKILL.md 格式規範",
+                        "link": "/zh-tw/joshuadavidthomas/opencode-agent-skills/start/creating-your-first-skill/"
+                    }
+                ]
+            },
+            {
+                "title": "核心功能 (Platforms)",
+                "items": [
+                    {
+                        "title": "技能發現機制詳解",
+                        "desc": "理解外掛如何從多個位置自動發現技能",
+                        "link": "/zh-tw/joshuadavidthomas/opencode-agent-skills/platforms/skill-discovery-mechanism/"
+                    },
+                    {
+                        "title": "查詢和列出可用技能",
+                        "desc": "學會使用 get_available_skills 工具及命名空間",
+                        "link": "/zh-tw/joshuadavidthomas/opencode-agent-skills/platforms/listing-available-skills/"
+                    },
+                    {
+                        "title": "載入技能到會話上下文",
+                        "desc": "掌握 use_skill 工具的使用和 XML 內容注入機制",
+                        "link": "/zh-tw/joshuadavidthomas/opencode-agent-skills/platforms/loading-skills-into-context/"
+                    },
+                    {
+                        "title": "自動技能推薦：語義匹配原理",
+                        "desc": "理解外掛如何基於語義相似度自動推薦相關技能",
+                        "link": "/zh-tw/joshuadavidthomas/opencode-agent-skills/platforms/automatic-skill-matching/"
+                    },
+                    {
+                        "title": "執行技能指令碼",
+                        "desc": "學會使用 run_skill_script 工具在技能目錄下執行自動化指令碼",
+                        "link": "/zh-tw/joshuadavidthomas/opencode-agent-skills/platforms/executing-skill-scripts/"
+                    },
+                    {
+                        "title": "讀取技能檔案",
+                        "desc": "使用 read_skill_file 工具訪問技能的文件、配置等支援檔案",
+                        "link": "/zh-tw/joshuadavidthomas/opencode-agent-skills/platforms/reading-skill-files/"
+                    }
+                ]
+            },
+            {
+                "title": "進階功能 (Advanced)",
+                "items": [
+                    {
+                        "title": "Claude Code 技能相容性",
+                        "desc": "了解外掛如何相容 Claude Code 的技能和外掛系統",
+                        "link": "/zh-tw/joshuadavidthomas/opencode-agent-skills/advanced/claude-code-compatibility/"
+                    },
+                    {
+                        "title": "Superpowers 工作流整合",
+                        "desc": "配置和使用 Superpowers 模式，獲得嚴格的工作流指導",
+                        "link": "/zh-tw/joshuadavidthomas/opencode-agent-skills/advanced/superpowers-integration/"
+                    },
+                    {
+                        "title": "命名空間與技能優先順序",
+                        "desc": "理解技能的命名空間系統和發現優先順序規則",
+                        "link": "/zh-tw/joshuadavidthomas/opencode-agent-skills/advanced/namespaces-and-priority/"
+                    },
+                    {
+                        "title": "上下文壓縮恢復機制",
+                        "desc": "了解技能如何在長會話中保持可用性",
+                        "link": "/zh-tw/joshuadavidthomas/opencode-agent-skills/advanced/context-compaction-resilience/"
+                    }
+                ]
+            },
+            {
+                "title": "常見問題 (FAQ)",
+                "items": [
+                    {
+                        "title": "常見問題排查",
+                        "desc": "解決使用外掛時遇到的常見問題",
+                        "link": "/zh-tw/joshuadavidthomas/opencode-agent-skills/faq/troubleshooting/"
+                    },
+                    {
+                        "title": "安全性說明",
+                        "desc": "了解外掛的安全機制和最佳實踐",
+                        "link": "/zh-tw/joshuadavidthomas/opencode-agent-skills/faq/security-considerations/"
+                    }
+                ]
+            }
+        ]
+    }
+}

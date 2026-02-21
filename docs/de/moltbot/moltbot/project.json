@@ -1,0 +1,234 @@
+{
+  "project": {
+    "name": "Moltbot",
+    "tagline": "Dein privater KI-Assistent, überall verfügbar (ehemals Clawdbot)",
+    "description": "Betreibe deinen KI-Assistenten auf eigenen Geräten, nahtlos verbunden mit WhatsApp, Telegram, Slack und 12+ weiteren Kanälen. Unterstützt Browser-Automatisierung, Multi-Geräte-Synchronisation, Sprachinteraktion - alle Daten bleiben lokal, volle Privatsphäre.",
+    "github_url": "https://github.com/moltbot/moltbot"
+  },
+  "hero": {
+    "primary_action": {
+      "text": "Schnellstart",
+      "link": "/de/moltbot/moltbot/start/getting-started/"
+    }
+  },
+  "features": {
+    "title": "Warum Moltbot?",
+    "subtitle": "Leistungsstarker, datenschutzfreundlicher und einfach zu installierender persönlicher KI-Assistent",
+    "list": [
+      {
+        "title": "Multi-Kanal-Integration",
+        "desc": "Eine Konfiguration für WhatsApp, Telegram, Slack und 12+ weitere Messaging-Plattformen"
+      },
+      {
+        "title": "Local-First",
+        "desc": "Alle Daten und die KI-Laufzeit verbleiben auf deinem Gerät – keine Datenschutzrisiken"
+      },
+      {
+        "title": "Leistungsstarke Tools",
+        "desc": "Browser-Automatisierung, Cron-Jobs, Webhooks u. v. m."
+      },
+      {
+        "title": "Multi-Geräte-Sync",
+        "desc": "macOS/iOS/Android-Knoten können lokale Operationen ausführen"
+      },
+      {
+        "title": "Sprachinteraktion",
+        "desc": "Unterstützt Voice Wake, Talk Mode und verschiedene TTS-Engines"
+      },
+      {
+        "title": "Gedächtnissystem",
+        "desc": "Vektorspeicherung und semantische Suche - die KI erinnert sich an alle Gespräche"
+      },
+      {
+        "title": "Sicherheitsisolierung",
+        "desc": "Sandbox-Isolierung, DM-Pairing-Schutz, Tool-Berechtigungskontrolle"
+      }
+    ]
+  },
+  "docs": {
+    "title": "Lehrplan",
+    "subtitle": "4 Kapitel mit 32 Lektionen",
+    "sections": [
+      {
+        "title": "Erste Schritte (Start)",
+        "items": [
+          {
+            "title": "Schnellstart",
+            "desc": "Führt Benutzer durch die erste Installation, Konfiguration und den Start von Moltbot",
+            "link": "/de/moltbot/moltbot/start/getting-started/"
+          },
+          {
+            "title": "Assistenten-Konfiguration",
+            "desc": "Gateway-, Kanal- und Modellkonfiguration über interaktiven Assistenten",
+            "link": "/de/moltbot/moltbot/start/onboarding-wizard/"
+          },
+          {
+            "title": "Gateway starten",
+            "desc": "Lernen Sie, wie Sie den Gateway-Daemon starten, verschiedene Modi (dev/production)",
+            "link": "/de/moltbot/moltbot/start/gateway-startup/"
+          },
+          {
+            "title": "Erste Nachricht senden",
+            "desc": "Senden Sie Ihre erste Nachricht an den KI-Assistenten über WebChat oder konfigurierte Kanäle",
+            "link": "/de/moltbot/moltbot/start/first-message/"
+          },
+          {
+            "title": "DM-Pairing und Zugriffskontrolle",
+            "desc": "Verständnis des standardmäßigen DM-Pairing-Schutzes und Freigabe unbekannter Absender",
+            "link": "/de/moltbot/moltbot/start/pairing-approval/"
+          }
+        ]
+      },
+      {
+        "title": "Plattformfunktionen (Platforms)",
+        "items": [
+          {
+            "title": "Multi-Kanal-Systemübersicht",
+            "desc": "Alle von Moltbot unterstützten Kommunikationskanäle und ihre Eigenschaften",
+            "link": "/de/moltbot/moltbot/platforms/channels-overview/"
+          },
+          {
+            "title": "WhatsApp-Kanal",
+            "desc": "Konfiguration und Nutzung des WhatsApp-Kanals (basierend auf Baileys)",
+            "link": "/de/moltbot/moltbot/platforms/whatsapp/"
+          },
+          {
+            "title": "Telegram-Kanal",
+            "desc": "Konfiguration und Nutzung des Telegram-Kanals (basierend auf grammY Bot API)",
+            "link": "/de/moltbot/moltbot/platforms/telegram/"
+          },
+          {
+            "title": "Slack-Kanal",
+            "desc": "Konfiguration und Nutzung des Slack-Kanals (basierend auf Bolt)",
+            "link": "/de/moltbot/moltbot/platforms/slack/"
+          },
+          {
+            "title": "Discord-Kanal",
+            "desc": "Konfiguration und Nutzung des Discord-Kanals (basierend auf discord.js)",
+            "link": "/de/moltbot/moltbot/platforms/discord/"
+          },
+          {
+            "title": "Google Chat-Kanal",
+            "desc": "Konfiguration und Nutzung des Google Chat-Kanals",
+            "link": "/de/moltbot/moltbot/platforms/googlechat/"
+          },
+          {
+            "title": "Signal-Kanal",
+            "desc": "Konfiguration und Nutzung des Signal-Kanals (basierend auf signal-cli)",
+            "link": "/de/moltbot/moltbot/platforms/signal/"
+          },
+          {
+            "title": "iMessage-Kanal",
+            "desc": "Konfiguration und Nutzung des iMessage-Kanals (nur macOS)",
+            "link": "/de/moltbot/moltbot/platforms/imessage/"
+          },
+          {
+            "title": "LINE-Kanal",
+            "desc": "Konfiguration und Nutzung des LINE-Kanals (Messaging API)",
+            "link": "/de/moltbot/moltbot/platforms/line/"
+          },
+          {
+            "title": "WebChat-Oberfläche",
+            "desc": "Nutzung der integrierten WebChat-Oberfläche zur Interaktion mit dem KI-Assistenten",
+            "link": "/de/moltbot/moltbot/platforms/webchat/"
+          },
+          {
+            "title": "macOS-App",
+            "desc": "Funktionen der macOS-Menüleisten-App und Voice Wake/Talk Mode",
+            "link": "/de/moltbot/moltbot/platforms/macos-app/"
+          },
+          {
+            "title": "iOS-Knoten",
+            "desc": "Konfiguration von iOS-Knoten für lokale Geräteoperationen (Camera, Canvas, Voice Wake)",
+            "link": "/de/moltbot/moltbot/platforms/ios-node/"
+          },
+          {
+            "title": "Android-Knoten",
+            "desc": "Konfiguration von Android-Knoten für lokale Geräteoperationen (Camera, Canvas)",
+            "link": "/de/moltbot/moltbot/platforms/android-node/"
+          }
+        ]
+      },
+      {
+        "title": "Erweiterte Funktionen (Advanced)",
+        "items": [
+          {
+            "title": "KI-Modell- und Authentifizierungskonfiguration",
+            "desc": "Konfiguration von KI-Modellanbietern (Anthropic, OpenAI, OpenRouter, Ollama usw.) und Authentifizierung",
+            "link": "/de/moltbot/moltbot/advanced/models-auth/"
+          },
+          {
+            "title": "Sitzungsverwaltung und Multi-Agent",
+            "desc": "Sitzungsmodell, Sitzungsisolierung, Sub-Agent-Zusammenarbeit, Kontextkomprimierung",
+            "link": "/de/moltbot/moltbot/advanced/session-management/"
+          },
+          {
+            "title": "Browser-Automatisierungstools",
+            "desc": "Browser-Tools für Web-Automatisierung, Screenshots, Formularoperationen usw.",
+            "link": "/de/moltbot/moltbot/advanced/tools-browser/"
+          },
+          {
+            "title": "Befehlsausführung und Genehmigung",
+            "desc": "Konfiguration und Nutzung des exec-Tools, Sicherheitsgenehmigungsmechanismus",
+            "link": "/de/moltbot/moltbot/advanced/tools-exec/"
+          },
+          {
+            "title": "Web-Suche und Scraping-Tools",
+            "desc": "Nutzung von web_search und web_fetch für Websuche und Inhaltsextraktion",
+            "link": "/de/moltbot/moltbot/advanced/tools-web/"
+          },
+          {
+            "title": "Canvas-Visualisierung und A2UI",
+            "desc": "Canvas A2UI Push-Mechanismus, visuelle Oberflächenoperationen",
+            "link": "/de/moltbot/moltbot/advanced/canvas/"
+          },
+          {
+            "title": "Sprachweckruf und Text-to-Speech",
+            "desc": "Konfiguration von Voice Wake, Talk Mode und TTS-Anbietern",
+            "link": "/de/moltbot/moltbot/advanced/voice-tts/"
+          },
+          {
+            "title": "Gedächtnissystem und Vektorsuche",
+            "desc": "Konfiguration und Nutzung des Gedächtnissystems (SQLite-vec, FTS5, Hybridsuche)",
+            "link": "/de/moltbot/moltbot/advanced/memory-system/"
+          },
+          {
+            "title": "Cron-Jobs und Webhooks",
+            "desc": "Konfiguration von Cron-Jobs, Webhook-Triggern, Gmail Pub/Sub",
+            "link": "/de/moltbot/moltbot/advanced/cron-automation/"
+          },
+          {
+            "title": "Skill-Plattform und MoltHub",
+            "desc": "Skill-System, Bundled/Managed/Workspace Skills, MoltHub-Integration",
+            "link": "/de/moltbot/moltbot/advanced/skills-platform/"
+          },
+          {
+            "title": "Sicherheit und Sandbox-Isolierung",
+            "desc": "Sicherheitsmodell, Tool-Berechtigungskontrolle, Sandbox-Isolierung, Docker-Unterstützung",
+            "link": "/de/moltbot/moltbot/advanced/security-sandbox/"
+          }
+        ]
+      },
+      {
+        "title": "Häufig gestellte Fragen (FAQ)",
+        "items": [
+          {
+            "title": "Fehlerbehebung",
+            "desc": "Lösung häufiger Probleme: Gateway-Startfehler, Kanalverbindungsprobleme, Authentifizierungsfehler, Tool-Aufruffehler",
+            "link": "/de/moltbot/moltbot/faq/troubleshooting/"
+          },
+          {
+            "title": "CLI-Befehlsreferenz",
+            "desc": "Vollständige CLI-Befehlsliste und Nutzungsanleitung",
+            "link": "/de/moltbot/moltbot/faq/cli-commands/"
+          },
+          {
+            "title": "Leistungsoptimierung",
+            "desc": "Gateway-Leistungsoptimierung, Latenzreduzierung, Speicherverwaltung, Parallelitätskontrolle",
+            "link": "/de/moltbot/moltbot/faq/performance-optimization/"
+          }
+        ]
+      }
+    ]
+  }
+}

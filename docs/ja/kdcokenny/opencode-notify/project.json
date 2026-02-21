@@ -1,0 +1,138 @@
+{
+  "project": {
+    "name": "opencode-notify",
+    "tagline": "OpenCode AI が作業中に優しく通知してくれます",
+    "description": "ウィンドウの頻繁な切り替えによるストレスを解消しましょう。opencode-notify は、OpenCode AI にネイティブのデスクトップ通知を提供します。インテリジェントなフォーカス検出、サイレント時間帯の設定、クリック時のフォーカス（macOS）をサポートし、作業に集中し、AI が必要なときだけ確実に通知を受け取れます。",
+    "github_url": "https://github.com/kdcokenny/opencode-notify"
+  },
+  "hero": {
+    "primary_action": {
+      "text": "クイックスタート",
+      "link": "/ja/kdcokenny/opencode-notify/start/quick-start/"
+    }
+  },
+  "features": {
+    "title": "opencode-notify が選ばれる理由",
+    "subtitle": "作業に集中、スマートな通知",
+    "list": [
+      {
+        "title": "🔔 ネイティブデスクトップ通知",
+        "desc": "OSのネイティブ通知システム（macOS Notification Center、Windows Toast、Linux notify-send）を使用し、ワークフローにシームレスに統合されます。"
+      },
+      {
+        "title": "🧠 インテリジェントなフォーカス検出",
+        "desc": "ターミナルウィンドウのフォーカスを自動検出し、重複通知を回避します。デフォルトでは親セッションにのみ通知し、サブタスクのノイズをフィルタリングして、本当に重要な情報に集中できます。"
+      },
+      {
+        "title": "⏰ サイレント時間帯の設定",
+        "desc": "サイレント時間帯（22:00-08:00 など）を設定すると、夜間は通知を自動的に抑制します。日をまたぐ時間帯にも対応し、休息時間を確保します。"
+      },
+      {
+        "title": "🖱️ クリックでターミナルにフォーカス（macOS）",
+        "desc": "macOS ユーザーは通知をクリックするだけでターミナルウィンドウが自動的にフォーカスされ、アプリの切り替え時間を短縮し、作業効率を倍増させます。"
+      },
+      {
+        "title": "🎨 カスタム通知音（macOS）",
+        "desc": "異なるタイプのイベントに専用の通知音（Glass、Basso、Submarine など）を設定し、音声で通知タイプを素早く識別できます。"
+      },
+      {
+        "title": "💻 37以上のターミナルをサポート",
+        "desc": "Ghostty、iTerm2、WezTerm、VS Code 統合ターミナルなど 37以上のターミナルエミュレータをサポートし、ターミナルタイプを自動的に識別します。"
+      },
+      {
+        "title": "🔒 ローカル実行、プライバシーは完全に保護",
+        "desc": "すべての通知はローカルで生成され、データはクラウドにアップロードされないため、作業内容は完全にプライベートで安全です。"
+      },
+      {
+        "title": "⚡ 軽量プラグイン",
+        "desc": "TypeScript + Bun で構築され、インストールするだけですぐに使用可能。設定ファイルはシンプルで、複雑な設定を学ぶ必要はありません。"
+      }
+    ]
+  },
+  "docs": {
+    "title": "コース概要",
+    "subtitle": "全4章、12レッスン",
+    "sections": [
+      {
+        "title": "入門ガイド",
+        "items": [
+          {
+            "title": "クイックスタート",
+            "desc": "5分以内でインストールを完了し、最初の通知を体験する方法",
+            "link": "/ja/kdcokenny/opencode-notify/start/quick-start/"
+          },
+          {
+            "title": "仕組み",
+            "desc": "プラグインのコア機能、インテリジェントなフィルタリングメカニズム、通知のトリガー条件を解説",
+            "link": "/ja/kdcokenny/opencode-notify/start/how-it-works/"
+          }
+        ]
+      },
+      {
+        "title": "プラットフォーム機能",
+        "items": [
+          {
+            "title": "macOS プラットフォーム機能",
+            "desc": "macOS プラットフォームの完全な機能（フォーカス検出、クリック時のフォーカス、カスタム通知音）を紹介",
+            "link": "/ja/kdcokenny/opencode-notify/platforms/macos/"
+          },
+          {
+            "title": "Windows プラットフォーム機能",
+            "desc": "Windows プラットフォームの機能（ネイティブ通知、ターミナル検出）を紹介",
+            "link": "/ja/kdcokenny/opencode-notify/platforms/windows/"
+          },
+          {
+            "title": "Linux プラットフォーム機能",
+            "desc": "Linux プラットフォームの機能（ネイティブ通知、ターミナル検出）を紹介",
+            "link": "/ja/kdcokenny/opencode-notify/platforms/linux/"
+          },
+          {
+            "title": "対応ターミナル",
+            "desc": "対応しているすべてのターミナルエミュレータ（37以上のターミナル）を一覧表示",
+            "link": "/ja/kdcokenny/opencode-notify/platforms/terminals/"
+          }
+        ]
+      },
+      {
+        "title": "高度な機能",
+        "items": [
+          {
+            "title": "設定リファレンス",
+            "desc": "完全な設定項目の説明と例を提供",
+            "link": "/ja/kdcokenny/opencode-notify/advanced/config-reference/"
+          },
+          {
+            "title": "サイレント時間帯の詳細",
+            "desc": "特定の時間帯に邪魔されないようにするためのサイレント時間帯の設定方法を解説",
+            "link": "/ja/kdcokenny/opencode-notify/advanced/quiet-hours/"
+          },
+          {
+            "title": "ターミナル検出の仕組み",
+            "desc": "ターミナルの自動検出メカニズムと、ターミナルタイプの手動指定方法を解説",
+            "link": "/ja/kdcokenny/opencode-notify/advanced/terminal-detection/"
+          },
+          {
+            "title": "高度な使い方",
+            "desc": "設定のヒントとベストプラクティスを提供",
+            "link": "/ja/kdcokenny/opencode-notify/advanced/advanced-usage/"
+          }
+        ]
+      },
+      {
+        "title": "よくある質問",
+        "items": [
+          {
+            "title": "トラブルシューティング",
+            "desc": "一般的な問題（通知が表示されない、フォーカス検出が機能しない、設定エラーなど）を解決",
+            "link": "/ja/kdcokenny/opencode-notify/faq/troubleshooting/"
+          },
+          {
+            "title": "よくある質問",
+            "desc": "ユーザーからの一般的な質問（パフォーマンスへの影響、プライバシーとセキュリティ、プラグインの競合など）に回答",
+            "link": "/ja/kdcokenny/opencode-notify/faq/common-questions/"
+          }
+        ]
+      }
+    ]
+  }
+}
